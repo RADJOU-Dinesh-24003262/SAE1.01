@@ -1,0 +1,10 @@
+KeyUp : 8
+KeyDown : 2
+KeyLeft : 4
+KeyRight : 6
+NbColumn : 5
+NbRow : 10
+ColorP1 : KBlue
+ColorP2 :  KGreen
+TokenP1 : X
+TokenP2 : O
