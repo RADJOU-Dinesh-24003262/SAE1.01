@@ -20,32 +20,26 @@ void Color (const string & Col)
 } // Color ()
 
 
-void DisplayGrid (const CMat & Mat, const CMyParamV2 & Param ){
+void DisplayGrid (const CMat & Mat, CMyParamV2 & Param){
     const unsigned KNbLine = Mat.size ();
     const unsigned KNbCol  = Mat[0].size ();
     cout << string (KNbCol + 2 , '-') << endl;
     for (unsigned i (0); i < KNbLine; ++i)
     {
         cout << '|';
-        for (char c : Mat[i])
-        {
-
-            switch (c)
-            {
-            case KEmpty:
+        for (char c : Mat[i]){
+            if(c == Param.tokenP1){
+                Color (KColor.find("KBlue")->second);
                 cout << c;
-                break;
-            case 'X':
-                Color (KColor.find(Param.ColorP1)->second);
-                cout << Param.tokenP1;
                 Color (KColor.find("KReset")->second);
-                break;
-            case 'O':
-                Color (KColor.find(Param.ColorP2)->second);;
-                cout << Param.tokenP2;
+            }
+            else if(c == Param.tokenP2){
+                Color (KColor.find("KBlue")->second);
+                cout << c;
                 Color (KColor.find("KReset")->second);
-                break;
-
+            }
+            else{
+                cout << c;
             }
         }
         cout << '|' << endl;
@@ -54,8 +48,7 @@ void DisplayGrid (const CMat & Mat, const CMyParamV2 & Param ){
 }// ShowMatrix ()
 
 
-void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2)
-{
+void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param ){
     Mat.resize (NbLine);
     const CVLine KLine (NbColumn, KEmpty);
     for (CVLine &ALine : Mat)
@@ -63,8 +56,8 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
 
     PosPlayer1.first = 0;
     PosPlayer1.second = NbColumn - 1;
-    Mat [PosPlayer1.first][PosPlayer1.second] = 'X';
+    Mat [PosPlayer1.first][PosPlayer1.second] = Param.tokenP1;
     PosPlayer2.first = NbLine - 1;
     PosPlayer2.second =0;
-    Mat [PosPlayer2.first][PosPlayer2.second]   = 'O';
+    Mat [PosPlayer2.first][PosPlayer2.second] = Param.tokenP2;
 }//InitMat ()

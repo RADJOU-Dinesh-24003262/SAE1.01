@@ -1,7 +1,7 @@
-KeyUp : 8
-KeyDown : 2
-KeyLeft : 4
-KeyRight : 6
+KeyUp : z
+KeyDown : s
+KeyLeft : q
+KeyRight : d
 NbColumn : 5
 NbRow : 10
 ColorP1 : KBlue

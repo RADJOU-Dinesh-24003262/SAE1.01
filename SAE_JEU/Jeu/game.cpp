@@ -77,7 +77,7 @@ int ppal (void)
     CPosition PosPlayer1, PosPlayer2;
 
 
-    InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2);
+    InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param);
 
     DisplayGrid (Mat, param);
 
@@ -92,9 +92,8 @@ int ppal (void)
 
         Move = tolower (Move);
         MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param);
-        ClearScreen();
+        // ClearScreen();
         DisplayGrid (Mat, param);
-        // cout << Mat[0][100] << "gf";
 
         //Victiry test
         if (PosPlayer1 == PosPlayer2) Victory = true;

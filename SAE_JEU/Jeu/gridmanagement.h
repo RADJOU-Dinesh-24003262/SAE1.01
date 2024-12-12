@@ -45,6 +45,6 @@ void DisplayGrid (const CMat & Mat, const CMyParamV2 & Param );
  * \param[out] PosPlayer2 position of the second player's token in Mat
  * @fn void InitGrid (CMat & Mat, const CMyParam & Params, CPosition & PosPlayer1, CPosition & PosPlayer2);
  */
-void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2);
+void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param );
 
 #endif // GRIDMANAGEMENT_H
