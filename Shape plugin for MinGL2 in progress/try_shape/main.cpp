@@ -14,12 +14,6 @@
 
 using namespace std;
 
-// void player_sprite(MinGL &window, tuple<int,int> window_size, tuple<int,int> pos){
-//     //define the player sprite position
-//     tuple<int, int> size = (window_size[0]/2,window_size[1]/2);
-//     window << nsShape::Circle(nsGraphics::Vec2D(size), 10, nsGraphics::KYellow);
-// }
-
 void draw_oval(MinGL &window, tuple <int, int> pos, tuple <int, int> size, int resolution){
     float degre = 2 * M_PI / resolution;
     for (int i=0; i < resolution; ++i){
@@ -39,14 +33,8 @@ void draw_oval(MinGL &window, tuple <int, int> pos, tuple <int, int> size, int r
     }
 }
 
-void dessiner(MinGL &window, float &mouth, int move)
+void dessiner(MinGL &window)
 {
-    // int TriP1_1 = 320 + move;
-    // int TriP2_1 = 600 + move;
-    // int TriP3_1 = 600 + move;
-    // int CirP1 = 320 + move;
-    // float TriP2_2 = 420 - (100 * mouth);
-    // float TriP3_2 = 220 + (100 * mouth);
     // window << nsShape::Circle(nsGraphics::Vec2D(CirP1, 320), 10, nsGraphics::KYellow);
     // window << nsShape::Triangle(nsGraphics::Vec2D(TriP1_1, 320), nsGraphics::Vec2D(TriP2_1, TriP2_2), nsGraphics::Vec2D(TriP3_1, TriP3_2), nsGraphics::KBlack);
     draw_oval(window, tuple <int, int>(300,300), tuple <int, int>(100,200), 100);
@@ -59,19 +47,12 @@ int main()
     MinGL window("01 - Shapes", nsGraphics::Vec2D(640, 640), nsGraphics::Vec2D(128, 128), nsGraphics::KBlack);
     window.initGlut();
     window.initGraphic();
-    int val = 0;
-    float mouth;
-    int move = 0;
 
     // Variable qui tient le temps de frame
     chrono::microseconds frameTime = chrono::microseconds::zero();
 
     while (window.isOpen())
     {
-        mouth = sin(val);
-        val++;
-        move = move + 1;
-
         // Récupère l'heure actuelle
         chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
 
