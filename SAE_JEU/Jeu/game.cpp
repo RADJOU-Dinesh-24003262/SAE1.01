@@ -16,13 +16,13 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Par
     // cout << Mat.size() << "  " << Mat[0]
 
 
-    if (Move == Param.KeyUp){
+    if (Move == Param.KeyUp && Pos.first > 0){
         --Pos.first;
-    }else if (Move == Param.KeyDown){
+    }else if (Move == Param.KeyDown && Pos.first < Param.NbRow -1){
         ++Pos.first;
-    }else if (Move == Param.KeyRight){
+    }else if (Move == Param.KeyRight && Pos.second < Param.NbColumn-1){
         ++Pos.second;
-    }else if(Move == Param.KeyLeft){
+    }else if(Move == Param.KeyLeft && Pos.second > 0){
         --Pos.second;
     }
 
@@ -57,7 +57,17 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Par
     //     ++Pos.second;
     //     break;
     // }
+    cout << Pos.first << Pos.second << endl;
     Mat [Pos.first][Pos.second] = car;
+
+
+    //test
+/*    cout << Pos.first << "\t" << Pos.second << "\t";
+    cout << Mat [Pos.first][Pos.second] << endl;
+    cout << Mat.size() << "\t" << Mat[0].size() << endl;
+    cout << Mat [0][6];
+ */
+
 } //MoveToken ()
 
 
