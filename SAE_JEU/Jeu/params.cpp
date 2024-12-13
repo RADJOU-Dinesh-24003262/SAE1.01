@@ -43,56 +43,34 @@ void LoadParams (CMyParamV2 & Param){
         ifs >> tampon;
 
         if(key == "KeyUp"){
-            char val;
-            ifs >> val;
-            Param.KeyUp = val;
+            ifs >> Param.KeyUp;
 
         }else if(key == "KeyDown"){
-            char val1;
-            ifs >> val1;
-            Param.KeyDown = val1;
+            ifs >> Param.KeyDown;
 
         }else if(key == "KeyLeft"){
-            char val2;
-            ifs >> val2;
-            Param.KeyLeft = val2;
+            ifs >> Param.KeyLeft;
 
         }else if(key == "KeyRight"){
-            char val3;
-            ifs >> val3;
-            Param.KeyRight = val3;
+            ifs >> Param.KeyRight;
 
         }else if(key == "NbColumn"){
-            size_t val4;
-            ifs >> val4;
-            Param.NbColumn = val4;
+            ifs >> Param.NbColumn;
 
         }else if(key == "NbRow"){
-            size_t val5;
-            ifs >> val5;
-            Param.NbRow = val5;
+            ifs >> Param.NbRow;
 
         }else if(key == "ColorP1"){
-            string val6;
-            ifs >> val6;
-            Param.ColorP1 = val6;
+            ifs >> Param.ColorP1;
 
         }else if(key == "ColorP2"){
-            string val7;
-            ifs >> val7;
-            Param.ColorP2 = val7;
+            ifs >> Param.ColorP2;
 
         }else if(key == "TokenP1"){
-            char val8;
-            ifs >> val8;
-            Param.tokenP1 = val8;
-            break;
+            ifs >> Param.tokenP1;
 
         }else if(key == "TokenP2"){
-            char val9;
-            ifs >> val9;
-            Param.tokenP2 = val9;
-            cout << Param.tokenP2;
+            ifs >> Param.tokenP2;
         }
     }
     ifs.close ();

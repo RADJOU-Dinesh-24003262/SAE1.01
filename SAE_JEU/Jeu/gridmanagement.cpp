@@ -52,10 +52,15 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     for (CVLine &ALine : Mat)
         ALine = KLine;
 
+
     PosPlayer1.first = 0;
     PosPlayer1.second = NbColumn - 1;
     Mat [PosPlayer1.first][PosPlayer1.second] = Param.tokenP1;
     PosPlayer2.first = NbLine - 1;
     PosPlayer2.second =0;
     Mat [PosPlayer2.first][PosPlayer2.second] = Param.tokenP2;
+
+
+
+
 }//InitMat ()
