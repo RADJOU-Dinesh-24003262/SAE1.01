@@ -3,7 +3,7 @@ KeyDown : s
 KeyLeft : q
 KeyRight : d
 NbColumn : 5
-NbRow : 10
+NbRow : 5
 ColorP1 : KBlue
 ColorP2 :  KGreen
 TokenP1 : X

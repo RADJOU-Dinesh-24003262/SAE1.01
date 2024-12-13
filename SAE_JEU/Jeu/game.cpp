@@ -79,7 +79,7 @@ int ppal (void)
 
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param);
 
-    DisplayGrid (Mat, param);
+    DisplayGrid(Mat, param);
 
     while (PartyNum <= KMaxPartyNum && ! Victory)
     {

@@ -1,5 +1,4 @@
 #include <iostream>
-#include <iomanip>
 #include "gridmanagement.h"
 
 #include "type.h" //nos types
@@ -20,12 +19,11 @@ void Color (const string & Col)
 } // Color ()
 
 
-void DisplayGrid (const CMat & Mat, CMyParamV2 & Param){
+void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
     const unsigned KNbLine = Mat.size ();
     const unsigned KNbCol  = Mat[0].size ();
     cout << string (KNbCol + 2 , '-') << endl;
-    for (unsigned i (0); i < KNbLine; ++i)
-    {
+    for (unsigned i (0); i < KNbLine; ++i){
         cout << '|';
         for (char c : Mat[i]){
             if(c == Param.tokenP1){
