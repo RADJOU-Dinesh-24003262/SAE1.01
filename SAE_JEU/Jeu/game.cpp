@@ -88,7 +88,9 @@ int ppal (void)
              << (Player1Turn ? '1' : '2') << ", entrez un déplacement : ";
 
         char Move;
-        cin >> Move;
+        string temp;
+        getline(cin, temp);
+        Move = temp[0];
 
         Move = tolower (Move);
         MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param);
