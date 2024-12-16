@@ -54,7 +54,7 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
 
 void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param ){
     Mat.resize (NbLine);
-    CVLine KLine (NbColumn, KEmpty);
+    const CVLine KLine (NbColumn, KEmpty);
     for (CVLine &ALine : Mat)
         ALine = KLine;
 
