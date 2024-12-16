@@ -13,9 +13,6 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Par
     char car = Mat [Pos.first][Pos.second];
     Mat [Pos.first][Pos.second] = KEmpty;
 
-    // cout << Mat.size() << "  " << Mat[0]
-
-
     if (Move == Param.KeyUp && Pos.first > 0){
         --Pos.first;
     }else if (Move == Param.KeyDown && Pos.first < Param.NbRow -1){
