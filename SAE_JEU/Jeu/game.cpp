@@ -7,19 +7,37 @@
 #include <map>
 using namespace std;
 
-
-void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Param)
-{
+bool IsMoveLegal(CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Param){
+    if (Move == Param.KeyUp && Pos.first > 0 && Mat [Pos.first-1][Pos.second] != 'M'){
+        cout << "1";
+        return true;
+    }else if (Move == Param.KeyDown && Pos.first < Param.NbRow -1 && Mat [Pos.first+1][Pos.second] != 'M'){
+        cout << "1";
+        return true;
+    }else if (Move == Param.KeyRight && Pos.second < Param.NbColumn-1 && Mat [Pos.first][Pos.second+1] != 'M'){
+        cout << "1";
+        return true;
+    }else if(Move == Param.KeyLeft && Pos.second > 0 && Mat [Pos.first][Pos.second-1] != 'M'){
+        cout << "1";
+        return true;
+    }else{
+        Color(KColor.find("KRed")->second);
+        cout << "Illegal Move, Play again ! ";
+        Color (KColor.find("KReset")->second);
+        return false;
+    }
+}
+void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Param){
     char car = Mat [Pos.first][Pos.second];
     Mat [Pos.first][Pos.second] = KEmpty;
 
-    if (Move == Param.KeyUp && Pos.first > 0){
+    if (Move == Param.KeyUp){
         --Pos.first;
-    }else if (Move == Param.KeyDown && Pos.first < Param.NbRow -1){
+    }else if (Move == Param.KeyDown){
         ++Pos.first;
-    }else if (Move == Param.KeyRight && Pos.second < Param.NbColumn-1){
+    }else if (Move == Param.KeyRight){
         ++Pos.second;
-    }else if(Move == Param.KeyLeft && Pos.second > 0){
+    }else if(Move == Param.KeyLeft){
         --Pos.second;
     }
 
@@ -54,16 +72,7 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Par
     //     ++Pos.second;
     //     break;
     // }
-    cout << Pos.first << Pos.second << endl;
     Mat [Pos.first][Pos.second] = car;
-
-
-    //test
-/*    cout << Pos.first << "\t" << Pos.second << "\t";
-    cout << Mat [Pos.first][Pos.second] << endl;
-    cout << Mat.size() << "\t" << Mat[0].size() << endl;
-    cout << Mat [0][6];
- */
 
 } //MoveToken ()
 
@@ -85,23 +94,26 @@ int ppal (void)
 
 
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param);
-
+    ClearScreen();
     DisplayGrid(Mat, param);
 
     while (PartyNum <= KMaxPartyNum && ! Victory)
     {
 
-        cout << "tour numero : " << PartyNum << ", Joueur "
-             << (Player1Turn ? '1' : '2') << ", entrez un déplacement : ";
+
 
         char Move;
         string temp;
-        getline(cin, temp);
-        Move = temp[0];
+        do{
+            cout << "tour numero : " << PartyNum << ", Joueur "
+                 << (Player1Turn ? '1' : '2') << ", entrez un déplacement : ";
+            getline(cin, temp);
+            Move = temp[0];
+            Move = tolower(Move);
+        }while(not IsMoveLegal(Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param));
 
-        Move = tolower (Move);
         MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param);
-        // ClearScreen();
+        ClearScreen();
         DisplayGrid (Mat, param);
 
         //Victiry test
