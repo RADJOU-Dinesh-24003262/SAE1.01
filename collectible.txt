@@ -7,3 +7,12 @@ liste de collectible:
 -clé de voiture de Jouni
 -statue de wario
 -
+
+
+
+Element des collectibles:
+-Nom
+-Id
+-Valeurs
+-Sprite
+-Catégories
