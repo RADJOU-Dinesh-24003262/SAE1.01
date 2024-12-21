@@ -4,15 +4,131 @@
 
 #include "type.h" //nos types
 
-
 using namespace std;
 
 
-//void translation
+struct Form
+{
+    string nom;
+    pair<int,int> dim;
+    vector<vector<char>> piece;
+};
 
-//void inversion
 
-// forme (structure ou variable global)
+static Form F_T()
+{
+    Form formeT;
+    formeT.nom = "Forme T";
+    formeT.piece = {
+        {' ', 'M', ' '},
+        {'M', 'M', 'M'}
+    };
+    formeT.dim = {2,3};
+    return formeT;
+}
+
+static Form F_Carre() {
+    Form carre;
+    carre.nom = "Carre";
+    carre.piece = {
+        {'M', 'M'},
+        {'M', 'M'}
+    };
+    carre.dim = {2, 2};
+    return carre;
+}
+
+static Form F_L() {
+    Form formeL;
+    formeL.nom = "Carre";
+    formeL.piece = {
+        {' ', ' ', 'M'},
+        {'M', 'M', 'M'}
+    };
+    formeL.dim = {2, 3};
+    return formeL;
+}
+////
+
+static Form F_S() {
+    Form carre;
+    carre.nom = "Carre";
+    carre.piece = {
+        {' ', 'M', 'M'},
+        {'M', 'M', ' '}
+    };
+    carre.dim = {2, 3};
+    return carre;
+}
+
+
+static Form F_Z() {
+    Form carre;
+    carre.nom = "Carre";
+    carre.piece = {
+        {'M', 'M', ' '},
+        {' ', 'M', 'M'}
+    };
+    carre.dim = {2, 3};
+    return carre;
+}
+
+static Form F_J() {
+    Form carre;
+    carre.nom = "Carre";
+    carre.piece = {
+        {' ', 'M'},
+        {' ', 'M'},
+        {'M', 'M'}
+    };
+    carre.dim = {3, 2};
+    return carre;
+}
+
+
+
+//fonction pour ajouter piece dans la matrice (si manque de place => on supprime le M initial pour éviter un M seul)
+void ajouterpiece(CMat &Mat, const Form &forme, int x, int y) {
+    // Ajouter la pièce à partir de la position (x, y) dans la matrice cible
+    for (int i = 0; i < forme.dim.first; ++i)
+    {
+        for (int j = 0; j < forme.dim.second; ++j)
+        {
+            // Vérifier que nous sommes dans les limites de la matrice cible
+            if (x + i < Mat.size() && y + j < Mat[0].size())
+            {
+                // Ajouter la pièce uniquement si ce n'est pas un espace vide
+                if (forme.piece[i][j] == 'M') {
+                    Mat[x + i][y + j] = forme.piece[i][j];
+                }
+            }
+            else
+            {//sinon on supprime le M initial
+                Mat[x][y] = ' ';
+            }
+        }
+    }
+}
+
+void rotation90(Form &forme) {
+    // Créer une nouvelle matrice avec les dimensions inversées
+    vector<vector<char>> matrice;
+    matrice.resize(forme.dim.second, vector<char>(forme.dim.first));
+
+    // Effectuer la rotation de 90° (sens horaire)
+    for (int i = 0; i < forme.dim.first; ++i) {      // Parcours des lignes de l'ancienne matrice
+        for (int j = 0; j < forme.dim.second; ++j) { // Parcours des colonnes de l'ancienne matrice
+            matrice[j][forme.dim.first - 1 - i] = forme.piece[i][j];
+        }
+    }
+
+    // Remplacer la matrice actuelle par la matrice pivotée
+    forme.piece = matrice;
+
+    // Mettre à jour les dimensions de la forme
+    swap(forme.dim.first, forme.dim.second);
+}
+
 
 void ClearScreen()
 {
@@ -59,23 +175,12 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
         ALine = KLine;
 
     srand(time(0));
-    // for (unsigned i = 0; i < pow(NbLine,0.5) * 2; ++i) // trouver calcul nbr
-    // {
-
-    //     v2 = rand();
-    //     v1 = rand();
-    //     v1 = v1%(NbLine-2)+1;
-    //     v2 = v2%(NbColumn-2)+1;
-    //     Mat[v1][v2] = 'M';
-    //     cout << v1 << "  " << v2 << endl;
-    //     v3 = v3 + time(0);
-
-    unsigned x,y = 0;
+    unsigned x,y,val, last_rand;
     for (size_t i = 0; i < NbLine; i = i + 5)
     {
         for (size_t j = 0; j < NbColumn; j = j+5)
         {
-            for (unsigned p = 0; p < 2; ++p)
+            for (unsigned p = 0; p < 1; ++p)
             {
                 x = x + rand();
                 y = y + rand();
@@ -83,33 +188,47 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
                 y = y%(5-1);
                 Mat[i+x][j+y] = 'M';
 
+                val = rand()%6;
+                last_rand = rand()%3+0;
+                Form mur; //jsp pas pourquoi je doit initialiser mur ici pour éviter un bug dans le switch
+                switch (val)
+                {
+                case 0:
+                    mur = F_T();
+                    // un nbr random de rotation de 90° (entre 0 et 3)
+                    // puis on ajouter cette piece a MAT
+                    break;
+                case 1:
+                    mur = F_Carre();
+                    break;
+                case 2:
+                    mur = F_L();
+                    break;
+                case 3:
+                    mur = F_J();
+                    break;
+                case 4:
+                    mur = F_S();
+                    break;
+                case 5:
+                    mur = F_Z();
+                    break;
+                }
+                for (int k = 0; k < last_rand; ++k)
+                {
+                    rotation90(mur);
+                }
+                ajouterpiece(Mat, mur, i + x, j + y);
             }
         }
     }
-
-
-    //     cout << v3%2 << "test";
-
-    //     switch(v3%2)
-    //     {
-    //         case 0:
-    //         Mat[v1][v2+1] = 'M';
-    //         Mat[v1+1][v2] = 'M';
-    //         v3 = v3 + time(0);
-    //         break;
-    //         case 1:
-    //         Mat[v1][v2-1] = 'M';
-    //         Mat[v1-1][v2] = 'M';
-    //         v3 = v3 + time(0);
-    //         break;
-    //     }
-
     PosPlayer1.first = 0;
     PosPlayer1.second = NbColumn - 1;
     Mat [PosPlayer1.first][PosPlayer1.second] = Param.tokenP1;
     PosPlayer2.first = NbLine - 1;
     PosPlayer2.second =0;
     Mat [PosPlayer2.first][PosPlayer2.second] = Param.tokenP2;
+
 }//InitMat ()
 
 
