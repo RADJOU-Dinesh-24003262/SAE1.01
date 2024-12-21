@@ -10,7 +10,7 @@ using namespace std;
 struct Form
 {
     string nom;
-    pair<int,int> dim;
+    pair<size_t,size_t> dim;
     vector<vector<char>> piece;
 };
 
@@ -51,7 +51,6 @@ static Form F_L() {
     formeL.dim = {2, 3};
     return formeL;
 }
-////
 
 static Form F_S() {
     Form carre;
@@ -93,9 +92,9 @@ static Form F_J() {
 //fonction pour ajouter piece dans la matrice (si manque de place => on supprime le M initial pour éviter un M seul)
 void ajouterpiece(CMat &Mat, const Form &forme, int x, int y) {
     // Ajouter la pièce à partir de la position (x, y) dans la matrice cible
-    for (int i = 0; i < forme.dim.first; ++i)
+    for (size_t i = 0; i < forme.dim.first; ++i)
     {
-        for (int j = 0; j < forme.dim.second; ++j)
+        for (size_t j = 0; j < forme.dim.second; ++j)
         {
             // Vérifier que nous sommes dans les limites de la matrice cible
             if (x + i < Mat.size() && y + j < Mat[0].size())
@@ -119,8 +118,8 @@ void rotation90(Form &forme) {
     matrice.resize(forme.dim.second, vector<char>(forme.dim.first));
 
     // Effectuer la rotation de 90° (sens horaire)
-    for (int i = 0; i < forme.dim.first; ++i) {      // Parcours des lignes de l'ancienne matrice
-        for (int j = 0; j < forme.dim.second; ++j) { // Parcours des colonnes de l'ancienne matrice
+    for (size_t i = 0; i < forme.dim.first; ++i) {      // Parcours des lignes de l'ancienne matrice
+        for (size_t j = 0; j < forme.dim.second; ++j) { // Parcours des colonnes de l'ancienne matrice
             matrice[j][forme.dim.first - 1 - i] = forme.piece[i][j];
         }
     }
@@ -217,7 +216,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
                     mur = F_Z();
                     break;
                 }
-                for (int k = 0; k < last_rand; ++k)
+                for (unsigned int k = 0; k < last_rand; ++k)
                 {
                     rotation90(mur);
                 }
