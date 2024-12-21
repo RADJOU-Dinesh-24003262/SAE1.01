@@ -177,7 +177,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
         ALine = KLine;
 
     srand(time(0));
-    unsigned x,y,val, last_rand;
+    unsigned x = 0,y = 0,val = 0, last_rand = 0;
     for (size_t i = 0; i < NbLine; i = i + 5)
     {
         for (size_t j = 0; j < NbColumn; j = j+5)
