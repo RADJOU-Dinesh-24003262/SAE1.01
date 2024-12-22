@@ -1,11 +1,10 @@
 #include <iostream>
-#include <math.h>
 #include "gridmanagement.h"
-
 #include "type.h" //nos types
 
 using namespace std;
 
+#include <cmath>
 
 struct Form
 {
@@ -160,6 +159,15 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
                 cout << c;
                 Color (KColor.find("KReset")->second);
             }
+            else if(c == 'M'){
+                Color ("\e[7;33");
+                cout <<  ' ';
+                Color (KColor.find("KReset")->second);
+            }
+            else if(c == 'T'){
+                cout << c;
+                Color (KColor.find("KReset")->second);
+            }
             else{
                 cout << c;
             }
@@ -170,7 +178,7 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
 }// ShowMatrix ()
 
 
-void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param ){
+void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2 ){
     Mat.resize (NbLine);
     const CVLine KLine (NbColumn, KEmpty);
     for (CVLine &ALine : Mat)
@@ -224,6 +232,28 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
             }
         }
     }
+
+    vector <long long> teleportX (2);
+    vector <long long> teleportY (2);
+    size_t  distx, disty;
+
+    do{
+        for(unsigned i = 0; i < 2; ++i){
+            do{
+                teleportX[i] = rand()%(Param.NbRow-3)+1;
+                teleportY[i] = rand()%(Param.NbColumn-3)+1;
+            }while(Mat[teleportX[i]][teleportY[i]] == 'M' || Mat[teleportX[i]-1][teleportY[i]] == 'M' || Mat[teleportX[i]+1][teleportY[i]] == 'M' || Mat[teleportX[i]][teleportY[i]-1] == 'M' || Mat[teleportX[i]][teleportY[i]+1] == 'M');
+        }
+
+        distx = std::abs(teleportY[0] - teleportY[1]);
+        disty = std::abs(teleportX[0] - teleportX[1]);
+    }while(distx < Param.NbColumn/3 || disty < Param.NbRow/3);
+    Mat[teleportX[0]][teleportY[0]] = 'T';
+    Tp1 = {teleportX[0], teleportY[0]};
+
+    Mat[teleportX[1]][teleportY[1]] = 'T';
+    Tp2 = {teleportX[1], teleportY[1]};
+
     PosPlayer1.first = 0;
     PosPlayer1.second = NbColumn - 1;
     Mat [PosPlayer1.first][PosPlayer1.second] = Param.tokenP1;

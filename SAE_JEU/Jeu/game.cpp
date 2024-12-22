@@ -7,18 +7,14 @@
 #include <map>
 using namespace std;
 
-bool IsMoveLegal(CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Param){
+bool IsMoveLegal(const CMat & Mat, const char & Move, const  CPosition & Pos, const CMyParamV2 & Param){
     if (Move == Param.KeyUp && Pos.first > 0 && Mat [Pos.first-1][Pos.second] != 'M'){
-        cout << "1";
         return true;
     }else if (Move == Param.KeyDown && Pos.first < Param.NbRow -1 && Mat [Pos.first+1][Pos.second] != 'M'){
-        cout << "1";
         return true;
     }else if (Move == Param.KeyRight && Pos.second < Param.NbColumn-1 && Mat [Pos.first][Pos.second+1] != 'M'){
-        cout << "1";
         return true;
     }else if(Move == Param.KeyLeft && Pos.second > 0 && Mat [Pos.first][Pos.second-1] != 'M'){
-        cout << "1";
         return true;
     }else{
         Color(KColor.find("KRed")->second);
@@ -27,7 +23,8 @@ bool IsMoveLegal(CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Pa
         return false;
     }
 }
-void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Param){
+
+void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2 ){
     char car = Mat [Pos.first][Pos.second];
     Mat [Pos.first][Pos.second] = KEmpty;
 
@@ -40,6 +37,29 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Par
     }else if(Move == Param.KeyLeft){
         --Pos.second;
     }
+
+    vector <CPosition> PosTP = {Tp1,Tp2};
+    for(unsigned i = 0;i < 2; ++i){
+        if(Pos == PosTP[i]){
+            cout << "ok";
+            Pos.first = PosTP[(i+1)%2].first;
+            Pos.second = PosTP[(i+1)%2].second;
+
+            if (Move == Param.KeyUp){
+                --Pos.first;
+            }else if (Move == Param.KeyDown){
+                ++Pos.first;
+            }else if (Move == Param.KeyRight){
+                ++Pos.second;
+            }else if(Move == Param.KeyLeft){
+                --Pos.second;
+            }
+        }
+        Mat[PosTP[i].first][PosTP[i].second] = 'T';
+    }
+
+
+
 
     // switch (Move)
     // {
@@ -77,8 +97,7 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Par
 } //MoveToken ()
 
 
-int ppal (void)
-{
+int ppal (void){
     CMyParamV2 param;
     initParams(param);
     LoadParams(param);
@@ -90,17 +109,14 @@ int ppal (void)
     bool Player1Turn (true);
     bool Victory (false);
 
-    CPosition PosPlayer1, PosPlayer2;
+    CPosition PosPlayer1, PosPlayer2, PosTP1, PosTP2;
 
 
-    InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param);
+    InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2);
     ClearScreen();
     DisplayGrid(Mat, param);
 
-    while (PartyNum <= KMaxPartyNum && ! Victory)
-    {
-
-
+    while (PartyNum <= KMaxPartyNum && ! Victory){
 
         char Move;
         string temp;
@@ -112,7 +128,7 @@ int ppal (void)
             Move = tolower(Move);
         }while(not IsMoveLegal(Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param));
 
-        MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param);
+        MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param, PosTP1, PosTP2);
         ClearScreen();
         DisplayGrid (Mat, param);
 
@@ -127,8 +143,7 @@ int ppal (void)
 
     }//while (no victory)
 
-    if (!Victory)
-    {
+    if (!Victory){
         Color (KColor.find("KMAgenta")->second);
         cout << "Aucun vainqueur" << endl;
         return 1;

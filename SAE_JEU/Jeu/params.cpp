@@ -27,20 +27,17 @@ void initParams (CMyParamV2 & Param){
 
 void LoadParams (CMyParamV2 & Param){
     string Path = "../../Nos_fichiers/config.yaml";
-    ifstream ifs;
-    ifs.open(Path);
+    ifstream ifs(Path);
     if (!ifs.is_open ()){
         cerr << "File not found" << endl;
-        return;
+        exit(-1);
     }
+    cout << "kjh";
 
-    string key;
-    while (true){
 
-        ifs >> key;
-        if (ifs.eof ()) break;
-        string tampon;
+    for(string key, tampon; !ifs.eof(); ifs >> key){
         ifs >> tampon;
+        cout << "kjh";
 
         if(key == "KeyUp"){
             ifs >> Param.KeyUp;
@@ -71,6 +68,9 @@ void LoadParams (CMyParamV2 & Param){
 
         }else if(key == "TokenP2"){
             ifs >> Param.tokenP2;
+        }
+        else{
+            getline(ifs, tampon);
         }
     }
     ifs.close ();

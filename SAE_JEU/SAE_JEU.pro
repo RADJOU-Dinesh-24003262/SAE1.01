@@ -17,4 +17,3 @@ HEADERS += \
     Jeu/gridmanagement.h \
     Jeu/params.h \
     Jeu/type.h
-p

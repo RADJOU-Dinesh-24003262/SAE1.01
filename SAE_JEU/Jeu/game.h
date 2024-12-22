@@ -20,22 +20,24 @@
  * \param[in, out] Mat the matrix before and after the move
  * \param[in] Move the key pressed by the user
  * \param[in, out] Pos the player's position before and after the move
- * \param[in, out] The Parameter extract from the .yaml file
+ * \param[in] The Parameter extract from the .yaml file
+ * \param[out] Tp1 position of the first Teleporter in Mat
+ * \param[out] Tp2 position of the second Teleporter in Mat
  */
 
-void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Param);
+void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2 );
 
 
 /*!
  * \brief Test if the Move made by the player is legal, this mean if there is no wall and no out of bound
- * \param[in, out] Mat the matrix before and after the move
+ * \param[in] Mat the matrix
  * \param[in] Move the key pressed by the user
- * \param[in, out] Pos the player's position before and after the move
- * \param[in, out] The Parameter extract from the .yaml file
+ * \param[in] Pos the player's position
+ * \param[in] The Parameter extract from the .yaml file
  * @return true if the Move can be made
  */
 
-bool IsMoveLegal(CMat & Mat, const char & Move, CPosition & Pos, CMyParamV2 & Param);
+bool IsMoveLegal(const CMat & Mat, const char & Move, const CPosition & Pos, const CMyParamV2 & Param);
 
 
 /**
