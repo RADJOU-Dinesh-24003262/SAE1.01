@@ -16,3 +16,11 @@ Element des collectibles:
 -Valeurs
 -Sprite
 -Catégories
+
+potentiel lore:
+"Une ancienne ville, un complexe industriel en ruine, personne n'est sur de ce qu'était cette endroit avant, mais ce que tous sont d'accord, c'est qu'il semble ne plus y avoir âme qui vive, laissant les lieux fasse a l'érosion. 
+Non loin de là, notre personnage principal lui aussi n'a pas l'air de vivre son meilleur jour, car son patron n'a pas semblait aimer la suite de gaffe qu'il a fait lors des derniers mois. En même temps, qui aimerait
+
+Sans profession, notre personnage principal ce retrouve donc sans revenu, ce qui est problématique. 
+Et c'est sûr le chemin du retour qu'il porte pour une fois intérêt a cette ville délabré qu'il avait l'habitude de passer tous les jours a côté sans y faire gaffe. Le soir il se renseigna donc sur cette endroit, et dans le désespoir accumulé durant cette journée lui vient l'idée de trouver une opportunité là-bas, et par opportunité, je veux dire objet de valeur.
+Il pris donc le vieux camion de son père et malgré le soleil couchant parti dans cette aventure désespérée."
