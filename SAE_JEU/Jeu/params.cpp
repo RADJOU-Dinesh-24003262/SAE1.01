@@ -32,12 +32,10 @@ void LoadParams (CMyParamV2 & Param){
         cerr << "File not found" << endl;
         exit(-1);
     }
-    cout << "kjh";
 
 
     for(string key, tampon; !ifs.eof(); ifs >> key){
         ifs >> tampon;
-        cout << "kjh";
 
         if(key == "KeyUp"){
             ifs >> Param.KeyUp;

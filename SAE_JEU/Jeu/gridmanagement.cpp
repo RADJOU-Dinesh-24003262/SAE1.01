@@ -6,8 +6,7 @@ using namespace std;
 
 #include <cmath>
 
-struct Form
-{
+struct Form{
     string nom;
     pair<size_t,size_t> dim;
     vector<vector<char>> piece;
@@ -17,8 +16,7 @@ struct Form
 
 
 
-static Form F_T()
-{
+static Form F_T(){
     Form formeT;
     formeT.nom = "Forme T";
     formeT.piece = {
@@ -131,13 +129,11 @@ void rotation90(Form &forme) {
 }
 
 
-void ClearScreen()
-{
+void ClearScreen(){
     cout << "\033[H\033[2J";
 }// ClearScreen ()
 
-void Color (const string & Col)
-{
+void Color (const string & Col){
     cout << "\033[" << Col.c_str () <<"m";
 } // Color ()
 
@@ -233,6 +229,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
         }
     }
 
+    //Init teleporter
     vector <long long> teleportX (2);
     vector <long long> teleportY (2);
     size_t  distx, disty;
@@ -244,10 +241,10 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
                 teleportY[i] = rand()%(Param.NbColumn-3)+1;
             }while(Mat[teleportX[i]][teleportY[i]] == 'M' || Mat[teleportX[i]-1][teleportY[i]] == 'M' || Mat[teleportX[i]+1][teleportY[i]] == 'M' || Mat[teleportX[i]][teleportY[i]-1] == 'M' || Mat[teleportX[i]][teleportY[i]+1] == 'M');
         }
-
         distx = std::abs(teleportY[0] - teleportY[1]);
         disty = std::abs(teleportX[0] - teleportX[1]);
     }while(distx < Param.NbColumn/3 || disty < Param.NbRow/3);
+
     Mat[teleportX[0]][teleportY[0]] = 'T';
     Tp1 = {teleportX[0], teleportY[0]};
 
@@ -260,6 +257,19 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     PosPlayer2.first = NbLine - 1;
     PosPlayer2.second =0;
     Mat [PosPlayer2.first][PosPlayer2.second] = Param.tokenP2;
+
+    //Init Monster
+    vector <CPosition> PosMonster (rand()%((Param.NbRow+1)/3));
+
+    for(unsigned i = 0; i < PosMonster.size(); ++i){
+        cout << "ok";
+        do{
+            PosMonster[i] = CPosition(rand()%(Param.NbRow-3)+1,rand()%(Param.NbColumn-3)+1);
+        }while(Mat[PosMonster[i].first][PosMonster[i].second] == KEmpty);
+        Mat[PosMonster[i].first][PosMonster[i].second] = 'A';
+        cout << Mat[PosMonster[i].first][PosMonster[i].second];
+    }
+
 
 }//InitMat ()
 

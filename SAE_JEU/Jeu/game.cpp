@@ -41,7 +41,6 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2
     vector <CPosition> PosTP = {Tp1,Tp2};
     for(unsigned i = 0;i < 2; ++i){
         if(Pos == PosTP[i]){
-            cout << "ok";
             Pos.first = PosTP[(i+1)%2].first;
             Pos.second = PosTP[(i+1)%2].second;
 
@@ -111,15 +110,15 @@ int ppal (void){
 
     CPosition PosPlayer1, PosPlayer2, PosTP1, PosTP2;
 
-
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2);
-    ClearScreen();
+    //ClearScreen();
     DisplayGrid(Mat, param);
 
     while (PartyNum <= KMaxPartyNum && ! Victory){
 
         char Move;
         string temp;
+        //ask to the player the move to do till it's legal
         do{
             cout << "tour numero : " << PartyNum << ", Joueur "
                  << (Player1Turn ? '1' : '2') << ", entrez un déplacement : ";
@@ -131,6 +130,8 @@ int ppal (void){
         MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param, PosTP1, PosTP2);
         ClearScreen();
         DisplayGrid (Mat, param);
+
+        // MoveMonster();
 
         //Victiry test
         if (PosPlayer1 == PosPlayer2) Victory = true;
