@@ -87,9 +87,21 @@ struct CMyParamV2{
     std::string ColorP2;
 };
 
+struct Form
+{
+    std::string nom;
+    std::pair<size_t,size_t> dim;
+    std::vector< std::vector<char>> piece;
+};
 
-
-
+struct Collectible
+{
+    std::string nom;
+    int id;
+    int point;
+    char token;
+    std::pair<size_t,size_t> pos;
+};
 
 /**
  * @brief KEmpty : character for an empty cell
