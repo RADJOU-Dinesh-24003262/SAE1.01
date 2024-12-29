@@ -144,6 +144,7 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
                 Color (KColor.find("KReset")->second);
             }
             else if(c == 'T'){
+                cout << "\e[6;34m";
                 cout << c;
                 Color (KColor.find("KReset")->second);
             }
