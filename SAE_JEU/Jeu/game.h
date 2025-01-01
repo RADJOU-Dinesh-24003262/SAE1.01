@@ -40,6 +40,10 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2
 bool IsMoveLegal(const CMat & Mat, const char & Move, const CPosition & Pos, const CMyParamV2 & Param);
 
 
+
+bool IsItem(const CMat & Mat, const char & Move, const CPosition & Pos, const CMyParamV2 & Param);
+
+
 /**
  * @brief new main
  * @return 0 if everything is OK
