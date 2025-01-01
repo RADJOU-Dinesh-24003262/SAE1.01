@@ -50,11 +50,12 @@ void DisplayGrid (const CMat & Mat, const CMyParamV2 & Param );
  */
 void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2, std::vector <CPosition> & PosMonster);
 
-
-
-
-
-
-void MoveMonster(std::vector <CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param);
+/*!
+ * \brief Move Monster according to a player with the implementation of A*
+ * \param[in, out] PosMonster position of all monster before and after the move
+ * \param[in, out] Mat the matrix before and after the move
+ * \param[in] The Parameter extract from the .yaml file
+ */
+void MoveMonster(std::vector <CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 & param);
 
 #endif // GRIDMANAGEMENT_H

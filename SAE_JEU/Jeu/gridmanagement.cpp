@@ -290,7 +290,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
 
 
 
-void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param){
+void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 & param){
 
     for(unsigned m = 0 ; m < PosMonster.size() ; ++m ){
         CMat VuMonster;
