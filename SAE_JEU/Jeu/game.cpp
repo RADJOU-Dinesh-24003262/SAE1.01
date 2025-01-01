@@ -112,7 +112,7 @@ int ppal (void){
     vector <CPosition> PosMonster;
 
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);
-    //ClearScreen();
+    ClearScreen();
     DisplayGrid(Mat, param);
 
     while (PartyNum <= KMaxPartyNum && ! Victory){
@@ -129,13 +129,22 @@ int ppal (void){
         }while(not IsMoveLegal(Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param));
 
         MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param, PosTP1, PosTP2);
-        //ClearScreen();
+        if(Player1Turn)
+            MoveMonster(PosMonster, Mat, param);
+
+
+        ClearScreen();
         DisplayGrid (Mat, param);
 
-        MoveMonster(PosMonster, Mat, param);
 
         //Victiry test
         if (PosPlayer1 == PosPlayer2) Victory = true;
+
+        bool playdead = false;
+        for (const CPosition & posmont : PosMonster) {
+            if(posmont == PosPlayer1 || posmont == PosPlayer2) playdead = true;
+        }
+        if(playdead) break;
 
         //Increase party's number
         ++PartyNum;

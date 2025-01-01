@@ -7,7 +7,8 @@ SOURCES += \
     Jeu/game.cpp \
     Jeu/gridmanagement.cpp \
     Jeu/params.cpp \
-    main.cpp
+    main.cpp \
+    Jeu/Pathfinder.cpp \
 
 DISTFILES += \
     Nos_fichiers/config.yaml
@@ -16,4 +17,5 @@ HEADERS += \
     Jeu/game.h \
     Jeu/gridmanagement.h \
     Jeu/params.h \
-    Jeu/type.h
+    Jeu/type.h \
+    Jeu/Pathfinder.h \

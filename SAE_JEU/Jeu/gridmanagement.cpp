@@ -1,7 +1,7 @@
 #include <iostream>
 #include "gridmanagement.h"
 #include "type.h" //nos types
-
+#include "Pathfinder.h"
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -311,101 +311,46 @@ void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param
                 if(VuMonster[i][j] == param.tokenP1 || VuMonster[i][j] == param.tokenP2){
                     VPosPlayer.push_back(CPosition(i,j));
                 }
-                else if(VuMonster[i][j] == 'A' && (i == param.NbRow/3 || j == param.NbColumn/3) ){
+                else if(VuMonster[i][j] == 'A' &&
+                           (int(i) - param.NbRow / 3 <= 1.5 || int(j) - param.NbColumn / 3 <= 1.5) ){
                     PosMonsterLocal = CPosition(i,j);
                 }
             }
         }
 
-        Node CheminToPlayer;
-
-        bool finish;
-        for(const CPosition & posplay : VPosPlayer){
-            finish = false;
-            vector <Node> PosOpen = {Node {posplay, 0, posplay}};
-            vector <Node> PosClose = {};
-            Node CurrentNode;
-            while (not finish) {
-
-                if(CurrentNode.Pos == PosMonsterLocal){
-                    CheminToPlayer = (CurrentNode);
-                    finish = true;
-                    break;
-                }
+        if(not VPosPlayer.empty()){
+            int ChoixPl = rand()%(VPosPlayer.size());
+            CPosition player = VPosPlayer[ChoixPl];
+            vector<vector<int>> graph(VuMonster.size(), vector<int>(VuMonster[0].size(), 1));
 
 
-                if (PosOpen.empty()) {
-                    cout << "PosOpen is empty. Exiting..." << endl;
-                    break;
-                }
-
-
-                size_t indice = 0 ;
-
-                for(size_t i = 1; i < PosOpen.size(); ++i){
-                    if(PosOpen[i].f_cost < PosOpen[indice].f_cost) indice = i;
-                }
-                CurrentNode = PosOpen[indice];
-                PosOpen.erase (PosOpen.begin() + indice);
-                PosClose.push_back(CurrentNode);
-
-
-
-                for(const int & i : {-1,0,1}){
-                    for (const int & j : {-1,0,1}) {
-                        int voisin_i = CurrentNode.Pos.first + i;
-                        int voisin_j = CurrentNode.Pos.second + j;
-
-                        bool inClose = false;
-                        for (const Node & node_test : PosClose) {
-                            if (node_test.Pos == CPosition(voisin_i, voisin_j)) {
-                                inClose = true;
-                                break;
-                            }
-                        }
-
-                        if (voisin_i >= 0 && voisin_j >= 0 && size_t(voisin_i) < VuMonster.size() &&
-                            size_t(voisin_j) < VuMonster[i].size() && VuMonster[voisin_i][voisin_j] == KEmpty && not inClose
-                            && not(i == 0 && j != 0)){
-
-                            Node NodeVoisin = {CPosition(voisin_i, voisin_j), CurrentNode.f_cost + 1, CurrentNode.Pos};
-
-
-                            bool inOpen = false;
-                            for (Node & node_test : PosOpen) {
-                                if (node_test.Pos == NodeVoisin.Pos) {
-                                    inOpen = true;
-                                    if(node_test.f_cost > NodeVoisin.f_cost){
-                                        node_test.f_cost = NodeVoisin.f_cost;
-                                        node_test.Parent = CurrentNode.Pos;
-                                    }
-                                    break;
-                                }
-                            }
-
-                            if(not inOpen){
-                                PosOpen.push_back(NodeVoisin);
-                            }
-
-                        }
+            for (size_t i (0); i < VuMonster.size(); ++i) {
+                for(size_t j (0); j < VuMonster[i].size(); ++j){
+                    if(VuMonster[i][j] == KEmpty || VuMonster[i][j] == 'A' || VuMonster[i][j] == param.tokenP1 || VuMonster[i][j] == param.tokenP2 ){
+                        graph[i][j] = 0;
                     }
                 }
-
             }
-                //test to see
-                Node currentNode = CheminToPlayer;
-                while (currentNode.Parent != posplay) {
-                    cout << currentNode.Pos.first << " " << currentNode.Pos.second << endl;
 
-                    for(size_t i = 0; i < PosClose.size(); ++i){
-                        if(CurrentNode.Pos == CPosition(PosMonsterLocal.first, PosMonsterLocal.second)) currentNode = PosClose[i];
-                    }
+            Node start(PosMonsterLocal.first, PosMonsterLocal.second);
+            Node goal(player.first, player.second);
 
+            vector<Node> path = FindPath(graph, start, goal);
 
-                }
-                cout << endl;
+            if (!path.empty()) {
+                //cout << "Path found: ";
+                // PrintPath(path);
+                CPosition NextMov (PosMonster[m].first + path[1].x - path[0].x, PosMonster[m].second + path[1].y - path[0].y);
+                Mat[PosMonster[m].first][PosMonster[m].second] = KEmpty;
+                Mat[NextMov.first][NextMov.second] = 'A';
+
+                PosMonster[m] = NextMov;
+            }
         }
+
+
     }
 }
+
 
 
