@@ -45,8 +45,16 @@ void DisplayGrid (const CMat & Mat, const CMyParamV2 & Param );
  * \param[out] PosPlayer2 position of the second player's token in Mat
  * \param[out] Tp1 position of the first Teleporter in Mat
  * \param[out] Tp2 position of the second Teleporter in Mat
+ * \param[out] PosMonster position of Monsters in Mat
  * @fn void InitGrid (CMat & Mat, const CMyParam & Params, CPosition & PosPlayer1, CPosition & PosPlayer2);
  */
-void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2);
+void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2, std::vector <CPosition> & PosMonster);
+
+
+
+
+
+
+void MoveMonster(std::vector <CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param);
 
 #endif // GRIDMANAGEMENT_H

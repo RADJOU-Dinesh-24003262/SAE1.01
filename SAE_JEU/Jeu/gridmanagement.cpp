@@ -2,6 +2,7 @@
 #include "gridmanagement.h"
 #include "type.h" //nos types
 
+#include <bits/stdc++.h>
 using namespace std;
 
 #include <cmath>
@@ -165,6 +166,12 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
                 cout << c;
                 Color (KColor.find("KReset")->second);
             }
+            else if (c == 'A') {
+                cout << "\e[6;35m";
+                cout << c;
+                Color (KColor.find("KReset")->second);
+
+            }
             else{
                 cout << c;
             }
@@ -175,14 +182,16 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
 }// ShowMatrix ()
 
 
-void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2 ){
+void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2,
+               const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2, vector <CPosition> & PosMonster ){
+
     Mat.resize (NbLine);
     const CVLine KLine (NbColumn, KEmpty);
-    for (CVLine &ALine : Mat)
+    for (CVLine & ALine : Mat)
         ALine = KLine;
 
     srand(time(0));
-    unsigned x = 0,y = 0,val = 0, last_rand = 0;
+    unsigned x = 0, y = 0,val = 0, last_rand = 0;
     for (size_t i = 0; i < NbLine; i = i + 5)
     {
         for (size_t j = 0; j < NbColumn; j = j+5)
@@ -240,7 +249,10 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
             do{
                 teleportX[i] = rand()%(Param.NbRow-3)+1;
                 teleportY[i] = rand()%(Param.NbColumn-3)+1;
-            }while(Mat[teleportX[i]][teleportY[i]] == 'M' || Mat[teleportX[i]-1][teleportY[i]] == 'M' || Mat[teleportX[i]+1][teleportY[i]] == 'M' || Mat[teleportX[i]][teleportY[i]-1] == 'M' || Mat[teleportX[i]][teleportY[i]+1] == 'M');
+            }while(Mat[teleportX[i]][teleportY[i]] == 'M' || Mat[teleportX[i]-1][teleportY[i]] == 'M' ||
+                   Mat[teleportX[i]+1][teleportY[i]] == 'M' || Mat[teleportX[i]][teleportY[i]-1] == 'M' ||
+                     Mat[teleportX[i]][teleportY[i]+1] == 'M');
+
         }
         distx = std::abs(teleportY[0] - teleportY[1]);
         disty = std::abs(teleportX[0] - teleportX[1]);
@@ -260,18 +272,140 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     Mat [PosPlayer2.first][PosPlayer2.second] = Param.tokenP2;
 
     //Init Monster
-    vector <CPosition> PosMonster (rand()%((Param.NbRow+1)/3));
+    PosMonster.resize((Param.NbRow-3)/4);
 
     for(unsigned i = 0; i < PosMonster.size(); ++i){
-        cout << "ok";
         do{
-            PosMonster[i] = CPosition(rand()%(Param.NbRow-3)+1,rand()%(Param.NbColumn-3)+1);
-        }while(Mat[PosMonster[i].first][PosMonster[i].second] == KEmpty);
+            PosMonster[i] = CPosition(rand()%(Param.NbRow-3), rand()%(Param.NbColumn-3));
+        }while(Mat[PosMonster[i].first][PosMonster[i].second] != KEmpty);
+
         Mat[PosMonster[i].first][PosMonster[i].second] = 'A';
-        cout << Mat[PosMonster[i].first][PosMonster[i].second];
     }
 
-
 }//InitMat ()
+
+
+
+void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param){
+
+    for(unsigned m = 0 ; m < PosMonster.size() ; ++m ){
+        CMat VuMonster;
+        for(long long i = PosMonster[m].first-(param.NbRow/3); i < int(PosMonster[m].first+(param.NbRow/3)) && i < int(param.NbRow) ; ++i){
+            if(i < 0) i = 0;
+            if (size_t(i) >= param.NbRow) i = param.NbRow -1;
+            CVLine Line;
+
+            for(long long j = PosMonster[m].second -(param.NbColumn/3); j < int(PosMonster[m].second + (param.NbColumn/3)) && j <int(param.NbColumn) ; ++j){
+                if(j < 0) j = 0;
+                if (size_t(j) >= param.NbColumn) j = param.NbColumn -1;
+
+                Line.push_back(Mat[i][j]);
+            }
+            VuMonster.push_back(Line);
+        }
+
+        vector <CPosition> VPosPlayer;
+        CPosition PosMonsterLocal;
+        for(size_t i = 0; i < VuMonster.size(); ++i){
+            for(size_t j = 0; j < VuMonster[i].size(); ++j){
+                if(VuMonster[i][j] == param.tokenP1 || VuMonster[i][j] == param.tokenP2){
+                    VPosPlayer.push_back(CPosition(i,j));
+                }
+                else if(VuMonster[i][j] == 'A' && (i == param.NbRow/3 || j == param.NbColumn/3) ){
+                    PosMonsterLocal = CPosition(i,j);
+                }
+            }
+        }
+
+        Node CheminToPlayer;
+
+        bool finish;
+        for(const CPosition & posplay : VPosPlayer){
+            finish = false;
+            vector <Node> PosOpen = {Node {posplay, 0, posplay}};
+            vector <Node> PosClose = {};
+            Node CurrentNode;
+            while (not finish) {
+
+                if(CurrentNode.Pos == PosMonsterLocal){
+                    CheminToPlayer = (CurrentNode);
+                    finish = true;
+                    break;
+                }
+
+
+                if (PosOpen.empty()) {
+                    cout << "PosOpen is empty. Exiting..." << endl;
+                    break;
+                }
+
+
+                size_t indice = 0 ;
+
+                for(size_t i = 1; i < PosOpen.size(); ++i){
+                    if(PosOpen[i].f_cost < PosOpen[indice].f_cost) indice = i;
+                }
+                CurrentNode = PosOpen[indice];
+                PosOpen.erase (PosOpen.begin() + indice);
+                PosClose.push_back(CurrentNode);
+
+
+
+                for(const int & i : {-1,0,1}){
+                    for (const int & j : {-1,0,1}) {
+                        int voisin_i = CurrentNode.Pos.first + i;
+                        int voisin_j = CurrentNode.Pos.second + j;
+
+                        bool inClose = false;
+                        for (const Node & node_test : PosClose) {
+                            if (node_test.Pos == CPosition(voisin_i, voisin_j)) {
+                                inClose = true;
+                                break;
+                            }
+                        }
+
+                        if (voisin_i >= 0 && voisin_j >= 0 && size_t(voisin_i) < VuMonster.size() &&
+                            size_t(voisin_j) < VuMonster[i].size() && VuMonster[voisin_i][voisin_j] == KEmpty && not inClose
+                            && not(i == 0 && j != 0)){
+
+                            Node NodeVoisin = {CPosition(voisin_i, voisin_j), CurrentNode.f_cost + 1, CurrentNode.Pos};
+
+
+                            bool inOpen = false;
+                            for (Node & node_test : PosOpen) {
+                                if (node_test.Pos == NodeVoisin.Pos) {
+                                    inOpen = true;
+                                    if(node_test.f_cost > NodeVoisin.f_cost){
+                                        node_test.f_cost = NodeVoisin.f_cost;
+                                        node_test.Parent = CurrentNode.Pos;
+                                    }
+                                    break;
+                                }
+                            }
+
+                            if(not inOpen){
+                                PosOpen.push_back(NodeVoisin);
+                            }
+
+                        }
+                    }
+                }
+
+            }
+                //test to see
+                Node currentNode = CheminToPlayer;
+                while (currentNode.Parent != posplay) {
+                    cout << currentNode.Pos.first << " " << currentNode.Pos.second << endl;
+
+                    for(size_t i = 0; i < PosClose.size(); ++i){
+                        if(CurrentNode.Pos == CPosition(PosMonsterLocal.first, PosMonsterLocal.second)) currentNode = PosClose[i];
+                    }
+
+
+                }
+                cout << endl;
+        }
+    }
+}
 
 

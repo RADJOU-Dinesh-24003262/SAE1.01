@@ -12,6 +12,8 @@
 #include <string>
 #include <vector>
 #include <map>
+#include <optional>
+
 
 /**
  * @brief CVLine : alias to a line of the matrix
@@ -95,5 +97,17 @@ struct CMyParamV2{
  * @brief KEmpty : character for an empty cell
  */
 const char KEmpty        = ' ';
+
+
+
+
+// à faire
+
+typedef struct Node Node;
+struct Node{
+    CPosition Pos;
+    size_t f_cost;
+    CPosition Parent;
+};
 
 #endif // TYPE_H

@@ -109,8 +109,9 @@ int ppal (void){
     bool Victory (false);
 
     CPosition PosPlayer1, PosPlayer2, PosTP1, PosTP2;
+    vector <CPosition> PosMonster;
 
-    InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2);
+    InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);
     //ClearScreen();
     DisplayGrid(Mat, param);
 
@@ -128,10 +129,10 @@ int ppal (void){
         }while(not IsMoveLegal(Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param));
 
         MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param, PosTP1, PosTP2);
-        ClearScreen();
+        //ClearScreen();
         DisplayGrid (Mat, param);
 
-        // MoveMonster();
+        MoveMonster(PosMonster, Mat, param);
 
         //Victiry test
         if (PosPlayer1 == PosPlayer2) Victory = true;
