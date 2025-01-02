@@ -102,8 +102,6 @@ const char KEmpty        = ' ';
 
 
 // à faire
-
-typedef struct Node Node;
 struct Node{
     CPosition Pos;
     size_t f_cost;

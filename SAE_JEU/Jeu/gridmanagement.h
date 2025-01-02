@@ -55,6 +55,6 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
 
 
 
-void MoveMonster(std::vector <CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param);
+void MoveMonster(std::vector <CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param, CPosition & PosPlayer1, CPosition & PosPlayer2);
 
 #endif // GRIDMANAGEMENT_H

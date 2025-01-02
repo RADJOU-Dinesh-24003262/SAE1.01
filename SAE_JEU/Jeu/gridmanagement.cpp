@@ -286,53 +286,20 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
 
 
 
-void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param){
-
-    for(unsigned m = 0 ; m < PosMonster.size() ; ++m ){
-        CMat VuMonster;
-        for(long long i = PosMonster[m].first-(param.NbRow/3); i < int(PosMonster[m].first+(param.NbRow/3)) && i < int(param.NbRow) ; ++i){
-            if(i < 0) i = 0;
-            if (size_t(i) >= param.NbRow) i = param.NbRow -1;
-            CVLine Line;
-
-            for(long long j = PosMonster[m].second -(param.NbColumn/3); j < int(PosMonster[m].second + (param.NbColumn/3)) && j <int(param.NbColumn) ; ++j){
-                if(j < 0) j = 0;
-                if (size_t(j) >= param.NbColumn) j = param.NbColumn -1;
-
-                Line.push_back(Mat[i][j]);
-            }
-            VuMonster.push_back(Line);
-        }
-
-        vector <CPosition> VPosPlayer;
-        CPosition PosMonsterLocal;
-        for(size_t i = 0; i < VuMonster.size(); ++i){
-            for(size_t j = 0; j < VuMonster[i].size(); ++j){
-                if(VuMonster[i][j] == param.tokenP1 || VuMonster[i][j] == param.tokenP2){
-                    VPosPlayer.push_back(CPosition(i,j));
-                }
-                else if(VuMonster[i][j] == 'A' && (i == param.NbRow/3 || j == param.NbColumn/3) ){
-                    PosMonsterLocal = CPosition(i,j);
-                }
-            }
-        }
-
-        Node CheminToPlayer;
-
+void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat, CMyParamV2 & param, CPosition & PosPlayer1, CPosition & PosPlayer2){
+    vector <CPosition> VPosPlayer = {PosPlayer1, PosPlayer2};
+    for (CPosition & PosMonster : VPosMonster) {
+        vector< vector <Node>> MapNode(Mat.size(), vector<Node>(Mat[0].size()));
         bool finish;
-        for(const CPosition & posplay : VPosPlayer){
+
+        CPosition posplay = VPosPlayer[rand()%(VPosPlayer.size()-1)];
+        //for(const CPosition & posplay : VPosPlayer){
             finish = false;
-            vector <Node> PosOpen = {Node {posplay, 0, posplay}};
+            vector <Node> PosOpen = {Node {posplay, 0, CPosition(-1,-1)}};
             vector <Node> PosClose = {};
+            finish = false;
             Node CurrentNode;
             while (not finish) {
-
-                if(CurrentNode.Pos == PosMonsterLocal){
-                    CheminToPlayer = (CurrentNode);
-                    finish = true;
-                    break;
-                }
-
 
                 if (PosOpen.empty()) {
                     cout << "PosOpen is empty. Exiting..." << endl;
@@ -348,25 +315,31 @@ void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param
                 CurrentNode = PosOpen[indice];
                 PosOpen.erase (PosOpen.begin() + indice);
                 PosClose.push_back(CurrentNode);
+                MapNode[CurrentNode.Pos.first][CurrentNode.Pos.second] = CurrentNode;
 
+                if(CurrentNode.Pos == PosMonster){
+                    finish = true;
+                    break;
+                }
 
-
+                //regarder les voisins
                 for(const int & i : {-1,0,1}){
                     for (const int & j : {-1,0,1}) {
                         int voisin_i = CurrentNode.Pos.first + i;
                         int voisin_j = CurrentNode.Pos.second + j;
+                        // cout << voisin_i << " " << voisin_j << endl;
+                        if(i == 0 && j == 0 && voisin_i == 0 && voisin_j == 0) continue; //éviter de reprendre lui même
 
                         bool inClose = false;
                         for (const Node & node_test : PosClose) {
-                            if (node_test.Pos == CPosition(voisin_i, voisin_j)) {
+                            if (node_test.Pos.first == voisin_i && node_test.Pos.second == voisin_j) {
                                 inClose = true;
                                 break;
                             }
                         }
 
-                        if (voisin_i >= 0 && voisin_j >= 0 && size_t(voisin_i) < VuMonster.size() &&
-                            size_t(voisin_j) < VuMonster[i].size() && VuMonster[voisin_i][voisin_j] == KEmpty && not inClose
-                            && not(i == 0 && j != 0)){
+                        if (voisin_i >= 0 && voisin_j >= 0 && size_t(voisin_i) < Mat.size() &&
+                            size_t(voisin_j) < Mat[voisin_i].size() && (Mat[voisin_i][voisin_j] == KEmpty || Mat[voisin_i][voisin_j] == param.tokenP2 ||Mat[voisin_i][voisin_j] == param.tokenP1 || Mat[voisin_i][voisin_j] == 'A') && not inClose){
 
                             Node NodeVoisin = {CPosition(voisin_i, voisin_j), CurrentNode.f_cost + 1, CurrentNode.Pos};
 
@@ -392,19 +365,17 @@ void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param
                 }
 
             }
-                //test to see
-                Node currentNode = CheminToPlayer;
-                while (currentNode.Parent != posplay) {
-                    cout << currentNode.Pos.first << " " << currentNode.Pos.second << endl;
 
-                    for(size_t i = 0; i < PosClose.size(); ++i){
-                        if(CurrentNode.Pos == CPosition(PosMonsterLocal.first, PosMonsterLocal.second)) currentNode = PosClose[i];
-                    }
+            //cout << Mat[PosMonster.first][PosMonster.second] << endl;
+            Mat[PosMonster.first][PosMonster.second] = KEmpty;
+            //cout << Mat[PosMonster.first][PosMonster.second] << endl;
+            Mat[ MapNode[PosMonster.first][PosMonster.second].Parent.first][MapNode[PosMonster.first][PosMonster.second].Parent.second] = 'A';
+            //cout << MapNode[PosMonster.first][PosMonster.second].Parent.first << ' ' << MapNode[PosMonster.first][PosMonster.second].Parent.second << endl;
+            PosMonster = CPosition(MapNode[PosMonster.first][PosMonster.second].Parent.first,MapNode[PosMonster.first][PosMonster.second].Parent.second);
+            //string zlkjd;
+            //cin >> zlkjd;
+        //}
 
-
-                }
-                cout << endl;
-        }
     }
 }
 
