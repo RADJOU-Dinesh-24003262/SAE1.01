@@ -37,7 +37,6 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2
  * @return true if the Move can be made
  */
 
-
 bool IsMoveLegal(const CMat & Mat, const char & Move, const CPosition & Pos, const CMyParamV2 & Param);
 
 /*!
@@ -51,7 +50,6 @@ bool IsMoveLegal(const CMat & Mat, const char & Move, const CPosition & Pos, con
  * @return <content of the cell <pos x, pos y>>
  */
 
-
 std::pair<char, CPosition> nextMove(const CMat &Mat, const char &Move, const CPosition &Pos,
                                     const CMyParamV2 &Param, CPosition &Tp1, CPosition &Tp2);
 
@@ -64,10 +62,16 @@ std::pair<char, CPosition> nextMove(const CMat &Mat, const char &Move, const CPo
  * @return true if the next move's cell is an element
  */
 
-
 bool IsCollectible(const CMat & Mat, const char & Move, const CPosition & Pos, const CMyParamV2 & Param);
 
 
+/*!
+ * \brief Increments the score for each item in the list
+ * \param[in] The list of items the player has collected
+ * \param[in] The score increases with each element
+ */
+
+void CalculateScore(std::vector<char> &objets, int &score);
 
 /**
  * @brief new main

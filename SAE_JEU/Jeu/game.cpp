@@ -73,6 +73,19 @@ bool IsCollectible(const char move) // On check si la case n'est ni un mur, ni u
         return true;
 }
 
+void CalculateScore(vector<char> &objets, int &score)
+{
+    while (!objets.empty()) {
+        char item = objets.back();
+        objets.pop_back();
+        switch (item) {
+        case 'S': score += 350; break;
+        case 'C': score += 100; break;
+        case 'K': score += 75; break;
+        }
+    }
+}
+
 void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2 ){
     char car = Mat [Pos.first][Pos.second];
     Mat [Pos.first][Pos.second] = KEmpty;
@@ -173,8 +186,6 @@ int ppal (void){
         char Move;
         string temp;
         do{
-            cout << Mat[param.NbRow - 1][0] << " J2" << endl;
-            cout << Mat[0][param.NbColumn - 1] << " J1" << endl;
             cout << "Score J1: " << scoreJ1 << ", Score J2: " << scoreJ2 << endl;
             cout << "tour numero : " << PartyNum << ", Joueur "
                  << (Player1Turn ? '1' : '2') << ", entrez un déplacement : ";
@@ -194,16 +205,31 @@ int ppal (void){
         }
 
         // check si joueur arrive a la maison => vide ses poches (comptage du score)
-
-        if (!Player1Turn && N_move.second.first == param.NbRow - 1 && N_move.second.second == 0) {
-            scoreJ2 += objetJ2.size() * 100;
-            objetJ2.clear();
+        if (!Player1Turn && N_move.second.first == param.NbRow - 1 && N_move.second.second == 0)
+        {
+            CalculateScore(objetJ2, scoreJ2);
         }
+        //     //scoreJ2 += objetJ2.size() * 100;
+        //     //objetJ2.clear();
+        //     while (objetJ2.size() > 1)
+        //     {
+        //         item = poptahpython(objetJ2);
+        //         switch (item) {
+        //         case 'S':
+        //             scoreJ2 += 300;
+        //             break;
+        //         case 'C':
+        //             scoreJ2 += 100;
+        //             break;
+        //         case 'K':
+        //             scoreJ2 += 75;
+        //             break;
+        //         }
+        //     }
+        // }
 
-        if (Player1Turn && N_move.second.first == 0 && N_move.second.second == param.NbColumn - 1) {
-            scoreJ1 += objetJ1.size() * 100;
-            objetJ1.clear();
-        }
+        if (Player1Turn && N_move.second.first == 0 && N_move.second.second == param.NbColumn - 1)
+            CalculateScore(objetJ1, scoreJ1);
 
         MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param, PosTP1, PosTP2);
         ClearScreen();

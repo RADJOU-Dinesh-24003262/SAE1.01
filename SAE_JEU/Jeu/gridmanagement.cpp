@@ -211,6 +211,20 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
             }
         }
     }
+//empecher les murs
+
+    //J2
+    if(Mat[Param.NbRow - 2][0] == 'M')
+        Mat[Param.NbRow - 2][0] = ' ';
+    if(Mat[Param.NbRow - 1][1] == 'M')
+        Mat[Param.NbRow - 1][1] = ' ';
+
+    if(Mat[0][Param.NbColumn - 2] == 'M')
+        Mat[0][Param.NbColumn - 2] = ' ';
+    if(Mat[1][Param.NbColumn - 1] == 'M')
+        Mat[1][Param.NbColumn - 1] = ' ';
+
+
 
     vector <long long> teleportX (2);
     vector <long long> teleportY (2);
@@ -239,22 +253,52 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     int nbr_item, cpt;
     x, y, cpt = 0;  //On reféfinit nos valeurs x et y pour placer les items(pour l'instant, un seul type)
 
-    nbr_item = (Param.NbColumn * Param.NbRow) / (Param.NbColumn + Param.NbRow);
+    nbr_item = (((Param.NbColumn * Param.NbRow) / (Param.NbColumn + Param.NbRow)) * 1.5) ;
 
     if(nbr_item % 2 == 0) // pour avoir un nbr impaire d'item afin éviter égalité
         nbr_item += 1;
 
-    do{
+    do{// Les clopes
         x = rand()%(Param.NbRow-3)+1;
         y = rand()%(Param.NbColumn-3)+1;
 
-        if(Mat[x][y] != 'M' && Mat[x][y] != 'T' && Mat[x][y] != 'S')
+        if(Mat[x][y] != 'M' && Mat[x][y] != 'T' && Mat[x][y] != 'C')
         {
             cpt += 1;
-            Mat[x][y] = 'S';
+            Mat[x][y] = 'C';
         }
     }
-    while (cpt < nbr_item);
+    while (cpt < nbr_item/2);
+
+    cpt = 0;
+    do{// Les tacos (kebab)
+        x = rand()%(Param.NbRow-3)+1;
+        y = rand()%(Param.NbColumn-3)+1;
+
+        if(Mat[x][y] != 'M' && Mat[x][y] != 'T' && Mat[x][y] != 'C'  && Mat[x][y] != 'K')
+        {
+            cpt += 1;
+            Mat[x][y] = 'K';
+        }
+    }
+    while (cpt < nbr_item/2);
+
+    // La statue (unique et pour rester fairplay, dans un rayon de 3 du milleu de la matrice)
+    int centerX = Param.NbRow / 2;
+    int centerY = Param.NbColumn / 2;
+
+    int minX = centerX - 3;
+    int maxX = centerX + 3;
+    int minY = centerY - 3;
+    int maxY = centerY + 3;
+
+    do {
+        x = rand() % (maxX - minX) + minX;
+        y = rand() % (maxY - minY) + minY;
+    } while (Mat[x][y] == 'M' || Mat[x][y] == 'T' || Mat[x][y] == 'C' || Mat[x][y] == 'K');
+
+    // Placer la statue
+    Mat[x][y] = 'S';
 
 
     PosPlayer1.first = 0;
