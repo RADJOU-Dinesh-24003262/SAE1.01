@@ -1,32 +1,10 @@
-#include <vector>
-#include <iostream>
-#include <cmath>
-#include <stack>
-
-#include "type.h"
+#include "Pathfinder.h"
 using namespace std;
 
 
-
-
-
-struct Node{
-    int y;
-    int x;
-    int parentX;
-    int parentY;
-    float gCost;
-    float hCost;
-    float fCost;
-};
-
-inline bool operator < (const Node& lhs, const Node& rhs){
-    return lhs.fCost < rhs.fCost;
-}
-
-bool isValid(int x, int y, CMat map, CMyParamV2 & param) { //If our Node is an obstacle it is not valid
-    if (x < 0 || y < 0 || size_t(x) >= map[0].size() || size_t(y) >= map.size()) {
-        if (map[y][x] != KEmpty || map[x][y] != param.tokenP1 || map[x][y] != param.tokenP2 || map[x][y] != 'A') {
+bool isValid(int x, int y, CMat & map, CMyParamV2 & param) { //If our Node is an obstacle it is not valid
+    if (x < 0 || y < 0 || size_t(x) > map[0].size() || size_t(y) > map.size()) {
+        if (map[y][x] != KEmpty || param.tokenP1 != map[y][x] || param.tokenP2 != map[y][x] ) {
             return false;
         }
         return true;
@@ -34,19 +12,19 @@ bool isValid(int x, int y, CMat map, CMyParamV2 & param) { //If our Node is an o
     return false;
 }
 
-bool isDestination(int x, int y, Node dest) {
+bool isDestination(int x, int y, Node & dest) {
     if (x == dest.x && y == dest.y) {
         return true;
     }
     return false;
 }
 
-double calculateH(int x, int y, Node dest) {
+double calculateH(int x, int y, Node & dest) {
     double H = (sqrt((x - dest.x)*(x - dest.x) + (y - dest.y)*(y - dest.y)));
     return H;
 }
 
-vector<Node> makePath(vector <vector<Node>> map, Node dest) {
+vector<Node> makePath(vector <vector<Node>> & map, Node & dest) {
     try {
         cout << "Found a path" << endl;
         int x = dest.x;
@@ -78,7 +56,7 @@ vector<Node> makePath(vector <vector<Node>> map, Node dest) {
     }
 }
 
-vector<Node> aStar(Node player, Node dest, CMat map, CMyParamV2 param) {
+vector<Node> aStar(Node & player, Node & dest, CMat & map,CMyParamV2 param) {
     vector<Node> empty;
     if (isValid(dest.x, dest.y, map, param) == false) {
         cout << "Destination is an obstacle" << endl;
@@ -90,10 +68,9 @@ vector<Node> aStar(Node player, Node dest, CMat map, CMyParamV2 param) {
         return empty;
         //You clicked on yourself
     }
-    bool closedList[map[0].size()][map.size()];
+    vector<vector<bool>> closedList(map[0].size(), vector<bool>(map.size()));
 
     //Initialize whole map
-    //Node allMap[50][25];
     vector<vector < Node>> allMap;
     allMap.resize(map[0].size());
     for(vector <Node> & line : allMap){

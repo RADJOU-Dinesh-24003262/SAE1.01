@@ -21,7 +21,7 @@ bool IsMoveLegal(const CMat & Mat, const char & Move, const  CPosition & Pos, co
         return true;
     }else{
         Color(KColor.find("KRed")->second);
-        cout << "Illegal Move, Play again ! ";
+        cout << "Illegal Move, Play again ! " << endl;
         Color (KColor.find("KReset")->second);
         return false;
     }
@@ -161,7 +161,7 @@ int ppal (void){
     vector <CPosition> PosMonster;
 
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);
-    ClearScreen();
+    //ClearScreen();
     DisplayGrid(Mat, param);
 
     vector<char> objetJ1;
@@ -175,8 +175,8 @@ int ppal (void){
         string temp;
         //ask to the player the move to do till it's legal
         do{
-            cout << Mat[param.NbRow - 1][0] << " J2" << endl;
-            cout << Mat[0][param.NbColumn - 1] << " J1" << endl;
+            //cout << Mat[param.NbRow - 1][0] << " J2" << endl;
+            //cout << Mat[0][param.NbColumn - 1] << " J1" << endl;
             cout << "Score J1: " << scoreJ1 << ", Score J2: " << scoreJ2 << endl;
             cout << "tour numero : " << PartyNum << ", Joueur "
                  << (Player1Turn ? '1' : '2') << ", entrez un déplacement : ";
@@ -211,7 +211,9 @@ int ppal (void){
         MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param, PosTP1, PosTP2);
         if(Player1Turn)
             MoveMonster(PosMonster, Mat, param);
-        ClearScreen();
+
+
+        //ClearScreen();
         DisplayGrid (Mat, param);
 
         //Victory test

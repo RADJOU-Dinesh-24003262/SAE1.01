@@ -345,14 +345,14 @@ void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 &
         }
 
         if(not VPosPlayer.empty()){
-            CPosition player = VPosPlayer[rand()%(VPosPlayer.size())];
+            CPosition ChoixPl = VPosPlayer[rand()%(VPosPlayer.size())];
 
 
-            Node start = {int(PosMonsterLocal.first), int(PosMonsterLocal.second), -1, -1, 0.0, 0.0, 0.0};
-            Node goal = {int(player.first), int(player.second), -1, -1, 0.0, 0.0, 0.0};
+            Node Monster = {0, 0, -1, -1, 0.0, 0.0, 0.0};  // (x=0, y=0)
+            Node player = { int(ChoixPl.second), int(ChoixPl.first), -1, -1, 0.0, 0.0, 0.0};  // (x=4, y=4)
 
             // Appel de l'algorithme A* pour trouver un chemin
-            vector<Node> path = aStar(start, goal, Mat, param);
+            vector<Node> path = aStar(Monster, player, VuMonster, param);
 
             // Affichage du chemin trouvé
             if (!path.empty()) {
@@ -360,19 +360,18 @@ void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 &
                 for (const Node& n : path) {
                     cout << "(" << n.x << ", " << n.y << ")" << endl;
                 }
-            } else {
-                cout << "No path found!" << endl;
-            }
 
-            if (!path.empty()) {
-                //cout << "Path found: ";
-                // PrintPath(path);
+
                 CPosition NextMov (PosMonster[m].first + path[1].x - path[0].x, PosMonster[m].second + path[1].y - path[0].y);
                 Mat[PosMonster[m].first][PosMonster[m].second] = KEmpty;
                 Mat[NextMov.first][NextMov.second] = 'A';
 
                 PosMonster[m] = NextMov;
+
+            } else {
+                cout << "No path found!" << endl;
             }
+
         }
 
 
