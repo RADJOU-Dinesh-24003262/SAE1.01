@@ -43,8 +43,10 @@ void DisplayGrid (const CMat & Mat, const CMyParamV2 & Param );
  * \param[in] Parms Set of game's parameters
  * \param[out] PosPlayer1 position of the first player's token in Mat
  * \param[out] PosPlayer2 position of the second player's token in Mat
+ * \param[out] Tp1 position of the first Teleporter in Mat
+ * \param[out] Tp2 position of the second Teleporter in Mat
  * @fn void InitGrid (CMat & Mat, const CMyParam & Params, CPosition & PosPlayer1, CPosition & PosPlayer2);
  */
-void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param );
+void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2);
 
 #endif // GRIDMANAGEMENT_H

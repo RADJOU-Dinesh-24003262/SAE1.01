@@ -1,21 +1,10 @@
 #include <iostream>
-#include <math.h>
 #include "gridmanagement.h"
-
 #include "type.h" //nos types
 
 using namespace std;
 
-
-struct Form
-{
-    string nom;
-    pair<size_t,size_t> dim;
-    vector<vector<char>> piece;
-};
-
-
-
+#include <cmath>
 
 
 static Form F_T()
@@ -29,10 +18,9 @@ static Form F_T()
     formeT.dim = {2,3};
     return formeT;
 }
-
 static Form F_Carre() {
     Form carre;
-    carre.nom = "Carre";
+    carre.nom = "Forme Carre";
     carre.piece = {
         {'M', 'M'},
         {'M', 'M'}
@@ -40,10 +28,9 @@ static Form F_Carre() {
     carre.dim = {2, 2};
     return carre;
 }
-
 static Form F_L() {
     Form formeL;
-    formeL.nom = "Carre";
+    formeL.nom = "Forme L";
     formeL.piece = {
         {' ', ' ', 'M'},
         {'M', 'M', 'M'}
@@ -51,10 +38,9 @@ static Form F_L() {
     formeL.dim = {2, 3};
     return formeL;
 }
-
 static Form F_S() {
     Form carre;
-    carre.nom = "Carre";
+    carre.nom = "Forme S";
     carre.piece = {
         {' ', 'M', 'M'},
         {'M', 'M', ' '}
@@ -62,11 +48,9 @@ static Form F_S() {
     carre.dim = {2, 3};
     return carre;
 }
-
-
 static Form F_Z() {
     Form carre;
-    carre.nom = "Carre";
+    carre.nom = "Forme Z";
     carre.piece = {
         {'M', 'M', ' '},
         {' ', 'M', 'M'}
@@ -74,10 +58,9 @@ static Form F_Z() {
     carre.dim = {2, 3};
     return carre;
 }
-
 static Form F_J() {
     Form carre;
-    carre.nom = "Carre";
+    carre.nom = "Forme J";
     carre.piece = {
         {' ', 'M'},
         {' ', 'M'},
@@ -86,7 +69,6 @@ static Form F_J() {
     carre.dim = {3, 2};
     return carre;
 }
-
 
 
 //fonction pour ajouter piece dans la matrice (si manque de place => on supprime le M initial pour éviter un M seul)
@@ -123,12 +105,8 @@ void rotation90(Form &forme) {
             matrice[j][forme.dim.first - 1 - i] = forme.piece[i][j];
         }
     }
-
-    // Remplacer la matrice actuelle par la matrice pivotée
-    forme.piece = matrice;
-
-    // Mettre à jour les dimensions de la forme
-    swap(forme.dim.first, forme.dim.second);
+    forme.piece = matrice; // Remplacer la matrice actuelle par la matrice pivotée
+    swap(forme.dim.first, forme.dim.second); // Mettre à jour les dimensions de la forme
 }
 
 
@@ -160,6 +138,15 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
                 cout << c;
                 Color (KColor.find("KReset")->second);
             }
+            else if(c == 'M'){
+                Color ("\e[7;33");
+                cout <<  ' ';
+                Color (KColor.find("KReset")->second);
+            }
+            else if(c == 'T'){
+                cout << c;
+                Color (KColor.find("KReset")->second);
+            }
             else{
                 cout << c;
             }
@@ -170,19 +157,19 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
 }// ShowMatrix ()
 
 
-void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param ){
+void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2 ){
     Mat.resize (NbLine);
     const CVLine KLine (NbColumn, KEmpty);
     for (CVLine &ALine : Mat)
         ALine = KLine;
 
     srand(time(0));
-    unsigned x,y,val, last_rand;
+    unsigned x = 0,y = 0,val = 0, last_rand = 0;
     for (size_t i = 0; i < NbLine; i = i + 5)
     {
         for (size_t j = 0; j < NbColumn; j = j+5)
         {
-            for (unsigned p = 0; p < 1; ++p)
+            for (unsigned p = 0; p < 1; ++p) // si on veut ajouter plus de mur
             {
                 x = x + rand();
                 y = y + rand();
@@ -224,6 +211,52 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
             }
         }
     }
+
+    vector <long long> teleportX (2);
+    vector <long long> teleportY (2);
+    size_t  distx, disty;
+
+    do{
+        for(unsigned i = 0; i < 2; ++i){
+            do{
+                teleportX[i] = rand()%(Param.NbRow-3)+1;
+                teleportY[i] = rand()%(Param.NbColumn-3)+1;
+            }while(Mat[teleportX[i]][teleportY[i]] == 'M' || Mat[teleportX[i]-1][teleportY[i]] == 'M' || Mat[teleportX[i]+1][teleportY[i]] == 'M' || Mat[teleportX[i]][teleportY[i]-1] == 'M' || Mat[teleportX[i]][teleportY[i]+1] == 'M');
+        }
+
+        distx = std::abs(teleportY[0] - teleportY[1]);
+        disty = std::abs(teleportX[0] - teleportX[1]);
+    }while(distx < Param.NbColumn/3 || disty < Param.NbRow/3);
+    Mat[teleportX[0]][teleportY[0]] = 'T';
+    Tp1 = {teleportX[0], teleportY[0]};
+
+    Mat[teleportX[1]][teleportY[1]] = 'T';
+    Tp2 = {teleportX[1], teleportY[1]};
+
+
+    srand(time(0)); // a test
+
+    int nbr_item, cpt;
+    x, y, cpt = 0;  //On reféfinit nos valeurs x et y pour placer les items(pour l'instant, un seul type)
+
+    nbr_item = (Param.NbColumn * Param.NbRow) / (Param.NbColumn + Param.NbRow);
+
+    if(nbr_item % 2 == 0) // pour avoir un nbr impaire d'item afin éviter égalité
+        nbr_item += 1;
+
+    do{
+        x = rand()%(Param.NbRow-3)+1;
+        y = rand()%(Param.NbColumn-3)+1;
+
+        if(Mat[x][y] != 'M' && Mat[x][y] != 'T' && Mat[x][y] != 'S')
+        {
+            cpt += 1;
+            Mat[x][y] = 'S';
+        }
+    }
+    while (cpt < nbr_item);
+
+
     PosPlayer1.first = 0;
     PosPlayer1.second = NbColumn - 1;
     Mat [PosPlayer1.first][PosPlayer1.second] = Param.tokenP1;
