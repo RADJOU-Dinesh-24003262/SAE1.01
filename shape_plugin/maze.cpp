@@ -6,11 +6,6 @@
 
 #include "mingl/mingl.h"
 
-#include "mingl/shape/rectangle.h"
-#include "mingl/shape/circle.h"
-#include "mingl/shape/line.h"
-#include "mingl/shape/triangle.h"
-#include "mingl/shape/oval.h"
 #include <tuple>
 #include "sprites/player1.h"
 #include "sprites/player2.h"
