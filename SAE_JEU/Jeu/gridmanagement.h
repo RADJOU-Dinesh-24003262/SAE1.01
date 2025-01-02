@@ -43,6 +43,7 @@ void DisplayGrid (const CMat & Mat, const CMyParamV2 & Param );
  * \param[in] Parms Set of game's parameters
  * \param[out] PosPlayer1 position of the first player's token in Mat
  * \param[out] PosPlayer2 position of the second player's token in Mat
+<<<<<<< HEAD
  * \param[out] Tp1 position of the first Teleporter in Mat
  * \param[out] Tp2 position of the second Teleporter in Mat
  * \param[out] PosMonster position of Monsters in Mat
@@ -57,5 +58,6 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
  * \param[in] The Parameter extract from the .yaml file
  */
 void MoveMonster(std::vector <CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 & param);
+
 
 #endif // GRIDMANAGEMENT_H

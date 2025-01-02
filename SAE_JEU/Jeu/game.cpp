@@ -156,6 +156,8 @@ int ppal (void){
     bool Victory (false);
 
     CPosition PosPlayer1, PosPlayer2, PosTP1, PosTP2;
+
+
     vector <CPosition> PosMonster;
 
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);
@@ -205,18 +207,15 @@ int ppal (void){
             objetJ1.clear();
         }
 
+
         MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param, PosTP1, PosTP2);
         if(Player1Turn)
             MoveMonster(PosMonster, Mat, param);
-
-
         ClearScreen();
         DisplayGrid (Mat, param);
 
-
-        //Victiry test
+        //Victory test
         if (PosPlayer1 == PosPlayer2) Victory = true;
-
         bool playdead = false;
         for (const CPosition & posmont : PosMonster) {
             if(posmont == PosPlayer1 || posmont == PosPlayer2) playdead = true;

@@ -1,33 +1,43 @@
-// ©2023 JDSherbert. All rights reserved.
-#pragma once
+#ifndef ASTAR_H
+#define ASTAR_H
 
 #include <vector>
-#include <queue>
+#include <iostream>
 #include <cmath>
+#include <limits>
+#include <stack>
 
-// Define a structure to represent a node in the graph
+#include "type.h"
+
+using namespace std;
+
 struct Node {
-    int x, y;
-    size_t f, g, h;
-    Node* parent;  // Pointer to parent node for path reconstruction
-
-    // Constructor to initialize the node
-    Node(int _x, int _y)
-        : x(_x), y(_y), f(0), g(0), h(0), parent(nullptr) {}
-
-    // Overload operator > for the priority queue (min-heap based on f value)
-    bool operator>(const Node& other) const {
-        return f > other.f;
-    }
-
-    // Overload operator == to compare nodes
-    bool operator==(const Node& other) const {
-        return x == other.x && y == other.y;
-    }
+    int y;            // Coordonnée y du nœud
+    int x;            // Coordonnée x du nœud
+    int parentX;      // Coordonnée x du parent
+    int parentY;      // Coordonnée y du parent
+    float gCost;      // Coût pour arriver au nœud
+    float hCost;      // Coût estimé jusqu'à la destination (heuristique)
+    float fCost;      // Coût total (fCost = gCost + hCost)
 };
 
-// A* pathfinding algorithm
-std::vector<Node> FindPath(const std::vector<std::vector<int>>& graph, const Node& start, const Node& goal);
+inline bool operator < (const Node& lhs, const Node& rhs) {
+    return lhs.fCost < rhs.fCost;
+}
 
-// Function to print the path
-void PrintPath(const std::vector<Node>& path);
+// Fonction pour vérifier si une case est valide (dans les limites et sans obstacle)
+bool isValid(int x, int y, CMat map, CMyParamV2 & param);
+
+// Fonction pour vérifier si le nœud actuel est la destination
+bool isDestination(int x, int y, Node dest);
+
+// Calcul de l'heuristique (distance Euclidienne)
+double calculateH(int x, int y, Node dest);
+
+// Génère le chemin en remontant les parents à partir de la destination
+vector<Node> makePath(vector<vector<Node>>& map, Node dest);
+
+// Fonction principale de l'algorithme A*
+vector<Node> aStar(Node player, Node dest, CMat map, CMyParamV2 param);
+
+#endif // ASTAR_H

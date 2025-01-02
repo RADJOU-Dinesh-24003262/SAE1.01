@@ -1,11 +1,22 @@
 #include <iostream>
+#include <math.h>
 #include "gridmanagement.h"
+
 #include "type.h" //nos types
 #include "Pathfinder.h"
 #include <bits/stdc++.h>
 using namespace std;
 
-#include <cmath>
+
+struct Form
+{
+    string nom;
+    pair<size_t,size_t> dim;
+    vector<vector<char>> piece;
+};
+
+
+
 
 
 static Form F_T(){
@@ -18,9 +29,10 @@ static Form F_T(){
     formeT.dim = {2,3};
     return formeT;
 }
+
 static Form F_Carre() {
     Form carre;
-    carre.nom = "Forme Carre";
+    carre.nom = "Carre";
     carre.piece = {
         {'M', 'M'},
         {'M', 'M'}
@@ -28,9 +40,10 @@ static Form F_Carre() {
     carre.dim = {2, 2};
     return carre;
 }
+
 static Form F_L() {
     Form formeL;
-    formeL.nom = "Forme L";
+    formeL.nom = "Carre";
     formeL.piece = {
         {' ', ' ', 'M'},
         {'M', 'M', 'M'}
@@ -38,9 +51,10 @@ static Form F_L() {
     formeL.dim = {2, 3};
     return formeL;
 }
+
 static Form F_S() {
     Form carre;
-    carre.nom = "Forme S";
+    carre.nom = "Carre";
     carre.piece = {
         {' ', 'M', 'M'},
         {'M', 'M', ' '}
@@ -48,9 +62,11 @@ static Form F_S() {
     carre.dim = {2, 3};
     return carre;
 }
+
+
 static Form F_Z() {
     Form carre;
-    carre.nom = "Forme Z";
+    carre.nom = "Carre";
     carre.piece = {
         {'M', 'M', ' '},
         {' ', 'M', 'M'}
@@ -58,9 +74,10 @@ static Form F_Z() {
     carre.dim = {2, 3};
     return carre;
 }
+
 static Form F_J() {
     Form carre;
-    carre.nom = "Forme J";
+    carre.nom = "Carre";
     carre.piece = {
         {' ', 'M'},
         {' ', 'M'},
@@ -69,6 +86,7 @@ static Form F_J() {
     carre.dim = {3, 2};
     return carre;
 }
+
 
 
 //fonction pour ajouter piece dans la matrice (si manque de place => on supprime le M initial pour éviter un M seul)
@@ -105,8 +123,12 @@ void rotation90(Form &forme) {
             matrice[j][forme.dim.first - 1 - i] = forme.piece[i][j];
         }
     }
-    forme.piece = matrice; // Remplacer la matrice actuelle par la matrice pivotée
-    swap(forme.dim.first, forme.dim.second); // Mettre à jour les dimensions de la forme
+
+    // Remplacer la matrice actuelle par la matrice pivotée
+    forme.piece = matrice;
+
+    // Mettre à jour les dimensions de la forme
+    swap(forme.dim.first, forme.dim.second);
 }
 
 
@@ -164,19 +186,19 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
 
 void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPlayer1, CPosition & PosPlayer2,
                const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2, vector <CPosition> & PosMonster ){
-
     Mat.resize (NbLine);
     const CVLine KLine (NbColumn, KEmpty);
     for (CVLine & ALine : Mat)
         ALine = KLine;
 
     srand(time(0));
+
     unsigned x = 0, y = 0,val = 0, last_rand = 0;
     for (size_t i = 0; i < NbLine; i = i + 5)
     {
         for (size_t j = 0; j < NbColumn; j = j+5)
         {
-            for (unsigned p = 0; p < 1; ++p) // si on veut ajouter plus de mur
+            for (unsigned p = 0; p < 1; ++p)
             {
                 x = x + rand();
                 y = y + rand();
@@ -323,23 +345,24 @@ void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 &
         }
 
         if(not VPosPlayer.empty()){
-            int ChoixPl = rand()%(VPosPlayer.size());
-            CPosition player = VPosPlayer[ChoixPl];
-            vector<vector<int>> graph(VuMonster.size(), vector<int>(VuMonster[0].size(), 1));
+            CPosition player = VPosPlayer[rand()%(VPosPlayer.size())];
 
 
-            for (size_t i (0); i < VuMonster.size(); ++i) {
-                for(size_t j (0); j < VuMonster[i].size(); ++j){
-                    if(VuMonster[i][j] == KEmpty || VuMonster[i][j] == 'A' || VuMonster[i][j] == param.tokenP1 || VuMonster[i][j] == param.tokenP2 ){
-                        graph[i][j] = 0;
-                    }
+            Node start = {int(PosMonsterLocal.first), int(PosMonsterLocal.second), -1, -1, 0.0, 0.0, 0.0};
+            Node goal = {int(player.first), int(player.second), -1, -1, 0.0, 0.0, 0.0};
+
+            // Appel de l'algorithme A* pour trouver un chemin
+            vector<Node> path = aStar(start, goal, Mat, param);
+
+            // Affichage du chemin trouvé
+            if (!path.empty()) {
+                cout << "Path found:" << endl;
+                for (const Node& n : path) {
+                    cout << "(" << n.x << ", " << n.y << ")" << endl;
                 }
+            } else {
+                cout << "No path found!" << endl;
             }
-
-            Node start(PosMonsterLocal.first, PosMonsterLocal.second);
-            Node goal(player.first, player.second);
-
-            vector<Node> path = FindPath(graph, start, goal);
 
             if (!path.empty()) {
                 //cout << "Path found: ";
