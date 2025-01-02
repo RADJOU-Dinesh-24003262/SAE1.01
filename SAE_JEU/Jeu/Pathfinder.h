@@ -28,7 +28,7 @@ inline bool operator < (const Node & lhs, const Node & rhs) {
 }
 
 // Fonction pour vérifier si une case est valide (dans les limites et sans obstacle)
-bool isValid(int x, int y, CMat & map, CMyParamV2 & param);
+bool isValid(int x, int y, CMat & map, const CMyParamV2 & param);
 
 // Fonction pour vérifier si le noeud actuel est la destination
 bool isDestination(int x, int y, Node & dest);
@@ -40,6 +40,6 @@ double calculateH(int x, int y, Node & dest);
 vector<Node> makePath(vector <vector<Node>> & map, Node & dest);
 
 // Fonction principale de l'algorithme A*
-vector<Node> aStar(Node & player, Node & dest, CMat & map, CMyParamV2 param);
+vector<Node> aStar(Node & player, Node & dest, CMat & map, const CMyParamV2 & param);
 
 #endif // ASTAR_H

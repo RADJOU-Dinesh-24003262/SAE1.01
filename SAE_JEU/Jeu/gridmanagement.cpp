@@ -342,7 +342,7 @@ void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 &
         if(not VPosPlayer.empty()){
             CPosition ChoixPl = VPosPlayer[rand()%(VPosPlayer.size())];
 
-
+            cout << PosMonsterLocal.first << " " << PosMonsterLocal.second << endl;
             Node Monster = {int(PosMonsterLocal.second), int(PosMonsterLocal.first), -1, -1, 0.0, 0.0, 0.0};
             Node player = {int(ChoixPl.second), int(ChoixPl.first), -1, -1, 0.0, 0.0, 0.0};
 

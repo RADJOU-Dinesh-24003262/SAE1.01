@@ -2,7 +2,7 @@
 using namespace std;
 
 
-bool isValid(int x, int y, CMat & map, CMyParamV2 & param) { //If our Node is an obstacle it is not valid
+bool isValid(int x, int y, CMat & map, const CMyParamV2 & param) { //If our Node is an obstacle it is not valid
     if (x >= 0 && y >= 0 && size_t(x) < map[0].size() && size_t(y) < map.size()) {
         if (map[x][y] == KEmpty || map[x][y] == param.tokenP1 || map[x][y] == param.tokenP2 || map[x][y] == 'A') {
             return true;
@@ -10,7 +10,7 @@ bool isValid(int x, int y, CMat & map, CMyParamV2 & param) { //If our Node is an
         cout << x << " " << y << " " <<map[x][y] << endl;
         return false;
     }
-    cout << x << " " << y;
+    cout << "obstacle: " << x << " " << y;
     return false;
 }
 
@@ -58,7 +58,7 @@ vector<Node> makePath(vector <vector<Node>> & map, Node & dest) {
     }
 }
 
-vector<Node> aStar(Node & player, Node & dest, CMat & map,CMyParamV2 param) {
+vector<Node> aStar(Node & player, Node & dest, CMat & map, const CMyParamV2 & param) {
     vector<Node> empty;
     if (isValid(dest.x, dest.y, map, param) == false) {
         cout << "Destination is an obstacle" << endl;
@@ -115,18 +115,20 @@ vector<Node> aStar(Node & player, Node & dest, CMat & map,CMyParamV2 param) {
             //To be completely honest, I don't remember the reason why I do
             //it with a vector, but for now it's still an option, although
             //not as good as a set performance wise.
-            float temp = map.max_size();
-            vector<Node>::iterator itNode;
-            for (vector<Node>::iterator it = openList.begin();
-                 it != openList.end(); it = next(it)) {
-                Node n = *it;
-                if (n.fCost < temp) {
-                    temp = n.fCost;
-                    itNode = it;
+            if(!openList.empty()){
+                float temp = map.size();
+                vector<Node>::iterator itNode;
+                for (vector<Node>::iterator it = openList.begin();
+                     it != openList.end(); it = next(it)) {
+                    Node n = *it;
+                    if (n.fCost < temp) {
+                        temp = n.fCost;
+                        itNode = it;
+                    }
                 }
+                node = *itNode;
+                openList.erase(itNode);
             }
-            node = *itNode;
-            openList.erase(itNode);
         } while (isValid(node.x, node.y, map, param) == false);
 
         x = node.x;
