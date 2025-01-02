@@ -2,7 +2,11 @@ KeyUp : z
 KeyDown : s
 KeyLeft : q
 KeyRight : d
+<<<<<<< Updated upstream
 NbColumn : 30
+=======
+NbColumn : 20
+>>>>>>> Stashed changes
 NbRow : 10
 ColorP1 : KBlue
 ColorP2 :  KGreen
