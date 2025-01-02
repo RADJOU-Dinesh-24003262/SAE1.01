@@ -8,12 +8,7 @@
 using namespace std;
 
 
-struct Form
-{
-    string nom;
-    pair<size_t,size_t> dim;
-    vector<vector<char>> piece;
-};
+
 
 
 
@@ -270,7 +265,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     srand(time(0)); // a test
 
     int nbr_item, cpt;
-    x, y, cpt = 0;  //On reféfinit nos valeurs x et y pour placer les items(pour l'instant, un seul type)
+    x = 0, y = 0, cpt = 0;  //On reféfinit nos valeurs x et y pour placer les items(pour l'instant, un seul type)
 
     nbr_item = (Param.NbColumn * Param.NbRow) / (Param.NbColumn + Param.NbRow);
 
@@ -338,7 +333,7 @@ void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 &
                     VPosPlayer.push_back(CPosition(i,j));
                 }
                 else if(VuMonster[i][j] == 'A' &&
-                           (int(i) - param.NbRow / 3 <= 1.5 || int(j) - param.NbColumn / 3 <= 1.5) ){
+                           (int(i) - param.NbRow / 3 <= 2 || int(j) - param.NbColumn / 3 <= 2) ){
                     PosMonsterLocal = CPosition(i,j);
                 }
             }
@@ -348,8 +343,8 @@ void MoveMonster(vector<CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 &
             CPosition ChoixPl = VPosPlayer[rand()%(VPosPlayer.size())];
 
 
-            Node Monster = {0, 0, -1, -1, 0.0, 0.0, 0.0};  // (x=0, y=0)
-            Node player = { int(ChoixPl.second), int(ChoixPl.first), -1, -1, 0.0, 0.0, 0.0};  // (x=4, y=4)
+            Node Monster = {int(PosMonsterLocal.second), int(PosMonsterLocal.first), -1, -1, 0.0, 0.0, 0.0};
+            Node player = {int(ChoixPl.second), int(ChoixPl.first), -1, -1, 0.0, 0.0, 0.0};
 
             // Appel de l'algorithme A* pour trouver un chemin
             vector<Node> path = aStar(Monster, player, VuMonster, param);

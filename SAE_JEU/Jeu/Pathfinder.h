@@ -5,7 +5,10 @@
 #include <iostream>
 #include <cmath>
 #include <stack>
+#include <queue>
 #include "type.h"
+
+
 
 using namespace std;
 

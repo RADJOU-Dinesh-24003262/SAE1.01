@@ -3,12 +3,14 @@ using namespace std;
 
 
 bool isValid(int x, int y, CMat & map, CMyParamV2 & param) { //If our Node is an obstacle it is not valid
-    if (x < 0 || y < 0 || size_t(x) > map[0].size() || size_t(y) > map.size()) {
-        if (map[y][x] != KEmpty || param.tokenP1 != map[y][x] || param.tokenP2 != map[y][x] ) {
-            return false;
+    if (x >= 0 && y >= 0 && size_t(x) < map[0].size() && size_t(y) < map.size()) {
+        if (map[x][y] == KEmpty || map[x][y] == param.tokenP1 || map[x][y] == param.tokenP2 || map[x][y] == 'A') {
+            return true;
         }
-        return true;
+        cout << x << " " << y << " " <<map[x][y] << endl;
+        return false;
     }
+    cout << x << " " << y;
     return false;
 }
 
