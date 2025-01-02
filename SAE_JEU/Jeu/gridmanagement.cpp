@@ -142,7 +142,6 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
                 Color (KColor.find("KReset")->second);
             }
             else if(c == 'T'){
-                cout << "\e[6;34m";
                 cout << c;
                 Color (KColor.find("KReset")->second);
             }
@@ -176,7 +175,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     {
         for (size_t j = 0; j < NbColumn; j = j+5)
         {
-            for (unsigned p = 0; p < 1; ++p)
+            for (unsigned p = 0; p < 1; ++p) // si on veut ajouter plus de mur
             {
                 x = x + rand();
                 y = y + rand();
@@ -252,7 +251,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
 
     nbr_item = (Param.NbColumn * Param.NbRow) / (Param.NbColumn + Param.NbRow);
 
-    if(nbr_item % 2 == 1)
+    if(nbr_item % 2 == 0) // pour avoir un nbr impaire d'item afin éviter égalité
         nbr_item += 1;
 
     do{

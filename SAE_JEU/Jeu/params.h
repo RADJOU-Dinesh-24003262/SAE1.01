@@ -26,6 +26,7 @@ void initParamsV2 (CMyParamV2 & param);
 /**
  * @brief Load the set of parameters from a YAML file
  * @param[out] Param : List of usefull parameters
+ * @param[in] FileName : Path to the file to load
  * @fn void LoadParams (CMyParam & Param);
  * @return 0 if everything is OK, return 2 if it can't load the file
  */
