@@ -166,14 +166,15 @@ int ppal (void){
     vector<char> objetJ1;
     vector<char> objetJ2;
 
-    pair<char,pair<int,int>> N_move;
+    pair<char,CPosition> N_move;
 
     while (PartyNum <= KMaxPartyNum && ! Victory){
 
         char Move;
         string temp;
         do{
-            cout << "test" << objetJ2.size() << endl;
+            cout << Mat[param.NbRow - 1][0] << " J2" << endl;
+            cout << Mat[0][param.NbColumn - 1] << " J1" << endl;
             cout << "Score J1: " << scoreJ1 << ", Score J2: " << scoreJ2 << endl;
             cout << "tour numero : " << PartyNum << ", Joueur "
                  << (Player1Turn ? '1' : '2') << ", entrez un déplacement : ";
@@ -194,12 +195,12 @@ int ppal (void){
 
         // check si joueur arrive a la maison => vide ses poches (comptage du score)
 
-        if (!Player1Turn && N_move.second.first == param.NbColumn - 1 && N_move.second.second == 0) {
+        if (!Player1Turn && N_move.second.first == param.NbRow - 1 && N_move.second.second == 0) {
             scoreJ2 += objetJ2.size() * 100;
             objetJ2.clear();
         }
 
-        if (Player1Turn && N_move.second.first == 0 && N_move.second.second == param.NbRow - 1) {
+        if (Player1Turn && N_move.second.first == 0 && N_move.second.second == param.NbColumn - 1) {
             scoreJ1 += objetJ1.size() * 100;
             objetJ1.clear();
         }

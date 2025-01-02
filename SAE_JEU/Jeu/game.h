@@ -37,11 +37,36 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2
  * @return true if the Move can be made
  */
 
+
 bool IsMoveLegal(const CMat & Mat, const char & Move, const CPosition & Pos, const CMyParamV2 & Param);
 
+/*!
+ * \brief returns the contents of the next cell and its position in the matrix (even with teleporter)
+ * \param[in] Mat the matrix
+ * \param[in] Move the key pressed by the user
+ * \param[in] Pos the player's position
+ * \param[in] The Parameter extract from the .yaml file
+ * \param[in] The position of teleporter number 1
+ * \param[in] The position of teleporter number 2
+ * @return <content of the cell <pos x, pos y>>
+ */
 
 
-bool IsItem(const CMat & Mat, const char & Move, const CPosition & Pos, const CMyParamV2 & Param);
+std::pair<char, CPosition> nextMove(const CMat &Mat, const char &Move, const CPosition &Pos,
+                                    const CMyParamV2 &Param, CPosition &Tp1, CPosition &Tp2);
+
+/*!
+ * \brief Test whether the content of the next move's cell is an element
+ * \param[in] Mat the matrix
+ * \param[in] Move the key pressed by the user
+ * \param[in] Pos the player's position
+ * \param[in] The Parameter extract from the .yaml file
+ * @return true if the next move's cell is an element
+ */
+
+
+bool IsCollectible(const CMat & Mat, const char & Move, const CPosition & Pos, const CMyParamV2 & Param);
+
 
 
 /**
