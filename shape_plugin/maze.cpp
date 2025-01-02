@@ -1,6 +1,5 @@
 #define FPS_LIMIT 60
 
-#include <iostream>
 #include <thread>
 #include <cmath>
 
@@ -12,10 +11,6 @@
 #include "sprites/wall.h"
 
 using namespace std;
-
-const char kTokenPlayer1 = 'X';
-const char kTokenPlayer2 = 'O';
-const char kEmpty        = '_';
 
 typedef vector <char> CVLine; // un type représentant une ligne de la grille
 typedef vector <CVLine> CMatrix; // un type représentant la grille
