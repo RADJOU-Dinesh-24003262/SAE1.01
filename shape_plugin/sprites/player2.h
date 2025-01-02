@@ -8,6 +8,13 @@
  *
  **/
 
+//include les différentes formes pour dessiner les sprites
+// #include "mingl/shape/rectangle.h"
+#include "mingl/shape/circle.h"
+// #include "mingl/shape/line.h"
+// #include "mingl/shape/triangle.h"
+#include "mingl/shape/oval.h"
+
 //défini les éléments du sprite du joueur 2
 void Player2(MinGL &window, int Circle1, int Circle2, int mat_x, int mat_y){
 
