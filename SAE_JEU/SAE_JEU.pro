@@ -17,3 +17,12 @@ HEADERS += \
     Jeu/gridmanagement.h \
     Jeu/params.h \
     Jeu/type.h
+
+HEADERS += \
+    sprites/player1.h \
+    sprites/player2.h \
+    sprites/wall.h \
+
+
+include(MinGL2_IUT_AIX-master/mingl.pri)
+

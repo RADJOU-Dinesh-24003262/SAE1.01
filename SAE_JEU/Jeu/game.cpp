@@ -7,6 +7,19 @@
 #include "params.h"
 #include "gridmanagement.h"
 
+#define FPS_LIMIT 60
+
+#include <thread>
+#include <cmath>
+
+#include "mingl/mingl.h"
+
+#include <tuple>
+#include "sprites/player1.h"
+#include "sprites/player2.h"
+#include "sprites/wall.h"
+
+
 #include <map>
 using namespace std;
 
@@ -86,6 +99,50 @@ void CalculateScore(vector<char> &objets, int &score)
     }
 }
 
+void Sprite(MinGL &window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, string sprite){
+    //calcule la position de la tuile
+    int Point1_1 = (grid_x*pos_x);
+    int Point1_2 = (grid_x*pos_y);
+    int Point2_1 = (grid_y*(pos_x+1));
+    int Point2_2 = (grid_y*(pos_y+1));
+    //calcul de la position centrale du personnage
+    int Circle1 = Point1_1+((Point2_1-Point1_1)/2);
+    int Circle2 = Point1_2+((Point2_2-Point1_2)/2);
+
+    //affiche le sprite correspondant a l'élément de la case
+    if (sprite == "player1")Player1(window, Circle1, Circle2, mat_x, mat_y);
+    if (sprite == "player2")Player2(window, Circle1, Circle2, mat_x, mat_y);
+    if (sprite == "wall")Wall(window, Circle1, Circle2, mat_x, mat_y);
+}
+
+void DisplayGrid (MinGL &window, const CMat & mat, tuple <int, int> Screen_size){
+    int mat_x = size(mat);
+    int mat_y = size(mat[0]);
+
+    int grid_x = get<0>(Screen_size)/mat_x;
+    int grid_y = get<1>(Screen_size)/mat_y;
+
+    for (int i=0; i < mat_x; ++i){
+        for (int j=0; j < mat_y; ++j){
+            switch (mat[j][i]){
+            case 'X':
+                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "player1");
+                break;
+            case 'O':
+                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "player2");
+                break;
+            case 'M':
+                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "wall");
+                break;
+            default:
+                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "floor");
+            }
+        }
+    }
+}
+
+
+
 void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2 & Param, CPosition & Tp1, CPosition & Tp2 ){
     char car = Mat [Pos.first][Pos.second];
     Mat [Pos.first][Pos.second] = KEmpty;
@@ -119,37 +176,6 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2
         Mat[PosTP[i].first][PosTP[i].second] = 'T';
     }
 
-    // switch (Move)
-    // {
-    // case 'A':
-    //     -- Pos.first;
-    //     -- Pos.second;
-    //     break;
-    // case 'Z':
-    //     --Pos.first;
-    //     break;
-    // case 'E':
-    //     --Pos.first;
-    //     ++Pos.second;
-    //     break;
-    // case 'Q':
-    //     --Pos.second;
-    //     break;
-    // case 'D':
-    //     ++Pos.second;
-    //     break;
-    // case 'W':
-    //     ++Pos.first;
-    //     --Pos.second;
-    //     break;
-    // case 'X':
-    //     ++Pos.first;
-    //     break;
-    // case 'C':
-    //     ++Pos.first;
-    //     ++Pos.second;
-    //     break;
-    // }
     Mat [Pos.first][Pos.second] = car;
 
 } //MoveToken ()
@@ -157,6 +183,13 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2
 int scoreJ1 = 0, scoreJ2 = 0;
 
 int ppal (void){
+
+    // Initialise le système
+    tuple <int, int> Screen_size(640,640);
+    MinGL window("Lethal Company  |  V0.0.1", nsGraphics::Vec2D(get<0>(Screen_size), get<1>(Screen_size)), nsGraphics::Vec2D(128, 128), nsGraphics::KWhite);
+    window.initGlut();
+    window.initGraphic();
+
     CMyParamV2 param;
     initParams(param);
     LoadParams(param);
@@ -172,19 +205,26 @@ int ppal (void){
     vector <CPosition> PosMonster;
 
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);
-    ClearScreen();
+    DisplayGrid(window, Mat, Screen_size);
+    window.finishFrame();
     DisplayGrid(Mat, param);
+
 
     vector<char> objetJ1;
     vector<char> objetJ2;
 
     pair<char,CPosition> N_move;
 
-    while (PartyNum <= KMaxPartyNum && ! Victory){
+    while (PartyNum <= KMaxPartyNum && ! Victory && window.isOpen()){
 
+        chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
+        window.clearScreen();
+        DisplayGrid(window, Mat, Screen_size);
+        window.finishFrame();
         char Move;
         string temp;
         //ask to the player the move to do till it's legal
+        DisplayGrid(window, Mat, Screen_size);
         do{
             cout << "Score J1: " << scoreJ1 << ", Score J2: " << scoreJ2 << endl;
             cout << "tour numero : " << PartyNum << ", Joueur "
@@ -194,6 +234,10 @@ int ppal (void){
             Move = tolower(Move);
 
         }while(not IsMoveLegal(Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param));
+
+        window.clearScreen();
+        DisplayGrid(window, Mat, Screen_size);
+        window.finishFrame();
 
         N_move = nextMove(Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param, PosTP1, PosTP2);
 
@@ -209,24 +253,6 @@ int ppal (void){
         {
             CalculateScore(objetJ2, scoreJ2);
         }
-        //     //scoreJ2 += objetJ2.size() * 100;
-        //     //objetJ2.clear();
-        //     while (objetJ2.size() > 1)
-        //     {
-        //         item = poptahpython(objetJ2);
-        //         switch (item) {
-        //         case 'S':
-        //             scoreJ2 += 300;
-        //             break;
-        //         case 'C':
-        //             scoreJ2 += 100;
-        //             break;
-        //         case 'K':
-        //             scoreJ2 += 75;
-        //             break;
-        //         }
-        //     }
-        // }
 
         if (Player1Turn && N_move.second.first == 0 && N_move.second.second == param.NbColumn - 1)
             CalculateScore(objetJ1, scoreJ1);
@@ -236,9 +262,17 @@ int ppal (void){
         if(Player1Turn){
             MoveMonster(PosMonster, Mat, param, PosPlayer1, PosPlayer2);
         }
-
-        //ClearScreen();
         DisplayGrid (Mat, param);
+
+        window.finishFrame();
+
+        // On vide la queue d'évènements
+        window.getEventManager().clearEvents();
+
+        // On attend un peu pour limiter le framerate et soulager le CPU
+        this_thread::sleep_for(chrono::milliseconds(2500 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
+
+
 
         //Victory test
         if (PosPlayer1 == PosPlayer2) Victory = true;
@@ -268,3 +302,4 @@ int ppal (void){
     Color (KColor.find("KReset")->second);
     return 0;
 } //ppal ()
+
