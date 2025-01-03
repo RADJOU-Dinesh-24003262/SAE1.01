@@ -238,15 +238,18 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     size_t  distx, disty;
 
     do{
+        //placer deux teleporteur
         for(unsigned i = 0; i < 2; ++i){
             do{
                 teleportX[i] = rand()%(Param.NbRow-3)+1;
                 teleportY[i] = rand()%(Param.NbColumn-3)+1;
+               //pour eviter que autour du Tp qu'il ait des murs
             }while(Mat[teleportX[i]][teleportY[i]] == 'M' || Mat[teleportX[i]-1][teleportY[i]] == 'M' ||
                    Mat[teleportX[i]+1][teleportY[i]] == 'M' || Mat[teleportX[i]][teleportY[i]-1] == 'M' ||
                      Mat[teleportX[i]][teleportY[i]+1] == 'M');
 
         }
+        //regarder la distance entre les Tp et éviter qu'il soit trop pres
         distx = std::abs(teleportY[0] - teleportY[1]);
         disty = std::abs(teleportX[0] - teleportX[1]);
     }while(distx < Param.NbColumn/3 || disty < Param.NbRow/3);
@@ -261,7 +264,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     srand(time(0)); // a test
 
     int nbr_item, cpt;
-    x, y, cpt = 0;  //On reféfinit nos valeurs x et y pour placer les items(pour l'instant, un seul type)
+    x = 0, y = 0, cpt = 0;  //On reféfinit nos valeurs x et y pour placer les items(pour l'instant, un seul type)
 
     nbr_item = (((Param.NbColumn * Param.NbRow) / (Param.NbColumn + Param.NbRow)) * 1.5) ;
 
@@ -307,7 +310,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
         y = rand() % (maxY - minY) + minY;
     } while (Mat[x][y] == 'M' || Mat[x][y] == 'T' || Mat[x][y] == 'C' || Mat[x][y] == 'K');
 
-    // Placer la statue
+    //Placer la statue
     Mat[x][y] = 'S';
 
 
@@ -319,11 +322,12 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     Mat [PosPlayer2.first][PosPlayer2.second] = Param.tokenP2;
 
     //Init Monster
-    PosMonster.resize((Param.NbRow-3)/4);
+    PosMonster.resize((Param.NbRow-1)/10);
 
     for(unsigned i = 0; i < PosMonster.size(); ++i){
         do{
-            PosMonster[i] = CPosition(rand()%(Param.NbRow-3), rand()%(Param.NbColumn-3));
+            //placer les montres plutot au centre
+            PosMonster[i] = CPosition((rand()%Param.NbRow/2)+Param.NbRow/4, (rand()%Param.NbColumn/2)+Param.NbColumn/4);
         }while(Mat[PosMonster[i].first][PosMonster[i].second] != KEmpty);
 
         Mat[PosMonster[i].first][PosMonster[i].second] = 'A';
@@ -333,7 +337,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
 
 
 
-void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat, CMyParamV2 & param, CPosition & PosPlayer1, CPosition & PosPlayer2){
+void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat,const CMyParamV2 & param,const CPosition & PosPlayer1,const CPosition & PosPlayer2){
     vector <CPosition> VPosPlayer = {PosPlayer1, PosPlayer2};
     for (CPosition & PosMonster : VPosMonster) {
         vector< vector <Node>> MapNode(Mat.size(), vector<Node>(Mat[0].size()));
@@ -342,7 +346,7 @@ void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat, CMyParamV2 & para
 
 
 
-        // Trouver le joueur le plus proche
+        // trouver le joueur le plus proche
         CPosition posplay = VPosPlayer[0];
         int minDistance = abs(int(PosMonster.first - VPosPlayer[0].first)) + abs(int(PosMonster.second - VPosPlayer[0].second));
 
@@ -353,9 +357,14 @@ void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat, CMyParamV2 & para
                 posplay = test;
             }
         }
-        if(minDistance < (param.NbColumn + param.NbRow)/4){
 
+        //regarder si le jouer est pres du montre et s'il n'est dans une safe zone
+        //pour activer le pathfinding et suivre le bot
+        if (size_t(minDistance) < (param.NbColumn + param.NbRow) / 3 &&
+            posplay.second > 2 && posplay.first > 2 &&
+            Mat.size() - posplay.first > 2 && Mat[0].size() - posplay.second > 2){
 
+            // le A*
             finish = false;
             vector <Node> PosOpen = {Node {posplay, 0, CPosition(-1,-1)}};
             vector <Node> PosClose = {};
@@ -392,14 +401,16 @@ void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat, CMyParamV2 & para
                         // cout << voisin_i << " " << voisin_j << endl;
                         if(((i == 0 && j == 0) || (i != 0 && j != 0)) && voisin_i == 0 && voisin_j == 0) continue; //éviter de reprendre lui même
 
+                        //regarder si le voisin est la liste fermé
                         bool inClose = false;
                         for (const Node & node_test : PosClose) {
-                            if (node_test.Pos.first == voisin_i && node_test.Pos.second == voisin_j) {
+                            if (node_test.Pos.first == unsigned(voisin_i) && node_test.Pos.second == unsigned(voisin_j)) {
                                 inClose = true;
                                 break;
                             }
                         }
 
+                        //regarder si le voisin n'est pas un mur
                         if (voisin_i >= 0 && voisin_j >= 0 && size_t(voisin_i) < Mat.size() &&
                             size_t(voisin_j) < Mat[voisin_i].size() && (Mat[voisin_i][voisin_j] == KEmpty || Mat[voisin_i][voisin_j] == param.tokenP2 ||Mat[voisin_i][voisin_j] == param.tokenP1 || Mat[voisin_i][voisin_j] == 'A') && not inClose){
 
@@ -427,13 +438,13 @@ void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat, CMyParamV2 & para
                 }
 
             }
-
+            //deplacer le monstre
             Mat[PosMonster.first][PosMonster.second] = KEmpty;
             Mat[ MapNode[PosMonster.first][PosMonster.second].Parent.first][MapNode[PosMonster.first][PosMonster.second].Parent.second] = 'A';
             PosMonster = CPosition(MapNode[PosMonster.first][PosMonster.second].Parent.first,MapNode[PosMonster.first][PosMonster.second].Parent.second);
 
         }else{
-            cout << "ou";
+            //deplacer le monstre aléatoirement
             Mat[PosMonster.first][PosMonster.second] = KEmpty;
             int i ;
             int j;

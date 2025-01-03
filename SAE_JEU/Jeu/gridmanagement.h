@@ -40,7 +40,7 @@ void DisplayGrid (const CMat & Mat, const CMyParamV2 & Param );
 /*!
  * \brief Initialization of the Matrix from scratch with the teleporter and the monster
  * \param[out] Mat the matrix to be initialized
- * \param[in] Parms Set of game's parameters
+ * \param[in] Param Set of game's parameters
  * \param[out] PosPlayer1 position of the first player's token in Mat
  * \param[out] PosPlayer2 position of the second player's token in Mat
  * \param[out] Tp1 position of the first Teleporter in Mat
@@ -54,7 +54,16 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
 
 
 
+/*!
+ * \brief The function will move all monsters acording to the player if he's near and if he's not in the safe zone, or the monster will be moved randomly
+ * \param[in, out] PosMonster position of Monsters in Mat
+ * \param[in, out] Mat the matrix to be initialized
+ * \param[in] Param Set of game's parameters
+ * \param[in] PosPlayer1 position of the first player's token in Mat
+ * \param[in] PosPlayer2 position of the second player's token in Mat
+ * @fn void InitGrid (CMat & Mat, const CMyParam & Params, CPosition & PosPlayer1, CPosition & PosPlayer2);
+ */
 
-void MoveMonster(std::vector <CPosition> & PosMonster, CMat &  Mat, CMyParamV2 & param, CPosition & PosPlayer1, CPosition & PosPlayer2);
+void MoveMonster(std::vector <CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 & param, const CPosition & PosPlayer1,const CPosition & PosPlayer2);
 
 #endif // GRIDMANAGEMENT_H

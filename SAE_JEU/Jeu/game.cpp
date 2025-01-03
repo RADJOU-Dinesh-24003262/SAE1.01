@@ -232,6 +232,7 @@ int ppal (void){
             CalculateScore(objetJ1, scoreJ1);
 
         MoveToken (Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param, PosTP1, PosTP2);
+        //on fait jouer le bot 1fois/2 sinon il aurait trop d'avantage
         if(Player1Turn){
             MoveMonster(PosMonster, Mat, param, PosPlayer1, PosPlayer2);
         }
