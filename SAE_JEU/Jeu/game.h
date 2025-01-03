@@ -39,6 +39,39 @@ void MoveToken (CMat & Mat, const char & Move, CPosition & Pos, const CMyParamV2
 
 bool IsMoveLegal(const CMat & Mat, const char & Move, const CPosition & Pos, const CMyParamV2 & Param);
 
+/*!
+ * \brief returns the contents of the next cell and its position in the matrix (even with teleporter)
+ * \param[in] Mat the matrix
+ * \param[in] Move the key pressed by the user
+ * \param[in] Pos the player's position
+ * \param[in] The Parameter extract from the .yaml file
+ * \param[in] The position of teleporter number 1
+ * \param[in] The position of teleporter number 2
+ * @return <content of the cell <pos x, pos y>>
+ */
+
+std::pair<char, CPosition> nextMove(const CMat &Mat, const char &Move, const CPosition &Pos,
+                                    const CMyParamV2 &Param, CPosition &Tp1, CPosition &Tp2);
+
+/*!
+ * \brief Test whether the content of the next move's cell is an element
+ * \param[in] Mat the matrix
+ * \param[in] Move the key pressed by the user
+ * \param[in] Pos the player's position
+ * \param[in] The Parameter extract from the .yaml file
+ * @return true if the next move's cell is an element
+ */
+
+bool IsCollectible(const CMat & Mat, const char & Move, const CPosition & Pos, const CMyParamV2 & Param);
+
+
+/*!
+ * \brief Increments the score for each item in the list
+ * \param[in] The list of items the player has collected
+ * \param[in] The score increases with each element
+ */
+
+void CalculateScore(std::vector<char> &objets, int &score);
 
 /**
  * @brief new main

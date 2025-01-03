@@ -7,15 +7,6 @@ using namespace std;
 
 #include <cmath>
 
-struct Form{
-    string nom;
-    pair<size_t,size_t> dim;
-    vector<vector<char>> piece;
-};
-
-
-
-
 
 static Form F_T(){
     Form formeT;
@@ -27,10 +18,9 @@ static Form F_T(){
     formeT.dim = {2,3};
     return formeT;
 }
-
 static Form F_Carre() {
     Form carre;
-    carre.nom = "Carre";
+    carre.nom = "Forme Carre";
     carre.piece = {
         {'M', 'M'},
         {'M', 'M'}
@@ -38,10 +28,9 @@ static Form F_Carre() {
     carre.dim = {2, 2};
     return carre;
 }
-
 static Form F_L() {
     Form formeL;
-    formeL.nom = "Carre";
+    formeL.nom = "Forme L";
     formeL.piece = {
         {' ', ' ', 'M'},
         {'M', 'M', 'M'}
@@ -49,10 +38,9 @@ static Form F_L() {
     formeL.dim = {2, 3};
     return formeL;
 }
-
 static Form F_S() {
     Form carre;
-    carre.nom = "Carre";
+    carre.nom = "Forme S";
     carre.piece = {
         {' ', 'M', 'M'},
         {'M', 'M', ' '}
@@ -60,11 +48,9 @@ static Form F_S() {
     carre.dim = {2, 3};
     return carre;
 }
-
-
 static Form F_Z() {
     Form carre;
-    carre.nom = "Carre";
+    carre.nom = "Forme Z";
     carre.piece = {
         {'M', 'M', ' '},
         {' ', 'M', 'M'}
@@ -72,10 +58,9 @@ static Form F_Z() {
     carre.dim = {2, 3};
     return carre;
 }
-
 static Form F_J() {
     Form carre;
-    carre.nom = "Carre";
+    carre.nom = "Forme J";
     carre.piece = {
         {' ', 'M'},
         {' ', 'M'},
@@ -84,7 +69,6 @@ static Form F_J() {
     carre.dim = {3, 2};
     return carre;
 }
-
 
 
 //fonction pour ajouter piece dans la matrice (si manque de place => on supprime le M initial pour éviter un M seul)
@@ -121,12 +105,8 @@ void rotation90(Form &forme) {
             matrice[j][forme.dim.first - 1 - i] = forme.piece[i][j];
         }
     }
-
-    // Remplacer la matrice actuelle par la matrice pivotée
-    forme.piece = matrice;
-
-    // Mettre à jour les dimensions de la forme
-    swap(forme.dim.first, forme.dim.second);
+    forme.piece = matrice; // Remplacer la matrice actuelle par la matrice pivotée
+    swap(forme.dim.first, forme.dim.second); // Mettre à jour les dimensions de la forme
 }
 
 
@@ -162,7 +142,6 @@ void DisplayGrid (const CMat & Mat,const CMyParamV2 & Param){
                 Color (KColor.find("KReset")->second);
             }
             else if(c == 'T'){
-                cout << "\e[6;34m";
                 cout << c;
                 Color (KColor.find("KReset")->second);
             }
@@ -196,7 +175,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     {
         for (size_t j = 0; j < NbColumn; j = j+5)
         {
-            for (unsigned p = 0; p < 1; ++p)
+            for (unsigned p = 0; p < 1; ++p) // si on veut ajouter plus de mur
             {
                 x = x + rand();
                 y = y + rand();
@@ -238,6 +217,20 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
             }
         }
     }
+//empecher les murs
+
+    //J2
+    if(Mat[Param.NbRow - 2][0] == 'M')
+        Mat[Param.NbRow - 2][0] = ' ';
+    if(Mat[Param.NbRow - 1][1] == 'M')
+        Mat[Param.NbRow - 1][1] = ' ';
+
+    if(Mat[0][Param.NbColumn - 2] == 'M')
+        Mat[0][Param.NbColumn - 2] = ' ';
+    if(Mat[1][Param.NbColumn - 1] == 'M')
+        Mat[1][Param.NbColumn - 1] = ' ';
+
+
 
     //Init teleporter
     vector <long long> teleportX (2);
@@ -263,6 +256,60 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
 
     Mat[teleportX[1]][teleportY[1]] = 'T';
     Tp2 = {teleportX[1], teleportY[1]};
+
+
+    srand(time(0)); // a test
+
+    int nbr_item, cpt;
+    x, y, cpt = 0;  //On reféfinit nos valeurs x et y pour placer les items(pour l'instant, un seul type)
+
+    nbr_item = (((Param.NbColumn * Param.NbRow) / (Param.NbColumn + Param.NbRow)) * 1.5) ;
+
+    if(nbr_item % 2 == 0) // pour avoir un nbr impaire d'item afin éviter égalité
+        nbr_item += 1;
+
+    do{// Les clopes
+        x = rand()%(Param.NbRow-3)+1;
+        y = rand()%(Param.NbColumn-3)+1;
+
+        if(Mat[x][y] != 'M' && Mat[x][y] != 'T' && Mat[x][y] != 'C')
+        {
+            cpt += 1;
+            Mat[x][y] = 'C';
+        }
+    }
+    while (cpt < nbr_item/2);
+
+    cpt = 0;
+    do{// Les tacos (kebab)
+        x = rand()%(Param.NbRow-3)+1;
+        y = rand()%(Param.NbColumn-3)+1;
+
+        if(Mat[x][y] != 'M' && Mat[x][y] != 'T' && Mat[x][y] != 'C'  && Mat[x][y] != 'K')
+        {
+            cpt += 1;
+            Mat[x][y] = 'K';
+        }
+    }
+    while (cpt < nbr_item/2);
+
+    // La statue (unique et pour rester fairplay, dans un rayon de 3 du milleu de la matrice)
+    int centerX = Param.NbRow / 2;
+    int centerY = Param.NbColumn / 2;
+
+    int minX = centerX - 3;
+    int maxX = centerX + 3;
+    int minY = centerY - 3;
+    int maxY = centerY + 3;
+
+    do {
+        x = rand() % (maxX - minX) + minX;
+        y = rand() % (maxY - minY) + minY;
+    } while (Mat[x][y] == 'M' || Mat[x][y] == 'T' || Mat[x][y] == 'C' || Mat[x][y] == 'K');
+
+    // Placer la statue
+    Mat[x][y] = 'S';
+
 
     PosPlayer1.first = 0;
     PosPlayer1.second = NbColumn - 1;
