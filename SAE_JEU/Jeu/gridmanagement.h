@@ -61,7 +61,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
  * \param[in] Param Set of game's parameters
  * \param[in] PosPlayer1 position of the first player's token in Mat
  * \param[in] PosPlayer2 position of the second player's token in Mat
- * @fn void InitGrid (CMat & Mat, const CMyParam & Params, CPosition & PosPlayer1, CPosition & PosPlayer2);
+ * @fn void MoveMonster(std::vector <CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 & param, const CPosition & PosPlayer1,const CPosition & PosPlayer2);
  */
 
 void MoveMonster(std::vector <CPosition> & PosMonster, CMat &  Mat, const CMyParamV2 & param, const CPosition & PosPlayer1,const CPosition & PosPlayer2);
