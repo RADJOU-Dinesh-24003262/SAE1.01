@@ -18,6 +18,11 @@
 #include "sprites/player1.h"
 #include "sprites/player2.h"
 #include "sprites/wall.h"
+#include "sprites/kebab.h"
+#include "sprites/cigarette.h"
+#include "sprites/monstre.h"
+#include "sprites/teleporter.h"
+#include "sprites/statue.h"
 
 
 #include <map>
@@ -113,6 +118,11 @@ void Sprite(MinGL &window, int grid_x, int grid_y, int pos_x, int pos_y, int mat
     if (sprite == "player1")Player1(window, Circle1, Circle2, mat_x, mat_y);
     if (sprite == "player2")Player2(window, Circle1, Circle2, mat_x, mat_y);
     if (sprite == "wall")Wall(window, Circle1, Circle2, mat_x, mat_y);
+    if (sprite == "statue")Statue(window, Circle1, Circle2, mat_x, mat_y);
+    if (sprite == "cigarette")Cigarette(window, Circle1, Circle2, mat_x, mat_y);
+    if (sprite == "kebab")Kebab(window, Circle1, Circle2, mat_x, mat_y);
+    if (sprite == "teleporter")Teleporter(window, Circle1, Circle2, mat_x, mat_y);
+    if (sprite == "monstre")Monstre(window, Circle1, Circle2, mat_x, mat_y);
 }
 
 void DisplayGrid (MinGL &window, const CMat & mat, tuple <int, int> Screen_size){
@@ -133,6 +143,21 @@ void DisplayGrid (MinGL &window, const CMat & mat, tuple <int, int> Screen_size)
                 break;
             case 'M':
                 Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "wall");
+                break;
+            case 'S':
+                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "statue");
+                break;
+            case 'A':
+                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "montre");
+                break;
+            case 'C':
+                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "cigarette");
+                break;
+            case 'K':
+                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "kebab");
+                break;
+            case 'T':
+                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "teleporter");
                 break;
             default:
                 Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "floor");
