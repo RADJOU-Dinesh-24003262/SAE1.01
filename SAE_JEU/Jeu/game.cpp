@@ -305,8 +305,12 @@ int ppal (void){
         for(const CPosition & posmonst : PosMonster){
             if(posmonst == PosPlayer1 || posmonst == PosPlayer2) MonsterEatPLay = true;
         }
-        if(MonsterEatPLay) break;
-
+        if(MonsterEatPLay){
+            Color (KColor.find("KRed")->second);
+            cout << "Vous avez perdu !! \nMission Failed \n";
+            Color (KColor.find("KReset")->second);
+            break;
+        }
         //Increase party's number
         ++PartyNum;
 
