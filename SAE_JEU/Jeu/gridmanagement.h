@@ -38,7 +38,7 @@ void DisplayGrid (const CMat & Mat, const CMyParamV2 & Param );
 
 
 /*!
- * \brief Initialization of the Matrix from scratch with the teleporter and the monster
+ * \brief Initialization of the Matrix from scratch with the teleporter and the monster and the the collectible and the wall
  * \param[out] Mat the matrix to be initialized
  * \param[in] Param Set of game's parameters
  * \param[out] PosPlayer1 position of the first player's token in Mat

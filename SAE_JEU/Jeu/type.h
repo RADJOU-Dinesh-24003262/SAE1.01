@@ -75,17 +75,50 @@ const std::map <std::string, std::string> KColor
 
 };
 
-
+/**
+ * @struct CMyParamV2
+ * @brief Structure contenant les paramètres de configuration du jeu
+ */
 struct CMyParamV2{
+	/**
+     * @brief la forme du joueur 1
+     */
     char tokenP1;
+    /**
+     * @brief la forme du joueur 1
+     */
     char tokenP2;
+	/**
+     * @brief la touche pour faire monter le token
+     */
     char KeyUp;
+	/**
+     * @brief la touche pour faire descendre le token
+     */
     char KeyDown;
+	/**
+     * @brief la touche pour faire aller à gauche le token
+     */
     char KeyLeft;
+	/**
+     * @brief la touche pour faire aller à droite le token
+     */
     char KeyRight;
+	/**
+     *  @brief le nombre de colone qu'il doit avoir dans la map
+     */
     std::size_t NbColumn;
+    /**
+     * @brief le nombre de ligne qu'il doit avoir dans la map
+     */
     std::size_t NbRow;
+    /**
+     * @brief la couleur du player 1
+     */
     std::string ColorP1;
+    /**
+     * @brief la couleur du player 2
+     */
     std::string ColorP2;
 };
 
@@ -113,7 +146,11 @@ const char KEmpty        = ' ';
 
 
 
-// à faire
+/**
+ * @struct Node
+ * @brief Structure représentant un noeud dans un graphe dans Movemonster()
+ * struct représentant un noeud dans un graphe, avec pos sa position, f_cost un coût estimé et son parent.
+ */
 struct Node{
     CPosition Pos;
     size_t f_cost;
