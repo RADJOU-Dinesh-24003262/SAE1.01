@@ -133,7 +133,7 @@ int ppal (void){
             MoveMonster(PosMonster, Mat, param, PosPlayer1, PosPlayer2);
         }
 
-        ClearScreen();
+        //ClearScreen();
         DisplayGrid (Mat, param);
 
 

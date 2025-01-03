@@ -292,8 +292,23 @@ void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat, CMyParamV2 & para
         vector< vector <Node>> MapNode(Mat.size(), vector<Node>(Mat[0].size()));
         bool finish;
 
-        CPosition posplay = VPosPlayer[rand()%(VPosPlayer.size()-1)];
-        //for(const CPosition & posplay : VPosPlayer){
+
+
+
+        // Trouver le joueur le plus proche
+        CPosition posplay = VPosPlayer[0];
+        int minDistance = abs(int(PosMonster.first - VPosPlayer[0].first)) + abs(int(PosMonster.second - VPosPlayer[0].second));
+
+        for (const CPosition & test : VPosPlayer) {
+            int distance = abs(int(PosMonster.first - test.first)) + abs(int(PosMonster.second - test.second));
+            if (distance < minDistance) {
+                minDistance = distance;
+                posplay = test;
+            }
+        }
+        if(minDistance < (param.NbColumn + param.NbRow)/4){
+
+
             finish = false;
             vector <Node> PosOpen = {Node {posplay, 0, CPosition(-1,-1)}};
             vector <Node> PosClose = {};
@@ -328,7 +343,7 @@ void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat, CMyParamV2 & para
                         int voisin_i = CurrentNode.Pos.first + i;
                         int voisin_j = CurrentNode.Pos.second + j;
                         // cout << voisin_i << " " << voisin_j << endl;
-                        if(i == 0 && j == 0 && voisin_i == 0 && voisin_j == 0) continue; //éviter de reprendre lui même
+                        if(((i == 0 && j == 0) || (i != 0 && j != 0)) && voisin_i == 0 && voisin_j == 0) continue; //éviter de reprendre lui même
 
                         bool inClose = false;
                         for (const Node & node_test : PosClose) {
@@ -366,15 +381,25 @@ void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat, CMyParamV2 & para
 
             }
 
-            //cout << Mat[PosMonster.first][PosMonster.second] << endl;
             Mat[PosMonster.first][PosMonster.second] = KEmpty;
-            //cout << Mat[PosMonster.first][PosMonster.second] << endl;
             Mat[ MapNode[PosMonster.first][PosMonster.second].Parent.first][MapNode[PosMonster.first][PosMonster.second].Parent.second] = 'A';
-            //cout << MapNode[PosMonster.first][PosMonster.second].Parent.first << ' ' << MapNode[PosMonster.first][PosMonster.second].Parent.second << endl;
             PosMonster = CPosition(MapNode[PosMonster.first][PosMonster.second].Parent.first,MapNode[PosMonster.first][PosMonster.second].Parent.second);
-            //string zlkjd;
-            //cin >> zlkjd;
-        //}
+
+        }else{
+            cout << "ou";
+            Mat[PosMonster.first][PosMonster.second] = KEmpty;
+            int i ;
+            int j;
+            do{
+                i = rand()%3 - 1;
+                j = rand()%3 - 1 ;
+
+            }while(not(PosMonster.first+i > 0 && PosMonster.second+j > 0 && size_t(PosMonster.first+i) < Mat.size() && size_t(PosMonster.second+j) < Mat[PosMonster.first+i].size() && (Mat[PosMonster.first+i][PosMonster.second+j] == KEmpty)));
+
+            Mat[PosMonster.first+i][PosMonster.second+j] = 'A';
+            PosMonster = CPosition(PosMonster.first+i,PosMonster.second+j);
+
+        }
 
     }
 }
