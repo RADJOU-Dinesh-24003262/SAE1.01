@@ -148,7 +148,7 @@ void DisplayGrid (MinGL &window, const CMat & mat, tuple <int, int> Screen_size)
                 Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "statue");
                 break;
             case 'A':
-                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "montre");
+                Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "monstre");
                 break;
             case 'C':
                 Sprite(window, grid_x, grid_y, i, j, mat_x, mat_y, "cigarette");
