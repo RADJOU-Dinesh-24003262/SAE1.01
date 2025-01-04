@@ -106,23 +106,23 @@ void CalculateScore(vector<char> &objets, int &score)
 
 void Sprite(MinGL &window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, string sprite){
     //calcule la position de la tuile
-    int Point1_1 = (grid_x*pos_x);
-    int Point1_2 = (grid_x*pos_y);
-    int Point2_1 = (grid_y*(pos_x+1));
-    int Point2_2 = (grid_y*(pos_y+1));
+    int x0 = (grid_x*pos_x); // coordonées x points en haut a gauche
+    int y0 = (grid_x*pos_y); // coordonées y points en haut a gauche
+    int x1 = (grid_y*(pos_x+1)); // coordonées x points en bas a droite
+    int y1 = (grid_y*(pos_y+1)); // coordonées y points en bas a droite
     //calcul de la position centrale du personnage
-    int Circle1 = Point1_1+((Point2_1-Point1_1)/2);
-    int Circle2 = Point1_2+((Point2_2-Point1_2)/2);
+    int Center1 = x0+((x1-x0)/2);
+    int Center2 = y0+((y1-y0)/2);
 
     //affiche le sprite correspondant a l'élément de la case
-    if (sprite == "player1")Player1(window, Circle1, Circle2, mat_x, mat_y);
-    if (sprite == "player2")Player2(window, Circle1, Circle2, mat_x, mat_y);
-    if (sprite == "wall")Wall(window, Circle1, Circle2, mat_x, mat_y);
-    if (sprite == "statue")Statue(window, Circle1, Circle2, mat_x, mat_y);
-    if (sprite == "cigarette")Cigarette(window, Circle1, Circle2, mat_x, mat_y);
-    if (sprite == "kebab")Kebab(window, Circle1, Circle2, mat_x, mat_y);
-    if (sprite == "teleporter")Teleporter(window, Circle1, Circle2, mat_x, mat_y);
-    if (sprite == "monstre")Monstre(window, Circle1, Circle2, mat_x, mat_y);
+    if (sprite == "player1")Player1(window, Center1, Center2, mat_x, mat_y);
+    if (sprite == "player2")Player2(window, Center1, Center2, mat_x, mat_y);
+    if (sprite == "wall")Wall(window, Center1, Center2, mat_x, mat_y);
+    if (sprite == "statue")Statue(window, Center1, Center2, mat_x, mat_y);
+    if (sprite == "cigarette")Cigarette(window, Center1, Center2, mat_x, mat_y);
+    if (sprite == "kebab")Kebab(window, Center1, Center2, mat_x, mat_y);
+    if (sprite == "teleporter")Teleporter(window, Center1, Center2, mat_x, mat_y);
+    if (sprite == "monstre")Monstre(window, Center1, Center2, mat_x, mat_y);
 }
 
 void DisplayGrid (MinGL &window, const CMat & mat, tuple <int, int> Screen_size){
@@ -228,6 +228,7 @@ int ppal (void){
 
     CPosition PosPlayer1, PosPlayer2, PosTP1, PosTP2;
     vector <CPosition> PosMonster;
+    cout << param.NbColumn << " " << param.NbRow << endl;
 
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);
     DisplayGrid(window, Mat, Screen_size);

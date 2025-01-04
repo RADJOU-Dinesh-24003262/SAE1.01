@@ -1,6 +1,6 @@
 #include <string>
 #include "params.h"
-#include "game.h"
+//#include "game.h" not use for the moment
 #include <fstream>
 #include <iostream>
 
@@ -32,7 +32,6 @@ void LoadParams (CMyParamV2 & Param){
         cerr << "File not found" << endl;
         exit(-1);
     }
-
 
     for(string key, tampon; !ifs.eof(); ifs >> key){
         ifs >> tampon;

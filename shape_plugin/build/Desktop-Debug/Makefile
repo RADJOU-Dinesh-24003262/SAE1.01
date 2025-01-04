@@ -414,16 +414,14 @@ maze.o: ../../maze.cpp ../../MinGL2_IUT_AIX-master/include/mingl/mingl.h \
 		../../MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h \
 		../../MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h \
 		../../MinGL2_IUT_AIX-master/include/mingl/event/event.hpp \
-		../../MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h \
+		../../sprites/player1.h \
+		../../MinGL2_IUT_AIX-master/include/mingl/shape/circle.h \
 		../../MinGL2_IUT_AIX-master/include/mingl/shape/shape.h \
 		../../MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h \
-		../../MinGL2_IUT_AIX-master/include/mingl/shape/circle.h \
-		../../MinGL2_IUT_AIX-master/include/mingl/shape/line.h \
-		../../MinGL2_IUT_AIX-master/include/mingl/shape/triangle.h \
 		../../MinGL2_IUT_AIX-master/include/mingl/shape/oval.h \
-		../../sprites/player1.h \
 		../../sprites/player2.h \
-		../../sprites/wall.h
+		../../sprites/wall.h \
+		../../MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o maze.o ../../maze.cpp
 
 audioengine.o: ../../MinGL2_IUT_AIX-master/src/audio/audioengine.cpp ../../MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h \
