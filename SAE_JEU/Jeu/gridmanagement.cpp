@@ -365,7 +365,7 @@ void MoveMonster(vector<CPosition> & VPosMonster, CMat &  Mat,const CMyParamV2 &
             posplay.second > 2 && posplay.first > 2 &&
             Mat.size() - posplay.first > 2 && Mat[0].size() - posplay.second > 2){
 
-            // le A*
+            //l'Algo A*
             finish = false;
             vector <Node> PosOpen = {Node {posplay, 0, CPosition(-1,-1)}};
             vector <Node> PosClose = {};

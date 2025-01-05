@@ -302,6 +302,10 @@ int ppal (void){
 
         //Victory test
         if (PosPlayer1 == PosPlayer2) Victory = true;
+        if (size_t(scoreJ2) > (param.NbColumn+param.NbRow)*15 || size_t(scoreJ1) > (param.NbColumn+param.NbRow)*15 ){
+            Victory = true;
+            cout << "Score J1: " << scoreJ1 << ", Score J2: " << scoreJ2 << endl;
+        }
         bool MonsterEatPLay (false);
         for(const CPosition & posmonst : PosMonster){
             if(posmonst == PosPlayer1 || posmonst == PosPlayer2) MonsterEatPLay = true;
