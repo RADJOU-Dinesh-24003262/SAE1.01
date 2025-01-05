@@ -46,6 +46,6 @@ Ce jeu se joue exclusivement sur **Linux**. Pour y jouer, vous devez impérative
 - **Taille de la carte** : Vous pouvez modifier la taille de la carte sur le fichier config, ce qui peut augmenter ou diminuer la difficulté du jeu. Une carte plus grande augmente le nombre d’objets à ramasser, mais tout de même à faire attention, la portée du monstre augmente avec le monstre.
 
 ### Stratégies :
-- **Ramasser les objets** : Explorez la carte pour ramasser les objets tout en évitant le monstre et l’autre joueur.
-- **Calculer votre score** : Assurez-vous de ramasser suffisamment d’objets pour atteindre le score requis avant que l’autre joueur ou le monstre ne vous élimine.
-
+- **Ramasser les objets** : Explorez la carte pour ramasser les objets tout en évitant le monstre.
+- **Calculer votre score** : Assurez-vous de ramasser suffisamment d’objets pour atteindre le score requis avant que l’autre joueur gagne ou le monstre ne vous élimine.
+- **Coopérez** : Effectuez des aliances pour éviter de vous faire manger par le monstre.
