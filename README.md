@@ -37,8 +37,8 @@ Ce jeu se joue exclusivement sur **Linux**. Pour y jouer, vous devez impérative
    - Ramasser des objets dispersés sur la carte pour accumuler des points.
    - Éviter d’être tué par le monstre qui rôde dans la zone.
    - Éviter également d’être tué par l’autre joueur.
-3. **Gagner** : Pour gagner, vous devez ramasser un total de points égal à **(longueur de la carte + largeur de la carte) * 15**.
-   - Une fois ce total atteint, vous devez ramener ces objets à votre maison pour sécuriser vos points.
+3. **Gagner** : Pour gagner, vous devez ramasser un total de points supérieur à **(longueur de la carte + largeur de la carte)** * **15**.
+   - Une fois ce total atteint, vous devez ramener ces objets à votre maison pour valider vos points.
 
 ### Mécanismes du jeu :
 - **Tour de jeu** : Chaque joueur joue à son tour.
