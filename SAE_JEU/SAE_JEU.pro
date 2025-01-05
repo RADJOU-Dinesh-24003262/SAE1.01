@@ -13,6 +13,7 @@ DISTFILES += \
     Nos_fichiers/config.yaml
 
 HEADERS += \
+    Jeu/MenuManagement.h \
     Jeu/game.h \
     Jeu/gridmanagement.h \
     Jeu/params.h \
