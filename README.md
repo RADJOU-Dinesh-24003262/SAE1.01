@@ -1,4 +1,4 @@
-# Projet SAE 1.01 - Jeu d'Aventure
+# Projet SAE 1.01 - Lethal
 
 ## Contexte du Projet
 
