@@ -448,7 +448,7 @@ int ppal (void){
                 //Victory test
                 if (PosPlayer1 == PosPlayer2) Victory = true;
 
-                if (size_t(scoreJ2) > (param.NbColumn+param.NbRow)*15 || size_t(scoreJ1) > (param.NbColumn+param.NbRow)*15 ) Victory = true;
+                if ((scoreJ2 > 0 && size_t(scoreJ2) > (param.NbColumn+param.NbRow)*15) || (scoreJ1 && size_t(scoreJ1) > (param.NbColumn+param.NbRow)*15 )) Victory = true;
 
 
 
