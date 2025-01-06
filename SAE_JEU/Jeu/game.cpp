@@ -389,18 +389,45 @@ int ppal (void){
 
                 // check si joueur arrive a la maison => vide ses poches (comptage du score)
                 if (!Player1Turn && N_move.second.first == param.NbRow - 1 && N_move.second.second == 0)
-                {
                     CalculateScore(objetJ2, scoreJ2);
-                }
 
                 if (Player1Turn && N_move.second.first == 0 && N_move.second.second == param.NbColumn - 1)
                     CalculateScore(objetJ1, scoreJ1);
 
                 MoveToken(Mat, Move, (Player1Turn ? PosPlayer1: PosPlayer2), param, PosTP1, PosTP2);
                 //on fait jouer le bot 1fois/2 sinon il aurait trop d'avantage
-                if(Player1Turn){
+                if(Player1Turn)
                     MoveMonster(PosMonster, Mat, param, PosPlayer1, PosPlayer2);
+
+                Mat[PosPlayer1.first][PosPlayer1.second] = param.tokenP1;
+                Mat[PosPlayer2.first][PosPlayer2.second] = param.tokenP2;
+
+                //check if Monster on player
+                for(CPosition & posmonst : PosMonster){
+                    if(posmonst == PosPlayer1 || posmonst == PosPlayer2){
+                        Mat[posmonst.first][posmonst.second] = KEmpty;
+                        do{
+                            //replacer les montres plutot au centre
+                            posmonst = CPosition((rand()%param.NbRow/2) + param.NbRow/4,
+                                                 (rand()%param.NbColumn/2) + param.NbColumn/4);
+                        }while(Mat[posmonst.first][posmonst.second] != KEmpty);
+
+                        if(posmonst == PosPlayer1){
+                            Mat[PosPlayer1.first][PosPlayer1.second] = param.tokenP1;
+                            scoreJ1 = scoreJ1 - (param.NbColumn + param.NbRow)*2;
+                        }
+                        if(posmonst == PosPlayer2){
+                            Mat[PosPlayer2.first][PosPlayer2.second] = param.tokenP2;
+                            scoreJ2 = scoreJ2 - (param.NbColumn + param.NbRow)*2;
+                        }
+
+                        Mat[posmonst.first][posmonst.second] = 'A';
+
+
+                    }
+
                 }
+
                 DisplayGrid(Mat, param);
 
                 window.finishFrame();
@@ -415,18 +442,12 @@ int ppal (void){
 
                 //Victory test
                 if (PosPlayer1 == PosPlayer2) Victory = true;
-                bool MonsterEatPLay (false);
-                for(const CPosition & posmonst : PosMonster){
-                    if(posmonst == PosPlayer1 || posmonst == PosPlayer2) MonsterEatPLay = true;
-                }
-                if(MonsterEatPLay){
-                    Color (KColor.find("KRed")->second);
-                    cout << "Vous avez perdu !! \nMission Failed \n";
-                    Color (KColor.find("KReset")->second);
-                    InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster); //reinitialise la grille pour la prochaine partie
-                    PartyNum = 1;
-                    break;
-                }
+
+                if (size_t(scoreJ2) > (param.NbColumn+param.NbRow)*15 || size_t(scoreJ1) > (param.NbColumn+param.NbRow)*15 ) Victory = true;
+
+
+
+
                 //Increase party's number
                 ++PartyNum;
 

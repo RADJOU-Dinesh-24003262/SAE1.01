@@ -323,7 +323,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     Mat [PosPlayer2.first][PosPlayer2.second] = Param.tokenP2;
 
     //Init Monster
-    PosMonster.resize((Param.NbRow-1)/10);
+    PosMonster.resize((Param.NbRow + Param.NbColumn-1)/20);
 
     for(unsigned i = 0; i < PosMonster.size(); ++i){
         do{
