@@ -403,8 +403,21 @@ int ppal (void){
                 Mat[PosPlayer2.first][PosPlayer2.second] = param.tokenP2;
 
                 //check if Monster on player
+
                 for(CPosition & posmonst : PosMonster){
-                    if(posmonst == PosPlayer1 || posmonst == PosPlayer2){
+                    if(posmonst == PosPlayer1 || posmonst == PosPlayer2)
+                    {
+                        if(posmonst == PosPlayer1){
+                            sleep(10);
+                            Mat[PosPlayer1.first][PosPlayer1.second] = param.tokenP1;
+                            scoreJ1 = scoreJ1 - (param.NbColumn + param.NbRow)*2;
+                        }
+                        if(posmonst == PosPlayer2)
+                        {
+                            sleep(10);
+                            Mat[PosPlayer2.first][PosPlayer2.second] = param.tokenP2;
+                            scoreJ2 = scoreJ2 - (param.NbColumn + param.NbRow)*2;
+                        }
                         Mat[posmonst.first][posmonst.second] = KEmpty;
                         do{
                             //replacer les montres plutot au centre
@@ -412,21 +425,13 @@ int ppal (void){
                                                  (rand()%param.NbColumn/2) + param.NbColumn/4);
                         }while(Mat[posmonst.first][posmonst.second] != KEmpty);
 
-                        if(posmonst == PosPlayer1){
-                            Mat[PosPlayer1.first][PosPlayer1.second] = param.tokenP1;
-                            scoreJ1 = scoreJ1 - (param.NbColumn + param.NbRow)*2;
-                        }
-                        if(posmonst == PosPlayer2){
-                            Mat[PosPlayer2.first][PosPlayer2.second] = param.tokenP2;
-                            scoreJ2 = scoreJ2 - (param.NbColumn + param.NbRow)*2;
-                        }
+
 
                         Mat[posmonst.first][posmonst.second] = 'A';
-
-
                     }
-
                 }
+
+
 
                 DisplayGrid(Mat, param);
 
