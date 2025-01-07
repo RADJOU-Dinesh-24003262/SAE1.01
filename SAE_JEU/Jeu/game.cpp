@@ -475,6 +475,7 @@ int ppal (void){
             menuid = 0;
             InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);//reinitialise la grille pour la prochaine partie
             PartyNum = 1;
+            Victory=false;
 
             break;
 
