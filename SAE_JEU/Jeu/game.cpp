@@ -25,8 +25,6 @@
 #include "sprites/statue.h"
 #include "MenuManagement.h"
 
-
-
 #include <map>
 using namespace std;
 
@@ -198,7 +196,8 @@ void MoveToken (CMat &Mat, const bool & KeyUp, const bool & KeyDown,
 
 } //MoveToken ()
 
-void MenuP(MinGL &window, vector<tuple<vector<int>, vector<int>, int>> clickablepool, tuple <int, int> Screen_size, int & menuid, chrono::time_point<chrono::steady_clock> start){
+void MenuP(MinGL &window, vector<tuple<vector<int>, vector<int>, int>> clickablepool,
+           tuple <int, int> Screen_size, int & menuid, chrono::time_point<chrono::steady_clock> start){
     clickablepool.clear();
     clickablepool = {
         std::make_tuple(std::vector<int>{100, 48}, std::vector<int>{300, 148}, 4),
@@ -234,6 +233,173 @@ void Options(MinGL &window, vector<tuple<vector<int>, vector<int>, int>> clickab
 
     }
 }
+
+void Credits(MinGL &window, vector<tuple<vector<int>, vector<int>, int>> clickablepool,
+             tuple <int, int> Screen_size, int & menuid, chrono::time_point<chrono::steady_clock> start){
+    clickablepool.clear();
+    clickablepool = {
+        std::make_tuple(std::vector<int>{0, 0}, std::vector<int>{120, 50}, 0)
+    };
+
+    while(menuid == 2){
+
+        InterfaceCredits(window, get<0>(Screen_size), get<1>(Screen_size));
+        window.finishFrame();
+        events(window, clickablepool, menuid);
+        window.getEventManager().clearEvents();
+        this_thread::sleep_for(chrono::milliseconds(1000 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
+    }
+}
+
+void Pause(MinGL &window, vector<tuple<vector<int>, vector<int>, int>> clickablepool,
+           tuple <int, int> Screen_size, int & menuid, chrono::time_point<chrono::steady_clock> start){
+    clickablepool.clear();
+    clickablepool = {
+        std::make_tuple(std::vector<int>{100, 48}, std::vector<int>{300, 148}, 4),
+        std::make_tuple(std::vector<int>{100, 196}, std::vector<int>{300, 296}, 5),
+        std::make_tuple(std::vector<int>{100, 344}, std::vector<int>{300, 444}, 0),
+        };
+
+    while(menuid == 3){
+        InterfacePause(window, get<0>(Screen_size), get<1>(Screen_size));
+        window.finishFrame();
+        events(window, clickablepool, menuid);
+        window.getEventManager().clearEvents();
+        this_thread::sleep_for(chrono::milliseconds(1000 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
+
+    }
+}
+
+void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickablepool,CMat Mat, int menuid, unsigned PartyNum,
+              bool Key_UP, bool Key_DOWN, bool Key_RIGHT, bool Key_LEFT, tuple <int, int> Screen_size, CMyParamV2 param,
+              bool Victory, unsigned KMaxPartyNum, CPosition PosPlayer1, CPosition PosPlayer2, CPosition PosTP1,
+              CPosition PosTP2, bool Player1Turn, pair<char,CPosition> N_move, vector<char> objetJ1, vector<char> objetJ2,
+              int scoreJ1, int scoreJ2, vector <CPosition> PosMonster){
+    clickablepool.clear();
+    clickablepool = {
+                     std::make_tuple(std::vector<int>{0, 0}, std::vector<int>{120, 50}, 1),
+                     };
+    window << nsShape::Rectangle(nsGraphics::Vec2D(0, 0), nsGraphics::Vec2D(120, 50), nsGraphics::KBlue);
+
+    DisplayGrid(window, Mat, Screen_size);
+    window.finishFrame();
+
+    while(PartyNum <= KMaxPartyNum && !Victory && window.isOpen() && (menuid == 4)){
+
+        chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
+        window.clearScreen();
+        DisplayGrid(window, Mat, Screen_size);
+        window.finishFrame();
+
+        Key_UP    = window.MinGL::isPressed({param.KeyUp, false});
+        Key_DOWN  = window.MinGL::isPressed({param.KeyDown, false});
+        Key_RIGHT = window.MinGL::isPressed({param.KeyRight, false});
+        Key_LEFT  = window.MinGL::isPressed({param.KeyLeft, false});
+
+        cout << IsMoveLegal(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, param) << Key_UP << Key_DOWN << Key_RIGHT << Key_LEFT << endl;
+
+        if ((Key_UP || Key_DOWN || Key_RIGHT || Key_LEFT) &&
+            IsMoveLegal(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, param)){
+            cout << "move" << endl;
+            N_move = nextMove(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, param, PosTP1, PosTP2);
+
+            // check si il ya un objet => ajouter a une liste
+            if(IsCollectible(N_move.first))
+            {
+                if(Player1Turn == 1) objetJ1.push_back(N_move.first);
+                if(Player1Turn == 0) objetJ2.push_back(N_move.first);
+            }
+
+            // check si joueur arrive a la maison => vide ses poches (comptage du score)
+            if (!Player1Turn && N_move.second.first == param.NbRow - 1 && N_move.second.second == 0)
+                CalculateScore(objetJ2, scoreJ2);
+
+            if (Player1Turn && N_move.second.first == 0 && N_move.second.second == param.NbColumn - 1)
+                CalculateScore(objetJ1, scoreJ1);
+
+            MoveToken(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, PosTP1, PosTP2);
+        }
+
+
+
+        //on fait jouer le bot 1fois/2 sinon il aurait trop d'avantage
+        if(Player1Turn)
+            MoveMonster(PosMonster, Mat, param, PosPlayer1, PosPlayer2);
+
+        Mat[PosPlayer1.first][PosPlayer1.second] = param.tokenP1;
+        Mat[PosPlayer2.first][PosPlayer2.second] = param.tokenP2;
+
+        //check if Monster on player
+
+        for(CPosition & posmonst : PosMonster){
+            if(posmonst == PosPlayer1 || posmonst == PosPlayer2)
+            {
+                if(posmonst == PosPlayer1){
+                    Mat[PosPlayer1.first][PosPlayer1.second] = param.tokenP1;
+                    scoreJ1 = scoreJ1 - (param.NbColumn + param.NbRow)*2;
+                }
+                if(posmonst == PosPlayer2)
+                {
+                    Mat[PosPlayer2.first][PosPlayer2.second] = param.tokenP2;
+                    scoreJ2 = scoreJ2 - (param.NbColumn + param.NbRow)*2;
+                }
+                Mat[posmonst.first][posmonst.second] = KEmpty;
+                do{
+                    //replacer les montres plutot au centre
+                    posmonst = CPosition((rand()%param.NbRow/2) + param.NbRow/4,
+                                         (rand()%param.NbColumn/2) + param.NbColumn/4);
+                }while(Mat[posmonst.first][posmonst.second] != KEmpty);
+
+                Mat[posmonst.first][posmonst.second] = 'A';
+            }
+        }
+
+        DisplayGrid(Mat, param);
+
+        window.finishFrame();
+
+        events(window, clickablepool, menuid);
+
+        cout << menuid << endl;
+
+        // On vide la queue d'évènements
+        window.getEventManager().clearEvents();
+
+        // On attend un peu pour limiter le framerate et soulager le CPU
+        this_thread::sleep_for(chrono::milliseconds(1000 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
+
+        //Victory test
+        if (PosPlayer1 == PosPlayer2) Victory = true;
+
+        if ((scoreJ2 > 0 && size_t(scoreJ2) > (param.NbColumn+param.NbRow)*15)) Victory = true;
+        if ((scoreJ1 > 0  && size_t(scoreJ1) > (param.NbColumn+param.NbRow)*15 )) Victory = true;
+
+        //Increase party's number
+        ++PartyNum;
+
+        //Player changing
+        Player1Turn = !Player1Turn;
+
+    }//while(no victory)
+
+    if (!Victory){
+        Color (KColor.find("KMAgenta")->second);
+        cout << "Aucun vainqueur" << endl;
+        //menuid = 0;
+    }
+
+    Color (KColor.find("KGreen")->second);
+    cout << "Félicitations Joueur " << (Player1Turn ? '2' : '1')
+         << " vous avez gagné :)" << endl;
+    cout << scoreJ1 << endl;
+    Color (KColor.find("KReset")->second);
+    if(!(menuid == 3))menuid = 0;
+    InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);//reinitialise la grille pour la prochaine partie
+    PartyNum = 1;
+    Victory=false;
+
+}
+
 
 int ppal (void){
 
@@ -289,175 +455,19 @@ int ppal (void){
             break;
 
         case 2: //Credits
-
-            clickablepool.clear();
-            clickablepool = {
-                std::make_tuple(std::vector<int>{0, 0}, std::vector<int>{120, 50}, 0)
-            };
-
-            while(menuid == 2){
-
-                Credits(window, get<0>(Screen_size), get<1>(Screen_size));
-                window.finishFrame();
-                events(window, clickablepool, menuid);
-                window.getEventManager().clearEvents();
-                this_thread::sleep_for(chrono::milliseconds(1000 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
-
-            }
+            Credits(window, clickablepool, Screen_size, menuid, start);
             break;
 
         case 3: //Pause
-
-            clickablepool.clear();
-            clickablepool = {
-                             std::make_tuple(std::vector<int>{100, 48}, std::vector<int>{300, 148}, 4),
-                             std::make_tuple(std::vector<int>{100, 196}, std::vector<int>{300, 296}, 5),
-                             std::make_tuple(std::vector<int>{100, 344}, std::vector<int>{300, 444}, 0),
-                             };
-
-            while(menuid == 3){
-                MenuPause(window, get<0>(Screen_size), get<1>(Screen_size));
-                window.finishFrame();
-                events(window, clickablepool, menuid);
-                window.getEventManager().clearEvents();
-                this_thread::sleep_for(chrono::milliseconds(1000 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
-
-            }
+            Pause(window, clickablepool, Screen_size, menuid, start);
             break;
 
         case 4: //Jeu
-
-            clickablepool.clear();
-            clickablepool = {
-                             std::make_tuple(std::vector<int>{0, 0}, std::vector<int>{120, 50}, 1),
-                             };
-            window << nsShape::Rectangle(nsGraphics::Vec2D(0, 0), nsGraphics::Vec2D(120, 50), nsGraphics::KBlue);
-
-            DisplayGrid(window, Mat, Screen_size);
-            window.finishFrame();
-
-            while(PartyNum <= KMaxPartyNum && !Victory && window.isOpen() && (menuid == 4)){
-
-//----------------------------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------------------------
-
-                chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
-                window.clearScreen();
-                DisplayGrid(window, Mat, Screen_size);
-                window.finishFrame();
-
-                Key_UP    = window.MinGL::isPressed({param.KeyUp, false});
-                Key_DOWN  = window.MinGL::isPressed({param.KeyDown, false});
-                Key_RIGHT = window.MinGL::isPressed({param.KeyRight, false});
-                Key_LEFT  = window.MinGL::isPressed({param.KeyLeft, false});
-
-                cout << IsMoveLegal(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, param) << Key_UP << Key_DOWN << Key_RIGHT << Key_LEFT << endl;
-
-                if ((Key_UP || Key_DOWN || Key_RIGHT || Key_LEFT) &&
-                    IsMoveLegal(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, param)){
-                    cout << "move" << endl;
-                    N_move = nextMove(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, param, PosTP1, PosTP2);
-
-                    // check si il ya un objet => ajouter a une liste
-                    if(IsCollectible(N_move.first))
-                    {
-                        if(Player1Turn == 1) objetJ1.push_back(N_move.first);
-                        if(Player1Turn == 0) objetJ2.push_back(N_move.first);
-                    }
-
-                    // check si joueur arrive a la maison => vide ses poches (comptage du score)
-                    if (!Player1Turn && N_move.second.first == param.NbRow - 1 && N_move.second.second == 0)
-                        CalculateScore(objetJ2, scoreJ2);
-
-                    if (Player1Turn && N_move.second.first == 0 && N_move.second.second == param.NbColumn - 1)
-                        CalculateScore(objetJ1, scoreJ1);
-
-                    MoveToken(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, PosTP1, PosTP2);
-                }
-
-
-
-                //on fait jouer le bot 1fois/2 sinon il aurait trop d'avantage
-                if(Player1Turn)
-                    MoveMonster(PosMonster, Mat, param, PosPlayer1, PosPlayer2);
-
-                Mat[PosPlayer1.first][PosPlayer1.second] = param.tokenP1;
-                Mat[PosPlayer2.first][PosPlayer2.second] = param.tokenP2;
-
-                //check if Monster on player
-
-                for(CPosition & posmonst : PosMonster){
-                    if(posmonst == PosPlayer1 || posmonst == PosPlayer2)
-                    {
-                        if(posmonst == PosPlayer1){
-                            Mat[PosPlayer1.first][PosPlayer1.second] = param.tokenP1;
-                            scoreJ1 = scoreJ1 - (param.NbColumn + param.NbRow)*2;
-                        }
-                        if(posmonst == PosPlayer2)
-                        {
-                            Mat[PosPlayer2.first][PosPlayer2.second] = param.tokenP2;
-                            scoreJ2 = scoreJ2 - (param.NbColumn + param.NbRow)*2;
-                        }
-                        Mat[posmonst.first][posmonst.second] = KEmpty;
-                        do{
-                            //replacer les montres plutot au centre
-                            posmonst = CPosition((rand()%param.NbRow/2) + param.NbRow/4,
-                                                 (rand()%param.NbColumn/2) + param.NbColumn/4);
-                        }while(Mat[posmonst.first][posmonst.second] != KEmpty);
-
-                        Mat[posmonst.first][posmonst.second] = 'A';
-                    }
-                }
-
-                DisplayGrid(Mat, param);
-
-                window.finishFrame();
-
-                events(window, clickablepool, menuid);
-
-                cout << menuid << endl;
-
-                // On vide la queue d'évènements
-                window.getEventManager().clearEvents();
-
-                // On attend un peu pour limiter le framerate et soulager le CPU
-                this_thread::sleep_for(chrono::milliseconds(1000 / FPS_LIMIT) - chrono::duration_cast<chrono::microseconds>(chrono::steady_clock::now() - start));
-
-                //Victory test
-                if (PosPlayer1 == PosPlayer2) Victory = true;
-
-                if ((scoreJ2 > 0 && size_t(scoreJ2) > (param.NbColumn+param.NbRow)*15)) Victory = true;
-                if ((scoreJ1 > 0  && size_t(scoreJ1) > (param.NbColumn+param.NbRow)*15 )) Victory = true;
-
-                //Increase party's number
-                ++PartyNum;
-
-                //Player changing
-                Player1Turn = !Player1Turn;
-
-            }//while(no victory)
-
-//----------------------------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------------------------
-//----------------------------------------------------------------------------------------------------------------------------------
-
-            if (!Victory){
-                Color (KColor.find("KMAgenta")->second);
-                cout << "Aucun vainqueur" << endl;
-                //menuid = 0;
-            }
-
-            Color (KColor.find("KGreen")->second);
-            cout << "Félicitations Joueur " << (Player1Turn ? '2' : '1')
-                 << " vous avez gagné :)" << endl;
-            cout << scoreJ1 << endl;
-            Color (KColor.find("KReset")->second);
-            if(!menuid == 3)menuid = 0;
-            InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);//reinitialise la grille pour la prochaine partie
-            PartyNum = 1;
-            Victory=false;
-
+            GameLoop(window, clickablepool,Mat, menuid, PartyNum,
+                          Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, Screen_size, param,
+                          Victory, KMaxPartyNum, PosPlayer1, PosPlayer2, PosTP1,
+                          PosTP2, Player1Turn, N_move, objetJ1, objetJ2,
+                          scoreJ1, scoreJ2, PosMonster);
             break;
 
         case 5 ://restart

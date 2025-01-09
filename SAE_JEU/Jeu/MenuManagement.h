@@ -49,7 +49,7 @@ void InterfaceMenuP(MinGL &window, int mat_x, int mat_y){
  * @param[in] mat_x / mat_y : dimensions of the window
  * @fn void MenuPause(MinGL &window, int mat_x, int mat_y);
  */
-void MenuPause(MinGL &window, int mat_x, int mat_y){
+void InterfacePause(MinGL &window, int mat_x, int mat_y){
 
     //calcul variable de position et taille des formes
     window << nsShape::Rectangle(nsGraphics::Vec2D(100, 0), mat_x, mat_y, nsGraphics::KGray);
@@ -78,7 +78,7 @@ void InterfaceOptions(MinGL &window, int mat_x, int mat_y){
  * @param[in] mat_x / mat_y : dimensions of the window
  * @fn void Credits(MinGL &window, int mat_x, int mat_y);
  */
-void Credits(MinGL &window, int mat_x, int mat_y){
+void InterfaceCredits(MinGL &window, int mat_x, int mat_y){
 
     //calcul variable de position et taille des formes
     window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), mat_x, mat_y, nsGraphics::KGray);
