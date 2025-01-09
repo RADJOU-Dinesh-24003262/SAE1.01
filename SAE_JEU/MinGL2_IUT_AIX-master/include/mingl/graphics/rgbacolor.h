@@ -164,6 +164,7 @@ const RGBAcolor KCyan            {  0, 255, 255};
 const RGBAcolor KMagenta         {255,   0, 255};
 const RGBAcolor KSilver          {192, 192, 192};
 const RGBAcolor KGray            {128, 128, 128};
+const RGBAcolor KDarkGray        {200, 200, 200};
 const RGBAcolor KMaroon          {128,   0,   0};
 const RGBAcolor KOlive           {128, 128,   0};
 const RGBAcolor KGreen           {  0, 128,   0};

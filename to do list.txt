@@ -1,4 +1,3 @@
 sprite
-fonction du switch
 régler les bugs
 score

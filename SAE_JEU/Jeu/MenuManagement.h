@@ -15,7 +15,7 @@
 #include "vector"
 
 #include "mingl/shape/rectangle.h"
-#include "sprites/button.h"
+//#include "sprites/button.h"
 #include "mingl/gui/text.h"
 
 using namespace std;
@@ -32,13 +32,13 @@ void InterfaceMenuP(MinGL &window, int mat_x, int mat_y){
 
     //calcul variable de position et taille des formes
     window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), mat_x, mat_y, nsGraphics::KGray);
-    Button(window, 100, 48, 300, 148, 10);
+    Button(window, 100, 48, 300, 148, 10, nsGraphics::KBlack);
     window << nsGui::Text(nsGraphics::Vec2D (168, 105), "PLAY",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
-    Button(window, 100, 196, 300, 296, 10);
+    Button(window, 100, 196, 300, 296, 10, nsGraphics::KBlack);
     window << nsGui::Text(nsGraphics::Vec2D (145, 253), "In Progress",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
-    Button(window, 100, 344, 300, 444, 10);
+    Button(window, 100, 344, 300, 444, 10, nsGraphics::KBlack);
     window << nsGui::Text(nsGraphics::Vec2D (110, 401), "In Developpement",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
-    Button(window, 100, 492, 300, 592, 10);
+    Button(window, 100, 492, 300, 592, 10, nsGraphics::KBlack);
     window << nsGui::Text(nsGraphics::Vec2D (170, 549), "QUIT",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
 }
 
