@@ -9,11 +9,9 @@
  **/
 
 //include les différentes formes pour dessiner les sprites
-#include "mingl/shape/rectangle.h"
 #include "mingl/shape/circle.h"
-// #include "mingl/shape/line.h"
-// #include "mingl/shape/triangle.h"
 #include "mingl/shape/oval.h"
+#include "mingl/shape/rectangle.h"
 
 //défini les éléments du sprite d'un mur
 void Statue(MinGL &window, int Center1, int Center2, int mat_x, int mat_y){
