@@ -52,7 +52,7 @@ void InterfaceMenuP(MinGL &window, int mat_x, int mat_y){
 void MenuPause(MinGL &window, int mat_x, int mat_y){
 
     //calcul variable de position et taille des formes
-    window << nsShape::Rectangle(nsGraphics::Vec2D((0,0)), mat_x, mat_y, nsGraphics::KGray);
+    window << nsShape::Rectangle(nsGraphics::Vec2D(100, 0), mat_x, mat_y, nsGraphics::KGray);
     window << nsShape::Rectangle(nsGraphics::Vec2D(100, 48), 200, 100, nsGraphics::KBlue);
     window << nsShape::Rectangle(nsGraphics::Vec2D(100, 196), 200, 100, nsGraphics::KBlue);
     window << nsShape::Rectangle(nsGraphics::Vec2D(100, 344), 200, 100, nsGraphics::KBlue);
@@ -64,12 +64,12 @@ void MenuPause(MinGL &window, int mat_x, int mat_y){
  * @param[in] mat_x / mat_y : dimensions of the window
  * @fn void Options(MinGL &window, int mat_x, int mat_y);
  */
-void Options(MinGL &window, int mat_x, int mat_y){
+void InterfaceOptions(MinGL &window, int mat_x, int mat_y){
 
     //calcul variable de position et taille des formes
-    window << nsShape::Rectangle(nsGraphics::Vec2D((0,0)), mat_x, mat_y, nsGraphics::KGray);
-    window << nsShape::Rectangle(nsGraphics::Vec2D((0,0)), 120, 50, nsGraphics::KRed+8, nsGraphics::KTransparent);
-    window << nsShape::Rectangle(nsGraphics::Vec2D((150,150)), 340, 340, nsGraphics::KTransparent, nsGraphics::KGray);
+    window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), mat_x, mat_y, nsGraphics::KGray);
+    window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), 120, 50, nsGraphics::KRed+8, nsGraphics::KTransparent);
+    window << nsShape::Rectangle(nsGraphics::Vec2D(150,150), 340, 340, nsGraphics::KTransparent, nsGraphics::KGray);
 }
 
 /**
@@ -81,9 +81,9 @@ void Options(MinGL &window, int mat_x, int mat_y){
 void Credits(MinGL &window, int mat_x, int mat_y){
 
     //calcul variable de position et taille des formes
-    window << nsShape::Rectangle(nsGraphics::Vec2D((0,0)), mat_x, mat_y, nsGraphics::KGray);
-    window << nsShape::Rectangle(nsGraphics::Vec2D((0,0)), 120, 50, nsGraphics::KGray+8, nsGraphics::KTransparent);
-    window << nsShape::Rectangle(nsGraphics::Vec2D((150,150)), 340, 340, nsGraphics::KTransparent, nsGraphics::KGray);
+    window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), mat_x, mat_y, nsGraphics::KGray);
+    window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), 120, 50, nsGraphics::KGray+8, nsGraphics::KTransparent);
+    window << nsShape::Rectangle(nsGraphics::Vec2D(150,150), 340, 340, nsGraphics::KTransparent, nsGraphics::KGray);
 }
 
 
