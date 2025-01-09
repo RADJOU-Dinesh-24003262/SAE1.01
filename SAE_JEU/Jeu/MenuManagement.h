@@ -15,7 +15,7 @@
 #include "vector"
 
 #include "mingl/shape/rectangle.h"
-//#include "sprites/button.h"
+#include "sprites/button.h"
 #include "mingl/gui/text.h"
 
 using namespace std;

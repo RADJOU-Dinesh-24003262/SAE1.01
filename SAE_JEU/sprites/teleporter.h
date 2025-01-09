@@ -9,12 +9,7 @@
  **/
 
 //include les différentes formes pour dessiner les sprites
-//#include "mingl/shape/rectangle.h"
-#include "sprites/button.h"
-// #include "mingl/shape/circle.h"
-// #include "mingl/shape/line.h"
-// #include "mingl/shape/triangle.h"
-// #include "mingl/shape/oval.h"
+#include "mingl/shape/rectangle.h"
 
 //défini les éléments du sprite d'un mur
 void Teleporter(MinGL &window, int Pos1, int Pos2, int mat_x, int mat_y){
@@ -30,7 +25,8 @@ void Teleporter(MinGL &window, int Pos1, int Pos2, int mat_x, int mat_y){
     int dify = (y2-y1)/20;
 
     //shape formant le sprite
-    Button(window, (x1+(2*(difx))), (y1+(2*(dify))), (x2-(2*(difx))), (y2-(2*(dify))), 5, nsGraphics::KDarkGray);
-    Button(window, (x1+(4*(difx))), (y1+(4*(dify))), (x2-(4*(difx))), (y2-(4*(dify))), 2, nsGraphics::KGray);
+    window << nsShape::Rectangle(nsGraphics::Vec2D((x1+(2*(difx))),(y1+(2*(dify)))), nsGraphics::Vec2D((x2-(2*(difx))),(y2-(2*(dify)))), nsGraphics::KGray);// square
+    window << nsShape::Rectangle(nsGraphics::Vec2D((x1+(4*(difx))),(y1+(4*(dify)))), nsGraphics::Vec2D((x2-(4*(difx))),(y2-(4*(dify)))), nsGraphics::KDarkGray);// square
+
     //window << nsShape::Rectangle(nsGraphics::Vec2D((Circle1-wall_x),(Circle2-wall_y)), nsGraphics::Vec2D((Circle1+wall_x),(Circle2+wall_y)), nsGraphics::KPurple);// square
 }
