@@ -42,7 +42,7 @@ bool IsMoveLegal(const CMat & Mat, const bool & KeyUp, const bool & KeyDown,
         return true;
     }else if (KeyDown && Pos.first < Param.NbRow -1 && Mat [Pos.first+1][Pos.second] != 'M' && Mat [Pos.first+1][Pos.second] != 'A' && Mat [Pos.first+1][Pos.second] != 'X' && Mat [Pos.first+1][Pos.second] != 'O'){
         return true;
-    }else if (KeyRight && Pos.second < Param.NbColumn-1 && Mat [Pos.first][Pos.second+1] != 'M' && Mat [Pos.first][Pos.second - 1] != 'A' && Mat [Pos.first][Pos.second - 1] != 'X' && Mat [Pos.first][Pos.second - 1] != 'O'){
+    }else if (KeyRight && Pos.second < Param.NbColumn-1 && Mat [Pos.first][Pos.second+1] != 'M' && Mat [Pos.first][Pos.second + 1] != 'A' && Mat [Pos.first][Pos.second + 1] != 'X' && Mat [Pos.first][Pos.second + 1] != 'O'){
         return true;
     }else if(KeyLeft && Pos.second > 0 && Mat [Pos.first][Pos.second-1] != 'M' && Mat [Pos.first][Pos.second - 1] != 'A' && Mat [Pos.first][Pos.second - 1] != 'X' && Mat [Pos.first][Pos.second - 1] != 'O'){
         return true;
@@ -286,13 +286,14 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
     DisplayGrid(window, Mat, Screen_size);
     window.finishFrame();
 
+    size_t i;
+    i = 0;
     while(PartyNum <= KMaxPartyNum && !Victory && window.isOpen() && (menuid == 4)){
 
         chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
         window.clearScreen();
         DisplayGrid(window, Mat, Screen_size);
         window.finishFrame();
-
         Key_RIGHT = window.MinGL::isPressed({param.KeyRight,false}) || window.MinGL::isPressed({toupper(param.KeyRight),false});
         Key_LEFT  = window.MinGL::isPressed({param.KeyLeft, false}) || window.MinGL::isPressed({toupper(param.KeyLeft), false});
         Key_UP    = window.MinGL::isPressed({param.KeyUp,   false}) || window.MinGL::isPressed({toupper(param.KeyUp),   false});
@@ -327,8 +328,9 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
         }
 
         //on fait jouer le bot 1fois/2 sinon il aurait trop d'avantage
-        if(Player1Turn)
+        if(i%5 == 0)
             MoveMonster(PosMonster, Mat, param, PosPlayer1, PosPlayer2);
+        ++i;
 
         Mat[PosPlayer1.first][PosPlayer1.second] = param.tokenP1;
         Mat[PosPlayer2.first][PosPlayer2.second] = param.tokenP2;
