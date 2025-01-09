@@ -335,7 +335,8 @@ int ppal (void){
 
             DisplayGrid(window, Mat, Screen_size);
             window.finishFrame();
-
+            size_t i;
+            i = 0;
             while(PartyNum <= KMaxPartyNum && !Victory && window.isOpen() && (menuid == 4)){
 
 //----------------------------------------------------------------------------------------------------------------------------------
@@ -377,9 +378,9 @@ int ppal (void){
                 }
 
 
-
+                i = i + 1;
                 //on fait jouer le bot 1fois/2 sinon il aurait trop d'avantage
-                if(Player1Turn)
+                if(i%5 == 0)
                     MoveMonster(PosMonster, Mat, param, PosPlayer1, PosPlayer2);
 
                 Mat[PosPlayer1.first][PosPlayer1.second] = param.tokenP1;
