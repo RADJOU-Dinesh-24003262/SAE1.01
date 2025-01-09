@@ -23,25 +23,25 @@ Les objectifs que nous souhaitons pour ce projet les suivants :
    - (Ajout de power up dans le jeu)  
    - (Implémentation d'un système de high scores.)
    - Réalisation d'un Lore
-   - Utilisation de **MinGL** pour une meuilleur expérience de jeu
+   - Utilisation de **MinGL** pour une meuilleure expérience de jeu
 
 3. **Documentation avec Doxygen** : Génération d'une documentation à l'aide de Doxygen grâce aau commentaires dans le code
 
 ---
 ## Comment jouer au jeu
-Ce jeu se joue exclusivement sur **Linux**. Pour y jouer, vous devez impérativement être **deux joueurs**. Vous jouez chacun votre tour. L’objectif du jeu est d'avoir le maximum de points en ramassant les objets, tout en évitant de se faire manger par le monstre ou tuer par l’autre joueur. Les touches utilisées peuvent être personnalisées, tout comme la taille de la carte.
+Ce jeu se joue exclusivement sur **Linux**. Pour y jouer, vous devez impérativement être **deux joueurs**. Vous jouez tous les 2 en temps réel dans la fenêtre MinGL2 à l'aide des touches du clavier. L’objectif du jeu est d'avoir le maximum de points en ramassant les objets, tout en évitant de se faire attraper par le monstre. Les touches utilisées peuvent être personnalisées, tout comme la taille de la carte.
 
 ### Règles du jeu :
 1. **Multijoueur** : Le jeu se joue exclusivement à **deux joueurs**.
 2. **Objectifs** : 
    - Ramasser des objets dispersés sur la carte pour accumuler des points.
    - Éviter d’être tué par le monstre qui rôde dans la zone.
-   - Éviter également d’être tué par l’autre joueur.
-3. **Gagner** : Pour gagner, vous devez ramasser un total de points supérieur à **(longueur de la carte + largeur de la carte)** * **15**.
+   - Obtenir plus de points que l'autre joueur.
+3. **Gagner** : Pour gagner, vous devez ramasser un total de points supérieur à **(longueur de la carte + largeur de la carte)** * **15**, ou bien avoir plus de point que l'adversaire si le temps imparti est dépassé.
    - Une fois ce total atteint, vous devez ramener ces objets à votre maison pour valider vos points.
 
 ### Mécanismes du jeu :
-- **Tour de jeu** : Chaque joueur joue à son tour.
+- **Tour de jeu** : Les deux joueurs jouent tous les 2 en temps réel dans la fenêtre MinGL2.
 - **Personnalisation des touches** : Les touches qui permettant de se déplacer peuvent être modifié.
 - **Taille de la carte** : Vous pouvez modifier la taille de la carte sur le fichier config, ce qui peut augmenter ou diminuer la difficulté du jeu. Une carte plus grande augmente le nombre d’objets à ramasser, mais tout de même à faire attention, la portée du monstre augmente avec le monstre.
 
