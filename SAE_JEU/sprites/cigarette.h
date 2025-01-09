@@ -12,6 +12,16 @@
 #include "mingl/shape/oval.h"
 
 // Définit les éléments du sprite d'une cigarette
+
+/**
+ * @brief cette fonction dessine une cigarette
+ * @param window Référence à l'objet MinGL pour dessiner les formes.
+ * @param startX Position x du coin supérieur gauche de la cigarette.
+ * @param startY Position y du coin supérieur gauche de la cigarette.
+ * @param scaleX Facteur d'échelle pour la longueur et la taille horizontale des éléments.
+ * @param scaleY Facteur d'échelle pour la largeur et la taille verticale des éléments.
+ */
+
 void Cigarette(MinGL &window, int startX, int startY, int scaleX, int scaleY) {
     // Calcul des variables de position et taille des formes
     int cig_length = 350 / scaleX;   // Longueur réduite de la cigarette

@@ -11,6 +11,17 @@
 //include les différentes formes pour dessiner les sprites
 #include "mingl/shape/rectangle.h"
 
+/**
+ * @brief cette fonction dessine un teleporter soit l'ascenceur
+ * @param window Référence à l'objet MinGL pour dessiner les formes.
+ * @param Pos1 Position x du centre du téléporteur.
+ * @param Pos2 Position y du centre du téléporteur.
+ * @param mat_x Facteur d'échelle pour la dimension horizontale des éléments du téléporteur.
+ * @param mat_y Facteur d'échelle pour la dimension verticale des éléments du téléporteur.
+ */
+
+
+
 //défini les éléments du sprite d'un mur
 void Teleporter(MinGL &window, int Pos1, int Pos2, int mat_x, int mat_y){
 
