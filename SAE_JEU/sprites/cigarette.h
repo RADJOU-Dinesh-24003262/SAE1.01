@@ -1,27 +1,48 @@
 /**
  *
- * @file    wall.h
+ * @file    cigarette.h
  * @author  Matisse Quilliec
  * @date    December 2024
  * @version 1.0
- * @brief   Affiche le sprite d'un mur
+ * @brief   Affiche le sprite d'une cigarette
  *
  **/
 
-//include les différentes formes pour dessiner les sprites
 #include "mingl/shape/rectangle.h"
-// #include "mingl/shape/circle.h"
-// #include "mingl/shape/line.h"
-// #include "mingl/shape/triangle.h"
-// #include "mingl/shape/oval.h"
+#include "mingl/shape/oval.h"
 
-//défini les éléments du sprite d'un mur
-void Cigarette(MinGL &window, int Circle1, int Circle2, int mat_x, int mat_y){
+// Définit les éléments du sprite d'une cigarette
+void Cigarette(MinGL &window, int startX, int startY, int scaleX, int scaleY) {
+    // Calcul des variables de position et taille des formes
+    int cig_length = 350 / scaleX;   // Longueur réduite de la cigarette
+    int cig_width = 60 / scaleY;     // Largeur augmentée
+    int filter_length = 80 / scaleX; // Longueur du filtre
+    int flame_size = 30 / scaleX;    // Taille de la flamme
+    int smoke_radius = 35 / scaleX;  // Taille des cercles de fumée
 
-    //calcul variable de position et taille des formes
-    int wall_x = 320/mat_x;
-    int wall_y = 320/mat_y;
+    // Rectangle principal pour le corps de la cigarette (blanc)
+    window << nsShape::Rectangle(nsGraphics::Vec2D(startX, startY),
+                                 nsGraphics::Vec2D(startX + cig_length, startY + cig_width),
+                                 nsGraphics::KGray);
 
-    //shape formant le sprite
-    window << nsShape::Rectangle(nsGraphics::Vec2D((Circle1-wall_x),(Circle2-wall_y)), nsGraphics::Vec2D((Circle1+wall_x),(Circle2+wall_y)), nsGraphics::KRed);// square
+    // Rectangle pour le filtre (jaune-orange)
+    window << nsShape::Rectangle(nsGraphics::Vec2D(startX + cig_length - filter_length, startY),
+                                 nsGraphics::Vec2D(startX + cig_length, startY + cig_width),
+                                 nsGraphics::KRed);
+
+    // Ovale rouge pour simuler l'extrémité allumée de la cigarette
+    window << nsShape::Oval(nsGraphics::Vec2D(startX, startY + cig_width / 2),
+                            nsGraphics::Vec2D(flame_size, cig_width / 2),
+                            nsGraphics::KRed);
+
+    // Fumée (plusieurs ovales gris clair représentant des volutes de fumée)
+    window << nsShape::Oval(nsGraphics::Vec2D(startX - smoke_radius * 1.5, startY - cig_width),
+                            nsGraphics::Vec2D(smoke_radius * 1.5, smoke_radius),
+                            nsGraphics::KGray); // Première volute
+    window << nsShape::Oval(nsGraphics::Vec2D(startX - smoke_radius * 3, startY - cig_width * 2),
+                            nsGraphics::Vec2D(smoke_radius * 1.3, smoke_radius * 0.9),
+                            nsGraphics::KGray); // Deuxième volute
+    window << nsShape::Oval(nsGraphics::Vec2D(startX - smoke_radius * 4.5, startY - cig_width * 3),
+                            nsGraphics::Vec2D(smoke_radius, smoke_radius * 0.8),
+                            nsGraphics::KGray); // Troisième volute
 }
