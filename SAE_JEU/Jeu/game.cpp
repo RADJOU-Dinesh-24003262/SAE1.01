@@ -32,8 +32,10 @@ bool IsMoveLegal(const CMat & Mat, const bool & KeyUp, const bool & KeyDown,
                  const bool & KeyRight, const bool & KeyLeft,
                  const  CPosition & Pos, const CMyParamV2 &Param){
 
-    if (not KeyUp && not KeyDown && not KeyRight && not KeyLeft){
-        return true;
+    if ((KeyUp && KeyDown) || (KeyUp && KeyLeft) || (KeyUp && KeyRight)||
+        (KeyDown && KeyLeft) || (KeyDown && KeyRight) ||
+        ( KeyRight && KeyLeft)){
+        return false;
     }else if (KeyUp && Pos.first > 0 && Mat [Pos.first-1][Pos.second] != 'M'){
         return true;
     }else if (KeyDown && Pos.first < Param.NbRow -1 && Mat [Pos.first+1][Pos.second] != 'M'){
@@ -415,7 +417,7 @@ int ppal (void){
     LoadParams(param);
     vector<tuple<vector<int>, vector<int>, int>> clickablepool;
     unsigned PartyNum (1);
-    const unsigned KMaxPartyNum (param.NbColumn * param.NbRow);
+    const unsigned KMaxPartyNum (param.NbColumn * param.NbRow * 3);
     int scoreJ1 = 0, scoreJ2 = 0;
     chrono::time_point<chrono::steady_clock> start = chrono::steady_clock::now();
     CMat Mat;
