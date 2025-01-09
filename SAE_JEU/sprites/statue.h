@@ -13,6 +13,18 @@
 #include "mingl/shape/oval.h"
 #include "mingl/shape/rectangle.h"
 
+/**
+ * @brief cette fonction dessine une statue soit Wario
+ * @param window Référence à l'objet MinGL pour dessiner les formes.
+ * @param Center1 Position x du centre de la statue.
+ * @param Center2 Position y du centre de la statue.
+ * @param mat_x Facteur d'échelle pour la dimension horizontale des éléments de la statue.
+ * @param mat_y Facteur d'échelle pour la dimension verticale des éléments de la statue.
+ */
+
+
+
+
 //défini les éléments du sprite d'un mur
 void Statue(MinGL &window, int Center1, int Center2, int mat_x, int mat_y){
 
