@@ -1,0 +1,29 @@
+                             Lethal Casali
+
+
+                       Présentation de l'Équipe
+
+     Design Graphique / Graphisme Developper : QUILLIEC Matisse
+                      Game Engine Developper : RADJ Theo
+Game Engine Developper / Gameplay Developper : WAYKI William
+                        Graphisme Developper : BENHAFESSA Alexandre
+ Scénarisation et Narration / Chef de Projet : ARFI Maxime
+
+                        Remerciements Spéciaux
+
+                      DELAMOTTE Pierrick :
+         Pour son aide précieuse en fin de développement.
+                   CASALI Alain & JOUINI Rim :
+     Pour l'enseignement du C++ et l’utilisation de QT Creator.
+             SOLLIER Alexandre & MATHIEU--DRIF Clément :
+       Pour le développement de MinGL2, utilisé dans ce projet.
+
+                    Outils et Technologies Utilisés
+
+                    Langage de Programmation : C++
+              Environnement de Développement : QT Creator
+
+                        Clause de Copyright
+
+    Ce projet utilise la Bibliothèque Graphique de l'IUT (MinGL2).
+         © 2025 Équipe "Lethal Casali". Tous droits réservés.
