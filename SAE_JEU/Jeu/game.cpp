@@ -388,7 +388,7 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
 
     }//while(no victory)
 
-    if (scoreJ1 == scoreJ2){
+    if (scoreJ1 == scoreJ2 || !Victory){
         Color (KColor.find("KMAgenta")->second);
         cout << "Égalité : Aucun vainqueur" << endl;
         menuid = 0;
