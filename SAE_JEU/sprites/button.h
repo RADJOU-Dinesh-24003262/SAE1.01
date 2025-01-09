@@ -12,6 +12,18 @@
 #include "mingl/shape/rectangle.h"
 #include "mingl/shape/circle.h"
 
+/**
+ * @brief cette fonction dessine un bouton avec des coins arrondis
+ * @param window Référence à l'objet MinGL pour dessiner les formes.
+ * @param pos1_x Position x du coin supérieur gauche du bouton.
+ * @param pos1_y Position y du coin supérieur gauche du bouton.
+ * @param pos2_x Position x du coin inférieur droit du bouton.
+ * @param pos2_y Position y du coin inférieur droit du bouton.
+ * @param round Rayon des coins arrondis du bouton. Si ce rayon est plus grand que la moitié de la largeur du bouton, il sera ajusté.
+ * @param color Couleur du bouton
+ *
+ */
+
 //défini les éléments du sprite d'un mur
 void Button(MinGL &window, int pos1_x, int pos1_y, int pos2_x, int pos2_y, int round, nsGraphics::RGBAcolor color){
 

@@ -273,9 +273,12 @@ void Pause(MinGL &window, vector<tuple<vector<int>, vector<int>, int>> clickable
 }
 
 void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickablepool,CMat Mat, int menuid, unsigned PartyNum,
-              bool Key_UP, bool Key_DOWN, bool Key_RIGHT, bool Key_LEFT, tuple <int, int> Screen_size, CMyParamV2 param,
+              bool Key1_UP, bool Key1_DOWN, bool Key1_RIGHT, bool Key1_LEFT,
+              bool Key2_UP, bool Key2_DOWN, bool Key2_RIGHT, bool Key2_LEFT,
+              tuple <int, int> Screen_size, CMyParamV2 param,
               bool Victory, unsigned KMaxPartyNum, CPosition PosPlayer1, CPosition PosPlayer2, CPosition PosTP1,
-              CPosition PosTP2, bool Player1Turn, pair<char,CPosition> N_move, vector<char> objetJ1, vector<char> objetJ2,
+              CPosition PosTP2, bool Player1Turn, pair<char,CPosition> N_move1, pair<char,CPosition> N_move2,
+              vector<char> objetJ1, vector<char> objetJ2,
               int scoreJ1, int scoreJ2, vector <CPosition> PosMonster){
     clickablepool.clear();
     clickablepool = {
@@ -294,37 +297,56 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
         window.clearScreen();
         DisplayGrid(window, Mat, Screen_size);
         window.finishFrame();
-        Key_RIGHT = window.MinGL::isPressed({param.KeyRight,false}) || window.MinGL::isPressed({toupper(param.KeyRight),false});
-        Key_LEFT  = window.MinGL::isPressed({param.KeyLeft, false}) || window.MinGL::isPressed({toupper(param.KeyLeft), false});
-        Key_UP    = window.MinGL::isPressed({param.KeyUp,   false}) || window.MinGL::isPressed({toupper(param.KeyUp),   false});
-        Key_DOWN  = window.MinGL::isPressed({param.KeyDown, false}) || window.MinGL::isPressed({toupper(param.KeyDown), false});
-        if (Key_UP || Key_DOWN){
-            Key_RIGHT = false;
-            Key_LEFT  = false;
+        Key1_RIGHT = window.MinGL::isPressed({param.Key1Right,false}) || window.MinGL::isPressed({toupper(param.Key1Right),false});
+        Key1_LEFT  = window.MinGL::isPressed({param.Key1Left, false}) || window.MinGL::isPressed({toupper(param.Key1Left), false});
+        Key1_UP    = window.MinGL::isPressed({param.Key1Up,   false}) || window.MinGL::isPressed({toupper(param.Key1Up),   false});
+        Key1_DOWN  = window.MinGL::isPressed({param.Key1Down, false}) || window.MinGL::isPressed({toupper(param.Key1Down), false});
+        if (Key1_UP || Key1_DOWN){
+            Key1_RIGHT = false;
+            Key1_LEFT  = false;
         }
 
-        cout << IsMoveLegal(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, param) << Key_UP << Key_DOWN << Key_RIGHT << Key_LEFT << endl;
+        Key2_RIGHT = window.MinGL::isPressed({param.Key2Right,false}) || window.MinGL::isPressed({toupper(param.Key2Right),false});
+        Key2_LEFT  = window.MinGL::isPressed({param.Key2Left, false}) || window.MinGL::isPressed({toupper(param.Key2Left), false});
+        Key2_UP    = window.MinGL::isPressed({param.Key2Up,   false}) || window.MinGL::isPressed({toupper(param.Key2Up),   false});
+        Key2_DOWN  = window.MinGL::isPressed({param.Key2Down, false}) || window.MinGL::isPressed({toupper(param.Key2Down), false});
+        if (Key2_UP || Key2_DOWN){
+            Key2_RIGHT = false;
+            Key2_LEFT  = false;
+        }
 
-        if ((Key_UP || Key_DOWN || Key_RIGHT || Key_LEFT) &&
-            IsMoveLegal(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, param)){
-            cout << "move" << endl;
-            N_move = nextMove(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, param, PosTP1, PosTP2);
+        if ((Key1_UP || Key1_DOWN || Key1_RIGHT || Key1_LEFT) &&
+            IsMoveLegal(Mat, Key1_UP, Key1_DOWN, Key1_RIGHT, Key1_LEFT, PosPlayer1, param)){
+            N_move1 = nextMove(Mat, Key1_UP, Key1_DOWN, Key1_RIGHT, Key1_LEFT, PosPlayer1, param, PosTP1, PosTP2);
 
             // check si il ya un objet => ajouter a une liste
-            if(IsCollectible(N_move.first))
+            if(IsCollectible(N_move1.first))
             {
-                if(Player1Turn == 1) objetJ1.push_back(N_move.first);
-                if(Player1Turn == 0) objetJ2.push_back(N_move.first);
+                objetJ1.push_back(N_move1.first);
             }
 
             // check si joueur arrive a la maison => vide ses poches (comptage du score)
-            if (!Player1Turn && N_move.second.first == param.NbRow - 1 && N_move.second.second == 0)
-                CalculateScore(objetJ2, scoreJ2);
-
-            if (Player1Turn && N_move.second.first == 0 && N_move.second.second == param.NbColumn - 1)
+            if (N_move1.second.first == 0 && N_move1.second.second == param.NbColumn - 1)
                 CalculateScore(objetJ1, scoreJ1);
 
-            MoveToken(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, PosTP1, PosTP2);
+            MoveToken(Mat, Key1_UP, Key1_DOWN, Key1_RIGHT, Key1_LEFT, PosPlayer1, PosTP1, PosTP2);
+        }
+        if ((Key2_UP || Key2_DOWN || Key2_RIGHT || Key2_LEFT) &&
+            IsMoveLegal(Mat, Key2_UP, Key2_DOWN, Key2_RIGHT, Key2_LEFT, PosPlayer2, param)){
+            N_move2 = nextMove(Mat, Key2_UP, Key2_DOWN, Key2_RIGHT, Key2_LEFT, PosPlayer2, param, PosTP1, PosTP2);
+
+            // check si il ya un objet => ajouter a une liste
+            if(IsCollectible(N_move2.first))
+            {
+                objetJ2.push_back(N_move2.first);
+            }
+
+            // check si joueur arrive a la maison => vide ses poches (comptage du score)
+            if (N_move2.second.first == param.NbRow - 1 && N_move2.second.second == 0)
+                CalculateScore(objetJ2,scoreJ2);
+
+
+            MoveToken(Mat, Key2_UP, Key2_DOWN, Key2_RIGHT, Key2_LEFT, PosPlayer2, PosTP1, PosTP2);
         }
 
         //on fait jouer le bot 1fois/2 sinon il aurait trop d'avantage
@@ -365,8 +387,6 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
         window.finishFrame();
 
         events(window, clickablepool, menuid);
-
-        cout << menuid << endl;
 
         // On vide la queue d'évènements
         window.getEventManager().clearEvents();
@@ -426,10 +446,14 @@ int ppal (void){
 
     //création des variable pour les touches
 
-    bool Key_UP = false;
-    bool Key_DOWN = false;
-    bool Key_RIGHT = false;
-    bool Key_LEFT = false;
+    bool Key1_UP = false;
+    bool Key1_DOWN = false;
+    bool Key1_RIGHT = false;
+    bool Key1_LEFT = false;
+    bool Key2_UP = false;
+    bool Key2_DOWN = false;
+    bool Key2_RIGHT = false;
+    bool Key2_LEFT = false;
 
     bool Player1Turn (true);
     bool Victory (false);
@@ -443,7 +467,8 @@ int ppal (void){
     vector<char> objetJ1;
     vector<char> objetJ2;
 
-    pair<char,CPosition> N_move;
+    pair<char,CPosition> N_move1;
+    pair<char,CPosition> N_move2;
 
     bool run (true);
     while (run){ //voir case 5 pour break;
@@ -467,11 +492,15 @@ int ppal (void){
             break;
 
         case 4: //Jeu
-            GameLoop(window, clickablepool,Mat, menuid, PartyNum,
-                          Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, Screen_size, param,
-                          Victory, KMaxPartyNum, PosPlayer1, PosPlayer2, PosTP1,
-                          PosTP2, Player1Turn, N_move, objetJ1, objetJ2,
-                          scoreJ1, scoreJ2, PosMonster);
+            GameLoop(window, clickablepool, Mat, menuid, PartyNum,
+             Key1_UP, Key1_DOWN, Key1_RIGHT, Key1_LEFT,
+             Key2_UP, Key2_DOWN, Key2_RIGHT, Key2_LEFT,
+             Screen_size, param,
+             Victory, KMaxPartyNum, PosPlayer1, PosPlayer2, PosTP1,
+             PosTP2, Player1Turn, N_move1, N_move2,
+             objetJ1, objetJ2,
+                     scoreJ1, scoreJ2, PosMonster);
+
             InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);
             menuid = 0;
             break;
