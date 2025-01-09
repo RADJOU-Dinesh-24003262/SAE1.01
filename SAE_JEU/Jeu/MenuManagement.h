@@ -17,6 +17,8 @@
 #include "mingl/shape/rectangle.h"
 #include "sprites/button.h"
 #include "mingl/gui/text.h"
+#include <fstream>
+#include <string>
 
 using namespace std;
 
@@ -35,9 +37,9 @@ void InterfaceMenuP(MinGL &window, int mat_x, int mat_y){
     Button(window, 100, 48, 300, 148, 10, nsGraphics::KBlack);
     window << nsGui::Text(nsGraphics::Vec2D (168, 105), "PLAY",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
     Button(window, 100, 196, 300, 296, 10, nsGraphics::KBlack);
-    window << nsGui::Text(nsGraphics::Vec2D (145, 253), "In Progress",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
+    window << nsGui::Text(nsGraphics::Vec2D (155, 253), "CREDIT",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
     Button(window, 100, 344, 300, 444, 10, nsGraphics::KBlack);
-    window << nsGui::Text(nsGraphics::Vec2D (110, 401), "In Developpement",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
+    window << nsGui::Text(nsGraphics::Vec2D (145, 401), "OPTIONS",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
     Button(window, 100, 492, 300, 592, 10, nsGraphics::KBlack);
     window << nsGui::Text(nsGraphics::Vec2D (170, 549), "QUIT",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
 }
@@ -66,13 +68,24 @@ void InterfacePause(MinGL &window, int mat_x, int mat_y){
  */
 void InterfaceOptions(MinGL &window, int mat_x, int mat_y){
 
+    std::ifstream creditFile("../../credit.txt");
+    std::string creditContent;
+
+    if (creditFile.is_open()) {
+        std::string line;
+        while (std::getline(creditFile, line)) {
+            creditContent += line + "\n";
+        }
+        creditFile.close();
+    } else {
+        creditContent = "Erreur : impossible d'ouvrir le fichier credit.txt";
+    }
+
     //calcul variable de position et taille des formes
     window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), mat_x, mat_y, nsGraphics::KGray);
     window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), 120, 50, nsGraphics::KRed+8, nsGraphics::KTransparent);
     window << nsShape::Rectangle(nsGraphics::Vec2D(150,150), 340, 340, nsGraphics::KTransparent, nsGraphics::KGray);
-    window << nsGui::Text(nsGraphics::Vec2D (10, 105),
-    "PLAY"
-    ,nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
+    window << nsGui::Text(nsGraphics::Vec2D (10, 105),creditContent,nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
 }
 
 /**
@@ -87,6 +100,7 @@ void InterfaceCredits(MinGL &window, int mat_x, int mat_y){
     window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), mat_x, mat_y, nsGraphics::KGray);
     window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), 120, 50, nsGraphics::KGray+8, nsGraphics::KTransparent);
     window << nsShape::Rectangle(nsGraphics::Vec2D(150,150), 340, 340, nsGraphics::KTransparent, nsGraphics::KGray);
+    window << nsGui::Text(nsGraphics::Vec2D (10, 105),"In Developpement",nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
 }
 
 
