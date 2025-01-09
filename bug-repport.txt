@@ -1,0 +1,5 @@
+touche cap lock empêche les déplacements
+
+sometime player eat wall (why ?????)
+
+progress crash (why???)

@@ -20,6 +20,8 @@
  * @fn void InitParams (CMyParam & Param);
  */
 
+void initParams (CMyParamV2 & param);
+void initParamsV2 (CMyParamV2 & param);
 
 /**
  * @brief Load the set of parameters from a YAML file
@@ -30,7 +32,6 @@
  */
  
  
- void initParams (CMyParamV2 & param);
 
 void LoadParams (CMyParamV2 & Param);
 

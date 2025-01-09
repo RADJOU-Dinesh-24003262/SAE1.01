@@ -1,6 +1,6 @@
 #include <string>
 #include "params.h"
-#include "game.h"
+//#include "game.h" not use for the moment
 #include <fstream>
 #include <iostream>
 
@@ -27,19 +27,13 @@ void initParams (CMyParamV2 & Param){
 
 void LoadParams (CMyParamV2 & Param){
     string Path = "../../Nos_fichiers/config.yaml";
-    ifstream ifs;
-    ifs.open(Path);
+    ifstream ifs(Path);
     if (!ifs.is_open ()){
         cerr << "File not found" << endl;
-        return;
+        exit(-1);
     }
 
-    string key;
-    while (true){
-
-        ifs >> key;
-        if (ifs.eof ()) break;
-        string tampon;
+    for(string key, tampon; !ifs.eof(); ifs >> key){
         ifs >> tampon;
 
         if(key == "KeyUp"){
@@ -71,6 +65,9 @@ void LoadParams (CMyParamV2 & Param){
 
         }else if(key == "TokenP2"){
             ifs >> Param.tokenP2;
+        }
+        else{
+            getline(ifs, tampon);
         }
     }
     ifs.close ();
