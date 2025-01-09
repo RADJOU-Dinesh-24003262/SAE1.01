@@ -156,8 +156,6 @@ void DisplayGrid (MinGL &window, const CMat & mat, tuple <int, int> Screen_size)
     }
 }
 
-
-
 void MoveToken (CMat &Mat, const bool & KeyUp, const bool & KeyDown,
                const bool & KeyRight, const bool & KeyLeft, CPosition &Pos, CPosition &Tp1, CPosition &Tp2){
     char car = Mat [Pos.first][Pos.second];
@@ -320,8 +318,6 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
             MoveToken(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, PosTP1, PosTP2);
         }
 
-
-
         //on fait jouer le bot 1fois/2 sinon il aurait trop d'avantage
         if(Player1Turn)
             MoveMonster(PosMonster, Mat, param, PosPlayer1, PosPlayer2);
@@ -389,8 +385,8 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
     }
 
     Color (KColor.find("KGreen")->second);
-    cout << "Félicitations Joueur " << (Player1Turn ? '2' : '1')
-         << " vous avez gagné :)" << endl;
+    cout << "Félicitations Joueur " << (scoreJ1 > scoreJ2 ? '1' : '2') <<
+        "vous avez gagné avec" << (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << "points!" << endl;
     cout << scoreJ1 << endl;
     Color (KColor.find("KReset")->second);
     if(!(menuid == 3))menuid = 0;
@@ -398,7 +394,6 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
     PartyNum = 1;
     Victory=false;
 }
-
 
 int ppal (void){
 
