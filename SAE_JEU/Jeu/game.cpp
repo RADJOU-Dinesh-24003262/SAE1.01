@@ -32,7 +32,9 @@ bool IsMoveLegal(const CMat & Mat, const bool & KeyUp, const bool & KeyDown,
                  const bool & KeyRight, const bool & KeyLeft,
                  const  CPosition & Pos, const CMyParamV2 &Param){
 
-    if ((KeyUp && KeyDown) || (KeyUp && KeyLeft) || (KeyUp && KeyRight)||
+    if (not KeyUp && not KeyDown && not KeyRight && not KeyLeft){
+        return false;
+    }else if ((KeyUp && KeyDown) || (KeyUp && KeyLeft) || (KeyUp && KeyRight)||
         (KeyDown && KeyLeft) || (KeyDown && KeyRight) ||
         ( KeyRight && KeyLeft)){
         return false;
