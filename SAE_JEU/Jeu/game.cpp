@@ -398,8 +398,6 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
         Color (KColor.find("KReset")->second);
     }
 
-<<<<<<< HEAD
-=======
     Color (KColor.find("KGreen")->second);
     cout << "Félicitations Joueur " << (scoreJ1 > scoreJ2 ? '1' : '2') <<
         "vous avez gagné avec" << (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << "points!" << endl;
@@ -408,7 +406,6 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);//reinitialise la grille pour la prochaine partie
     PartyNum = 1;
     Victory=false;
->>>>>>> 7825cda785f657b2fd798ae64a8507745e112da4
 }
 
 int ppal (void){
@@ -478,12 +475,9 @@ int ppal (void){
                           Victory, KMaxPartyNum, PosPlayer1, PosPlayer2, PosTP1,
                           PosTP2, Player1Turn, N_move, objetJ1, objetJ2,
                           scoreJ1, scoreJ2, PosMonster);
-<<<<<<< HEAD
             InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);
             menuid = 0;
-=======
             InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1,PosPlayer2, param, PosTP1, PosTP2, PosMonster);
->>>>>>> 7825cda785f657b2fd798ae64a8507745e112da4
             break;
 
         case 5 ://restart
