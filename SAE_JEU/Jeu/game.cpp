@@ -429,7 +429,7 @@ int ppal (void){
 
     // Initialise le système
     tuple <int, int> Screen_size(640,640);
-    MinGL window("Lethal Company  |  V0.0.1", nsGraphics::Vec2D(get<0>(Screen_size), get<1>(Screen_size)), nsGraphics::Vec2D(128, 128), nsGraphics::KWhite);
+    MinGL window("Lethal Casali  |  V1.2.4", nsGraphics::Vec2D(get<0>(Screen_size), get<1>(Screen_size)), nsGraphics::Vec2D(128, 128), nsGraphics::KWhite);
     window.initGlut();
     window.initGraphic();
 

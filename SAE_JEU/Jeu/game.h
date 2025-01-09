@@ -13,7 +13,8 @@
  */
 
 #include "type.h"
-
+#include "mingl/mingl.h"
+#include <chrono>
 
 /*!
  * \brief Move the current token according to the character in the 2nd parameter
@@ -72,6 +73,30 @@ bool IsCollectible(const CMat & Mat, const char & Move, const CPosition & Pos, c
  */
 
 void CalculateScore(std::vector<char> &objets, int &score);
+
+
+
+
+void Sprite(MinGL &window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, std::string sprite);
+
+
+void DisplayGrid (MinGL &window, const CMat & mat, std::tuple <int, int> Screen_size);
+
+void MenuP(MinGL &window, std::vector<std::tuple<std::vector<int>, std::vector<int>, int>> clickablepool,
+           std::tuple <int, int> Screen_size, int & menuid, std::chrono::time_point<std::chrono::steady_clock> start);
+
+void Options(MinGL &window, std::vector<std::tuple<std::vector<int>, std::vector<int>, int>> clickablepool, std::tuple <int, int> Screen_size, int & menuid, std::chrono::time_point<std::chrono::steady_clock> start);
+
+void Credits(MinGL &window, std::vector<std::tuple<std::vector<int>, std::vector<int>, int>> clickablepool,
+             std::tuple <int, int> Screen_size, int & menuid, std::chrono::time_point<std::chrono::steady_clock> start);
+void Pause(MinGL &window, std::vector<std::tuple<std::vector<int>, std::vector<int>, int>> clickablepool,
+           std::tuple <int, int> Screen_size, int & menuid, std::chrono::time_point<std::chrono::steady_clock> start);
+
+void GameLoop(MinGL &window, std::vector<std::tuple<std::vector<int>, std::vector<int>, int>>clickablepool,CMat Mat, int menuid, unsigned PartyNum,
+              bool Key_UP, bool Key_DOWN, bool Key_RIGHT, bool Key_LEFT, std::tuple <int, int> Screen_size, CMyParamV2 param,
+              bool Victory, unsigned KMaxPartyNum, CPosition PosPlayer1, CPosition PosPlayer2, CPosition PosTP1,
+              CPosition PosTP2, bool Player1Turn, std::pair<char,CPosition> N_move, std::vector<char> objetJ1, std::vector<char> objetJ2,
+              int scoreJ1, int scoreJ2, std::vector <CPosition> PosMonster);
 
 /**
  * @brief new main

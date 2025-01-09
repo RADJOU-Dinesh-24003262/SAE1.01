@@ -267,7 +267,7 @@ void InitGrid (CMat & Mat, unsigned NbLine, unsigned NbColumn, CPosition & PosPl
     int nbr_item, cpt;
     x = 0, y = 0, cpt = 0;  //On reféfinit nos valeurs x et y pour placer les items(pour l'instant, un seul type)
 
-    nbr_item = (((Param.NbColumn * Param.NbRow) / (Param.NbColumn + Param.NbRow)) * 1.5) ;
+    nbr_item = (((Param.NbColumn * Param.NbRow) / (Param.NbColumn + Param.NbRow)) * 3) ;
 
     if(nbr_item % 2 == 0) // pour avoir un nbr impaire d'item afin éviter égalité
         nbr_item += 1;

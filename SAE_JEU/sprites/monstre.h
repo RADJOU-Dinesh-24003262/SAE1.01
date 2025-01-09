@@ -11,6 +11,16 @@
 //include les différentes formes pour dessiner les sprites
 #include "mingl/shape/rectangle.h"
 
+/**
+ * @brief cette fonction dessine un monstre sous forme de rectangle
+ * @param window Référence à l'objet MinGL pour dessiner les formes.
+ * @param Circle1 Position x du centre du monstre.
+ * @param Circle2 Position y du centre du monstre.
+ * @param mat_x Facteur d'échelle pour la dimension horizontale du rectangle.
+ * @param mat_y Facteur d'échelle pour la dimension verticale du rectangle.
+ */
+
+
 //défini les éléments du sprite d'un mur
 void Monstre(MinGL &window, int Circle1, int Circle2, int mat_x, int mat_y){
 
