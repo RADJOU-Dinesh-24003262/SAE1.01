@@ -8,10 +8,14 @@ using namespace std;
 
 void initParams (CMyParamV2 & Param){
     //Move Keys
-    Param.KeyUp = 'z';
-    Param.KeyDown = 's';
-    Param.KeyRight = 'd';
-    Param.KeyLeft = 'q';
+    Param.Key1Up = 'z';
+    Param.Key1Down = 's';
+    Param.Key1Right = 'd';
+    Param.Key1Left = 'q';
+    Param.Key2Up = 'o';
+    Param.Key2Down = 'l';
+    Param.Key2Right = 'm';
+    Param.Key2Left = 'k';
 
     Param.tokenP1 = 'A';
     Param.tokenP2 = 'X';
@@ -36,17 +40,29 @@ void LoadParams (CMyParamV2 & Param){
     for(string key, tampon; !ifs.eof(); ifs >> key){
         ifs >> tampon;
 
-        if(key == "KeyUp"){
-            ifs >> Param.KeyUp;
+        if(key == "Key1Up"){
+            ifs >> Param.Key1Up;
 
-        }else if(key == "KeyDown"){
-            ifs >> Param.KeyDown;
+        }else if(key == "Key1Down"){
+            ifs >> Param.Key1Down;
 
-        }else if(key == "KeyLeft"){
-            ifs >> Param.KeyLeft;
+        }else if(key == "Key1Left"){
+            ifs >> Param.Key1Left;
 
-        }else if(key == "KeyRight"){
-            ifs >> Param.KeyRight;
+        }else if(key == "Key1Right"){
+            ifs >> Param.Key1Right;
+
+        }else if(key == "Key2Up"){
+            ifs >> Param.Key2Up;
+
+        }else if(key == "Key2Down"){
+            ifs >> Param.Key2Down;
+
+        }else if(key == "Key2Left"){
+            ifs >> Param.Key2Left;
+
+        }else if(key == "Key2Right"){
+            ifs >> Param.Key2Right;
 
         }else if(key == "NbColumn"){
             ifs >> Param.NbColumn;

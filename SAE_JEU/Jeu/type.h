@@ -88,22 +88,38 @@ struct CMyParamV2{
      * @brief la forme du joueur 1
      */
     char tokenP2;
-	/**
-     * @brief la touche pour faire monter le token
+    /**
+     * @brief la touche pour faire monter le token1
      */
-    char KeyUp;
-	/**
-     * @brief la touche pour faire descendre le token
+    char Key1Up;
+    /**
+     * @brief la touche pour faire descendre le token1
      */
-    char KeyDown;
-	/**
-     * @brief la touche pour faire aller à gauche le token
+    char Key1Down;
+    /**
+     * @brief la touche pour faire aller à gauche le token1
      */
-    char KeyLeft;
-	/**
-     * @brief la touche pour faire aller à droite le token
+    char Key1Left;
+    /**
+     * @brief la touche pour faire aller à droite le token1
      */
-    char KeyRight;
+    char Key1Right;
+    /**
+     * @brief la touche pour faire monter le token2
+     */
+    char Key2Up;
+    /**
+     * @brief la touche pour faire descendre le token2
+     */
+    char Key2Down;
+    /**
+     * @brief la touche pour faire aller à gauche le token2
+     */
+    char Key2Left;
+    /**
+     * @brief la touche pour faire aller à droite le token2
+     */
+    char Key2Right;
 	/**
      *  @brief le nombre de colone qu'il doit avoir dans la map
      */
