@@ -1,0 +1,258 @@
+\hypertarget{mingl_8cpp_source}{}\doxysection{mingl.\+cpp}
+\label{mingl_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/mingl.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/mingl.cpp}}
+\mbox{\hyperlink{mingl_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <map>}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mingl_8h}{mingl/mingl.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00015}00015 \textcolor{comment}{// Astuce pour faire passer les handlers en fonction static dans initGraphic()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00016}00016 \textcolor{keyword}{namespace }\{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00018}00018 std::map<int, MinGL *> anyWindow;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00020}00020 \textcolor{keyword}{template}<\textcolor{keyword}{typename} T, T oHandler>}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00021}00021 \textcolor{keyword}{struct }callBackBuilder;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00023}00023 \textcolor{keyword}{template}<\textcolor{keyword}{typename} Obj, \textcolor{keyword}{typename}... Arg, void(Obj::* oHandler)(Arg...)>}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00024}00024 \textcolor{keyword}{struct }callBackBuilder<void(Obj::*)(Arg...), oHandler>}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00025}00025 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00026}00026     \textcolor{keyword}{static} \textcolor{keywordtype}{void} callback(Arg... arg)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00027}00027     \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00028}00028         \textcolor{keywordtype}{int} current\_id = glutGetWindow();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00029}00029         \textcolor{comment}{//cout << "{}window ["{} << current\_id << "{}] handler call"{} << endl;}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00030}00030         \textcolor{keyword}{auto} it = anyWindow.find(current\_id);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00031}00031         \textcolor{keywordflow}{if} (it != anyWindow.end())}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00032}00032         \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00033}00033             (it-\/>second-\/>*oHandler)(arg...);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00034}00034         \}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00035}00035     \}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00036}00036 \};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00038}00038 \} \textcolor{comment}{// namespace}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00040}00040 \textcolor{preprocessor}{\#define BIND\_CALLBACK(HANDLER) callBackBuilder<decltype(HANDLER), HANDLER>::callback}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00042}\mbox{\hyperlink{class_min_g_l_aecc35a286d1adbcbdc76bf26df18169c}{00042}} \mbox{\hyperlink{class_min_g_l_aecc35a286d1adbcbdc76bf26df18169c}{MinGL::MinGL}}(\textcolor{keyword}{const} std::string\& name, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& windowSize, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& windowPosition,}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00043}00043              \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& backgroundColor)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00044}00044     : m\_windowName(name)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00045}00045     , m\_bgColor(backgroundColor)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00046}00046     , m\_eventManager()}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00047}00047     , m\_windowIsOpen(false)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00048}00048 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00049}00049     glutInitWindowSize(windowSize.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_abcf3d729b05b3cd93e9eff21c74b89a1}{getX}}(), windowSize.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_ae70fbda9cca27b9dc0fe068a38ae5e5e}{getY}}());}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00050}00050     glutInitWindowPosition(windowPosition.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_abcf3d729b05b3cd93e9eff21c74b89a1}{getX}}(), windowPosition.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_ae70fbda9cca27b9dc0fe068a38ae5e5e}{getY}}());}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00051}00051 \} \textcolor{comment}{// MinGL()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00053}\mbox{\hyperlink{class_min_g_l_a0f84e59dd311785a7e6da848abd5d188}{00053}} \mbox{\hyperlink{class_min_g_l_a0f84e59dd311785a7e6da848abd5d188}{MinGL::\string~MinGL}}()}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00054}00054 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00055}00055     \textcolor{keyword}{auto} it = anyWindow.find(m\_glutWindowId);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00056}00056     \textcolor{keywordflow}{if} (it != anyWindow.end())}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00057}00057         anyWindow.erase(it);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00059}00059     \mbox{\hyperlink{class_min_g_l_a9508f3ac9d4cb4f444f56f5d77ed9d86}{stopGraphic}}();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00060}00060 \} \textcolor{comment}{//\string~MinGL()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00062}\mbox{\hyperlink{class_min_g_l_a489922f0bdde2e38698adddaf57f6eda}{00062}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_min_g_l_a489922f0bdde2e38698adddaf57f6eda}{MinGL::finishFrame}}()}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00063}00063 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00064}00064     glutPostRedisplay();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00065}00065     glutMainLoopEvent();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00066}00066 \} \textcolor{comment}{// finishFrame()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00068}\mbox{\hyperlink{class_min_g_l_a86c940758616957683ffb2e239bba774}{00068}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_min_g_l_a86c940758616957683ffb2e239bba774}{MinGL::clearScreen}}()}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00069}00069 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00070}00070     glClear(GL\_COLOR\_BUFFER\_BIT);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00071}00071 \} \textcolor{comment}{// clearScreen()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00073}\mbox{\hyperlink{class_min_g_l_ab558253439905930836ab4910a7ae253}{00073}} \mbox{\hyperlink{classns_event_1_1_event_manager}{nsEvent::EventManager}}\& \mbox{\hyperlink{class_min_g_l_ab558253439905930836ab4910a7ae253}{MinGL::getEventManager}}()}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00074}00074 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00075}00075     \textcolor{keywordflow}{return} m\_eventManager;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00076}00076 \} \textcolor{comment}{// getEventManager()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00078}\mbox{\hyperlink{class_min_g_l_a66758e8e6983cc1dd0b10b1ee743a65a}{00078}} \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& \mbox{\hyperlink{class_min_g_l_a66758e8e6983cc1dd0b10b1ee743a65a}{MinGL::getBackgroundColor}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00079}00079 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00080}00080     \textcolor{keywordflow}{return} m\_bgColor;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00081}00081 \} \textcolor{comment}{// getBackgroundColor()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00083}\mbox{\hyperlink{class_min_g_l_a4399b7615cea89f850cd5c66e428c367}{00083}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_min_g_l_a4399b7615cea89f850cd5c66e428c367}{MinGL::setBackgroundColor}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& backgroundColor)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00084}00084 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00085}00085     m\_bgColor = backgroundColor;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00086}00086     glClearColor(m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{getRed}}() / 256.f, m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{getGreen}}() / 256.f, m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{getBlue}}() / 256.f, m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}{getAlpha}}() / 256.f);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00087}00087 \} \textcolor{comment}{// setBackgroundColor()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00089}\mbox{\hyperlink{class_min_g_l_a5962a0a0ced7879bc0cc65e267e8d7fc}{00089}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_min_g_l_a5962a0a0ced7879bc0cc65e267e8d7fc}{MinGL::initGraphic}}()}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00090}00090 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00091}00091     \textcolor{comment}{// Initialisation GLUT}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00092}00092     glutInitDisplayMode(GLUT\_DOUBLE | GLUT\_RGBA);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00094}00094     m\_glutWindowId = glutCreateWindow(m\_windowName.c\_str());}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00095}00095     anyWindow[m\_glutWindowId] = \textcolor{keyword}{this};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00097}00097     \textcolor{comment}{// On active la transparence}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00098}00098     glEnable(GL\_BLEND);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00099}00099     glBlendFunc(GL\_SRC\_ALPHA, GL\_ONE\_MINUS\_SRC\_ALPHA);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00101}00101     glutSetOption(GLUT\_ACTION\_ON\_WINDOW\_CLOSE, GLUT\_ACTION\_CONTINUE\_EXECUTION);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00103}00103     \textcolor{comment}{// Initialisation handlers}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00104}00104     glutReshapeFunc(BIND\_CALLBACK(\&MinGL::callReshape));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00105}00105     glutDisplayFunc(BIND\_CALLBACK(\&MinGL::callDisplay));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00106}00106     glutMouseFunc(BIND\_CALLBACK(\&MinGL::callMouse));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00107}00107     glutMotionFunc(BIND\_CALLBACK(\&MinGL::callMotion));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00108}00108     glutPassiveMotionFunc(BIND\_CALLBACK(\&MinGL::callPassiveMotion));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00109}00109     glutKeyboardFunc(BIND\_CALLBACK(\&MinGL::callKeyboard));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00110}00110     glutKeyboardUpFunc(BIND\_CALLBACK(\&MinGL::callKeyboardUp));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00111}00111     glutSpecialFunc(BIND\_CALLBACK(\&MinGL::callKeyboardSpecial));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00112}00112     glutSpecialUpFunc(BIND\_CALLBACK(\&MinGL::callKeyboardUpSpecial));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00113}00113     glutCloseFunc(BIND\_CALLBACK(\&MinGL::callClose));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00115}00115     \textcolor{comment}{// On set la couleur d'effacement (prend des float, donc obligé de diviser par la taille d'un GLuint)}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00116}00116     glClearColor(m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{getRed}}() / 256.f, m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{getGreen}}() / 256.f, m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{getBlue}}() / 256.f, m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}{getAlpha}}() / 256.f);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00118}00118     \textcolor{comment}{// Efface écran}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00119}00119     \mbox{\hyperlink{class_min_g_l_a86c940758616957683ffb2e239bba774}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00120}00120 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00121}00121     \textcolor{comment}{// Un tour de boucle pour lancer l'affichage}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00122}00122     glutMainLoopEvent();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00123}00123     glutSetKeyRepeat(GLUT\_KEY\_REPEAT\_OFF); \textcolor{comment}{// on désactive la répétition des touches}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00124}00124     m\_windowIsOpen = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00125}00125 \} \textcolor{comment}{// initGraphic()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00127}\mbox{\hyperlink{class_min_g_l_a9508f3ac9d4cb4f444f56f5d77ed9d86}{00127}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_min_g_l_a9508f3ac9d4cb4f444f56f5d77ed9d86}{MinGL::stopGraphic}}()}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00128}00128 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00129}00129     glutDestroyWindow(m\_glutWindowId);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00130}00130     glutMainLoopEvent();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00131}00131 \} \textcolor{comment}{// stopGraphic()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00133}\mbox{\hyperlink{class_min_g_l_a8f0833403a4fb3df8010c132e81b207f}{00133}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_min_g_l_a8f0833403a4fb3df8010c132e81b207f}{MinGL::isPressed}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_min_g_l_a6e612d21ed9723c37ad91093f7b48c96}{KeyType\_t}} \&key)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00134}00134 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00135}00135     \textcolor{keywordflow}{return} m\_keyboardMap[key];}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00136}00136 \} \textcolor{comment}{// isPressed()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00138}\mbox{\hyperlink{class_min_g_l_a99750fd4c8f97cfe693b1acb903424cf}{00138}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_min_g_l_a99750fd4c8f97cfe693b1acb903424cf}{MinGL::resetKey}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_min_g_l_a6e612d21ed9723c37ad91093f7b48c96}{KeyType\_t}} \&key)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00139}00139 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00140}00140     m\_keyboardMap[key] = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00141}00141 \} \textcolor{comment}{// resetKey()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00143}00143 \textcolor{keywordtype}{void} MinGL::callReshape(\textcolor{keywordtype}{int} h, \textcolor{keywordtype}{int} w)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00144}00144 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00145}00145     glMatrixMode(GL\_PROJECTION);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00146}00146     glLoadIdentity();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00148}00148     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} windowSize = \mbox{\hyperlink{class_min_g_l_a92bacd1567089fb4641ed7b416cfe74d}{getWindowSize}}();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00149}00149     gluOrtho2D(0.0, GLfloat (windowSize.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_abcf3d729b05b3cd93e9eff21c74b89a1}{getX}}()), GLfloat (windowSize.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_ae70fbda9cca27b9dc0fe068a38ae5e5e}{getY}}()), 0.0);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00151}00151     glMatrixMode(GL\_MODELVIEW);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00152}00152     glLoadIdentity();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00153}00153     glViewport(0, 0, h, w);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00154}00154 \} \textcolor{comment}{// callReshape()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00155}00155 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00156}00156 \textcolor{keywordtype}{void} MinGL::callDisplay()}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00157}00157 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00158}00158     glFlush();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00159}00159     glutSwapBuffers();}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00160}00160 \} \textcolor{comment}{// callDisplay()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00161}00161 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00162}00162 \textcolor{keywordtype}{void} MinGL::callMouse(\textcolor{keywordtype}{int} button, \textcolor{keywordtype}{int} state, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00163}00163 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00164}00164     \mbox{\hyperlink{structns_event_1_1_event__t}{nsEvent::Event\_t}} event;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00165}00165     \textcolor{keyword}{event}.\mbox{\hyperlink{structns_event_1_1_event__t_a4658fcb9ee305cae39da30840d64192c}{eventType}} = \mbox{\hyperlink{namespacens_event_a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7}{nsEvent::EventType\_t::MouseClick}};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00166}00166     \textcolor{keyword}{event}.eventData.clickData.button = button;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00167}00167     \textcolor{keyword}{event}.eventData.clickData.state = state;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00168}00168     \textcolor{keyword}{event}.eventData.clickData.x = x;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00169}00169     \textcolor{keyword}{event}.eventData.clickData.y = y;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00170}00170 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00171}00171     m\_eventManager.\mbox{\hyperlink{classns_event_1_1_event_manager_a1eff8398ddb0a25da82e52a1067b85b5}{pushEvent}}(event);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00172}00172 \} \textcolor{comment}{// calMouse()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00173}00173 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00174}00174 \textcolor{keywordtype}{void} MinGL::callMotion(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00175}00175 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00176}00176     \mbox{\hyperlink{structns_event_1_1_event__t}{nsEvent::Event\_t}} event;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00177}00177     \textcolor{keyword}{event}.\mbox{\hyperlink{structns_event_1_1_event__t_a4658fcb9ee305cae39da30840d64192c}{eventType}} = \mbox{\hyperlink{namespacens_event_a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317}{nsEvent::EventType\_t::MouseDrag}};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00178}00178     \textcolor{keyword}{event}.eventData.moveData.x = x;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00179}00179     \textcolor{keyword}{event}.eventData.moveData.y = y;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00180}00180 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00181}00181     m\_eventManager.\mbox{\hyperlink{classns_event_1_1_event_manager_a1eff8398ddb0a25da82e52a1067b85b5}{pushEvent}}(event);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00182}00182 \} \textcolor{comment}{// callMotion()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00184}00184 \textcolor{keywordtype}{void} MinGL::callPassiveMotion(\textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00185}00185 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00186}00186     \mbox{\hyperlink{structns_event_1_1_event__t}{nsEvent::Event\_t}} event;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00187}00187     \textcolor{keyword}{event}.\mbox{\hyperlink{structns_event_1_1_event__t_a4658fcb9ee305cae39da30840d64192c}{eventType}} = \mbox{\hyperlink{namespacens_event_a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6}{nsEvent::EventType\_t::MouseMove}};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00188}00188     \textcolor{keyword}{event}.eventData.moveData.x = x;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00189}00189     \textcolor{keyword}{event}.eventData.moveData.y = y;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00190}00190 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00191}00191     m\_eventManager.\mbox{\hyperlink{classns_event_1_1_event_manager_a1eff8398ddb0a25da82e52a1067b85b5}{pushEvent}}(event);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00192}00192 \} \textcolor{comment}{// callPassiveMotion()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00194}00194 \textcolor{keywordtype}{void} MinGL::callKeyboard(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} k, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00195}00195 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00196}00196     (void)(x); (void)(y);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00197}00197     \mbox{\hyperlink{class_min_g_l_a6e612d21ed9723c37ad91093f7b48c96}{KeyType\_t}} key(k, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00198}00198     m\_keyboardMap[key] = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00199}00199 \} \textcolor{comment}{// callKeyboard()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00201}00201 \textcolor{keywordtype}{void} MinGL::callKeyboardUp(\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} k, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00202}00202 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00203}00203     (void)(x); (void)(y);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00204}00204     \mbox{\hyperlink{class_min_g_l_a6e612d21ed9723c37ad91093f7b48c96}{KeyType\_t}} key(k, \textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00205}00205     m\_keyboardMap[key] = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00206}00206 \} \textcolor{comment}{// callKeyboardUp()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00207}00207 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00208}00208 \textcolor{keywordtype}{void} MinGL::callKeyboardSpecial(\textcolor{keywordtype}{int} k, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00209}00209 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00210}00210     (void)(x); (void)(y);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00211}00211     \mbox{\hyperlink{class_min_g_l_a6e612d21ed9723c37ad91093f7b48c96}{KeyType\_t}} key(k, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00212}00212     m\_keyboardMap[key] = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00213}00213 \} \textcolor{comment}{// callKeyboardSpecial()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00214}00214 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00215}00215 \textcolor{keywordtype}{void} MinGL::callKeyboardUpSpecial(\textcolor{keywordtype}{int} k, \textcolor{keywordtype}{int} x, \textcolor{keywordtype}{int} y)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00216}00216 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00217}00217     (void)(x); (void)(y);}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00218}00218     \mbox{\hyperlink{class_min_g_l_a6e612d21ed9723c37ad91093f7b48c96}{KeyType\_t}} key(k, \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00219}00219     m\_keyboardMap[key] = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00220}00220 \} \textcolor{comment}{// callKeyboardUpSpecial()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00221}00221 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00222}00222 \textcolor{keywordtype}{void} MinGL::callClose()}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00223}00223 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00224}00224     m\_windowIsOpen = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00225}00225 \} \textcolor{comment}{// callClose()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00226}00226 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00227}\mbox{\hyperlink{class_min_g_l_a92bacd1567089fb4641ed7b416cfe74d}{00227}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \mbox{\hyperlink{class_min_g_l_a92bacd1567089fb4641ed7b416cfe74d}{MinGL::getWindowSize}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00228}00228 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00229}00229     \textcolor{keywordflow}{return} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(glutGet(GLUT\_WINDOW\_WIDTH), glutGet(GLUT\_WINDOW\_HEIGHT));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00230}00230 \} \textcolor{comment}{// getWindowSize()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00231}00231 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00232}\mbox{\hyperlink{class_min_g_l_a532d320b7b837998533fe6577ab45bc3}{00232}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_min_g_l_a532d320b7b837998533fe6577ab45bc3}{MinGL::setWindowSize}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&windowSize)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00233}00233 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00234}00234     glutReshapeWindow(windowSize.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_abcf3d729b05b3cd93e9eff21c74b89a1}{getX}}(), windowSize.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_ae70fbda9cca27b9dc0fe068a38ae5e5e}{getY}}());}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00235}00235 \} \textcolor{comment}{// setWindowSize()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00236}00236 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00237}\mbox{\hyperlink{class_min_g_l_a1ea6ea098988db36f5bf18713f9f3347}{00237}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \mbox{\hyperlink{class_min_g_l_a1ea6ea098988db36f5bf18713f9f3347}{MinGL::getWindowPosition}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00238}00238 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00239}00239     \textcolor{keywordflow}{return} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(glutGet(GLUT\_WINDOW\_X), glutGet(GLUT\_WINDOW\_Y));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00240}00240 \} \textcolor{comment}{// getWindowPosition()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00241}00241 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00242}\mbox{\hyperlink{class_min_g_l_a9239873a52e437457af03f002f5df2b6}{00242}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_min_g_l_a9239873a52e437457af03f002f5df2b6}{MinGL::setWindowPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&windowPosition)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00243}00243 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00244}00244     glutPositionWindow(windowPosition.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_abcf3d729b05b3cd93e9eff21c74b89a1}{getX}}(), windowPosition.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_ae70fbda9cca27b9dc0fe068a38ae5e5e}{getY}}());}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00245}00245 \} \textcolor{comment}{// setWindowPosition()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00246}00246 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00247}\mbox{\hyperlink{class_min_g_l_a46cea08ec9ef4a0678f425000ca77e5b}{00247}} \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{class_min_g_l_a46cea08ec9ef4a0678f425000ca77e5b}{MinGL::getWindowName}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00248}00248 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00249}00249     \textcolor{keywordflow}{return} m\_windowName;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00250}00250 \} \textcolor{comment}{// getWindowName()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00251}00251 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00252}\mbox{\hyperlink{class_min_g_l_a462ab2edc0eb28990638541873869e0e}{00252}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_min_g_l_a462ab2edc0eb28990638541873869e0e}{MinGL::setWindowName}}(\textcolor{keyword}{const} std::string \&windowName)}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00253}00253 \{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00254}00254     m\_windowName = windowName;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00255}00255     glutSetWindowTitle(windowName.c\_str());}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00256}00256 \} \textcolor{comment}{// setWindowName()}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00257}00257 }
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00258}\mbox{\hyperlink{class_min_g_l_a05a0da9d0729e9c7dbd1121b0956866d}{00258}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_min_g_l_a05a0da9d0729e9c7dbd1121b0956866d}{MinGL::isOpen}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00259}00259 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00260}00260     \textcolor{keywordflow}{return} m\_windowIsOpen;}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00261}00261 \} \textcolor{comment}{// isOpen()}}
+
+\end{DoxyCode}

@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_shape_1_1_oval" xml:lang="en-US">
+<title>nsShape::Oval Class Reference</title>
+<indexterm><primary>nsShape::Oval</primary></indexterm>
+<para>
+
+<para>Classe représentant un <link linkend="_classns_shape_1_1_oval">Oval</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;oval.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsShape::Oval:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_oval__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for nsShape::Oval:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_oval__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51f">TransitionIds</link> { 
+<link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa11de15749de0fd7d832aaadcd9850ee1">TRANSITION_FILL_COLOR_RGB</link>
+, <link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa16791213f05fcf1ef8d379521bfba0fa">TRANSITION_FILL_COLOR_ALPHA</link>
+, <link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa9cd5532f1ff73015ed6a5741625bc8de">TRANSITION_BORDER_COLOR_RGB</link>
+, <link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa2959f9a10af80841f7b581bd6e65df48">TRANSITION_BORDER_COLOR_ALPHA</link>
+, 
+<link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa84bcce94438bb134d3d344ef0ae27fa4">TRANSITION_POSITION</link>
+, <link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fad7142f5e149dd1f2d7c1b35f390ce2b4">TRANSITION_RADIUS</link>
+ }</para>
+
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_shape_1_1_oval_1af839fdfa08b1b77edc54a83e1abcadfb">Oval</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=nsGraphics::KTransparent)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_oval">Oval</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_classns_shape_1_1_oval_1a323e0bcaf712c2ddad124adc42ca433b"/>virtual <emphasis role="strong">~Oval</emphasis> () override=default</para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_oval">Oval</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_oval_1a93036caafaf315f62676e95dccb5ec65">draw</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window) const override</para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_oval_1a24b1974daa7894aee5dce3edb9056e03">getValues</link> (const int &amp;id, std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_oval_1a56c7b08484c2dc730e4850ff191aa80d">setValues</link> (const int &amp;id, const std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para><link linkend="_classns_shape_1_1_oval">Oval</link> <link linkend="_classns_shape_1_1_oval_1af87d45ca6ab470b17189fc1d50a14343">operator+</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;<link linkend="_classns_shape_1_1_oval_1a446b4eee9569adca380f5f9ba1ddc832">getPosition</link>) const</para>
+
+<para>Opérateur de décalage. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_shape_1_1_oval">Oval</link> <link linkend="_classns_shape_1_1_oval_1a265f23778e17f28a9cf247bf3fe25c9d">operator*</link> (const float &amp;f) const</para>
+
+<para>Opérateur de réduction. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; <link linkend="_classns_shape_1_1_oval_1a446b4eee9569adca380f5f9ba1ddc832">getPosition</link> () const</para>
+
+<para>Récupère la position de l&apos;oval. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_oval_1addd2809c1ba6ec90453a75b94d9707ff">setPosition</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position)</para>
+
+<para>Définit la nouvelle position de l&apos;oval. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; <link linkend="_classns_shape_1_1_oval_1abb39756c5ed715fed211eba826db7506">getRadius</link> () const</para>
+
+<para>Récupère le rayon de l&apos;oval. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_oval_1af8569e0b2f6549b4bec902f87618a1f5">setRadius</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;radius)</para>
+
+<para>Définit le nouveau rayon de l&apos;oval. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe représentant un <link linkend="_classns_shape_1_1_oval">Oval</link>. </para>
+<para>
+Definition at line <link linkend="_oval_8h_source_1l00025">25</link> of file <link linkend="_oval_8h_source">oval.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51f"/><section>
+    <title>TransitionIds</title>
+<indexterm><primary>TransitionIds</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>TransitionIds</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51f">nsShape::Oval::TransitionIds</link></computeroutput></para><para>
+
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>TRANSITION_FILL_COLOR_RGB</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>TRANSITION_FILL_COLOR_RGB</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa11de15749de0fd7d832aaadcd9850ee1"/>TRANSITION_FILL_COLOR_RGB</entry><entry>
+<para>Transition pour la couleur de remplissage </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_FILL_COLOR_ALPHA</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>TRANSITION_FILL_COLOR_ALPHA</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa16791213f05fcf1ef8d379521bfba0fa"/>TRANSITION_FILL_COLOR_ALPHA</entry><entry>
+<para>Transition pour la transparence de remplissage </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_BORDER_COLOR_RGB</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>TRANSITION_BORDER_COLOR_RGB</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa9cd5532f1ff73015ed6a5741625bc8de"/>TRANSITION_BORDER_COLOR_RGB</entry><entry>
+<para>Transition pour la couleur de bord </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_BORDER_COLOR_ALPHA</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>TRANSITION_BORDER_COLOR_ALPHA</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa2959f9a10af80841f7b581bd6e65df48"/>TRANSITION_BORDER_COLOR_ALPHA</entry><entry>
+<para>Transition pour la transparence de bord </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_POSITION</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>TRANSITION_POSITION</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa84bcce94438bb134d3d344ef0ae27fa4"/>TRANSITION_POSITION</entry><entry>
+<para>Transition pour la position </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_RADIUS</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>TRANSITION_RADIUS</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fad7142f5e149dd1f2d7c1b35f390ce2b4"/>TRANSITION_RADIUS</entry><entry>
+<para>Transition pour le rayon </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_oval_8h_source_1l00032">32</link> of file <link linkend="_oval_8h_source">oval.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_shape_1_1_oval_1af839fdfa08b1b77edc54a83e1abcadfb"/><section>
+    <title>Oval()</title>
+<indexterm><primary>Oval</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>Oval</secondary></indexterm>
+<para><computeroutput>nsShape::Oval::Oval (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput>nsGraphics::KTransparent</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_oval">Oval</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>firstPosition</entry><entry>
+<para>: Position du centre </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>radius</entry><entry>
+<para>: Rayon du oval </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>fillColor</entry><entry>
+<para>: Couleur de remplissage </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>borderColor</entry><entry>
+<para>: Couleur de bord </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_oval_8cpp_source_1l00016">16</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_shape_1_1_oval_1a93036caafaf315f62676e95dccb5ec65"/><section>
+    <title>draw()</title>
+<indexterm><primary>draw</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void nsShape::Oval::draw (<link linkend="_class_min_g_l">MinGL</link> &amp; window) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</para>
+<para>
+Implements <link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">nsGraphics::IDrawable</link>.</para>
+<para>
+Definition at line <link linkend="_oval_8cpp_source_1l00022">22</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_oval_a93036caafaf315f62676e95dccb5ec65_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_oval_1a446b4eee9569adca380f5f9ba1ddc832"/><section>
+    <title>getPosition()</title>
+<indexterm><primary>getPosition</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>getPosition</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; nsShape::Oval::getPosition ( ) const</computeroutput></para><para>
+
+<para>Récupère la position de l&apos;oval. </para>
+</para>
+<para>
+Definition at line <link linkend="_oval_8cpp_source_1l00167">167</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_oval_1abb39756c5ed715fed211eba826db7506"/><section>
+    <title>getRadius()</title>
+<indexterm><primary>getRadius</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>getRadius</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> nsShape::Oval::getRadius ( ) const</computeroutput></para><para>
+
+<para>Récupère le rayon de l&apos;oval. </para>
+</para>
+<para>
+Definition at line <link linkend="_oval_8cpp_source_1l00157">157</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_oval_1a24b1974daa7894aee5dce3edb9056e03"/><section>
+    <title>getValues()</title>
+<indexterm><primary>getValues</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>getValues</secondary></indexterm>
+<para><computeroutput>void nsShape::Oval::getValues (const int &amp; id, std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a récupérer </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>values</entry><entry>
+<para>Vecteur de valeurs a peupler </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_oval_8cpp_source_1l00065">65</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_oval_1a265f23778e17f28a9cf247bf3fe25c9d"/><section>
+    <title>operator*()</title>
+<indexterm><primary>operator*</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>operator*</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_shape_1_1_oval">Oval</link> nsShape::Oval::operator* (const float &amp; f) const</computeroutput></para><para>
+
+<para>Opérateur de réduction. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>f</entry><entry>
+<para>: Nombre avec lequel multiplier la position actuelle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_oval_8cpp_source_1l00152">152</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_oval_1af87d45ca6ab470b17189fc1d50a14343"/><section>
+    <title>operator+()</title>
+<indexterm><primary>operator+</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_shape_1_1_oval">Oval</link> nsShape::Oval::operator+ (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position) const</computeroutput></para><para>
+
+<para>Opérateur de décalage. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>position</entry><entry>
+<para>: Position a additionner </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_oval_8cpp_source_1l00147">147</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_oval_1addd2809c1ba6ec90453a75b94d9707ff"/><section>
+    <title>setPosition()</title>
+<indexterm><primary>setPosition</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>setPosition</secondary></indexterm>
+<para><computeroutput>void nsShape::Oval::setPosition (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position)</computeroutput></para><para>
+
+<para>Définit la nouvelle position de l&apos;oval. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>position</entry><entry>
+<para>: Nouvelle position </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_oval_8cpp_source_1l00172">172</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_oval_1af8569e0b2f6549b4bec902f87618a1f5"/><section>
+    <title>setRadius()</title>
+<indexterm><primary>setRadius</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>setRadius</secondary></indexterm>
+<para><computeroutput>void nsShape::Oval::setRadius (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; radius)</computeroutput></para><para>
+
+<para>Définit le nouveau rayon de l&apos;oval. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>radius</entry><entry>
+<para>: Nouveau rayon </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_oval_8cpp_source_1l00162">162</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_oval_1a56c7b08484c2dc730e4850ff191aa80d"/><section>
+    <title>setValues()</title>
+<indexterm><primary>setValues</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>setValues</secondary></indexterm>
+<para><computeroutput>void nsShape::Oval::setValues (const int &amp; id, const std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a définir </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>values</entry><entry>
+<para>Vecteur des nouvelles valeurs a appliquer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_oval_8cpp_source_1l00106">106</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_oval_8h">oval.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_oval_8cpp">oval.cpp</link></section>
+</section>

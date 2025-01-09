@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="transition__types_8h" kind="file" language="C++">
+    <compoundname>transition_types.h</compoundname>
+    <includes local="no">chrono</includes>
+    <includedby refid="transition__contract_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_contract.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h</label>
+        <link refid="transition__types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>chrono</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="5">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source"/>
+      </node>
+      <node id="6">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h</label>
+        <link refid="transition_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_contract.h</label>
+        <link refid="transition__contract_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h</label>
+        <link refid="transition__engine_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h</label>
+        <link refid="transition__types_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition/transition.cpp</label>
+        <link refid="transition_8cpp_source"/>
+      </node>
+      <node id="9">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition/transition_contract.cpp</label>
+        <link refid="transition__contract_8cpp"/>
+      </node>
+      <node id="7">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition/transition_engine.cpp</label>
+        <link refid="transition__engine_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacens_transition">nsTransition</innernamespace>
+    <briefdescription>
+<para>Définit quelques types pour les transitions. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexandre Sollier </para>
+</simplesect>
+<simplesect kind="date"><para>Janvier 2020 </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TRANSITION_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSITION_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacens_transition" kindref="compound">nsTransition</ref></highlight></codeline>
+<codeline lineno="17"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::chrono::duration&lt;float,<sp/>std::nano&gt;<sp/><ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::chrono::time_point&lt;std::chrono::steady_clock,<sp/>SystemDuration_t&gt;<sp/><ref refid="namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6" kindref="member">SystemTimePoint_t</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nsTransition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TRANSITION_TYPES_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h"/>
+  </compounddef>
+</doxygen>

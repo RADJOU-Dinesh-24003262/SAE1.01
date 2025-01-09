@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_authorized_key" xml:lang="en-US">
+<title>AuthorizedKey Struct Reference</title>
+<indexterm><primary>AuthorizedKey</primary></indexterm>
+<para>
+
+<para>Struct containing all the authorized keys in the struct <link linkend="_struct_c_my_param">CMyParam</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;type.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>const std::vector&lt; std::string &gt; <link linkend="_struct_authorized_key_1a1b1aa7863427cc1b43f229423bdd83ba">VParamChar</link> {&quot;KeyUp&quot;, &quot;KeyDown&quot;, &quot;KeyLeft&quot;, &quot;KeyRight&quot;, &quot;TokenP1&quot;, &quot;TokenP2&quot;}</para>
+</listitem>
+            <listitem><para>const std::vector&lt; std::string &gt; <link linkend="_struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73">VParamString</link> {&quot;ColorP1&quot;, &quot;ColorP2&quot;}</para>
+</listitem>
+            <listitem><para>const std::vector&lt; std::string &gt; <link linkend="_struct_authorized_key_1a871173f4b0c89c91289a10f0ddc1cadd">VParamUnsigned</link> {&quot;NbRow&quot;, &quot;NbColumn&quot;}</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Struct containing all the authorized keys in the struct <link linkend="_struct_c_my_param">CMyParam</link>. </para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00039">39</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_authorized_key_1a1b1aa7863427cc1b43f229423bdd83ba"/><section>
+    <title>VParamChar</title>
+<indexterm><primary>VParamChar</primary><secondary>AuthorizedKey</secondary></indexterm>
+<indexterm><primary>AuthorizedKey</primary><secondary>VParamChar</secondary></indexterm>
+<para><computeroutput>const std::vector&lt;std::string&gt; AuthorizedKey::VParamChar {&quot;KeyUp&quot;, &quot;KeyDown&quot;, &quot;KeyLeft&quot;, &quot;KeyRight&quot;, &quot;TokenP1&quot;, &quot;TokenP2&quot;}</computeroutput></para>
+<para>List of authorized key for the type char in a struct <link linkend="_struct_c_my_param">CMyParam</link> </para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00041">41</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73"/><section>
+    <title>VParamString</title>
+<indexterm><primary>VParamString</primary><secondary>AuthorizedKey</secondary></indexterm>
+<indexterm><primary>AuthorizedKey</primary><secondary>VParamString</secondary></indexterm>
+<para><computeroutput>const std::vector&lt;std::string&gt; AuthorizedKey::VParamString {&quot;ColorP1&quot;, &quot;ColorP2&quot;}</computeroutput></para>
+<para>List of authorized key for the type string in a struct <link linkend="_struct_c_my_param">CMyParam</link> </para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00043">43</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_authorized_key_1a871173f4b0c89c91289a10f0ddc1cadd"/><section>
+    <title>VParamUnsigned</title>
+<indexterm><primary>VParamUnsigned</primary><secondary>AuthorizedKey</secondary></indexterm>
+<indexterm><primary>AuthorizedKey</primary><secondary>VParamUnsigned</secondary></indexterm>
+<para><computeroutput>const std::vector&lt;std::string&gt; AuthorizedKey::VParamUnsigned {&quot;NbRow&quot;, &quot;NbColumn&quot;}</computeroutput></para>
+<para>List of authorized key for the type unsigned in a struct <link linkend="_struct_c_my_param">CMyParam</link> </para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00045">45</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/<link linkend="_type_8h">type.h</link></section>
+</section>

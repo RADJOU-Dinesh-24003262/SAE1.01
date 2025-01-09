@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="audioengine_8h" kind="file" language="C++">
+    <compoundname>audioengine.h</compoundname>
+    <includes local="no">memory</includes>
+    <includes local="no">list</includes>
+    <includes local="no">SFML/Audio.hpp</includes>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</includedby>
+    <includedby refid="audioengine_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h</label>
+        <link refid="audioengine_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>SFML/Audio.hpp</label>
+      </node>
+      <node id="3">
+        <label>list</label>
+      </node>
+      <node id="2">
+        <label>memory</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h</label>
+        <link refid="audioengine_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp</label>
+        <link refid="audioengine_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classns_audio_1_1_audio_engine" prot="public">nsAudio::AudioEngine</innerclass>
+    <innernamespace refid="namespacens_audio">nsAudio</innernamespace>
+    <briefdescription>
+<para>Gestionnaire audio de minGL. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Clément Mathieu<ndash/>Drif </para>
+</simplesect>
+<simplesect kind="date"><para>Septembre 2020 </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>AUDIOENGINE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>AUDIOENGINE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;list&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;SFML/Audio.hpp&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>based<sp/>on<sp/>SFML</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacens_audio" kindref="compound">nsAudio</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="28" refid="classns_audio_1_1_audio_engine" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classns_audio_1_1_audio_engine" kindref="compound">AudioEngine</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_audio_1_1_audio_engine_1a6ef72eb80bef2c1b0764c40f629d2536" kindref="member">setMusic</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>loop<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_audio_1_1_audio_engine_1aba89263fc9f810bee40dcae229313883" kindref="member">toggleMusicPlaying</ref>();</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_audio_1_1_audio_engine_1ac21b2c1be9590a0f702c48220c59f8c9" kindref="member">setMusicPlaying</ref>(</highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>playing);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classns_audio_1_1_audio_engine_1a57e13380a3039e546a5f1b9242f8709b" kindref="member">isMusicPlaying</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_audio_1_1_audio_engine_1a4c88595136327b3805c0322a9a8d2a0f" kindref="member">loadSound</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_audio_1_1_audio_engine_1a2b0a1a9b1cb90e1180ddedb5b9e2fad1" kindref="member">removeBuffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>fileName);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_audio_1_1_audio_engine_1ac05b3e0d2fd9ecfd1ad8eb110f021bf3" kindref="member">emptyBufferList</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_audio_1_1_audio_engine_1ac1343ed3afe38eb80a222969f3d74d6d" kindref="member">startMusicFromBeginning</ref>();</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_audio_1_1_audio_engine_1a47d769cc331578a398f422ff497505c8" kindref="member">playSoundFromBuffer</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_audio_1_1_audio_engine_1aa541e8088c35ab41e4747ecd648e75e9" kindref="member">playSoundFromFile</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>fileName);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;std::pair&lt;std::string,<sp/>sf::SoundBuffer&gt;&gt;<sp/>m_buffers;</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;sf::Sound&gt;<sp/>m_sounds;</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>std::list&lt;sf::Music&gt;<sp/>m_soundsFromFiles;</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>sf::Music<sp/>m_music;</highlight></codeline>
+<codeline lineno="117"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>removeOldSounds();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>AudioEngine</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nsAudio</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>AUDIOENGINE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h"/>
+  </compounddef>
+</doxygen>

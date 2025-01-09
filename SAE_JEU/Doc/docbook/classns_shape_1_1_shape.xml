@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_shape_1_1_shape" xml:lang="en-US">
+<title>nsShape::Shape Class Reference</title>
+<indexterm><primary>nsShape::Shape</primary></indexterm>
+<para>
+
+<para>Classe de base pour une forme. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;shape.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsShape::Shape:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_shape__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for nsShape::Shape:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_shape__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_shape_1_1_shape_1a879f450649c23c83dee576234703951d">Shape</link> (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_shape">Shape</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4"/>virtual <emphasis role="strong">~Shape</emphasis> ()=default</para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_shape">Shape</link>. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; <link linkend="_classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754">getFillColor</link> () const</para>
+
+<para>Retourne la couleur de remplissage. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07">setFillColor</link> (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor)</para>
+
+<para>Règle la couleur de remplissage. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; <link linkend="_classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d">getBorderColor</link> () const</para>
+
+<para>Retourne la couleur de bord. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_shape_1a48821100aa1856f188bdba257505adc3">setBorderColor</link> (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor)</para>
+
+<para>Règle la couleur de bord. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> <link linkend="_classns_shape_1_1_shape_1a68841e117adddc95734dcbaa62f68832">m_fillColor</link></para>
+
+<para>m_fillColor : Couleur de remplissage </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> <link linkend="_classns_shape_1_1_shape_1a0444014e3ee0fa1e6ba5295e530a4f82">m_borderColor</link></para>
+
+<para>m_borderColor : Couleur de bord </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe de base pour une forme. </para>
+<para>
+Definition at line <link linkend="_shape_8h_source_1l00029">29</link> of file <link linkend="_shape_8h_source">shape.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_shape_1_1_shape_1a879f450649c23c83dee576234703951d"/><section>
+    <title>Shape()</title>
+<indexterm><primary>Shape</primary><secondary>nsShape::Shape</secondary></indexterm>
+<indexterm><primary>nsShape::Shape</primary><secondary>Shape</secondary></indexterm>
+<para><computeroutput>nsShape::Shape::Shape (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_shape">Shape</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>fillColor</entry><entry>
+<para>: Couleur de remplissage de la forme </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>borderColor</entry><entry>
+<para>: Couleur de bord de la forme </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_shape_8cpp_source_1l00013">13</link> of file <link linkend="_shape_8cpp_source">shape.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d"/><section>
+    <title>getBorderColor()</title>
+<indexterm><primary>getBorderColor</primary><secondary>nsShape::Shape</secondary></indexterm>
+<indexterm><primary>nsShape::Shape</primary><secondary>getBorderColor</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; nsShape::Shape::getBorderColor ( ) const</computeroutput></para><para>
+
+<para>Retourne la couleur de bord. </para>
+</para>
+<para>
+Definition at line <link linkend="_shape_8cpp_source_1l00028">28</link> of file <link linkend="_shape_8cpp_source">shape.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754"/><section>
+    <title>getFillColor()</title>
+<indexterm><primary>getFillColor</primary><secondary>nsShape::Shape</secondary></indexterm>
+<indexterm><primary>nsShape::Shape</primary><secondary>getFillColor</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; nsShape::Shape::getFillColor ( ) const</computeroutput></para><para>
+
+<para>Retourne la couleur de remplissage. </para>
+</para>
+<para>
+Definition at line <link linkend="_shape_8cpp_source_1l00018">18</link> of file <link linkend="_shape_8cpp_source">shape.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_shape_a8efbd1ac47497b188edeb019557ef754_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_shape_1a48821100aa1856f188bdba257505adc3"/><section>
+    <title>setBorderColor()</title>
+<indexterm><primary>setBorderColor</primary><secondary>nsShape::Shape</secondary></indexterm>
+<indexterm><primary>nsShape::Shape</primary><secondary>setBorderColor</secondary></indexterm>
+<para><computeroutput>void nsShape::Shape::setBorderColor (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor)</computeroutput></para><para>
+
+<para>Règle la couleur de bord. </para>
+</para>
+<para>
+Definition at line <link linkend="_shape_8cpp_source_1l00033">33</link> of file <link linkend="_shape_8cpp_source">shape.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07"/><section>
+    <title>setFillColor()</title>
+<indexterm><primary>setFillColor</primary><secondary>nsShape::Shape</secondary></indexterm>
+<indexterm><primary>nsShape::Shape</primary><secondary>setFillColor</secondary></indexterm>
+<para><computeroutput>cvoid nsShape::Shape::setFillColor (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor)</computeroutput></para><para>
+
+<para>Règle la couleur de remplissage. </para>
+</para>
+<para>
+Definition at line <link linkend="_shape_8cpp_source_1l00023">23</link> of file <link linkend="_shape_8cpp_source">shape.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_shape_aa0e9b22c076b83c4d5014b0213e5ce07_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classns_shape_1_1_shape_1a0444014e3ee0fa1e6ba5295e530a4f82"/><section>
+    <title>m_borderColor</title>
+<indexterm><primary>m_borderColor</primary><secondary>nsShape::Shape</secondary></indexterm>
+<indexterm><primary>nsShape::Shape</primary><secondary>m_borderColor</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> nsShape::Shape::m_borderColor<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>m_borderColor : Couleur de bord </para>
+</para>
+<para>
+Definition at line <link linkend="_shape_8h_source_1l00080">80</link> of file <link linkend="_shape_8h_source">shape.h</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_shape_1a68841e117adddc95734dcbaa62f68832"/><section>
+    <title>m_fillColor</title>
+<indexterm><primary>m_fillColor</primary><secondary>nsShape::Shape</secondary></indexterm>
+<indexterm><primary>nsShape::Shape</primary><secondary>m_fillColor</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> nsShape::Shape::m_fillColor<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>m_fillColor : Couleur de remplissage </para>
+</para>
+<para>
+Definition at line <link linkend="_shape_8h_source_1l00075">75</link> of file <link linkend="_shape_8h_source">shape.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_shape_8h">shape.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_shape_8cpp">shape.cpp</link></section>
+</section>

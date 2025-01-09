@@ -1,0 +1,143 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_transition_1_1_i_transitionable" xml:lang="en-US">
+<title>nsTransition::ITransitionable Class Reference</title>
+<indexterm><primary>nsTransition::ITransitionable</primary></indexterm>
+<para>
+
+<para>Une classe abstraite pour n&apos;importe quelle élément pouvant effectuer une transition entre deux états. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;itransitionable.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsTransition::ITransitionable:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_transition_1_1_i_transitionable__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual <link linkend="_classns_transition_1_1_i_transitionable_1addd11ff845b6387b07672a64c1b8938e">~ITransitionable</link> ()</para>
+
+<para>Destructeur pour la classe <link linkend="_classns_transition_1_1_i_transitionable">ITransitionable</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">getValues</link> (const int &amp;id, std::vector&lt; float &gt; &amp;values)=0</para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">setValues</link> (const int &amp;id, const std::vector&lt; float &gt; &amp;values)=0</para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Une classe abstraite pour n&apos;importe quelle élément pouvant effectuer une transition entre deux états. </para>
+<para>
+Definition at line <link linkend="_itransitionable_8h_source_1l00023">23</link> of file <link linkend="_itransitionable_8h_source">itransitionable.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_transition_1_1_i_transitionable_1addd11ff845b6387b07672a64c1b8938e"/><section>
+    <title>~ITransitionable()</title>
+<indexterm><primary>~ITransitionable</primary><secondary>nsTransition::ITransitionable</secondary></indexterm>
+<indexterm><primary>nsTransition::ITransitionable</primary><secondary>~ITransitionable</secondary></indexterm>
+<para><computeroutput>nsTransition::ITransitionable::~ITransitionable ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur pour la classe <link linkend="_classns_transition_1_1_i_transitionable">ITransitionable</link>. </para>
+</para>
+<para>
+Definition at line <link linkend="_itransitionable_8h_source_1l00030">30</link> of file <link linkend="_itransitionable_8h_source">itransitionable.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9"/><section>
+    <title>getValues()</title>
+<indexterm><primary>getValues</primary><secondary>nsTransition::ITransitionable</secondary></indexterm>
+<indexterm><primary>nsTransition::ITransitionable</primary><secondary>getValues</secondary></indexterm>
+<para><computeroutput>void nsTransition::ITransitionable::getValues (const int &amp; id, std::vector&lt; float &gt; &amp; values)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a récupérer </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>values</entry><entry>
+<para>Vecteur de valeurs a peupler </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_bg_text_1a01cc8269e39184b805351409aac4feb4">BgText</link>, <link linkend="_classns_gui_1_1_sprite_1a7da27e2ccf7b574896662720d99c0056">nsGui::Sprite</link>, <link linkend="_classns_gui_1_1_text_1a6ddbea2ef54c442d44d6e624df486ad7">nsGui::Text</link>, <link linkend="_classns_shape_1_1_rectangle_1ad62897a44a3af8dfffca0a8a1fa10825">nsShape::Rectangle</link>, <link linkend="_classns_shape_1_1_circle_1aae4610d0c110ad09da424c5a3ad91aac">nsShape::Circle</link>, <link linkend="_classns_shape_1_1_oval_1a24b1974daa7894aee5dce3edb9056e03">nsShape::Oval</link>, <link linkend="_classns_shape_1_1_line_1ac529918f8d3d6801c320a24bb225e33a">nsShape::Line</link>, and <link linkend="_classns_shape_1_1_triangle_1a11b2ff1bbd168d0d90fe3707eeeb869c">nsShape::Triangle</link>.</para>
+</section>
+<anchor xml:id="_classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197"/><section>
+    <title>setValues()</title>
+<indexterm><primary>setValues</primary><secondary>nsTransition::ITransitionable</secondary></indexterm>
+<indexterm><primary>nsTransition::ITransitionable</primary><secondary>setValues</secondary></indexterm>
+<para><computeroutput>void nsTransition::ITransitionable::setValues (const int &amp; id, const std::vector&lt; float &gt; &amp; values)<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a définir </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>values</entry><entry>
+<para>Vecteur des nouvelles valeurs a appliquer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_class_bg_text_1adb35c1e7e0387e04e8f8e67d9e1468c8">BgText</link>, <link linkend="_classns_gui_1_1_sprite_1a63ad7e76b470c578aecc697203a3eb26">nsGui::Sprite</link>, <link linkend="_classns_gui_1_1_text_1a9fbd7627d5cc5eaa7259f475c73aec73">nsGui::Text</link>, <link linkend="_classns_shape_1_1_rectangle_1a3b3e28b92f8c22bfe159aea5a91fb5c9">nsShape::Rectangle</link>, <link linkend="_classns_shape_1_1_circle_1a9a2fc6b4a852e25922e5a1732d39644a">nsShape::Circle</link>, <link linkend="_classns_shape_1_1_oval_1a56c7b08484c2dc730e4850ff191aa80d">nsShape::Oval</link>, <link linkend="_classns_shape_1_1_line_1a698db32364db6ad0c29d205940b02631">nsShape::Line</link>, and <link linkend="_classns_shape_1_1_triangle_1ac2919ceeb740f05597c5839e92204f87">nsShape::Triangle</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/<link linkend="_itransitionable_8h">itransitionable.h</link></section>
+</section>

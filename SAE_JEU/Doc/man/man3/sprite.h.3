@@ -1,0 +1,113 @@
+.TH "/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h \- Image pouvant être chargé depuis un fichier\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <cstdint>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include '\&.\&./graphics/idrawable\&.h'\fP
+.br
+\fC#include '\&.\&./graphics/rgbacolor\&.h'\fP
+.br
+\fC#include '\&.\&./graphics/vec2d\&.h'\fP
+.br
+\fC#include '\&.\&./transition/itransitionable\&.h'\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBnsGui::Sprite\fP"
+.br
+.RI "Permet de charger une image depuis un format créé pour l'occasion, le \&.si2\&. "
+.in -1c
+.SS "Namespaces"
+
+.in +1c
+.ti -1c
+.RI "namespace \fBnsGui\fP"
+.br
+.RI "Espace de nom pour des éléments d'interface complexes\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "uint16_t \fBmagic\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBheadmagic\fP"
+.br
+.ti -1c
+.RI "uint16_t \fBfileVersion\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBpixelCount\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBrowSize\fP"
+.br
+.ti -1c
+.RI "uint32_t \fBdatamagic\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Image pouvant être chargé depuis un fichier\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Alexandre Sollier 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+Janvier 2020 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+
+.PP
+Definition in file \fBsprite\&.h\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "uint32_t datamagic"
+Le magic number de la section données, doit toujours être 'DATA' 
+.PP
+Definition at line \fB5\fP of file \fBsprite\&.h\fP\&.
+.SS "uint16_t fileVersion"
+La version du format stockée par le fichier 
+.PP
+Definition at line \fB2\fP of file \fBsprite\&.h\fP\&.
+.SS "uint32_t headmagic"
+Le magic number de la section en-tête, doit toujours être 'HEAD' 
+.PP
+Definition at line \fB1\fP of file \fBsprite\&.h\fP\&.
+.SS "uint16_t magic"
+Le magic number du fichier, doit toujours être 'SI' 
+.PP
+Definition at line \fB0\fP of file \fBsprite\&.h\fP\&.
+.SS "uint32_t pixelCount"
+Le nombre de pixels contenus dans la section données 
+.PP
+Definition at line \fB3\fP of file \fBsprite\&.h\fP\&.
+.SS "uint32_t rowSize"
+Le nombre de pixels par ligne 
+.PP
+Definition at line \fB4\fP of file \fBsprite\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

@@ -1,0 +1,187 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_transition_1_1_transition_engine" kind="class" language="C++" prot="public">
+    <compoundname>nsTransition::TransitionEngine</compoundname>
+    <includes refid="transition__engine_8h" local="no">transition_engine.h</includes>
+      <sectiondef kind="private-type">
+      <memberdef kind="typedef" id="classns_transition_1_1_transition_engine_1a6e1a61518fda99acaefc546fea28a4de" prot="private" static="no">
+        <type>std::list&lt; <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> &gt;</type>
+        <definition>typedef std::list&lt;Transition&gt; nsTransition::TransitionEngine::TransitionVector_t</definition>
+        <argsstring></argsstring>
+        <name>TransitionVector_t</name>
+        <qualifiedname>nsTransition::TransitionEngine::TransitionVector_t</qualifiedname>
+        <briefdescription>
+<para>TransitionVector_t : Définition de type représentant une liste de transition. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h" line="66" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classns_transition_1_1_transition_engine_1af050c2a44a3cf31bcd2c4fd29ba2761f" prot="private" static="no" mutable="no">
+        <type>TransitionVector_t</type>
+        <definition>TransitionVector_t nsTransition::TransitionEngine::m_transitionList</definition>
+        <argsstring></argsstring>
+        <name>m_transitionList</name>
+        <qualifiedname>nsTransition::TransitionEngine::m_transitionList</qualifiedname>
+        <briefdescription>
+<para>m_transitionList : Liste des transitions que ce moteur gère </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h" line="71" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h" bodystart="71" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_transition_1_1_transition_engine_1a3bc437b23ee918b9ec4af070e205028f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsTransition::TransitionEngine::update</definition>
+        <argsstring>(const std::chrono::microseconds &amp;delta)</argsstring>
+        <name>update</name>
+        <qualifiedname>nsTransition::TransitionEngine::update</qualifiedname>
+        <param>
+          <type>const std::chrono::microseconds &amp;</type>
+          <declname>delta</declname>
+        </param>
+        <briefdescription>
+<para>Met a jour toutes les transitions dans la liste. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">delta</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Temps que la dernière image a mis pour faire son rendu</para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+Cette fonction rajoute la valeur de delta aux temps écoulés des différentes transitions, et supprime les transitions terminées de la liste. </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h" line="38" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_transition_engine_1ae04163c3488c93e111b9d2638a27d6a9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsTransition::TransitionEngine::startContract</definition>
+        <argsstring>(const TransitionContract &amp;contract)</argsstring>
+        <name>startContract</name>
+        <qualifiedname>nsTransition::TransitionEngine::startContract</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_transition_1_1_transition_contract" kindref="compound">TransitionContract</ref> &amp;</type>
+          <declname>contract</declname>
+        </param>
+        <briefdescription>
+<para>Démarre un contrat. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Contrat de transition a démarrer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h" line="45" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_transition_engine_1a91235836b50f216b61b5ff3fb31cd5f8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsTransition::TransitionEngine::finishEveryTransition</definition>
+        <argsstring>(const Transition::TransitionFinishModes &amp;finishMode=Transition::FINISH_DESTINATION)</argsstring>
+        <name>finishEveryTransition</name>
+        <qualifiedname>nsTransition::TransitionEngine::finishEveryTransition</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19" kindref="member">Transition::TransitionFinishModes</ref> &amp;</type>
+          <declname>finishMode</declname>
+          <defval><ref refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e" kindref="member">Transition::FINISH_DESTINATION</ref></defval>
+        </param>
+        <briefdescription>
+<para>Termine toutes les transitions de la liste. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">finishMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: finishMode : Mode utilisé pour finir cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> (Valeurs d&apos;arrivé par défaut) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h" line="52" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_transition_engine_1adcd7bce2bb158224303b532c27f9b559" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsTransition::TransitionEngine::finishEveryTransitionOfTarget</definition>
+        <argsstring>(const ITransitionable &amp;transitionable, const Transition::TransitionFinishModes &amp;finishMode=Transition::FINISH_DESTINATION)</argsstring>
+        <name>finishEveryTransitionOfTarget</name>
+        <qualifiedname>nsTransition::TransitionEngine::finishEveryTransitionOfTarget</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_transition_1_1_i_transitionable" kindref="compound">ITransitionable</ref> &amp;</type>
+          <declname>transitionable</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19" kindref="member">Transition::TransitionFinishModes</ref> &amp;</type>
+          <declname>finishMode</declname>
+          <defval><ref refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e" kindref="member">Transition::FINISH_DESTINATION</ref></defval>
+        </param>
+        <briefdescription>
+<para>Termine toutes les transitions d&apos;une certaine cible de la liste. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">transitionable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: La cible où arrêter les transitions </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">finishMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: finishMode : Mode utilisé pour finir cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> (Valeurs d&apos;arrivé par défaut) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h" line="60" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h" line="27" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h" bodystart="28" bodyend="72"/>
+    <listofallmembers>
+      <member refid="classns_transition_1_1_transition_engine_1a91235836b50f216b61b5ff3fb31cd5f8" prot="public" virt="non-virtual"><scope>nsTransition::TransitionEngine</scope><name>finishEveryTransition</name></member>
+      <member refid="classns_transition_1_1_transition_engine_1adcd7bce2bb158224303b532c27f9b559" prot="public" virt="non-virtual"><scope>nsTransition::TransitionEngine</scope><name>finishEveryTransitionOfTarget</name></member>
+      <member refid="classns_transition_1_1_transition_engine_1af050c2a44a3cf31bcd2c4fd29ba2761f" prot="private" virt="non-virtual"><scope>nsTransition::TransitionEngine</scope><name>m_transitionList</name></member>
+      <member refid="classns_transition_1_1_transition_engine_1ae04163c3488c93e111b9d2638a27d6a9" prot="public" virt="non-virtual"><scope>nsTransition::TransitionEngine</scope><name>startContract</name></member>
+      <member refid="classns_transition_1_1_transition_engine_1a6e1a61518fda99acaefc546fea28a4de" prot="private" virt="non-virtual"><scope>nsTransition::TransitionEngine</scope><name>TransitionVector_t</name></member>
+      <member refid="classns_transition_1_1_transition_engine_1a3bc437b23ee918b9ec4af070e205028f" prot="public" virt="non-virtual"><scope>nsTransition::TransitionEngine</scope><name>update</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,82 @@
+\hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source}{}\doxysection{main.\+cpp}
+\label{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/01-\/Shapes/main.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/01-\/Shapes/main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#define FPS\_LIMIT 60}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mingl_8h}{mingl/mingl.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rectangle_8h}{mingl/shape/rectangle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{circle_8h}{mingl/shape/circle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{line_8h}{mingl/shape/line.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{triangle_8h}{mingl/shape/triangle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00013}00013 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00015}00015 \textcolor{keywordtype}{void} dessiner(\mbox{\hyperlink{class_min_g_l}{MinGL}} \&window)}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00017}00017     \textcolor{comment}{// Pour dessiner quelque chose avec minGL 2, vous pouvez soit instancier l'objet dans une variable et l'injecter dans la fenêtre...}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00018}00018     \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}} rect1(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(20, 20), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(120, 120), nsGraphics::KBlue);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00019}00019     window << rect1;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00021}00021     \textcolor{comment}{// ...ou l'injecter directement dans la fenêtre!}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00022}00022     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(30, 30), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(160, 160), nsGraphics::KPurple);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00024}00024     \textcolor{comment}{// (Vous voyez par ailleurs que l'ordre d'affichage est important, le rectangle violet masque maintenant une partie du rectangle bleu.)}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00025}00025     \textcolor{comment}{// Vous pouvez combiner les différentes formes disponibles pour faire des choses plus complexes.}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00027}00027     \textcolor{comment}{// Voilà un bouton de fermeture.}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00028}00028     window << \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(100, 320), 50, nsGraphics::KRed);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00029}00029     window << \mbox{\hyperlink{classns_shape_1_1_line}{nsShape::Line}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(70, 290), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(130, 350), nsGraphics::KWhite, 3.f);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00030}00030     window << \mbox{\hyperlink{classns_shape_1_1_line}{nsShape::Line}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(130, 290), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(70, 350), nsGraphics::KWhite, 3.f);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00032}00032     \textcolor{comment}{// Et voilà la triforce.}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00033}00033     window << \mbox{\hyperlink{classns_shape_1_1_triangle}{nsShape::Triangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(200, 620), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(400, 620), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(300, 420), nsGraphics::KYellow);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00034}00034     window << \mbox{\hyperlink{classns_shape_1_1_triangle}{nsShape::Triangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(400, 620), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(600, 620), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(500, 420), nsGraphics::KYellow);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00035}00035     window << \mbox{\hyperlink{classns_shape_1_1_triangle}{nsShape::Triangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(300, 420), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(500, 420), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(400, 220), nsGraphics::KYellow);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00037}00037     \textcolor{comment}{// N'hésitez pas a lire la doc pour plus de détails.}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00038}00038 \}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00040}00040 \textcolor{keywordtype}{int} main()}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00041}00041 \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00042}00042     \textcolor{comment}{// Initialise le système}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00043}00043     \mbox{\hyperlink{class_min_g_l}{MinGL}} window(\textcolor{stringliteral}{"{}01 -\/ Shapes"{}}, \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(640, 640), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(128, 128), nsGraphics::KBlack);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00044}00044     window.\mbox{\hyperlink{class_min_g_l_a17c7718b9e966c8147cd56483dcf4e8d}{initGlut}}();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00045}00045     window.\mbox{\hyperlink{class_min_g_l_a5962a0a0ced7879bc0cc65e267e8d7fc}{initGraphic}}();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00047}00047     \textcolor{comment}{// Variable qui tient le temps de frame}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00048}00048     chrono::microseconds frameTime = chrono::microseconds::zero();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00050}00050     \textcolor{comment}{// On fait tourner la boucle tant que la fenêtre est ouverte}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00051}00051     \textcolor{keywordflow}{while} (window.\mbox{\hyperlink{class_min_g_l_a05a0da9d0729e9c7dbd1121b0956866d}{isOpen}}())}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00052}00052     \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00053}00053         \textcolor{comment}{// Récupère l'heure actuelle}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00054}00054         chrono::time\_point<chrono::steady\_clock> start = chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00056}00056         \textcolor{comment}{// On efface la fenêtre}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00057}00057         window.\mbox{\hyperlink{class_min_g_l_a86c940758616957683ffb2e239bba774}{clearScreen}}();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00059}00059         \textcolor{comment}{// On dessine les formes géométriques}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00060}00060         dessiner(window);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00062}00062         \textcolor{comment}{// On finit la frame en cours}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00063}00063         window.\mbox{\hyperlink{class_min_g_l_a489922f0bdde2e38698adddaf57f6eda}{finishFrame}}();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00064}00064         }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00065}00065         \textcolor{comment}{// On vide la queue d'évènements}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00066}00066         window.\mbox{\hyperlink{class_min_g_l_ab558253439905930836ab4910a7ae253}{getEventManager}}().\mbox{\hyperlink{classns_event_1_1_event_manager_adbc5ced9a9435f61f58436ff613632b4}{clearEvents}}();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00068}00068         \textcolor{comment}{// On attend un peu pour limiter le framerate et soulager le CPU}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00069}00069         this\_thread::sleep\_for(chrono::milliseconds(1000 / FPS\_LIMIT) -\/ chrono::duration\_cast<chrono::microseconds>(chrono::steady\_clock::now() -\/ start));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00071}00071         \textcolor{comment}{// On récupère le temps de frame}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00072}00072         frameTime = chrono::duration\_cast<chrono::microseconds>(chrono::steady\_clock::now() -\/ start);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00073}00073     \}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00075}00075     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source_l00076}00076 \}}
+
+\end{DoxyCode}

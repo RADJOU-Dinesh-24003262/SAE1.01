@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_triangle_8h_source" xml:lang="en-US">
+<title>triangle.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/triangle.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_triangle_8h_source_1l00001"/>00001 
+<anchor xml:id="_triangle_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;TRIANGLE_H</emphasis>
+<anchor xml:id="_triangle_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;TRIANGLE_H</emphasis>
+<anchor xml:id="_triangle_8h_source_1l00013"/>00013 
+<anchor xml:id="_triangle_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_shape_8h">shape.h</link>&quot;</emphasis>
+<anchor xml:id="_triangle_8h_source_1l00015"/>00015 
+<anchor xml:id="_triangle_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;../transition/itransitionable.h&quot;</emphasis>
+<anchor xml:id="_triangle_8h_source_1l00017"/>00017 
+<anchor xml:id="_triangle_8h_source_1l00018"/>00018 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_shape">nsShape</link>
+<anchor xml:id="_triangle_8h_source_1l00019"/>00019 {
+<anchor xml:id="_triangle_8h_source_1l00020"/>00020 
+<anchor xml:id="_triangle_8h_source_1l00025"/><link linkend="_classns_shape_1_1_triangle">00025</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_shape_1_1_triangle">Triangle</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_shape_1_1_shape">Shape</link>,&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_transition_1_1_i_transitionable">nsTransition::ITransitionable</link>
+<anchor xml:id="_triangle_8h_source_1l00026"/>00026 {
+<anchor xml:id="_triangle_8h_source_1l00027"/>00027 
+<anchor xml:id="_triangle_8h_source_1l00028"/>00028 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_triangle_8h_source_1l00032"/><link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758">00032</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758">TransitionIds</link>&#32;{
+<anchor xml:id="_triangle_8h_source_1l00033"/><link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a9f20afd121f616d684ec0bd6b31dab54">00033</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a9f20afd121f616d684ec0bd6b31dab54">TRANSITION_FILL_COLOR_RGB</link>,&#32;
+<anchor xml:id="_triangle_8h_source_1l00034"/><link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a62867e3ea6657dbc0f9cc61bdca87be8">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a62867e3ea6657dbc0f9cc61bdca87be8">TRANSITION_FILL_COLOR_ALPHA</link>,&#32;
+<anchor xml:id="_triangle_8h_source_1l00035"/><link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a43cba48c71b5804af47f7e1d5e1ecc9a">00035</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a43cba48c71b5804af47f7e1d5e1ecc9a">TRANSITION_BORDER_COLOR_RGB</link>,&#32;
+<anchor xml:id="_triangle_8h_source_1l00036"/><link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a541ff20fa337c2bfaaf7b29fbce4f586">00036</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a541ff20fa337c2bfaaf7b29fbce4f586">TRANSITION_BORDER_COLOR_ALPHA</link>,&#32;
+<anchor xml:id="_triangle_8h_source_1l00037"/><link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758aba96bb1e08665d081bedc72f56a85976">00037</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758aba96bb1e08665d081bedc72f56a85976">TRANSITION_FIRST_POSITION</link>,&#32;
+<anchor xml:id="_triangle_8h_source_1l00038"/><link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a183e546c687567c28475575d67a12562">00038</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a183e546c687567c28475575d67a12562">TRANSITION_SECOND_POSITION</link>,&#32;
+<anchor xml:id="_triangle_8h_source_1l00039"/><link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a634481d887d4cd8f6d5349d795c930cc">00039</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a634481d887d4cd8f6d5349d795c930cc">TRANSITION_THIRD_POSITION</link>,&#32;
+<anchor xml:id="_triangle_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_triangle_8h_source_1l00041"/>00041 
+<anchor xml:id="_triangle_8h_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle_1a72e60fed26e09d01757828ec019134c7">Triangle</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;firstPosition,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;secondPosition,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;thirdPosition,
+<anchor xml:id="_triangle_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;fillColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;borderColor&#32;=&#32;nsGraphics::KTransparent);
+<anchor xml:id="_triangle_8h_source_1l00054"/>00054 
+<anchor xml:id="_triangle_8h_source_1l00059"/><link linkend="_classns_shape_1_1_triangle_1ae59fd091a1005d0e4a7e648487c69739">00059</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classns_shape_1_1_triangle_1ae59fd091a1005d0e4a7e648487c69739">~Triangle</link>()&#32;<emphasis role="keyword">override</emphasis>&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+<anchor xml:id="_triangle_8h_source_1l00060"/>00060 
+<anchor xml:id="_triangle_8h_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_triangle_1a5586345f4e15181f994a0d4946f61353">draw</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+<anchor xml:id="_triangle_8h_source_1l00062"/>00062 
+<anchor xml:id="_triangle_8h_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_triangle_1a11b2ff1bbd168d0d90fe3707eeeb869c">getValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;std::vector&lt;float&gt;&#32;&amp;values)&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="_triangle_8h_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_triangle_1ac2919ceeb740f05597c5839e92204f87">setValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;float&gt;&#32;&amp;values)&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="_triangle_8h_source_1l00065"/>00065 
+<anchor xml:id="_triangle_8h_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle">Triangle</link>&#32;<link linkend="_classns_shape_1_1_triangle_1a828914e234103dd5efece0030bd6ea12">operator+</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_triangle_8h_source_1l00072"/>00072 
+<anchor xml:id="_triangle_8h_source_1l00078"/>00078 &#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle">Triangle</link>&#32;<link linkend="_classns_shape_1_1_triangle_1adf2b03fb750f4269ed8ebfd25b5cb665">operator*</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&amp;&#32;f)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_triangle_8h_source_1l00079"/>00079 
+<anchor xml:id="_triangle_8h_source_1l00084"/>00084 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_triangle_1ad82e289ac4c9fd8cc569b7a79771fc5f">getFirstPosition</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_triangle_8h_source_1l00085"/>00085 
+<anchor xml:id="_triangle_8h_source_1l00091"/>00091 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_triangle_1a9cbdb05c4f337961adccadf1aec48b1b">setFirstPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;firstPosition);
+<anchor xml:id="_triangle_8h_source_1l00092"/>00092 
+<anchor xml:id="_triangle_8h_source_1l00097"/>00097 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_triangle_1a0222c889721e15942fde8719727da6ef">getSecondPosition</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_triangle_8h_source_1l00098"/>00098 
+<anchor xml:id="_triangle_8h_source_1l00104"/>00104 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_triangle_1a18f911ec00c99e29eec695a49c2e051e">setSecondPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;secondPosition);
+<anchor xml:id="_triangle_8h_source_1l00105"/>00105 
+<anchor xml:id="_triangle_8h_source_1l00110"/>00110 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_triangle_1a8ff04f062cf1dcb119f9e814ce8f943a">getThirdPosition</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_triangle_8h_source_1l00111"/>00111 
+<anchor xml:id="_triangle_8h_source_1l00117"/>00117 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_triangle_1a7af3264cac9e8333ec5d7315bc931047">setThirdPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;thirdPosition);
+<anchor xml:id="_triangle_8h_source_1l00118"/>00118 
+<anchor xml:id="_triangle_8h_source_1l00119"/>00119 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_triangle_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;m_firstPosition;
+<anchor xml:id="_triangle_8h_source_1l00124"/>00124 
+<anchor xml:id="_triangle_8h_source_1l00128"/>00128 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;m_secondPosition;
+<anchor xml:id="_triangle_8h_source_1l00129"/>00129 
+<anchor xml:id="_triangle_8h_source_1l00133"/>00133 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;m_thirdPosition;
+<anchor xml:id="_triangle_8h_source_1l00134"/>00134 
+<anchor xml:id="_triangle_8h_source_1l00135"/>00135 };&#32;<emphasis role="comment">//&#32;class&#32;Triangle</emphasis>
+<anchor xml:id="_triangle_8h_source_1l00136"/>00136 
+<anchor xml:id="_triangle_8h_source_1l00137"/>00137 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsShape</emphasis>
+<anchor xml:id="_triangle_8h_source_1l00138"/>00138 
+<anchor xml:id="_triangle_8h_source_1l00139"/>00139 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;TRIANGLE_H</emphasis>
+</programlisting></section>

@@ -1,0 +1,110 @@
+.TH "nsException" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsException \- Espace de nom pour la gestion d'exceptions\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBCException\fP"
+.br
+.RI "Classe pour créer des exceptions facilement\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum { \fBKNoExc\fP = 0, \fBKNoError\fP = 0, \fBkColorOutOfBounds\fP = 100, \fBKFileError\fP = 252, \fBKErrArg\fP = 253, \fBKExcStd\fP = 254, \fBkExcInconnue\fP = -1, \fBkErrTooHight\fP = 300, \fBkErrTooRight\fP = 301, \fBkErrFontSize\fP = 302, \fBkNoTriangle\fP = 303, \fBkNoLine\fP = 304, \fBkNoRectangle\fP = 305, \fBkNoCircle\fP = 306, \fBkTypeNotFound\fP = 307 }"
+.br
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const std::map< unsigned, std::string > \fBkError\fP"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Espace de nom pour la gestion d'exceptions\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "anonymous enum"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIKNoExc \fP\fP
+Pas d'exception 
+.TP
+\fB\fIKNoError \fP\fP
+Pas d'exception 
+.TP
+\fB\fIkColorOutOfBounds \fP\fP
+Couleur hors des bornes 
+.TP
+\fB\fIKFileError \fP\fP
+Erreur lors de l'ouverture du fichier 
+.TP
+\fB\fIKErrArg \fP\fP
+Erreur d'argument (Nombre ou types) 
+.TP
+\fB\fIKExcStd \fP\fP
+Erreur standard 
+.TP
+\fB\fIkExcInconnue \fP\fP
+Erreur inconnue 
+.TP
+\fB\fIkErrTooHight \fP\fP
+Position trop haute 
+.TP
+\fB\fIkErrTooRight \fP\fP
+Position trop a droite 
+.TP
+\fB\fIkErrFontSize \fP\fP
+Erreur sur la taille de la police 
+.TP
+\fB\fIkNoTriangle \fP\fP
+Pas de triangle 
+.TP
+\fB\fIkNoLine \fP\fP
+Pas de ligne 
+.TP
+\fB\fIkNoRectangle \fP\fP
+Pas de rectangle 
+.TP
+\fB\fIkNoCircle \fP\fP
+Pas de cercle 
+.TP
+\fB\fIkTypeNotFound \fP\fP
+Type non trouvé 
+.PP
+Definition at line \fB30\fP of file \fBerrcode\&.h\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const std::map<unsigned, std::string> nsException::kError"
+\fBInitial value:\fP
+.PP
+.nf
+{
+    {kErrTooHight, "Trop haut"},
+    {kErrTooRight, "Trop à droite"},
+    {kErrFontSize, "Taille de police incorrecte"},
+    {kNoTriangle, "Nombre incorrect de points pour la construction du triangle"},
+    {kNoLine, "Nombre incorrect de points pour la construction d'une ligne"},
+    {kNoRectangle, "Nombre incorrect de points pour la construction d'un rectangle"},
+    {kNoCircle, "Nombre incorrect de points pour la construction d'un cercle"},
+    {kTypeNotFound, "Instanciation impossible: Pas le bon type"},
+}
+.fi
+.PP
+Definition at line \fB51\fP of file \fBerrcode\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

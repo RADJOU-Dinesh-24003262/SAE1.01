@@ -1,0 +1,20 @@
+\hypertarget{monstre_8h_source}{}\doxysection{monstre.\+h}
+\label{monstre_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/sprites/monstre.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/sprites/monstre.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00011}00011 \textcolor{comment}{//include les différentes formes pour dessiner les sprites}}
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rectangle_8h}{mingl/shape/rectangle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00024}00024 \textcolor{comment}{//défini les éléments du sprite d'un mur}}
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00025}00025 \textcolor{keywordtype}{void} Monstre(\mbox{\hyperlink{class_min_g_l}{MinGL}} \&window, \textcolor{keywordtype}{int} Circle1, \textcolor{keywordtype}{int} Circle2, \textcolor{keywordtype}{int} mat\_x, \textcolor{keywordtype}{int} mat\_y)\{}
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00027}00027     \textcolor{comment}{//calcul variable de position et taille des formes}}
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00028}00028     \textcolor{keywordtype}{int} wall\_x = 320/mat\_x;}
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00029}00029     \textcolor{keywordtype}{int} wall\_y = 320/mat\_y;}
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00031}00031     \textcolor{comment}{//shape formant le sprite}}
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00032}00032     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((Circle1-\/wall\_x),(Circle2-\/wall\_y)), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((Circle1+wall\_x),(Circle2+wall\_y)), nsGraphics::KMaroon);\textcolor{comment}{// square}}
+\DoxyCodeLine{\Hypertarget{monstre_8h_source_l00033}00033 \}}
+
+\end{DoxyCode}

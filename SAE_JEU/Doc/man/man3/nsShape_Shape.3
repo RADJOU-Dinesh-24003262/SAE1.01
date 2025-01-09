@@ -1,0 +1,121 @@
+.TH "nsShape::Shape" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsShape::Shape \- Classe de base pour une forme\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <shape\&.h>\fP
+.PP
+Inherits \fBnsGraphics::IDrawable\fP\&.
+.PP
+Inherited by \fBnsShape::Circle\fP, \fBnsShape::Line\fP, \fBnsShape::Oval\fP, \fBnsShape::Rectangle\fP, and \fBnsShape::Triangle\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBShape\fP (const \fBnsGraphics::RGBAcolor\fP &fillColor, const \fBnsGraphics::RGBAcolor\fP &borderColor)"
+.br
+.RI "Constructeur pour la classe \fBShape\fP\&. "
+.ti -1c
+.RI "virtual \fB~Shape\fP ()=default"
+.br
+.RI "Destructeur virtuel pour la classe \fBShape\fP\&. "
+.ti -1c
+.RI "const \fBnsGraphics::RGBAcolor\fP & \fBgetFillColor\fP () const"
+.br
+.RI "Retourne la couleur de remplissage\&. "
+.ti -1c
+.RI "void \fBsetFillColor\fP (const \fBnsGraphics::RGBAcolor\fP &fillColor)"
+.br
+.RI "Règle la couleur de remplissage\&. "
+.ti -1c
+.RI "const \fBnsGraphics::RGBAcolor\fP & \fBgetBorderColor\fP () const"
+.br
+.RI "Retourne la couleur de bord\&. "
+.ti -1c
+.RI "void \fBsetBorderColor\fP (const \fBnsGraphics::RGBAcolor\fP &borderColor)"
+.br
+.RI "Règle la couleur de bord\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "\fBnsGraphics::RGBAcolor\fP \fBm_fillColor\fP"
+.br
+.RI "m_fillColor : Couleur de remplissage "
+.ti -1c
+.RI "\fBnsGraphics::RGBAcolor\fP \fBm_borderColor\fP"
+.br
+.RI "m_borderColor : Couleur de bord "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Classe de base pour une forme\&. 
+.PP
+Definition at line \fB29\fP of file \fBshape\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsShape::Shape::Shape (const \fBnsGraphics::RGBAcolor\fP & fillColor, const \fBnsGraphics::RGBAcolor\fP & borderColor)"
+
+.PP
+Constructeur pour la classe \fBShape\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfillColor\fP : Couleur de remplissage de la forme 
+.br
+\fIborderColor\fP : Couleur de bord de la forme 
+.RE
+.PP
+
+.PP
+Definition at line \fB13\fP of file \fBshape\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "const \fBnsGraphics::RGBAcolor\fP & nsShape::Shape::getBorderColor () const"
+
+.PP
+Retourne la couleur de bord\&. 
+.PP
+Definition at line \fB28\fP of file \fBshape\&.cpp\fP\&.
+.SS "const \fBnsGraphics::RGBAcolor\fP & nsShape::Shape::getFillColor () const"
+
+.PP
+Retourne la couleur de remplissage\&. 
+.PP
+Definition at line \fB18\fP of file \fBshape\&.cpp\fP\&.
+.SS "void nsShape::Shape::setBorderColor (const \fBnsGraphics::RGBAcolor\fP & borderColor)"
+
+.PP
+Règle la couleur de bord\&. 
+.PP
+Definition at line \fB33\fP of file \fBshape\&.cpp\fP\&.
+.SS "cvoid nsShape::Shape::setFillColor (const \fBnsGraphics::RGBAcolor\fP & fillColor)"
+
+.PP
+Règle la couleur de remplissage\&. 
+.PP
+Definition at line \fB23\fP of file \fBshape\&.cpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "\fBnsGraphics::RGBAcolor\fP nsShape::Shape::m_borderColor\fC [protected]\fP"
+
+.PP
+m_borderColor : Couleur de bord 
+.PP
+Definition at line \fB80\fP of file \fBshape\&.h\fP\&.
+.SS "\fBnsGraphics::RGBAcolor\fP nsShape::Shape::m_fillColor\fC [protected]\fP"
+
+.PP
+m_fillColor : Couleur de remplissage 
+.PP
+Definition at line \fB75\fP of file \fBshape\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

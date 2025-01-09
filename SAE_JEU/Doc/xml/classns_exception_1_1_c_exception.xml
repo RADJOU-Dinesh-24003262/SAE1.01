@@ -1,0 +1,234 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_exception_1_1_c_exception" kind="class" language="C++" prot="public">
+    <compoundname>nsException::CException</compoundname>
+    <basecompoundref prot="public" virt="non-virtual">std::exception</basecompoundref>
+    <basecompoundref refid="classns_util_1_1_i_editable" prot="public" virt="non-virtual">nsUtil::IEditable</basecompoundref>
+    <includes refid="cexception_8h" local="no">cexception.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classns_exception_1_1_c_exception_1a96c2d653703b2879ff8050cc78bc450a" prot="protected" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string nsException::CException::m_Libelle</definition>
+        <argsstring></argsstring>
+        <name>m_Libelle</name>
+        <qualifiedname>nsException::CException::m_Libelle</qualifiedname>
+        <briefdescription>
+<para>m_Libelle : Libellé de l&apos;exception </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="84" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" bodystart="84" bodyend="-1"/>
+        <referencedby refid="classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027" compoundref="cexception_8cpp" startline="19" endline="23">_Edit</referencedby>
+      </memberdef>
+      <memberdef kind="variable" id="classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da" prot="protected" static="no" mutable="no">
+        <type>unsigned</type>
+        <definition>unsigned nsException::CException::m_CodErr</definition>
+        <argsstring></argsstring>
+        <name>m_CodErr</name>
+        <qualifiedname>nsException::CException::m_CodErr</qualifiedname>
+        <briefdescription>
+<para>m_CodErr : Code erreur de l&apos;exception </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="89" column="14" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" bodystart="89" bodyend="-1"/>
+        <referencedby refid="classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027" compoundref="cexception_8cpp" startline="19" endline="23">_Edit</referencedby>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_exception_1_1_c_exception_1aeacba2e2180dd8c00c643e1a67cba423" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>nsException::CException::CException</definition>
+        <argsstring>(const std::string &amp;Libelle=std::string(), const unsigned CodErr=KNoExc)</argsstring>
+        <name>CException</name>
+        <qualifiedname>nsException::CException::CException</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Libelle</declname>
+          <defval>std::string()</defval>
+        </param>
+        <param>
+          <type>const unsigned</type>
+          <declname>CodErr</declname>
+          <defval><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a0446a2a6f75ad46276a3c6bfbcf06eb3" kindref="member">KNoExc</ref></defval>
+        </param>
+        <briefdescription>
+<para>Constructeur pour la classe <ref refid="classns_exception_1_1_c_exception" kindref="compound">CException</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Libelle</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Libellé de l&apos;exception </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">CodErr</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Code erreur de l&apos;exception </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="52" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_exception_1_1_c_exception_1a8b95a8f59d50a7ff3b67423c83cb8501" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>nsException::CException::~CException</definition>
+        <argsstring>() override=default</argsstring>
+        <name>~CException</name>
+        <qualifiedname>nsException::CException::~CException</qualifiedname>
+        <briefdescription>
+<para>Destructeur virtuel pour la classe <ref refid="classns_exception_1_1_c_exception" kindref="compound">CException</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="58" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_exception_1_1_c_exception_1aef8e3d1a4e22ec7045d7d0b14d8b968a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>const std::string &amp;</type>
+        <definition>const std::string &amp; nsException::CException::GetLibelle</definition>
+        <argsstring>() const</argsstring>
+        <name>GetLibelle</name>
+        <qualifiedname>nsException::CException::GetLibelle</qualifiedname>
+        <briefdescription>
+<para>Récupère le libellé de l&apos;exception. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="64" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_exception_1_1_c_exception_1adf06d1598420c7b60c1b134bf2a946c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>unsigned</type>
+        <definition>unsigned nsException::CException::GetCodErr</definition>
+        <argsstring>() const</argsstring>
+        <name>GetCodErr</name>
+        <qualifiedname>nsException::CException::GetCodErr</qualifiedname>
+        <briefdescription>
+<para>Récupère le code erreur de l&apos;exception. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="70" column="14" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="38" bodyend="41"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_exception_1_1_c_exception_1a5ef0ababcc3ffc93f70211de1122c9a8" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="virtual">
+        <type>const char *</type>
+        <definition>const char * nsException::CException::what</definition>
+        <argsstring>() const noexcept override</argsstring>
+        <name>what</name>
+        <qualifiedname>nsException::CException::what</qualifiedname>
+        <briefdescription>
+<para>Retourne une chaine de caractère C décrivant l&apos;exception. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="76" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="43" bodyend="46"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; nsException::CException::_Edit</definition>
+        <argsstring>(std::ostream &amp;os=std::cerr) const override</argsstring>
+        <name>_Edit</name>
+        <qualifiedname>nsException::CException::_Edit</qualifiedname>
+        <reimplements refid="classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853">_Edit</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+          <defval>std::cerr</defval>
+        </param>
+        <briefdescription>
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Flux dans lequel injecter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="79" column="26" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/cexception.cpp" bodystart="19" bodyend="23"/>
+        <references refid="classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da" compoundref="cexception_8h" startline="89">m_CodErr</references>
+        <references refid="classns_exception_1_1_c_exception_1a96c2d653703b2879ff8050cc78bc450a" compoundref="cexception_8h" startline="84">m_Libelle</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe pour créer des exceptions facilement. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>nsException::CException</label>
+        <link refid="classns_exception_1_1_c_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nsUtil::IEditable</label>
+        <link refid="classns_util_1_1_i_editable"/>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>nsException::CException</label>
+        <link refid="classns_exception_1_1_c_exception"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nsUtil::IEditable</label>
+        <link refid="classns_util_1_1_i_editable"/>
+      </node>
+      <node id="2">
+        <label>std::exception</label>
+      </node>
+    </collaborationgraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="42" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" bodystart="43" bodyend="91"/>
+    <listofallmembers>
+      <member refid="classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027" prot="protected" virt="virtual"><scope>nsException::CException</scope><name>_Edit</name></member>
+      <member refid="classns_exception_1_1_c_exception_1aeacba2e2180dd8c00c643e1a67cba423" prot="public" virt="non-virtual"><scope>nsException::CException</scope><name>CException</name></member>
+      <member refid="classns_exception_1_1_c_exception_1adf06d1598420c7b60c1b134bf2a946c2" prot="public" virt="non-virtual"><scope>nsException::CException</scope><name>GetCodErr</name></member>
+      <member refid="classns_exception_1_1_c_exception_1aef8e3d1a4e22ec7045d7d0b14d8b968a" prot="public" virt="non-virtual"><scope>nsException::CException</scope><name>GetLibelle</name></member>
+      <member refid="classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da" prot="protected" virt="non-virtual"><scope>nsException::CException</scope><name>m_CodErr</name></member>
+      <member refid="classns_exception_1_1_c_exception_1a96c2d653703b2879ff8050cc78bc450a" prot="protected" virt="non-virtual"><scope>nsException::CException</scope><name>m_Libelle</name></member>
+      <member refid="classns_exception_1_1_c_exception_1a5ef0ababcc3ffc93f70211de1122c9a8" prot="public" virt="virtual"><scope>nsException::CException</scope><name>what</name></member>
+      <member refid="classns_exception_1_1_c_exception_1a8b95a8f59d50a7ff3b67423c83cb8501" prot="public" virt="virtual"><scope>nsException::CException</scope><name>~CException</name></member>
+      <member refid="classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e" prot="public" virt="virtual"><scope>nsException::CException</scope><name>~IEditable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

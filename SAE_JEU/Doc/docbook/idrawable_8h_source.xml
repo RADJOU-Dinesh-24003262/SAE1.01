@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_idrawable_8h_source" xml:lang="en-US">
+<title>idrawable.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/idrawable.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_idrawable_8h_source_1l00001"/>00001 
+<anchor xml:id="_idrawable_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;DRAWABLE_H</emphasis>
+<anchor xml:id="_idrawable_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;DRAWABLE_H</emphasis>
+<anchor xml:id="_idrawable_8h_source_1l00013"/>00013 
+<anchor xml:id="_idrawable_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;memory&gt;</emphasis>
+<anchor xml:id="_idrawable_8h_source_1l00015"/>00015 
+<anchor xml:id="_idrawable_8h_source_1l00016"/>00016 <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_min_g_l">MinGL</link>;
+<anchor xml:id="_idrawable_8h_source_1l00017"/>00017 
+<anchor xml:id="_idrawable_8h_source_1l00022"/>00022 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_graphics">nsGraphics</link>
+<anchor xml:id="_idrawable_8h_source_1l00023"/>00023 {
+<anchor xml:id="_idrawable_8h_source_1l00024"/>00024 
+<anchor xml:id="_idrawable_8h_source_1l00029"/><link linkend="_classns_graphics_1_1_i_drawable">00029</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_graphics_1_1_i_drawable">IDrawable</link>
+<anchor xml:id="_idrawable_8h_source_1l00030"/>00030 {
+<anchor xml:id="_idrawable_8h_source_1l00031"/>00031 
+<anchor xml:id="_idrawable_8h_source_1l00032"/>00032 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_idrawable_8h_source_1l00037"/><link linkend="_classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867">00037</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867">~IDrawable</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+<anchor xml:id="_idrawable_8h_source_1l00038"/>00038 
+<anchor xml:id="_idrawable_8h_source_1l00043"/><link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">00043</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">draw</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window)&#32;<emphasis role="keyword">const</emphasis>&#32;=&#32;0;
+<anchor xml:id="_idrawable_8h_source_1l00044"/>00044 
+<anchor xml:id="_idrawable_8h_source_1l00051"/><link linkend="_classns_graphics_1_1_i_drawable_1a9bb3952d4e675a663f2dbbda11e79395">00051</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;<link linkend="_classns_graphics_1_1_i_drawable_1a9bb3952d4e675a663f2dbbda11e79395">operator&lt;&lt;</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_i_drawable">IDrawable</link>&amp;&#32;drawable)
+<anchor xml:id="_idrawable_8h_source_1l00052"/>00052 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_idrawable_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;drawable.<link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">draw</link>(window);
+<anchor xml:id="_idrawable_8h_source_1l00054"/>00054 
+<anchor xml:id="_idrawable_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;window;
+<anchor xml:id="_idrawable_8h_source_1l00056"/>00056 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_idrawable_8h_source_1l00057"/>00057 
+<anchor xml:id="_idrawable_8h_source_1l00058"/>00058 };&#32;<emphasis role="comment">//&#32;class&#32;IDrawable</emphasis>
+<anchor xml:id="_idrawable_8h_source_1l00059"/>00059 
+<anchor xml:id="_idrawable_8h_source_1l00060"/>00060 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsGraphics</emphasis>
+<anchor xml:id="_idrawable_8h_source_1l00061"/>00061 
+<anchor xml:id="_idrawable_8h_source_1l00062"/>00062 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;DRAWABLE_H</emphasis>
+</programlisting></section>

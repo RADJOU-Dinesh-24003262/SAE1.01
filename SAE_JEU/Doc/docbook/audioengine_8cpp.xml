@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_audioengine_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp</primary></indexterm>
+<para>
+
+<para>Gestionnaire audio de minGL. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;mingl/audio/audioengine.h&quot;
+#include &quot;mingl/exception/cexception.h&quot;
+</programlisting>Include dependency graph for audioengine.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="audioengine_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Gestionnaire audio de minGL. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Clément Mathieu&#8211;Drif </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Septembre 2020 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.1 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+</section>

@@ -1,0 +1,185 @@
+\hypertarget{type_8h}{}\doxysection{/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Jeu/type.h File Reference}
+\label{type_8h}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/Jeu/type.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/Jeu/type.h}}
+
+
+Definition of usefull types or aliases for the project.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$map$>$}\newline
+{\ttfamily \#include $<$optional$>$}\newline
+Include dependency graph for type.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=320pt]{type_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{type_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_authorized_key}{Authorized\+Key}}
+\begin{DoxyCompactList}\small\item\em Struct containing all the authorized keys in the struct \mbox{\hyperlink{struct_c_my_param}{CMy\+Param}}. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_c_my_param}{CMy\+Param}}
+\item 
+struct \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}}
+\begin{DoxyCompactList}\small\item\em Structure contenant les paramètres de configuration du jeu. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{struct_form}{Form}}
+\item 
+struct \mbox{\hyperlink{struct_collectible}{Collectible}}
+\item 
+struct \mbox{\hyperlink{struct_node}{Node}}
+\begin{DoxyCompactList}\small\item\em Structure représentant un noeud dans un graphe dans Movemonster() struct représentant un noeud dans un graphe, avec pos sa position, f\+\_\+cost un coût estimé et son parent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::vector$<$ char $>$ \mbox{\hyperlink{type_8h_af4d6ac508b164138028e81737c7be8a2}{CVLine}}
+\begin{DoxyCompactList}\small\item\em CVLine \+: alias to a line of the matrix. \end{DoxyCompactList}\item 
+typedef std\+::vector$<$ \mbox{\hyperlink{type_8h_af4d6ac508b164138028e81737c7be8a2}{CVLine}} $>$ \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}}
+\begin{DoxyCompactList}\small\item\em CMat \+: alias to a game grid type. \end{DoxyCompactList}\item 
+typedef std\+::pair$<$ unsigned, unsigned $>$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}}
+\begin{DoxyCompactList}\small\item\em CPosition \+: a pair gathering the coordinates in the grid. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{struct_authorized_key}{Authorized\+Key}} \mbox{\hyperlink{type_8h_aeb6b858f886b8520a7f220b3de0bef1a}{KAuthorized\+Key}}
+\begin{DoxyCompactList}\small\item\em KAuthorized\+Key. \end{DoxyCompactList}\item 
+const std\+::map$<$ std\+::string, std\+::string $>$ \mbox{\hyperlink{type_8h_ac2178f299fb60a3a19c00006603770ec}{KColor}}
+\begin{DoxyCompactList}\small\item\em KColor \+: map between the \char`\"{}human\char`\"{} color and its correspondence for the Unix terminal. \end{DoxyCompactList}\item 
+const char \mbox{\hyperlink{type_8h_a1e3f1938007c41f107a8118778f8d08e}{KEmpty}} = \textquotesingle{} \textquotesingle{}
+\begin{DoxyCompactList}\small\item\em KEmpty \+: character for an empty cell. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Definition of usefull types or aliases for the project. 
+
+\begin{DoxyAuthor}{Author}
+Alain Casali 
+
+Marc Laporte 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18 décembre 2018 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{type_8h_source}{type.\+h}}.
+
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{type_8h_a64a592133575ccebb1b36453acbec02b}\label{type_8h_a64a592133575ccebb1b36453acbec02b}} 
+\index{type.h@{type.h}!CMat@{CMat}}
+\index{CMat@{CMat}!type.h@{type.h}}
+\doxysubsubsection{\texorpdfstring{CMat}{CMat}}
+{\footnotesize\ttfamily std\+::vector$<$ \mbox{\hyperlink{type_8h_af4d6ac508b164138028e81737c7be8a2}{CVLine}} $>$ \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}}}
+
+
+
+CMat \+: alias to a game grid type. 
+
+
+
+Definition at line \mbox{\hyperlink{type_8h_source_l00027}{27}} of file \mbox{\hyperlink{type_8h_source}{type.\+h}}.
+
+\mbox{\Hypertarget{type_8h_a7035b1162647d49def2c24ac2c2e30c1}\label{type_8h_a7035b1162647d49def2c24ac2c2e30c1}} 
+\index{type.h@{type.h}!CPosition@{CPosition}}
+\index{CPosition@{CPosition}!type.h@{type.h}}
+\doxysubsubsection{\texorpdfstring{CPosition}{CPosition}}
+{\footnotesize\ttfamily typedef std\+::pair$<$unsigned, unsigned$>$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}}}
+
+
+
+CPosition \+: a pair gathering the coordinates in the grid. 
+
+
+
+Definition at line \mbox{\hyperlink{type_8h_source_l00032}{32}} of file \mbox{\hyperlink{type_8h_source}{type.\+h}}.
+
+\mbox{\Hypertarget{type_8h_af4d6ac508b164138028e81737c7be8a2}\label{type_8h_af4d6ac508b164138028e81737c7be8a2}} 
+\index{type.h@{type.h}!CVLine@{CVLine}}
+\index{CVLine@{CVLine}!type.h@{type.h}}
+\doxysubsubsection{\texorpdfstring{CVLine}{CVLine}}
+{\footnotesize\ttfamily typedef std\+::vector$<$char$>$ \mbox{\hyperlink{type_8h_af4d6ac508b164138028e81737c7be8a2}{CVLine}}}
+
+
+
+CVLine \+: alias to a line of the matrix. 
+
+
+
+Definition at line \mbox{\hyperlink{type_8h_source_l00021}{21}} of file \mbox{\hyperlink{type_8h_source}{type.\+h}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{type_8h_aeb6b858f886b8520a7f220b3de0bef1a}\label{type_8h_aeb6b858f886b8520a7f220b3de0bef1a}} 
+\index{type.h@{type.h}!KAuthorizedKey@{KAuthorizedKey}}
+\index{KAuthorizedKey@{KAuthorizedKey}!type.h@{type.h}}
+\doxysubsubsection{\texorpdfstring{KAuthorizedKey}{KAuthorizedKey}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{struct_authorized_key}{Authorized\+Key}} KAuthorized\+Key}
+
+
+
+KAuthorized\+Key. 
+
+
+
+Definition at line \mbox{\hyperlink{type_8h_source_l00059}{59}} of file \mbox{\hyperlink{type_8h_source}{type.\+h}}.
+
+\mbox{\Hypertarget{type_8h_ac2178f299fb60a3a19c00006603770ec}\label{type_8h_ac2178f299fb60a3a19c00006603770ec}} 
+\index{type.h@{type.h}!KColor@{KColor}}
+\index{KColor@{KColor}!type.h@{type.h}}
+\doxysubsubsection{\texorpdfstring{KColor}{KColor}}
+{\footnotesize\ttfamily const std\+::map$<$std\+::string, std\+::string$>$ KColor}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\{}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"{}KReset"{}}, \textcolor{stringliteral}{"{}0"{}}\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"{}KBlack"{}}, \textcolor{stringliteral}{"{}30"{}}\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"{}KRed"{}}, \textcolor{stringliteral}{"{}31"{}}\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"{}KGreen"{}}, \textcolor{stringliteral}{"{}32"{}}\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"{}KYellow"{}}, \textcolor{stringliteral}{"{}33"{}}\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"{}KBlue"{}}, \textcolor{stringliteral}{"{}34"{}}\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"{}KMAgenta"{}}, \textcolor{stringliteral}{"{}35"{}}\},}
+\DoxyCodeLine{  \{\textcolor{stringliteral}{"{}KCyan"{}}, \textcolor{stringliteral}{"{}36"{}}\},}
+\DoxyCodeLine{}
+\DoxyCodeLine{\}}
+
+\end{DoxyCode}
+
+
+KColor \+: map between the \char`\"{}human\char`\"{} color and its correspondence for the Unix terminal. 
+
+
+
+Definition at line \mbox{\hyperlink{type_8h_source_l00065}{65}} of file \mbox{\hyperlink{type_8h_source}{type.\+h}}.
+
+\mbox{\Hypertarget{type_8h_a1e3f1938007c41f107a8118778f8d08e}\label{type_8h_a1e3f1938007c41f107a8118778f8d08e}} 
+\index{type.h@{type.h}!KEmpty@{KEmpty}}
+\index{KEmpty@{KEmpty}!type.h@{type.h}}
+\doxysubsubsection{\texorpdfstring{KEmpty}{KEmpty}}
+{\footnotesize\ttfamily const char KEmpty = \textquotesingle{} \textquotesingle{}}
+
+
+
+KEmpty \+: character for an empty cell. 
+
+
+
+Definition at line \mbox{\hyperlink{type_8h_source_l00160}{160}} of file \mbox{\hyperlink{type_8h_source}{type.\+h}}.
+

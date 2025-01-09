@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_util_1_1_i_fonctor_unaire" xml:lang="en-US">
+<title>nsUtil::IFonctorUnaire&lt; T1, TRes &gt; Class Template Reference</title>
+<indexterm><primary>nsUtil::IFonctorUnaire&lt; T1, TRes &gt;</primary></indexterm>
+<para>
+
+<para>Interface pour un fonctor unaire. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ifonctorunaire.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classns_util_1_1_i_fonctor_unaire_1ae41ac6b220f0afa4b0860e92c27b3cd1"/>virtual <emphasis role="strong">~IFonctorUnaire</emphasis> ()=default</para>
+
+<para>Destructeur pour la classe <link linkend="_classns_util_1_1_i_fonctor_unaire">IFonctorUnaire</link>. </para>
+</listitem>
+            <listitem><para>virtual TRes <link linkend="_classns_util_1_1_i_fonctor_unaire_1a2f53e65b0a64a4eb543a709eb72ed3ab">operator()</link> (const T1 &amp;in) const =0</para>
+
+<para>Surcharge de l&apos;opérateur d&apos;appel. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<simplesect><title>template&lt;typename T1, typename TRes&gt;
+class nsUtil::IFonctorUnaire&lt; T1, TRes &gt;</title></simplesect>
+
+<para>Interface pour un fonctor unaire. </para>
+<para>
+Definition at line <link linkend="_ifonctorunaire_8hpp_source_1l00012">12</link> of file <link linkend="_ifonctorunaire_8hpp_source">ifonctorunaire.hpp</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_util_1_1_i_fonctor_unaire_1a2f53e65b0a64a4eb543a709eb72ed3ab"/><section>
+    <title>operator()()</title>
+<indexterm><primary>operator()</primary><secondary>nsUtil::IFonctorUnaire&lt; T1, TRes &gt;</secondary></indexterm>
+<indexterm><primary>nsUtil::IFonctorUnaire&lt; T1, TRes &gt;</primary><secondary>operator()</secondary></indexterm>
+<computeroutput>template&lt;typename T1 , typename TRes &gt; </computeroutput><para><computeroutput>TRes <link linkend="_classns_util_1_1_i_fonctor_unaire">nsUtil::IFonctorUnaire</link>&lt; T1, TRes &gt;::operator() (const T1 &amp; in) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Surcharge de l&apos;opérateur d&apos;appel. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>in</entry><entry>
+<para>: Premier paramètre </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ifonctorunaire.hpp</section>
+</section>

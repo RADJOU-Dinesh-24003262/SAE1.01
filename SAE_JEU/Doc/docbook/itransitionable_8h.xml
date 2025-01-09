@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_itransitionable_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h</primary></indexterm>
+<para>
+
+<para>Interface pour objet &quot;transitionable&quot;. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;vector&gt;
+</programlisting>Include dependency graph for itransitionable.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="itransitionable_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="itransitionable_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_transition_1_1_i_transitionable">nsTransition::ITransitionable</link></para>
+
+<para>Une classe abstraite pour n&apos;importe quelle élément pouvant effectuer une transition entre deux états. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacens_transition">nsTransition</link></para>
+
+<para>Espace de nom pour le moteur de transition et ses composants. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Interface pour objet &quot;transitionable&quot;. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Janvier 2020 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_itransitionable_8h_source">itransitionable.h</link>.</para>
+</section>
+</section>

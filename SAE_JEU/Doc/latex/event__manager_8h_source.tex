@@ -1,0 +1,36 @@
+\hypertarget{event__manager_8h_source}{}\doxysection{event\+\_\+manager.\+h}
+\label{event__manager_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/event/event\_manager.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/event/event\_manager.h}}
+\mbox{\hyperlink{event__manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef EVENTMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00012}00012 \textcolor{preprocessor}{\#define EVENTMANAGER\_H}}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <queue>}}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00016}00016 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{event_8hpp}{event.hpp}}"{}}}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00018}00018 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_event}{nsEvent}} \{}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00024}\mbox{\hyperlink{classns_event_1_1_event_manager}{00024}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_event_1_1_event_manager}{EventManager}}}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00025}00025 \{}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00027}00027 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00033}00033     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_event_1_1_event_manager_a5a3119d969a296b8e94f223171fdf2e6}{hasEvent}}();}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00040}00040     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_event_1_1_event_manager_a1eff8398ddb0a25da82e52a1067b85b5}{pushEvent}}(\textcolor{keyword}{const} \mbox{\hyperlink{structns_event_1_1_event__t}{Event\_t}}\& event);}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00047}00047     \textcolor{keyword}{const} \mbox{\hyperlink{structns_event_1_1_event__t}{Event\_t}} \mbox{\hyperlink{classns_event_1_1_event_manager_adb00a0a006f4caa976471e74bf99cdc9}{pullEvent}}();}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00053}00053     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_event_1_1_event_manager_adbc5ced9a9435f61f58436ff613632b4}{clearEvents}}();}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00055}00055 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00059}00059     std::queue<Event\_t> m\_eventQueue;}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00061}00061 \}; \textcolor{comment}{// class EventManager}}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00063}00063 \} \textcolor{comment}{// namespace nsEvent}}
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{event__manager_8h_source_l00065}00065 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// EVENTMANAGER\_H}}
+
+\end{DoxyCode}

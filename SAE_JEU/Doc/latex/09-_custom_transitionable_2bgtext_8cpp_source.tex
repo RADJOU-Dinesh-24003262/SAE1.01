@@ -1,0 +1,54 @@
+\hypertarget{09-_custom_transitionable_2bgtext_8cpp_source}{}\doxysection{bgtext.\+cpp}
+\label{09-_custom_transitionable_2bgtext_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/09-\/CustomTransitionable/bgtext.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/09-\/CustomTransitionable/bgtext.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}bgtext.h"{}}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00003}00003 BgText::BgText(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position, \textcolor{keyword}{const} std::string\& content, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& textColor, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& backgroundColor)}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00004}00004     : m\_text(position, content, textColor)}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00005}00005     , m\_background(m\_text.computeVisiblePosition(), m\_text.computeVisibleEndPosition(), backgroundColor)}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00006}00006 \{\} \textcolor{comment}{// BgText()}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00008}\mbox{\hyperlink{class_bg_text_a01df624a8d498766a9eb579eb18f2326}{00008}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bg_text_a01df624a8d498766a9eb579eb18f2326}{BgText::draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00009}00009 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00010}00010     \textcolor{comment}{// Affiche le fond puis le texte}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00011}00011     window << m\_background << m\_text;}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00012}00012 \} \textcolor{comment}{// draw()}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00014}\mbox{\hyperlink{class_bg_text_a01cc8269e39184b805351409aac4feb4}{00014}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bg_text_a01cc8269e39184b805351409aac4feb4}{BgText::getValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& \textcolor{keywordtype}{id}, std::vector<float>\& values)}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00015}00015 \{}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00016}00016     \textcolor{comment}{// On charge les valeurs dans le vecteur selon l'identifiant donné}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00017}00017     \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00018}00018         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_bg_text_a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3}{TRANSITION\_TEXT\_COLOR}}:}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00019}00019             values[0] = m\_text.\mbox{\hyperlink{classns_gui_1_1_text_a248f06b3a9a85c05225449424311abd0}{getTextColor}}().\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{getRed}}();}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00020}00020             values[1] = m\_text.\mbox{\hyperlink{classns_gui_1_1_text_a248f06b3a9a85c05225449424311abd0}{getTextColor}}().\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{getGreen}}();}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00021}00021             values[2] = m\_text.\mbox{\hyperlink{classns_gui_1_1_text_a248f06b3a9a85c05225449424311abd0}{getTextColor}}().\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{getBlue}}();}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00023}00023             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00025}00025         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_bg_text_a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1}{TRANSITION\_BACKGROUND\_COLOR}}:}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00026}00026             values[0] = m\_background.\mbox{\hyperlink{classns_shape_1_1_shape_a8efbd1ac47497b188edeb019557ef754}{getFillColor}}().\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{getRed}}();}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00027}00027             values[1] = m\_background.\mbox{\hyperlink{classns_shape_1_1_shape_a8efbd1ac47497b188edeb019557ef754}{getFillColor}}().\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{getGreen}}();}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00028}00028             values[2] = m\_background.\mbox{\hyperlink{classns_shape_1_1_shape_a8efbd1ac47497b188edeb019557ef754}{getFillColor}}().\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{getBlue}}();}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00030}00030             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00032}00032 \} \textcolor{comment}{// getValues()}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00034}\mbox{\hyperlink{class_bg_text_adb35c1e7e0387e04e8f8e67d9e1468c8}{00034}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bg_text_adb35c1e7e0387e04e8f8e67d9e1468c8}{BgText::setValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& \textcolor{keywordtype}{id}, \textcolor{keyword}{const} std::vector<float>\& values)}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00035}00035 \{}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00036}00036     \textcolor{comment}{// On règle les valeurs depuis le vecteur selon l'identifiant donné}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00037}00037     \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00038}00038         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_bg_text_a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3}{TRANSITION\_TEXT\_COLOR}}:}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00039}00039             m\_text.\mbox{\hyperlink{classns_gui_1_1_text_a9e10bb21647ce95f034a4205562e222a}{setTextColor}}(\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}(values[0], values[1], values[2]));}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00041}00041             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00043}00043         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_bg_text_a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1}{TRANSITION\_BACKGROUND\_COLOR}}:}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00044}00044             m\_background.\mbox{\hyperlink{classns_shape_1_1_shape_aa0e9b22c076b83c4d5014b0213e5ce07}{setFillColor}}(\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}(values[0], values[1], values[2]));}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00046}00046             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8cpp_source_l00048}00048 \} \textcolor{comment}{// setValues()}}
+
+\end{DoxyCode}

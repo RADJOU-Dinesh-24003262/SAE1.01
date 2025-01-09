@@ -1,0 +1,104 @@
+\hypertarget{classns_transition_1_1_i_transitionable}{}\doxysection{ns\+Transition\+::ITransitionable Class Reference}
+\label{classns_transition_1_1_i_transitionable}\index{nsTransition::ITransitionable@{nsTransition::ITransitionable}}
+
+
+Une classe abstraite pour n\textquotesingle{}importe quelle élément pouvant effectuer une transition entre deux états.  
+
+
+
+
+{\ttfamily \#include $<$itransitionable.\+h$>$}
+
+
+
+Inheritance diagram for ns\+Transition\+::ITransitionable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_transition_1_1_i_transitionable__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual \mbox{\hyperlink{classns_transition_1_1_i_transitionable_addd11ff845b6387b07672a64c1b8938e}{$\sim$\+ITransitionable}} ()
+\begin{DoxyCompactList}\small\item\em Destructeur pour la classe \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classns_transition_1_1_i_transitionable_a5871a16fd47c1e5c8bacdd5da8597ed9}{get\+Values}} (const int \&id, std\+::vector$<$ float $>$ \&values)=0
+\begin{DoxyCompactList}\small\item\em Récupère des valeurs dans un vecteur de float pour l\textquotesingle{}ID spécifié \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classns_transition_1_1_i_transitionable_ade37d29f7f2ca4890ed0e2e64d033197}{set\+Values}} (const int \&id, const std\+::vector$<$ float $>$ \&values)=0
+\begin{DoxyCompactList}\small\item\em Définit les nouvelles valeurs pour l\textquotesingle{}ID spécifié \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Une classe abstraite pour n\textquotesingle{}importe quelle élément pouvant effectuer une transition entre deux états. 
+
+Definition at line \mbox{\hyperlink{itransitionable_8h_source_l00023}{23}} of file \mbox{\hyperlink{itransitionable_8h_source}{itransitionable.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classns_transition_1_1_i_transitionable_addd11ff845b6387b07672a64c1b8938e}\label{classns_transition_1_1_i_transitionable_addd11ff845b6387b07672a64c1b8938e}} 
+\index{nsTransition::ITransitionable@{nsTransition::ITransitionable}!````~ITransitionable@{$\sim$ITransitionable}}
+\index{````~ITransitionable@{$\sim$ITransitionable}!nsTransition::ITransitionable@{nsTransition::ITransitionable}}
+\doxysubsubsection{\texorpdfstring{$\sim$ITransitionable()}{~ITransitionable()}}
+{\footnotesize\ttfamily ns\+Transition\+::\+ITransitionable\+::$\sim$\+ITransitionable (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructeur pour la classe \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}}. 
+
+
+
+Definition at line \mbox{\hyperlink{itransitionable_8h_source_l00030}{30}} of file \mbox{\hyperlink{itransitionable_8h_source}{itransitionable.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns_transition_1_1_i_transitionable_a5871a16fd47c1e5c8bacdd5da8597ed9}\label{classns_transition_1_1_i_transitionable_a5871a16fd47c1e5c8bacdd5da8597ed9}} 
+\index{nsTransition::ITransitionable@{nsTransition::ITransitionable}!getValues@{getValues}}
+\index{getValues@{getValues}!nsTransition::ITransitionable@{nsTransition::ITransitionable}}
+\doxysubsubsection{\texorpdfstring{getValues()}{getValues()}}
+{\footnotesize\ttfamily void ns\+Transition\+::\+ITransitionable\+::get\+Values (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{std\+::vector$<$ float $>$ \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Récupère des valeurs dans un vecteur de float pour l\textquotesingle{}ID spécifié 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID des valeurs a récupérer \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em values} & Vecteur de valeurs a peupler \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_bg_text_a01cc8269e39184b805351409aac4feb4}{Bg\+Text}}, \mbox{\hyperlink{classns_gui_1_1_sprite_a7da27e2ccf7b574896662720d99c0056}{ns\+Gui\+::\+Sprite}}, \mbox{\hyperlink{classns_gui_1_1_text_a6ddbea2ef54c442d44d6e624df486ad7}{ns\+Gui\+::\+Text}}, \mbox{\hyperlink{classns_shape_1_1_rectangle_ad62897a44a3af8dfffca0a8a1fa10825}{ns\+Shape\+::\+Rectangle}}, \mbox{\hyperlink{classns_shape_1_1_circle_aae4610d0c110ad09da424c5a3ad91aac}{ns\+Shape\+::\+Circle}}, \mbox{\hyperlink{classns_shape_1_1_oval_a24b1974daa7894aee5dce3edb9056e03}{ns\+Shape\+::\+Oval}}, \mbox{\hyperlink{classns_shape_1_1_line_ac529918f8d3d6801c320a24bb225e33a}{ns\+Shape\+::\+Line}}, and \mbox{\hyperlink{classns_shape_1_1_triangle_a11b2ff1bbd168d0d90fe3707eeeb869c}{ns\+Shape\+::\+Triangle}}.
+
+\mbox{\Hypertarget{classns_transition_1_1_i_transitionable_ade37d29f7f2ca4890ed0e2e64d033197}\label{classns_transition_1_1_i_transitionable_ade37d29f7f2ca4890ed0e2e64d033197}} 
+\index{nsTransition::ITransitionable@{nsTransition::ITransitionable}!setValues@{setValues}}
+\index{setValues@{setValues}!nsTransition::ITransitionable@{nsTransition::ITransitionable}}
+\doxysubsubsection{\texorpdfstring{setValues()}{setValues()}}
+{\footnotesize\ttfamily void ns\+Transition\+::\+ITransitionable\+::set\+Values (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{const std\+::vector$<$ float $>$ \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Définit les nouvelles valeurs pour l\textquotesingle{}ID spécifié 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID des valeurs a définir \\
+\hline
+\mbox{\texttt{ in}}  & {\em values} & Vecteur des nouvelles valeurs a appliquer \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_bg_text_adb35c1e7e0387e04e8f8e67d9e1468c8}{Bg\+Text}}, \mbox{\hyperlink{classns_gui_1_1_sprite_a63ad7e76b470c578aecc697203a3eb26}{ns\+Gui\+::\+Sprite}}, \mbox{\hyperlink{classns_gui_1_1_text_a9fbd7627d5cc5eaa7259f475c73aec73}{ns\+Gui\+::\+Text}}, \mbox{\hyperlink{classns_shape_1_1_rectangle_a3b3e28b92f8c22bfe159aea5a91fb5c9}{ns\+Shape\+::\+Rectangle}}, \mbox{\hyperlink{classns_shape_1_1_circle_a9a2fc6b4a852e25922e5a1732d39644a}{ns\+Shape\+::\+Circle}}, \mbox{\hyperlink{classns_shape_1_1_oval_a56c7b08484c2dc730e4850ff191aa80d}{ns\+Shape\+::\+Oval}}, \mbox{\hyperlink{classns_shape_1_1_line_a698db32364db6ad0c29d205940b02631}{ns\+Shape\+::\+Line}}, and \mbox{\hyperlink{classns_shape_1_1_triangle_ac2919ceeb740f05597c5839e92204f87}{ns\+Shape\+::\+Triangle}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/transition/\mbox{\hyperlink{itransitionable_8h}{itransitionable.\+h}}\end{DoxyCompactItemize}

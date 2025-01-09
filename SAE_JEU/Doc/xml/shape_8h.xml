@@ -1,0 +1,377 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="shape_8h" kind="file" language="C++">
+    <compoundname>shape.h</compoundname>
+    <includes refid="idrawable_8h" local="yes">../graphics/idrawable.h</includes>
+    <includes refid="rgbacolor_8h" local="yes">../graphics/rgbacolor.h</includes>
+    <includes refid="vec2d_8h" local="yes">../graphics/vec2d.h</includes>
+    <includedby refid="circle_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h</includedby>
+    <includedby refid="line_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/line.h</includedby>
+    <includedby refid="oval_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h</includedby>
+    <includedby refid="rectangle_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h</includedby>
+    <includedby refid="triangle_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/triangle.h</includedby>
+    <includedby refid="shape_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp</includedby>
+    <incdepgraph>
+      <node id="2">
+        <label>../graphics/idrawable.h</label>
+        <link refid="idrawable_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>../graphics/rgbacolor.h</label>
+        <link refid="rgbacolor_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>../graphics/vec2d.h</label>
+        <link refid="vec2d_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h</label>
+        <link refid="shape_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../tools/ieditable.h</label>
+        <link refid="ieditable_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>ieditable.hpp</label>
+        <link refid="ieditable_8hpp"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>GL/freeglut.h</label>
+      </node>
+      <node id="7">
+        <label>iostream</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="10">
+        <label>ostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="7">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</label>
+        <link refid="_menu_management_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
+        <link refid="game_8cpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source"/>
+      </node>
+      <node id="13">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_source"/>
+      </node>
+      <node id="19">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source"/>
+      </node>
+      <node id="20">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_source"/>
+      </node>
+      <node id="4">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source"/>
+      </node>
+      <node id="22">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.cpp</label>
+        <link refid="08-_custom_drawable_2bgtext_8cpp_source"/>
+      </node>
+      <node id="21">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</label>
+        <link refid="08-_custom_drawable_2bgtext_8h_source"/>
+        <childnode refid="22" relation="include">
+        </childnode>
+        <childnode refid="23" relation="include">
+        </childnode>
+      </node>
+      <node id="23">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_source"/>
+      </node>
+      <node id="25">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp</label>
+        <link refid="09-_custom_transitionable_2bgtext_8cpp_source"/>
+      </node>
+      <node id="24">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</label>
+        <link refid="09-_custom_transitionable_2bgtext_8h_source"/>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="26" relation="include">
+        </childnode>
+      </node>
+      <node id="26">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source"/>
+      </node>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h</label>
+        <link refid="circle_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/line.h</label>
+        <link refid="line_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h</label>
+        <link refid="oval_8h"/>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h</label>
+        <link refid="rectangle_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="21" relation="include">
+        </childnode>
+        <childnode refid="24" relation="include">
+        </childnode>
+        <childnode refid="27" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="28" relation="include">
+        </childnode>
+        <childnode refid="29" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="30" relation="include">
+        </childnode>
+        <childnode refid="31" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h</label>
+        <link refid="shape_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+        <childnode refid="32" relation="include">
+        </childnode>
+        <childnode refid="34" relation="include">
+        </childnode>
+      </node>
+      <node id="32">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/triangle.h</label>
+        <link refid="triangle_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="33" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp</label>
+        <link refid="circle_8cpp"/>
+      </node>
+      <node id="14">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/line.cpp</label>
+        <link refid="line_8cpp"/>
+      </node>
+      <node id="16">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp</label>
+        <link refid="oval_8cpp"/>
+      </node>
+      <node id="27">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</label>
+        <link refid="rectangle_8cpp"/>
+      </node>
+      <node id="34">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp</label>
+        <link refid="shape_8cpp"/>
+      </node>
+      <node id="33">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/triangle.cpp</label>
+        <link refid="triangle_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/button.h</label>
+        <link refid="button_8h_source"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="17">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/cigarette.h</label>
+        <link refid="cigarette_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="28">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/kebab.h</label>
+        <link refid="kebab_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="29">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/monstre.h</label>
+        <link refid="monstre_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/player1.h</label>
+        <link refid="player1_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/player2.h</label>
+        <link refid="player2_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/statue.h</label>
+        <link refid="statue_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="30">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/teleporter.h</label>
+        <link refid="teleporter_8h_source"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="31">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h</label>
+        <link refid="wall_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classns_shape_1_1_shape" prot="public">nsShape::Shape</innerclass>
+    <innernamespace refid="namespacens_shape">nsShape</innernamespace>
+    <briefdescription>
+<para>Représente une forme. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexandre Sollier </para>
+</simplesect>
+<simplesect kind="date"><para>Janvier 2020 </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>FIG2_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FIG2_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../graphics/idrawable.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../graphics/rgbacolor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../graphics/vec2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacens_shape" kindref="compound">nsShape</ref></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="29" refid="classns_shape_1_1_shape" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classns_shape_1_1_shape" kindref="compound">Shape</ref>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_i_drawable" kindref="compound">nsGraphics::IDrawable</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_shape_1_1_shape_1a879f450649c23c83dee576234703951d" kindref="member">Shape</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>fillColor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>borderColor);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"></highlight></codeline>
+<codeline lineno="45" refid="classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4" kindref="member">~Shape</ref>()<sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/><ref refid="classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754" kindref="member">getFillColor</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07" kindref="member">setFillColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>fillColor);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/><ref refid="classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d" kindref="member">getBorderColor</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_shape_1_1_shape_1a48821100aa1856f188bdba257505adc3" kindref="member">setBorderColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>borderColor);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="75" refid="classns_shape_1_1_shape_1a68841e117adddc95734dcbaa62f68832" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/><ref refid="classns_shape_1_1_shape_1a68841e117adddc95734dcbaa62f68832" kindref="member">m_fillColor</ref>;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classns_shape_1_1_shape_1a0444014e3ee0fa1e6ba5295e530a4f82" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/><ref refid="classns_shape_1_1_shape_1a0444014e3ee0fa1e6ba5295e530a4f82" kindref="member">m_borderColor</ref>;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>Shape</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nsShape</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>FIG2_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h"/>
+  </compounddef>
+</doxygen>

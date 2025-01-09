@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_type_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h</primary></indexterm>
+<para>
+
+<para>Definition of usefull types or aliases for the project. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;map&gt;
+#include &lt;optional&gt;
+</programlisting>Include dependency graph for type.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="type_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="type_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_struct_authorized_key">AuthorizedKey</link></para>
+
+<para>Struct containing all the authorized keys in the struct <link linkend="_struct_c_my_param">CMyParam</link>. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_c_my_param">CMyParam</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_c_my_param_v2">CMyParamV2</link></para>
+
+<para>Structure contenant les paramètres de configuration du jeu. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_form">Form</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_collectible">Collectible</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_struct_node">Node</link></para>
+
+<para>Structure représentant un noeud dans un graphe dans Movemonster() struct représentant un noeud dans un graphe, avec pos sa position, f_cost un coût estimé et son parent. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef std::vector&lt; char &gt; <link linkend="_type_8h_1af4d6ac508b164138028e81737c7be8a2">CVLine</link></para>
+
+<para>CVLine : alias to a line of the matrix. </para>
+</listitem>
+            <listitem><para>typedef std::vector&lt; <link linkend="_type_8h_1af4d6ac508b164138028e81737c7be8a2">CVLine</link> &gt; <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link></para>
+
+<para>CMat : alias to a game grid type. </para>
+</listitem>
+            <listitem><para>typedef std::pair&lt; unsigned, unsigned &gt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link></para>
+
+<para>CPosition : a pair gathering the coordinates in the grid. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const <link linkend="_struct_authorized_key">AuthorizedKey</link> <link linkend="_type_8h_1aeb6b858f886b8520a7f220b3de0bef1a">KAuthorizedKey</link></para>
+
+<para>KAuthorizedKey. </para>
+</listitem>
+            <listitem><para>const std::map&lt; std::string, std::string &gt; <link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link></para>
+
+<para>KColor : map between the &quot;human&quot; color and its correspondence for the Unix terminal. </para>
+</listitem>
+            <listitem><para>const char <link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link> = &apos; &apos;</para>
+
+<para>KEmpty : character for an empty cell. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Definition of usefull types or aliases for the project. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alain Casali </para>
+
+<para>Marc Laporte </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>18 décembre 2018 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_type_8h_1a64a592133575ccebb1b36453acbec02b"/><section>
+    <title>CMat</title>
+<indexterm><primary>CMat</primary><secondary>type.h</secondary></indexterm>
+<indexterm><primary>type.h</primary><secondary>CMat</secondary></indexterm>
+<para><computeroutput>std::vector&lt; <link linkend="_type_8h_1af4d6ac508b164138028e81737c7be8a2">CVLine</link> &gt; <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link></computeroutput></para><para>
+
+<para>CMat : alias to a game grid type. </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00027">27</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1"/><section>
+    <title>CPosition</title>
+<indexterm><primary>CPosition</primary><secondary>type.h</secondary></indexterm>
+<indexterm><primary>type.h</primary><secondary>CPosition</secondary></indexterm>
+<para><computeroutput>typedef std::pair&lt;unsigned, unsigned&gt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link></computeroutput></para><para>
+
+<para>CPosition : a pair gathering the coordinates in the grid. </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00032">32</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_type_8h_1af4d6ac508b164138028e81737c7be8a2"/><section>
+    <title>CVLine</title>
+<indexterm><primary>CVLine</primary><secondary>type.h</secondary></indexterm>
+<indexterm><primary>type.h</primary><secondary>CVLine</secondary></indexterm>
+<para><computeroutput>typedef std::vector&lt;char&gt; <link linkend="_type_8h_1af4d6ac508b164138028e81737c7be8a2">CVLine</link></computeroutput></para><para>
+
+<para>CVLine : alias to a line of the matrix. </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00021">21</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_type_8h_1aeb6b858f886b8520a7f220b3de0bef1a"/><section>
+    <title>KAuthorizedKey</title>
+<indexterm><primary>KAuthorizedKey</primary><secondary>type.h</secondary></indexterm>
+<indexterm><primary>type.h</primary><secondary>KAuthorizedKey</secondary></indexterm>
+<para><computeroutput>const <link linkend="_struct_authorized_key">AuthorizedKey</link> KAuthorizedKey</computeroutput></para><para>
+
+<para>KAuthorizedKey. </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00059">59</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_type_8h_1ac2178f299fb60a3a19c00006603770ec"/><section>
+    <title>KColor</title>
+<indexterm><primary>KColor</primary><secondary>type.h</secondary></indexterm>
+<indexterm><primary>type.h</primary><secondary>KColor</secondary></indexterm>
+<para><computeroutput>const std::map&lt;std::string, std::string&gt; KColor</computeroutput></para><emphasis role="strong">Initial value:</emphasis><programlisting linenumbering="unnumbered">{
+&#32;&#32;{<emphasis role="stringliteral">&quot;KReset&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>},
+&#32;&#32;{<emphasis role="stringliteral">&quot;KBlack&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;30&quot;</emphasis>},
+&#32;&#32;{<emphasis role="stringliteral">&quot;KRed&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;31&quot;</emphasis>},
+&#32;&#32;{<emphasis role="stringliteral">&quot;KGreen&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;32&quot;</emphasis>},
+&#32;&#32;{<emphasis role="stringliteral">&quot;KYellow&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;33&quot;</emphasis>},
+&#32;&#32;{<emphasis role="stringliteral">&quot;KBlue&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;34&quot;</emphasis>},
+&#32;&#32;{<emphasis role="stringliteral">&quot;KMAgenta&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;35&quot;</emphasis>},
+&#32;&#32;{<emphasis role="stringliteral">&quot;KCyan&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;36&quot;</emphasis>},
+
+}
+</programlisting><para>
+
+<para>KColor : map between the &quot;human&quot; color and its correspondence for the Unix terminal. </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00065">65</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_type_8h_1a1e3f1938007c41f107a8118778f8d08e"/><section>
+    <title>KEmpty</title>
+<indexterm><primary>KEmpty</primary><secondary>type.h</secondary></indexterm>
+<indexterm><primary>type.h</primary><secondary>KEmpty</secondary></indexterm>
+<para><computeroutput>const char KEmpty = &apos; &apos;</computeroutput></para><para>
+
+<para>KEmpty : character for an empty cell. </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00160">160</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+</section>
+</section>

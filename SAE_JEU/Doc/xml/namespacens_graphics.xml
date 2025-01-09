@@ -1,0 +1,317 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacens_graphics" kind="namespace" language="C++">
+    <compoundname>nsGraphics</compoundname>
+    <innerclass refid="classns_graphics_1_1_i_drawable" prot="public">nsGraphics::IDrawable</innerclass>
+    <innerclass refid="classns_graphics_1_1_r_g_b_acolor" prot="public">nsGraphics::RGBAcolor</innerclass>
+    <innerclass refid="classns_graphics_1_1_vec2_d" prot="public">nsGraphics::Vec2D</innerclass>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KBlack</definition>
+        <argsstring></argsstring>
+        <name>KBlack</name>
+        <qualifiedname>nsGraphics::KBlack</qualifiedname>
+        <initializer>{  0,   0,   0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="157" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="157" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KWhite</definition>
+        <argsstring></argsstring>
+        <name>KWhite</name>
+        <qualifiedname>nsGraphics::KWhite</qualifiedname>
+        <initializer>{255, 255, 255}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="158" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="158" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KRed</definition>
+        <argsstring></argsstring>
+        <name>KRed</name>
+        <qualifiedname>nsGraphics::KRed</qualifiedname>
+        <initializer>{255,   0,   0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="159" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="159" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1abfa46e909a7f8d4d908e70e4b55f734c" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KLime</definition>
+        <argsstring></argsstring>
+        <name>KLime</name>
+        <qualifiedname>nsGraphics::KLime</qualifiedname>
+        <initializer>{  0, 255,   0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="160" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KBlue</definition>
+        <argsstring></argsstring>
+        <name>KBlue</name>
+        <qualifiedname>nsGraphics::KBlue</qualifiedname>
+        <initializer>{  0,   0, 255}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="161" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="161" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a445ddb81e2a910db8e01a70403988966" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KYellow</definition>
+        <argsstring></argsstring>
+        <name>KYellow</name>
+        <qualifiedname>nsGraphics::KYellow</qualifiedname>
+        <initializer>{255, 255,   0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="162" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="162" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KCyan</definition>
+        <argsstring></argsstring>
+        <name>KCyan</name>
+        <qualifiedname>nsGraphics::KCyan</qualifiedname>
+        <initializer>{  0, 255, 255}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="163" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="163" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1ad0a8ee009f367326525d2cbd47cd5dea" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KMagenta</definition>
+        <argsstring></argsstring>
+        <name>KMagenta</name>
+        <qualifiedname>nsGraphics::KMagenta</qualifiedname>
+        <initializer>{255,   0, 255}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="164" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="164" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a44884fe5a7841edbad80039e8ad4017c" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KSilver</definition>
+        <argsstring></argsstring>
+        <name>KSilver</name>
+        <qualifiedname>nsGraphics::KSilver</qualifiedname>
+        <initializer>{192, 192, 192}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="165" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="165" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KGray</definition>
+        <argsstring></argsstring>
+        <name>KGray</name>
+        <qualifiedname>nsGraphics::KGray</qualifiedname>
+        <initializer>{128, 128, 128}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="166" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="166" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a7f6ca880f0cf5e6e76b0081c84d5f1fb" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KDarkGray</definition>
+        <argsstring></argsstring>
+        <name>KDarkGray</name>
+        <qualifiedname>nsGraphics::KDarkGray</qualifiedname>
+        <initializer>{200, 200, 200}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="167" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="167" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a219354b4276a9edbfc436390ba3a4827" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KMaroon</definition>
+        <argsstring></argsstring>
+        <name>KMaroon</name>
+        <qualifiedname>nsGraphics::KMaroon</qualifiedname>
+        <initializer>{128,   0,   0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="168" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="168" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a11591ce1586e827d54a3d10b2fe3fc0c" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KOlive</definition>
+        <argsstring></argsstring>
+        <name>KOlive</name>
+        <qualifiedname>nsGraphics::KOlive</qualifiedname>
+        <initializer>{128, 128,   0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="169" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="169" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1ad2a6c119991dbf9f510d68a420524704" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KGreen</definition>
+        <argsstring></argsstring>
+        <name>KGreen</name>
+        <qualifiedname>nsGraphics::KGreen</qualifiedname>
+        <initializer>{  0, 128,   0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="170" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="170" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KPurple</definition>
+        <argsstring></argsstring>
+        <name>KPurple</name>
+        <qualifiedname>nsGraphics::KPurple</qualifiedname>
+        <initializer>{128,   0, 128}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="171" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a63e989cb02df1c3e6cbd40d0d3e3161d" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KTeal</definition>
+        <argsstring></argsstring>
+        <name>KTeal</name>
+        <qualifiedname>nsGraphics::KTeal</qualifiedname>
+        <initializer>{  0, 128, 128}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="172" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a4ea1ef3950c89b063d76e0a13faf5ce8" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KNavy</definition>
+        <argsstring></argsstring>
+        <name>KNavy</name>
+        <qualifiedname>nsGraphics::KNavy</qualifiedname>
+        <initializer>{  0,   0, 128}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="173" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a4c07ea95810d52059324d037d9d9c5d4" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KBeige</definition>
+        <argsstring></argsstring>
+        <name>KBeige</name>
+        <qualifiedname>nsGraphics::KBeige</qualifiedname>
+        <initializer>{231, 211, 171}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="174" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="174" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KTransparent</definition>
+        <argsstring></argsstring>
+        <name>KTransparent</name>
+        <qualifiedname>nsGraphics::KTransparent</qualifiedname>
+        <initializer>{  0,   0,   0,  0}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="175" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="175" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="namespacens_graphics_1a9caa4cd9527a2effed87836d78faacef" prot="public" static="no" mutable="no">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref></type>
+        <definition>const RGBAcolor nsGraphics::KBlueTransparent</definition>
+        <argsstring></argsstring>
+        <name>KBlueTransparent</name>
+        <qualifiedname>nsGraphics::KBlueTransparent</qualifiedname>
+        <initializer>{  0,   0, 255,  30}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" line="176" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h" bodystart="176" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Espace de nom pour les utilitaires graphiques. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/idrawable.h" line="19" column="1"/>
+  </compounddef>
+</doxygen>

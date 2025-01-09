@@ -1,0 +1,220 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacens_graphics" xml:lang="en-US">
+<title>nsGraphics Namespace Reference</title>
+<indexterm><primary>nsGraphics</primary></indexterm>
+<para>
+
+<para>Espace de nom pour les utilitaires graphiques. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_graphics_1_1_i_drawable">IDrawable</link></para>
+
+<para>Interface pour un objet affichable. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link></para>
+
+<para>Classe représentant un couleur RGBA8888. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link></para>
+
+<para>Classe représentant un vecteur deux-dimensionnel. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8">KBlack</link> { 0, 0, 0}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2">KWhite</link> {255, 255, 255}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61">KRed</link> {255, 0, 0}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1abfa46e909a7f8d4d908e70e4b55f734c">KLime</link> { 0, 255, 0}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e">KBlue</link> { 0, 0, 255}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a445ddb81e2a910db8e01a70403988966">KYellow</link> {255, 255, 0}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad">KCyan</link> { 0, 255, 255}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1ad0a8ee009f367326525d2cbd47cd5dea">KMagenta</link> {255, 0, 255}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a44884fe5a7841edbad80039e8ad4017c">KSilver</link> {192, 192, 192}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f">KGray</link> {128, 128, 128}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a7f6ca880f0cf5e6e76b0081c84d5f1fb">KDarkGray</link> {200, 200, 200}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a219354b4276a9edbfc436390ba3a4827">KMaroon</link> {128, 0, 0}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a11591ce1586e827d54a3d10b2fe3fc0c">KOlive</link> {128, 128, 0}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1ad2a6c119991dbf9f510d68a420524704">KGreen</link> { 0, 128, 0}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b">KPurple</link> {128, 0, 128}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a63e989cb02df1c3e6cbd40d0d3e3161d">KTeal</link> { 0, 128, 128}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a4ea1ef3950c89b063d76e0a13faf5ce8">KNavy</link> { 0, 0, 128}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a4c07ea95810d52059324d037d9d9c5d4">KBeige</link> {231, 211, 171}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">KTransparent</link> { 0, 0, 0, 0}</para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_namespacens_graphics_1a9caa4cd9527a2effed87836d78faacef">KBlueTransparent</link> { 0, 0, 255, 30}</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Espace de nom pour les utilitaires graphiques. </para>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_namespacens_graphics_1a4c07ea95810d52059324d037d9d9c5d4"/><section>
+    <title>KBeige</title>
+<indexterm><primary>KBeige</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KBeige</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KBeige {231, 211, 171}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00174">174</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8"/><section>
+    <title>KBlack</title>
+<indexterm><primary>KBlack</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KBlack</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KBlack { 0, 0, 0}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00157">157</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e"/><section>
+    <title>KBlue</title>
+<indexterm><primary>KBlue</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KBlue</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KBlue { 0, 0, 255}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00161">161</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a9caa4cd9527a2effed87836d78faacef"/><section>
+    <title>KBlueTransparent</title>
+<indexterm><primary>KBlueTransparent</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KBlueTransparent</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KBlueTransparent { 0, 0, 255, 30}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00176">176</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad"/><section>
+    <title>KCyan</title>
+<indexterm><primary>KCyan</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KCyan</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KCyan { 0, 255, 255}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00163">163</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a7f6ca880f0cf5e6e76b0081c84d5f1fb"/><section>
+    <title>KDarkGray</title>
+<indexterm><primary>KDarkGray</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KDarkGray</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KDarkGray {200, 200, 200}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00167">167</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f"/><section>
+    <title>KGray</title>
+<indexterm><primary>KGray</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KGray</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KGray {128, 128, 128}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00166">166</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1ad2a6c119991dbf9f510d68a420524704"/><section>
+    <title>KGreen</title>
+<indexterm><primary>KGreen</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KGreen</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KGreen { 0, 128, 0}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00170">170</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1abfa46e909a7f8d4d908e70e4b55f734c"/><section>
+    <title>KLime</title>
+<indexterm><primary>KLime</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KLime</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KLime { 0, 255, 0}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00160">160</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1ad0a8ee009f367326525d2cbd47cd5dea"/><section>
+    <title>KMagenta</title>
+<indexterm><primary>KMagenta</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KMagenta</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KMagenta {255, 0, 255}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00164">164</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a219354b4276a9edbfc436390ba3a4827"/><section>
+    <title>KMaroon</title>
+<indexterm><primary>KMaroon</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KMaroon</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KMaroon {128, 0, 0}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00168">168</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a4ea1ef3950c89b063d76e0a13faf5ce8"/><section>
+    <title>KNavy</title>
+<indexterm><primary>KNavy</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KNavy</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KNavy { 0, 0, 128}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00173">173</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a11591ce1586e827d54a3d10b2fe3fc0c"/><section>
+    <title>KOlive</title>
+<indexterm><primary>KOlive</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KOlive</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KOlive {128, 128, 0}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00169">169</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b"/><section>
+    <title>KPurple</title>
+<indexterm><primary>KPurple</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KPurple</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KPurple {128, 0, 128}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00171">171</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61"/><section>
+    <title>KRed</title>
+<indexterm><primary>KRed</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KRed</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KRed {255, 0, 0}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00159">159</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a44884fe5a7841edbad80039e8ad4017c"/><section>
+    <title>KSilver</title>
+<indexterm><primary>KSilver</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KSilver</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KSilver {192, 192, 192}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00165">165</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a63e989cb02df1c3e6cbd40d0d3e3161d"/><section>
+    <title>KTeal</title>
+<indexterm><primary>KTeal</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KTeal</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KTeal { 0, 128, 128}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00172">172</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e"/><section>
+    <title>KTransparent</title>
+<indexterm><primary>KTransparent</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KTransparent</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KTransparent { 0, 0, 0, 0}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00175">175</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2"/><section>
+    <title>KWhite</title>
+<indexterm><primary>KWhite</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KWhite</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KWhite {255, 255, 255}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00158">158</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_graphics_1a445ddb81e2a910db8e01a70403988966"/><section>
+    <title>KYellow</title>
+<indexterm><primary>KYellow</primary><secondary>nsGraphics</secondary></indexterm>
+<indexterm><primary>nsGraphics</primary><secondary>KYellow</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::KYellow {255, 255, 0}</computeroutput></para><para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00162">162</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+</section>
+</section>

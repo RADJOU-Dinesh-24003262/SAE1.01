@@ -1,0 +1,112 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structns_gui_1_1_sprite_1_1_file_begin" kind="struct" language="C++" prot="private">
+    <compoundname>nsGui::Sprite::FileBegin</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structns_gui_1_1_sprite_1_1_file_begin_1ae0da211e8abd838acfcc6ad15a7b7f10" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t nsGui::Sprite::FileBegin::magic</definition>
+        <argsstring></argsstring>
+        <name>magic</name>
+        <qualifiedname>nsGui::Sprite::FileBegin::magic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le magic number du fichier, doit toujours être &quot;SI&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="101" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structns_gui_1_1_sprite_1_1_file_begin_1a6ff3a139ea89258e3b5f15303227a884" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t nsGui::Sprite::FileBegin::headmagic</definition>
+        <argsstring></argsstring>
+        <name>headmagic</name>
+        <qualifiedname>nsGui::Sprite::FileBegin::headmagic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le magic number de la section en-tête, doit toujours être &quot;HEAD&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="102" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structns_gui_1_1_sprite_1_1_file_begin_1a16b8384ffc6b6de5f04d0d5289d6beae" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t nsGui::Sprite::FileBegin::fileVersion</definition>
+        <argsstring></argsstring>
+        <name>fileVersion</name>
+        <qualifiedname>nsGui::Sprite::FileBegin::fileVersion</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>La version du format stockée par le fichier </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="103" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="103" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structns_gui_1_1_sprite_1_1_file_begin_1a6fb6c4c39b8e98f701a2ef1eead0bac5" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t nsGui::Sprite::FileBegin::pixelCount</definition>
+        <argsstring></argsstring>
+        <name>pixelCount</name>
+        <qualifiedname>nsGui::Sprite::FileBegin::pixelCount</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le nombre de pixels contenus dans la section données </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="104" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structns_gui_1_1_sprite_1_1_file_begin_1aa4d932a4f388b391a1e2b6e5ab2b1044" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t nsGui::Sprite::FileBegin::rowSize</definition>
+        <argsstring></argsstring>
+        <name>rowSize</name>
+        <qualifiedname>nsGui::Sprite::FileBegin::rowSize</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le nombre de pixels par ligne </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="105" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="105" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structns_gui_1_1_sprite_1_1_file_begin_1a832f2dcfef4bdb4e9524ab3191591014" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t nsGui::Sprite::FileBegin::datamagic</definition>
+        <argsstring></argsstring>
+        <name>datamagic</name>
+        <qualifiedname>nsGui::Sprite::FileBegin::datamagic</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le magic number de la section données, doit toujours être &quot;DATA&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="106" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Décrit le début d&apos;un fichier .si2. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="100" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="100" bodyend="107"/>
+    <listofallmembers>
+      <member refid="structns_gui_1_1_sprite_1_1_file_begin_1a832f2dcfef4bdb4e9524ab3191591014" prot="public" virt="non-virtual"><scope>nsGui::Sprite::FileBegin</scope><name>datamagic</name></member>
+      <member refid="structns_gui_1_1_sprite_1_1_file_begin_1a16b8384ffc6b6de5f04d0d5289d6beae" prot="public" virt="non-virtual"><scope>nsGui::Sprite::FileBegin</scope><name>fileVersion</name></member>
+      <member refid="structns_gui_1_1_sprite_1_1_file_begin_1a6ff3a139ea89258e3b5f15303227a884" prot="public" virt="non-virtual"><scope>nsGui::Sprite::FileBegin</scope><name>headmagic</name></member>
+      <member refid="structns_gui_1_1_sprite_1_1_file_begin_1ae0da211e8abd838acfcc6ad15a7b7f10" prot="public" virt="non-virtual"><scope>nsGui::Sprite::FileBegin</scope><name>magic</name></member>
+      <member refid="structns_gui_1_1_sprite_1_1_file_begin_1a6fb6c4c39b8e98f701a2ef1eead0bac5" prot="public" virt="non-virtual"><scope>nsGui::Sprite::FileBegin</scope><name>pixelCount</name></member>
+      <member refid="structns_gui_1_1_sprite_1_1_file_begin_1aa4d932a4f388b391a1e2b6e5ab2b1044" prot="public" virt="non-virtual"><scope>nsGui::Sprite::FileBegin</scope><name>rowSize</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

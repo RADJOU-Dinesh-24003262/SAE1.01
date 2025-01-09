@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_glut__font_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/glut_font.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/glut_font.cpp</primary></indexterm>
+<para>
+
+<para>Classe utilitaire pour utiliser facilement les polices de Glut. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;GL/freeglut_std.h&gt;
+#include &quot;mingl/gui/glut_font.h&quot;
+</programlisting>Include dependency graph for glut_font.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="glut__font_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe utilitaire pour utiliser facilement les polices de Glut. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.1 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>28 décembre 2019 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_glut__font_8cpp_source">glut_font.cpp</link>.</para>
+</section>
+</section>

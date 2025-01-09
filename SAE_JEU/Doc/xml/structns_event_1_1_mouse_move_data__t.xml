@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structns_event_1_1_mouse_move_data__t" kind="struct" language="C++" prot="public">
+    <compoundname>nsEvent::MouseMoveData_t</compoundname>
+    <includes refid="event_8hpp" local="no">event.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nsEvent::MouseMoveData_t::x</definition>
+        <argsstring></argsstring>
+        <name>x</name>
+        <qualifiedname>nsEvent::MouseMoveData_t::x</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Coordonnée X du curseur, relative au coin supérieur-gauche de la fenêtre </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="45" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nsEvent::MouseMoveData_t::y</definition>
+        <argsstring></argsstring>
+        <name>y</name>
+        <qualifiedname>nsEvent::MouseMoveData_t::y</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Coordonnée Y du curseur, relative au coin supérieur-gauche de la fenêtre </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="46" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="46" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Possède des données pour un événement MouseMove/MouseDrag. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="44" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="44" bodyend="47"/>
+    <listofallmembers>
+      <member refid="structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb" prot="public" virt="non-virtual"><scope>nsEvent::MouseMoveData_t</scope><name>x</name></member>
+      <member refid="structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446" prot="public" virt="non-virtual"><scope>nsEvent::MouseMoveData_t</scope><name>y</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

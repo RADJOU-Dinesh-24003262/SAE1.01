@@ -1,0 +1,303 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_transition_1_1_transition" xml:lang="en-US">
+<title>nsTransition::Transition Class Reference</title>
+<indexterm><primary>nsTransition::Transition</primary></indexterm>
+<para>
+
+<para>Une classe représentant un <link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link> en cours de lecture. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;transition.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsTransition::Transition:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_transition_1_1_transition__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for nsTransition::Transition:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_transition_1_1_transition__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">TransitionFinishModes</link> { <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4">FINISH_START</link>
+, <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f">FINISH_CURRENT</link>
+, <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e">FINISH_DESTINATION</link>
+ }</para>
+
+<para>TransitionMode : Liste de tout les modes de fin de la <link linkend="_classns_transition_1_1_transition">Transition</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_transition_1_1_transition_1a7c3e692c43aceca5e4f716f3ae22bf05">Transition</link> (const <link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link> &amp;contract)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_transition_1_1_transition">Transition</link>. </para>
+</listitem>
+            <listitem><para>const <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link> &amp; <link linkend="_classns_transition_1_1_transition_1a616e0ef596d4e8ebb185a6cf0a685924">getElapsed</link> () const</para>
+
+<para>Retourne le temps écoulé pour cette <link linkend="_classns_transition_1_1_transition">Transition</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_transition_1_1_transition_1a0a8e848a50c2e05dc72800abfc6dd6ef">setElapsed</link> (const <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link> &amp;elapsed)</para>
+
+<para>Définit un nouveau temps écoulé pour cette <link linkend="_classns_transition_1_1_transition">Transition</link>, puis met a jour les valeurs de la cible. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_transition_1_1_transition_1abb421b44828c7b6dec60a0256a97b3d9">addToElapsed</link> (const <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link> &amp;addedTime)</para>
+
+<para>Rajoute une durée au temps écoulé actuel. </para>
+</listitem>
+            <listitem><para>const bool &amp; <link linkend="_classns_transition_1_1_transition_1ab32ef25219cd2227746444ac8794266a">isReversed</link> () const</para>
+
+<para>Indique si cette <link linkend="_classns_transition_1_1_transition">Transition</link> est en train de se jouer a l&apos;envers. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_transition_1_1_transition_1a8c8c7caf7326e24ffa540093ed12f581">finish</link> (const <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">TransitionFinishModes</link> &amp;finishMode=TransitionFinishModes::FINISH_DESTINATION)</para>
+
+<para>Marque cette <link linkend="_classns_transition_1_1_transition">Transition</link> comme terminée, en utilisant le mode spécifié </para>
+</listitem>
+            <listitem><para>const bool &amp; <link linkend="_classns_transition_1_1_transition_1ad9d358bee54825d2a8bf83e9e21e398b">isFinished</link> () const</para>
+
+<para>Indique si cette <link linkend="_classns_transition_1_1_transition">Transition</link> est marquée comme terminée. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Une classe représentant un <link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link> en cours de lecture. </para>
+<para>
+Definition at line <link linkend="_transition_8h_source_1l00027">27</link> of file <link linkend="_transition_8h_source">transition.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19"/><section>
+    <title>TransitionFinishModes</title>
+<indexterm><primary>TransitionFinishModes</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>TransitionFinishModes</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">nsTransition::Transition::TransitionFinishModes</link></computeroutput></para><para>
+
+<para>TransitionMode : Liste de tout les modes de fin de la <link linkend="_classns_transition_1_1_transition">Transition</link>. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>FINISH_START</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>FINISH_START</secondary></indexterm>
+<anchor xml:id="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4"/>FINISH_START</entry><entry>
+<para>Ce mode de fin met les valeurs de la cible a celles de départ </para>
+</entry></row><row><entry><indexterm><primary>FINISH_CURRENT</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>FINISH_CURRENT</secondary></indexterm>
+<anchor xml:id="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f"/>FINISH_CURRENT</entry><entry>
+<para>Ce mode de fin ne touche pas aux valeurs actuelles de la cible </para>
+</entry></row><row><entry><indexterm><primary>FINISH_DESTINATION</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>FINISH_DESTINATION</secondary></indexterm>
+<anchor xml:id="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e"/>FINISH_DESTINATION</entry><entry>
+<para>Ce mode de fin met les valeurs de la cible a celles d&apos;arrivé </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_transition_8h_source_1l00033">33</link> of file <link linkend="_transition_8h_source">transition.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_transition_1_1_transition_1a7c3e692c43aceca5e4f716f3ae22bf05"/><section>
+    <title>Transition()</title>
+<indexterm><primary>Transition</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>Transition</secondary></indexterm>
+<para><computeroutput>nsTransition::Transition::Transition (const <link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link> &amp; contract)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_transition_1_1_transition">Transition</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>contract</entry><entry>
+<para>: Contrat utilisé pour initialiser cette <link linkend="_classns_transition_1_1_transition">Transition</link> </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_transition_1_1_transition_1abb421b44828c7b6dec60a0256a97b3d9"/><section>
+    <title>addToElapsed()</title>
+<indexterm><primary>addToElapsed</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>addToElapsed</secondary></indexterm>
+<para><computeroutput>void nsTransition::Transition::addToElapsed (const <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link> &amp; addedTime)</computeroutput></para><para>
+
+<para>Rajoute une durée au temps écoulé actuel. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>addedTime</entry><entry>
+<para>: Durée a rajouter </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classns_transition_1_1_transition_1a8c8c7caf7326e24ffa540093ed12f581"/><section>
+    <title>finish()</title>
+<indexterm><primary>finish</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>finish</secondary></indexterm>
+<para><computeroutput>void nsTransition::Transition::finish (const <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">TransitionFinishModes</link> &amp; finishMode = <computeroutput>TransitionFinishModes::FINISH_DESTINATION</computeroutput>
+)</computeroutput></para><para>
+
+<para>Marque cette <link linkend="_classns_transition_1_1_transition">Transition</link> comme terminée, en utilisant le mode spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>finishMode</entry><entry>
+<para>: Mode utilisé pour finir cette <link linkend="_classns_transition_1_1_transition">Transition</link> (Valeurs d&apos;arrivé par défaut) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classns_transition_1_1_transition_1a616e0ef596d4e8ebb185a6cf0a685924"/><section>
+    <title>getElapsed()</title>
+<indexterm><primary>getElapsed</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>getElapsed</secondary></indexterm>
+<para><computeroutput>const <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link> &amp; nsTransition::Transition::getElapsed ( ) const</computeroutput></para><para>
+
+<para>Retourne le temps écoulé pour cette <link linkend="_classns_transition_1_1_transition">Transition</link>. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence const vers m_elapsed </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classns_transition_1_1_transition_1ad9d358bee54825d2a8bf83e9e21e398b"/><section>
+    <title>isFinished()</title>
+<indexterm><primary>isFinished</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>isFinished</secondary></indexterm>
+<para><computeroutput>const bool &amp; nsTransition::Transition::isFinished ( ) const</computeroutput></para><para>
+
+<para>Indique si cette <link linkend="_classns_transition_1_1_transition">Transition</link> est marquée comme terminée. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence const vers m_finished </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classns_transition_1_1_transition_1ab32ef25219cd2227746444ac8794266a"/><section>
+    <title>isReversed()</title>
+<indexterm><primary>isReversed</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>isReversed</secondary></indexterm>
+<para><computeroutput>const bool &amp; nsTransition::Transition::isReversed ( ) const</computeroutput></para><para>
+
+<para>Indique si cette <link linkend="_classns_transition_1_1_transition">Transition</link> est en train de se jouer a l&apos;envers. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence const vers m_reverse </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_classns_transition_1_1_transition_1a0a8e848a50c2e05dc72800abfc6dd6ef"/><section>
+    <title>setElapsed()</title>
+<indexterm><primary>setElapsed</primary><secondary>nsTransition::Transition</secondary></indexterm>
+<indexterm><primary>nsTransition::Transition</primary><secondary>setElapsed</secondary></indexterm>
+<para><computeroutput>void nsTransition::Transition::setElapsed (const <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link> &amp; elapsed)</computeroutput></para><para>
+
+<para>Définit un nouveau temps écoulé pour cette <link linkend="_classns_transition_1_1_transition">Transition</link>, puis met a jour les valeurs de la cible. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>elapsed</entry><entry>
+<para>: Nouveau temps écoulé </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/<link linkend="_transition_8h">transition.h</link></section>
+</section>

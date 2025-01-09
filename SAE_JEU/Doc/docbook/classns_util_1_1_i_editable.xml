@@ -1,0 +1,135 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_util_1_1_i_editable" xml:lang="en-US">
+<title>nsUtil::IEditable Class Reference</title>
+<indexterm><primary>nsUtil::IEditable</primary></indexterm>
+<para>
+
+<para>Interface pour un objet injectable. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;ieditable.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsUtil::IEditable:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_util_1_1_i_editable__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e"/>virtual <emphasis role="strong">~IEditable</emphasis> ()=default</para>
+
+<para>Destructeur pour la classe <link linkend="_classns_util_1_1_i_editable">IEditable</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual std::ostream &amp; <link linkend="_classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853">_Edit</link> (std::ostream &amp;os) const =0</para>
+
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_classns_util_1_1_i_editable_1a53db4e7832b7c4579b331800bb0cae70">operator&lt;&lt;</link> (std::ostream &amp;os, const <link linkend="_classns_util_1_1_i_editable">IEditable</link> &amp;Obj)</para>
+
+<para>Surcharge de l&apos;opérateur d&apos;injection. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Interface pour un objet injectable. </para>
+<para>
+Definition at line <link linkend="_ieditable_8h_source_1l00037">37</link> of file <link linkend="_ieditable_8h_source">ieditable.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853"/><section>
+    <title>_Edit()</title>
+<indexterm><primary>_Edit</primary><secondary>nsUtil::IEditable</secondary></indexterm>
+<indexterm><primary>nsUtil::IEditable</primary><secondary>_Edit</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; nsUtil::IEditable::_Edit (std::ostream &amp; os) const<computeroutput>[protected]</computeroutput>, <computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>os</entry><entry>
+<para>: Flux dans lequel injecter </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implemented in <link linkend="_classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027">nsException::CException</link>, <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a09154c1fc9ba912860f2b4fac5432298">nsGraphics::RGBAcolor</link>, and <link linkend="_classns_graphics_1_1_vec2_d_1ad416f3698e43099990b3d96d9099c65f">nsGraphics::Vec2D</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_classns_util_1_1_i_editable_1a53db4e7832b7c4579b331800bb0cae70"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>nsUtil::IEditable</secondary></indexterm>
+<indexterm><primary>nsUtil::IEditable</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; operator&lt;&lt; (std::ostream &amp; os, const <link linkend="_classns_util_1_1_i_editable">IEditable</link> &amp; Obj)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para>Surcharge de l&apos;opérateur d&apos;injection. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>os</entry><entry>
+<para>: Flux dans lequel injecter </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>Obj</entry><entry>
+<para>: Objet a injecter </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/<link linkend="_ieditable_8h">ieditable.h</link></section>
+</section>

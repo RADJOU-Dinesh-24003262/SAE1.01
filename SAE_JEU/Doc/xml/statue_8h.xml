@@ -1,0 +1,291 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="statue_8h" kind="file" language="C++">
+    <compoundname>statue.h</compoundname>
+    <includes refid="circle_8h" local="yes">mingl/shape/circle.h</includes>
+    <includes refid="oval_8h" local="yes">mingl/shape/oval.h</includes>
+    <includes refid="rectangle_8h" local="yes">mingl/shape/rectangle.h</includes>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>../graphics/idrawable.h</label>
+        <link refid="idrawable_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../graphics/rgbacolor.h</label>
+        <link refid="rgbacolor_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../graphics/vec2d.h</label>
+        <link refid="vec2d_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>mingl/shape/circle.h</label>
+        <link refid="circle_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>mingl/shape/oval.h</label>
+        <link refid="oval_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>mingl/shape/rectangle.h</label>
+        <link refid="rectangle_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>shape.h</label>
+        <link refid="shape_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../tools/ieditable.h</label>
+        <link refid="ieditable_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ieditable.hpp</label>
+        <link refid="ieditable_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../transition/itransitionable.h</label>
+        <link refid="itransitionable_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/statue.h</label>
+        <link refid="statue_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>GL/freeglut.h</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+      <node id="12">
+        <label>ostream</label>
+      </node>
+      <node id="14">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
+        <link refid="game_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/statue.h</label>
+        <link refid="statue_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="statue_8h_1a775457201f1ab220eb0f565c9811b1e7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Statue</definition>
+        <argsstring>(MinGL &amp;window, int Center1, int Center2, int mat_x, int mat_y)</argsstring>
+        <name>Statue</name>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Center1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>Center2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mat_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mat_y</declname>
+        </param>
+        <briefdescription>
+<para>cette fonction dessine une statue soit Wario </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Référence à l&apos;objet <ref refid="class_min_g_l" kindref="compound">MinGL</ref> pour dessiner les formes. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Center1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position x du centre de la statue. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>Center2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Position y du centre de la statue. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mat_x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Facteur d&apos;échelle pour la dimension horizontale des éléments de la statue. </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>mat_y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Facteur d&apos;échelle pour la dimension verticale des éléments de la statue. </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/statue.h" line="29" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/statue.h" bodystart="29" bodyend="100"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="comment">//include<sp/>les<sp/>différentes<sp/>formes<sp/>pour<sp/>dessiner<sp/>les<sp/>sprites</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="circle_8h" kindref="compound">mingl/shape/circle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="oval_8h" kindref="compound">mingl/shape/oval.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rectangle_8h" kindref="compound">mingl/shape/rectangle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight><highlight class="comment">//défini<sp/>les<sp/>éléments<sp/>du<sp/>sprite<sp/>d&apos;un<sp/>mur</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Statue(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Center1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Center2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wall_x<sp/>=<sp/>320/mat_x;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>wall_y<sp/>=<sp/>320/mat_y;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>ratio<sp/>=<sp/>mat_x/10;</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>body_size<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>wall_x/2.8;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>body_x<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>Center1;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>body_y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(5/ratio)<sp/>+<sp/>Center2;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>foot_size_x<sp/><sp/><sp/><sp/><sp/>=<sp/>body_size/(2/ratio);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>foot_size_y<sp/><sp/><sp/><sp/><sp/>=<sp/>body_size/(8/ratio);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>foot1_x<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>Center1<sp/>-<sp/>(5/ratio);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>foot2_x<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>Center1<sp/>+<sp/>(5/ratio);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>foot_y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(5/ratio)<sp/>+<sp/>Center2<sp/>+<sp/>(9/ratio);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TopSocle1_x<sp/><sp/><sp/><sp/><sp/>=<sp/>Center1<sp/>-<sp/>body_size;</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TopSocle1_y<sp/><sp/><sp/><sp/><sp/>=<sp/>(5/ratio)<sp/>+<sp/>Center2<sp/>+<sp/>(10/ratio);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TopSocle2_x<sp/><sp/><sp/><sp/><sp/>=<sp/>Center1<sp/>+<sp/>body_size;</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TopSocle2_y<sp/><sp/><sp/><sp/><sp/>=<sp/>(5/ratio)<sp/>+<sp/>Center2<sp/>+<sp/>(11/ratio);</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DownSocle1_x<sp/><sp/><sp/><sp/>=<sp/>TopSocle1_x<sp/>-<sp/>(3/ratio);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DownSocle1_y<sp/><sp/><sp/><sp/>=<sp/>TopSocle2_y;</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DownSocle2_x<sp/><sp/><sp/><sp/>=<sp/>TopSocle2_x<sp/>+<sp/>(3/ratio);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DownSocle2_y<sp/><sp/><sp/><sp/>=<sp/>TopSocle2_y<sp/>+<sp/>(5/ratio);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Hand_size_x<sp/><sp/><sp/><sp/><sp/>=<sp/>body_size/3;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Hand_size_y<sp/><sp/><sp/><sp/><sp/>=<sp/>body_size/2;</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Hand1_x<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>TopSocle1_x;</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Hand2_x<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>TopSocle2_x;</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Hand_y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(5/ratio)<sp/>+<sp/>Center2<sp/>-<sp/>(5/ratio);</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Shoulder1_x<sp/><sp/><sp/><sp/><sp/>=<sp/>Center1<sp/>-<sp/>body_size;</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Shoulder1_y<sp/><sp/><sp/><sp/><sp/>=<sp/>(5/ratio)<sp/>+<sp/>Center2<sp/>-<sp/>body_size;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Shoulder2_x<sp/><sp/><sp/><sp/><sp/>=<sp/>Center1<sp/>+<sp/>body_size;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Shoulder2_y<sp/><sp/><sp/><sp/><sp/>=<sp/>(5/ratio)<sp/>+<sp/>Center2<sp/>-<sp/>(body_size/2);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>LeftBretelle1_x<sp/>=<sp/>Center1<sp/>-<sp/>(body_size/2)<sp/>-<sp/>(1/ratio);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>RightBretelle1_x=<sp/>Center1<sp/>+<sp/>(body_size/2)<sp/>-<sp/>(1/ratio);</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Bretelle1_y<sp/><sp/><sp/><sp/><sp/>=<sp/>Shoulder1_y;</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>LeftBretelle2_x<sp/>=<sp/>Center1<sp/>-<sp/>(body_size/2)<sp/>+<sp/>(1/ratio);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>RightBretelle2_x=<sp/>Center1<sp/>+<sp/>(body_size/2)<sp/>+<sp/>(1/ratio);</highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Bretelle2_y<sp/><sp/><sp/><sp/><sp/>=<sp/>Shoulder2_y;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>LeftButton_x<sp/><sp/><sp/><sp/>=<sp/>LeftBretelle1_x<sp/>+<sp/>((LeftBretelle2_x-LeftBretelle1_x)/2);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>RightButton_x<sp/><sp/><sp/>=<sp/>RightBretelle1_x<sp/>+<sp/>((RightBretelle2_x-RightBretelle1_x)/2);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Button_y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>Bretelle2_y;</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Button_size<sp/><sp/><sp/><sp/><sp/>=<sp/>(2/ratio);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Head_size<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(8/ratio);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Head_x<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>Center1;</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>Head_y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>(5/ratio)<sp/>+<sp/>Center2<sp/>-<sp/>body_size<sp/>-<sp/>(2*(Head_size/3));</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TopHat_size_x<sp/><sp/><sp/>=<sp/>Head_size+1;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TopHat_size_y<sp/><sp/><sp/>=<sp/>2*(Head_size/5);</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TopHat_x<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>Center1;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>TopHat_y<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>Head_y<sp/>-<sp/>Head_size<sp/>+<sp/>(2/ratio);</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DownHat_size_x<sp/><sp/>=<sp/>Head_size;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DownHat_size_y<sp/><sp/>=<sp/>TopHat_size_y/3;</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DownHat_x<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>Center1;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>DownHat_y<sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>TopHat_y<sp/>+<sp/>TopHat_size_y;</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//shape<sp/>formant<sp/>le<sp/>sprite</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((Center1-wall_x),(Center2-wall_y)),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((Center1+wall_x),(Center2+wall_y)),<sp/>nsGraphics::KBlack);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_oval" kindref="compound">nsShape::Oval</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(Hand1_x,Hand_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(Hand_size_x,Hand_size_y),<sp/>nsGraphics::KBeige);</highlight><highlight class="comment">//<sp/>pied<sp/>droit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_oval" kindref="compound">nsShape::Oval</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(Hand2_x,Hand_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(Hand_size_x,Hand_size_y),<sp/>nsGraphics::KBeige);</highlight><highlight class="comment">//<sp/>pied<sp/>droit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_circle" kindref="compound">nsShape::Circle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(body_x,body_y),<sp/>body_size,<sp/>nsGraphics::KPurple);<sp/><sp/></highlight><highlight class="comment">//ventre</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_oval" kindref="compound">nsShape::Oval</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(foot1_x,foot_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(foot_size_x,foot_size_y),<sp/>nsGraphics::KGreen);</highlight><highlight class="comment">//<sp/>pied<sp/>gauche</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_oval" kindref="compound">nsShape::Oval</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(foot2_x,foot_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(foot_size_x,foot_size_y),<sp/>nsGraphics::KGreen);</highlight><highlight class="comment">//<sp/>pied<sp/>droit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(TopSocle1_x,TopSocle1_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(TopSocle2_x,TopSocle2_y),<sp/>nsGraphics::KGray);</highlight><highlight class="comment">//<sp/>haut<sp/>du<sp/>socle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(DownSocle1_x,DownSocle1_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(DownSocle2_x,DownSocle2_y),<sp/>nsGraphics::KGray);</highlight><highlight class="comment">//<sp/>bas<sp/>du<sp/>socle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(Shoulder1_x,Shoulder1_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(Shoulder2_x,Shoulder2_y),<sp/>nsGraphics::KYellow);</highlight><highlight class="comment">//<sp/>épaule</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(LeftBretelle1_x,Bretelle1_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(LeftBretelle2_x,Bretelle2_y),<sp/>nsGraphics::KPurple);</highlight><highlight class="comment">//<sp/>bretelle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(RightBretelle1_x,Bretelle1_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(RightBretelle2_x,Bretelle2_y),<sp/>nsGraphics::KPurple);</highlight><highlight class="comment">//<sp/>bretelle</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_circle" kindref="compound">nsShape::Circle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(LeftButton_x,<sp/>Button_y),<sp/>Button_size,<sp/>nsGraphics::KWhite);<sp/><sp/></highlight><highlight class="comment">//bouton<sp/>gauche</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_circle" kindref="compound">nsShape::Circle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(RightButton_x,<sp/>Button_y),<sp/>Button_size,<sp/>nsGraphics::KWhite);<sp/><sp/></highlight><highlight class="comment">//bouton<sp/>droit</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_circle" kindref="compound">nsShape::Circle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(Head_x,Head_y),<sp/>Head_size,<sp/>nsGraphics::KBeige);<sp/><sp/></highlight><highlight class="comment">//tête</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_oval" kindref="compound">nsShape::Oval</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(TopHat_x,<sp/>TopHat_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(TopHat_size_x,TopHat_size_y),<sp/>nsGraphics::KYellow);</highlight><highlight class="comment">//<sp/>casquette</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_oval" kindref="compound">nsShape::Oval</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(DownHat_x,<sp/>DownHat_y),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(DownHat_size_x,DownHat_size_y),<sp/>nsGraphics::KWhite);</highlight><highlight class="comment">//<sp/>visière<sp/>de<sp/>la<sp/>casquette</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/statue.h"/>
+  </compounddef>
+</doxygen>

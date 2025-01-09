@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_4f9d2adf95a552824d2fdbdca9f6a398" kind="dir">
+    <compoundname>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl</compoundname>
+    <innerdir refid="dir_9423f88c1a0ed4dc41a67a2dec1c5120">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio</innerdir>
+    <innerdir refid="dir_15f68f5d27791ec2059dd23db9236d6e">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event</innerdir>
+    <innerdir refid="dir_a2cc1ff13d49f1b23dcb7b16b430cdae">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception</innerdir>
+    <innerdir refid="dir_b8e469d62494c34d39bee4d96a3b89c6">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics</innerdir>
+    <innerdir refid="dir_a08b179cbd591e18336129b4102f0453">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui</innerdir>
+    <innerdir refid="dir_61b0ff1c79280479569e64d838bd0a8f">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape</innerdir>
+    <innerdir refid="dir_02daf92501ea91f50a2370c00ee6c7bd">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools</innerdir>
+    <innerdir refid="dir_d384f0949c75b552cc226f58166ece8e">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition</innerdir>
+    <innerfile refid="macros_8h">macros.h</innerfile>
+    <innerfile refid="mingl_8h">mingl.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/"/>
+  </compounddef>
+</doxygen>

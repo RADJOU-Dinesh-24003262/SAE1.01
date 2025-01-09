@@ -1,0 +1,164 @@
+.TH "nsTransition::Transition" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsTransition::Transition \- Une classe représentant un \fBTransitionContract\fP en cours de lecture\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <transition\&.h>\fP
+.PP
+Inherits \fBnsTransition::TransitionContract\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTransitionFinishModes\fP { \fBFINISH_START\fP, \fBFINISH_CURRENT\fP, \fBFINISH_DESTINATION\fP }"
+.br
+.RI "TransitionMode : Liste de tout les modes de fin de la \fBTransition\fP\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransition\fP (const \fBTransitionContract\fP &contract)"
+.br
+.RI "Constructeur pour la classe \fBTransition\fP\&. "
+.ti -1c
+.RI "const \fBSystemDuration_t\fP & \fBgetElapsed\fP () const"
+.br
+.RI "Retourne le temps écoulé pour cette \fBTransition\fP\&. "
+.ti -1c
+.RI "void \fBsetElapsed\fP (const \fBSystemDuration_t\fP &elapsed)"
+.br
+.RI "Définit un nouveau temps écoulé pour cette \fBTransition\fP, puis met a jour les valeurs de la cible\&. "
+.ti -1c
+.RI "void \fBaddToElapsed\fP (const \fBSystemDuration_t\fP &addedTime)"
+.br
+.RI "Rajoute une durée au temps écoulé actuel\&. "
+.ti -1c
+.RI "const bool & \fBisReversed\fP () const"
+.br
+.RI "Indique si cette \fBTransition\fP est en train de se jouer a l'envers\&. "
+.ti -1c
+.RI "void \fBfinish\fP (const \fBTransitionFinishModes\fP &finishMode=TransitionFinishModes::FINISH_DESTINATION)"
+.br
+.RI "Marque cette \fBTransition\fP comme terminée, en utilisant le mode spécifié "
+.ti -1c
+.RI "const bool & \fBisFinished\fP () const"
+.br
+.RI "Indique si cette \fBTransition\fP est marquée comme terminée\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Une classe représentant un \fBTransitionContract\fP en cours de lecture\&. 
+.PP
+Definition at line \fB27\fP of file \fBtransition\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBnsTransition::Transition::TransitionFinishModes\fP"
+
+.PP
+TransitionMode : Liste de tout les modes de fin de la \fBTransition\fP\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIFINISH_START \fP\fP
+Ce mode de fin met les valeurs de la cible a celles de départ 
+.TP
+\fB\fIFINISH_CURRENT \fP\fP
+Ce mode de fin ne touche pas aux valeurs actuelles de la cible 
+.TP
+\fB\fIFINISH_DESTINATION \fP\fP
+Ce mode de fin met les valeurs de la cible a celles d'arrivé 
+.PP
+Definition at line \fB33\fP of file \fBtransition\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsTransition::Transition::Transition (const \fBTransitionContract\fP & contract)"
+
+.PP
+Constructeur pour la classe \fBTransition\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontract\fP : Contrat utilisé pour initialiser cette \fBTransition\fP 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "void nsTransition::Transition::addToElapsed (const \fBSystemDuration_t\fP & addedTime)"
+
+.PP
+Rajoute une durée au temps écoulé actuel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIaddedTime\fP : Durée a rajouter 
+.RE
+.PP
+
+.SS "void nsTransition::Transition::finish (const \fBTransitionFinishModes\fP & finishMode = \fCTransitionFinishModes::FINISH_DESTINATION\fP)"
+
+.PP
+Marque cette \fBTransition\fP comme terminée, en utilisant le mode spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfinishMode\fP : Mode utilisé pour finir cette \fBTransition\fP (Valeurs d'arrivé par défaut) 
+.RE
+.PP
+
+.SS "const \fBSystemDuration_t\fP & nsTransition::Transition::getElapsed () const"
+
+.PP
+Retourne le temps écoulé pour cette \fBTransition\fP\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence const vers m_elapsed 
+.RE
+.PP
+
+.SS "const bool & nsTransition::Transition::isFinished () const"
+
+.PP
+Indique si cette \fBTransition\fP est marquée comme terminée\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence const vers m_finished 
+.RE
+.PP
+
+.SS "const bool & nsTransition::Transition::isReversed () const"
+
+.PP
+Indique si cette \fBTransition\fP est en train de se jouer a l'envers\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence const vers m_reverse 
+.RE
+.PP
+
+.SS "void nsTransition::Transition::setElapsed (const \fBSystemDuration_t\fP & elapsed)"
+
+.PP
+Définit un nouveau temps écoulé pour cette \fBTransition\fP, puis met a jour les valeurs de la cible\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIelapsed\fP : Nouveau temps écoulé 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

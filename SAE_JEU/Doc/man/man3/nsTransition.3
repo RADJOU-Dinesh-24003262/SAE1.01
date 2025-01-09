@@ -1,0 +1,61 @@
+.TH "nsTransition" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsTransition \- Espace de nom pour le moteur de transition et ses composants\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBITransitionable\fP"
+.br
+.RI "Une classe abstraite pour n'importe quelle élément pouvant effectuer une transition entre deux états\&. "
+.ti -1c
+.RI "class \fBTransition\fP"
+.br
+.RI "Une classe représentant un \fBTransitionContract\fP en cours de lecture\&. "
+.ti -1c
+.RI "class \fBTransitionContract\fP"
+.br
+.RI "Une classe contenant des paramètres pour créer une transition\&. "
+.ti -1c
+.RI "class \fBTransitionEngine\fP"
+.br
+.RI "Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::chrono::duration< float, std::nano > \fBSystemDuration_t\fP"
+.br
+.RI "SystemDuration_t : Définition de type stockant une durée exprimée en nanosecondes, sous forme de float\&. "
+.ti -1c
+.RI "typedef std::chrono::time_point< std::chrono::steady_clock, \fBSystemDuration_t\fP > \fBSystemTimePoint_t\fP"
+.br
+.RI "SystemTimePoint_t : Définition de type représentant un point dans le temps basée sur l'horloge système\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Espace de nom pour le moteur de transition et ses composants\&. 
+.SH "Typedef Documentation"
+.PP 
+.SS "typedef std::chrono::duration<float, std::nano> \fBnsTransition::SystemDuration_t\fP"
+
+.PP
+SystemDuration_t : Définition de type stockant une durée exprimée en nanosecondes, sous forme de float\&. 
+.PP
+Definition at line \fB22\fP of file \fBtransition_types\&.h\fP\&.
+.SS "typedef std::chrono::time_point<std::chrono::steady_clock, \fBSystemDuration_t\fP> \fBnsTransition::SystemTimePoint_t\fP"
+
+.PP
+SystemTimePoint_t : Définition de type représentant un point dans le temps basée sur l'horloge système\&. 
+.PP
+Definition at line \fB27\fP of file \fBtransition_types\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

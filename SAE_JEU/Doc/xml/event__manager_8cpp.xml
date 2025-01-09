@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="event__manager_8cpp" kind="file" language="C++">
+    <compoundname>event_manager.cpp</compoundname>
+    <includes refid="event__manager_8h" local="yes">mingl/event/event_manager.h</includes>
+    <incdepgraph>
+      <node id="4">
+        <label>event.hpp</label>
+        <link refid="event_8hpp"/>
+      </node>
+      <node id="2">
+        <label>mingl/event/event_manager.h</label>
+        <link refid="event__manager_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp</label>
+        <link refid="event__manager_8cpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>queue</label>
+      </node>
+    </incdepgraph>
+    <briefdescription>
+<para>Gestionnaire d&apos;événements de minGL. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexandre Sollier </para>
+</simplesect>
+<simplesect kind="date"><para>Décembre 2019 </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="event__manager_8h" kindref="compound">mingl/event/event_manager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13" refid="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" kindref="member">nsEvent::EventManager::hasEvent</ref>()</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_eventQueue.size()<sp/>&gt;<sp/>0;</highlight></codeline>
+<codeline lineno="16"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>hasEvent()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18" refid="classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5" kindref="member">nsEvent::EventManager::pushEvent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structns_event_1_1_event__t" kindref="compound">Event_t</ref>&amp;<sp/>event)</highlight></codeline>
+<codeline lineno="19"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/>m_eventQueue.push(event);</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>pushEvent()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structns_event_1_1_event__t" kindref="compound">nsEvent::Event_t</ref><sp/><ref refid="classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9" kindref="member">nsEvent::EventManager::pullEvent</ref>()</highlight></codeline>
+<codeline lineno="24"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Copy<sp/>the<sp/>first<sp/>element<sp/>and<sp/>then<sp/>remove<sp/>it<sp/>from<sp/>the<sp/>queue</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structns_event_1_1_event__t" kindref="compound">Event_t</ref><sp/></highlight><highlight class="keyword">event</highlight><highlight class="normal"><sp/>=<sp/>m_eventQueue.front();</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>m_eventQueue.pop();</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>event;</highlight></codeline>
+<codeline lineno="29"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>pullEvent()</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" kindref="member">nsEvent::EventManager::clearEvents</ref>()</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!m_eventQueue.empty())</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>m_eventQueue.pop();</highlight></codeline>
+<codeline lineno="35"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>clearEvents()</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp"/>
+  </compounddef>
+</doxygen>

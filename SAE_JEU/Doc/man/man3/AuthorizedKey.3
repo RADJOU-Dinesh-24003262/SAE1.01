@@ -1,0 +1,47 @@
+.TH "AuthorizedKey" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+AuthorizedKey \- Struct containing all the authorized keys in the struct \fBCMyParam\fP\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <type\&.h>\fP
+.SS "Public Attributes"
+
+.in +1c
+.ti -1c
+.RI "const std::vector< std::string > \fBVParamChar\fP {'KeyUp', 'KeyDown', 'KeyLeft', 'KeyRight', 'TokenP1', 'TokenP2'}"
+.br
+.ti -1c
+.RI "const std::vector< std::string > \fBVParamString\fP {'ColorP1', 'ColorP2'}"
+.br
+.ti -1c
+.RI "const std::vector< std::string > \fBVParamUnsigned\fP {'NbRow', 'NbColumn'}"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Struct containing all the authorized keys in the struct \fBCMyParam\fP\&. 
+.PP
+Definition at line \fB39\fP of file \fBtype\&.h\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "const std::vector<std::string> AuthorizedKey::VParamChar {'KeyUp', 'KeyDown', 'KeyLeft', 'KeyRight', 'TokenP1', 'TokenP2'}"
+List of authorized key for the type char in a struct \fBCMyParam\fP 
+.PP
+Definition at line \fB41\fP of file \fBtype\&.h\fP\&.
+.SS "const std::vector<std::string> AuthorizedKey::VParamString {'ColorP1', 'ColorP2'}"
+List of authorized key for the type string in a struct \fBCMyParam\fP 
+.PP
+Definition at line \fB43\fP of file \fBtype\&.h\fP\&.
+.SS "const std::vector<std::string> AuthorizedKey::VParamUnsigned {'NbRow', 'NbColumn'}"
+List of authorized key for the type unsigned in a struct \fBCMyParam\fP 
+.PP
+Definition at line \fB45\fP of file \fBtype\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

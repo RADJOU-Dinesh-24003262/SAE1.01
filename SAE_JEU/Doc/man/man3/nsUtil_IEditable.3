@@ -1,0 +1,76 @@
+.TH "nsUtil::IEditable" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsUtil::IEditable \- Interface pour un objet injectable\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ieditable\&.h>\fP
+.PP
+Inherited by \fBnsException::CException\fP, \fBnsGraphics::RGBAcolor\fP, and \fBnsGraphics::Vec2D\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~IEditable\fP ()=default"
+.br
+.RI "Destructeur pour la classe \fBIEditable\fP\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual std::ostream & \fB_Edit\fP (std::ostream &os) const =0"
+.br
+.RI "Fonction appelée pour injecter l'objet courant dans un flux\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "std::ostream & \fBoperator<<\fP (std::ostream &os, const \fBIEditable\fP &Obj)"
+.br
+.RI "Surcharge de l'opérateur d'injection\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface pour un objet injectable\&. 
+.PP
+Definition at line \fB37\fP of file \fBieditable\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "std::ostream & nsUtil::IEditable::_Edit (std::ostream & os) const\fC [protected]\fP, \fC [pure virtual]\fP"
+
+.PP
+Fonction appelée pour injecter l'objet courant dans un flux\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIos\fP : Flux dans lequel injecter 
+.RE
+.PP
+
+.PP
+Implemented in \fBnsException::CException\fP, \fBnsGraphics::RGBAcolor\fP, and \fBnsGraphics::Vec2D\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "std::ostream & operator<< (std::ostream & os, const \fBIEditable\fP & Obj)\fC [friend]\fP"
+
+.PP
+Surcharge de l'opérateur d'injection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIos\fP : Flux dans lequel injecter 
+.br
+\fIObj\fP : Objet a injecter 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

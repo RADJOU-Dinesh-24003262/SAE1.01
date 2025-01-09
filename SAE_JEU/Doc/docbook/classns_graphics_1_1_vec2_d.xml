@@ -1,0 +1,1403 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_graphics_1_1_vec2_d" xml:lang="en-US">
+<title>nsGraphics::Vec2D Class Reference</title>
+<indexterm><primary>nsGraphics::Vec2D</primary></indexterm>
+<para>
+
+<para>Classe représentant un vecteur deux-dimensionnel. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;vec2d.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsGraphics::Vec2D:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for nsGraphics::Vec2D:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d_1a4a2fdd532ded3c29b7a3bd6e5a23fadf">Vec2D</link> (const int &amp;x=0, const int &amp;y=0)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d_1ae409c698404abced934b589d58513767">Vec2D</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos)</para>
+
+<para>Constructeur de recopie pour la classe <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> <link linkend="_classns_graphics_1_1_vec2_d_1aded521aea98ae5b1fdd19f4f9e2df74a">operator+</link> () const</para>
+
+<para>Opérateur unaire plus. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> <link linkend="_classns_graphics_1_1_vec2_d_1a3cc10af3b04df2c6bf85460ced5c63a7">operator-</link> () const</para>
+
+<para>Opérateur unaire moins. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> <link linkend="_classns_graphics_1_1_vec2_d_1a59d565535347c6d0974be9a2333a5806">operator+</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur d&apos;addition. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> <link linkend="_classns_graphics_1_1_vec2_d_1a6431bcd5dd86fbaf119bed9cf01a13f2">operator-</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur de soustraction. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> <link linkend="_classns_graphics_1_1_vec2_d_1afed7035dfbafeffbfac737fb39d4fb90">operator*</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur de multiplication. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> <link linkend="_classns_graphics_1_1_vec2_d_1a7eb4139a171785d5f2f337cee77b9fb0">operator*</link> (const float &amp;n) const</para>
+
+<para>Opérateur de multiplication. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> <link linkend="_classns_graphics_1_1_vec2_d_1aaabc44f047e46433d0115fbc49b3ae2f">operator/</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur de division. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> <link linkend="_classns_graphics_1_1_vec2_d_1ae3adeb741fa6137acf0edbcf02ca58af">operator/</link> (const float &amp;n) const</para>
+
+<para>Opérateur de division. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> <link linkend="_classns_graphics_1_1_vec2_d_1a43281403abbad9948eacca4d37fc61dc">operator%</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur modulo. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classns_graphics_1_1_vec2_d_1a94b4b8420a450dd284311c49cb0b2e6b">operator==</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur d&apos;égalité </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classns_graphics_1_1_vec2_d_1affaed949190e8cb5a3c8f9813b31eb0d">operator!=</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur d&apos;inégalité </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classns_graphics_1_1_vec2_d_1accfe96cfa5b8495a0b14c7087068064e">operator&lt;</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur de stricte infériorité (Vérifie la stricte infériorité de la magnitude des deux vecteurs) </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classns_graphics_1_1_vec2_d_1a30da0e7984d8c3e7a66bbdcdcc24c9cb">operator&gt;</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur de stricte supériorité (Vérifie la stricte supériorité de la magnitude des deux vecteurs) </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classns_graphics_1_1_vec2_d_1afd5e0e3ba77ef971f8d022d69a4a2647">operator&lt;=</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur d&apos;infériorité (Vérifie l&apos;infériorité de la magnitude des deux vecteurs) </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classns_graphics_1_1_vec2_d_1a478dad2852611070874c6c9e5663b570">operator&gt;=</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos) const</para>
+
+<para>Opérateur de supériorité (Vérifie la supériorité de la magnitude des deux vecteurs) </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; <link linkend="_classns_graphics_1_1_vec2_d_1a041926192c1d2c579b12dcf1eb1725d5">operator=</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos)</para>
+
+<para>Opérateur d&apos;assignement. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; <link linkend="_classns_graphics_1_1_vec2_d_1aafd8b68f1cb9dcfcf92a96714e58c5ec">operator+=</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos)</para>
+
+<para>Opérateur d&apos;addition avec assignement. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; <link linkend="_classns_graphics_1_1_vec2_d_1aa9b0986206c35bb5c0043db02548fce4">operator-=</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos)</para>
+
+<para>Opérateur de soustraction avec assignement. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; <link linkend="_classns_graphics_1_1_vec2_d_1a6e0e661361c0f3081fa2d9488978771e">operator*=</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos)</para>
+
+<para>Opérateur de multiplication avec assignement. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; <link linkend="_classns_graphics_1_1_vec2_d_1a1146ac9d05c667bb4a46140858953711">operator/=</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos)</para>
+
+<para>Opérateur de division avec assignement. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; <link linkend="_classns_graphics_1_1_vec2_d_1a57003f3d4660f986c3c21c027ac8b154">operator%=</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;pos)</para>
+
+<para>Opérateur modulo avec assignement. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classns_graphics_1_1_vec2_d_1aa02cee45c2d8aa2d9b7e08dfb6c1dfca">isColliding</link> (<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> firstCorner, <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> secondCorner) const</para>
+
+<para>Retourne vrai si le vecteur actuel est compris entre deux vecteurs formant un rectangle. </para>
+</listitem>
+            <listitem><para>double <link linkend="_classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7">computeMagnitude</link> () const</para>
+
+<para>Calcule la magnitude de ce vecteur. </para>
+</listitem>
+            <listitem><para>int <link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link> () const</para>
+
+<para>Récupère la position X (abscisse) </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d">setX</link> (int x)</para>
+
+<para>Définit la nouvelle position X (abscisse) </para>
+</listitem>
+            <listitem><para>int <link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link> () const</para>
+
+<para>Récupère la position Y (ordonnée) </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f">setY</link> (int y)</para>
+
+<para>Définit la nouvelle position Y (ordonnée) </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> <link linkend="_classns_graphics_1_1_vec2_d_1a8a4760c6a33beb77d1e7a850b44129fc">min</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;p1, const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;p2)</para>
+
+<para>Retourne le vecteur le plus petit entre les deux passés en argument. </para>
+</listitem>
+            <listitem><para>static bool <link linkend="_classns_graphics_1_1_vec2_d_1a77c8619c34dcb2e7b5d9337da0fcfe59">minf</link> (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;p1, const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp;p2)</para>
+
+<para>Retourne vrai si le premier vecteur est le plus petit des deux. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual std::ostream &amp; <link linkend="_classns_graphics_1_1_vec2_d_1ad416f3698e43099990b3d96d9099c65f">_Edit</link> (std::ostream &amp;os=std::cout) const override</para>
+
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe représentant un vecteur deux-dimensionnel. </para>
+<para>
+Definition at line <link linkend="_vec2d_8h_source_1l00025">25</link> of file <link linkend="_vec2d_8h_source">vec2d.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a4a2fdd532ded3c29b7a3bd6e5a23fadf"/><section>
+    <title>Vec2D()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Vec2D</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>Vec2D</secondary></indexterm>
+<para><computeroutput>nsGraphics::Vec2D::Vec2D (const int &amp; x = <computeroutput>0</computeroutput>
+, const int &amp; y = <computeroutput>0</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>x</entry><entry>
+<para>: Position X (abscisse) du vecteur </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>y</entry><entry>
+<para>: Position Y (ordonnée) du vecteur </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00015">15</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1ae409c698404abced934b589d58513767"/><section>
+    <title>Vec2D()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Vec2D</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>Vec2D</secondary></indexterm>
+<para><computeroutput>nsGraphics::Vec2D::Vec2D (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos)</computeroutput></para><para>
+
+<para>Constructeur de recopie pour la classe <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> a copier </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00020">20</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1ad416f3698e43099990b3d96d9099c65f"/><section>
+    <title>_Edit()</title>
+<indexterm><primary>_Edit</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>_Edit</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; nsGraphics::Vec2D::_Edit (std::ostream &amp; os = <computeroutput>std::cout</computeroutput>
+) const<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>os</entry><entry>
+<para>: Flux dans lequel injecter </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853">nsUtil::IEditable</link>.</para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00198">198</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7"/><section>
+    <title>computeMagnitude()</title>
+<indexterm><primary>computeMagnitude</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>computeMagnitude</secondary></indexterm>
+<para><computeroutput>double nsGraphics::Vec2D::computeMagnitude ( ) const</computeroutput></para><para>
+
+<para>Calcule la magnitude de ce vecteur. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Magnitude du vecteur </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00173">173</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_adf603dcb6f44ff82f3d48df141e11fe7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1"/><section>
+    <title>getX()</title>
+<indexterm><primary>getX</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>getX</secondary></indexterm>
+<para><computeroutput>int nsGraphics::Vec2D::getX ( ) const</computeroutput></para><para>
+
+<para>Récupère la position X (abscisse) </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence constante vers m_x </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00178">178</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_abcf3d729b05b3cd93e9eff21c74b89a1_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e"/><section>
+    <title>getY()</title>
+<indexterm><primary>getY</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>getY</secondary></indexterm>
+<para><computeroutput>int nsGraphics::Vec2D::getY ( ) const</computeroutput></para><para>
+
+<para>Récupère la position Y (ordonnée) </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence constante vers m_y </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00188">188</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_ae70fbda9cca27b9dc0fe068a38ae5e5e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1aa02cee45c2d8aa2d9b7e08dfb6c1dfca"/><section>
+    <title>isColliding()</title>
+<indexterm><primary>isColliding</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>isColliding</secondary></indexterm>
+<para><computeroutput>bool nsGraphics::Vec2D::isColliding (<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> firstCorner, <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> secondCorner) const</computeroutput></para><para>
+
+<para>Retourne vrai si le vecteur actuel est compris entre deux vecteurs formant un rectangle. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>firstCorner</entry><entry>
+<para>: Premier vecteur </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>secondCorner</entry><entry>
+<para>: Second vecteur </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00160">160</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_aa02cee45c2d8aa2d9b7e08dfb6c1dfca_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a8a4760c6a33beb77d1e7a850b44129fc"/><section>
+    <title>min()</title>
+<indexterm><primary>min</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>min</secondary></indexterm>
+<para><computeroutput>static <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> nsGraphics::Vec2D::min (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; p1, const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; p2)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retourne le vecteur le plus petit entre les deux passés en argument. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>p1</entry><entry>
+<para>: Premier vecteur </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>p2</entry><entry>
+<para>: Second vecteur </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00148">148</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a8a4760c6a33beb77d1e7a850b44129fc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a77c8619c34dcb2e7b5d9337da0fcfe59"/><section>
+    <title>minf()</title>
+<indexterm><primary>minf</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>minf</secondary></indexterm>
+<para><computeroutput>static bool nsGraphics::Vec2D::minf (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; p1, const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; p2)<computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Retourne vrai si le premier vecteur est le plus petit des deux. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>p1</entry><entry>
+<para>: Premier vecteur </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>p2</entry><entry>
+<para>: Second vecteur </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00155">155</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1affaed949190e8cb5a3c8f9813b31eb0d"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator!=</secondary></indexterm>
+<para><computeroutput>bool nsGraphics::Vec2D::operator!= (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur d&apos;inégalité </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel vérifier l&apos;inégalité </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00075">75</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_affaed949190e8cb5a3c8f9813b31eb0d_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a43281403abbad9948eacca4d37fc61dc"/><section>
+    <title>operator%()</title>
+<indexterm><primary>operator%</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator%</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> nsGraphics::Vec2D::operator% (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur modulo. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel faire un modulo </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00065">65</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a43281403abbad9948eacca4d37fc61dc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a57003f3d4660f986c3c21c027ac8b154"/><section>
+    <title>operator%=()</title>
+<indexterm><primary>operator%=</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator%=</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; nsGraphics::Vec2D::operator%= (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos)</computeroutput></para><para>
+
+<para>Opérateur modulo avec assignement. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel faire un modulo sur le vecteur actuel </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00140">140</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a57003f3d4660f986c3c21c027ac8b154_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a7eb4139a171785d5f2f337cee77b9fb0"/><section>
+    <title>operator*()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator*</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator*</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> nsGraphics::Vec2D::operator* (const float &amp; n) const</computeroutput></para><para>
+
+<para>Opérateur de multiplication. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>n</entry><entry>
+<para>: Nombre avec lequel multiplier le vecteur actuel </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00050">50</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1afed7035dfbafeffbfac737fb39d4fb90"/><section>
+    <title>operator*()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator*</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator*</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> nsGraphics::Vec2D::operator* (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur de multiplication. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur a multiplier </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00045">45</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_afed7035dfbafeffbfac737fb39d4fb90_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a6e0e661361c0f3081fa2d9488978771e"/><section>
+    <title>operator*=()</title>
+<indexterm><primary>operator*=</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator*=</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; nsGraphics::Vec2D::operator*= (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos)</computeroutput></para><para>
+
+<para>Opérateur de multiplication avec assignement. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel multiplier le vecteur actuel </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00124">124</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a6e0e661361c0f3081fa2d9488978771e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1aded521aea98ae5b1fdd19f4f9e2df74a"/><section>
+    <title>operator+()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator+</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> nsGraphics::Vec2D::operator+ ( ) const</computeroutput></para><para>
+
+<para>Opérateur unaire plus. </para>
+</para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00025">25</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a59d565535347c6d0974be9a2333a5806"/><section>
+    <title>operator+()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator+</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> nsGraphics::Vec2D::operator+ (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur d&apos;addition. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur a additionner </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00035">35</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a59d565535347c6d0974be9a2333a5806_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1aafd8b68f1cb9dcfcf92a96714e58c5ec"/><section>
+    <title>operator+=()</title>
+<indexterm><primary>operator+=</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator+=</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; nsGraphics::Vec2D::operator+= (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos)</computeroutput></para><para>
+
+<para>Opérateur d&apos;addition avec assignement. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel additionner le vecteur actuel </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00108">108</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_aafd8b68f1cb9dcfcf92a96714e58c5ec_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a3cc10af3b04df2c6bf85460ced5c63a7"/><section>
+    <title>operator-()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator-</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator-</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> nsGraphics::Vec2D::operator- ( ) const</computeroutput></para><para>
+
+<para>Opérateur unaire moins. </para>
+</para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00030">30</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a6431bcd5dd86fbaf119bed9cf01a13f2"/><section>
+    <title>operator-()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator-</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator-</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> nsGraphics::Vec2D::operator- (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur de soustraction. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur a soustraire </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00040">40</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a6431bcd5dd86fbaf119bed9cf01a13f2_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1aa9b0986206c35bb5c0043db02548fce4"/><section>
+    <title>operator-=()</title>
+<indexterm><primary>operator-=</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator-=</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; nsGraphics::Vec2D::operator-= (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos)</computeroutput></para><para>
+
+<para>Opérateur de soustraction avec assignement. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel soustraire le vecteur actuel </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00116">116</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_aa9b0986206c35bb5c0043db02548fce4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1ae3adeb741fa6137acf0edbcf02ca58af"/><section>
+    <title>operator/()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>operator/</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator/</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> nsGraphics::Vec2D::operator/ (const float &amp; n) const</computeroutput></para><para>
+
+<para>Opérateur de division. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>n</entry><entry>
+<para>: Nombre avec lequel diviser le vecteur actuel </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00060">60</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1aaabc44f047e46433d0115fbc49b3ae2f"/><section>
+    <title>operator/()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>operator/</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator/</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> nsGraphics::Vec2D::operator/ (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur de division. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur a diviser </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00055">55</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_aaabc44f047e46433d0115fbc49b3ae2f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a1146ac9d05c667bb4a46140858953711"/><section>
+    <title>operator/=()</title>
+<indexterm><primary>operator/=</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator/=</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; nsGraphics::Vec2D::operator/= (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos)</computeroutput></para><para>
+
+<para>Opérateur de division avec assignement. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel diviser le vecteur actuel </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00132">132</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a1146ac9d05c667bb4a46140858953711_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1accfe96cfa5b8495a0b14c7087068064e"/><section>
+    <title>operator&lt;()</title>
+<indexterm><primary>operator&lt;</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator&lt;</secondary></indexterm>
+<para><computeroutput>bool nsGraphics::Vec2D::operator&lt; (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur de stricte infériorité (Vérifie la stricte infériorité de la magnitude des deux vecteurs) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel vérifier la stricte infériorité </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00080">80</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_accfe96cfa5b8495a0b14c7087068064e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1afd5e0e3ba77ef971f8d022d69a4a2647"/><section>
+    <title>operator&lt;=()</title>
+<indexterm><primary>operator&lt;=</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator&lt;=</secondary></indexterm>
+<para><computeroutput>bool nsGraphics::Vec2D::operator&lt;= (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur d&apos;infériorité (Vérifie l&apos;infériorité de la magnitude des deux vecteurs) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel vérifier l&apos;infériorité </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00090">90</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_afd5e0e3ba77ef971f8d022d69a4a2647_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a041926192c1d2c579b12dcf1eb1725d5"/><section>
+    <title>operator=()</title>
+<indexterm><primary>operator=</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator=</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; nsGraphics::Vec2D::operator= (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos)</computeroutput></para><para>
+
+<para>Opérateur d&apos;assignement. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur source </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00100">100</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a041926192c1d2c579b12dcf1eb1725d5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a94b4b8420a450dd284311c49cb0b2e6b"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>bool nsGraphics::Vec2D::operator== (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur d&apos;égalité </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel vérifier l&apos;égalité </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00070">70</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a94b4b8420a450dd284311c49cb0b2e6b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a30da0e7984d8c3e7a66bbdcdcc24c9cb"/><section>
+    <title>operator&gt;()</title>
+<indexterm><primary>operator&gt;</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator&gt;</secondary></indexterm>
+<para><computeroutput>bool nsGraphics::Vec2D::operator&gt; (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur de stricte supériorité (Vérifie la stricte supériorité de la magnitude des deux vecteurs) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel vérifier la stricte supériorité </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00085">85</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a30da0e7984d8c3e7a66bbdcdcc24c9cb_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1a478dad2852611070874c6c9e5663b570"/><section>
+    <title>operator&gt;=()</title>
+<indexterm><primary>operator&gt;=</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>operator&gt;=</secondary></indexterm>
+<para><computeroutput>bool nsGraphics::Vec2D::operator&gt;= (const <link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link> &amp; pos) const</computeroutput></para><para>
+
+<para>Opérateur de supériorité (Vérifie la supériorité de la magnitude des deux vecteurs) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pos</entry><entry>
+<para>: Vecteur avec lequel vérifier la supériorité </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00095">95</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_a478dad2852611070874c6c9e5663b570_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d"/><section>
+    <title>setX()</title>
+<indexterm><primary>setX</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>setX</secondary></indexterm>
+<para><computeroutput>void nsGraphics::Vec2D::setX (int x)</computeroutput></para><para>
+
+<para>Définit la nouvelle position X (abscisse) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>x</entry><entry>
+<para>: Nouvelle position X </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00183">183</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f"/><section>
+    <title>setY()</title>
+<indexterm><primary>setY</primary><secondary>nsGraphics::Vec2D</secondary></indexterm>
+<indexterm><primary>nsGraphics::Vec2D</primary><secondary>setY</secondary></indexterm>
+<para><computeroutput>void nsGraphics::Vec2D::setY (int y)</computeroutput></para><para>
+
+<para>Définit la nouvelle position Y (ordonnée) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>y</entry><entry>
+<para>: Nouvelle position Y </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_vec2d_8cpp_source_1l00193">193</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/<link linkend="_vec2d_8h">vec2d.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/<link linkend="_vec2d_8cpp">vec2d.cpp</link></section>
+</section>

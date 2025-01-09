@@ -1,0 +1,293 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="gridmanagement_8h" kind="file" language="C++">
+    <compoundname>gridmanagement.h</compoundname>
+    <includes local="no">string</includes>
+    <includes refid="type_8h" local="yes">type.h</includes>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
+    <includedby refid="gridmanagement_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h</label>
+        <link refid="gridmanagement_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>type.h</label>
+        <link refid="type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="6">
+        <label>optional</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
+        <link refid="game_8cpp_source"/>
+      </node>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp</label>
+        <link refid="gridmanagement_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h</label>
+        <link refid="gridmanagement_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="gridmanagement_8h_1a6a3ca153f0817e8ba91a023b886bb662" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void ClearScreen</definition>
+        <argsstring>()</argsstring>
+        <name>ClearScreen</name>
+        <briefdescription>
+<para>Clear the current terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" line="21" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp" bodystart="113" bodyend="115" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" declline="21" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Color</definition>
+        <argsstring>(const std::string &amp;Col)</argsstring>
+        <name>Color</name>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>Col</declname>
+        </param>
+        <briefdescription>
+<para>Set the color of the future input in the terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Col</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Next color to be used </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" line="28" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" declline="28" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="gridmanagement_8h_1a9719c69096bb9d1a111ecff4023ee183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DisplayGrid</definition>
+        <argsstring>(const CMat &amp;Mat, const CMyParamV2 &amp;Param)</argsstring>
+        <name>DisplayGrid</name>
+        <param>
+          <type>const <ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref> &amp;</type>
+          <declname>Mat</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref> &amp;</type>
+          <declname>Param</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" line="37" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp" bodystart="122" bodyend="162" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" declline="37" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="gridmanagement_8h_1ae2e8e943b22b9297c505a335c58135b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void InitGrid</definition>
+        <argsstring>(CMat &amp;Mat, unsigned NbLine, unsigned NbColumn, CPosition &amp;PosPlayer1, CPosition &amp;PosPlayer2, const CMyParamV2 &amp;Param, CPosition &amp;Tp1, CPosition &amp;Tp2, std::vector&lt; CPosition &gt; &amp;PosMonster)</argsstring>
+        <name>InitGrid</name>
+        <param>
+          <type><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref> &amp;</type>
+          <declname>Mat</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>NbLine</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>NbColumn</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>PosPlayer1</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>PosPlayer2</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref> &amp;</type>
+          <declname>Param</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>Tp1</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>Tp2</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &gt; &amp;</type>
+          <declname>PosMonster</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" line="51" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" declline="51" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="gridmanagement_8h_1ab909b1026fe66b4055c0be20cd67582f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoveMonster</definition>
+        <argsstring>(std::vector&lt; CPosition &gt; &amp;PosMonster, CMat &amp;Mat, const CMyParamV2 &amp;param, const CPosition &amp;PosPlayer1, const CPosition &amp;PosPlayer2)</argsstring>
+        <name>MoveMonster</name>
+        <param>
+          <type>std::vector&lt; <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &gt; &amp;</type>
+          <declname>PosMonster</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref> &amp;</type>
+          <declname>Mat</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref> &amp;</type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>const <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>PosPlayer1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>PosPlayer2</declname>
+        </param>
+        <briefdescription>
+<para>The function will move all monsters acording to the player if he&apos;s near and if he&apos;s not in the safe zone, or the monster will be moved randomly. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">PosMonster</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position of Monsters in Mat </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">Mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the matrix to be initialized </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Param</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Set of game&apos;s parameters </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">PosPlayer1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position of the first player&apos;s token in Mat </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">PosPlayer2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position of the second player&apos;s token in Mat </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" line="67" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" declline="67" declcolumn="6"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Set of usefull functions for the grid management. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alain Casali </para>
+</simplesect>
+<simplesect kind="author"><para>Marc Laporte </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="date"><para>18 décembre 2018 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>GRIDMANAGEMENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GRIDMANAGEMENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="type_8h" kindref="compound">type.h</ref>&quot;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//nos<sp/>types</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gridmanagement_8h_1a6a3ca153f0817e8ba91a023b886bb662" kindref="member">ClearScreen</ref><sp/>();</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" kindref="member">Color</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>Col);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DisplayGrid<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param<sp/>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitGrid<sp/>(<ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>NbLine,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>NbColumn,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>PosPlayer1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>PosPlayer2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Tp1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Tp2,<sp/>std::vector<sp/>&lt;CPosition&gt;<sp/>&amp;<sp/>PosMonster);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67" refid="gridmanagement_8h_1ab909b1026fe66b4055c0be20cd67582f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gridmanagement_8h_1ab909b1026fe66b4055c0be20cd67582f" kindref="member">MoveMonster</ref>(std::vector<sp/>&lt;CPosition&gt;<sp/>&amp;<sp/>PosMonster,<sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/><sp/>Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>param,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>PosPlayer1,</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>PosPlayer2);</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>GRIDMANAGEMENT_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_glut__font_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/glut_font.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/glut_font.h</primary></indexterm>
+<para>
+
+<para>Classe utilitaire pour utiliser facilement les polices de Glut. </para>
+ 
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="glut__font_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_gui_1_1_glut_font">nsGui::GlutFont</link></para>
+
+<para>Classe listant toute les polices rendues disponibles par Glut, a utiliser avec <link linkend="_classns_gui_1_1_text">Text</link>. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacens_gui">nsGui</link></para>
+
+<para>Espace de nom pour des éléments d&apos;interface complexes. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe utilitaire pour utiliser facilement les polices de Glut. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.1 </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>28 décembre 2019 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_glut__font_8h_source">glut_font.h</link>.</para>
+</section>
+</section>

@@ -1,0 +1,107 @@
+.TH "/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h \- Set of usefull functions for the grid management\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string>\fP
+.br
+\fC#include 'type\&.h'\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBClearScreen\fP ()"
+.br
+.RI "Clear the current terminal\&. "
+.ti -1c
+.RI "void \fBColor\fP (const std::string &Col)"
+.br
+.RI "Set the color of the future input in the terminal\&. "
+.ti -1c
+.RI "void \fBDisplayGrid\fP (const \fBCMat\fP &Mat, const \fBCMyParamV2\fP &Param)"
+.br
+.ti -1c
+.RI "void \fBInitGrid\fP (\fBCMat\fP &Mat, unsigned NbLine, unsigned NbColumn, \fBCPosition\fP &PosPlayer1, \fBCPosition\fP &PosPlayer2, const \fBCMyParamV2\fP &Param, \fBCPosition\fP &Tp1, \fBCPosition\fP &Tp2, std::vector< \fBCPosition\fP > &PosMonster)"
+.br
+.ti -1c
+.RI "void \fBMoveMonster\fP (std::vector< \fBCPosition\fP > &PosMonster, \fBCMat\fP &Mat, const \fBCMyParamV2\fP &param, const \fBCPosition\fP &PosPlayer1, const \fBCPosition\fP &PosPlayer2)"
+.br
+.RI "The function will move all monsters acording to the player if he's near and if he's not in the safe zone, or the monster will be moved randomly\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Set of usefull functions for the grid management\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Alain Casali 
+.PP
+Marc Laporte 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+18 décembre 2018 
+.RE
+.PP
+
+.PP
+Definition in file \fBgridmanagement\&.h\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void ClearScreen ()"
+
+.PP
+Clear the current terminal\&. 
+.PP
+Definition at line \fB113\fP of file \fBgridmanagement\&.cpp\fP\&.
+.SS "void Color (const std::string & Col)"
+
+.PP
+Set the color of the future input in the terminal\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fICol\fP : Next color to be used 
+.RE
+.PP
+
+.SS "void DisplayGrid (const \fBCMat\fP & Mat, const \fBCMyParamV2\fP & Param)"
+
+.PP
+Definition at line \fB122\fP of file \fBgridmanagement\&.cpp\fP\&.
+.SS "void MoveMonster (std::vector< \fBCPosition\fP > & PosMonster, \fBCMat\fP & Mat, const \fBCMyParamV2\fP & param, const \fBCPosition\fP & PosPlayer1, const \fBCPosition\fP & PosPlayer2)"
+
+.PP
+The function will move all monsters acording to the player if he's near and if he's not in the safe zone, or the monster will be moved randomly\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIPosMonster\fP position of Monsters in Mat 
+.br
+\fIMat\fP the matrix to be initialized 
+.br
+\fIParam\fP Set of game's parameters 
+.br
+\fIPosPlayer1\fP position of the first player's token in Mat 
+.br
+\fIPosPlayer2\fP position of the second player's token in Mat 
+.RE
+.PP
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

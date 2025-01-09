@@ -1,0 +1,66 @@
+\hypertarget{sprite_8h_source}{}\doxysection{sprite.\+h}
+\label{sprite_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/gui/sprite.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/gui/sprite.h}}
+\mbox{\hyperlink{sprite_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00001}\mbox{\hyperlink{sprite_8h_a7815e2193b5dea24aae35f568006be9a}{00001}} }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef DISPLAY\_SPRITE\_H}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00012}00012 \textcolor{preprocessor}{\#define DISPLAY\_SPRITE\_H}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <cstdint>}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00017}00017 \textcolor{preprocessor}{\#include "{}../graphics/idrawable.h"{}}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00018}00018 \textcolor{preprocessor}{\#include "{}../graphics/rgbacolor.h"{}}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00019}00019 \textcolor{preprocessor}{\#include "{}../graphics/vec2d.h"{}}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00020}00020 \textcolor{preprocessor}{\#include "{}../transition/itransitionable.h"{}}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00022}\mbox{\hyperlink{namespacens_gui}{00022}} \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_gui}{nsGui}} \{}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00028}\mbox{\hyperlink{classns_gui_1_1_sprite}{00028}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_gui_1_1_sprite}{Sprite}} : \textcolor{keyword}{public} \mbox{\hyperlink{classns_graphics_1_1_i_drawable}{nsGraphics::IDrawable}}, \textcolor{keyword}{public} \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{nsTransition::ITransitionable}}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00029}00029 \{}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00030}00030 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00034}\mbox{\hyperlink{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78}{00034}}     \textcolor{keyword}{enum} \mbox{\hyperlink{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78}{TransitionIds}} \{}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00035}\mbox{\hyperlink{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54}{00035}}         \mbox{\hyperlink{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54}{TRANSITION\_POSITION}}, }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00036}00036     \};}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00044}00044     \mbox{\hyperlink{classns_gui_1_1_sprite_a35558b08dfeb3e3a20be52da28e33c4c}{Sprite}}(\textcolor{keyword}{const} std::string\& filename, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position = \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}());}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00053}00053     \mbox{\hyperlink{classns_gui_1_1_sprite_a35558b08dfeb3e3a20be52da28e33c4c}{Sprite}}(\textcolor{keyword}{const} std::vector<nsGraphics::RGBAcolor>\& pixelData, \textcolor{keyword}{const} uint32\_t\& \mbox{\hyperlink{sprite_8h_a410460a0a75462ae38c5c9daf5fb06ed}{rowSize}}, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position = \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}());}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00055}00055     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_sprite_ac4b29170aef06d46990b68da76480f28}{draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00057}00057     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_sprite_a7da27e2ccf7b574896662720d99c0056}{getValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, std::vector<float> \&values) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00058}00058     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_sprite_a63ad7e76b470c578aecc697203a3eb26}{setValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} std::vector<float> \&values) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00065}00065     \textcolor{keyword}{const} uint32\_t\& \mbox{\hyperlink{classns_gui_1_1_sprite_adbe04bd427b6658e0181ce167db83d05}{getRowSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00072}00072     \textcolor{keyword}{const} std::vector<nsGraphics::RGBAcolor>\& \mbox{\hyperlink{classns_gui_1_1_sprite_ad8644780a7a7dcbcd5f2e4e7a461b685}{getPixelData}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00079}00079     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& \mbox{\hyperlink{classns_gui_1_1_sprite_a1d6ad6681627aae6c4680fc936da8eb2}{getPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00086}00086     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_sprite_a4c695910c46504d1e8d47b838394a48e}{setPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position);}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00087}00087 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00093}00093     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \mbox{\hyperlink{classns_gui_1_1_sprite_a26b502e88906860373c278495794998c}{computeSize}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00095}00095 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00100}00100     \textcolor{keyword}{struct }FileBegin \{}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00101}00101         uint16\_t \mbox{\hyperlink{sprite_8h_a8c61e64b8675498cee79c59d3f8131e2}{magic}}; }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00102}00102         uint32\_t \mbox{\hyperlink{sprite_8h_a7815e2193b5dea24aae35f568006be9a}{headmagic}}; }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00103}00103         uint16\_t \mbox{\hyperlink{sprite_8h_a6ac1f454a7d4e4d64b7ff8ca39ac5920}{fileVersion}}; }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00104}00104         uint32\_t \mbox{\hyperlink{sprite_8h_af73d2febf3dc338c7c8f42922aa7131c}{pixelCount}}; }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00105}00105         uint32\_t \mbox{\hyperlink{sprite_8h_a410460a0a75462ae38c5c9daf5fb06ed}{rowSize}}; }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00106}00106         uint32\_t \mbox{\hyperlink{sprite_8h_a43e5468a3d445613419004493d2ffac8}{datamagic}}; }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00107}00107     \} \_\_attribute\_\_((packed));}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00112}00112     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} m\_position;}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00117}00117     uint32\_t m\_rowSize;}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00122}00122     std::vector<nsGraphics::RGBAcolor> m\_pixelData;}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00123}00123 \}; \textcolor{comment}{// class Sprite}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00125}00125 \} \textcolor{comment}{// namespace nsGui}}
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{sprite_8h_source_l00127}00127 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// DISPLAY\_SPRITE\_H}}
+
+\end{DoxyCode}

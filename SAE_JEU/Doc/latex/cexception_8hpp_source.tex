@@ -1,0 +1,36 @@
+\hypertarget{cexception_8hpp_source}{}\doxysection{cexception.\+hpp}
+\label{cexception_8hpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/exception/cexception.hpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/exception/cexception.hpp}}
+\mbox{\hyperlink{cexception_8hpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00021}00021 \textcolor{preprocessor}{\#ifndef CEXCEPTION\_HPP}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00022}00022 \textcolor{preprocessor}{\#define CEXCEPTION\_HPP}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00024}00024 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00026}00026 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cexception_8h}{cexception.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00028}\mbox{\hyperlink{classns_exception_1_1_c_exception_aeacba2e2180dd8c00c643e1a67cba423}{00028}} \textcolor{keyword}{inline} \mbox{\hyperlink{classns_exception_1_1_c_exception_aeacba2e2180dd8c00c643e1a67cba423}{nsException::CException::CException}}(\textcolor{keyword}{const} std::string\& Libelle \textcolor{comment}{/* = std::string () */}, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} CodErr  \textcolor{comment}{/* = KNoExc */})}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00029}00029     : m\_Libelle (Libelle)}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00030}00030     , m\_CodErr (CodErr)}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00031}00031 \{\} \textcolor{comment}{// CException()}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00033}\mbox{\hyperlink{classns_exception_1_1_c_exception_aef8e3d1a4e22ec7045d7d0b14d8b968a}{00033}} \textcolor{keyword}{inline} \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classns_exception_1_1_c_exception_aef8e3d1a4e22ec7045d7d0b14d8b968a}{nsException::CException::GetLibelle}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00034}00034 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00035}00035     \textcolor{keywordflow}{return} m\_Libelle;}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00036}00036 \} \textcolor{comment}{// GetLibelle()}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00038}\mbox{\hyperlink{classns_exception_1_1_c_exception_adf06d1598420c7b60c1b134bf2a946c2}{00038}} \textcolor{keyword}{inline} \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{classns_exception_1_1_c_exception_adf06d1598420c7b60c1b134bf2a946c2}{nsException::CException::GetCodErr}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00039}00039 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00040}00040     \textcolor{keywordflow}{return} m\_CodErr;}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00041}00041 \} \textcolor{comment}{// GetCoderr()}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00043}\mbox{\hyperlink{classns_exception_1_1_c_exception_a5ef0ababcc3ffc93f70211de1122c9a8}{00043}} \textcolor{keyword}{inline} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classns_exception_1_1_c_exception_a5ef0ababcc3ffc93f70211de1122c9a8}{nsException::CException::what}}() const noexcept}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00044}00044 \{}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00045}00045     \textcolor{keywordflow}{return} m\_Libelle.c\_str();}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00046}00046 \} \textcolor{comment}{// what()}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00048}00048 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CEXCEPTION\_HPP}}
+\DoxyCodeLine{\Hypertarget{cexception_8hpp_source_l00049}00049 }
+
+\end{DoxyCode}

@@ -1,0 +1,65 @@
+\hypertarget{rectangle_8h_source}{}\doxysection{rectangle.\+h}
+\label{rectangle_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/shape/rectangle.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/shape/rectangle.h}}
+\mbox{\hyperlink{rectangle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef RECTANGLE\_H}}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00012}00012 \textcolor{preprocessor}{\#define RECTANGLE\_H}}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shape_8h}{shape.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00016}00016 \textcolor{preprocessor}{\#include "{}../transition/itransitionable.h"{}}}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00018}00018 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_shape}{nsShape}}}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00025}\mbox{\hyperlink{classns_shape_1_1_rectangle}{00025}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_shape_1_1_rectangle}{Rectangle}} : \textcolor{keyword}{public} \mbox{\hyperlink{classns_shape_1_1_shape}{Shape}}, \textcolor{keyword}{public} \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{nsTransition::ITransitionable}}}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00028}00028 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00032}\mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247}{00032}}     \textcolor{keyword}{enum} \mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247}{TransitionIds}} \{}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00033}\mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247a7711b3fc0ebda426d84aba567ef90797}{00033}}         \mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247a7711b3fc0ebda426d84aba567ef90797}{TRANSITION\_FILL\_COLOR\_RGB}}, }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00034}\mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247a3162d563f05248a8a8e9f0ffed332ef0}{00034}}         \mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247a3162d563f05248a8a8e9f0ffed332ef0}{TRANSITION\_FILL\_COLOR\_ALPHA}}, }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00035}\mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247a8ba797ba7b99e6952ab754191bf4e553}{00035}}         \mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247a8ba797ba7b99e6952ab754191bf4e553}{TRANSITION\_BORDER\_COLOR\_RGB}}, }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00036}\mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247ad44045321ec0fd066d54f5a8f41fd947}{00036}}         \mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247ad44045321ec0fd066d54f5a8f41fd947}{TRANSITION\_BORDER\_COLOR\_ALPHA}}, }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00037}\mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247a59d3d78acfe501ec8bed5b31ac8f4230}{00037}}         \mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247a59d3d78acfe501ec8bed5b31ac8f4230}{TRANSITION\_FIRST\_POSITION}}, }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00038}\mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247a039bcc9b4d76cdb9e15debda929f41ef}{00038}}         \mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813247a039bcc9b4d76cdb9e15debda929f41ef}{TRANSITION\_SECOND\_POSITION}}, }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00039}00039     \};}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00050}00050     \mbox{\hyperlink{classns_shape_1_1_rectangle_a5d5e8052ba7c35001a30ccc7dad669e2}{Rectangle}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& firstPosition, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& secondPosition, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& fillColor,}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00051}00051               \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& borderColor = nsGraphics::KTransparent);}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00063}00063     \mbox{\hyperlink{classns_shape_1_1_rectangle_a5d5e8052ba7c35001a30ccc7dad669e2}{Rectangle}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned}\& width, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned}\& height, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& fillColor,}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00064}00064               \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& borderColor = nsGraphics::KTransparent);}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00070}00070     \textcolor{keyword}{virtual} \mbox{\hyperlink{classns_shape_1_1_rectangle}{\string~Rectangle}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00072}00072     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_rectangle_a87e5544cddc2ed7b3bfd189b796ab2a5}{draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00074}00074     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_rectangle_ad62897a44a3af8dfffca0a8a1fa10825}{getValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, std::vector<float> \&values) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00075}00075     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_rectangle_a3b3e28b92f8c22bfe159aea5a91fb5c9}{setValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} std::vector<float> \&values) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00082}00082     \mbox{\hyperlink{classns_shape_1_1_rectangle}{Rectangle}} \mbox{\hyperlink{classns_shape_1_1_rectangle_ac86de3402279c3ad0bf6b3869f8e2613}{operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00089}00089     \mbox{\hyperlink{classns_shape_1_1_rectangle}{Rectangle}} \mbox{\hyperlink{classns_shape_1_1_rectangle_af7cbf6d75b4bc8fc718d17177abdd344}{operator*}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& f) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00095}00095     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& \mbox{\hyperlink{classns_shape_1_1_rectangle_a42c38f27b247f6a411a9d1a8de5ceaa4}{getFirstPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00102}00102     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_rectangle_ae6c787fad1bc33f5a4adf8a697a9a581}{setFirstPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&firstPosition);}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00108}00108     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& \mbox{\hyperlink{classns_shape_1_1_rectangle_a276bce487fbd9514fcf8e558382d0276}{getSecondPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00115}00115     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_rectangle_ada11c6f627048c51dce9544bff758db4}{setSecondPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&secondPosition);}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00117}00117 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00121}00121     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} m\_firstPosition;}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00126}00126     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} m\_secondPosition;}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00128}00128 \}; \textcolor{comment}{// class Rectangle}}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00130}00130 \} \textcolor{comment}{// namespace nsShape}}
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{rectangle_8h_source_l00132}00132 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// RECTANGLE\_H}}
+
+\end{DoxyCode}

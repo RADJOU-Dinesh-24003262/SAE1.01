@@ -1,0 +1,173 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_graphics_1_1_i_drawable" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>nsGraphics::IDrawable</compoundname>
+    <derivedcompoundref refid="class_bg_text" prot="public" virt="non-virtual">BgText</derivedcompoundref>
+    <derivedcompoundref refid="class_bg_text" prot="public" virt="non-virtual">BgText</derivedcompoundref>
+    <derivedcompoundref refid="classns_gui_1_1_sprite" prot="public" virt="non-virtual">nsGui::Sprite</derivedcompoundref>
+    <derivedcompoundref refid="classns_gui_1_1_text" prot="public" virt="non-virtual">nsGui::Text</derivedcompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_shape" prot="public" virt="non-virtual">nsShape::Shape</derivedcompoundref>
+    <includes refid="idrawable_8h" local="no">idrawable.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>nsGraphics::IDrawable::~IDrawable</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IDrawable</name>
+        <qualifiedname>nsGraphics::IDrawable::~IDrawable</qualifiedname>
+        <briefdescription>
+<para>Destructeur pour la classe <ref refid="classns_graphics_1_1_i_drawable" kindref="compound">IDrawable</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/idrawable.h" line="37" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>void nsGraphics::IDrawable::draw</definition>
+        <argsstring>(MinGL &amp;window) const =0</argsstring>
+        <name>draw</name>
+        <qualifiedname>nsGraphics::IDrawable::draw</qualifiedname>
+        <reimplementedby refid="class_bg_text_1a01df624a8d498766a9eb579eb18f2326">draw</reimplementedby>
+        <reimplementedby refid="class_bg_text_1a55fdeb5f3e12dcc2926c87f80fddc6c3">draw</reimplementedby>
+        <reimplementedby refid="classns_gui_1_1_sprite_1ac4b29170aef06d46990b68da76480f28">draw</reimplementedby>
+        <reimplementedby refid="classns_gui_1_1_text_1a8b3f43f7582246e916bb2e9403be2180">draw</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5">draw</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_circle_1a03be5cdd7d6a0feaa7d6b0a819389a7a">draw</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_oval_1a93036caafaf315f62676e95dccb5ec65">draw</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_line_1a593ce7771accbbe3bb0f0baf70ece47b">draw</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_triangle_1a5586345f4e15181f994a0d4946f61353">draw</reimplementedby>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Fonction pour afficher l&apos;objet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/idrawable.h" line="43" column="18"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classns_graphics_1_1_i_drawable_1a9bb3952d4e675a663f2dbbda11e79395" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+        <definition>MinGL &amp; operator&lt;&lt;</definition>
+        <argsstring>(MinGL &amp;window, const IDrawable &amp;drawable)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>nsGraphics::IDrawable::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_i_drawable" kindref="compound">IDrawable</ref> &amp;</type>
+          <declname>drawable</declname>
+        </param>
+        <briefdescription>
+<para>Surcharge de l&apos;opérateur d&apos;injection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">window</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Fenêtre dans laquelle injecter l&apos;élément </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">drawable</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Elément a injecter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/idrawable.h" line="51" column="12" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/idrawable.h" bodystart="51" bodyend="56"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface pour un objet affichable. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BgText</label>
+        <link refid="class_bg_text"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>nsGraphics::IDrawable</label>
+        <link refid="classns_graphics_1_1_i_drawable"/>
+      </node>
+      <node id="3">
+        <label>nsGui::Sprite</label>
+        <link refid="classns_gui_1_1_sprite"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>nsGui::Text</label>
+        <link refid="classns_gui_1_1_text"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>nsShape::Circle</label>
+        <link refid="classns_shape_1_1_circle"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>nsShape::Line</label>
+        <link refid="classns_shape_1_1_line"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>nsShape::Oval</label>
+        <link refid="classns_shape_1_1_oval"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>nsShape::Rectangle</label>
+        <link refid="classns_shape_1_1_rectangle"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>nsShape::Shape</label>
+        <link refid="classns_shape_1_1_shape"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>nsShape::Triangle</label>
+        <link refid="classns_shape_1_1_triangle"/>
+        <childnode refid="5" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/idrawable.h" line="29" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/idrawable.h" bodystart="30" bodyend="58"/>
+    <listofallmembers>
+      <member refid="classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51" prot="public" virt="pure-virtual"><scope>nsGraphics::IDrawable</scope><name>draw</name></member>
+      <member refid="classns_graphics_1_1_i_drawable_1a9bb3952d4e675a663f2dbbda11e79395" prot="public" virt="non-virtual"><scope>nsGraphics::IDrawable</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867" prot="public" virt="virtual"><scope>nsGraphics::IDrawable</scope><name>~IDrawable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

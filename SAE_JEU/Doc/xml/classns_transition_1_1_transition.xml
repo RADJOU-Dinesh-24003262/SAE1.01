@@ -1,0 +1,391 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_transition_1_1_transition" kind="class" language="C++" prot="public">
+    <compoundname>nsTransition::Transition</compoundname>
+    <basecompoundref refid="classns_transition_1_1_transition_contract" prot="public" virt="non-virtual">nsTransition::TransitionContract</basecompoundref>
+    <includes refid="transition_8h" local="no">transition.h</includes>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TransitionFinishModes</name>
+        <qualifiedname>nsTransition::Transition::TransitionFinishModes</qualifiedname>
+        <enumvalue id="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4" prot="public">
+          <name>FINISH_START</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ce mode de fin met les valeurs de la cible a celles de départ </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f" prot="public">
+          <name>FINISH_CURRENT</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ce mode de fin ne touche pas aux valeurs actuelles de la cible </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e" prot="public">
+          <name>FINISH_DESTINATION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Ce mode de fin met les valeurs de la cible a celles d&apos;arrivé </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>TransitionMode : Liste de tout les modes de fin de la <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="33" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" bodystart="33" bodyend="37"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classns_transition_1_1_transition_1a5f246bf1358d31b1385bebebe6b4739f" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6" kindref="member">SystemTimePoint_t</ref></type>
+        <definition>SystemTimePoint_t nsTransition::Transition::m_startTime</definition>
+        <argsstring></argsstring>
+        <name>m_startTime</name>
+        <qualifiedname>nsTransition::Transition::m_startTime</qualifiedname>
+        <briefdescription>
+<para>m_startTime : Stocke le temps du début de cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="93" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" bodystart="93" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classns_transition_1_1_transition_1a96975bc3d4641f4a6b07d6190a8d9ecd" prot="private" static="no" mutable="no">
+        <type><ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref></type>
+        <definition>SystemDuration_t nsTransition::Transition::m_elapsed</definition>
+        <argsstring></argsstring>
+        <name>m_elapsed</name>
+        <qualifiedname>nsTransition::Transition::m_elapsed</qualifiedname>
+        <briefdescription>
+<para>m_elapsed : Stocke le temps écoulé </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="98" column="22" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classns_transition_1_1_transition_1a411c9072b6185e08bf6dedad2613a7fc" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool nsTransition::Transition::m_reverse</definition>
+        <argsstring></argsstring>
+        <name>m_reverse</name>
+        <qualifiedname>nsTransition::Transition::m_reverse</qualifiedname>
+        <briefdescription>
+<para>m_reverse : Flag set si cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> se joue a l&apos;envers i.e. se jouant des valeurs d&apos;arrivé vers celles de départ </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="104" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" bodystart="104" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classns_transition_1_1_transition_1abe61245c03f50b8b916e300f0b9001f7" prot="private" static="no" mutable="no">
+        <type>bool</type>
+        <definition>bool nsTransition::Transition::m_finished</definition>
+        <argsstring></argsstring>
+        <name>m_finished</name>
+        <qualifiedname>nsTransition::Transition::m_finished</qualifiedname>
+        <briefdescription>
+<para>m_finished : Flag set si cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> doit être considérée terminée Le moteur de transition utilisé doit enlever une telle <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> de sa liste </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="110" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_transition_1_1_transition_1a7c3e692c43aceca5e4f716f3ae22bf05" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nsTransition::Transition::Transition</definition>
+        <argsstring>(const TransitionContract &amp;contract)</argsstring>
+        <name>Transition</name>
+        <qualifiedname>nsTransition::Transition::Transition</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_transition_1_1_transition_contract" kindref="compound">TransitionContract</ref> &amp;</type>
+          <declname>contract</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur pour la classe <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">contract</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Contrat utilisé pour initialiser cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="44" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_transition_1a616e0ef596d4e8ebb185a6cf0a685924" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref> &amp;</type>
+        <definition>const SystemDuration_t &amp; nsTransition::Transition::getElapsed</definition>
+        <argsstring>() const</argsstring>
+        <name>getElapsed</name>
+        <qualifiedname>nsTransition::Transition::getElapsed</qualifiedname>
+        <briefdescription>
+<para>Retourne le temps écoulé pour cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Une référence const vers m_elapsed </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="51" column="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_transition_1a0a8e848a50c2e05dc72800abfc6dd6ef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsTransition::Transition::setElapsed</definition>
+        <argsstring>(const SystemDuration_t &amp;elapsed)</argsstring>
+        <name>setElapsed</name>
+        <qualifiedname>nsTransition::Transition::setElapsed</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref> &amp;</type>
+          <declname>elapsed</declname>
+        </param>
+        <briefdescription>
+<para>Définit un nouveau temps écoulé pour cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref>, puis met a jour les valeurs de la cible. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">elapsed</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Nouveau temps écoulé </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="59" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_transition_1abb421b44828c7b6dec60a0256a97b3d9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsTransition::Transition::addToElapsed</definition>
+        <argsstring>(const SystemDuration_t &amp;addedTime)</argsstring>
+        <name>addToElapsed</name>
+        <qualifiedname>nsTransition::Transition::addToElapsed</qualifiedname>
+        <param>
+          <type>const <ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref> &amp;</type>
+          <declname>addedTime</declname>
+        </param>
+        <briefdescription>
+<para>Rajoute une durée au temps écoulé actuel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">addedTime</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Durée a rajouter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="66" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_transition_1ab32ef25219cd2227746444ac8794266a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const bool &amp;</type>
+        <definition>const bool &amp; nsTransition::Transition::isReversed</definition>
+        <argsstring>() const</argsstring>
+        <name>isReversed</name>
+        <qualifiedname>nsTransition::Transition::isReversed</qualifiedname>
+        <briefdescription>
+<para>Indique si cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> est en train de se jouer a l&apos;envers. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Une référence const vers m_reverse </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="73" column="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_transition_1a8c8c7caf7326e24ffa540093ed12f581" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsTransition::Transition::finish</definition>
+        <argsstring>(const TransitionFinishModes &amp;finishMode=TransitionFinishModes::FINISH_DESTINATION)</argsstring>
+        <name>finish</name>
+        <qualifiedname>nsTransition::Transition::finish</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19" kindref="member">TransitionFinishModes</ref> &amp;</type>
+          <declname>finishMode</declname>
+          <defval>TransitionFinishModes::FINISH_DESTINATION</defval>
+        </param>
+        <briefdescription>
+<para>Marque cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> comme terminée, en utilisant le mode spécifié </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">finishMode</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Mode utilisé pour finir cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> (Valeurs d&apos;arrivé par défaut) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="80" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_transition_1ad9d358bee54825d2a8bf83e9e21e398b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const bool &amp;</type>
+        <definition>const bool &amp; nsTransition::Transition::isFinished</definition>
+        <argsstring>() const</argsstring>
+        <name>isFinished</name>
+        <qualifiedname>nsTransition::Transition::isFinished</qualifiedname>
+        <briefdescription>
+<para>Indique si cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> est marquée comme terminée. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Une référence const vers m_finished </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="87" column="16"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classns_transition_1_1_transition_1adad8f7fad9145677c0e4cbb7012f0f7d" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsTransition::Transition::updateValues</definition>
+        <argsstring>()</argsstring>
+        <name>updateValues</name>
+        <qualifiedname>nsTransition::Transition::updateValues</qualifiedname>
+        <briefdescription>
+<para>Calcule et définit les nouvelles valeurs a la cible, basé sur le temps écoulé, la durée de la transition et le temps de départ. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="117" column="10"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_transition_1a23ab128b87f3cfb133fcd53745909ff9" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsTransition::Transition::handleEndlife</definition>
+        <argsstring>()</argsstring>
+        <name>handleEndlife</name>
+        <qualifiedname>nsTransition::Transition::handleEndlife</qualifiedname>
+        <briefdescription>
+<para>Appelé quand cette <ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref> s&apos;est terminée. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="123" column="10"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Une classe représentant un <ref refid="classns_transition_1_1_transition_contract" kindref="compound">TransitionContract</ref> en cours de lecture. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>nsTransition::Transition</label>
+        <link refid="classns_transition_1_1_transition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nsTransition::TransitionContract</label>
+        <link refid="classns_transition_1_1_transition_contract"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="3">
+        <label>nsTransition::ITransitionable</label>
+        <link refid="classns_transition_1_1_i_transitionable"/>
+      </node>
+      <node id="1">
+        <label>nsTransition::Transition</label>
+        <link refid="classns_transition_1_1_transition"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nsTransition::TransitionContract</label>
+        <link refid="classns_transition_1_1_transition_contract"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_target</edgelabel>
+        </childnode>
+      </node>
+    </collaborationgraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" line="27" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h" bodystart="28" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classns_transition_1_1_transition_1abb421b44828c7b6dec60a0256a97b3d9" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>addToElapsed</name></member>
+      <member refid="classns_transition_1_1_transition_1a8c8c7caf7326e24ffa540093ed12f581" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>finish</name></member>
+      <member refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>FINISH_CURRENT</name></member>
+      <member refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>FINISH_DESTINATION</name></member>
+      <member refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>FINISH_START</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a8dc505c54df5d1f09a482a1b56676cd4" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>getBeginning</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1ae4ce420a4376e1d372efb3fd046410df" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>getDestination</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a9b900986c8f271729f99c88fa1b0a5e1" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>getDuration</name></member>
+      <member refid="classns_transition_1_1_transition_1a616e0ef596d4e8ebb185a6cf0a685924" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>getElapsed</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a34a594d05171628bca81120c768c86b9" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>getId</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a464b06c739e50a374c4d11509cf6e5ee" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>getTarget</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1ad5d6524d7e2eeddf9f06204b8245c484" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>getTransitionMode</name></member>
+      <member refid="classns_transition_1_1_transition_1a23ab128b87f3cfb133fcd53745909ff9" prot="private" virt="non-virtual"><scope>nsTransition::Transition</scope><name>handleEndlife</name></member>
+      <member refid="classns_transition_1_1_transition_1ad9d358bee54825d2a8bf83e9e21e398b" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>isFinished</name></member>
+      <member refid="classns_transition_1_1_transition_1ab32ef25219cd2227746444ac8794266a" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>isReversed</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a5f804f0f4cc00d48e139ff93c5469954" prot="protected" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_beginning</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a5c317b573104f3d3c9caafbc3014ac16" prot="protected" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_delay</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1adc660e53bde2e552bb4148ac7abc4e42" prot="protected" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_destination</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1ac95072df084f1edbd63479c68228b9d6" prot="protected" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_destinationCallback</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a0c8ac97863022965d6ac0539d972c325" prot="protected" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_duration</name></member>
+      <member refid="classns_transition_1_1_transition_1a96975bc3d4641f4a6b07d6190a8d9ecd" prot="private" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_elapsed</name></member>
+      <member refid="classns_transition_1_1_transition_1abe61245c03f50b8b916e300f0b9001f7" prot="private" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_finished</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a48e1b58bc26cb8b6167fb6b76911c941" prot="protected" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_id</name></member>
+      <member refid="classns_transition_1_1_transition_1a411c9072b6185e08bf6dedad2613a7fc" prot="private" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_reverse</name></member>
+      <member refid="classns_transition_1_1_transition_1a5f246bf1358d31b1385bebebe6b4739f" prot="private" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_startTime</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a1066c3c1526a519276b75a4f4c5206b2" prot="protected" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_target</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a9634edf746d8605e78ae30f7a0e6efd3" prot="protected" virt="non-virtual"><scope>nsTransition::Transition</scope><name>m_transitionMode</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a40118ebf3c1a0a486934ce2b9ddc3edba8e6b597d9cc193da6eb40a6be5dc544b" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>MODE_FINITE</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a40118ebf3c1a0a486934ce2b9ddc3edbada40ee822d94803e81878d415e46ef6a" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>MODE_FINITE_REVERSE</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a40118ebf3c1a0a486934ce2b9ddc3edbaaf7f662702b3f37a41b8cfb86598f857" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>MODE_LOOP</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a40118ebf3c1a0a486934ce2b9ddc3edba5aa6e1fbf9670aa9ecd96beff2ba6abb" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>MODE_LOOP_SMOOTH</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a8f1ebafd9966553678fd7845f35bac33" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>setDestinationCallback</name></member>
+      <member refid="classns_transition_1_1_transition_1a0a8e848a50c2e05dc72800abfc6dd6ef" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>setElapsed</name></member>
+      <member refid="classns_transition_1_1_transition_1a7c3e692c43aceca5e4f716f3ae22bf05" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>Transition</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a8ec4ef83c08901c9b93cec5eb0bfd06b" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>TransitionContract</name></member>
+      <member refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>TransitionFinishModes</name></member>
+      <member refid="classns_transition_1_1_transition_contract_1a40118ebf3c1a0a486934ce2b9ddc3edb" prot="public" virt="non-virtual"><scope>nsTransition::Transition</scope><name>TransitionMode</name></member>
+      <member refid="classns_transition_1_1_transition_1adad8f7fad9145677c0e4cbb7012f0f7d" prot="private" virt="non-virtual"><scope>nsTransition::Transition</scope><name>updateValues</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

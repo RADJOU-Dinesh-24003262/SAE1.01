@@ -1,0 +1,124 @@
+\hypertarget{gridmanagement_8h}{}\doxysection{/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Jeu/gridmanagement.h File Reference}
+\label{gridmanagement_8h}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/Jeu/gridmanagement.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/Jeu/gridmanagement.h}}
+
+
+Set of usefull functions for the grid management.  
+
+
+{\ttfamily \#include $<$string$>$}\newline
+{\ttfamily \#include \char`\"{}type.\+h\char`\"{}}\newline
+Include dependency graph for gridmanagement.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gridmanagement_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{gridmanagement_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{gridmanagement_8h_a6a3ca153f0817e8ba91a023b886bb662}{Clear\+Screen}} ()
+\begin{DoxyCompactList}\small\item\em Clear the current terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gridmanagement_8h_a7f0df05a97c053bfa8a3e5863b0a0e80}{Color}} (const std\+::string \&Col)
+\begin{DoxyCompactList}\small\item\em Set the color of the future input in the terminal. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{gridmanagement_8h_a9719c69096bb9d1a111ecff4023ee183}{Display\+Grid}} (const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&Mat, const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&Param)
+\item 
+\mbox{\Hypertarget{gridmanagement_8h_ae2e8e943b22b9297c505a335c58135b6}\label{gridmanagement_8h_ae2e8e943b22b9297c505a335c58135b6}} 
+void {\bfseries Init\+Grid} (\mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&Mat, unsigned Nb\+Line, unsigned Nb\+Column, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos\+Player1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos\+Player2, const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&Param, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Tp1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Tp2, std\+::vector$<$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ \&Pos\+Monster)
+\item 
+void \mbox{\hyperlink{gridmanagement_8h_ab909b1026fe66b4055c0be20cd67582f}{Move\+Monster}} (std\+::vector$<$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ \&Pos\+Monster, \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&Mat, const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&param, const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos\+Player1, const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos\+Player2)
+\begin{DoxyCompactList}\small\item\em The function will move all monsters acording to the player if he\textquotesingle{}s near and if he\textquotesingle{}s not in the safe zone, or the monster will be moved randomly. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Set of usefull functions for the grid management. 
+
+\begin{DoxyAuthor}{Author}
+Alain Casali 
+
+Marc Laporte 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18 décembre 2018 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{gridmanagement_8h_source}{gridmanagement.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{gridmanagement_8h_a6a3ca153f0817e8ba91a023b886bb662}\label{gridmanagement_8h_a6a3ca153f0817e8ba91a023b886bb662}} 
+\index{gridmanagement.h@{gridmanagement.h}!ClearScreen@{ClearScreen}}
+\index{ClearScreen@{ClearScreen}!gridmanagement.h@{gridmanagement.h}}
+\doxysubsubsection{\texorpdfstring{ClearScreen()}{ClearScreen()}}
+{\footnotesize\ttfamily void Clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Clear the current terminal. 
+
+
+
+Definition at line \mbox{\hyperlink{gridmanagement_8cpp_source_l00113}{113}} of file \mbox{\hyperlink{gridmanagement_8cpp_source}{gridmanagement.\+cpp}}.
+
+\mbox{\Hypertarget{gridmanagement_8h_a7f0df05a97c053bfa8a3e5863b0a0e80}\label{gridmanagement_8h_a7f0df05a97c053bfa8a3e5863b0a0e80}} 
+\index{gridmanagement.h@{gridmanagement.h}!Color@{Color}}
+\index{Color@{Color}!gridmanagement.h@{gridmanagement.h}}
+\doxysubsubsection{\texorpdfstring{Color()}{Color()}}
+{\footnotesize\ttfamily void Color (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{Col }\end{DoxyParamCaption})}
+
+
+
+Set the color of the future input in the terminal. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Col} & \+: Next color to be used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{gridmanagement_8h_a9719c69096bb9d1a111ecff4023ee183}\label{gridmanagement_8h_a9719c69096bb9d1a111ecff4023ee183}} 
+\index{gridmanagement.h@{gridmanagement.h}!DisplayGrid@{DisplayGrid}}
+\index{DisplayGrid@{DisplayGrid}!gridmanagement.h@{gridmanagement.h}}
+\doxysubsubsection{\texorpdfstring{DisplayGrid()}{DisplayGrid()}}
+{\footnotesize\ttfamily void Display\+Grid (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{Mat,  }\item[{const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&}]{Param }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{gridmanagement_8cpp_source_l00122}{122}} of file \mbox{\hyperlink{gridmanagement_8cpp_source}{gridmanagement.\+cpp}}.
+
+\mbox{\Hypertarget{gridmanagement_8h_ab909b1026fe66b4055c0be20cd67582f}\label{gridmanagement_8h_ab909b1026fe66b4055c0be20cd67582f}} 
+\index{gridmanagement.h@{gridmanagement.h}!MoveMonster@{MoveMonster}}
+\index{MoveMonster@{MoveMonster}!gridmanagement.h@{gridmanagement.h}}
+\doxysubsubsection{\texorpdfstring{MoveMonster()}{MoveMonster()}}
+{\footnotesize\ttfamily void Move\+Monster (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ \&}]{Pos\+Monster,  }\item[{\mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{Mat,  }\item[{const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&}]{param,  }\item[{const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Pos\+Player1,  }\item[{const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Pos\+Player2 }\end{DoxyParamCaption})}
+
+
+
+The function will move all monsters acording to the player if he\textquotesingle{}s near and if he\textquotesingle{}s not in the safe zone, or the monster will be moved randomly. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em Pos\+Monster} & position of Monsters in Mat \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em Mat} & the matrix to be initialized \\
+\hline
+\mbox{\texttt{ in}}  & {\em Param} & Set of game\textquotesingle{}s parameters \\
+\hline
+\mbox{\texttt{ in}}  & {\em Pos\+Player1} & position of the first player\textquotesingle{}s token in Mat \\
+\hline
+\mbox{\texttt{ in}}  & {\em Pos\+Player2} & position of the second player\textquotesingle{}s token in Mat \\
+\hline
+\end{DoxyParams}

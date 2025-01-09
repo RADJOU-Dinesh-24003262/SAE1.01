@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="structns_event_1_1_event__t" kind="struct" language="C++" prot="public">
+    <compoundname>nsEvent::Event_t</compoundname>
+    <includes refid="event_8hpp" local="no">event.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c" prot="public" static="no" mutable="no">
+        <type><ref refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72" kindref="member">EventType_t</ref></type>
+        <definition>EventType_t nsEvent::Event_t::eventType</definition>
+        <argsstring></argsstring>
+        <name>eventType</name>
+        <qualifiedname>nsEvent::Event_t::eventType</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Type de l&apos;événement </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="63" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="63" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" prot="public" static="no" mutable="no">
+        <type><ref refid="unionns_event_1_1_event_data__t" kindref="compound">EventData_t</ref></type>
+        <definition>EventData_t nsEvent::Event_t::eventData</definition>
+        <argsstring></argsstring>
+        <name>eventData</name>
+        <qualifiedname>nsEvent::Event_t::eventData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Données de l&apos;événement </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="64" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="64" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Possède des données pour un événement. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="2">
+        <label>nsEvent::EventData_t</label>
+        <link refid="unionns_event_1_1_event_data__t"/>
+        <childnode refid="3" relation="usage">
+          <edgelabel>clickData</edgelabel>
+        </childnode>
+        <childnode refid="4" relation="usage">
+          <edgelabel>moveData</edgelabel>
+        </childnode>
+      </node>
+      <node id="1">
+        <label>nsEvent::Event_t</label>
+        <link refid="structns_event_1_1_event__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>eventData</edgelabel>
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nsEvent::MouseClickData_t</label>
+        <link refid="structns_event_1_1_mouse_click_data__t"/>
+      </node>
+      <node id="4">
+        <label>nsEvent::MouseMoveData_t</label>
+        <link refid="structns_event_1_1_mouse_move_data__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="62" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="62" bodyend="65"/>
+    <listofallmembers>
+      <member refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" prot="public" virt="non-virtual"><scope>nsEvent::Event_t</scope><name>eventData</name></member>
+      <member refid="structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c" prot="public" virt="non-virtual"><scope>nsEvent::Event_t</scope><name>eventType</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

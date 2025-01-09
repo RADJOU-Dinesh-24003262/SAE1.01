@@ -1,0 +1,57 @@
+\hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source}{}\doxysection{main.\+cpp}
+\label{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/06-\/Sprite/main.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/06-\/Sprite/main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#define FPS\_LIMIT 60}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mingl_8h}{mingl/mingl.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{sprite_8h}{mingl/gui/sprite.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00010}00010 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00012}00012 \textcolor{keywordtype}{int} main()}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00014}00014     \textcolor{comment}{// Initialise le système}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00015}00015     \mbox{\hyperlink{class_min_g_l}{MinGL}} window(\textcolor{stringliteral}{"{}06 -\/ Sprite"{}}, \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(640, 640), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(128, 128), nsGraphics::KBlack);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00016}00016     window.initGlut();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00017}00017     window.initGraphic();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00019}00019     \textcolor{comment}{// Instancie le sprite}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00020}00020     \mbox{\hyperlink{classns_gui_1_1_sprite}{nsGui::Sprite}} doggo(\textcolor{stringliteral}{"{}res/doggo.si2"{}}, \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(195, 195));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00022}00022     \textcolor{comment}{// Variable qui tient le temps de frame}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00023}00023     chrono::microseconds frameTime = chrono::microseconds::zero();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00025}00025     \textcolor{comment}{// On fait tourner la boucle tant que la fenêtre est ouverte}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00026}00026     \textcolor{keywordflow}{while} (window.isOpen())}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00027}00027     \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00028}00028         \textcolor{comment}{// Récupère l'heure actuelle}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00029}00029         chrono::time\_point<chrono::steady\_clock> start = chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00031}00031         \textcolor{comment}{// On efface la fenêtre}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00032}00032         window.clearScreen();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00034}00034         \textcolor{comment}{// On affiche l'image}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00035}00035         window << doggo;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00037}00037         \textcolor{comment}{// On finit la frame en cours}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00038}00038         window.finishFrame();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00040}00040         \textcolor{comment}{// On vide la queue d'évènements}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00041}00041         window.getEventManager().clearEvents();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00043}00043         \textcolor{comment}{// On attend un peu pour limiter le framerate et soulager le CPU}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00044}00044         this\_thread::sleep\_for(chrono::milliseconds(1000 / FPS\_LIMIT) -\/ chrono::duration\_cast<chrono::microseconds>(chrono::steady\_clock::now() -\/ start));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00046}00046         \textcolor{comment}{// On récupère le temps de frame}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00047}00047         frameTime = chrono::duration\_cast<chrono::microseconds>(chrono::steady\_clock::now() -\/ start);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00048}00048     \}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00050}00050     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_l00051}00051 \}}
+
+\end{DoxyCode}

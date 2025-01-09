@@ -1,0 +1,60 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_oval_8h_source" xml:lang="en-US">
+<title>oval.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_oval_8h_source_1l00001"/>00001 
+<anchor xml:id="_oval_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;OVAL_H</emphasis>
+<anchor xml:id="_oval_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;OVAL_H</emphasis>
+<anchor xml:id="_oval_8h_source_1l00013"/>00013 
+<anchor xml:id="_oval_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_shape_8h">shape.h</link>&quot;</emphasis>
+<anchor xml:id="_oval_8h_source_1l00015"/>00015 
+<anchor xml:id="_oval_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;../transition/itransitionable.h&quot;</emphasis>
+<anchor xml:id="_oval_8h_source_1l00017"/>00017 
+<anchor xml:id="_oval_8h_source_1l00018"/>00018 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_shape">nsShape</link>
+<anchor xml:id="_oval_8h_source_1l00019"/>00019 {
+<anchor xml:id="_oval_8h_source_1l00020"/>00020 
+<anchor xml:id="_oval_8h_source_1l00025"/><link linkend="_classns_shape_1_1_oval">00025</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_shape_1_1_oval">Oval</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_shape_1_1_shape">Shape</link>,&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_transition_1_1_i_transitionable">nsTransition::ITransitionable</link>
+<anchor xml:id="_oval_8h_source_1l00026"/>00026 {
+<anchor xml:id="_oval_8h_source_1l00027"/>00027 
+<anchor xml:id="_oval_8h_source_1l00028"/>00028 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_oval_8h_source_1l00032"/><link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51f">00032</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51f">TransitionIds</link>&#32;{
+<anchor xml:id="_oval_8h_source_1l00033"/><link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa11de15749de0fd7d832aaadcd9850ee1">00033</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa11de15749de0fd7d832aaadcd9850ee1">TRANSITION_FILL_COLOR_RGB</link>,&#32;
+<anchor xml:id="_oval_8h_source_1l00034"/><link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa16791213f05fcf1ef8d379521bfba0fa">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa16791213f05fcf1ef8d379521bfba0fa">TRANSITION_FILL_COLOR_ALPHA</link>,&#32;
+<anchor xml:id="_oval_8h_source_1l00035"/><link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa9cd5532f1ff73015ed6a5741625bc8de">00035</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa9cd5532f1ff73015ed6a5741625bc8de">TRANSITION_BORDER_COLOR_RGB</link>,&#32;
+<anchor xml:id="_oval_8h_source_1l00036"/><link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa2959f9a10af80841f7b581bd6e65df48">00036</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa2959f9a10af80841f7b581bd6e65df48">TRANSITION_BORDER_COLOR_ALPHA</link>,&#32;
+<anchor xml:id="_oval_8h_source_1l00037"/><link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa84bcce94438bb134d3d344ef0ae27fa4">00037</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa84bcce94438bb134d3d344ef0ae27fa4">TRANSITION_POSITION</link>,&#32;
+<anchor xml:id="_oval_8h_source_1l00038"/><link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fad7142f5e149dd1f2d7c1b35f390ce2b4">00038</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fad7142f5e149dd1f2d7c1b35f390ce2b4">TRANSITION_RADIUS</link>,&#32;
+<anchor xml:id="_oval_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_oval_8h_source_1l00040"/>00040 
+<anchor xml:id="_oval_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_oval_1af839fdfa08b1b77edc54a83e1abcadfb">Oval</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;radius,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;fillColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;borderColor&#32;=&#32;nsGraphics::KTransparent);
+<anchor xml:id="_oval_8h_source_1l00050"/>00050 
+<anchor xml:id="_oval_8h_source_1l00055"/><link linkend="_classns_shape_1_1_oval_1a323e0bcaf712c2ddad124adc42ca433b">00055</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classns_shape_1_1_oval_1a323e0bcaf712c2ddad124adc42ca433b">~Oval</link>()&#32;<emphasis role="keyword">override</emphasis>&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+<anchor xml:id="_oval_8h_source_1l00056"/>00056 
+<anchor xml:id="_oval_8h_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_oval_1a93036caafaf315f62676e95dccb5ec65">draw</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+<anchor xml:id="_oval_8h_source_1l00058"/>00058 
+<anchor xml:id="_oval_8h_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_oval_1a24b1974daa7894aee5dce3edb9056e03">getValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;std::vector&lt;float&gt;&#32;&amp;values)&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="_oval_8h_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_oval_1a56c7b08484c2dc730e4850ff191aa80d">setValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;float&gt;&#32;&amp;values)&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="_oval_8h_source_1l00061"/>00061 
+<anchor xml:id="_oval_8h_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_oval">Oval</link>&#32;<link linkend="_classns_shape_1_1_oval_1af87d45ca6ab470b17189fc1d50a14343">operator+</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_oval_1a446b4eee9569adca380f5f9ba1ddc832">getPosition</link>)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_oval_8h_source_1l00068"/>00068 
+<anchor xml:id="_oval_8h_source_1l00074"/>00074 &#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_oval">Oval</link>&#32;<link linkend="_classns_shape_1_1_oval_1a265f23778e17f28a9cf247bf3fe25c9d">operator*</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&amp;&#32;f)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_oval_8h_source_1l00075"/>00075 
+<anchor xml:id="_oval_8h_source_1l00080"/>00080 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_oval_1a446b4eee9569adca380f5f9ba1ddc832">getPosition</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_oval_8h_source_1l00081"/>00081 
+<anchor xml:id="_oval_8h_source_1l00087"/>00087 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_oval_1addd2809c1ba6ec90453a75b94d9707ff">setPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;position);
+<anchor xml:id="_oval_8h_source_1l00088"/>00088 
+<anchor xml:id="_oval_8h_source_1l00093"/>00093 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_oval_1abb39756c5ed715fed211eba826db7506">getRadius</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_oval_8h_source_1l00094"/>00094 
+<anchor xml:id="_oval_8h_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_oval_1af8569e0b2f6549b4bec902f87618a1f5">setRadius</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;radius);
+<anchor xml:id="_oval_8h_source_1l00101"/>00101 
+<anchor xml:id="_oval_8h_source_1l00102"/>00102 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_oval_8h_source_1l00106"/>00106 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;m_position;
+<anchor xml:id="_oval_8h_source_1l00107"/>00107 
+<anchor xml:id="_oval_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;m_radius;
+<anchor xml:id="_oval_8h_source_1l00112"/>00112 
+<anchor xml:id="_oval_8h_source_1l00113"/>00113 };&#32;<emphasis role="comment">//&#32;class&#32;Oval</emphasis>
+<anchor xml:id="_oval_8h_source_1l00114"/>00114 
+<anchor xml:id="_oval_8h_source_1l00115"/>00115 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsShape</emphasis>
+<anchor xml:id="_oval_8h_source_1l00116"/>00116 
+<anchor xml:id="_oval_8h_source_1l00117"/>00117 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;OVAL_H</emphasis>
+</programlisting></section>

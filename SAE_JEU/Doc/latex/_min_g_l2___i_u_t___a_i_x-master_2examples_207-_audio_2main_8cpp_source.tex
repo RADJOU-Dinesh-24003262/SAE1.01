@@ -1,0 +1,84 @@
+\hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source}{}\doxysection{main.\+cpp}
+\label{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/07-\/Audio/main.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/07-\/Audio/main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#define FPS\_LIMIT 60}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mingl_8h}{mingl/mingl.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{audioengine_8h}{mingl/audio/audioengine.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{text_8h}{mingl/gui/text.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00011}00011 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00013}00013 \textcolor{keywordtype}{int} main()}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00014}00014 \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00015}00015     \textcolor{comment}{// Initialise le système}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00016}00016     \mbox{\hyperlink{class_min_g_l}{MinGL}} window(\textcolor{stringliteral}{"{}07 -\/ Audio"{}}, \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(640, 640), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(128, 128), nsGraphics::KBlack);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00017}00017     window.initGlut();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00018}00018     window.initGraphic();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00020}00020     \textcolor{comment}{// Initialise le sous-\/système audio}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00021}00021     \mbox{\hyperlink{classns_audio_1_1_audio_engine}{nsAudio::AudioEngine}} audioEngine;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00023}00023     \textcolor{comment}{// On définit la musique du sous-\/système, et on la joue}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00024}00024     audioEngine.\mbox{\hyperlink{classns_audio_1_1_audio_engine_a6ef72eb80bef2c1b0764c40f629d2536}{setMusic}}(\textcolor{stringliteral}{"{}res/music.wav"{}});}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00025}00025     audioEngine.\mbox{\hyperlink{classns_audio_1_1_audio_engine_ac1343ed3afe38eb80a222969f3d74d6d}{startMusicFromBeginning}}();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00027}00027     \textcolor{comment}{// On charge les effets sonores}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00028}00028     audioEngine.\mbox{\hyperlink{classns_audio_1_1_audio_engine_a4c88595136327b3805c0322a9a8d2a0f}{loadSound}}(\textcolor{stringliteral}{"{}res/sound1.wav"{}});}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00029}00029     audioEngine.\mbox{\hyperlink{classns_audio_1_1_audio_engine_a4c88595136327b3805c0322a9a8d2a0f}{loadSound}}(\textcolor{stringliteral}{"{}res/sound2.wav"{}});}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00031}00031     \textcolor{comment}{// Variable qui tient le temps de frame}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00032}00032     chrono::microseconds frameTime = chrono::microseconds::zero();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00034}00034     \textcolor{comment}{// On fait tourner la boucle tant que la fenêtre est ouverte}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00035}00035     \textcolor{keywordflow}{while} (window.isOpen())}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00036}00036     \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00037}00037         \textcolor{comment}{// Récupère l'heure actuelle}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00038}00038         chrono::time\_point<chrono::steady\_clock> start = chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00040}00040         \textcolor{comment}{// On efface la fenêtre}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00041}00041         window.clearScreen();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00043}00043         window << \mbox{\hyperlink{classns_gui_1_1_text}{nsGui::Text}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(16, 24), \textcolor{stringliteral}{"{}Appuyez sur ESPACE pour mettre en pause/lecture la musique."{}}, nsGraphics::KPurple);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00044}00044         window << \mbox{\hyperlink{classns_gui_1_1_text}{nsGui::Text}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(16, 40), \textcolor{stringliteral}{"{}Appuyez sur S pour jouer un effet sonore."{}}, nsGraphics::KPurple);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00046}00046         window << \mbox{\hyperlink{classns_gui_1_1_text}{nsGui::Text}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(320, 320), audioEngine.\mbox{\hyperlink{classns_audio_1_1_audio_engine_a57e13380a3039e546a5f1b9242f8709b}{isMusicPlaying}}() ? \textcolor{stringliteral}{"{}LECTURE"{}} : \textcolor{stringliteral}{"{}PAUSE"{}}, audioEngine.\mbox{\hyperlink{classns_audio_1_1_audio_engine_a57e13380a3039e546a5f1b9242f8709b}{isMusicPlaying}}() ? nsGraphics::KLime : nsGraphics::KRed,}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00047}00047                               \mbox{\hyperlink{classns_gui_1_1_glut_font_aeeeb02d69e7dfc7e57957bd658c465ceafc7dc7274d17bd604f3cf91412650df0}{nsGui::GlutFont::BITMAP\_9\_BY\_15}}, nsGui::Text::HorizontalAlignment::ALIGNH\_CENTER);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00049}00049         \textcolor{comment}{// On vérifie les touches}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00050}00050         \textcolor{keywordflow}{if} (window.isPressed(\{\textcolor{stringliteral}{' '}, false\}))}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00051}00051         \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00052}00052             \textcolor{comment}{// Espace a été pressé, on bascule la musique}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00053}00053             window.resetKey(\{\textcolor{charliteral}{' '}, \textcolor{keyword}{false}\});}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00054}00054             audioEngine.\mbox{\hyperlink{classns_audio_1_1_audio_engine_aba89263fc9f810bee40dcae229313883}{toggleMusicPlaying}}();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00055}00055         \}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00056}00056         \textcolor{keywordflow}{if} (window.isPressed(\{\textcolor{stringliteral}{'s'}, false\}))}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00057}00057         \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00058}00058             \textcolor{comment}{// S a été pressé, on joue un effet sonore}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00059}00059             window.resetKey(\{\textcolor{charliteral}{'s'}, \textcolor{keyword}{false}\});}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00060}00060             \textcolor{keyword}{const} uint8\_t soundToPlay = rand() \% 2 + 1;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00061}00061             audioEngine.\mbox{\hyperlink{classns_audio_1_1_audio_engine_a47d769cc331578a398f422ff497505c8}{playSoundFromBuffer}}(\textcolor{stringliteral}{"{}res/sound"{}} + std::to\_string(soundToPlay) + \textcolor{stringliteral}{"{}.wav"{}});}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00062}00062         \}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00064}00064         \textcolor{comment}{// On finit la frame en cours}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00065}00065         window.finishFrame();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00067}00067         \textcolor{comment}{// On vide la queue d'évènements}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00068}00068         window.getEventManager().clearEvents();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00070}00070         \textcolor{comment}{// On attend un peu pour limiter le framerate et soulager le CPU}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00071}00071         this\_thread::sleep\_for(chrono::milliseconds(1000 / FPS\_LIMIT) -\/ chrono::duration\_cast<chrono::microseconds>(chrono::steady\_clock::now() -\/ start));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00073}00073         \textcolor{comment}{// On récupère le temps de frame}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00074}00074         frameTime = chrono::duration\_cast<chrono::microseconds>(chrono::steady\_clock::now() -\/ start);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00075}00075     \}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00077}00077     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source_l00078}00078 \}}
+
+\end{DoxyCode}

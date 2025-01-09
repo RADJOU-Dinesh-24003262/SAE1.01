@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ieditable_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h</primary></indexterm>
+<para>
+
+<para>declaration de la classe CEditable dans <link linkend="_namespacens_util">nsUtil</link> </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;
+#include &quot;ieditable.hpp&quot;
+</programlisting>Include dependency graph for ieditable.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="ieditable_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="ieditable_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_util_1_1_i_editable">nsUtil::IEditable</link></para>
+
+<para>Interface pour un objet injectable. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacens_util">nsUtil</link></para>
+
+<para>Espace de nom pour les utilitaires lambda. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_namespacens_util_1a95ba3ba3ebef98e447b47ee40f55dd1a">nsUtil::operator&lt;&lt;</link> (std::ostream &amp;os, const IEditable &amp;Obj)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>declaration de la classe CEditable dans <link linkend="_namespacens_util">nsUtil</link> </para>
+
+<para><formalpara><title>Authors</title>
+
+<para>D. Mathieu, M. Laporte</para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>16/03/2009</para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V2.0</para>
+
+<para>V2.1</para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>Alexandre Sollier</para>
+</formalpara>
+Ajout de la documentation </para>
+<para>
+Definition in file <link linkend="_ieditable_8h_source">ieditable.h</link>.</para>
+</section>
+</section>

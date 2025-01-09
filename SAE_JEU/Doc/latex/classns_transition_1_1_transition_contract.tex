@@ -1,0 +1,364 @@
+\hypertarget{classns_transition_1_1_transition_contract}{}\doxysection{ns\+Transition\+::Transition\+Contract Class Reference}
+\label{classns_transition_1_1_transition_contract}\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+
+
+Une classe contenant des paramètres pour créer une transition.  
+
+
+
+
+{\ttfamily \#include $<$transition\+\_\+contract.\+h$>$}
+
+
+
+Inheritance diagram for ns\+Transition\+::Transition\+Contract\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=210pt]{classns_transition_1_1_transition_contract__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ns\+Transition\+::Transition\+Contract\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=234pt]{classns_transition_1_1_transition_contract__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edb}{Transition\+Mode}} \{ \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edba8e6b597d9cc193da6eb40a6be5dc544b}{MODE\+\_\+\+FINITE}}
+, \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edbada40ee822d94803e81878d415e46ef6a}{MODE\+\_\+\+FINITE\+\_\+\+REVERSE}}
+, \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edbaaf7f662702b3f37a41b8cfb86598f857}{MODE\+\_\+\+LOOP}}
+, \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edba5aa6e1fbf9670aa9ecd96beff2ba6abb}{MODE\+\_\+\+LOOP\+\_\+\+SMOOTH}}
+ \}
+\begin{DoxyCompactList}\small\item\em Transition\+Mode \+: Liste de tout les modes de transition. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classns_transition_1_1_transition_contract_a8ec4ef83c08901c9b93cec5eb0bfd06b}{Transition\+Contract}} (\mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}} \&target, const int \&id, const \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} \&duration, const std\+::vector$<$ float $>$ \&destination, const \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} \&delay=std\+::chrono\+::seconds\+::zero(), const \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edb}{Transition\+Mode}} \&transition\+Mode=Transition\+Mode\+::\+MODE\+\_\+\+FINITE)
+\begin{DoxyCompactList}\small\item\em Constructeur pour la classe \mbox{\hyperlink{classns_transition_1_1_transition_contract}{Transition\+Contract}}. \end{DoxyCompactList}\item 
+const int \& \mbox{\hyperlink{classns_transition_1_1_transition_contract_a34a594d05171628bca81120c768c86b9}{get\+Id}} () const
+\begin{DoxyCompactList}\small\item\em Retourne l\textquotesingle{}ID de transition, utilisé par la cible pour connaitre les valeurs a utiliser. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}} \& \mbox{\hyperlink{classns_transition_1_1_transition_contract_a464b06c739e50a374c4d11509cf6e5ee}{get\+Target}} () const
+\begin{DoxyCompactList}\small\item\em Retourne la cible de transition. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edb}{Transition\+Mode}} \& \mbox{\hyperlink{classns_transition_1_1_transition_contract_ad5d6524d7e2eeddf9f06204b8245c484}{get\+Transition\+Mode}} () const
+\begin{DoxyCompactList}\small\item\em Retourne le mode de transition. \end{DoxyCompactList}\item 
+const std\+::vector$<$ float $>$ \& \mbox{\hyperlink{classns_transition_1_1_transition_contract_a8dc505c54df5d1f09a482a1b56676cd4}{get\+Beginning}} () const
+\begin{DoxyCompactList}\small\item\em Retourne les valeurs de départ. \end{DoxyCompactList}\item 
+const std\+::vector$<$ float $>$ \& \mbox{\hyperlink{classns_transition_1_1_transition_contract_ae4ce420a4376e1d372efb3fd046410df}{get\+Destination}} () const
+\begin{DoxyCompactList}\small\item\em Retourne les valeurs d\textquotesingle{}arrivée. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} \& \mbox{\hyperlink{classns_transition_1_1_transition_contract_a9b900986c8f271729f99c88fa1b0a5e1}{get\+Duration}} () const
+\begin{DoxyCompactList}\small\item\em Retourne la durée de la transition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_transition_1_1_transition_contract_a8f1ebafd9966553678fd7845f35bac33}{set\+Destination\+Callback}} (const std\+::function$<$ void()$>$ \&callback)
+\begin{DoxyCompactList}\small\item\em Définit la fonction de callback a appeler quand la transition est achevée. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const int \mbox{\hyperlink{classns_transition_1_1_transition_contract_a48e1b58bc26cb8b6167fb6b76911c941}{m\+\_\+id}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+id \+: L\textquotesingle{}ID de la transition \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}} \& \mbox{\hyperlink{classns_transition_1_1_transition_contract_a1066c3c1526a519276b75a4f4c5206b2}{m\+\_\+target}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+target \+: Une référence vers une instance d\textquotesingle{}une classe dérivée d\textquotesingle{}\mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}} \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edb}{Transition\+Mode}} \mbox{\hyperlink{classns_transition_1_1_transition_contract_a9634edf746d8605e78ae30f7a0e6efd3}{m\+\_\+transition\+Mode}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+transition\+Mode \+: Le mode de transition \end{DoxyCompactList}\item 
+std\+::vector$<$ float $>$ \mbox{\hyperlink{classns_transition_1_1_transition_contract_a5f804f0f4cc00d48e139ff93c5469954}{m\+\_\+beginning}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+beginning \+: Contient les valeurs de départ \end{DoxyCompactList}\item 
+const std\+::vector$<$ float $>$ \mbox{\hyperlink{classns_transition_1_1_transition_contract_adc660e53bde2e552bb4148ac7abc4e42}{m\+\_\+destination}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+destination \+: Contient les valeurs d\textquotesingle{}arrivées \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} \mbox{\hyperlink{classns_transition_1_1_transition_contract_a0c8ac97863022965d6ac0539d972c325}{m\+\_\+duration}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+duration \+: La durée de la transition \end{DoxyCompactList}\item 
+\mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} \mbox{\hyperlink{classns_transition_1_1_transition_contract_a5c317b573104f3d3c9caafbc3014ac16}{m\+\_\+delay}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+delay \+: Délai a attendre avant que la transition ne démarre \end{DoxyCompactList}\item 
+std\+::function$<$ void()$>$ \mbox{\hyperlink{classns_transition_1_1_transition_contract_ac95072df084f1edbd63479c68228b9d6}{m\+\_\+destination\+Callback}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+duration \+: Un pointeur vers la fonction a appeler une fois la transition achevée \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Une classe contenant des paramètres pour créer une transition. 
+
+Definition at line \mbox{\hyperlink{transition__contract_8h_source_l00027}{27}} of file \mbox{\hyperlink{transition__contract_8h_source}{transition\+\_\+contract.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edb}\label{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edb}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!TransitionMode@{TransitionMode}}
+\index{TransitionMode@{TransitionMode}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{TransitionMode}{TransitionMode}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edb}{ns\+Transition\+::\+Transition\+Contract\+::\+Transition\+Mode}}}
+
+
+
+Transition\+Mode \+: Liste de tout les modes de transition. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODE\_FINITE@{MODE\_FINITE}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!MODE\_FINITE@{MODE\_FINITE}}}\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edba8e6b597d9cc193da6eb40a6be5dc544b}\label{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edba8e6b597d9cc193da6eb40a6be5dc544b}} 
+MODE\+\_\+\+FINITE&Ce mode marque la \mbox{\hyperlink{classns_transition_1_1_transition}{Transition}} comme terminée une fois achevée \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODE\_FINITE\_REVERSE@{MODE\_FINITE\_REVERSE}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!MODE\_FINITE\_REVERSE@{MODE\_FINITE\_REVERSE}}}\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edbada40ee822d94803e81878d415e46ef6a}\label{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edbada40ee822d94803e81878d415e46ef6a}} 
+MODE\+\_\+\+FINITE\+\_\+\+REVERSE&Ce mode va jouer la \mbox{\hyperlink{classns_transition_1_1_transition}{Transition}} a l\textquotesingle{}envers une fois achevée, puis marquer la \mbox{\hyperlink{classns_transition_1_1_transition}{Transition}} comme étant terminée \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODE\_LOOP@{MODE\_LOOP}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!MODE\_LOOP@{MODE\_LOOP}}}\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edbaaf7f662702b3f37a41b8cfb86598f857}\label{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edbaaf7f662702b3f37a41b8cfb86598f857}} 
+MODE\+\_\+\+LOOP&Ce mode va définir les valeurs de départ a la cible une fois la \mbox{\hyperlink{classns_transition_1_1_transition}{Transition}} achevée, puis se rejouer en boucle \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MODE\_LOOP\_SMOOTH@{MODE\_LOOP\_SMOOTH}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!MODE\_LOOP\_SMOOTH@{MODE\_LOOP\_SMOOTH}}}\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edba5aa6e1fbf9670aa9ecd96beff2ba6abb}\label{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edba5aa6e1fbf9670aa9ecd96beff2ba6abb}} 
+MODE\+\_\+\+LOOP\+\_\+\+SMOOTH&Ce mode va jouer la \mbox{\hyperlink{classns_transition_1_1_transition}{Transition}} a l\textquotesingle{}envers une fois achevée, puis se rejouer en boucle \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{transition__contract_8h_source_l00033}{33}} of file \mbox{\hyperlink{transition__contract_8h_source}{transition\+\_\+contract.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a8ec4ef83c08901c9b93cec5eb0bfd06b}\label{classns_transition_1_1_transition_contract_a8ec4ef83c08901c9b93cec5eb0bfd06b}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!TransitionContract@{TransitionContract}}
+\index{TransitionContract@{TransitionContract}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{TransitionContract()}{TransitionContract()}}
+{\footnotesize\ttfamily ns\+Transition\+::\+Transition\+Contract\+::\+Transition\+Contract (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}} \&}]{target,  }\item[{const int \&}]{id,  }\item[{const \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} \&}]{duration,  }\item[{const std\+::vector$<$ float $>$ \&}]{destination,  }\item[{const \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} \&}]{delay = {\ttfamily std\+:\+:chrono\+:\+:seconds\+:\+:zero()},  }\item[{const \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edb}{Transition\+Mode}} \&}]{transition\+Mode = {\ttfamily TransitionMode\+:\+:MODE\+\_\+FINITE} }\end{DoxyParamCaption})}
+
+
+
+Constructeur pour la classe \mbox{\hyperlink{classns_transition_1_1_transition_contract}{Transition\+Contract}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em target} & \+: Une référence vers une classe dérivée d\textquotesingle{}\mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}} qui sera la cible \\
+\hline
+\mbox{\texttt{ in}}  & {\em id} & \+: L\textquotesingle{}ID de la transition a appliquer \\
+\hline
+\mbox{\texttt{ in}}  & {\em duration} & \+: La durée de la transition \\
+\hline
+\mbox{\texttt{ in}}  & {\em destination} & \+: Les valeurs d\textquotesingle{}arrivée \\
+\hline
+\mbox{\texttt{ in}}  & {\em delay} & \+: Délai avant que la transition commence (Zéro par défaut) \\
+\hline
+\mbox{\texttt{ in}}  & {\em transition\+Mode} & \+: Mode de transition (\mbox{\hyperlink{classns_transition_1_1_transition}{Transition}} finie par défaut) \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a8dc505c54df5d1f09a482a1b56676cd4}\label{classns_transition_1_1_transition_contract_a8dc505c54df5d1f09a482a1b56676cd4}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!getBeginning@{getBeginning}}
+\index{getBeginning@{getBeginning}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{getBeginning()}{getBeginning()}}
+{\footnotesize\ttfamily const std\+::vector$<$ float $>$ \& ns\+Transition\+::\+Transition\+Contract\+::get\+Beginning (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne les valeurs de départ. 
+
+\begin{DoxyReturn}{Returns}
+Une référence const vers m\+\_\+beginning 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_ae4ce420a4376e1d372efb3fd046410df}\label{classns_transition_1_1_transition_contract_ae4ce420a4376e1d372efb3fd046410df}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!getDestination@{getDestination}}
+\index{getDestination@{getDestination}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{getDestination()}{getDestination()}}
+{\footnotesize\ttfamily const std\+::vector$<$ float $>$ \& ns\+Transition\+::\+Transition\+Contract\+::get\+Destination (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne les valeurs d\textquotesingle{}arrivée. 
+
+\begin{DoxyReturn}{Returns}
+Une référence const vers m\+\_\+destination 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a9b900986c8f271729f99c88fa1b0a5e1}\label{classns_transition_1_1_transition_contract_a9b900986c8f271729f99c88fa1b0a5e1}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!getDuration@{getDuration}}
+\index{getDuration@{getDuration}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{getDuration()}{getDuration()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} \& ns\+Transition\+::\+Transition\+Contract\+::get\+Duration (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne la durée de la transition. 
+
+\begin{DoxyReturn}{Returns}
+Une référence const vers m\+\_\+duration 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a34a594d05171628bca81120c768c86b9}\label{classns_transition_1_1_transition_contract_a34a594d05171628bca81120c768c86b9}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!getId@{getId}}
+\index{getId@{getId}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily const int \& ns\+Transition\+::\+Transition\+Contract\+::get\+Id (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne l\textquotesingle{}ID de transition, utilisé par la cible pour connaitre les valeurs a utiliser. 
+
+\begin{DoxyReturn}{Returns}
+Une référence const vers m\+\_\+id 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a464b06c739e50a374c4d11509cf6e5ee}\label{classns_transition_1_1_transition_contract_a464b06c739e50a374c4d11509cf6e5ee}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!getTarget@{getTarget}}
+\index{getTarget@{getTarget}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{getTarget()}{getTarget()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}} \& ns\+Transition\+::\+Transition\+Contract\+::get\+Target (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne la cible de transition. 
+
+\begin{DoxyReturn}{Returns}
+Une référence const vers m\+\_\+target 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_ad5d6524d7e2eeddf9f06204b8245c484}\label{classns_transition_1_1_transition_contract_ad5d6524d7e2eeddf9f06204b8245c484}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!getTransitionMode@{getTransitionMode}}
+\index{getTransitionMode@{getTransitionMode}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{getTransitionMode()}{getTransitionMode()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edb}{Transition\+Mode}} \& ns\+Transition\+::\+Transition\+Contract\+::get\+Transition\+Mode (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retourne le mode de transition. 
+
+\begin{DoxyReturn}{Returns}
+Une référence const vers m\+\_\+transition\+Mode 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a8f1ebafd9966553678fd7845f35bac33}\label{classns_transition_1_1_transition_contract_a8f1ebafd9966553678fd7845f35bac33}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!setDestinationCallback@{setDestinationCallback}}
+\index{setDestinationCallback@{setDestinationCallback}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{setDestinationCallback()}{setDestinationCallback()}}
+{\footnotesize\ttfamily void ns\+Transition\+::\+Transition\+Contract\+::set\+Destination\+Callback (\begin{DoxyParamCaption}\item[{const std\+::function$<$ void()$>$ \&}]{callback }\end{DoxyParamCaption})}
+
+
+
+Définit la fonction de callback a appeler quand la transition est achevée. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em callback} & \+: La fonction a appeler \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a5f804f0f4cc00d48e139ff93c5469954}\label{classns_transition_1_1_transition_contract_a5f804f0f4cc00d48e139ff93c5469954}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!m\_beginning@{m\_beginning}}
+\index{m\_beginning@{m\_beginning}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{m\_beginning}{m\_beginning}}
+{\footnotesize\ttfamily std\+::vector$<$float$>$ ns\+Transition\+::\+Transition\+Contract\+::m\+\_\+beginning\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+m\+\_\+beginning \+: Contient les valeurs de départ 
+
+
+
+Definition at line \mbox{\hyperlink{transition__contract_8h_source_l00133}{133}} of file \mbox{\hyperlink{transition__contract_8h_source}{transition\+\_\+contract.\+h}}.
+
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a5c317b573104f3d3c9caafbc3014ac16}\label{classns_transition_1_1_transition_contract_a5c317b573104f3d3c9caafbc3014ac16}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!m\_delay@{m\_delay}}
+\index{m\_delay@{m\_delay}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{m\_delay}{m\_delay}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} ns\+Transition\+::\+Transition\+Contract\+::m\+\_\+delay\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+m\+\_\+delay \+: Délai a attendre avant que la transition ne démarre 
+
+
+
+Definition at line \mbox{\hyperlink{transition__contract_8h_source_l00148}{148}} of file \mbox{\hyperlink{transition__contract_8h_source}{transition\+\_\+contract.\+h}}.
+
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_adc660e53bde2e552bb4148ac7abc4e42}\label{classns_transition_1_1_transition_contract_adc660e53bde2e552bb4148ac7abc4e42}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!m\_destination@{m\_destination}}
+\index{m\_destination@{m\_destination}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{m\_destination}{m\_destination}}
+{\footnotesize\ttfamily const std\+::vector$<$float$>$ ns\+Transition\+::\+Transition\+Contract\+::m\+\_\+destination\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+m\+\_\+destination \+: Contient les valeurs d\textquotesingle{}arrivées 
+
+
+
+Definition at line \mbox{\hyperlink{transition__contract_8h_source_l00138}{138}} of file \mbox{\hyperlink{transition__contract_8h_source}{transition\+\_\+contract.\+h}}.
+
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_ac95072df084f1edbd63479c68228b9d6}\label{classns_transition_1_1_transition_contract_ac95072df084f1edbd63479c68228b9d6}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!m\_destinationCallback@{m\_destinationCallback}}
+\index{m\_destinationCallback@{m\_destinationCallback}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{m\_destinationCallback}{m\_destinationCallback}}
+{\footnotesize\ttfamily std\+::function$<$void()$>$ ns\+Transition\+::\+Transition\+Contract\+::m\+\_\+destination\+Callback\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+m\+\_\+duration \+: Un pointeur vers la fonction a appeler une fois la transition achevée 
+
+
+
+Definition at line \mbox{\hyperlink{transition__contract_8h_source_l00153}{153}} of file \mbox{\hyperlink{transition__contract_8h_source}{transition\+\_\+contract.\+h}}.
+
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a0c8ac97863022965d6ac0539d972c325}\label{classns_transition_1_1_transition_contract_a0c8ac97863022965d6ac0539d972c325}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!m\_duration@{m\_duration}}
+\index{m\_duration@{m\_duration}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{m\_duration}{m\_duration}}
+{\footnotesize\ttfamily \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} ns\+Transition\+::\+Transition\+Contract\+::m\+\_\+duration\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+m\+\_\+duration \+: La durée de la transition 
+
+
+
+Definition at line \mbox{\hyperlink{transition__contract_8h_source_l00143}{143}} of file \mbox{\hyperlink{transition__contract_8h_source}{transition\+\_\+contract.\+h}}.
+
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a48e1b58bc26cb8b6167fb6b76911c941}\label{classns_transition_1_1_transition_contract_a48e1b58bc26cb8b6167fb6b76911c941}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!m\_id@{m\_id}}
+\index{m\_id@{m\_id}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{m\_id}{m\_id}}
+{\footnotesize\ttfamily const int ns\+Transition\+::\+Transition\+Contract\+::m\+\_\+id\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+m\+\_\+id \+: L\textquotesingle{}ID de la transition 
+
+Ceci est seulement utile pour la cible, car lui seul sait a quel ID correspond quelles valeurs. Ainsi, l\textquotesingle{}ID n\textquotesingle{}est jamais utilisée directement par la transition et est seulement passée a la cible. 
+
+Definition at line \mbox{\hyperlink{transition__contract_8h_source_l00114}{114}} of file \mbox{\hyperlink{transition__contract_8h_source}{transition\+\_\+contract.\+h}}.
+
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a1066c3c1526a519276b75a4f4c5206b2}\label{classns_transition_1_1_transition_contract_a1066c3c1526a519276b75a4f4c5206b2}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!m\_target@{m\_target}}
+\index{m\_target@{m\_target}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{m\_target}{m\_target}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}}\& ns\+Transition\+::\+Transition\+Contract\+::m\+\_\+target\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+m\+\_\+target \+: Une référence vers une instance d\textquotesingle{}une classe dérivée d\textquotesingle{}\mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}} 
+
+C\textquotesingle{}est la cible de la transition, sur laquelle vont s\textquotesingle{}appliquer les modifications de valeurs. 
+
+Definition at line \mbox{\hyperlink{transition__contract_8h_source_l00121}{121}} of file \mbox{\hyperlink{transition__contract_8h_source}{transition\+\_\+contract.\+h}}.
+
+\mbox{\Hypertarget{classns_transition_1_1_transition_contract_a9634edf746d8605e78ae30f7a0e6efd3}\label{classns_transition_1_1_transition_contract_a9634edf746d8605e78ae30f7a0e6efd3}} 
+\index{nsTransition::TransitionContract@{nsTransition::TransitionContract}!m\_transitionMode@{m\_transitionMode}}
+\index{m\_transitionMode@{m\_transitionMode}!nsTransition::TransitionContract@{nsTransition::TransitionContract}}
+\doxysubsubsection{\texorpdfstring{m\_transitionMode}{m\_transitionMode}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classns_transition_1_1_transition_contract_a40118ebf3c1a0a486934ce2b9ddc3edb}{Transition\+Mode}} ns\+Transition\+::\+Transition\+Contract\+::m\+\_\+transition\+Mode\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+m\+\_\+transition\+Mode \+: Le mode de transition 
+
+Pour plus d\textquotesingle{}informations, voyez les valeurs de l\textquotesingle{}énumération Transition\+Mode. 
+
+Definition at line \mbox{\hyperlink{transition__contract_8h_source_l00128}{128}} of file \mbox{\hyperlink{transition__contract_8h_source}{transition\+\_\+contract.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/transition/\mbox{\hyperlink{transition__contract_8h}{transition\+\_\+contract.\+h}}\end{DoxyCompactItemize}

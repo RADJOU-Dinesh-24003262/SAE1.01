@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_shape_1_1_circle" xml:lang="en-US">
+<title>nsShape::Circle Class Reference</title>
+<indexterm><primary>nsShape::Circle</primary></indexterm>
+<para>
+
+<para>Classe représentant un cercle. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;circle.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsShape::Circle:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_circle__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for nsShape::Circle:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_circle__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235">TransitionIds</link> { 
+<link linkend="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a9fe224767a5f886c96a3f23e6355677a">TRANSITION_FILL_COLOR_RGB</link>
+, <link linkend="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a0df548537c2bd5e8aad51eab0a182d08">TRANSITION_FILL_COLOR_ALPHA</link>
+, <link linkend="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a2fdc553c832dfca9e296d9775c107732">TRANSITION_BORDER_COLOR_RGB</link>
+, <link linkend="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a07cbcb4b2a43a087c534998e1ca553ee">TRANSITION_BORDER_COLOR_ALPHA</link>
+, 
+<link linkend="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235aa2a6bbdede0b294813c638e4359c8603">TRANSITION_POSITION</link>
+, <link linkend="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a8a3d4b3560b97d5e11b81b58e2808393">TRANSITION_RADIUS</link>
+ }</para>
+
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_shape_1_1_circle_1a06b1c1c7ea1e4ec8228d929e7b3966ee">Circle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const unsigned &amp;radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=nsGraphics::KTransparent)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_circle">Circle</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_classns_shape_1_1_circle_1a2446e688c063dcb2693adfcfacbb2804"/>virtual <emphasis role="strong">~Circle</emphasis> () override=default</para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_circle">Circle</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_circle_1a03be5cdd7d6a0feaa7d6b0a819389a7a">draw</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window) const override</para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_circle_1aae4610d0c110ad09da424c5a3ad91aac">getValues</link> (const int &amp;id, std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_circle_1a9a2fc6b4a852e25922e5a1732d39644a">setValues</link> (const int &amp;id, const std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para><link linkend="_classns_shape_1_1_circle">Circle</link> <link linkend="_classns_shape_1_1_circle_1a8b1f88a61fb38c283b11600e4eec6fe3">operator+</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;<link linkend="_classns_shape_1_1_circle_1a85b4102c4a23101fba4f90c1f8e84168">getPosition</link>) const</para>
+
+<para>Opérateur de décalage. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_shape_1_1_circle">Circle</link> <link linkend="_classns_shape_1_1_circle_1ad34827f3120b9331389a00cbf02468cb">operator*</link> (const float &amp;f) const</para>
+
+<para>Opérateur de réduction. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; <link linkend="_classns_shape_1_1_circle_1a85b4102c4a23101fba4f90c1f8e84168">getPosition</link> () const</para>
+
+<para>Récupère la position du cercle. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_circle_1ac4e73227c9ec7e22670bd012b6f37bef">setPosition</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position)</para>
+
+<para>Définit la nouvelle position du cercle. </para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_classns_shape_1_1_circle_1afcb275822a67ec49167fe122ab74872c">getRadius</link> () const</para>
+
+<para>Récupère le rayon du cercle. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_circle_1a5f20408e41621d21487b6162eabc3a7d">setRadius</link> (const unsigned &amp;radius)</para>
+
+<para>Définit le nouveau rayon du cercle. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe représentant un cercle. </para>
+<para>
+Definition at line <link linkend="_circle_8h_source_1l00025">25</link> of file <link linkend="_circle_8h_source">circle.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235"/><section>
+    <title>TransitionIds</title>
+<indexterm><primary>TransitionIds</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>TransitionIds</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235">nsShape::Circle::TransitionIds</link></computeroutput></para><para>
+
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>TRANSITION_FILL_COLOR_RGB</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>TRANSITION_FILL_COLOR_RGB</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a9fe224767a5f886c96a3f23e6355677a"/>TRANSITION_FILL_COLOR_RGB</entry><entry>
+<para>Transition pour la couleur de remplissage </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_FILL_COLOR_ALPHA</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>TRANSITION_FILL_COLOR_ALPHA</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a0df548537c2bd5e8aad51eab0a182d08"/>TRANSITION_FILL_COLOR_ALPHA</entry><entry>
+<para>Transition pour la transparence de remplissage </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_BORDER_COLOR_RGB</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>TRANSITION_BORDER_COLOR_RGB</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a2fdc553c832dfca9e296d9775c107732"/>TRANSITION_BORDER_COLOR_RGB</entry><entry>
+<para>Transition pour la couleur de bord </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_BORDER_COLOR_ALPHA</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>TRANSITION_BORDER_COLOR_ALPHA</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a07cbcb4b2a43a087c534998e1ca553ee"/>TRANSITION_BORDER_COLOR_ALPHA</entry><entry>
+<para>Transition pour la transparence de bord </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_POSITION</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>TRANSITION_POSITION</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235aa2a6bbdede0b294813c638e4359c8603"/>TRANSITION_POSITION</entry><entry>
+<para>Transition pour la position </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_RADIUS</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>TRANSITION_RADIUS</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a8a3d4b3560b97d5e11b81b58e2808393"/>TRANSITION_RADIUS</entry><entry>
+<para>Transition pour le rayon </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_circle_8h_source_1l00032">32</link> of file <link linkend="_circle_8h_source">circle.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_shape_1_1_circle_1a06b1c1c7ea1e4ec8228d929e7b3966ee"/><section>
+    <title>Circle()</title>
+<indexterm><primary>Circle</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>Circle</secondary></indexterm>
+<para><computeroutput>nsShape::Circle::Circle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position, const unsigned &amp; radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput>nsGraphics::KTransparent</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_circle">Circle</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>firstPosition</entry><entry>
+<para>: Position du centre </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>radius</entry><entry>
+<para>: Rayon du cercle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>fillColor</entry><entry>
+<para>: Couleur de remplissage </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>borderColor</entry><entry>
+<para>: Couleur de bord </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_circle_8cpp_source_1l00016">16</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_shape_1_1_circle_1a03be5cdd7d6a0feaa7d6b0a819389a7a"/><section>
+    <title>draw()</title>
+<indexterm><primary>draw</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void nsShape::Circle::draw (<link linkend="_class_min_g_l">MinGL</link> &amp; window) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</para>
+<para>
+Implements <link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">nsGraphics::IDrawable</link>.</para>
+<para>
+Definition at line <link linkend="_circle_8cpp_source_1l00022">22</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_circle_a03be5cdd7d6a0feaa7d6b0a819389a7a_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_circle_1a85b4102c4a23101fba4f90c1f8e84168"/><section>
+    <title>getPosition()</title>
+<indexterm><primary>getPosition</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>getPosition</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; nsShape::Circle::getPosition ( ) const</computeroutput></para><para>
+
+<para>Récupère la position du cercle. </para>
+</para>
+<para>
+Definition at line <link linkend="_circle_8cpp_source_1l00165">165</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_circle_1afcb275822a67ec49167fe122ab74872c"/><section>
+    <title>getRadius()</title>
+<indexterm><primary>getRadius</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>getRadius</secondary></indexterm>
+<para><computeroutput>unsigned nsShape::Circle::getRadius ( ) const</computeroutput></para><para>
+
+<para>Récupère le rayon du cercle. </para>
+</para>
+<para>
+Definition at line <link linkend="_circle_8cpp_source_1l00155">155</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_circle_1aae4610d0c110ad09da424c5a3ad91aac"/><section>
+    <title>getValues()</title>
+<indexterm><primary>getValues</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>getValues</secondary></indexterm>
+<para><computeroutput>void nsShape::Circle::getValues (const int &amp; id, std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a récupérer </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>values</entry><entry>
+<para>Vecteur de valeurs a peupler </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_circle_8cpp_source_1l00065">65</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_circle_1ad34827f3120b9331389a00cbf02468cb"/><section>
+    <title>operator*()</title>
+<indexterm><primary>operator*</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>operator*</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_shape_1_1_circle">Circle</link> nsShape::Circle::operator* (const float &amp; f) const</computeroutput></para><para>
+
+<para>Opérateur de réduction. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>f</entry><entry>
+<para>: Nombre avec lequel multiplier la position actuelle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_circle_8cpp_source_1l00150">150</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_circle_1a8b1f88a61fb38c283b11600e4eec6fe3"/><section>
+    <title>operator+()</title>
+<indexterm><primary>operator+</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_shape_1_1_circle">Circle</link> nsShape::Circle::operator+ (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position) const</computeroutput></para><para>
+
+<para>Opérateur de décalage. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>position</entry><entry>
+<para>: Position a additionner </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_circle_8cpp_source_1l00145">145</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_circle_1ac4e73227c9ec7e22670bd012b6f37bef"/><section>
+    <title>setPosition()</title>
+<indexterm><primary>setPosition</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>setPosition</secondary></indexterm>
+<para><computeroutput>void nsShape::Circle::setPosition (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position)</computeroutput></para><para>
+
+<para>Définit la nouvelle position du cercle. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>position</entry><entry>
+<para>: Nouvelle position </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_circle_8cpp_source_1l00170">170</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_circle_1a5f20408e41621d21487b6162eabc3a7d"/><section>
+    <title>setRadius()</title>
+<indexterm><primary>setRadius</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>setRadius</secondary></indexterm>
+<para><computeroutput>void nsShape::Circle::setRadius (const unsigned &amp; radius)</computeroutput></para><para>
+
+<para>Définit le nouveau rayon du cercle. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>radius</entry><entry>
+<para>: Nouveau rayon </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_circle_8cpp_source_1l00160">160</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_circle_1a9a2fc6b4a852e25922e5a1732d39644a"/><section>
+    <title>setValues()</title>
+<indexterm><primary>setValues</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>setValues</secondary></indexterm>
+<para><computeroutput>void nsShape::Circle::setValues (const int &amp; id, const std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a définir </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>values</entry><entry>
+<para>Vecteur des nouvelles valeurs a appliquer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_circle_8cpp_source_1l00105">105</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_circle_8h">circle.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_circle_8cpp">circle.cpp</link></section>
+</section>

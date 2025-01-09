@@ -1,0 +1,57 @@
+Ce répertoire contient divers exemples dont le but est de vous aider a utiliser min\+GL 2. ~\newline
+ Il est conseillé de {\bfseries{bien}} lire les commentaires qui sont éparpillés dans le code de ces exemples, et de lire la documentation des différentes classes qui vous sont introduites en même temps.\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md1}{}\doxysection{$<$tt$>$00-\/\+Boilerplate/$<$/tt$>$}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md1}
+L\textquotesingle{}exemple n°00 Boilerplate contient le strict minimum pour démarrer un projet sous min\+GL 2.
+
+Si vous voulez démarrer un projet avec l\textquotesingle{}aide de cet exemple, il vous est vivement conseillé de le placer dans un répertoire séparé de min\+GL 2, de placer le répertoire de min\+GL 2 dans votre nouveau répertoire de travail et de mettre a jour le fichier de projet {\ttfamily 00-\/\+Boilerplate.\+pro} en accord avec vos changements.\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md2}{}\doxysection{$<$tt$>$01-\/\+Shapes/$<$/tt$>$}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md2}
+L\textquotesingle{}exemple n°01 Shapes vous montre comment dessiner des formes géométriques sur la fenêtre avec min\+GL 2.
+
+Vous y verrez certaines classes utilisées très souvent lors de l\textquotesingle{}utilisation de la bibliothèque, ainsi que les mécanismes d\textquotesingle{}affichage.\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md3}{}\doxysection{$<$tt$>$02-\/\+Texte/$<$/tt$>$}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md3}
+L\textquotesingle{}exemple n°02 Texte vous montre comment afficher du texte a l\textquotesingle{}utilisateur directement sur la fenêtre.
+
+Les différents paramètres pour afficher le texte vous y seront montrés.\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md4}{}\doxysection{$<$tt$>$03-\/\+Clavier/$<$/tt$>$}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md4}
+L\textquotesingle{}exemple n°03 Clavier vous montre comment récupérer l\textquotesingle{}état d\textquotesingle{}une touche du clavier.
+
+La carré bleu peut être déplacé a l\textquotesingle{}aide des touches ZQSD du clavier.\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md5}{}\doxysection{$<$tt$>$04-\/\+Souris/$<$/tt$>$}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md5}
+L\textquotesingle{}exemple n°4 Souris vous montre comment se servir du gestionnaire d\textquotesingle{}évènements pour récupérer des évènements souris.
+
+Le carré bleu peut être déplacé a l\textquotesingle{}aide du curseur de la souris. Sa couleur est changé au clic de souris. ~\newline
+ {\bfseries{Attention\+:}} Comme nous nous servons du gestionnaire d\textquotesingle{}évènements, la ligne suivante, provenant du Boilerplate, et permettant de vider le gestionnaire d\textquotesingle{}évènement périodiquement, a été commentée\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{ \{C++\}}
+\DoxyCodeLine{window.getEventManager().clearEvents();}
+
+\end{DoxyCode}
+\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md6}{}\doxysection{$<$tt$>$05-\/\+Transition/$<$/tt$>$}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md6}
+L\textquotesingle{}exemple n°5 Transition vous montre comment se servir du gestionnaire de transition.
+
+Plusieurs formes géométriques ont des transitions qui sont appliquées sur leur différentes propriétés, avec des paramètres qui diffèrent afin que vous puissiez voir ses possibilités.\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md7}{}\doxysection{$<$tt$>$06-\/\+Sprite/$<$/tt$>$}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md7}
+L\textquotesingle{}exemple n°6 Sprite vous montre comment charger une image externe au format .si2 dans votre programme.
+
+Cet exemple stocke les ressources dans le répertoire {\ttfamily res/}, qui comprend actuellement une unique image. ~\newline
+ Afin que le programme puisse retrouver ses ressources, ce répertoire doit {\bfseries{impérativement}} être copié dans le même répertoire où se trouve l\textquotesingle{}exécutable.\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md8}{}\doxysection{$<$tt$>$07-\/\+Audio/$<$/tt$>$}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md8}
+L\textquotesingle{}exemple n°7 Audio vous montre comment utiliser le sous-\/système audio afin de jouer de la musique et des effets sonores.
+
+Même remarque que l\textquotesingle{}exemple précédent, le répertoire {\ttfamily res/} doit être copié dans le même répertoire que celui où se trouve l\textquotesingle{}exécutable.\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md9}{}\doxysubsection{Remerciements}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md9}
+
+\begin{DoxyItemize}
+\item {\bfseries{music.\+wav}} ~\newline
+ The Entertainer by Kevin Mac\+Leod ~\newline
+ Link\+: \href{https://incompetech.filmmusic.io/song/5765-the-entertainer}{\texttt{ https\+://incompetech.\+filmmusic.\+io/song/5765-\/the-\/entertainer}} ~\newline
+ License\+: \href{http://creativecommons.org/licenses/by/4.0/}{\texttt{ http\+://creativecommons.\+org/licenses/by/4.\+0/}} ~\newline
+
+\item {\bfseries{sound1.\+wav}} ~\newline
+ snr\+\_\+bod.\+wav by DWSD ~\newline
+ Link\+: \href{https://freesound.org/people/DWSD/sounds/183111}{\texttt{ https\+://freesound.\+org/people/\+DWSD/sounds/183111}} ~\newline
+ License\+: \href{https://creativecommons.org/licenses/by/3.0/}{\texttt{ https\+://creativecommons.\+org/licenses/by/3.\+0/}}
+\item {\bfseries{sound2.\+wav}} ~\newline
+ metalbang0.\+wav by Samster\+Birdies ~\newline
+ Link\+: \href{https://freesound.org/people/SamsterBirdies/sounds/435699}{\texttt{ https\+://freesound.\+org/people/\+Samster\+Birdies/sounds/435699}} ~\newline
+ License\+: \href{https://creativecommons.org/publicdomain/zero/1.0/}{\texttt{ https\+://creativecommons.\+org/publicdomain/zero/1.\+0/}} ~\newline
+
+\end{DoxyItemize}\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md10}{}\doxysection{$<$tt$>$08-\/\+Custom\+Drawable/$<$/tt$>$}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md10}
+L\textquotesingle{}exemple n°8 Custom Drawable vous montre comment créer vos propres objets affichables.
+
+Une classe d\textquotesingle{}exemple {\ttfamily \mbox{\hyperlink{class_bg_text}{Bg\+Text}}}, affichant un texte avec une couleur de fond, est créé comme exemple.\hypertarget{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md11}{}\doxysection{$<$tt$>$09-\/\+Custom\+Transitionable/$<$/tt$>$}\label{md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_autotoc_md11}
+L\textquotesingle{}exemple n°9 Custom Transitionable vous montre comment créer vos propres objets compatible avec le gestionnaire de transition.
+
+Cet exemple reprend la classe {\ttfamily \mbox{\hyperlink{class_bg_text}{Bg\+Text}}} créé lors de l\textquotesingle{}exemple précédent, afin de lui ajouter le support de la transition pour sa couleur de texte et de fond. 

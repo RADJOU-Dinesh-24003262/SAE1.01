@@ -1,0 +1,228 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_bg_text" xml:lang="en-US">
+<title>BgText Class Reference</title>
+<indexterm><primary>BgText</primary></indexterm>
+Inheritance diagram for BgText:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_bg_text__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for BgText:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_bg_text__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95">TransitionIds</link> { <link linkend="_class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3">TRANSITION_TEXT_COLOR</link>
+, <link linkend="_class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1">TRANSITION_BACKGROUND_COLOR</link>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa">BgText</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const std::string &amp;content, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;textColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;backgroundColor)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_bg_text_1a01df624a8d498766a9eb579eb18f2326">draw</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window) const override</para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa"/><emphasis role="strong">BgText</emphasis> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const std::string &amp;content, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;textColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;backgroundColor)</para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_bg_text_1a55fdeb5f3e12dcc2926c87f80fddc6c3">draw</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window) const override</para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_bg_text_1a01cc8269e39184b805351409aac4feb4">getValues</link> (const int &amp;id, std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_class_bg_text_1adb35c1e7e0387e04e8f8e67d9e1468c8">setValues</link> (const int &amp;id, const std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_08-_custom_drawable_2bgtext_8h_source_1l00012">12</link> of file <link linkend="_08-_custom_drawable_2bgtext_8h_source">bgtext.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95"/><section>
+    <title>TransitionIds</title>
+<indexterm><primary>TransitionIds</primary><secondary>BgText</secondary></indexterm>
+<indexterm><primary>BgText</primary><secondary>TransitionIds</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95">BgText::TransitionIds</link></computeroutput></para><informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>TRANSITION_TEXT_COLOR</primary><secondary>BgText</secondary></indexterm>
+<indexterm><primary>BgText</primary><secondary>TRANSITION_TEXT_COLOR</secondary></indexterm>
+<anchor xml:id="_class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3"/>TRANSITION_TEXT_COLOR</entry><entry>
+<para>Transition pour la couleur du texte </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_BACKGROUND_COLOR</primary><secondary>BgText</secondary></indexterm>
+<indexterm><primary>BgText</primary><secondary>TRANSITION_BACKGROUND_COLOR</secondary></indexterm>
+<anchor xml:id="_class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1"/>TRANSITION_BACKGROUND_COLOR</entry><entry>
+<para>Transition pour la couleur de fond </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_09-_custom_transitionable_2bgtext_8h_source_1l00018">18</link> of file <link linkend="_09-_custom_transitionable_2bgtext_8h_source">bgtext.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa"/><section>
+    <title>BgText()</title>
+<indexterm><primary>BgText</primary><secondary>BgText</secondary></indexterm>
+<indexterm><primary>BgText</primary><secondary>BgText</secondary></indexterm>
+<para><computeroutput>BgText::BgText (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position, const std::string &amp; content, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; textColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; backgroundColor)</computeroutput></para><para>
+Definition at line <link linkend="_09-_custom_transitionable_2bgtext_8cpp_source_1l00003">3</link> of file <link linkend="_09-_custom_transitionable_2bgtext_8cpp_source">bgtext.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_bg_text_1a01df624a8d498766a9eb579eb18f2326"/><section>
+    <title>draw()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>draw</primary><secondary>BgText</secondary></indexterm>
+<indexterm><primary>BgText</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void BgText::draw (<link linkend="_class_min_g_l">MinGL</link> &amp; window) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</para>
+<para>
+Implements <link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">nsGraphics::IDrawable</link>.</para>
+<para>
+Definition at line <link linkend="_09-_custom_transitionable_2bgtext_8cpp_source_1l00008">8</link> of file <link linkend="_09-_custom_transitionable_2bgtext_8cpp_source">bgtext.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_bg_text_1a55fdeb5f3e12dcc2926c87f80fddc6c3"/><section>
+    <title>draw()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>draw</primary><secondary>BgText</secondary></indexterm>
+<indexterm><primary>BgText</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>virtual void BgText::draw (<link linkend="_class_min_g_l">MinGL</link> &amp; window) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</para>
+<para>
+Implements <link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">nsGraphics::IDrawable</link>.</para>
+</section>
+<anchor xml:id="_class_bg_text_1a01cc8269e39184b805351409aac4feb4"/><section>
+    <title>getValues()</title>
+<indexterm><primary>getValues</primary><secondary>BgText</secondary></indexterm>
+<indexterm><primary>BgText</primary><secondary>getValues</secondary></indexterm>
+<para><computeroutput>void BgText::getValues (const int &amp; id, std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a récupérer </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>values</entry><entry>
+<para>Vecteur de valeurs a peupler </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_09-_custom_transitionable_2bgtext_8cpp_source_1l00014">14</link> of file <link linkend="_09-_custom_transitionable_2bgtext_8cpp_source">bgtext.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_bg_text_a01cc8269e39184b805351409aac4feb4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_bg_text_1adb35c1e7e0387e04e8f8e67d9e1468c8"/><section>
+    <title>setValues()</title>
+<indexterm><primary>setValues</primary><secondary>BgText</secondary></indexterm>
+<indexterm><primary>BgText</primary><secondary>setValues</secondary></indexterm>
+<para><computeroutput>void BgText::setValues (const int &amp; id, const std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a définir </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>values</entry><entry>
+<para>Vecteur des nouvelles valeurs a appliquer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_09-_custom_transitionable_2bgtext_8cpp_source_1l00034">34</link> of file <link linkend="_09-_custom_transitionable_2bgtext_8cpp_source">bgtext.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_bg_text_adb35c1e7e0387e04e8f8e67d9e1468c8_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.cpp</section>
+</section>

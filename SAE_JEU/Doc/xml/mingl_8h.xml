@@ -1,0 +1,358 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="mingl_8h" kind="file" language="C++">
+    <compoundname>mingl.h</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">memory</includes>
+    <includes local="no">queue</includes>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">GL/freeglut.h</includes>
+    <includes refid="idrawable_8h" local="yes">graphics/idrawable.h</includes>
+    <includes refid="rgbacolor_8h" local="yes">graphics/rgbacolor.h</includes>
+    <includes refid="vec2d_8h" local="yes">graphics/vec2d.h</includes>
+    <includes refid="event__manager_8h" local="yes">event/event_manager.h</includes>
+    <includedby refid="_menu_management_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</includedby>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
+    <includedby refid="game_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/00-Boilerplate/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</includedby>
+    <includedby refid="mingl_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp</includedby>
+    <incdepgraph>
+      <node id="16">
+        <label>event.hpp</label>
+        <link refid="event_8hpp"/>
+      </node>
+      <node id="15">
+        <label>event/event_manager.h</label>
+        <link refid="event__manager_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>graphics/idrawable.h</label>
+        <link refid="idrawable_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>graphics/rgbacolor.h</label>
+        <link refid="rgbacolor_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>graphics/vec2d.h</label>
+        <link refid="vec2d_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</label>
+        <link refid="mingl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>../tools/ieditable.h</label>
+        <link refid="ieditable_8h"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>ieditable.hpp</label>
+        <link refid="ieditable_8hpp"/>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>GL/freeglut.h</label>
+      </node>
+      <node id="11">
+        <label>iostream</label>
+      </node>
+      <node id="2">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>memory</label>
+      </node>
+      <node id="14">
+        <label>ostream</label>
+      </node>
+      <node id="4">
+        <label>queue</label>
+      </node>
+      <node id="5">
+        <label>string</label>
+      </node>
+      <node id="6">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</label>
+        <link refid="_menu_management_8h_source"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
+        <link refid="game_8cpp_source"/>
+      </node>
+      <node id="4">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/00-Boilerplate/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_source"/>
+      </node>
+      <node id="7">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source"/>
+      </node>
+      <node id="8">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_source"/>
+      </node>
+      <node id="9">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source"/>
+      </node>
+      <node id="10">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_source"/>
+      </node>
+      <node id="11">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source"/>
+      </node>
+      <node id="12">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source"/>
+      </node>
+      <node id="13">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source"/>
+      </node>
+      <node id="14">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_source"/>
+      </node>
+      <node id="15">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</label>
+        <link refid="mingl_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp</label>
+        <link refid="mingl_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp</label>
+        <link refid="main_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_min_g_l" prot="public">MinGL</innerclass>
+    <briefdescription>
+<para>La bête. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexandre Sollier, Clément Mathieu<ndash/>Drif, Alain Casali </para>
+</simplesect>
+<simplesect kind="date"><para>Janvier 2020 </para>
+</simplesect>
+<simplesect kind="version"><para>2.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>MINGL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>MINGL_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;memory&gt;</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>shared_ptr</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;GL/freeglut.h&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="idrawable_8h" kindref="compound">graphics/idrawable.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rgbacolor_8h" kindref="compound">graphics/rgbacolor.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="vec2d_8h" kindref="compound">graphics/vec2d.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="event__manager_8h" kindref="compound">event/event_manager.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Pour<sp/>les<sp/>polices<sp/>et<sp/>l&apos;affichage<sp/>des<sp/>chaines<sp/>de<sp/>caractères,<sp/>voir:<sp/>https://www.opengl.org/resources/libraries/glut/spec3/node76.html</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34" refid="class_min_g_l" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_min_g_l" kindref="compound">MinGL</ref></highlight></codeline>
+<codeline lineno="35"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="47" refid="class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair&lt;unsigned,<sp/>bool&gt;<sp/><ref refid="class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96" kindref="member">KeyType_t</ref>;<sp/></highlight><highlight class="comment">//<sp/>cle,<sp/>spécial</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55" refid="class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::map&lt;KeyType_t,<sp/>bool&gt;<sp/><ref refid="class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1" kindref="member">KeyMap_t</ref>;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c" kindref="member">MinGL</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>windowSize<sp/>=<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(640,<sp/>480),</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>windowPosition<sp/>=<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(128,<sp/>128),</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>backgroundColor<sp/>=<sp/>nsGraphics::KWhite);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l_1a0f84e59dd311785a7e6da848abd5d188" kindref="member">~MinGL</ref>();</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81" refid="class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">static</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d" kindref="member">initGlut</ref>()</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>tmp<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glutInit(&amp;tmp,<sp/>NULL);</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="91"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" kindref="member">initGraphic</ref>();</highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a9508f3ac9d4cb4f444f56f5d77ed9d86" kindref="member">stopGraphic</ref>();</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f" kindref="member">isPressed</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96" kindref="member">KeyType_t</ref>&amp;<sp/>key);</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a99750fd4c8f97cfe693b1acb903424cf" kindref="member">resetKey</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96" kindref="member">KeyType_t</ref>&amp;<sp/>key);</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kindref="member">finishFrame</ref>();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" kindref="member">clearScreen</ref>();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_event_1_1_event_manager" kindref="compound">nsEvent::EventManager</ref>&amp;<sp/><ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>();</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/><ref refid="class_min_g_l_1a66758e8e6983cc1dd0b10b1ee743a65a" kindref="member">getBackgroundColor</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="136"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a4399b7615cea89f850cd5c66e428c367" kindref="member">setBackgroundColor</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>backgroundColor);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"></highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/><ref refid="class_min_g_l_1a92bacd1567089fb4641ed7b416cfe74d" kindref="member">getWindowSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"></highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a532d320b7b837998533fe6577ab45bc3" kindref="member">setWindowSize</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>windowSize);</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/><ref refid="class_min_g_l_1a1ea6ea098988db36f5bf18713f9f3347" kindref="member">getWindowPosition</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="167"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a9239873a52e437457af03f002f5df2b6" kindref="member">setWindowPosition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>&amp;windowPosition);</highlight></codeline>
+<codeline lineno="168"><highlight class="normal"></highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/><ref refid="class_min_g_l_1a46cea08ec9ef4a0678f425000ca77e5b" kindref="member">getWindowName</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal"></highlight></codeline>
+<codeline lineno="180"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a462ab2edc0eb28990638541873869e0e" kindref="member">setWindowName</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;windowName);</highlight></codeline>
+<codeline lineno="181"><highlight class="normal"></highlight></codeline>
+<codeline lineno="186"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d" kindref="member">isOpen</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="187"><highlight class="normal"></highlight></codeline>
+<codeline lineno="188"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="189"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Les<sp/>données<sp/>membres<sp/>en<sp/>tant<sp/>que<sp/>tel</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="190"><highlight class="normal"></highlight></codeline>
+<codeline lineno="194"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>m_windowName;</highlight></codeline>
+<codeline lineno="195"><highlight class="normal"></highlight></codeline>
+<codeline lineno="199"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/>m_bgColor;</highlight></codeline>
+<codeline lineno="200"><highlight class="normal"></highlight></codeline>
+<codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1" kindref="member">KeyMap_t</ref><sp/>m_keyboardMap;</highlight></codeline>
+<codeline lineno="205"><highlight class="normal"></highlight></codeline>
+<codeline lineno="209"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">short</highlight><highlight class="normal"><sp/>m_glutWindowId<sp/>=<sp/>0;</highlight></codeline>
+<codeline lineno="210"><highlight class="normal"></highlight></codeline>
+<codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_event_1_1_event_manager" kindref="compound">nsEvent::EventManager</ref><sp/>m_eventManager;</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"></highlight></codeline>
+<codeline lineno="219"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_windowIsOpen;</highlight></codeline>
+<codeline lineno="220"><highlight class="normal"></highlight></codeline>
+<codeline lineno="221"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Les<sp/>handlers</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="222"><highlight class="normal"></highlight></codeline>
+<codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callReshape(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>h,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>w);</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"></highlight></codeline>
+<codeline lineno="235"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callDisplay();</highlight></codeline>
+<codeline lineno="236"><highlight class="normal"></highlight></codeline>
+<codeline lineno="245"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callMouse(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>button,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>state,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="246"><highlight class="normal"></highlight></codeline>
+<codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callMotion(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="254"><highlight class="normal"></highlight></codeline>
+<codeline lineno="261"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callPassiveMotion(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y);</highlight></codeline>
+<codeline lineno="262"><highlight class="normal"></highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callKeyboard(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="271"><highlight class="normal"></highlight></codeline>
+<codeline lineno="279"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callKeyboardUp(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="280"><highlight class="normal"></highlight></codeline>
+<codeline lineno="288"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callKeyboardSpecial(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"></highlight></codeline>
+<codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callKeyboardUpSpecial(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>key,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x<sp/>=<sp/>0,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y<sp/>=<sp/>0);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"></highlight></codeline>
+<codeline lineno="303"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>callClose();</highlight></codeline>
+<codeline lineno="304"><highlight class="normal"></highlight></codeline>
+<codeline lineno="305"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>MinGL</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="306"><highlight class="normal"></highlight></codeline>
+<codeline lineno="307"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MINGL_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,151 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_transition_8cpp_source" xml:lang="en-US">
+<title>transition.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition/transition.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="_transition_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_transition_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_transition_8h">mingl/transition/transition.h</link>&quot;</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00012"/>00012 
+<anchor xml:id="_transition_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&lt;algorithm&gt;</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00014"/>00014 
+<anchor xml:id="_transition_8cpp_source_1l00015"/>00015 <emphasis role="preprocessor">#define&#32;TRANSITION&#32;nsTransition::Transition</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00016"/>00016 
+<anchor xml:id="_transition_8cpp_source_1l00017"/>00017 TRANSITION::Transition(<emphasis role="keyword">const</emphasis>&#32;TransitionContract&#32;&amp;contract)
+<anchor xml:id="_transition_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;:&#32;TransitionContract(contract)
+<anchor xml:id="_transition_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;,&#32;m_startTime(std::chrono::steady_clock::now()&#32;+&#32;m_delay)
+<anchor xml:id="_transition_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;,&#32;m_elapsed(0)
+<anchor xml:id="_transition_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;,&#32;m_reverse(false)
+<anchor xml:id="_transition_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;,&#32;m_finished(false)
+<anchor xml:id="_transition_8cpp_source_1l00023"/>00023 {}&#32;<emphasis role="comment">//&#32;Transition()</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00024"/>00024 
+<anchor xml:id="_transition_8cpp_source_1l00025"/>00025 <emphasis role="keyword">const</emphasis>&#32;<link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">nsTransition::SystemDuration_t</link>&amp;&#32;TRANSITION::getElapsed()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00026"/>00026 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_transition_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_elapsed;
+<anchor xml:id="_transition_8cpp_source_1l00028"/>00028 }&#32;<emphasis role="comment">//&#32;getElapsed()</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00029"/>00029 
+<anchor xml:id="_transition_8cpp_source_1l00030"/>00030 <emphasis role="keywordtype">void</emphasis>&#32;TRANSITION::setElapsed(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">nsTransition::SystemDuration_t</link>&#32;&amp;elapsed)
+<anchor xml:id="_transition_8cpp_source_1l00031"/>00031 {
+<anchor xml:id="_transition_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Don&apos;t&#32;allow&#32;to&#32;set&#32;the&#32;elapsed&#32;time&#32;if&#32;the&#32;start&#32;time&#32;is&#32;ahead&#32;of&#32;clock</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(std::chrono::steady_clock::now()&#32;&lt;&#32;m_startTime)&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00034"/>00034 
+<anchor xml:id="_transition_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;the&#32;new&#32;elapsed&#32;time</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;m_elapsed&#32;=&#32;elapsed;
+<anchor xml:id="_transition_8cpp_source_1l00037"/>00037 
+<anchor xml:id="_transition_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Update&#32;the&#32;target&#32;values</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;updateValues();
+<anchor xml:id="_transition_8cpp_source_1l00040"/>00040 }&#32;<emphasis role="comment">//&#32;setElapsed()</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00041"/>00041 
+<anchor xml:id="_transition_8cpp_source_1l00042"/>00042 <emphasis role="keywordtype">void</emphasis>&#32;TRANSITION::addToElapsed(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">nsTransition::SystemDuration_t</link>&#32;&amp;addedTime)
+<anchor xml:id="_transition_8cpp_source_1l00043"/>00043 {
+<anchor xml:id="_transition_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;setElapsed(getElapsed()&#32;+&#32;addedTime);
+<anchor xml:id="_transition_8cpp_source_1l00045"/>00045 }&#32;<emphasis role="comment">//&#32;addToElapsed()</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00046"/>00046 
+<anchor xml:id="_transition_8cpp_source_1l00047"/>00047 <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;TRANSITION::isReversed()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00048"/>00048 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_transition_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_reverse;
+<anchor xml:id="_transition_8cpp_source_1l00050"/>00050 }&#32;<emphasis role="comment">//&#32;isReversed()</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00051"/>00051 
+<anchor xml:id="_transition_8cpp_source_1l00052"/>00052 <emphasis role="keywordtype">void</emphasis>&#32;TRANSITION::finish(<emphasis role="keyword">const</emphasis>&#32;TransitionFinishModes&#32;&amp;finishMode)
+<anchor xml:id="_transition_8cpp_source_1l00053"/>00053 {
+<anchor xml:id="_transition_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;m_finished&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00055"/>00055 
+<anchor xml:id="_transition_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(finishMode)
+<anchor xml:id="_transition_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_transition_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION::TransitionFinishModes::FINISH_START:
+<anchor xml:id="_transition_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_target.setValues(m_id,&#32;m_beginning);
+<anchor xml:id="_transition_8cpp_source_1l00060"/>00060 
+<anchor xml:id="_transition_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION::TransitionFinishModes::FINISH_DESTINATION:
+<anchor xml:id="_transition_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_target.setValues(m_id,&#32;m_destination);
+<anchor xml:id="_transition_8cpp_source_1l00064"/>00064 
+<anchor xml:id="_transition_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="_transition_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_transition_8cpp_source_1l00069"/>00069 }&#32;<emphasis role="comment">//&#32;finish()</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00070"/>00070 
+<anchor xml:id="_transition_8cpp_source_1l00071"/>00071 <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&amp;&#32;TRANSITION::isFinished()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00072"/>00072 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_transition_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_finished;
+<anchor xml:id="_transition_8cpp_source_1l00074"/>00074 }&#32;<emphasis role="comment">//&#32;isFinished()</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00075"/>00075 
+<anchor xml:id="_transition_8cpp_source_1l00076"/>00076 <emphasis role="keywordtype">void</emphasis>&#32;TRANSITION::updateValues()
+<anchor xml:id="_transition_8cpp_source_1l00077"/>00077 {
+<anchor xml:id="_transition_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Prevent&#32;further&#32;progress&#32;if&#32;this&#32;transition&#32;is&#32;marked&#32;finished</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_finished)
+<anchor xml:id="_transition_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00081"/>00081 
+<anchor xml:id="_transition_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Get&#32;the&#32;elapsed&#32;progress&#32;and&#32;clamp&#32;it&#32;between&#32;0&#32;and&#32;1</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;elapsedProgress&#32;=&#32;m_elapsed&#32;/&#32;m_duration;
+<anchor xml:id="_transition_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;elapsedProgress&#32;=&#32;std::max(0.f,&#32;std::min(elapsedProgress,&#32;1.f));
+<anchor xml:id="_transition_8cpp_source_1l00085"/>00085 
+<anchor xml:id="_transition_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;If&#32;we&#32;are&#32;in&#32;reverse&#32;mode,&#32;reverse&#32;the&#32;progress</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">float</emphasis>&#32;effectiveElapsedProgress&#32;=&#32;(!m_reverse)&#32;?&#32;elapsedProgress&#32;:&#32;1&#32;-&#32;elapsedProgress;
+<anchor xml:id="_transition_8cpp_source_1l00088"/>00088 
+<anchor xml:id="_transition_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Compute&#32;the&#32;new&#32;values</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;std::vector&lt;float&gt;&#32;updatedValues(m_beginning.size());
+<anchor xml:id="_transition_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;m_beginning.size();&#32;++i)
+<anchor xml:id="_transition_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_transition_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;updatedValues[i]&#32;=&#32;((m_destination[i]&#32;-&#32;m_beginning[i])&#32;*&#32;effectiveElapsedProgress)&#32;+&#32;m_beginning[i];
+<anchor xml:id="_transition_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_transition_8cpp_source_1l00095"/>00095 
+<anchor xml:id="_transition_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Set&#32;the&#32;new&#32;values&#32;to&#32;the&#32;target</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;m_target.setValues(m_id,&#32;updatedValues);
+<anchor xml:id="_transition_8cpp_source_1l00098"/>00098 
+<anchor xml:id="_transition_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Transition&#32;has&#32;finished,&#32;call&#32;the&#32;endlife&#32;handler</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(elapsedProgress&#32;==&#32;1.f)
+<anchor xml:id="_transition_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_transition_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;handleEndlife();
+<anchor xml:id="_transition_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_transition_8cpp_source_1l00104"/>00104 }&#32;<emphasis role="comment">//&#32;updateValues()</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00105"/>00105 
+<anchor xml:id="_transition_8cpp_source_1l00106"/>00106 <emphasis role="keywordtype">void</emphasis>&#32;TRANSITION::handleEndlife()
+<anchor xml:id="_transition_8cpp_source_1l00107"/>00107 {
+<anchor xml:id="_transition_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(m_transitionMode)
+<anchor xml:id="_transition_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_transition_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TransitionContract::TransitionMode::MODE_FINITE:
+<anchor xml:id="_transition_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;In&#32;finite&#32;mode,&#32;the&#32;transition&#32;is&#32;terminated&#32;when&#32;it&apos;s&#32;done</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;finish(FINISH_DESTINATION);
+<anchor xml:id="_transition_8cpp_source_1l00113"/>00113 
+<anchor xml:id="_transition_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TransitionContract::TransitionMode::MODE_FINITE_REVERSE:
+<anchor xml:id="_transition_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;In&#32;finite&#32;reverse&#32;mode,&#32;the&#32;transition&#32;is&#32;reversed&#32;when&#32;done,&#32;and&#32;finished&#32;when&#32;reversed</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!m_reverse)
+<anchor xml:id="_transition_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_transition_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_reverse&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00120"/>00120 
+<anchor xml:id="_transition_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_startTime&#32;=&#32;std::chrono::steady_clock::now();
+<anchor xml:id="_transition_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_elapsed&#32;=&#32;SystemDuration_t::zero();
+<anchor xml:id="_transition_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_transition_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_transition_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;finish(FINISH_START);
+<anchor xml:id="_transition_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_transition_8cpp_source_1l00128"/>00128 
+<anchor xml:id="_transition_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TransitionContract::TransitionMode::MODE_LOOP:
+<anchor xml:id="_transition_8cpp_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;In&#32;loop&#32;mode,&#32;the&#32;target&#32;is&#32;set&#32;to&#32;its&#32;beginning&#32;values&#32;before&#32;going&#32;again</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_target.setValues(m_id,&#32;m_beginning);
+<anchor xml:id="_transition_8cpp_source_1l00133"/>00133 
+<anchor xml:id="_transition_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_startTime&#32;=&#32;std::chrono::steady_clock::now();
+<anchor xml:id="_transition_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_elapsed&#32;=&#32;SystemDuration_t::zero();
+<anchor xml:id="_transition_8cpp_source_1l00136"/>00136 
+<anchor xml:id="_transition_8cpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TransitionContract::TransitionMode::MODE_LOOP_SMOOTH:
+<anchor xml:id="_transition_8cpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;In&#32;loop&#32;smooth&#32;mode,&#32;we&#32;invert&#32;the&#32;reverse&#32;boolean&#32;before&#32;going&#32;again</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_reverse&#32;=&#32;!m_reverse;
+<anchor xml:id="_transition_8cpp_source_1l00141"/>00141 
+<anchor xml:id="_transition_8cpp_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_startTime&#32;=&#32;std::chrono::steady_clock::now();
+<anchor xml:id="_transition_8cpp_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_elapsed&#32;=&#32;SystemDuration_t::zero();
+<anchor xml:id="_transition_8cpp_source_1l00144"/>00144 
+<anchor xml:id="_transition_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_transition_8cpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_transition_8cpp_source_1l00147"/>00147 
+<anchor xml:id="_transition_8cpp_source_1l00148"/>00148 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Call&#32;the&#32;finish&#32;callback&#32;if&#32;set</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00149"/>00149 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(m_destinationCallback)
+<anchor xml:id="_transition_8cpp_source_1l00150"/>00150 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_transition_8cpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_destinationCallback();
+<anchor xml:id="_transition_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_transition_8cpp_source_1l00153"/>00153 }&#32;<emphasis role="comment">//&#32;handleEndlife()</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00154"/>00154 
+<anchor xml:id="_transition_8cpp_source_1l00155"/>00155 <emphasis role="preprocessor">#undef&#32;TRANSITION</emphasis>
+</programlisting></section>

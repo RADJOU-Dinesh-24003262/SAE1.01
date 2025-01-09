@@ -1,0 +1,276 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="sprite_8h" kind="file" language="C++">
+    <compoundname>sprite.h</compoundname>
+    <includes local="no">cstdint</includes>
+    <includes local="no">vector</includes>
+    <includes refid="idrawable_8h" local="yes">../graphics/idrawable.h</includes>
+    <includes refid="rgbacolor_8h" local="yes">../graphics/rgbacolor.h</includes>
+    <includes refid="vec2d_8h" local="yes">../graphics/vec2d.h</includes>
+    <includes refid="itransitionable_8h" local="yes">../transition/itransitionable.h</includes>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</includedby>
+    <includedby refid="sprite_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp</includedby>
+    <incdepgraph>
+      <node id="4">
+        <label>../graphics/idrawable.h</label>
+        <link refid="idrawable_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>../graphics/rgbacolor.h</label>
+        <link refid="rgbacolor_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>../graphics/vec2d.h</label>
+        <link refid="vec2d_8h"/>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h</label>
+        <link refid="sprite_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>../tools/ieditable.h</label>
+        <link refid="ieditable_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>ieditable.hpp</label>
+        <link refid="ieditable_8hpp"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../transition/itransitionable.h</label>
+        <link refid="itransitionable_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>GL/freeglut.h</label>
+      </node>
+      <node id="2">
+        <label>cstdint</label>
+      </node>
+      <node id="9">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>memory</label>
+      </node>
+      <node id="12">
+        <label>ostream</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h</label>
+        <link refid="sprite_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp</label>
+        <link refid="sprite_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classns_gui_1_1_sprite" prot="public">nsGui::Sprite</innerclass>
+    <innerclass refid="structns_gui_1_1_sprite_1_1_file_begin" prot="private">nsGui::Sprite::FileBegin</innerclass>
+    <innernamespace refid="namespacens_gui">nsGui</innernamespace>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="sprite_8h_1a8c61e64b8675498cee79c59d3f8131e2" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t magic</definition>
+        <argsstring></argsstring>
+        <name>magic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le magic number du fichier, doit toujours être &quot;SI&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="0" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="0" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sprite_8h_1a7815e2193b5dea24aae35f568006be9a" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t headmagic</definition>
+        <argsstring></argsstring>
+        <name>headmagic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le magic number de la section en-tête, doit toujours être &quot;HEAD&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="1" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="1" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sprite_8h_1a6ac1f454a7d4e4d64b7ff8ca39ac5920" prot="public" static="no" mutable="no">
+        <type>uint16_t</type>
+        <definition>uint16_t fileVersion</definition>
+        <argsstring></argsstring>
+        <name>fileVersion</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>La version du format stockée par le fichier </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="2" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="2" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sprite_8h_1af73d2febf3dc338c7c8f42922aa7131c" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t pixelCount</definition>
+        <argsstring></argsstring>
+        <name>pixelCount</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le nombre de pixels contenus dans la section données </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="3" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="3" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sprite_8h_1a410460a0a75462ae38c5c9daf5fb06ed" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t rowSize</definition>
+        <argsstring></argsstring>
+        <name>rowSize</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le nombre de pixels par ligne </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="4" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="4" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="sprite_8h_1a43e5468a3d445613419004493d2ffac8" prot="public" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t datamagic</definition>
+        <argsstring></argsstring>
+        <name>datamagic</name>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Le magic number de la section données, doit toujours être &quot;DATA&quot; </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="5" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="5" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Image pouvant être chargé depuis un fichier. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexandre Sollier </para>
+</simplesect>
+<simplesect kind="date"><para>Janvier 2020 </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1" refid="sprite_8h_1a7815e2193b5dea24aae35f568006be9a" refkind="member"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>DISPLAY_SPRITE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>DISPLAY_SPRITE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cstdint&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../graphics/idrawable.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../graphics/rgbacolor.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../graphics/vec2d.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;../transition/itransitionable.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22" refid="namespacens_gui" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacens_gui" kindref="compound">nsGui</ref><sp/>{</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28" refid="classns_gui_1_1_sprite" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classns_gui_1_1_sprite" kindref="compound">Sprite</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_i_drawable" kindref="compound">nsGraphics::IDrawable</ref>,<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classns_transition_1_1_i_transitionable" kindref="compound">nsTransition::ITransitionable</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="34" refid="classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78" kindref="member">TransitionIds</ref><sp/>{</highlight></codeline>
+<codeline lineno="35" refid="classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54" kindref="member">TRANSITION_POSITION</ref>,<sp/></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_gui_1_1_sprite_1a35558b08dfeb3e3a20be52da28e33c4c" kindref="member">Sprite</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>filename,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>position<sp/>=<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>());</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_gui_1_1_sprite_1a35558b08dfeb3e3a20be52da28e33c4c" kindref="member">Sprite</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;nsGraphics::RGBAcolor&gt;&amp;<sp/>pixelData,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/><ref refid="sprite_8h_1a410460a0a75462ae38c5c9daf5fb06ed" kindref="member">rowSize</ref>,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>position<sp/>=<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>());</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_gui_1_1_sprite_1ac4b29170aef06d46990b68da76480f28" kindref="member">draw</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref>&amp;<sp/>window)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_gui_1_1_sprite_1a7da27e2ccf7b574896662720d99c0056" kindref="member">getValues</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/>std::vector&lt;float&gt;<sp/>&amp;values)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_gui_1_1_sprite_1a63ad7e76b470c578aecc697203a3eb26" kindref="member">setValues</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;</highlight><highlight class="keywordtype">id</highlight><highlight class="normal">,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;float&gt;<sp/>&amp;values)<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>uint32_t&amp;<sp/><ref refid="classns_gui_1_1_sprite_1adbe04bd427b6658e0181ce167db83d05" kindref="member">getRowSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="66"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector&lt;nsGraphics::RGBAcolor&gt;&amp;<sp/><ref refid="classns_gui_1_1_sprite_1ad8644780a7a7dcbcd5f2e4e7a461b685" kindref="member">getPixelData</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/><ref refid="classns_gui_1_1_sprite_1a1d6ad6681627aae6c4680fc936da8eb2" kindref="member">getPosition</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_gui_1_1_sprite_1a4c695910c46504d1e8d47b838394a48e" kindref="member">setPosition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>position);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/><ref refid="classns_gui_1_1_sprite_1a26b502e88906860373c278495794998c" kindref="member">computeSize</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal">FileBegin<sp/>{</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="sprite_8h_1a8c61e64b8675498cee79c59d3f8131e2" kindref="member">magic</ref>;<sp/></highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="sprite_8h_1a7815e2193b5dea24aae35f568006be9a" kindref="member">headmagic</ref>;<sp/></highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint16_t<sp/><ref refid="sprite_8h_1a6ac1f454a7d4e4d64b7ff8ca39ac5920" kindref="member">fileVersion</ref>;<sp/></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="sprite_8h_1af73d2febf3dc338c7c8f42922aa7131c" kindref="member">pixelCount</ref>;<sp/></highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="sprite_8h_1a410460a0a75462ae38c5c9daf5fb06ed" kindref="member">rowSize</ref>;<sp/></highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>uint32_t<sp/><ref refid="sprite_8h_1a43e5468a3d445613419004493d2ffac8" kindref="member">datamagic</ref>;<sp/></highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/>__attribute__((packed));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>m_position;</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/>uint32_t<sp/>m_rowSize;</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;nsGraphics::RGBAcolor&gt;<sp/>m_pixelData;</highlight></codeline>
+<codeline lineno="123"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>Sprite</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nsGui</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>DISPLAY_SPRITE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h"/>
+  </compounddef>
+</doxygen>

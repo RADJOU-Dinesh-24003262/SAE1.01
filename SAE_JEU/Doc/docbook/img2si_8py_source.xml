@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_img2si_8py_source" xml:lang="en-US">
+<title>img2si.py</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="_img2si_8py_source_1l00001"/>00001 <emphasis role="comment">#!/usr/bin/env&#32;python3</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00002"/>00002 <emphasis role="keyword">from</emphasis>&#32;array&#32;<emphasis role="keyword">import</emphasis>&#32;array
+<anchor xml:id="_img2si_8py_source_1l00003"/>00003 <emphasis role="keyword">from</emphasis>&#32;PIL&#32;<emphasis role="keyword">import</emphasis>&#32;Image
+<anchor xml:id="_img2si_8py_source_1l00004"/>00004 <emphasis role="keyword">import</emphasis>&#32;argparse
+<anchor xml:id="_img2si_8py_source_1l00005"/>00005 <emphasis role="keyword">import</emphasis>&#32;io
+<anchor xml:id="_img2si_8py_source_1l00006"/>00006 <emphasis role="keyword">import</emphasis>&#32;os
+<anchor xml:id="_img2si_8py_source_1l00007"/>00007 
+<anchor xml:id="_img2si_8py_source_1l00008"/>00008 
+<anchor xml:id="_img2si_8py_source_1l00009"/>00009 __author__&#32;=&#32;<emphasis role="stringliteral">&quot;Kuruyia&quot;</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00010"/>00010 __version__&#32;=&#32;<emphasis role="stringliteral">&quot;1.0.0&quot;</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00011"/>00011 __license__&#32;=&#32;<emphasis role="stringliteral">&quot;MIT&quot;</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00012"/>00012 
+<anchor xml:id="_img2si_8py_source_1l00013"/>00013 <emphasis role="comment">#&#32;The&#32;&quot;Simple&#32;Image&#32;for&#32;Space&#32;Invaders&quot;&#32;(.si2)&#32;file&#32;format&#32;specifications</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00014"/>00014 <emphasis role="comment">#&#32;Authors:&#32;Alexandre&#32;&quot;Kuruyia&quot;&#32;SOLLIER,&#32;Marc&#32;AMBAUD&#32;(2019&#32;-&#32;2020)</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00015"/>00015 <emphasis role="comment">#</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00016"/>00016 <emphasis role="comment">#&#32;|&#32;Address&#32;|&#32;Length&#32;|&#32;Description&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00017"/>00017 <emphasis role="comment">#&#32;|---------|--------|-------------------------------------|</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00018"/>00018 <emphasis role="comment">#&#32;|&#32;0x00&#32;&#32;&#32;&#32;|&#32;2&#32;&#32;&#32;&#32;&#32;&#32;|&#32;Magic&#32;number&#32;(&quot;SI&quot;)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00019"/>00019 <emphasis role="comment">#&#32;|&#32;0x02&#32;&#32;&#32;&#32;|&#32;4&#32;&#32;&#32;&#32;&#32;&#32;|&#32;Header&#32;magic&#32;number&#32;(&quot;HEAD&quot;)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00020"/>00020 <emphasis role="comment">#&#32;|&#32;0x06&#32;&#32;&#32;&#32;|&#32;2&#32;&#32;&#32;&#32;&#32;&#32;|&#32;File&#32;version&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00021"/>00021 <emphasis role="comment">#&#32;|&#32;0x08&#32;&#32;&#32;&#32;|&#32;4&#32;&#32;&#32;&#32;&#32;&#32;|&#32;Pixel&#32;count&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00022"/>00022 <emphasis role="comment">#&#32;|&#32;0x0C&#32;&#32;&#32;&#32;|&#32;4&#32;&#32;&#32;&#32;&#32;&#32;|&#32;Image&#32;width&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00023"/>00023 <emphasis role="comment">#&#32;|&#32;0x10&#32;&#32;&#32;&#32;|&#32;4&#32;&#32;&#32;&#32;&#32;&#32;|&#32;Data&#32;magic&#32;number&#32;(&quot;DATA&quot;)&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;|</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00024"/>00024 <emphasis role="comment">#&#32;|&#32;0x14&#32;&#32;&#32;&#32;|&#32;???&#32;&#32;&#32;&#32;|&#32;Uncompressed&#32;image&#32;data&#32;as&#32;RGBA8888&#32;|</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00025"/>00025 <emphasis role="comment">#&#32;&quot;File&#32;version&quot;,&#32;&quot;Pixel&#32;count&quot;&#32;and&#32;&quot;Image&#32;width&quot;&#32;entries&#32;are&#32;little-endian,&#32;unsigned&#32;numbers.</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00026"/>00026 
+<anchor xml:id="_img2si_8py_source_1l00027"/>00027 
+<anchor xml:id="_img2si_8py_source_1l00028"/>00028 <emphasis role="keyword">def&#32;</emphasis>is_file_si2(filePath):
+<anchor xml:id="_img2si_8py_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Check&#32;the&#32;magic&#32;number</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keyword">with</emphasis>&#32;open(filePath,&#32;<emphasis role="stringliteral">&apos;rb&apos;</emphasis>)&#32;<emphasis role="keyword">as</emphasis>&#32;file:
+<anchor xml:id="_img2si_8py_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;file.read(2)&#32;==&#32;b<emphasis role="stringliteral">&apos;SI&apos;</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00032"/>00032 
+<anchor xml:id="_img2si_8py_source_1l00033"/>00033 
+<anchor xml:id="_img2si_8py_source_1l00034"/>00034 <emphasis role="keyword">def&#32;</emphasis>convert_from_si2(source,&#32;output):
+<anchor xml:id="_img2si_8py_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Print&#32;summary</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00036"/>00036 &#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&apos;Source&#32;image:&#32;.si2&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00037"/>00037 &#32;&#32;&#32;&#32;_,&#32;outExtension&#32;=&#32;os.path.splitext(output)
+<anchor xml:id="_img2si_8py_source_1l00038"/>00038 &#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&apos;Output&#32;image:&#32;{}&apos;</emphasis>.format(outExtension))
+<anchor xml:id="_img2si_8py_source_1l00039"/>00039 
+<anchor xml:id="_img2si_8py_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Read&#32;si2&#32;image&#32;data</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keyword">with</emphasis>&#32;open(source,&#32;<emphasis role="stringliteral">&apos;rb&apos;</emphasis>)&#32;<emphasis role="keyword">as</emphasis>&#32;file:
+<anchor xml:id="_img2si_8py_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file.seek(0x08)
+<anchor xml:id="_img2si_8py_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;pixelCount&#32;=&#32;int.from_bytes(file.read(4),&#32;byteorder=<emphasis role="stringliteral">&apos;little&apos;</emphasis>,&#32;signed=<emphasis role="keyword">False</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;lineSize&#32;=&#32;int.from_bytes(file.read(4),&#32;byteorder=<emphasis role="stringliteral">&apos;little&apos;</emphasis>,&#32;signed=<emphasis role="keyword">False</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imageSize&#32;=&#32;(lineSize,&#32;int(pixelCount/lineSize))
+<anchor xml:id="_img2si_8py_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file.seek(0x14)
+<anchor xml:id="_img2si_8py_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imageData&#32;=&#32;file.read()
+<anchor xml:id="_img2si_8py_source_1l00048"/>00048 
+<anchor xml:id="_img2si_8py_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Print&#32;summary&#32;2:&#32;Electric&#32;Boogaloo</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00050"/>00050 &#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&apos;Image&#32;size&#32;is&#32;{}x{}&apos;</emphasis>.format(imageSize[0],&#32;imageSize[1]))
+<anchor xml:id="_img2si_8py_source_1l00051"/>00051 &#32;&#32;&#32;&#32;print()
+<anchor xml:id="_img2si_8py_source_1l00052"/>00052 &#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&apos;Starting&#32;conversion...&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00053"/>00053 
+<anchor xml:id="_img2si_8py_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Save&#32;the&#32;converted&#32;image</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00055"/>00055 &#32;&#32;&#32;&#32;img&#32;=&#32;Image.frombytes(<emphasis role="stringliteral">&apos;RGBA&apos;</emphasis>,&#32;imageSize,&#32;imageData)
+<anchor xml:id="_img2si_8py_source_1l00056"/>00056 &#32;&#32;&#32;&#32;img.save(output)
+<anchor xml:id="_img2si_8py_source_1l00057"/>00057 
+<anchor xml:id="_img2si_8py_source_1l00058"/>00058 
+<anchor xml:id="_img2si_8py_source_1l00059"/>00059 <emphasis role="keyword">def&#32;</emphasis>convert_to_si2(source,&#32;output):
+<anchor xml:id="_img2si_8py_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Print&#32;summary</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00061"/>00061 &#32;&#32;&#32;&#32;_,&#32;outExtension&#32;=&#32;os.path.splitext(source)
+<anchor xml:id="_img2si_8py_source_1l00062"/>00062 &#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&apos;Source&#32;image:&#32;{}&apos;</emphasis>.format(outExtension))
+<anchor xml:id="_img2si_8py_source_1l00063"/>00063 &#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&apos;Output&#32;image:&#32;.si2&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00064"/>00064 
+<anchor xml:id="_img2si_8py_source_1l00065"/>00065 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Read&#32;source&#32;image</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00066"/>00066 &#32;&#32;&#32;&#32;<emphasis role="keyword">with</emphasis>&#32;Image.open(source)&#32;<emphasis role="keyword">as</emphasis>&#32;img:
+<anchor xml:id="_img2si_8py_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imageSize&#32;=&#32;img.size
+<anchor xml:id="_img2si_8py_source_1l00068"/>00068 
+<anchor xml:id="_img2si_8py_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;img.mode&#32;!=&#32;<emphasis role="stringliteral">&apos;RGBA&apos;</emphasis>:
+<anchor xml:id="_img2si_8py_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Convert&#32;image&#32;mode&#32;if&#32;unsupported</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&apos;Source&#32;image&#32;mode&#32;&quot;{}&quot;&#32;is&#32;unsupported,&#32;attempting&#32;conversion...&apos;</emphasis>.format(img.mode))
+<anchor xml:id="_img2si_8py_source_1l00072"/>00072 
+<anchor xml:id="_img2si_8py_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imgConvt&#32;=&#32;img.convert(<emphasis role="stringliteral">&apos;RGBA&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imageData&#32;=&#32;imgConvt.load()
+<anchor xml:id="_img2si_8py_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_img2si_8py_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;imageData&#32;=&#32;img.load()
+<anchor xml:id="_img2si_8py_source_1l00077"/>00077 
+<anchor xml:id="_img2si_8py_source_1l00078"/>00078 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Print&#32;summary&#32;2:&#32;Electric&#32;Boogaloo</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00079"/>00079 &#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&apos;Image&#32;size&#32;is&#32;{}x{}&apos;</emphasis>.format(imageSize[0],&#32;imageSize[1]))
+<anchor xml:id="_img2si_8py_source_1l00080"/>00080 &#32;&#32;&#32;&#32;print()
+<anchor xml:id="_img2si_8py_source_1l00081"/>00081 &#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&apos;Starting&#32;conversion...&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00082"/>00082 
+<anchor xml:id="_img2si_8py_source_1l00083"/>00083 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Convert&#32;the&#32;image</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00084"/>00084 &#32;&#32;&#32;&#32;<emphasis role="keyword">with</emphasis>&#32;open(output,&#32;<emphasis role="stringliteral">&apos;wb&apos;</emphasis>)&#32;<emphasis role="keyword">as</emphasis>&#32;file:
+<anchor xml:id="_img2si_8py_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file.write(b<emphasis role="stringliteral">&apos;SIHEAD\01\00&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file.write((imageSize[0]*imageSize[1]).to_bytes(4,&#32;byteorder=<emphasis role="stringliteral">&apos;little&apos;</emphasis>))
+<anchor xml:id="_img2si_8py_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file.write((imageSize[0]).to_bytes(4,&#32;byteorder=<emphasis role="stringliteral">&apos;little&apos;</emphasis>))
+<anchor xml:id="_img2si_8py_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file.write(b<emphasis role="stringliteral">&apos;DATA&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00089"/>00089 
+<anchor xml:id="_img2si_8py_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;y&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,&#32;imageSize[1]):
+<anchor xml:id="_img2si_8py_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;x&#32;<emphasis role="keywordflow">in</emphasis>&#32;range(0,&#32;imageSize[0]):
+<anchor xml:id="_img2si_8py_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;file.write(bytes(imageData[x,&#32;y]))
+<anchor xml:id="_img2si_8py_source_1l00093"/>00093 
+<anchor xml:id="_img2si_8py_source_1l00094"/>00094 
+<anchor xml:id="_img2si_8py_source_1l00095"/>00095 <emphasis role="keyword">def&#32;</emphasis>main():
+<anchor xml:id="_img2si_8py_source_1l00096"/>00096 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Setup&#32;argument&#32;parser</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00097"/>00097 &#32;&#32;&#32;&#32;parser&#32;=&#32;argparse.ArgumentParser(description=<emphasis role="stringliteral">&apos;This&#32;tool&#32;converts&#32;images&#32;compatible&#32;with&#32;PIL&#32;to&#32;the&#32;minGL&#32;2&#32;Simple&#32;Image&#32;format&#32;(.si2),&#32;and&#32;vice&#32;versa.&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00098"/>00098 &#32;&#32;&#32;&#32;parser.add_argument(<emphasis role="stringliteral">&apos;-v&apos;</emphasis>,&#32;<emphasis role="stringliteral">&apos;--version&apos;</emphasis>,&#32;action=<emphasis role="stringliteral">&apos;version&apos;</emphasis>,&#32;version=<emphasis role="stringliteral">&apos;%(prog)s&#32;1.0&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00099"/>00099 &#32;&#32;&#32;&#32;parser.add_argument(<emphasis role="stringliteral">&apos;&lt;source&#32;image&#32;file&gt;&apos;</emphasis>,&#32;help=<emphasis role="stringliteral">&apos;The&#32;path&#32;to&#32;the&#32;image&#32;to&#32;convert.&#32;A&#32;.si2&#32;will&#32;be&#32;converted&#32;to&#32;a&#32;.png&#32;file.&#32;Any&#32;other&#32;image&#32;type&#32;will&#32;be&#32;converted&#32;to&#32;a&#32;.si2&#32;file.&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00100"/>00100 &#32;&#32;&#32;&#32;parser.add_argument(<emphasis role="stringliteral">&apos;&lt;output&#32;file&gt;&apos;</emphasis>,&#32;help=<emphasis role="stringliteral">&apos;The&#32;path&#32;to&#32;output&#32;the&#32;converted&#32;image&#32;to.&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00101"/>00101 
+<anchor xml:id="_img2si_8py_source_1l00102"/>00102 &#32;&#32;&#32;&#32;args&#32;=&#32;vars(parser.parse_args())
+<anchor xml:id="_img2si_8py_source_1l00103"/>00103 &#32;&#32;&#32;&#32;source&#32;=&#32;args[<emphasis role="stringliteral">&apos;&lt;source&#32;image&#32;file&gt;&apos;</emphasis>]
+<anchor xml:id="_img2si_8py_source_1l00104"/>00104 &#32;&#32;&#32;&#32;output&#32;=&#32;args[<emphasis role="stringliteral">&apos;&lt;output&#32;file&gt;&apos;</emphasis>]
+<anchor xml:id="_img2si_8py_source_1l00105"/>00105 
+<anchor xml:id="_img2si_8py_source_1l00106"/>00106 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Check&#32;that&#32;source&#32;file&#32;exists</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00107"/>00107 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;<emphasis role="keywordflow">not</emphasis>&#32;os.path.isfile(source):
+<anchor xml:id="_img2si_8py_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(<emphasis role="stringliteral">&apos;&quot;{}&quot;\nThe&#32;specified&#32;path&#32;does&#32;not&#32;exist.&apos;</emphasis>.format(source))
+<anchor xml:id="_img2si_8py_source_1l00109"/>00109 
+<anchor xml:id="_img2si_8py_source_1l00110"/>00110 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;Check&#32;if&#32;source&#32;file&#32;is&#32;in&#32;the&#32;.si2&#32;format</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00111"/>00111 &#32;&#32;&#32;&#32;isSourceSi2&#32;=&#32;is_file_si2(source)
+<anchor xml:id="_img2si_8py_source_1l00112"/>00112 
+<anchor xml:id="_img2si_8py_source_1l00113"/>00113 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;isSourceSi2:
+<anchor xml:id="_img2si_8py_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;convert_from_si2(source,&#32;output)
+<anchor xml:id="_img2si_8py_source_1l00115"/>00115 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>:
+<anchor xml:id="_img2si_8py_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;convert_to_si2(source,&#32;output)
+<anchor xml:id="_img2si_8py_source_1l00117"/>00117 
+<anchor xml:id="_img2si_8py_source_1l00118"/>00118 &#32;&#32;&#32;&#32;print(<emphasis role="stringliteral">&apos;Done!&apos;</emphasis>)
+<anchor xml:id="_img2si_8py_source_1l00119"/>00119 
+<anchor xml:id="_img2si_8py_source_1l00120"/>00120 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;with&#32;Image.open(source)&#32;as&#32;img:</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;&#32;&#32;&#32;&#32;for&#32;y&#32;in&#32;range(0,&#32;img.height):</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00122"/>00122 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;for&#32;x&#32;in&#32;range(0,&#32;img.width):</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<emphasis role="comment">#&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;print(img.getpixel((x,&#32;y)))</emphasis>
+<anchor xml:id="_img2si_8py_source_1l00124"/>00124 
+<anchor xml:id="_img2si_8py_source_1l00125"/>00125 
+<anchor xml:id="_img2si_8py_source_1l00126"/>00126 <emphasis role="keywordflow">if</emphasis>&#32;__name__&#32;==&#32;<emphasis role="stringliteral">&quot;__main__&quot;</emphasis>:
+<anchor xml:id="_img2si_8py_source_1l00127"/>00127 &#32;&#32;&#32;&#32;main()
+</programlisting></section>

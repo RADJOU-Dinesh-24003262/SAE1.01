@@ -1,0 +1,36 @@
+\hypertarget{glut__font_8cpp_source}{}\doxysection{glut\+\_\+font.\+cpp}
+\label{glut__font_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/gui/glut\_font.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/gui/glut\_font.cpp}}
+\mbox{\hyperlink{glut__font_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include <GL/freeglut\_std.h>}}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glut__font_8h}{mingl/gui/glut\_font.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00013}\mbox{\hyperlink{classns_gui_1_1_glut_font_ac8e33c6ba8a95edcdcee4dd4d1a283ac}{00013}} \mbox{\hyperlink{classns_gui_1_1_glut_font_ac8e33c6ba8a95edcdcee4dd4d1a283ac}{nsGui::GlutFont::GlutFont}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_glut_font_aeeeb02d69e7dfc7e57957bd658c465ce}{GlutFont::GlutFonts}} \&font)}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00014}00014     : m\_font(font)}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00015}00015 \{\} \textcolor{comment}{// GlutFont()}}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00016}00016 }
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00017}\mbox{\hyperlink{classns_gui_1_1_glut_font_a10921b4183b246e9cfdebaca6b9e91a2}{00017}} \textcolor{keywordtype}{void}* \mbox{\hyperlink{classns_gui_1_1_glut_font_a10921b4183b246e9cfdebaca6b9e91a2}{nsGui::GlutFont::convertForGlut}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00018}00018 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00019}00019     \textcolor{comment}{// Check the current font and return the right Glut identifier}}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00020}00020     \textcolor{keywordflow}{switch} (m\_font)}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00021}00021     \{}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00022}00022         \textcolor{keywordflow}{case} BITMAP\_9\_BY\_15:}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00023}00023             \textcolor{keywordflow}{return} GLUT\_BITMAP\_9\_BY\_15;}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00024}00024         \textcolor{keywordflow}{case} BITMAP\_TIMES\_ROMAN\_10:}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00025}00025             \textcolor{keywordflow}{return} GLUT\_BITMAP\_TIMES\_ROMAN\_10;}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00026}00026         \textcolor{keywordflow}{case} BITMAP\_TIMES\_ROMAN\_24:}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00027}00027             \textcolor{keywordflow}{return} GLUT\_BITMAP\_TIMES\_ROMAN\_24;}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00028}00028         \textcolor{keywordflow}{case} BITMAP\_HELVETICA\_10:}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00029}00029             \textcolor{keywordflow}{return} GLUT\_BITMAP\_HELVETICA\_10;}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00030}00030         \textcolor{keywordflow}{case} BITMAP\_HELVETICA\_12:}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00031}00031             \textcolor{keywordflow}{return} GLUT\_BITMAP\_HELVETICA\_12;}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00032}00032         \textcolor{keywordflow}{case} BITMAP\_HELVETICA\_18:}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00033}00033             \textcolor{keywordflow}{return} GLUT\_BITMAP\_HELVETICA\_18;}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00034}00034         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00035}00035             \textcolor{keywordflow}{return} GLUT\_BITMAP\_8\_BY\_13;}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{glut__font_8cpp_source_l00037}00037 \} \textcolor{comment}{// convertForGlut()}}
+
+\end{DoxyCode}

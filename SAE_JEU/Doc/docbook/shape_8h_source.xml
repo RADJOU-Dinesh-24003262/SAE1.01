@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_shape_8h_source" xml:lang="en-US">
+<title>shape.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_shape_8h_source_1l00001"/>00001 
+<anchor xml:id="_shape_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;FIG2_H</emphasis>
+<anchor xml:id="_shape_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;FIG2_H</emphasis>
+<anchor xml:id="_shape_8h_source_1l00013"/>00013 
+<anchor xml:id="_shape_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;../graphics/idrawable.h&quot;</emphasis>
+<anchor xml:id="_shape_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;../graphics/rgbacolor.h&quot;</emphasis>
+<anchor xml:id="_shape_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;../graphics/vec2d.h&quot;</emphasis>
+<anchor xml:id="_shape_8h_source_1l00017"/>00017 
+<anchor xml:id="_shape_8h_source_1l00022"/>00022 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_shape">nsShape</link>
+<anchor xml:id="_shape_8h_source_1l00023"/>00023 {
+<anchor xml:id="_shape_8h_source_1l00024"/>00024 
+<anchor xml:id="_shape_8h_source_1l00029"/><link linkend="_classns_shape_1_1_shape">00029</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_shape_1_1_shape">Shape</link>:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_graphics_1_1_i_drawable">nsGraphics::IDrawable</link>
+<anchor xml:id="_shape_8h_source_1l00030"/>00030 {
+<anchor xml:id="_shape_8h_source_1l00031"/>00031 
+<anchor xml:id="_shape_8h_source_1l00032"/>00032 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_shape_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_shape_1a879f450649c23c83dee576234703951d">Shape</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;fillColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;borderColor);
+<anchor xml:id="_shape_8h_source_1l00040"/>00040 
+<anchor xml:id="_shape_8h_source_1l00045"/><link linkend="_classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4">00045</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4">~Shape</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+<anchor xml:id="_shape_8h_source_1l00046"/>00046 
+<anchor xml:id="_shape_8h_source_1l00051"/>00051 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;<link linkend="_classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754">getFillColor</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shape_8h_source_1l00052"/>00052 
+<anchor xml:id="_shape_8h_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07">setFillColor</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;fillColor);
+<anchor xml:id="_shape_8h_source_1l00058"/>00058 
+<anchor xml:id="_shape_8h_source_1l00063"/>00063 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;<link linkend="_classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d">getBorderColor</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_shape_8h_source_1l00064"/>00064 
+<anchor xml:id="_shape_8h_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_shape_1a48821100aa1856f188bdba257505adc3">setBorderColor</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;borderColor);
+<anchor xml:id="_shape_8h_source_1l00070"/>00070 
+<anchor xml:id="_shape_8h_source_1l00071"/>00071 <emphasis role="keyword">protected</emphasis>:
+<anchor xml:id="_shape_8h_source_1l00075"/><link linkend="_classns_shape_1_1_shape_1a68841e117adddc95734dcbaa62f68832">00075</link> &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;<link linkend="_classns_shape_1_1_shape_1a68841e117adddc95734dcbaa62f68832">m_fillColor</link>;
+<anchor xml:id="_shape_8h_source_1l00076"/>00076 
+<anchor xml:id="_shape_8h_source_1l00080"/><link linkend="_classns_shape_1_1_shape_1a0444014e3ee0fa1e6ba5295e530a4f82">00080</link> &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;<link linkend="_classns_shape_1_1_shape_1a0444014e3ee0fa1e6ba5295e530a4f82">m_borderColor</link>;
+<anchor xml:id="_shape_8h_source_1l00081"/>00081 
+<anchor xml:id="_shape_8h_source_1l00082"/>00082 };&#32;<emphasis role="comment">//&#32;class&#32;Shape</emphasis>
+<anchor xml:id="_shape_8h_source_1l00083"/>00083 
+<anchor xml:id="_shape_8h_source_1l00084"/>00084 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsShape</emphasis>
+<anchor xml:id="_shape_8h_source_1l00085"/>00085 
+<anchor xml:id="_shape_8h_source_1l00086"/>00086 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;FIG2_H</emphasis>
+</programlisting></section>

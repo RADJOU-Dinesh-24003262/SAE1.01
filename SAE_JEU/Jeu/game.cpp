@@ -415,8 +415,7 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
     }else{
         Color (KColor.find("KGreen")->second);
         cout << "Félicitations Joueur " << (scoreJ1 > scoreJ2 ? '1' : '2') <<
-            " vous avez gagné avec " << (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << " points!"
-             <<"Tandis que l'horrible Joueur "<< (scoreJ1 > scoreJ2 ? '2' : '1') << " ne possède QUE "<< (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << " points" << endl;
+            " vous avez gagné avec " << (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << " points!" << endl;
     }
     Color (KColor.find("KReset")->second);
     if(!(menuid == 3))menuid = 0;

@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_transition__engine_8h_source" xml:lang="en-US">
+<title>transition_engine.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_transition__engine_8h_source_1l00001"/>00001 
+<anchor xml:id="_transition__engine_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;TRANSITION_ENGINE_H</emphasis>
+<anchor xml:id="_transition__engine_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;TRANSITION_ENGINE_H</emphasis>
+<anchor xml:id="_transition__engine_8h_source_1l00013"/>00013 
+<anchor xml:id="_transition__engine_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;chrono&gt;</emphasis>
+<anchor xml:id="_transition__engine_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&lt;memory&gt;</emphasis>
+<anchor xml:id="_transition__engine_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&lt;list&gt;</emphasis>
+<anchor xml:id="_transition__engine_8h_source_1l00017"/>00017 
+<anchor xml:id="_transition__engine_8h_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_transition_8h">transition.h</link>&quot;</emphasis>
+<anchor xml:id="_transition__engine_8h_source_1l00019"/>00019 
+<anchor xml:id="_transition__engine_8h_source_1l00020"/>00020 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_transition">nsTransition</link>
+<anchor xml:id="_transition__engine_8h_source_1l00021"/>00021 {
+<anchor xml:id="_transition__engine_8h_source_1l00022"/>00022 
+<anchor xml:id="_transition__engine_8h_source_1l00027"/><link linkend="_classns_transition_1_1_transition_engine">00027</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_transition_1_1_transition_engine">TransitionEngine</link>
+<anchor xml:id="_transition__engine_8h_source_1l00028"/>00028 {
+<anchor xml:id="_transition__engine_8h_source_1l00029"/>00029 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_transition__engine_8h_source_1l00038"/><link linkend="_classns_transition_1_1_transition_engine_1a3bc437b23ee918b9ec4af070e205028f">00038</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_engine_1a3bc437b23ee918b9ec4af070e205028f">update</link>(<emphasis role="keyword">const</emphasis>&#32;std::chrono::microseconds&amp;&#32;delta);
+<anchor xml:id="_transition__engine_8h_source_1l00039"/>00039 
+<anchor xml:id="_transition__engine_8h_source_1l00045"/><link linkend="_classns_transition_1_1_transition_engine_1ae04163c3488c93e111b9d2638a27d6a9">00045</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_engine_1ae04163c3488c93e111b9d2638a27d6a9">startContract</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link>&amp;&#32;contract);
+<anchor xml:id="_transition__engine_8h_source_1l00046"/>00046 
+<anchor xml:id="_transition__engine_8h_source_1l00052"/><link linkend="_classns_transition_1_1_transition_engine_1a91235836b50f216b61b5ff3fb31cd5f8">00052</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_engine_1a91235836b50f216b61b5ff3fb31cd5f8">finishEveryTransition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">Transition::TransitionFinishModes</link>&amp;&#32;finishMode&#32;=&#32;<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e">Transition::FINISH_DESTINATION</link>);
+<anchor xml:id="_transition__engine_8h_source_1l00053"/>00053 
+<anchor xml:id="_transition__engine_8h_source_1l00060"/><link linkend="_classns_transition_1_1_transition_engine_1adcd7bce2bb158224303b532c27f9b559">00060</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_engine_1adcd7bce2bb158224303b532c27f9b559">finishEveryTransitionOfTarget</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_transition_1_1_i_transitionable">ITransitionable</link>&amp;&#32;transitionable,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">Transition::TransitionFinishModes</link>&amp;&#32;finishMode&#32;=&#32;<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e">Transition::FINISH_DESTINATION</link>);
+<anchor xml:id="_transition__engine_8h_source_1l00061"/>00061 
+<anchor xml:id="_transition__engine_8h_source_1l00062"/>00062 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_transition__engine_8h_source_1l00066"/>00066 &#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;std::list&lt;Transition&gt;&#32;TransitionVector_t;
+<anchor xml:id="_transition__engine_8h_source_1l00067"/>00067 
+<anchor xml:id="_transition__engine_8h_source_1l00071"/>00071 &#32;&#32;&#32;&#32;TransitionVector_t&#32;m_transitionList;
+<anchor xml:id="_transition__engine_8h_source_1l00072"/>00072 };&#32;<emphasis role="comment">//&#32;class&#32;TransitionEngine</emphasis>
+<anchor xml:id="_transition__engine_8h_source_1l00073"/>00073 
+<anchor xml:id="_transition__engine_8h_source_1l00074"/>00074 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsTransition</emphasis>
+<anchor xml:id="_transition__engine_8h_source_1l00075"/>00075 
+<anchor xml:id="_transition__engine_8h_source_1l00076"/>00076 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;TRANSITION_ENGINE_H</emphasis>
+</programlisting></section>

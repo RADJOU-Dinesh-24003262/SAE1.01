@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_unionns_event_1_1_event_data__t" xml:lang="en-US">
+<title>nsEvent::EventData_t Union Reference</title>
+<indexterm><primary>nsEvent::EventData_t</primary></indexterm>
+<para>
+
+<para>Union contenant les données d&apos;un événement. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;event.hpp&gt;</computeroutput>
+</para>
+Collaboration diagram for nsEvent::EventData_t:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="unionns_event_1_1_event_data__t__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_structns_event_1_1_mouse_click_data__t">MouseClickData_t</link> <link linkend="_unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc">clickData</link></para>
+</listitem>
+            <listitem><para><link linkend="_structns_event_1_1_mouse_move_data__t">MouseMoveData_t</link> <link linkend="_unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91">moveData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Union contenant les données d&apos;un événement. </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00053">53</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc"/><section>
+    <title>clickData</title>
+<indexterm><primary>clickData</primary><secondary>nsEvent::EventData_t</secondary></indexterm>
+<indexterm><primary>nsEvent::EventData_t</primary><secondary>clickData</secondary></indexterm>
+<para><computeroutput><link linkend="_structns_event_1_1_mouse_click_data__t">MouseClickData_t</link> nsEvent::EventData_t::clickData</computeroutput></para>
+<para>Données pour un événement MouseClick </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00054">54</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<anchor xml:id="_unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91"/><section>
+    <title>moveData</title>
+<indexterm><primary>moveData</primary><secondary>nsEvent::EventData_t</secondary></indexterm>
+<indexterm><primary>nsEvent::EventData_t</primary><secondary>moveData</secondary></indexterm>
+<para><computeroutput><link linkend="_structns_event_1_1_mouse_move_data__t">MouseMoveData_t</link> nsEvent::EventData_t::moveData</computeroutput></para>
+<para>Données pour un événment MouseMove/MouseDrag </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00055">55</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<para>
+The documentation for this union was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/<link linkend="_event_8hpp">event.hpp</link></section>
+</section>

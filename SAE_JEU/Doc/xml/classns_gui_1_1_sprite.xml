@@ -1,0 +1,470 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_gui_1_1_sprite" kind="class" language="C++" prot="public">
+    <compoundname>nsGui::Sprite</compoundname>
+    <basecompoundref refid="classns_graphics_1_1_i_drawable" prot="public" virt="non-virtual">nsGraphics::IDrawable</basecompoundref>
+    <basecompoundref refid="classns_transition_1_1_i_transitionable" prot="public" virt="non-virtual">nsTransition::ITransitionable</basecompoundref>
+    <includes refid="sprite_8h" local="no">sprite.h</includes>
+    <innerclass refid="structns_gui_1_1_sprite_1_1_file_begin" prot="private">nsGui::Sprite::FileBegin</innerclass>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TransitionIds</name>
+        <qualifiedname>nsGui::Sprite::TransitionIds</qualifiedname>
+        <enumvalue id="classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54" prot="public">
+          <name>TRANSITION_POSITION</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Transition pour la position </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="34" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="34" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classns_gui_1_1_sprite_1ac9d70829930aa0ff75d2c2c99f134aaf" prot="private" static="no" mutable="no">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref></type>
+        <definition>nsGraphics::Vec2D nsGui::Sprite::m_position</definition>
+        <argsstring></argsstring>
+        <name>m_position</name>
+        <qualifiedname>nsGui::Sprite::m_position</qualifiedname>
+        <briefdescription>
+<para>m_position : Position de ce <ref refid="classns_gui_1_1_sprite" kindref="compound">Sprite</ref> </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="112" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="112" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classns_gui_1_1_sprite_1a994cf4ac14111db5a81630412a2fc39f" prot="private" static="no" mutable="no">
+        <type>uint32_t</type>
+        <definition>uint32_t nsGui::Sprite::m_rowSize</definition>
+        <argsstring></argsstring>
+        <name>m_rowSize</name>
+        <qualifiedname>nsGui::Sprite::m_rowSize</qualifiedname>
+        <briefdescription>
+<para>m_rowSize : Nombre de pixel par ligne </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="117" column="14" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="117" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classns_gui_1_1_sprite_1a2f7716974d7b2a4ac71914bc8dce6d29" prot="private" static="no" mutable="no">
+        <type>std::vector&lt; <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &gt;</type>
+        <definition>std::vector&lt;nsGraphics::RGBAcolor&gt; nsGui::Sprite::m_pixelData</definition>
+        <argsstring></argsstring>
+        <name>m_pixelData</name>
+        <qualifiedname>nsGui::Sprite::m_pixelData</qualifiedname>
+        <briefdescription>
+<para>m_pixelData : Vecteur contenant tout les pixels composant l&apos;image </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="122" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1a35558b08dfeb3e3a20be52da28e33c4c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nsGui::Sprite::Sprite</definition>
+        <argsstring>(const std::string &amp;filename, const nsGraphics::Vec2D &amp;position=nsGraphics::Vec2D())</argsstring>
+        <name>Sprite</name>
+        <qualifiedname>nsGui::Sprite::Sprite</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>filename</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
+          <declname>position</declname>
+          <defval><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Constructeur pour la classe <ref refid="classns_gui_1_1_sprite" kindref="compound">Sprite</ref>, charge les données depuis un fichier. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">filename</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Chemin d&apos;accès vers le fichier image </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Position du sprite </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="44" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="20" bodyend="47"/>
+        <references refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999" compoundref="errcode_8h" startline="36">nsException::KFileError</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1abee8e5a2740555d46f19af3d4b489453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nsGui::Sprite::Sprite</definition>
+        <argsstring>(const std::vector&lt; nsGraphics::RGBAcolor &gt; &amp;pixelData, const uint32_t &amp;rowSize, const nsGraphics::Vec2D &amp;position=nsGraphics::Vec2D())</argsstring>
+        <name>Sprite</name>
+        <qualifiedname>nsGui::Sprite::Sprite</qualifiedname>
+        <param>
+          <type>const std::vector&lt; <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &gt; &amp;</type>
+          <declname>pixelData</declname>
+        </param>
+        <param>
+          <type>const uint32_t &amp;</type>
+          <declname>rowSize</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
+          <declname>position</declname>
+          <defval><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>()</defval>
+        </param>
+        <briefdescription>
+<para>Constructeur pour la classe <ref refid="classns_gui_1_1_sprite" kindref="compound">Sprite</ref>, copie les données depuis un vecteur de pixels. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pixelData</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur contenant des données sur les pixels </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">rowSize</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Nombre de pixels par ligne </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Position du sprite </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="53" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="49" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1ac4b29170aef06d46990b68da76480f28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void nsGui::Sprite::draw</definition>
+        <argsstring>(MinGL &amp;window) const override</argsstring>
+        <name>draw</name>
+        <qualifiedname>nsGui::Sprite::draw</qualifiedname>
+        <reimplements refid="classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">draw</reimplements>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Fonction pour afficher l&apos;objet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="55" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="55" bodyend="72"/>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" compoundref="rgbacolor_8cpp" startline="46" endline="49">nsGraphics::RGBAcolor::getAlpha</references>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" compoundref="rgbacolor_8cpp" startline="56" endline="59">nsGraphics::RGBAcolor::getBlue</references>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" compoundref="rgbacolor_8cpp" startline="66" endline="69">nsGraphics::RGBAcolor::getGreen</references>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79" compoundref="rgbacolor_8cpp" startline="76" endline="79">nsGraphics::RGBAcolor::getRed</references>
+        <references refid="macros_8h_1a86d500a34c624c2cae56bc25a31b12f3" compoundref="macros_8h" startline="17">UNUSED</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1a7da27e2ccf7b574896662720d99c0056" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void nsGui::Sprite::getValues</definition>
+        <argsstring>(const int &amp;id, std::vector&lt; float &gt; &amp;values) override</argsstring>
+        <name>getValues</name>
+        <qualifiedname>nsGui::Sprite::getValues</qualifiedname>
+        <reimplements refid="classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">getValues</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des valeurs a récupérer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur de valeurs a peupler </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="57" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="74" bodyend="83"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1a63ad7e76b470c578aecc697203a3eb26" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void nsGui::Sprite::setValues</definition>
+        <argsstring>(const int &amp;id, const std::vector&lt; float &gt; &amp;values) override</argsstring>
+        <name>setValues</name>
+        <qualifiedname>nsGui::Sprite::setValues</qualifiedname>
+        <reimplements refid="classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">setValues</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des valeurs a définir </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur des nouvelles valeurs a appliquer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="58" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="85" bodyend="94"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1adbe04bd427b6658e0181ce167db83d05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const uint32_t &amp;</type>
+        <definition>const uint32_t &amp; nsGui::Sprite::getRowSize</definition>
+        <argsstring>() const</argsstring>
+        <name>getRowSize</name>
+        <qualifiedname>nsGui::Sprite::getRowSize</qualifiedname>
+        <briefdescription>
+<para>Récupère le nombre de pixels par ligne. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Une référence constante vers m_rowSize </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="65" column="20" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="96" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1ad8644780a7a7dcbcd5f2e4e7a461b685" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const std::vector&lt; <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &gt; &amp;</type>
+        <definition>const std::vector&lt; nsGraphics::RGBAcolor &gt; &amp; nsGui::Sprite::getPixelData</definition>
+        <argsstring>() const</argsstring>
+        <name>getPixelData</name>
+        <qualifiedname>nsGui::Sprite::getPixelData</qualifiedname>
+        <briefdescription>
+<para>Récupère le vecteur contenant les pixels de l&apos;image. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Une référence constante vers m_pixelData </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="72" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="101" bodyend="104"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1a1d6ad6681627aae6c4680fc936da8eb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
+        <definition>const nsGraphics::Vec2D &amp; nsGui::Sprite::getPosition</definition>
+        <argsstring>() const</argsstring>
+        <name>getPosition</name>
+        <qualifiedname>nsGui::Sprite::getPosition</qualifiedname>
+        <briefdescription>
+<para>Récupère la position du sprite. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Une référence const vers m_position </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="79" column="29" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="106" bodyend="109"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1a4c695910c46504d1e8d47b838394a48e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsGui::Sprite::setPosition</definition>
+        <argsstring>(const nsGraphics::Vec2D &amp;position)</argsstring>
+        <name>setPosition</name>
+        <qualifiedname>nsGui::Sprite::setPosition</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <briefdescription>
+<para>Définit la nouvelle position du sprite. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">position</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Nouvelle position </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="86" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="111" bodyend="114"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1a26b502e88906860373c278495794998c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref></type>
+        <definition>Vec2D nsGui::Sprite::computeSize</definition>
+        <argsstring>() const</argsstring>
+        <name>computeSize</name>
+        <qualifiedname>nsGui::Sprite::computeSize</qualifiedname>
+        <briefdescription>
+<para>Calcule la taille du sprite. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>La taille calculée </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="93" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="116" bodyend="119"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classns_gui_1_1_sprite_1acae60739742f5b9dd1963a209204c116" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>struct nsGui::Sprite::FileBegin</type>
+        <definition>struct nsGui::Sprite::FileBegin nsGui::Sprite::__attribute__</definition>
+        <argsstring>((packed))</argsstring>
+        <name>__attribute__</name>
+        <qualifiedname>nsGui::Sprite::__attribute__</qualifiedname>
+        <param>
+          <type>(packed)</type>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="93" column="23"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Permet de charger une image depuis un format créé pour l&apos;occasion, le .si2. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>nsGraphics::IDrawable</label>
+        <link refid="classns_graphics_1_1_i_drawable"/>
+      </node>
+      <node id="1">
+        <label>nsGui::Sprite</label>
+        <link refid="classns_gui_1_1_sprite"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nsTransition::ITransitionable</label>
+        <link refid="classns_transition_1_1_i_transitionable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>nsGraphics::IDrawable</label>
+        <link refid="classns_graphics_1_1_i_drawable"/>
+      </node>
+      <node id="1">
+        <label>nsGui::Sprite</label>
+        <link refid="classns_gui_1_1_sprite"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nsTransition::ITransitionable</label>
+        <link refid="classns_transition_1_1_i_transitionable"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="28" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="29" bodyend="123"/>
+    <listofallmembers>
+      <member refid="classns_gui_1_1_sprite_1acae60739742f5b9dd1963a209204c116" prot="private" virt="non-virtual"><scope>nsGui::Sprite</scope><name>__attribute__</name></member>
+      <member refid="classns_gui_1_1_sprite_1a26b502e88906860373c278495794998c" prot="public" virt="non-virtual"><scope>nsGui::Sprite</scope><name>computeSize</name></member>
+      <member refid="classns_gui_1_1_sprite_1ac4b29170aef06d46990b68da76480f28" prot="public" virt="virtual"><scope>nsGui::Sprite</scope><name>draw</name></member>
+      <member refid="classns_gui_1_1_sprite_1ad8644780a7a7dcbcd5f2e4e7a461b685" prot="public" virt="non-virtual"><scope>nsGui::Sprite</scope><name>getPixelData</name></member>
+      <member refid="classns_gui_1_1_sprite_1a1d6ad6681627aae6c4680fc936da8eb2" prot="public" virt="non-virtual"><scope>nsGui::Sprite</scope><name>getPosition</name></member>
+      <member refid="classns_gui_1_1_sprite_1adbe04bd427b6658e0181ce167db83d05" prot="public" virt="non-virtual"><scope>nsGui::Sprite</scope><name>getRowSize</name></member>
+      <member refid="classns_gui_1_1_sprite_1a7da27e2ccf7b574896662720d99c0056" prot="public" virt="virtual"><scope>nsGui::Sprite</scope><name>getValues</name></member>
+      <member refid="classns_gui_1_1_sprite_1a2f7716974d7b2a4ac71914bc8dce6d29" prot="private" virt="non-virtual"><scope>nsGui::Sprite</scope><name>m_pixelData</name></member>
+      <member refid="classns_gui_1_1_sprite_1ac9d70829930aa0ff75d2c2c99f134aaf" prot="private" virt="non-virtual"><scope>nsGui::Sprite</scope><name>m_position</name></member>
+      <member refid="classns_gui_1_1_sprite_1a994cf4ac14111db5a81630412a2fc39f" prot="private" virt="non-virtual"><scope>nsGui::Sprite</scope><name>m_rowSize</name></member>
+      <member refid="classns_gui_1_1_sprite_1a4c695910c46504d1e8d47b838394a48e" prot="public" virt="non-virtual"><scope>nsGui::Sprite</scope><name>setPosition</name></member>
+      <member refid="classns_gui_1_1_sprite_1a63ad7e76b470c578aecc697203a3eb26" prot="public" virt="virtual"><scope>nsGui::Sprite</scope><name>setValues</name></member>
+      <member refid="classns_gui_1_1_sprite_1a35558b08dfeb3e3a20be52da28e33c4c" prot="public" virt="non-virtual"><scope>nsGui::Sprite</scope><name>Sprite</name></member>
+      <member refid="classns_gui_1_1_sprite_1abee8e5a2740555d46f19af3d4b489453" prot="public" virt="non-virtual"><scope>nsGui::Sprite</scope><name>Sprite</name></member>
+      <member refid="classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54" prot="public" virt="non-virtual"><scope>nsGui::Sprite</scope><name>TRANSITION_POSITION</name></member>
+      <member refid="classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78" prot="public" virt="non-virtual"><scope>nsGui::Sprite</scope><name>TransitionIds</name></member>
+      <member refid="classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867" prot="public" virt="virtual"><scope>nsGui::Sprite</scope><name>~IDrawable</name></member>
+      <member refid="classns_transition_1_1_i_transitionable_1addd11ff845b6387b07672a64c1b8938e" prot="public" virt="virtual"><scope>nsGui::Sprite</scope><name>~ITransitionable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

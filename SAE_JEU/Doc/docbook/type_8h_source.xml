@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_type_8h_source" xml:lang="en-US">
+<title>type.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_type_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;TYPE_H</emphasis>
+<anchor xml:id="_type_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;TYPE_H</emphasis>
+<anchor xml:id="_type_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_type_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="_type_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+<anchor xml:id="_type_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&lt;optional&gt;</emphasis>
+<anchor xml:id="_type_8h_source_1l00016"/>00016 
+<anchor xml:id="_type_8h_source_1l00017"/>00017 
+<anchor xml:id="_type_8h_source_1l00021"/><link linkend="_type_8h_1af4d6ac508b164138028e81737c7be8a2">00021</link> <emphasis role="keyword">typedef</emphasis>&#32;std::vector&#32;&lt;char&gt;&#32;<link linkend="_type_8h_1af4d6ac508b164138028e81737c7be8a2">CVLine</link>;
+<anchor xml:id="_type_8h_source_1l00022"/>00022 
+<anchor xml:id="_type_8h_source_1l00027"/><link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">00027</link> <emphasis role="keyword">typedef</emphasis>&#32;std::vector&#32;&lt;CVLine&gt;&#32;<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>;
+<anchor xml:id="_type_8h_source_1l00028"/>00028 
+<anchor xml:id="_type_8h_source_1l00032"/><link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">00032</link> <emphasis role="keyword">typedef</emphasis>&#32;std::pair&#32;&lt;unsigned,&#32;unsigned&gt;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>;
+<anchor xml:id="_type_8h_source_1l00033"/>00033 
+<anchor xml:id="_type_8h_source_1l00034"/>00034 
+<anchor xml:id="_type_8h_source_1l00035"/>00035 
+<anchor xml:id="_type_8h_source_1l00039"/><link linkend="_struct_authorized_key">00039</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_authorized_key">AuthorizedKey</link>&#32;{
+<anchor xml:id="_type_8h_source_1l00041"/><link linkend="_struct_authorized_key_1a1b1aa7863427cc1b43f229423bdd83ba">00041</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&#32;&lt;std::string&gt;&#32;<link linkend="_struct_authorized_key_1a1b1aa7863427cc1b43f229423bdd83ba">VParamChar</link>&#32;{<emphasis role="stringliteral">&quot;KeyUp&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;KeyDown&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;KeyLeft&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;KeyRight&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;TokenP1&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;TokenP2&quot;</emphasis>};
+<anchor xml:id="_type_8h_source_1l00043"/><link linkend="_struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73">00043</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&#32;&lt;std::string&gt;&#32;<link linkend="_struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73">VParamString</link>&#32;{<emphasis role="stringliteral">&quot;ColorP1&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;ColorP2&quot;</emphasis>};
+<anchor xml:id="_type_8h_source_1l00045"/><link linkend="_struct_authorized_key_1a871173f4b0c89c91289a10f0ddc1cadd">00045</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&#32;&lt;std::string&gt;&#32;<link linkend="_struct_authorized_key_1a871173f4b0c89c91289a10f0ddc1cadd">VParamUnsigned</link>&#32;{<emphasis role="stringliteral">&quot;NbRow&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;NbColumn&quot;</emphasis>};
+<anchor xml:id="_type_8h_source_1l00046"/>00046 };
+<anchor xml:id="_type_8h_source_1l00047"/>00047 
+<anchor xml:id="_type_8h_source_1l00048"/><link linkend="_struct_c_my_param">00048</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_c_my_param">CMyParam</link>&#32;{
+<anchor xml:id="_type_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;std::map&#32;&lt;std::string,&#32;char&gt;&#32;MapParamChar;
+<anchor xml:id="_type_8h_source_1l00050"/>00050 &#32;&#32;&#32;&#32;std::map&#32;&lt;std::string,&#32;unsigned&gt;&#32;MapParamUnsigned;
+<anchor xml:id="_type_8h_source_1l00051"/>00051 &#32;&#32;&#32;&#32;std::map&#32;&lt;std::string,&#32;std::string&gt;&#32;MapParamString;
+<anchor xml:id="_type_8h_source_1l00052"/>00052 };
+<anchor xml:id="_type_8h_source_1l00053"/>00053 
+<anchor xml:id="_type_8h_source_1l00054"/>00054 
+<anchor xml:id="_type_8h_source_1l00055"/>00055 
+<anchor xml:id="_type_8h_source_1l00059"/><link linkend="_type_8h_1aeb6b858f886b8520a7f220b3de0bef1a">00059</link> <emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_authorized_key">AuthorizedKey</link>&#32;<link linkend="_type_8h_1aeb6b858f886b8520a7f220b3de0bef1a">KAuthorizedKey</link>;
+<anchor xml:id="_type_8h_source_1l00060"/>00060 
+<anchor xml:id="_type_8h_source_1l00065"/><link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">00065</link> <emphasis role="keyword">const</emphasis>&#32;std::map&#32;&lt;std::string,&#32;std::string&gt;&#32;<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>
+<anchor xml:id="_type_8h_source_1l00066"/>00066 {
+<anchor xml:id="_type_8h_source_1l00067"/>00067 &#32;&#32;{<emphasis role="stringliteral">&quot;KReset&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;0&quot;</emphasis>},
+<anchor xml:id="_type_8h_source_1l00068"/>00068 &#32;&#32;{<emphasis role="stringliteral">&quot;KBlack&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;30&quot;</emphasis>},
+<anchor xml:id="_type_8h_source_1l00069"/>00069 &#32;&#32;{<emphasis role="stringliteral">&quot;KRed&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;31&quot;</emphasis>},
+<anchor xml:id="_type_8h_source_1l00070"/>00070 &#32;&#32;{<emphasis role="stringliteral">&quot;KGreen&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;32&quot;</emphasis>},
+<anchor xml:id="_type_8h_source_1l00071"/>00071 &#32;&#32;{<emphasis role="stringliteral">&quot;KYellow&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;33&quot;</emphasis>},
+<anchor xml:id="_type_8h_source_1l00072"/>00072 &#32;&#32;{<emphasis role="stringliteral">&quot;KBlue&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;34&quot;</emphasis>},
+<anchor xml:id="_type_8h_source_1l00073"/>00073 &#32;&#32;{<emphasis role="stringliteral">&quot;KMAgenta&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;35&quot;</emphasis>},
+<anchor xml:id="_type_8h_source_1l00074"/>00074 &#32;&#32;{<emphasis role="stringliteral">&quot;KCyan&quot;</emphasis>,&#32;<emphasis role="stringliteral">&quot;36&quot;</emphasis>},
+<anchor xml:id="_type_8h_source_1l00075"/>00075 
+<anchor xml:id="_type_8h_source_1l00076"/>00076 };
+<anchor xml:id="_type_8h_source_1l00077"/>00077 
+<anchor xml:id="_type_8h_source_1l00082"/><link linkend="_struct_c_my_param_v2">00082</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_c_my_param_v2">CMyParamV2</link>{
+<anchor xml:id="_type_8h_source_1l00086"/><link linkend="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6">00086</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6">tokenP1</link>;
+<anchor xml:id="_type_8h_source_1l00090"/><link linkend="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6">00090</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6">tokenP2</link>;
+<anchor xml:id="_type_8h_source_1l00094"/><link linkend="_struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123">00094</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123">Key1Up</link>;
+<anchor xml:id="_type_8h_source_1l00098"/><link linkend="_struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d">00098</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d">Key1Down</link>;
+<anchor xml:id="_type_8h_source_1l00102"/><link linkend="_struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef">00102</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef">Key1Left</link>;
+<anchor xml:id="_type_8h_source_1l00106"/><link linkend="_struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5">00106</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5">Key1Right</link>;
+<anchor xml:id="_type_8h_source_1l00110"/><link linkend="_struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901">00110</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901">Key2Up</link>;
+<anchor xml:id="_type_8h_source_1l00114"/><link linkend="_struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1">00114</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1">Key2Down</link>;
+<anchor xml:id="_type_8h_source_1l00118"/><link linkend="_struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6">00118</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6">Key2Left</link>;
+<anchor xml:id="_type_8h_source_1l00122"/><link linkend="_struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc">00122</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc">Key2Right</link>;
+<anchor xml:id="_type_8h_source_1l00126"/><link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">00126</link> &#32;&#32;&#32;&#32;std::size_t&#32;<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>;
+<anchor xml:id="_type_8h_source_1l00130"/><link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">00130</link> &#32;&#32;&#32;&#32;std::size_t&#32;<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>;
+<anchor xml:id="_type_8h_source_1l00134"/><link linkend="_struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11">00134</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11">ColorP1</link>;
+<anchor xml:id="_type_8h_source_1l00138"/><link linkend="_struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7">00138</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7">ColorP2</link>;
+<anchor xml:id="_type_8h_source_1l00139"/>00139 };
+<anchor xml:id="_type_8h_source_1l00140"/>00140 
+<anchor xml:id="_type_8h_source_1l00141"/><link linkend="_struct_form">00141</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_form">Form</link>
+<anchor xml:id="_type_8h_source_1l00142"/>00142 {
+<anchor xml:id="_type_8h_source_1l00143"/>00143 &#32;&#32;&#32;&#32;std::string&#32;nom;
+<anchor xml:id="_type_8h_source_1l00144"/>00144 &#32;&#32;&#32;&#32;std::pair&lt;size_t,size_t&gt;&#32;dim;
+<anchor xml:id="_type_8h_source_1l00145"/>00145 &#32;&#32;&#32;&#32;std::vector&lt;&#32;std::vector&lt;char&gt;&gt;&#32;piece;
+<anchor xml:id="_type_8h_source_1l00146"/>00146 };
+<anchor xml:id="_type_8h_source_1l00147"/>00147 
+<anchor xml:id="_type_8h_source_1l00148"/><link linkend="_struct_collectible">00148</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_collectible">Collectible</link>
+<anchor xml:id="_type_8h_source_1l00149"/>00149 {
+<anchor xml:id="_type_8h_source_1l00150"/>00150 &#32;&#32;&#32;&#32;std::string&#32;nom;
+<anchor xml:id="_type_8h_source_1l00151"/>00151 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;id;
+<anchor xml:id="_type_8h_source_1l00152"/>00152 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;point;
+<anchor xml:id="_type_8h_source_1l00153"/>00153 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;token;
+<anchor xml:id="_type_8h_source_1l00154"/>00154 &#32;&#32;&#32;&#32;std::pair&lt;size_t,size_t&gt;&#32;pos;
+<anchor xml:id="_type_8h_source_1l00155"/>00155 };
+<anchor xml:id="_type_8h_source_1l00156"/>00156 
+<anchor xml:id="_type_8h_source_1l00160"/><link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">00160</link> <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>;
+<anchor xml:id="_type_8h_source_1l00161"/>00161 
+<anchor xml:id="_type_8h_source_1l00162"/>00162 
+<anchor xml:id="_type_8h_source_1l00163"/>00163 
+<anchor xml:id="_type_8h_source_1l00164"/>00164 
+<anchor xml:id="_type_8h_source_1l00170"/><link linkend="_struct_node">00170</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_node">Node</link>{
+<anchor xml:id="_type_8h_source_1l00171"/>00171 &#32;&#32;&#32;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;Pos;
+<anchor xml:id="_type_8h_source_1l00172"/>00172 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;f_cost;
+<anchor xml:id="_type_8h_source_1l00173"/>00173 &#32;&#32;&#32;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;Parent;
+<anchor xml:id="_type_8h_source_1l00174"/>00174 };
+<anchor xml:id="_type_8h_source_1l00175"/>00175 
+<anchor xml:id="_type_8h_source_1l00176"/>00176 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;TYPE_H</emphasis>
+</programlisting></section>

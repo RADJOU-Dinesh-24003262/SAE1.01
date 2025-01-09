@@ -1,0 +1,38 @@
+\hypertarget{08-_custom_drawable_2bgtext_8h_source}{}\doxysection{bgtext.\+h}
+\label{08-_custom_drawable_2bgtext_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/08-\/CustomDrawable/bgtext.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/08-\/CustomDrawable/bgtext.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef BGTEXT\_H}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00002}00002 \textcolor{preprocessor}{\#define BGTEXT\_H}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00004}00004 \textcolor{comment}{// On inclut l'en-\/tête de IDrawable}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{idrawable_8h}{mingl/graphics/idrawable.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00007}00007 \textcolor{comment}{// Ici, les autres en-\/têtes utiles}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{text_8h}{mingl/gui/text.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rectangle_8h}{mingl/shape/rectangle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00011}00011 \textcolor{comment}{// La classe hérite de IDrawable}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00012}\mbox{\hyperlink{class_bg_text}{00012}} \textcolor{keyword}{class }\mbox{\hyperlink{class_bg_text}{BgText}}: \textcolor{keyword}{public} \mbox{\hyperlink{classns_graphics_1_1_i_drawable}{nsGraphics::IDrawable}}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00013}00013 \{}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00015}00015 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00016}00016     \textcolor{comment}{// Le constructeur de la classe, prenant les paramètres lors de l'instanciation}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00017}00017     \mbox{\hyperlink{class_bg_text}{BgText}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position, \textcolor{keyword}{const} std::string\& content, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& textColor, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& backgroundColor);}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00019}00019     \textcolor{comment}{// Ne pas oublier le destructeur virtuel}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00020}00020     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_bg_text}{\string~BgText}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00022}00022     \textcolor{comment}{// On surcharge la fonction draw() qui est appelée lors de l'affichage de notre objet}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00023}00023     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bg_text_a01df624a8d498766a9eb579eb18f2326}{draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00025}00025 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00026}00026     \textcolor{comment}{// On met les variables membres ici}}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00027}00027     \mbox{\hyperlink{classns_gui_1_1_text}{nsGui::Text}} m\_text;}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00028}00028     \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}} m\_background;}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00030}00030 \};}
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{08-_custom_drawable_2bgtext_8h_source_l00032}00032 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BGTEXT\_H}}
+
+\end{DoxyCode}

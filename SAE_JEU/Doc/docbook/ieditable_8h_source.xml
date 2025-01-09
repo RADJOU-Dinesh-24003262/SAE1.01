@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ieditable_8h_source" xml:lang="en-US">
+<title>ieditable.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_ieditable_8h_source_1l00001"/>00001 
+<anchor xml:id="_ieditable_8h_source_1l00021"/>00021 <emphasis role="preprocessor">#ifndef&#32;IEDITABLE_H</emphasis>
+<anchor xml:id="_ieditable_8h_source_1l00022"/>00022 <emphasis role="preprocessor">#define&#32;IEDITABLE_H</emphasis>
+<anchor xml:id="_ieditable_8h_source_1l00023"/>00023 
+<anchor xml:id="_ieditable_8h_source_1l00024"/>00024 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_ieditable_8h_source_1l00025"/>00025 
+<anchor xml:id="_ieditable_8h_source_1l00030"/>00030 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_util">nsUtil</link>
+<anchor xml:id="_ieditable_8h_source_1l00031"/>00031 {
+<anchor xml:id="_ieditable_8h_source_1l00032"/>00032 
+<anchor xml:id="_ieditable_8h_source_1l00037"/><link linkend="_classns_util_1_1_i_editable">00037</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_util_1_1_i_editable">IEditable</link>
+<anchor xml:id="_ieditable_8h_source_1l00038"/>00038 {
+<anchor xml:id="_ieditable_8h_source_1l00039"/>00039 
+<anchor xml:id="_ieditable_8h_source_1l00040"/>00040 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_ieditable_8h_source_1l00045"/><link linkend="_classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e">00045</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e">~IEditable</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+<anchor xml:id="_ieditable_8h_source_1l00046"/>00046 
+<anchor xml:id="_ieditable_8h_source_1l00053"/><link linkend="_classns_util_1_1_i_editable_1a53db4e7832b7c4579b331800bb0cae70">00053</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">friend</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_classns_util_1_1_i_editable_1a53db4e7832b7c4579b331800bb0cae70">operator&lt;&lt;</link>(std::ostream&amp;&#32;os,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_util_1_1_i_editable">IEditable</link>&amp;&#32;Obj);
+<anchor xml:id="_ieditable_8h_source_1l00054"/>00054 
+<anchor xml:id="_ieditable_8h_source_1l00055"/>00055 <emphasis role="keyword">protected</emphasis>:
+<anchor xml:id="_ieditable_8h_source_1l00061"/><link linkend="_classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853">00061</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853">_Edit</link>(std::ostream&amp;&#32;os)&#32;<emphasis role="keyword">const</emphasis>&#32;=&#32;0;
+<anchor xml:id="_ieditable_8h_source_1l00062"/>00062 
+<anchor xml:id="_ieditable_8h_source_1l00063"/>00063 };&#32;<emphasis role="comment">//&#32;class&#32;IEditable</emphasis>
+<anchor xml:id="_ieditable_8h_source_1l00064"/>00064 
+<anchor xml:id="_ieditable_8h_source_1l00065"/>00065 std::ostream&amp;&#32;operator&lt;&lt;(std::ostream&#32;&amp;&#32;os,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_util_1_1_i_editable">IEditable</link>&#32;&amp;&#32;Obj);
+<anchor xml:id="_ieditable_8h_source_1l00066"/>00066 
+<anchor xml:id="_ieditable_8h_source_1l00067"/>00067 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsUtil</emphasis>
+<anchor xml:id="_ieditable_8h_source_1l00068"/>00068 
+<anchor xml:id="_ieditable_8h_source_1l00069"/>00069 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_ieditable_8hpp">ieditable.hpp</link>&quot;</emphasis>
+<anchor xml:id="_ieditable_8h_source_1l00070"/>00070 
+<anchor xml:id="_ieditable_8h_source_1l00071"/>00071 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;IEDITABLE_H</emphasis>
+<anchor xml:id="_ieditable_8h_source_1l00072"/>00072 
+</programlisting></section>

@@ -1,0 +1,168 @@
+\hypertarget{line_8cpp_source}{}\doxysection{line.\+cpp}
+\label{line_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/shape/line.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/shape/line.cpp}}
+\mbox{\hyperlink{line_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{line_8h}{mingl/shape/line.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{macros_8h}{mingl/macros.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00016}\mbox{\hyperlink{classns_shape_1_1_line_a7e565c06c16396c7dba0f9d9beedcd17}{00016}} \mbox{\hyperlink{classns_shape_1_1_line_a7e565c06c16396c7dba0f9d9beedcd17}{nsShape::Line::Line}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \& pos1\_, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \& pos2\_, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \&fillCol\_, \textcolor{keyword}{const} \textcolor{keywordtype}{float} \&lineWidth\_)}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00017}00017     : \mbox{\hyperlink{classns_shape_1_1_shape}{Shape}}(fillCol\_, fillCol\_)}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00018}00018     , m\_firstPosition(pos1\_)}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00019}00019     , m\_secondPosition(pos2\_)}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00020}00020     , m\_lineWidth(lineWidth\_)}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00021}00021 \{\} \textcolor{comment}{// Line()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00023}\mbox{\hyperlink{classns_shape_1_1_line_a593ce7771accbbe3bb0f0baf70ece47b}{00023}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_line_a593ce7771accbbe3bb0f0baf70ece47b}{nsShape::Line::draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00024}00024 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00025}00025     \mbox{\hyperlink{macros_8h_a86d500a34c624c2cae56bc25a31b12f3}{UNUSED}}(window);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00027}00027     \textcolor{comment}{// On met la couleur de la ligne}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00028}00028     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} inColor = getFillColor();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00029}00029     glColor4ub(inColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{getRed}}(), inColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{getGreen}}(), inColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{getBlue}}(), inColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}{getAlpha}}());}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00031}00031     \textcolor{comment}{// On règle l'épaisseur de la ligne}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00032}00032     glLineWidth(m\_lineWidth);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00034}00034     \textcolor{comment}{// On dessine la ligne}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00035}00035     glBegin(GL\_LINES);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00036}00036     glVertex2i(m\_firstPosition.getX(), m\_firstPosition.getY());}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00037}00037     glVertex2i(m\_secondPosition.getX(), m\_secondPosition.getY());}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00038}00038     glEnd();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00039}00039 \} \textcolor{comment}{// draw()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00041}\mbox{\hyperlink{classns_shape_1_1_line_ac529918f8d3d6801c320a24bb225e33a}{00041}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_line_ac529918f8d3d6801c320a24bb225e33a}{nsShape::Line::getValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, std::vector<float> \&values)}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00042}00042 \{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00043}00043     \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00044}00044         \textcolor{keywordflow}{case} TRANSITION\_FILL\_COLOR\_RGB:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00045}00045             values[0] = m\_fillColor.getRed();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00046}00046             values[1] = m\_fillColor.getGreen();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00047}00047             values[2] = m\_fillColor.getBlue();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00049}00049             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00051}00051         \textcolor{keywordflow}{case} TRANSITION\_FILL\_COLOR\_ALPHA:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00052}00052             values[0] = m\_fillColor.getAlpha();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00054}00054             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00056}00056         \textcolor{keywordflow}{case} TRANSITION\_BORDER\_COLOR\_RGB:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00057}00057             values[0] = m\_borderColor.getRed();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00058}00058             values[1] = m\_borderColor.getGreen();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00059}00059             values[2] = m\_borderColor.getBlue();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00061}00061             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00063}00063         \textcolor{keywordflow}{case} TRANSITION\_BORDER\_COLOR\_ALPHA:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00064}00064             values[0] = m\_borderColor.getAlpha();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00066}00066             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00068}00068         \textcolor{keywordflow}{case} TRANSITION\_FIRST\_POSITION:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00069}00069             values[0] = m\_firstPosition.getX();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00070}00070             values[1] = m\_firstPosition.getY();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00072}00072             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00074}00074         \textcolor{keywordflow}{case} TRANSITION\_SECOND\_POSITION:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00075}00075             values[0] = m\_secondPosition.getX();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00076}00076             values[1] = m\_secondPosition.getY();}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00078}00078             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00080}00080         \textcolor{keywordflow}{case} TRANSITION\_LINE\_WIDTH:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00081}00081             values[0] = m\_lineWidth;}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00083}00083             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00084}00084     \}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00085}00085 \} \textcolor{comment}{// getValues()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00087}\mbox{\hyperlink{classns_shape_1_1_line_a698db32364db6ad0c29d205940b02631}{00087}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_line_a698db32364db6ad0c29d205940b02631}{nsShape::Line::setValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} std::vector<float> \&values)}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00088}00088 \{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00089}00089     \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00090}00090         \textcolor{keywordflow}{case} TRANSITION\_FILL\_COLOR\_RGB:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00091}00091             m\_fillColor.setRed(values[0]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00092}00092             m\_fillColor.setGreen(values[1]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00093}00093             m\_fillColor.setBlue(values[2]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00095}00095             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00097}00097         \textcolor{keywordflow}{case} TRANSITION\_FILL\_COLOR\_ALPHA:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00098}00098             m\_fillColor.setAlpha(values[0]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00100}00100             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00102}00102         \textcolor{keywordflow}{case} TRANSITION\_BORDER\_COLOR\_RGB:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00103}00103             m\_borderColor.setRed(values[0]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00104}00104             m\_borderColor.setGreen(values[1]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00105}00105             m\_borderColor.setBlue(values[2]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00106}00106 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00107}00107             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00108}00108 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00109}00109         \textcolor{keywordflow}{case} TRANSITION\_BORDER\_COLOR\_ALPHA:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00110}00110             m\_borderColor.setAlpha(values[0]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00112}00112             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00113}00113 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00114}00114         \textcolor{keywordflow}{case} TRANSITION\_FIRST\_POSITION:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00115}00115             m\_firstPosition.setX(values[0]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00116}00116             m\_firstPosition.setY(values[1]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00118}00118             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00120}00120         \textcolor{keywordflow}{case} TRANSITION\_SECOND\_POSITION:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00121}00121             m\_secondPosition.setX(values[0]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00122}00122             m\_secondPosition.setY(values[1]);}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00124}00124             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00126}00126         \textcolor{keywordflow}{case} TRANSITION\_LINE\_WIDTH:}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00127}00127             m\_lineWidth = values[0];}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00129}00129             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00130}00130     \}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00131}00131 \} \textcolor{comment}{// setValues()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00133}\mbox{\hyperlink{classns_shape_1_1_line_adddeb7810639aa3eec2756846d40a430}{00133}} \mbox{\hyperlink{classns_shape_1_1_line}{nsShape::Line}} \mbox{\hyperlink{classns_shape_1_1_line_adddeb7810639aa3eec2756846d40a430}{nsShape::Line::operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00134}00134 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00135}00135     \textcolor{keywordflow}{return} \mbox{\hyperlink{classns_shape_1_1_line}{Line}}(m\_firstPosition + position, m\_secondPosition + position, getFillColor());}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00136}00136 \} \textcolor{comment}{// operator+()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00138}\mbox{\hyperlink{classns_shape_1_1_line_a9686aab308107dff4799ec75a98d3aef}{00138}} \mbox{\hyperlink{classns_shape_1_1_line}{nsShape::Line}} \mbox{\hyperlink{classns_shape_1_1_line_a9686aab308107dff4799ec75a98d3aef}{nsShape::Line::operator*}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& f)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00139}00139 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00140}00140     \textcolor{keywordflow}{return} \mbox{\hyperlink{classns_shape_1_1_line}{Line}}(m\_firstPosition * f, m\_secondPosition * f, getFillColor());}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00141}00141 \} \textcolor{comment}{// operator*()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00143}\mbox{\hyperlink{classns_shape_1_1_line_aab6e3cacd0062c1d5e2e55e9099a617a}{00143}} \textcolor{keywordtype}{float} \mbox{\hyperlink{classns_shape_1_1_line_aab6e3cacd0062c1d5e2e55e9099a617a}{nsShape::Line::getLineWidth}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00144}00144 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00145}00145     \textcolor{keywordflow}{return} m\_lineWidth;}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00146}00146 \} \textcolor{comment}{// getLineWidth()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00148}\mbox{\hyperlink{classns_shape_1_1_line_ab98591827289680e28b4b0904e6d95f2}{00148}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_line_ab98591827289680e28b4b0904e6d95f2}{nsShape::Line::setLineWidth}}(\textcolor{keywordtype}{float} lineWidth)}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00149}00149 \{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00150}00150     m\_lineWidth = lineWidth;}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00151}00151 \} \textcolor{comment}{// setLineWidth()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00153}\mbox{\hyperlink{classns_shape_1_1_line_a5e99d542b7557f79f58623b098672fdc}{00153}} \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& \mbox{\hyperlink{classns_shape_1_1_line_a5e99d542b7557f79f58623b098672fdc}{nsShape::Line::getFirstPosition}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00154}00154 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00155}00155     \textcolor{keywordflow}{return} m\_firstPosition;}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00156}00156 \} \textcolor{comment}{// getFirstPosition()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00158}\mbox{\hyperlink{classns_shape_1_1_line_a62178d318a6b856e574149f58f9838f9}{00158}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_line_a62178d318a6b856e574149f58f9838f9}{nsShape::Line::setFirstPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&firstPosition)}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00159}00159 \{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00160}00160     m\_firstPosition = firstPosition;}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00161}00161 \} \textcolor{comment}{// setFirstPosition()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00163}\mbox{\hyperlink{classns_shape_1_1_line_a3e239062daea5c0f247ccd9f454a45e8}{00163}} \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& \mbox{\hyperlink{classns_shape_1_1_line_a3e239062daea5c0f247ccd9f454a45e8}{nsShape::Line::getSecondPosition}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00164}00164 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00165}00165     \textcolor{keywordflow}{return} m\_secondPosition;}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00166}00166 \} \textcolor{comment}{// getSecondPosition()}}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00168}\mbox{\hyperlink{classns_shape_1_1_line_ac8235be2b90d57497875a4265fc2bdc5}{00168}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_line_ac8235be2b90d57497875a4265fc2bdc5}{nsShape::Line::setSecondPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&secondPosition)}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00169}00169 \{}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00170}00170     m\_secondPosition = secondPosition;}
+\DoxyCodeLine{\Hypertarget{line_8cpp_source_l00171}00171 \} \textcolor{comment}{// setSecondPosition()}}
+
+\end{DoxyCode}

@@ -1,0 +1,39 @@
+\hypertarget{transition__engine_8h_source}{}\doxysection{transition\+\_\+engine.\+h}
+\label{transition__engine_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/transition/transition\_engine.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/transition/transition\_engine.h}}
+\mbox{\hyperlink{transition__engine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef TRANSITION\_ENGINE\_H}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00012}00012 \textcolor{preprocessor}{\#define TRANSITION\_ENGINE\_H}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <chrono>}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00018}00018 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{transition_8h}{transition.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00020}00020 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_transition}{nsTransition}}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00021}00021 \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00027}\mbox{\hyperlink{classns_transition_1_1_transition_engine}{00027}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_transition_1_1_transition_engine}{TransitionEngine}}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00028}00028 \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00029}00029 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00038}\mbox{\hyperlink{classns_transition_1_1_transition_engine_a3bc437b23ee918b9ec4af070e205028f}{00038}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_transition_1_1_transition_engine_a3bc437b23ee918b9ec4af070e205028f}{update}}(\textcolor{keyword}{const} std::chrono::microseconds\& delta);}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00045}\mbox{\hyperlink{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}{00045}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}{startContract}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_transition_1_1_transition_contract}{TransitionContract}}\& contract);}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00052}\mbox{\hyperlink{classns_transition_1_1_transition_engine_a91235836b50f216b61b5ff3fb31cd5f8}{00052}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_transition_1_1_transition_engine_a91235836b50f216b61b5ff3fb31cd5f8}{finishEveryTransition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19}{Transition::TransitionFinishModes}}\& finishMode = \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e}{Transition::FINISH\_DESTINATION}});}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00060}\mbox{\hyperlink{classns_transition_1_1_transition_engine_adcd7bce2bb158224303b532c27f9b559}{00060}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_transition_1_1_transition_engine_adcd7bce2bb158224303b532c27f9b559}{finishEveryTransitionOfTarget}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}}\& transitionable, \textcolor{keyword}{const} \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19}{Transition::TransitionFinishModes}}\& finishMode = \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e}{Transition::FINISH\_DESTINATION}});}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00062}00062 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00066}00066     \textcolor{keyword}{typedef} std::list<Transition> TransitionVector\_t;}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00071}00071     TransitionVector\_t m\_transitionList;}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00072}00072 \}; \textcolor{comment}{// class TransitionEngine}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00074}00074 \} \textcolor{comment}{// namespace nsTransition}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8h_source_l00076}00076 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// TRANSITION\_ENGINE\_H}}
+
+\end{DoxyCode}

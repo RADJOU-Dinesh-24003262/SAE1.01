@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_button_8h_source" xml:lang="en-US">
+<title>button.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/button.h</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="_button_8h_source_1l00001"/>00001 
+<anchor xml:id="_button_8h_source_1l00011"/>00011 <emphasis role="comment">//include&#32;les&#32;différentes&#32;formes&#32;pour&#32;dessiner&#32;les&#32;sprites</emphasis>
+<anchor xml:id="_button_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_rectangle_8h">mingl/shape/rectangle.h</link>&quot;</emphasis>
+<anchor xml:id="_button_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_circle_8h">mingl/shape/circle.h</link>&quot;</emphasis>
+<anchor xml:id="_button_8h_source_1l00014"/>00014 
+<anchor xml:id="_button_8h_source_1l00027"/>00027 <emphasis role="comment">//défini&#32;les&#32;éléments&#32;du&#32;sprite&#32;d&apos;un&#32;mur</emphasis>
+<anchor xml:id="_button_8h_source_1l00028"/>00028 <emphasis role="keywordtype">void</emphasis>&#32;Button(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos1_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos1_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos2_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos2_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;round,&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;color){
+<anchor xml:id="_button_8h_source_1l00029"/>00029 
+<anchor xml:id="_button_8h_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="comment">//calcul&#32;variable&#32;de&#32;position&#32;et&#32;taille&#32;des&#32;formes</emphasis>
+<anchor xml:id="_button_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(round&#32;&gt;&#32;((pos2_x-pos1_x)/2)){round&#32;=&#32;(pos2_x-pos1_x)/2;}
+<anchor xml:id="_button_8h_source_1l00032"/>00032 
+<anchor xml:id="_button_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="comment">//shape&#32;formant&#32;le&#32;sprite</emphasis>
+<anchor xml:id="_button_8h_source_1l00034"/>00034 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((pos1_x+round),pos1_y),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((pos2_x-round),pos2_y),&#32;color);
+<anchor xml:id="_button_8h_source_1l00035"/>00035 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(pos1_x,(pos1_y+round)),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(pos2_x,(pos2_y-round)),&#32;color);
+<anchor xml:id="_button_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_circle">nsShape::Circle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((pos1_x+round),(pos1_y+round)),&#32;round,&#32;color);
+<anchor xml:id="_button_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_circle">nsShape::Circle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((pos1_x+round),(pos2_y-round)),&#32;round,&#32;color);
+<anchor xml:id="_button_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_circle">nsShape::Circle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((pos2_x-round),(pos1_y+round)),&#32;round,&#32;color);
+<anchor xml:id="_button_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_circle">nsShape::Circle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((pos2_x-round),(pos2_y-round)),&#32;round,&#32;color);
+<anchor xml:id="_button_8h_source_1l00040"/>00040 }
+</programlisting></section>

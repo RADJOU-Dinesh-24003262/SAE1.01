@@ -1,0 +1,98 @@
+\hypertarget{text_8h_source}{}\doxysection{text.\+h}
+\label{text_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/gui/text.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/gui/text.h}}
+\mbox{\hyperlink{text_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef TEXT\_H}}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00012}00012 \textcolor{preprocessor}{\#define TEXT\_H}}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{glut__font_8h}{glut\_font.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00015}00015 \textcolor{preprocessor}{\#include "{}../graphics/idrawable.h"{}}}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00016}00016 \textcolor{preprocessor}{\#include "{}../graphics/rgbacolor.h"{}}}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00017}00017 \textcolor{preprocessor}{\#include "{}../graphics/vec2d.h"{}}}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00018}00018 \textcolor{preprocessor}{\#include "{}../transition/itransitionable.h"{}}}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00024}00024 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_gui}{nsGui}} \{}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00030}\mbox{\hyperlink{classns_gui_1_1_text}{00030}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_gui_1_1_text}{Text}} : \textcolor{keyword}{public} \mbox{\hyperlink{classns_graphics_1_1_i_drawable}{nsGraphics::IDrawable}}, \textcolor{keyword}{public} \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{nsTransition::ITransitionable}}}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00031}00031 \{}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00032}00032 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00036}\mbox{\hyperlink{classns_gui_1_1_text_a5fa355035f5afc9c896fa8138c29ea09}{00036}}     \textcolor{keyword}{enum} \mbox{\hyperlink{classns_gui_1_1_text_a5fa355035f5afc9c896fa8138c29ea09}{TransitionIds}} \{}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00037}\mbox{\hyperlink{classns_gui_1_1_text_a5fa355035f5afc9c896fa8138c29ea09a91cb0804f8ea9e7353a36a52d89fc492}{00037}}         \mbox{\hyperlink{classns_gui_1_1_text_a5fa355035f5afc9c896fa8138c29ea09a91cb0804f8ea9e7353a36a52d89fc492}{TRANSITION\_COLOR\_RGB}}, }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00038}\mbox{\hyperlink{classns_gui_1_1_text_a5fa355035f5afc9c896fa8138c29ea09a508f66b682f94f547d3f56062aa1fb3f}{00038}}         \mbox{\hyperlink{classns_gui_1_1_text_a5fa355035f5afc9c896fa8138c29ea09a508f66b682f94f547d3f56062aa1fb3f}{TRANSITION\_COLOR\_ALPHA}}, }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00039}\mbox{\hyperlink{classns_gui_1_1_text_a5fa355035f5afc9c896fa8138c29ea09a83fc6bac538e3af4f423c8a4cd0585b8}{00039}}         \mbox{\hyperlink{classns_gui_1_1_text_a5fa355035f5afc9c896fa8138c29ea09a83fc6bac538e3af4f423c8a4cd0585b8}{TRANSITION\_POSITION}}, }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00040}00040     \};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00045}\mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80fa}{00045}}     \textcolor{keyword}{enum} \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80fa}{VerticalAlignment}} \{}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00046}\mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80faa3cfba6c9f9e078a9fcd6c4133ecb4c30}{00046}}         \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80faa3cfba6c9f9e078a9fcd6c4133ecb4c30}{ALIGNV\_TOP}}, }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00047}\mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80faa37d3b49647821b7b1808dcd159867a45}{00047}}         \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80faa37d3b49647821b7b1808dcd159867a45}{ALIGNV\_CENTER}}, }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00048}\mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80faace396f1024afc2c37173ea637856e25f}{00048}}         \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80faace396f1024afc2c37173ea637856e25f}{ALIGNV\_BOTTOM}}, }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00049}00049     \};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00054}\mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dc}{00054}}     \textcolor{keyword}{enum} \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dc}{HorizontalAlignment}} \{}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00055}\mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dca7b5a51aac14cb50d1840e3f3de485ac2}{00055}}         \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dca7b5a51aac14cb50d1840e3f3de485ac2}{ALIGNH\_LEFT}}, }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00056}\mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dca79703335d1d5367bd5ee2387413c17a9}{00056}}         \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dca79703335d1d5367bd5ee2387413c17a9}{ALIGNH\_CENTER}}, }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00057}\mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dca464315bc1bcc242334d76eb8b0d1e8f6}{00057}}         \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dca464315bc1bcc242334d76eb8b0d1e8f6}{ALIGNH\_RIGHT}}, }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00058}00058     \};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00073}00073     \mbox{\hyperlink{classns_gui_1_1_text_a2d86c3b73f670c0ae206c4f35401a09f}{Text}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&position, \textcolor{keyword}{const} std::string \&content,}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00074}00074          \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \&textColor, \textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_glut_font_aeeeb02d69e7dfc7e57957bd658c465ce}{GlutFont::GlutFonts}} \&textFont = GlutFont::GlutFonts::BITMAP\_8\_BY\_13,}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00075}00075          \textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dc}{HorizontalAlignment}} \&horizontalAlignment = \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dca7b5a51aac14cb50d1840e3f3de485ac2}{ALIGNH\_LEFT}},}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00076}00076          \textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80fa}{VerticalAlignment}} \&verticalAlignment = \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80faace396f1024afc2c37173ea637856e25f}{ALIGNV\_BOTTOM}});}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00078}00078     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a8b3f43f7582246e916bb2e9403be2180}{draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00080}00080     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a6ddbea2ef54c442d44d6e624df486ad7}{getValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, std::vector<float> \&values) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00081}00081     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a9fbd7627d5cc5eaa7259f475c73aec73}{setValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} std::vector<float> \&values) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00088}00088     \textcolor{keywordtype}{int} \mbox{\hyperlink{classns_gui_1_1_text_a5ad119bf3e6c774c00711bb302f4bb1e}{computeWidth}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00095}00095     \textcolor{keywordtype}{int} \mbox{\hyperlink{classns_gui_1_1_text_a40e2854b349731f1cdc0574e7297bc50}{computeHeight}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00102}00102     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \mbox{\hyperlink{classns_gui_1_1_text_aa05c15547863bb237374487fe9ccfd2e}{computeVisiblePosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00103}00103 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00109}00109     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \mbox{\hyperlink{classns_gui_1_1_text_af8a352a5cb3b4f849eda7badc11fbb31}{computeVisibleEndPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00116}00116     \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classns_gui_1_1_text_adea76711a628669e54020b282152e389}{getContent}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00123}00123     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a930caeda954e7517aa34bc5965c8709f}{setContent}}(\textcolor{keyword}{const} std::string \&content);}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00129}00129     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& \mbox{\hyperlink{classns_gui_1_1_text_a1e06796a15191e7682eb4abd0ecc515e}{getPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00130}00130 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00136}00136     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_ae258c9cd1203c3e52b7728e0211e9daa}{setPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&position);}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00142}00142     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& \mbox{\hyperlink{classns_gui_1_1_text_a248f06b3a9a85c05225449424311abd0}{getTextColor}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00149}00149     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a9e10bb21647ce95f034a4205562e222a}{setTextColor}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \&textColor);}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00155}00155     \textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_glut_font}{GlutFont}}\& \mbox{\hyperlink{classns_gui_1_1_text_af578710341d0afb6c593550cbc94ca64}{getTextFont}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00156}00156 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00162}00162     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_afa19265ff44bdab288fa2a7100dd9c50}{setTextFont}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_glut_font}{GlutFont}} \&textFont);}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00163}00163 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00168}00168     \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dc}{HorizontalAlignment}} \mbox{\hyperlink{classns_gui_1_1_text_a2e3468bf7a3b43e5e87a68ed7876dcfe}{getHorizontalAlignment}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00175}00175     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a952d6bb9e10c33aa446ff17fd73944a9}{setHorizontalAlignment}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dc}{HorizontalAlignment}} \&horizontalAlignment);}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00181}00181     \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80fa}{VerticalAlignment}} \mbox{\hyperlink{classns_gui_1_1_text_a5118089a93160dde9fb85f2b4b32a5e1}{getVerticalAlignment}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00188}00188     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a5b0a3b1a3d31129f2d8aa32b58ea2f8a}{setVerticalAlignment}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80fa}{VerticalAlignment}} \&verticalAlignment);}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00190}00190 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00194}00194     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} m\_position;}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00195}00195 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00199}00199     std::string m\_content;}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00204}00204     \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} m\_textColor;}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00209}00209     \mbox{\hyperlink{classns_gui_1_1_glut_font}{GlutFont}} m\_textFont;}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00210}00210 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00214}00214     \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dc}{HorizontalAlignment}} m\_horizontalAlignment;}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00219}00219     \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80fa}{VerticalAlignment}} m\_verticalAlignment;}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00220}00220 \}; \textcolor{comment}{// class Text}}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00221}00221 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00222}00222 \} \textcolor{comment}{// namespace nsGui}}
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00223}00223 }
+\DoxyCodeLine{\Hypertarget{text_8h_source_l00224}00224 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// TEXT\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,85 @@
+\hypertarget{statue_8h_source}{}\doxysection{statue.\+h}
+\label{statue_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/sprites/statue.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/sprites/statue.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00011}00011 \textcolor{comment}{//include les différentes formes pour dessiner les sprites}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{circle_8h}{mingl/shape/circle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{oval_8h}{mingl/shape/oval.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rectangle_8h}{mingl/shape/rectangle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00028}00028 \textcolor{comment}{//défini les éléments du sprite d'un mur}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00029}00029 \textcolor{keywordtype}{void} Statue(\mbox{\hyperlink{class_min_g_l}{MinGL}} \&window, \textcolor{keywordtype}{int} Center1, \textcolor{keywordtype}{int} Center2, \textcolor{keywordtype}{int} mat\_x, \textcolor{keywordtype}{int} mat\_y)\{}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00031}00031     \textcolor{comment}{//calcul variable de position et taille des formes}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00032}00032     \textcolor{keywordtype}{float} wall\_x = 320/mat\_x;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00033}00033     \textcolor{keywordtype}{float} wall\_y = 320/mat\_y;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00034}00034     \textcolor{keywordtype}{float} ratio = mat\_x/10;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00035}00035     \textcolor{keywordtype}{float} body\_size       = wall\_x/2.8;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00036}00036     \textcolor{keywordtype}{float} body\_x          = Center1;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00037}00037     \textcolor{keywordtype}{float} body\_y          = (5/ratio) + Center2;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00038}00038     \textcolor{keywordtype}{float} foot\_size\_x     = body\_size/(2/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00039}00039     \textcolor{keywordtype}{float} foot\_size\_y     = body\_size/(8/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00040}00040     \textcolor{keywordtype}{float} foot1\_x         = Center1 -\/ (5/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00041}00041     \textcolor{keywordtype}{float} foot2\_x         = Center1 + (5/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00042}00042     \textcolor{keywordtype}{float} foot\_y          = (5/ratio) + Center2 + (9/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00043}00043     \textcolor{keywordtype}{float} TopSocle1\_x     = Center1 -\/ body\_size;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00044}00044     \textcolor{keywordtype}{float} TopSocle1\_y     = (5/ratio) + Center2 + (10/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00045}00045     \textcolor{keywordtype}{float} TopSocle2\_x     = Center1 + body\_size;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00046}00046     \textcolor{keywordtype}{float} TopSocle2\_y     = (5/ratio) + Center2 + (11/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00047}00047     \textcolor{keywordtype}{float} DownSocle1\_x    = TopSocle1\_x -\/ (3/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00048}00048     \textcolor{keywordtype}{float} DownSocle1\_y    = TopSocle2\_y;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00049}00049     \textcolor{keywordtype}{float} DownSocle2\_x    = TopSocle2\_x + (3/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00050}00050     \textcolor{keywordtype}{float} DownSocle2\_y    = TopSocle2\_y + (5/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00051}00051     \textcolor{keywordtype}{float} Hand\_size\_x     = body\_size/3;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00052}00052     \textcolor{keywordtype}{float} Hand\_size\_y     = body\_size/2;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00053}00053     \textcolor{keywordtype}{float} Hand1\_x         = TopSocle1\_x;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00054}00054     \textcolor{keywordtype}{float} Hand2\_x         = TopSocle2\_x;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00055}00055     \textcolor{keywordtype}{float} Hand\_y          = (5/ratio) + Center2 -\/ (5/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00056}00056     \textcolor{keywordtype}{float} Shoulder1\_x     = Center1 -\/ body\_size;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00057}00057     \textcolor{keywordtype}{float} Shoulder1\_y     = (5/ratio) + Center2 -\/ body\_size;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00058}00058     \textcolor{keywordtype}{float} Shoulder2\_x     = Center1 + body\_size;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00059}00059     \textcolor{keywordtype}{float} Shoulder2\_y     = (5/ratio) + Center2 -\/ (body\_size/2);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00060}00060     \textcolor{keywordtype}{float} LeftBretelle1\_x = Center1 -\/ (body\_size/2) -\/ (1/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00061}00061     \textcolor{keywordtype}{float} RightBretelle1\_x= Center1 + (body\_size/2) -\/ (1/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00062}00062     \textcolor{keywordtype}{float} Bretelle1\_y     = Shoulder1\_y;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00063}00063     \textcolor{keywordtype}{float} LeftBretelle2\_x = Center1 -\/ (body\_size/2) + (1/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00064}00064     \textcolor{keywordtype}{float} RightBretelle2\_x= Center1 + (body\_size/2) + (1/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00065}00065     \textcolor{keywordtype}{float} Bretelle2\_y     = Shoulder2\_y;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00066}00066     \textcolor{keywordtype}{float} LeftButton\_x    = LeftBretelle1\_x + ((LeftBretelle2\_x-\/LeftBretelle1\_x)/2);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00067}00067     \textcolor{keywordtype}{float} RightButton\_x   = RightBretelle1\_x + ((RightBretelle2\_x-\/RightBretelle1\_x)/2);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00068}00068     \textcolor{keywordtype}{float} Button\_y        = Bretelle2\_y;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00069}00069     \textcolor{keywordtype}{float} Button\_size     = (2/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00070}00070     \textcolor{keywordtype}{float} Head\_size       = (8/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00071}00071     \textcolor{keywordtype}{float} Head\_x          = Center1;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00072}00072     \textcolor{keywordtype}{float} Head\_y          = (5/ratio) + Center2 -\/ body\_size -\/ (2*(Head\_size/3));}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00073}00073     \textcolor{keywordtype}{float} TopHat\_size\_x   = Head\_size+1;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00074}00074     \textcolor{keywordtype}{float} TopHat\_size\_y   = 2*(Head\_size/5);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00075}00075     \textcolor{keywordtype}{float} TopHat\_x        = Center1;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00076}00076     \textcolor{keywordtype}{float} TopHat\_y        = Head\_y -\/ Head\_size + (2/ratio);}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00077}00077     \textcolor{keywordtype}{float} DownHat\_size\_x  = Head\_size;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00078}00078     \textcolor{keywordtype}{float} DownHat\_size\_y  = TopHat\_size\_y/3;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00079}00079     \textcolor{keywordtype}{float} DownHat\_x       = Center1;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00080}00080     \textcolor{keywordtype}{float} DownHat\_y       = TopHat\_y + TopHat\_size\_y;}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00082}00082     \textcolor{comment}{//shape formant le sprite}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00083}00083     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((Center1-\/wall\_x),(Center2-\/wall\_y)), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((Center1+wall\_x),(Center2+wall\_y)), nsGraphics::KBlack);\textcolor{comment}{// square}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00084}00084     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Hand1\_x,Hand\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Hand\_size\_x,Hand\_size\_y), nsGraphics::KBeige);\textcolor{comment}{// pied droit}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00085}00085     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Hand2\_x,Hand\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Hand\_size\_x,Hand\_size\_y), nsGraphics::KBeige);\textcolor{comment}{// pied droit}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00086}00086     window << \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(body\_x,body\_y), body\_size, nsGraphics::KPurple);  \textcolor{comment}{//ventre}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00087}00087     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(foot1\_x,foot\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(foot\_size\_x,foot\_size\_y), nsGraphics::KGreen);\textcolor{comment}{// pied gauche}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00088}00088     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(foot2\_x,foot\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(foot\_size\_x,foot\_size\_y), nsGraphics::KGreen);\textcolor{comment}{// pied droit}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00089}00089     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(TopSocle1\_x,TopSocle1\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(TopSocle2\_x,TopSocle2\_y), nsGraphics::KGray);\textcolor{comment}{// haut du socle}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00090}00090     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(DownSocle1\_x,DownSocle1\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(DownSocle2\_x,DownSocle2\_y), nsGraphics::KGray);\textcolor{comment}{// bas du socle}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00091}00091     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Shoulder1\_x,Shoulder1\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Shoulder2\_x,Shoulder2\_y), nsGraphics::KYellow);\textcolor{comment}{// épaule}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00092}00092     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(LeftBretelle1\_x,Bretelle1\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(LeftBretelle2\_x,Bretelle2\_y), nsGraphics::KPurple);\textcolor{comment}{// bretelle}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00093}00093     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(RightBretelle1\_x,Bretelle1\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(RightBretelle2\_x,Bretelle2\_y), nsGraphics::KPurple);\textcolor{comment}{// bretelle}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00094}00094     window << \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(LeftButton\_x, Button\_y), Button\_size, nsGraphics::KWhite);  \textcolor{comment}{//bouton gauche}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00095}00095     window << \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(RightButton\_x, Button\_y), Button\_size, nsGraphics::KWhite);  \textcolor{comment}{//bouton droit}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00096}00096     window << \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Head\_x,Head\_y), Head\_size, nsGraphics::KBeige);  \textcolor{comment}{//tête}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00097}00097     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(TopHat\_x, TopHat\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(TopHat\_size\_x,TopHat\_size\_y), nsGraphics::KYellow);\textcolor{comment}{// casquette}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00098}00098     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(DownHat\_x, DownHat\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(DownHat\_size\_x,DownHat\_size\_y), nsGraphics::KWhite);\textcolor{comment}{// visière de la casquette}}
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{statue_8h_source_l00100}00100 \}}
+
+\end{DoxyCode}

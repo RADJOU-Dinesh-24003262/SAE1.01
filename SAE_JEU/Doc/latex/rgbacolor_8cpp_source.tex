@@ -1,0 +1,81 @@
+\hypertarget{rgbacolor_8cpp_source}{}\doxysection{rgbacolor.\+cpp}
+\label{rgbacolor_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/graphics/rgbacolor.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/graphics/rgbacolor.cpp}}
+\mbox{\hyperlink{rgbacolor_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rgbacolor_8h}{mingl/graphics/rgbacolor.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00013}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a6f91976b2d83414329608564615f27b1}{00013}} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a6f91976b2d83414329608564615f27b1}{nsGraphics::RGBAcolor::RGBAcolor}}(\textcolor{keyword}{const} GLubyte\& red, \textcolor{keyword}{const} GLubyte\& green, \textcolor{keyword}{const} GLubyte\& blue, \textcolor{keyword}{const} GLubyte\& alpha)}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00014}00014     : m\_red(red)}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00015}00015     , m\_green(green)}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00016}00016     , m\_blue(blue)}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00017}00017     , m\_alpha(alpha)}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00018}00018 \{\} \textcolor{comment}{// RGBAcolor()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00020}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a685b4a48d19594bd29f136e1f74fee85}{00020}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a685b4a48d19594bd29f136e1f74fee85}{nsGraphics::RGBAcolor::operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}\& col)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00021}00021 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00022}00022     \textcolor{keywordflow}{return} col.m\_red == m\_red \&\& col.m\_green == m\_green \&\& col.m\_blue == m\_blue \&\& col.m\_alpha == m\_alpha;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00023}00023 \} \textcolor{comment}{// operator==()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00025}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a2cf7ff27443450c18368d521546f4e9e}{00025}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a2cf7ff27443450c18368d521546f4e9e}{nsGraphics::RGBAcolor::operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}\& col)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00026}00026 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00027}00027     \textcolor{keywordflow}{return} col.m\_red != m\_red || col.m\_green != m\_green || col.m\_blue != m\_blue || col.m\_alpha != m\_alpha;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00028}00028 \} \textcolor{comment}{// operator!=()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00030}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_abb3832c60bec568d1b357955e6be2300}{00030}} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_abb3832c60bec568d1b357955e6be2300}{nsGraphics::RGBAcolor::operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}\& rhs)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00031}00031 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00032}00032     \textcolor{keywordflow}{return} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}(m\_red + rhs.m\_red, m\_green + rhs.m\_green, m\_blue + rhs.m\_blue, m\_alpha + rhs.m\_alpha);}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00033}00033 \} \textcolor{comment}{// operator+()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00035}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a1be35bff76dd3859cc714b87db0a1193}{00035}} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a1be35bff76dd3859cc714b87db0a1193}{nsGraphics::RGBAcolor::operator*}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& rhs)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00036}00036 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00037}00037     \textcolor{keywordflow}{return} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}(m\_red * rhs, m\_green * rhs, m\_blue * rhs, m\_alpha * rhs);}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00038}00038 \} \textcolor{comment}{// operator*()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00040}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a09154c1fc9ba912860f2b4fac5432298}{00040}} std::ostream \&\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a09154c1fc9ba912860f2b4fac5432298}{nsGraphics::RGBAcolor::\_Edit}}(std::ostream\& os)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00041}00041 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00042}00042     os << \textcolor{stringliteral}{"{}R: "{}} << int(m\_red) << \textcolor{stringliteral}{"{}, G: "{}} << int(m\_green) << \textcolor{stringliteral}{"{}, B: "{}} << int(m\_blue) << \textcolor{stringliteral}{"{}, A: "{}} << int(m\_alpha);}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00043}00043     \textcolor{keywordflow}{return} os;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00044}00044 \} \textcolor{comment}{// \_Edit()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00046}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}{00046}} GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}{nsGraphics::RGBAcolor::getAlpha}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00047}00047 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00048}00048     \textcolor{keywordflow}{return} m\_alpha;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00049}00049 \} \textcolor{comment}{// getAlpha()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00051}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_aa478d3c5b8b56f590a12461fe2ab4bbf}{00051}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_aa478d3c5b8b56f590a12461fe2ab4bbf}{nsGraphics::RGBAcolor::setAlpha}}(\textcolor{keyword}{const} GLubyte\& alpha)}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00052}00052 \{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00053}00053     m\_alpha = alpha;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00054}00054 \} \textcolor{comment}{// setAlpha()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00056}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{00056}} GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{nsGraphics::RGBAcolor::getBlue}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00057}00057 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00058}00058     \textcolor{keywordflow}{return} m\_blue;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00059}00059 \} \textcolor{comment}{// getBlue()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00061}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_ac6f522de2f51788d98846034174fb16a}{00061}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_ac6f522de2f51788d98846034174fb16a}{nsGraphics::RGBAcolor::setBlue}}(\textcolor{keyword}{const} GLubyte\& blue)}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00062}00062 \{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00063}00063     m\_blue = blue;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00064}00064 \} \textcolor{comment}{// setBlue()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00066}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{00066}} GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{nsGraphics::RGBAcolor::getGreen}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00067}00067 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00068}00068     \textcolor{keywordflow}{return} m\_green;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00069}00069 \} \textcolor{comment}{// getGreen()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00071}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a28674ba0fa5f7abc8afb4023c1d0cf25}{00071}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a28674ba0fa5f7abc8afb4023c1d0cf25}{nsGraphics::RGBAcolor::setGreen}}(\textcolor{keyword}{const} GLubyte\& green)}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00072}00072 \{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00073}00073     m\_green = green;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00074}00074 \} \textcolor{comment}{// setGreen()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00076}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{00076}} GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{nsGraphics::RGBAcolor::getRed}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00077}00077 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00078}00078     \textcolor{keywordflow}{return} m\_red;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00079}00079 \} \textcolor{comment}{// getRed()}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00081}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_ade94fb53d92392f80a316a2370c8991c}{00081}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_ade94fb53d92392f80a316a2370c8991c}{nsGraphics::RGBAcolor::setRed}}(\textcolor{keyword}{const} GLubyte\& red)}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00082}00082 \{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00083}00083     m\_red = red;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8cpp_source_l00084}00084 \} \textcolor{comment}{// setRed()}}
+
+\end{DoxyCode}

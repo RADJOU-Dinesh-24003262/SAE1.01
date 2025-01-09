@@ -1,0 +1,188 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacens_exception" kind="namespace" language="C++">
+    <compoundname>nsException</compoundname>
+    <innerclass refid="classns_exception_1_1_c_exception" prot="public">nsException::CException</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376" prot="public" static="no" strong="no">
+        <type></type>
+        <name>@0</name>
+        <qualifiedname>nsException::@0</qualifiedname>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a0446a2a6f75ad46276a3c6bfbcf06eb3" prot="public">
+          <name>KNoExc</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Pas d&apos;exception </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a024799617058782e76ecaf33dd2ffdbd" prot="public">
+          <name>KNoError</name>
+          <initializer>= 0</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Pas d&apos;exception </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a46f2c8022474b53a5755bec5237fe459" prot="public">
+          <name>kColorOutOfBounds</name>
+          <initializer>= 100</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Couleur hors des bornes </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999" prot="public">
+          <name>KFileError</name>
+          <initializer>= 252</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Erreur lors de l&apos;ouverture du fichier </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376abf0d316d427bbd6c967347e91afd572f" prot="public">
+          <name>KErrArg</name>
+          <initializer>= 253</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Erreur d&apos;argument (Nombre ou types) </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a8146cc15721aba3bf04728fe064a59c4" prot="public">
+          <name>KExcStd</name>
+          <initializer>= 254</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Erreur standard </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376acf3752166b5752ab5b203c5f536caf88" prot="public">
+          <name>kExcInconnue</name>
+          <initializer>= -1</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Erreur inconnue </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a123e9c1829e779b75c070e9c8fdb188f" prot="public">
+          <name>kErrTooHight</name>
+          <initializer>= 300</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Position trop haute </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aff4f15361ad4d1b254751071ad21e3e6" prot="public">
+          <name>kErrTooRight</name>
+          <initializer>= 301</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Position trop a droite </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a526faf634cffcb857a4b99b82a0f4d03" prot="public">
+          <name>kErrFontSize</name>
+          <initializer>= 302</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Erreur sur la taille de la police </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a4117018a026c58336132da21ff52b840" prot="public">
+          <name>kNoTriangle</name>
+          <initializer>= 303</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Pas de triangle </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a35eb9a961a3b4627ee0801912e781e2e" prot="public">
+          <name>kNoLine</name>
+          <initializer>= 304</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Pas de ligne </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a8f9b0ec84f1fdf7b138e9a9039ef31e5" prot="public">
+          <name>kNoRectangle</name>
+          <initializer>= 305</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Pas de rectangle </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a83bc80fd1df49b7c72bede3cfdf0220e" prot="public">
+          <name>kNoCircle</name>
+          <initializer>= 306</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Pas de cercle </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aaebf556f9516d8fa517d75821ff43073" prot="public">
+          <name>kTypeNotFound</name>
+          <initializer>= 307</initializer>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Type non trouvé </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h" line="30" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h" bodystart="30" bodyend="49"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="namespacens_exception_1af1e302dd5a468c59cfa32ee30bc6503a" prot="public" static="no" mutable="no">
+        <type>const std::map&lt; unsigned, std::string &gt;</type>
+        <definition>const std::map&lt;unsigned, std::string&gt; nsException::kError</definition>
+        <argsstring></argsstring>
+        <name>kError</name>
+        <qualifiedname>nsException::kError</qualifiedname>
+        <initializer>{
+    {<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a123e9c1829e779b75c070e9c8fdb188f" kindref="member">kErrTooHight</ref>, &quot;Trop haut&quot;},
+    {kErrTooRight, &quot;Trop à droite&quot;},
+    {kErrFontSize, &quot;Taille de police incorrecte&quot;},
+    {kNoTriangle, &quot;Nombre incorrect de points pour la construction du triangle&quot;},
+    {kNoLine, &quot;Nombre incorrect de points pour la construction d&apos;une ligne&quot;},
+    {kNoRectangle, &quot;Nombre incorrect de points pour la construction d&apos;un rectangle&quot;},
+    {kNoCircle, &quot;Nombre incorrect de points pour la construction d&apos;un cercle&quot;},
+    {kTypeNotFound, &quot;Instanciation impossible: Pas le bon type&quot;},
+}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h" line="51" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h" bodystart="52" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Espace de nom pour la gestion d&apos;exceptions. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="32" column="1"/>
+  </compounddef>
+</doxygen>

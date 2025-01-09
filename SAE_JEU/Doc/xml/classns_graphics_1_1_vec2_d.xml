@@ -1,0 +1,1109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_graphics_1_1_vec2_d" kind="class" language="C++" prot="public">
+    <compoundname>nsGraphics::Vec2D</compoundname>
+    <basecompoundref refid="classns_util_1_1_i_editable" prot="public" virt="non-virtual">nsUtil::IEditable</basecompoundref>
+    <includes refid="vec2d_8h" local="no">vec2d.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classns_graphics_1_1_vec2_d_1ab51a03411fdf20584e5e49cf62b38da4" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nsGraphics::Vec2D::m_x</definition>
+        <argsstring></argsstring>
+        <name>m_x</name>
+        <qualifiedname>nsGraphics::Vec2D::m_x</qualifiedname>
+        <briefdescription>
+<para>m_x : Position X (abscisse) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="259" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" bodystart="259" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classns_graphics_1_1_vec2_d_1ae51a7acf3515e876d50e2f26c19eb9d7" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int nsGraphics::Vec2D::m_y</definition>
+        <argsstring></argsstring>
+        <name>m_y</name>
+        <qualifiedname>nsGraphics::Vec2D::m_y</qualifiedname>
+        <briefdescription>
+<para>m_y : Position Y (ordonnée) </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="264" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" bodystart="264" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a4a2fdd532ded3c29b7a3bd6e5a23fadf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nsGraphics::Vec2D::Vec2D</definition>
+        <argsstring>(const int &amp;x=0, const int &amp;y=0)</argsstring>
+        <name>Vec2D</name>
+        <qualifiedname>nsGraphics::Vec2D::Vec2D</qualifiedname>
+        <param>
+          <type>const int &amp;</type>
+          <declname>x</declname>
+          <defval>0</defval>
+        </param>
+        <param>
+          <type>const int &amp;</type>
+          <declname>y</declname>
+          <defval>0</defval>
+        </param>
+        <briefdescription>
+<para>Constructeur pour la classe <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Position X (abscisse) du vecteur </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Position Y (ordonnée) du vecteur </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="35" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="15" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1ae409c698404abced934b589d58513767" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nsGraphics::Vec2D::Vec2D</definition>
+        <argsstring>(const Vec2D &amp;pos)</argsstring>
+        <name>Vec2D</name>
+        <qualifiedname>nsGraphics::Vec2D::Vec2D</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur de recopie pour la classe <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> a copier </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="42" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="20" bodyend="23"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1aded521aea98ae5b1fdd19f4f9e2df74a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+        <definition>Vec2D nsGraphics::Vec2D::operator+</definition>
+        <argsstring>() const</argsstring>
+        <name>operator+</name>
+        <qualifiedname>nsGraphics::Vec2D::operator+</qualifiedname>
+        <briefdescription>
+<para>Opérateur unaire plus. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="48" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="25" bodyend="28"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a3cc10af3b04df2c6bf85460ced5c63a7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+        <definition>Vec2D nsGraphics::Vec2D::operator-</definition>
+        <argsstring>() const</argsstring>
+        <name>operator-</name>
+        <qualifiedname>nsGraphics::Vec2D::operator-</qualifiedname>
+        <briefdescription>
+<para>Opérateur unaire moins. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="54" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="30" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a59d565535347c6d0974be9a2333a5806" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+        <definition>Vec2D nsGraphics::Vec2D::operator+</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator+</name>
+        <qualifiedname>nsGraphics::Vec2D::operator+</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur d&apos;addition. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur a additionner </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="61" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="35" bodyend="38"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a6431bcd5dd86fbaf119bed9cf01a13f2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+        <definition>Vec2D nsGraphics::Vec2D::operator-</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator-</name>
+        <qualifiedname>nsGraphics::Vec2D::operator-</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de soustraction. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur a soustraire </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="68" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="40" bodyend="43"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1afed7035dfbafeffbfac737fb39d4fb90" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+        <definition>Vec2D nsGraphics::Vec2D::operator*</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>nsGraphics::Vec2D::operator*</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de multiplication. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur a multiplier </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="75" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="45" bodyend="48"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a7eb4139a171785d5f2f337cee77b9fb0" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+        <definition>Vec2D nsGraphics::Vec2D::operator*</definition>
+        <argsstring>(const float &amp;n) const</argsstring>
+        <name>operator*</name>
+        <qualifiedname>nsGraphics::Vec2D::operator*</qualifiedname>
+        <param>
+          <type>const float &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de multiplication. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Nombre avec lequel multiplier le vecteur actuel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="82" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="50" bodyend="53"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1aaabc44f047e46433d0115fbc49b3ae2f" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+        <definition>Vec2D nsGraphics::Vec2D::operator/</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator/</name>
+        <qualifiedname>nsGraphics::Vec2D::operator/</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de division. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur a diviser </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="89" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="55" bodyend="58"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1ae3adeb741fa6137acf0edbcf02ca58af" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+        <definition>Vec2D nsGraphics::Vec2D::operator/</definition>
+        <argsstring>(const float &amp;n) const</argsstring>
+        <name>operator/</name>
+        <qualifiedname>nsGraphics::Vec2D::operator/</qualifiedname>
+        <param>
+          <type>const float &amp;</type>
+          <declname>n</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de division. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Nombre avec lequel diviser le vecteur actuel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="96" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="60" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a43281403abbad9948eacca4d37fc61dc" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+        <definition>Vec2D nsGraphics::Vec2D::operator%</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator%</name>
+        <qualifiedname>nsGraphics::Vec2D::operator%</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur modulo. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel faire un modulo </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="103" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="65" bodyend="68"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a94b4b8420a450dd284311c49cb0b2e6b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nsGraphics::Vec2D::operator==</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator==</name>
+        <qualifiedname>nsGraphics::Vec2D::operator==</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur d&apos;égalité </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel vérifier l&apos;égalité </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="110" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="70" bodyend="73"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1affaed949190e8cb5a3c8f9813b31eb0d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nsGraphics::Vec2D::operator!=</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator!=</name>
+        <qualifiedname>nsGraphics::Vec2D::operator!=</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur d&apos;inégalité </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel vérifier l&apos;inégalité </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="117" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="75" bodyend="78"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1accfe96cfa5b8495a0b14c7087068064e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nsGraphics::Vec2D::operator&lt;</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator&lt;</name>
+        <qualifiedname>nsGraphics::Vec2D::operator&lt;</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de stricte infériorité (Vérifie la stricte infériorité de la magnitude des deux vecteurs) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel vérifier la stricte infériorité </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="125" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="80" bodyend="83"/>
+        <references refid="classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7" compoundref="vec2d_8cpp" startline="173" endline="176">computeMagnitude</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a30da0e7984d8c3e7a66bbdcdcc24c9cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nsGraphics::Vec2D::operator&gt;</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator&gt;</name>
+        <qualifiedname>nsGraphics::Vec2D::operator&gt;</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de stricte supériorité (Vérifie la stricte supériorité de la magnitude des deux vecteurs) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel vérifier la stricte supériorité </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="133" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="85" bodyend="88"/>
+        <references refid="classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7" compoundref="vec2d_8cpp" startline="173" endline="176">computeMagnitude</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1afd5e0e3ba77ef971f8d022d69a4a2647" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nsGraphics::Vec2D::operator&lt;=</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator&lt;=</name>
+        <qualifiedname>nsGraphics::Vec2D::operator&lt;=</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur d&apos;infériorité (Vérifie l&apos;infériorité de la magnitude des deux vecteurs) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel vérifier l&apos;infériorité </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="141" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="90" bodyend="93"/>
+        <references refid="classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7" compoundref="vec2d_8cpp" startline="173" endline="176">computeMagnitude</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a478dad2852611070874c6c9e5663b570" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nsGraphics::Vec2D::operator&gt;=</definition>
+        <argsstring>(const Vec2D &amp;pos) const</argsstring>
+        <name>operator&gt;=</name>
+        <qualifiedname>nsGraphics::Vec2D::operator&gt;=</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de supériorité (Vérifie la supériorité de la magnitude des deux vecteurs) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel vérifier la supériorité </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="149" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="95" bodyend="98"/>
+        <references refid="classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7" compoundref="vec2d_8cpp" startline="173" endline="176">computeMagnitude</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a041926192c1d2c579b12dcf1eb1725d5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+        <definition>Vec2D &amp; nsGraphics::Vec2D::operator=</definition>
+        <argsstring>(const Vec2D &amp;pos)</argsstring>
+        <name>operator=</name>
+        <qualifiedname>nsGraphics::Vec2D::operator=</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur d&apos;assignement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur source </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="156" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="100" bodyend="106"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1aafd8b68f1cb9dcfcf92a96714e58c5ec" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+        <definition>Vec2D &amp; nsGraphics::Vec2D::operator+=</definition>
+        <argsstring>(const Vec2D &amp;pos)</argsstring>
+        <name>operator+=</name>
+        <qualifiedname>nsGraphics::Vec2D::operator+=</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur d&apos;addition avec assignement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel additionner le vecteur actuel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="163" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="108" bodyend="114"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1aa9b0986206c35bb5c0043db02548fce4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+        <definition>Vec2D &amp; nsGraphics::Vec2D::operator-=</definition>
+        <argsstring>(const Vec2D &amp;pos)</argsstring>
+        <name>operator-=</name>
+        <qualifiedname>nsGraphics::Vec2D::operator-=</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de soustraction avec assignement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel soustraire le vecteur actuel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="170" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="116" bodyend="122"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a6e0e661361c0f3081fa2d9488978771e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+        <definition>Vec2D &amp; nsGraphics::Vec2D::operator*=</definition>
+        <argsstring>(const Vec2D &amp;pos)</argsstring>
+        <name>operator*=</name>
+        <qualifiedname>nsGraphics::Vec2D::operator*=</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de multiplication avec assignement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel multiplier le vecteur actuel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="177" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="124" bodyend="130"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a1146ac9d05c667bb4a46140858953711" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+        <definition>Vec2D &amp; nsGraphics::Vec2D::operator/=</definition>
+        <argsstring>(const Vec2D &amp;pos)</argsstring>
+        <name>operator/=</name>
+        <qualifiedname>nsGraphics::Vec2D::operator/=</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur de division avec assignement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel diviser le vecteur actuel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="184" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="132" bodyend="138"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a57003f3d4660f986c3c21c027ac8b154" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+        <definition>Vec2D &amp; nsGraphics::Vec2D::operator%=</definition>
+        <argsstring>(const Vec2D &amp;pos)</argsstring>
+        <name>operator%=</name>
+        <qualifiedname>nsGraphics::Vec2D::operator%=</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>pos</declname>
+        </param>
+        <briefdescription>
+<para>Opérateur modulo avec assignement. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Vecteur avec lequel faire un modulo sur le vecteur actuel </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="191" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="140" bodyend="146"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1aa02cee45c2d8aa2d9b7e08dfb6c1dfca" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nsGraphics::Vec2D::isColliding</definition>
+        <argsstring>(Vec2D firstCorner, Vec2D secondCorner) const</argsstring>
+        <name>isColliding</name>
+        <qualifiedname>nsGraphics::Vec2D::isColliding</qualifiedname>
+        <param>
+          <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+          <declname>firstCorner</declname>
+        </param>
+        <param>
+          <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+          <declname>secondCorner</declname>
+        </param>
+        <briefdescription>
+<para>Retourne vrai si le vecteur actuel est compris entre deux vecteurs formant un rectangle. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">firstCorner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Premier vecteur </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">secondCorner</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Second vecteur </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="215" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="160" bodyend="171"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>double</type>
+        <definition>double nsGraphics::Vec2D::computeMagnitude</definition>
+        <argsstring>() const</argsstring>
+        <name>computeMagnitude</name>
+        <qualifiedname>nsGraphics::Vec2D::computeMagnitude</qualifiedname>
+        <briefdescription>
+<para>Calcule la magnitude de ce vecteur. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Magnitude du vecteur </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="222" column="12" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="173" bodyend="176"/>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1accfe96cfa5b8495a0b14c7087068064e" compoundref="vec2d_8cpp" startline="80" endline="83">operator&lt;</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1afd5e0e3ba77ef971f8d022d69a4a2647" compoundref="vec2d_8cpp" startline="90" endline="93">operator&lt;=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a30da0e7984d8c3e7a66bbdcdcc24c9cb" compoundref="vec2d_8cpp" startline="85" endline="88">operator&gt;</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a478dad2852611070874c6c9e5663b570" compoundref="vec2d_8cpp" startline="95" endline="98">operator&gt;=</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int nsGraphics::Vec2D::getX</definition>
+        <argsstring>() const</argsstring>
+        <name>getX</name>
+        <qualifiedname>nsGraphics::Vec2D::getX</qualifiedname>
+        <briefdescription>
+<para>Récupère la position X (abscisse) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Une référence constante vers m_x </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="229" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="178" bodyend="181"/>
+        <referencedby refid="classns_gui_1_1_text_1aa05c15547863bb237374487fe9ccfd2e" compoundref="text_8cpp" startline="83" endline="116">nsGui::Text::computeVisiblePosition</referencedby>
+        <referencedby refid="classns_gui_1_1_text_1a8b3f43f7582246e916bb2e9403be2180" compoundref="text_8cpp" startline="183" endline="195">nsGui::Text::draw</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1aa02cee45c2d8aa2d9b7e08dfb6c1dfca" compoundref="vec2d_8cpp" startline="160" endline="171">isColliding</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a8a4760c6a33beb77d1e7a850b44129fc" compoundref="vec2d_8cpp" startline="148" endline="153">min</referencedby>
+        <referencedby refid="class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c" compoundref="mingl_8cpp" startline="42" endline="51">MinGL::MinGL</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1affaed949190e8cb5a3c8f9813b31eb0d" compoundref="vec2d_8cpp" startline="75" endline="78">operator!=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a43281403abbad9948eacca4d37fc61dc" compoundref="vec2d_8cpp" startline="65" endline="68">operator%</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a57003f3d4660f986c3c21c027ac8b154" compoundref="vec2d_8cpp" startline="140" endline="146">operator%=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1afed7035dfbafeffbfac737fb39d4fb90" compoundref="vec2d_8cpp" startline="45" endline="48">operator*</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a6e0e661361c0f3081fa2d9488978771e" compoundref="vec2d_8cpp" startline="124" endline="130">operator*=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a59d565535347c6d0974be9a2333a5806" compoundref="vec2d_8cpp" startline="35" endline="38">operator+</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1aafd8b68f1cb9dcfcf92a96714e58c5ec" compoundref="vec2d_8cpp" startline="108" endline="114">operator+=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a6431bcd5dd86fbaf119bed9cf01a13f2" compoundref="vec2d_8cpp" startline="40" endline="43">operator-</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1aa9b0986206c35bb5c0043db02548fce4" compoundref="vec2d_8cpp" startline="116" endline="122">operator-=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1aaabc44f047e46433d0115fbc49b3ae2f" compoundref="vec2d_8cpp" startline="55" endline="58">operator/</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a1146ac9d05c667bb4a46140858953711" compoundref="vec2d_8cpp" startline="132" endline="138">operator/=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a041926192c1d2c579b12dcf1eb1725d5" compoundref="vec2d_8cpp" startline="100" endline="106">operator=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a94b4b8420a450dd284311c49cb0b2e6b" compoundref="vec2d_8cpp" startline="70" endline="73">operator==</referencedby>
+        <referencedby refid="class_min_g_l_1a9239873a52e437457af03f002f5df2b6" compoundref="mingl_8cpp" startline="242" endline="245">MinGL::setWindowPosition</referencedby>
+        <referencedby refid="class_min_g_l_1a532d320b7b837998533fe6577ab45bc3" compoundref="mingl_8cpp" startline="232" endline="235">MinGL::setWindowSize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsGraphics::Vec2D::setX</definition>
+        <argsstring>(int x)</argsstring>
+        <name>setX</name>
+        <qualifiedname>nsGraphics::Vec2D::setX</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>x</declname>
+        </param>
+        <briefdescription>
+<para>Définit la nouvelle position X (abscisse) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">x</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Nouvelle position X </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="236" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="183" bodyend="186"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int nsGraphics::Vec2D::getY</definition>
+        <argsstring>() const</argsstring>
+        <name>getY</name>
+        <qualifiedname>nsGraphics::Vec2D::getY</qualifiedname>
+        <briefdescription>
+<para>Récupère la position Y (ordonnée) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Une référence constante vers m_y </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="243" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="188" bodyend="191"/>
+        <referencedby refid="classns_gui_1_1_text_1a8b3f43f7582246e916bb2e9403be2180" compoundref="text_8cpp" startline="183" endline="195">nsGui::Text::draw</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1aa02cee45c2d8aa2d9b7e08dfb6c1dfca" compoundref="vec2d_8cpp" startline="160" endline="171">isColliding</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a8a4760c6a33beb77d1e7a850b44129fc" compoundref="vec2d_8cpp" startline="148" endline="153">min</referencedby>
+        <referencedby refid="class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c" compoundref="mingl_8cpp" startline="42" endline="51">MinGL::MinGL</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1affaed949190e8cb5a3c8f9813b31eb0d" compoundref="vec2d_8cpp" startline="75" endline="78">operator!=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a43281403abbad9948eacca4d37fc61dc" compoundref="vec2d_8cpp" startline="65" endline="68">operator%</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a57003f3d4660f986c3c21c027ac8b154" compoundref="vec2d_8cpp" startline="140" endline="146">operator%=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1afed7035dfbafeffbfac737fb39d4fb90" compoundref="vec2d_8cpp" startline="45" endline="48">operator*</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a6e0e661361c0f3081fa2d9488978771e" compoundref="vec2d_8cpp" startline="124" endline="130">operator*=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a59d565535347c6d0974be9a2333a5806" compoundref="vec2d_8cpp" startline="35" endline="38">operator+</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1aafd8b68f1cb9dcfcf92a96714e58c5ec" compoundref="vec2d_8cpp" startline="108" endline="114">operator+=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a6431bcd5dd86fbaf119bed9cf01a13f2" compoundref="vec2d_8cpp" startline="40" endline="43">operator-</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1aa9b0986206c35bb5c0043db02548fce4" compoundref="vec2d_8cpp" startline="116" endline="122">operator-=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1aaabc44f047e46433d0115fbc49b3ae2f" compoundref="vec2d_8cpp" startline="55" endline="58">operator/</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a1146ac9d05c667bb4a46140858953711" compoundref="vec2d_8cpp" startline="132" endline="138">operator/=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a041926192c1d2c579b12dcf1eb1725d5" compoundref="vec2d_8cpp" startline="100" endline="106">operator=</referencedby>
+        <referencedby refid="classns_graphics_1_1_vec2_d_1a94b4b8420a450dd284311c49cb0b2e6b" compoundref="vec2d_8cpp" startline="70" endline="73">operator==</referencedby>
+        <referencedby refid="class_min_g_l_1a9239873a52e437457af03f002f5df2b6" compoundref="mingl_8cpp" startline="242" endline="245">MinGL::setWindowPosition</referencedby>
+        <referencedby refid="class_min_g_l_1a532d320b7b837998533fe6577ab45bc3" compoundref="mingl_8cpp" startline="232" endline="235">MinGL::setWindowSize</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsGraphics::Vec2D::setY</definition>
+        <argsstring>(int y)</argsstring>
+        <name>setY</name>
+        <qualifiedname>nsGraphics::Vec2D::setY</qualifiedname>
+        <param>
+          <type>int</type>
+          <declname>y</declname>
+        </param>
+        <briefdescription>
+<para>Définit la nouvelle position Y (ordonnée) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">y</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Nouvelle position Y </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="250" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="193" bodyend="196"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-static-func">
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a8a4760c6a33beb77d1e7a850b44129fc" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref></type>
+        <definition>static Vec2D nsGraphics::Vec2D::min</definition>
+        <argsstring>(const Vec2D &amp;p1, const Vec2D &amp;p2)</argsstring>
+        <name>min</name>
+        <qualifiedname>nsGraphics::Vec2D::min</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+<para>Retourne le vecteur le plus petit entre les deux passés en argument. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Premier vecteur </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Second vecteur </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="199" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="148" bodyend="153"/>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">getY</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1a77c8619c34dcb2e7b5d9337da0fcfe59" prot="public" static="yes" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>static bool nsGraphics::Vec2D::minf</definition>
+        <argsstring>(const Vec2D &amp;p1, const Vec2D &amp;p2)</argsstring>
+        <name>minf</name>
+        <qualifiedname>nsGraphics::Vec2D::minf</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>p1</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">Vec2D</ref> &amp;</type>
+          <declname>p2</declname>
+        </param>
+        <briefdescription>
+<para>Retourne vrai si le premier vecteur est le plus petit des deux. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">p1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Premier vecteur </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">p2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Second vecteur </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="207" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="155" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classns_graphics_1_1_vec2_d_1ad416f3698e43099990b3d96d9099c65f" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; nsGraphics::Vec2D::_Edit</definition>
+        <argsstring>(std::ostream &amp;os=std::cout) const override</argsstring>
+        <name>_Edit</name>
+        <qualifiedname>nsGraphics::Vec2D::_Edit</qualifiedname>
+        <reimplements refid="classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853">_Edit</reimplements>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+          <defval>std::cout</defval>
+        </param>
+        <briefdescription>
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Flux dans lequel injecter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="253" column="26" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp" bodystart="198" bodyend="202"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe représentant un vecteur deux-dimensionnel. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>nsGraphics::Vec2D</label>
+        <link refid="classns_graphics_1_1_vec2_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nsUtil::IEditable</label>
+        <link refid="classns_util_1_1_i_editable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>nsGraphics::Vec2D</label>
+        <link refid="classns_graphics_1_1_vec2_d"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nsUtil::IEditable</label>
+        <link refid="classns_util_1_1_i_editable"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" line="25" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h" bodystart="26" bodyend="266"/>
+    <listofallmembers>
+      <member refid="classns_graphics_1_1_vec2_d_1ad416f3698e43099990b3d96d9099c65f" prot="protected" virt="virtual"><scope>nsGraphics::Vec2D</scope><name>_Edit</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>computeMagnitude</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>getX</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>getY</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1aa02cee45c2d8aa2d9b7e08dfb6c1dfca" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>isColliding</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1ab51a03411fdf20584e5e49cf62b38da4" prot="private" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>m_x</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1ae51a7acf3515e876d50e2f26c19eb9d7" prot="private" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>m_y</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a8a4760c6a33beb77d1e7a850b44129fc" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>min</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a77c8619c34dcb2e7b5d9337da0fcfe59" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>minf</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1affaed949190e8cb5a3c8f9813b31eb0d" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator!=</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a43281403abbad9948eacca4d37fc61dc" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator%</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a57003f3d4660f986c3c21c027ac8b154" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator%=</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1afed7035dfbafeffbfac737fb39d4fb90" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator*</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a7eb4139a171785d5f2f337cee77b9fb0" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator*</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a6e0e661361c0f3081fa2d9488978771e" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator*=</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1aded521aea98ae5b1fdd19f4f9e2df74a" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator+</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a59d565535347c6d0974be9a2333a5806" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator+</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1aafd8b68f1cb9dcfcf92a96714e58c5ec" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator+=</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a3cc10af3b04df2c6bf85460ced5c63a7" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator-</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a6431bcd5dd86fbaf119bed9cf01a13f2" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator-</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1aa9b0986206c35bb5c0043db02548fce4" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator-=</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1aaabc44f047e46433d0115fbc49b3ae2f" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator/</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1ae3adeb741fa6137acf0edbcf02ca58af" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator/</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a1146ac9d05c667bb4a46140858953711" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator/=</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1accfe96cfa5b8495a0b14c7087068064e" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator&lt;</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1afd5e0e3ba77ef971f8d022d69a4a2647" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator&lt;=</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a041926192c1d2c579b12dcf1eb1725d5" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator=</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a94b4b8420a450dd284311c49cb0b2e6b" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator==</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a30da0e7984d8c3e7a66bbdcdcc24c9cb" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator&gt;</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a478dad2852611070874c6c9e5663b570" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>operator&gt;=</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>setX</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>setY</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1a4a2fdd532ded3c29b7a3bd6e5a23fadf" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>Vec2D</name></member>
+      <member refid="classns_graphics_1_1_vec2_d_1ae409c698404abced934b589d58513767" prot="public" virt="non-virtual"><scope>nsGraphics::Vec2D</scope><name>Vec2D</name></member>
+      <member refid="classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e" prot="public" virt="virtual"><scope>nsGraphics::Vec2D</scope><name>~IEditable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

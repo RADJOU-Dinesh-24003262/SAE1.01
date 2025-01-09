@@ -1,0 +1,87 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacens_event" xml:lang="en-US">
+<title>nsEvent Namespace Reference</title>
+<indexterm><primary>nsEvent</primary></indexterm>
+<para>
+
+<para>Espace de nom pour la gestion d&apos;événements. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structns_event_1_1_event__t">Event_t</link></para>
+
+<para>Possède des données pour un événement. </para>
+</listitem>
+            <listitem><para>union <link linkend="_unionns_event_1_1_event_data__t">EventData_t</link></para>
+
+<para>Union contenant les données d&apos;un événement. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_event_1_1_event_manager">EventManager</link></para>
+
+<para>Gère une queue d&apos;événement entrants. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structns_event_1_1_mouse_click_data__t">MouseClickData_t</link></para>
+
+<para>Possède des données pour un événement MouseClick. </para>
+</listitem>
+            <listitem><para>struct <link linkend="_structns_event_1_1_mouse_move_data__t">MouseMoveData_t</link></para>
+
+<para>Possède des données pour un événement MouseMove/MouseDrag. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72">EventType_t</link> { <link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7">MouseClick</link>
+, <link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6">MouseMove</link>
+, <link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317">MouseDrag</link>
+ }</para>
+
+<para>EventType_t : Liste de tout les types d&apos;événements. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Espace de nom pour la gestion d&apos;événements. </para>
+</section>
+<section>
+<title>Enumeration Type Documentation</title>
+<anchor xml:id="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72"/><section>
+    <title>EventType_t</title>
+<indexterm><primary>EventType_t</primary><secondary>nsEvent</secondary></indexterm>
+<indexterm><primary>nsEvent</primary><secondary>EventType_t</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72">nsEvent::EventType_t</link></computeroutput></para><para>
+
+<para>EventType_t : Liste de tout les types d&apos;événements. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>MouseClick</primary><secondary>nsEvent</secondary></indexterm>
+<indexterm><primary>nsEvent</primary><secondary>MouseClick</secondary></indexterm>
+<anchor xml:id="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7"/>MouseClick</entry><entry>
+<para>L&apos;utilisateur a cliqué sur un des boutons de la souris </para>
+</entry></row><row><entry><indexterm><primary>MouseMove</primary><secondary>nsEvent</secondary></indexterm>
+<indexterm><primary>nsEvent</primary><secondary>MouseMove</secondary></indexterm>
+<anchor xml:id="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6"/>MouseMove</entry><entry>
+<para>Le curseur s&apos;est déplacé </para>
+</entry></row><row><entry><indexterm><primary>MouseDrag</primary><secondary>nsEvent</secondary></indexterm>
+<indexterm><primary>nsEvent</primary><secondary>MouseDrag</secondary></indexterm>
+<anchor xml:id="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317"/>MouseDrag</entry><entry>
+<para>Le curseur s&apos;est déplacé pendant qu&apos;un des boutons de la souris était pressé </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00023">23</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,177 @@
+.TH "nsGraphics" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsGraphics \- Espace de nom pour les utilitaires graphiques\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "class \fBIDrawable\fP"
+.br
+.RI "Interface pour un objet affichable\&. "
+.ti -1c
+.RI "class \fBRGBAcolor\fP"
+.br
+.RI "Classe représentant un couleur RGBA8888\&. "
+.ti -1c
+.RI "class \fBVec2D\fP"
+.br
+.RI "Classe représentant un vecteur deux-dimensionnel\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKBlack\fP { 0, 0, 0}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKWhite\fP {255, 255, 255}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKRed\fP {255, 0, 0}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKLime\fP { 0, 255, 0}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKBlue\fP { 0, 0, 255}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKYellow\fP {255, 255, 0}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKCyan\fP { 0, 255, 255}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKMagenta\fP {255, 0, 255}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKSilver\fP {192, 192, 192}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKGray\fP {128, 128, 128}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKDarkGray\fP {200, 200, 200}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKMaroon\fP {128, 0, 0}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKOlive\fP {128, 128, 0}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKGreen\fP { 0, 128, 0}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKPurple\fP {128, 0, 128}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKTeal\fP { 0, 128, 128}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKNavy\fP { 0, 0, 128}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKBeige\fP {231, 211, 171}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKTransparent\fP { 0, 0, 0, 0}"
+.br
+.ti -1c
+.RI "const \fBRGBAcolor\fP \fBKBlueTransparent\fP { 0, 0, 255, 30}"
+.br
+.in -1c
+.SH "Detailed Description"
+.PP 
+Espace de nom pour les utilitaires graphiques\&. 
+.SH "Variable Documentation"
+.PP 
+.SS "const \fBRGBAcolor\fP nsGraphics::KBeige {231, 211, 171}"
+
+.PP
+Definition at line \fB174\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KBlack { 0, 0, 0}"
+
+.PP
+Definition at line \fB157\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KBlue { 0, 0, 255}"
+
+.PP
+Definition at line \fB161\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KBlueTransparent { 0, 0, 255, 30}"
+
+.PP
+Definition at line \fB176\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KCyan { 0, 255, 255}"
+
+.PP
+Definition at line \fB163\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KDarkGray {200, 200, 200}"
+
+.PP
+Definition at line \fB167\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KGray {128, 128, 128}"
+
+.PP
+Definition at line \fB166\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KGreen { 0, 128, 0}"
+
+.PP
+Definition at line \fB170\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KLime { 0, 255, 0}"
+
+.PP
+Definition at line \fB160\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KMagenta {255, 0, 255}"
+
+.PP
+Definition at line \fB164\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KMaroon {128, 0, 0}"
+
+.PP
+Definition at line \fB168\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KNavy { 0, 0, 128}"
+
+.PP
+Definition at line \fB173\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KOlive {128, 128, 0}"
+
+.PP
+Definition at line \fB169\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KPurple {128, 0, 128}"
+
+.PP
+Definition at line \fB171\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KRed {255, 0, 0}"
+
+.PP
+Definition at line \fB159\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KSilver {192, 192, 192}"
+
+.PP
+Definition at line \fB165\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KTeal { 0, 128, 128}"
+
+.PP
+Definition at line \fB172\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KTransparent { 0, 0, 0, 0}"
+
+.PP
+Definition at line \fB175\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KWhite {255, 255, 255}"
+
+.PP
+Definition at line \fB158\fP of file \fBrgbacolor\&.h\fP\&.
+.SS "const \fBRGBAcolor\fP nsGraphics::KYellow {255, 255, 0}"
+
+.PP
+Definition at line \fB162\fP of file \fBrgbacolor\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

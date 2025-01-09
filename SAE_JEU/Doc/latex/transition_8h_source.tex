@@ -1,0 +1,55 @@
+\hypertarget{transition_8h_source}{}\doxysection{transition.\+h}
+\label{transition_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/transition/transition.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/transition/transition.h}}
+\mbox{\hyperlink{transition_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef TRANSITION\_H}}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00012}00012 \textcolor{preprocessor}{\#define TRANSITION\_H}}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{transition__contract_8h}{transition\_contract.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00020}00020 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_transition}{nsTransition}}}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00021}00021 \{}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00027}\mbox{\hyperlink{classns_transition_1_1_transition}{00027}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_transition_1_1_transition}{Transition}} : \textcolor{keyword}{public} \mbox{\hyperlink{classns_transition_1_1_transition_contract}{TransitionContract}}}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00028}00028 \{}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00029}00029 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00033}\mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19}{00033}}     \textcolor{keyword}{enum} \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19}{TransitionFinishModes}} \{}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00034}\mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4}{00034}}         \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4}{FINISH\_START}}, }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00035}\mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f}{00035}}         \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f}{FINISH\_CURRENT}}, }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00036}\mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e}{00036}}         \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e}{FINISH\_DESTINATION}}, }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00037}00037     \};}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00044}\mbox{\hyperlink{classns_transition_1_1_transition_a7c3e692c43aceca5e4f716f3ae22bf05}{00044}}     \mbox{\hyperlink{classns_transition_1_1_transition_a7c3e692c43aceca5e4f716f3ae22bf05}{Transition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_transition_1_1_transition_contract}{TransitionContract}}\& contract);}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00051}\mbox{\hyperlink{classns_transition_1_1_transition_a616e0ef596d4e8ebb185a6cf0a685924}{00051}}     \textcolor{keyword}{const} \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{SystemDuration\_t}}\& \mbox{\hyperlink{classns_transition_1_1_transition_a616e0ef596d4e8ebb185a6cf0a685924}{getElapsed}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00059}\mbox{\hyperlink{classns_transition_1_1_transition_a0a8e848a50c2e05dc72800abfc6dd6ef}{00059}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_transition_1_1_transition_a0a8e848a50c2e05dc72800abfc6dd6ef}{setElapsed}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{SystemDuration\_t}}\& elapsed);}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00066}\mbox{\hyperlink{classns_transition_1_1_transition_abb421b44828c7b6dec60a0256a97b3d9}{00066}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_transition_1_1_transition_abb421b44828c7b6dec60a0256a97b3d9}{addToElapsed}}(\textcolor{keyword}{const} \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{SystemDuration\_t}}\& addedTime);}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00073}\mbox{\hyperlink{classns_transition_1_1_transition_ab32ef25219cd2227746444ac8794266a}{00073}}     \textcolor{keyword}{const} \textcolor{keywordtype}{bool}\& \mbox{\hyperlink{classns_transition_1_1_transition_ab32ef25219cd2227746444ac8794266a}{isReversed}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00080}\mbox{\hyperlink{classns_transition_1_1_transition_a8c8c7caf7326e24ffa540093ed12f581}{00080}}     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_transition_1_1_transition_a8c8c7caf7326e24ffa540093ed12f581}{finish}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19}{TransitionFinishModes}}\& finishMode = TransitionFinishModes::FINISH\_DESTINATION);}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00087}\mbox{\hyperlink{classns_transition_1_1_transition_ad9d358bee54825d2a8bf83e9e21e398b}{00087}}     \textcolor{keyword}{const} \textcolor{keywordtype}{bool}\& \mbox{\hyperlink{classns_transition_1_1_transition_ad9d358bee54825d2a8bf83e9e21e398b}{isFinished}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00089}00089 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00093}00093     \mbox{\hyperlink{namespacens_transition_a83c5a8a16c957b737d76d281c7345aa6}{SystemTimePoint\_t}} m\_startTime;}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00098}00098     \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{SystemDuration\_t}} m\_elapsed;}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00104}00104     \textcolor{keywordtype}{bool} m\_reverse;}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00110}00110     \textcolor{keywordtype}{bool} m\_finished;}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00117}00117     \textcolor{keywordtype}{void} updateValues();}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00123}00123     \textcolor{keywordtype}{void} handleEndlife();}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00124}00124 \}; \textcolor{comment}{// class Transition}}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00126}00126 \} \textcolor{comment}{// namespace nsTransition}}
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{transition_8h_source_l00128}00128 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// TRANSITION\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,258 @@
+.TH "nsShape::Rectangle" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsShape::Rectangle \- Classe représentant un rectangle\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rectangle\&.h>\fP
+.PP
+Inherits \fBnsShape::Shape\fP, and \fBnsTransition::ITransitionable\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTransitionIds\fP { \fBTRANSITION_FILL_COLOR_RGB\fP, \fBTRANSITION_FILL_COLOR_ALPHA\fP, \fBTRANSITION_BORDER_COLOR_RGB\fP, \fBTRANSITION_BORDER_COLOR_ALPHA\fP, \fBTRANSITION_FIRST_POSITION\fP, \fBTRANSITION_SECOND_POSITION\fP }"
+.br
+.RI "TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRectangle\fP (const \fBnsGraphics::Vec2D\fP &firstPosition, const \fBnsGraphics::Vec2D\fP &secondPosition, const \fBnsGraphics::RGBAcolor\fP &fillColor, const \fBnsGraphics::RGBAcolor\fP &borderColor=nsGraphics::KTransparent)"
+.br
+.RI "Constructeur pour la classe \fBRectangle\fP\&. "
+.ti -1c
+.RI "\fBRectangle\fP (const \fBnsGraphics::Vec2D\fP &position, const unsigned &width, const unsigned &height, const \fBnsGraphics::RGBAcolor\fP &fillColor, const \fBnsGraphics::RGBAcolor\fP &borderColor=nsGraphics::KTransparent)"
+.br
+.RI "Constructeur pour la classe \fBRectangle\fP\&. "
+.ti -1c
+.RI "virtual void \fBdraw\fP (\fBMinGL\fP &window) const override"
+.br
+.RI "Fonction pour afficher l'objet\&. "
+.ti -1c
+.RI "virtual void \fBgetValues\fP (const int &id, std::vector< float > &values) override"
+.br
+.RI "Récupère des valeurs dans un vecteur de float pour l'ID spécifié "
+.ti -1c
+.RI "virtual void \fBsetValues\fP (const int &id, const std::vector< float > &values) override"
+.br
+.RI "Définit les nouvelles valeurs pour l'ID spécifié "
+.ti -1c
+.RI "\fBRectangle\fP \fBoperator+\fP (const \fBnsGraphics::Vec2D\fP &position) const"
+.br
+.RI "Opérateur de décalage\&. "
+.ti -1c
+.RI "\fBRectangle\fP \fBoperator*\fP (const float &f) const"
+.br
+.RI "Opérateur de réduction\&. "
+.ti -1c
+.RI "const \fBnsGraphics::Vec2D\fP & \fBgetFirstPosition\fP () const"
+.br
+.RI "Récupère la position du coin haut-gauche du rectangle\&. "
+.ti -1c
+.RI "void \fBsetFirstPosition\fP (const \fBnsGraphics::Vec2D\fP &firstPosition)"
+.br
+.RI "Définit la nouvelle position du coin haut-gauche du rectangle\&. "
+.ti -1c
+.RI "const \fBnsGraphics::Vec2D\fP & \fBgetSecondPosition\fP () const"
+.br
+.RI "Récupère la position du coin bas-droit du rectangle\&. "
+.ti -1c
+.RI "void \fBsetSecondPosition\fP (const \fBnsGraphics::Vec2D\fP &secondPosition)"
+.br
+.RI "Définit la nouvelle position du coin bas-droit du rectangle\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Classe représentant un rectangle\&. 
+.PP
+Definition at line \fB25\fP of file \fBrectangle\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBnsShape::Rectangle::TransitionIds\fP"
+
+.PP
+TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITRANSITION_FILL_COLOR_RGB \fP\fP
+Transition pour la couleur de remplissage 
+.TP
+\fB\fITRANSITION_FILL_COLOR_ALPHA \fP\fP
+Transition pour la transparence de remplissage 
+.TP
+\fB\fITRANSITION_BORDER_COLOR_RGB \fP\fP
+Transition pour la couleur de bord 
+.TP
+\fB\fITRANSITION_BORDER_COLOR_ALPHA \fP\fP
+Transition pour la transparence de bord 
+.TP
+\fB\fITRANSITION_FIRST_POSITION \fP\fP
+Transition pour la position du coin haut-gauche 
+.TP
+\fB\fITRANSITION_SECOND_POSITION \fP\fP
+Transition pour la position du coin bas-droit 
+.PP
+Definition at line \fB32\fP of file \fBrectangle\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsShape::Rectangle::Rectangle (const \fBnsGraphics::Vec2D\fP & firstPosition, const \fBnsGraphics::Vec2D\fP & secondPosition, const \fBnsGraphics::RGBAcolor\fP & fillColor, const \fBnsGraphics::RGBAcolor\fP & borderColor = \fCnsGraphics::KTransparent\fP)"
+
+.PP
+Constructeur pour la classe \fBRectangle\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirstPosition\fP : Position du coin haut-gauche 
+.br
+\fIsecondPosition\fP : Position du coin bas-droit 
+.br
+\fIfillColor\fP : Couleur de remplissage 
+.br
+\fIborderColor\fP : Couleur de bord 
+.RE
+.PP
+
+.PP
+Definition at line \fB14\fP of file \fBrectangle\&.cpp\fP\&.
+.SS "nsShape::Rectangle::Rectangle (const \fBnsGraphics::Vec2D\fP & position, const unsigned & width, const unsigned & height, const \fBnsGraphics::RGBAcolor\fP & fillColor, const \fBnsGraphics::RGBAcolor\fP & borderColor = \fCnsGraphics::KTransparent\fP)"
+
+.PP
+Constructeur pour la classe \fBRectangle\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP : Position du coin haut-gauche 
+.br
+\fIwidth\fP : Largeur du rectangle 
+.br
+\fIheight\fP : Hauteur du rectangle 
+.br
+\fIfillColor\fP : Couleur de remplissage 
+.br
+\fIborderColor\fP : Couleur de bord 
+.RE
+.PP
+
+.PP
+Definition at line \fB20\fP of file \fBrectangle\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void nsShape::Rectangle::draw (\fBMinGL\fP & window) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction pour afficher l'objet\&. 
+.PP
+Implements \fBnsGraphics::IDrawable\fP\&.
+.PP
+Definition at line \fB26\fP of file \fBrectangle\&.cpp\fP\&.
+.SS "const \fBnsGraphics::Vec2D\fP & nsShape::Rectangle::getFirstPosition () const"
+
+.PP
+Récupère la position du coin haut-gauche du rectangle\&. 
+.PP
+Definition at line \fB144\fP of file \fBrectangle\&.cpp\fP\&.
+.SS "const \fBnsGraphics::Vec2D\fP & nsShape::Rectangle::getSecondPosition () const"
+
+.PP
+Récupère la position du coin bas-droit du rectangle\&. 
+.PP
+Definition at line \fB154\fP of file \fBrectangle\&.cpp\fP\&.
+.SS "void nsShape::Rectangle::getValues (const int & id, std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Récupère des valeurs dans un vecteur de float pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a récupérer 
+.br
+\fIvalues\fP Vecteur de valeurs a peupler 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB52\fP of file \fBrectangle\&.cpp\fP\&.
+.SS "\fBRectangle\fP nsShape::Rectangle::operator* (const float & f) const"
+
+.PP
+Opérateur de réduction\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP : Nombre avec lequel multiplier la position actuelle 
+.RE
+.PP
+
+.PP
+Definition at line \fB139\fP of file \fBrectangle\&.cpp\fP\&.
+.SS "\fBRectangle\fP nsShape::Rectangle::operator+ (const \fBnsGraphics::Vec2D\fP & position) const"
+
+.PP
+Opérateur de décalage\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP : Position a additionner 
+.RE
+.PP
+
+.PP
+Definition at line \fB134\fP of file \fBrectangle\&.cpp\fP\&.
+.SS "void nsShape::Rectangle::setFirstPosition (const \fBnsGraphics::Vec2D\fP & firstPosition)"
+
+.PP
+Définit la nouvelle position du coin haut-gauche du rectangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirstPosition\fP : Nouvelle position du coin haut-gauche 
+.RE
+.PP
+
+.PP
+Definition at line \fB149\fP of file \fBrectangle\&.cpp\fP\&.
+.SS "void nsShape::Rectangle::setSecondPosition (const \fBnsGraphics::Vec2D\fP & secondPosition)"
+
+.PP
+Définit la nouvelle position du coin bas-droit du rectangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsecondPosition\fP : Nouvelle position du coin bas-droit 
+.RE
+.PP
+
+.PP
+Definition at line \fB159\fP of file \fBrectangle\&.cpp\fP\&.
+.SS "void nsShape::Rectangle::setValues (const int & id, const std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Définit les nouvelles valeurs pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a définir 
+.br
+\fIvalues\fP Vecteur des nouvelles valeurs a appliquer 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB93\fP of file \fBrectangle\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

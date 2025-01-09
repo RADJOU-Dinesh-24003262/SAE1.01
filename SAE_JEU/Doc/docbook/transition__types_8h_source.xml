@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_transition__types_8h_source" xml:lang="en-US">
+<title>transition_types.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_transition__types_8h_source_1l00001"/>00001 
+<anchor xml:id="_transition__types_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;TRANSITION_TYPES_H</emphasis>
+<anchor xml:id="_transition__types_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;TRANSITION_TYPES_H</emphasis>
+<anchor xml:id="_transition__types_8h_source_1l00013"/>00013 
+<anchor xml:id="_transition__types_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;chrono&gt;</emphasis>
+<anchor xml:id="_transition__types_8h_source_1l00015"/>00015 
+<anchor xml:id="_transition__types_8h_source_1l00016"/>00016 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_transition">nsTransition</link>
+<anchor xml:id="_transition__types_8h_source_1l00017"/>00017 {
+<anchor xml:id="_transition__types_8h_source_1l00018"/>00018 
+<anchor xml:id="_transition__types_8h_source_1l00022"/><link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">00022</link> <emphasis role="keyword">typedef</emphasis>&#32;std::chrono::duration&lt;float,&#32;std::nano&gt;&#32;<link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link>;
+<anchor xml:id="_transition__types_8h_source_1l00023"/>00023 
+<anchor xml:id="_transition__types_8h_source_1l00027"/><link linkend="_namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6">00027</link> <emphasis role="keyword">typedef</emphasis>&#32;std::chrono::time_point&lt;std::chrono::steady_clock,&#32;SystemDuration_t&gt;&#32;<link linkend="_namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6">SystemTimePoint_t</link>;
+<anchor xml:id="_transition__types_8h_source_1l00028"/>00028 
+<anchor xml:id="_transition__types_8h_source_1l00029"/>00029 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsTransition</emphasis>
+<anchor xml:id="_transition__types_8h_source_1l00030"/>00030 
+<anchor xml:id="_transition__types_8h_source_1l00031"/>00031 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;TRANSITION_TYPES_H</emphasis>
+</programlisting></section>

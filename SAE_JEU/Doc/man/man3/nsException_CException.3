@@ -1,0 +1,132 @@
+.TH "nsException::CException" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsException::CException \- Classe pour créer des exceptions facilement\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <cexception\&.h>\fP
+.PP
+Inherits std::exception, and \fBnsUtil::IEditable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCException\fP (const std::string &Libelle=std::string(), const unsigned CodErr=\fBKNoExc\fP)"
+.br
+.RI "Constructeur pour la classe \fBCException\fP\&. "
+.ti -1c
+.RI "virtual \fB~CException\fP () override=default"
+.br
+.RI "Destructeur virtuel pour la classe \fBCException\fP\&. "
+.ti -1c
+.RI "const std::string & \fBGetLibelle\fP () const"
+.br
+.RI "Récupère le libellé de l'exception\&. "
+.ti -1c
+.RI "unsigned \fBGetCodErr\fP () const"
+.br
+.RI "Récupère le code erreur de l'exception\&. "
+.ti -1c
+.RI "virtual const char * \fBwhat\fP () const noexcept override"
+.br
+.RI "Retourne une chaine de caractère C décrivant l'exception\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual std::ostream & \fB_Edit\fP (std::ostream &os=std::cerr) const override"
+.br
+.RI "Fonction appelée pour injecter l'objet courant dans un flux\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "std::string \fBm_Libelle\fP"
+.br
+.RI "m_Libelle : Libellé de l'exception "
+.ti -1c
+.RI "unsigned \fBm_CodErr\fP"
+.br
+.RI "m_CodErr : Code erreur de l'exception "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Classe pour créer des exceptions facilement\&. 
+.PP
+Definition at line \fB42\fP of file \fBcexception\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsException::CException::CException (const std::string & Libelle = \fCstd::string()\fP, const unsigned CodErr = \fC\fBKNoExc\fP\fP)\fC [inline]\fP"
+
+.PP
+Constructeur pour la classe \fBCException\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fILibelle\fP : Libellé de l'exception 
+.br
+\fICodErr\fP : Code erreur de l'exception 
+.RE
+.PP
+
+.PP
+Definition at line \fB28\fP of file \fBcexception\&.hpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "std::ostream & nsException::CException::_Edit (std::ostream & os = \fCstd::cerr\fP) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction appelée pour injecter l'objet courant dans un flux\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIos\fP : Flux dans lequel injecter 
+.RE
+.PP
+
+.PP
+Implements \fBnsUtil::IEditable\fP\&.
+.PP
+Definition at line \fB19\fP of file \fBcexception\&.cpp\fP\&.
+.SS "unsigned nsException::CException::GetCodErr () const\fC [inline]\fP"
+
+.PP
+Récupère le code erreur de l'exception\&. 
+.PP
+Definition at line \fB38\fP of file \fBcexception\&.hpp\fP\&.
+.SS "const std::string & nsException::CException::GetLibelle () const\fC [inline]\fP"
+
+.PP
+Récupère le libellé de l'exception\&. 
+.PP
+Definition at line \fB33\fP of file \fBcexception\&.hpp\fP\&.
+.SS "const char * nsException::CException::what () const\fC [inline]\fP, \fC [override]\fP, \fC [virtual]\fP, \fC [noexcept]\fP"
+
+.PP
+Retourne une chaine de caractère C décrivant l'exception\&. 
+.PP
+Definition at line \fB43\fP of file \fBcexception\&.hpp\fP\&.
+.SH "Member Data Documentation"
+.PP 
+.SS "unsigned nsException::CException::m_CodErr\fC [protected]\fP"
+
+.PP
+m_CodErr : Code erreur de l'exception 
+.PP
+Definition at line \fB89\fP of file \fBcexception\&.h\fP\&.
+.SS "std::string nsException::CException::m_Libelle\fC [protected]\fP"
+
+.PP
+m_Libelle : Libellé de l'exception 
+.PP
+Definition at line \fB84\fP of file \fBcexception\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

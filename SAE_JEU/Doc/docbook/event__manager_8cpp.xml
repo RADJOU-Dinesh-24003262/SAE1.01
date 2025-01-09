@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_event__manager_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp</primary></indexterm>
+<para>
+
+<para>Gestionnaire d&apos;événements de minGL. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;mingl/event/event_manager.h&quot;
+</programlisting>Include dependency graph for event_manager.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="event__manager_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Gestionnaire d&apos;événements de minGL. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Décembre 2019 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_event__manager_8cpp_source">event_manager.cpp</link>.</para>
+</section>
+</section>

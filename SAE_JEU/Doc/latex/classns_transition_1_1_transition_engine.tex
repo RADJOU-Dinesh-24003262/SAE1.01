@@ -1,0 +1,99 @@
+\hypertarget{classns_transition_1_1_transition_engine}{}\doxysection{ns\+Transition\+::Transition\+Engine Class Reference}
+\label{classns_transition_1_1_transition_engine}\index{nsTransition::TransitionEngine@{nsTransition::TransitionEngine}}
+
+
+Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois.  
+
+
+
+
+{\ttfamily \#include $<$transition\+\_\+engine.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classns_transition_1_1_transition_engine_a3bc437b23ee918b9ec4af070e205028f}{update}} (const std\+::chrono\+::microseconds \&delta)
+\begin{DoxyCompactList}\small\item\em Met a jour toutes les transitions dans la liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}{start\+Contract}} (const \mbox{\hyperlink{classns_transition_1_1_transition_contract}{Transition\+Contract}} \&contract)
+\begin{DoxyCompactList}\small\item\em Démarre un contrat. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_transition_1_1_transition_engine_a91235836b50f216b61b5ff3fb31cd5f8}{finish\+Every\+Transition}} (const \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19}{Transition\+::\+Transition\+Finish\+Modes}} \&finish\+Mode=\mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e}{Transition\+::\+FINISH\+\_\+\+DESTINATION}})
+\begin{DoxyCompactList}\small\item\em Termine toutes les transitions de la liste. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_transition_1_1_transition_engine_adcd7bce2bb158224303b532c27f9b559}{finish\+Every\+Transition\+Of\+Target}} (const \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}} \&transitionable, const \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19}{Transition\+::\+Transition\+Finish\+Modes}} \&finish\+Mode=\mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e}{Transition\+::\+FINISH\+\_\+\+DESTINATION}})
+\begin{DoxyCompactList}\small\item\em Termine toutes les transitions d\textquotesingle{}une certaine cible de la liste. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois. 
+
+Definition at line \mbox{\hyperlink{transition__engine_8h_source_l00027}{27}} of file \mbox{\hyperlink{transition__engine_8h_source}{transition\+\_\+engine.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns_transition_1_1_transition_engine_a91235836b50f216b61b5ff3fb31cd5f8}\label{classns_transition_1_1_transition_engine_a91235836b50f216b61b5ff3fb31cd5f8}} 
+\index{nsTransition::TransitionEngine@{nsTransition::TransitionEngine}!finishEveryTransition@{finishEveryTransition}}
+\index{finishEveryTransition@{finishEveryTransition}!nsTransition::TransitionEngine@{nsTransition::TransitionEngine}}
+\doxysubsubsection{\texorpdfstring{finishEveryTransition()}{finishEveryTransition()}}
+{\footnotesize\ttfamily void ns\+Transition\+::\+Transition\+Engine\+::finish\+Every\+Transition (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19}{Transition\+::\+Transition\+Finish\+Modes}} \&}]{finish\+Mode = {\ttfamily \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e}{Transition\+::\+FINISH\+\_\+\+DESTINATION}}} }\end{DoxyParamCaption})}
+
+
+
+Termine toutes les transitions de la liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em finish\+Mode} & \+: finish\+Mode \+: Mode utilisé pour finir cette \mbox{\hyperlink{classns_transition_1_1_transition}{Transition}} (Valeurs d\textquotesingle{}arrivé par défaut) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classns_transition_1_1_transition_engine_adcd7bce2bb158224303b532c27f9b559}\label{classns_transition_1_1_transition_engine_adcd7bce2bb158224303b532c27f9b559}} 
+\index{nsTransition::TransitionEngine@{nsTransition::TransitionEngine}!finishEveryTransitionOfTarget@{finishEveryTransitionOfTarget}}
+\index{finishEveryTransitionOfTarget@{finishEveryTransitionOfTarget}!nsTransition::TransitionEngine@{nsTransition::TransitionEngine}}
+\doxysubsubsection{\texorpdfstring{finishEveryTransitionOfTarget()}{finishEveryTransitionOfTarget()}}
+{\footnotesize\ttfamily void ns\+Transition\+::\+Transition\+Engine\+::finish\+Every\+Transition\+Of\+Target (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}} \&}]{transitionable,  }\item[{const \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19}{Transition\+::\+Transition\+Finish\+Modes}} \&}]{finish\+Mode = {\ttfamily \mbox{\hyperlink{classns_transition_1_1_transition_a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e}{Transition\+::\+FINISH\+\_\+\+DESTINATION}}} }\end{DoxyParamCaption})}
+
+
+
+Termine toutes les transitions d\textquotesingle{}une certaine cible de la liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em transitionable} & \+: La cible où arrêter les transitions \\
+\hline
+\mbox{\texttt{ in}}  & {\em finish\+Mode} & \+: finish\+Mode \+: Mode utilisé pour finir cette \mbox{\hyperlink{classns_transition_1_1_transition}{Transition}} (Valeurs d\textquotesingle{}arrivé par défaut) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}\label{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}} 
+\index{nsTransition::TransitionEngine@{nsTransition::TransitionEngine}!startContract@{startContract}}
+\index{startContract@{startContract}!nsTransition::TransitionEngine@{nsTransition::TransitionEngine}}
+\doxysubsubsection{\texorpdfstring{startContract()}{startContract()}}
+{\footnotesize\ttfamily void ns\+Transition\+::\+Transition\+Engine\+::start\+Contract (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_transition_1_1_transition_contract}{Transition\+Contract}} \&}]{contract }\end{DoxyParamCaption})}
+
+
+
+Démarre un contrat. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em contract} & \+: Contrat de transition a démarrer \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classns_transition_1_1_transition_engine_a3bc437b23ee918b9ec4af070e205028f}\label{classns_transition_1_1_transition_engine_a3bc437b23ee918b9ec4af070e205028f}} 
+\index{nsTransition::TransitionEngine@{nsTransition::TransitionEngine}!update@{update}}
+\index{update@{update}!nsTransition::TransitionEngine@{nsTransition::TransitionEngine}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void ns\+Transition\+::\+Transition\+Engine\+::update (\begin{DoxyParamCaption}\item[{const std\+::chrono\+::microseconds \&}]{delta }\end{DoxyParamCaption})}
+
+
+
+Met a jour toutes les transitions dans la liste. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em delta} & \+: Temps que la dernière image a mis pour faire son rendu\\
+\hline
+\end{DoxyParams}
+Cette fonction rajoute la valeur de delta aux temps écoulés des différentes transitions, et supprime les transitions terminées de la liste. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/transition/\mbox{\hyperlink{transition__engine_8h}{transition\+\_\+engine.\+h}}\end{DoxyCompactItemize}

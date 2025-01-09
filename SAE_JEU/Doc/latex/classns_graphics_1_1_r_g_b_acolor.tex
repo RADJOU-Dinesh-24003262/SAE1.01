@@ -1,0 +1,387 @@
+\hypertarget{classns_graphics_1_1_r_g_b_acolor}{}\doxysection{ns\+Graphics\+::RGBAcolor Class Reference}
+\label{classns_graphics_1_1_r_g_b_acolor}\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+
+
+Classe représentant un couleur RGBA8888.  
+
+
+
+
+{\ttfamily \#include $<$rgbacolor.\+h$>$}
+
+
+
+Inheritance diagram for ns\+Graphics\+::RGBAcolor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classns_graphics_1_1_r_g_b_acolor__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ns\+Graphics\+::RGBAcolor\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classns_graphics_1_1_r_g_b_acolor__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a6f91976b2d83414329608564615f27b1}{RGBAcolor}} (const GLubyte \&red=0, const GLubyte \&green=0, const GLubyte \&blue=0, const GLubyte \&alpha=255)
+\begin{DoxyCompactList}\small\item\em Constructeur pour la classe \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a229faf986de81a508c37103ca013ad70}\label{classns_graphics_1_1_r_g_b_acolor_a229faf986de81a508c37103ca013ad70}} 
+virtual {\bfseries $\sim$\+RGBAcolor} () override=default
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel pour la classe \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a685b4a48d19594bd29f136e1f74fee85}{operator==}} (const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} \&col) const
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}égalité \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a2cf7ff27443450c18368d521546f4e9e}{operator!=}} (const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} \&col) const
+\begin{DoxyCompactList}\small\item\em Opérateur d\textquotesingle{}inégalité \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_abb3832c60bec568d1b357955e6be2300}{operator+}} (const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Opérateur de décalage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a1be35bff76dd3859cc714b87db0a1193}{operator$\ast$}} (const float \&rhs) const
+\begin{DoxyCompactList}\small\item\em Opérateur de réduction. \end{DoxyCompactList}\item 
+GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{get\+Red}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le taux de rouge. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_ade94fb53d92392f80a316a2370c8991c}{set\+Red}} (const GLubyte \&red)
+\begin{DoxyCompactList}\small\item\em Définit le nouveau taux de rouge. \end{DoxyCompactList}\item 
+GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{get\+Green}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le taux de vert. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a28674ba0fa5f7abc8afb4023c1d0cf25}{set\+Green}} (const GLubyte \&green)
+\begin{DoxyCompactList}\small\item\em Définit le nouveau taux de vert. \end{DoxyCompactList}\item 
+GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{get\+Blue}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le taux de bleu. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_ac6f522de2f51788d98846034174fb16a}{set\+Blue}} (const GLubyte \&blue)
+\begin{DoxyCompactList}\small\item\em Définit le nouveau taux de bleu. \end{DoxyCompactList}\item 
+GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}{get\+Alpha}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le taux de transparence. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_aa478d3c5b8b56f590a12461fe2ab4bbf}{set\+Alpha}} (const GLubyte \&alpha)
+\begin{DoxyCompactList}\small\item\em Définit le nouveau taux de transparence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::ostream \& \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a09154c1fc9ba912860f2b4fac5432298}{\+\_\+\+Edit}} (std\+::ostream \&os=std\+::cout) const override
+\begin{DoxyCompactList}\small\item\em Fonction appelée pour injecter l\textquotesingle{}objet courant dans un flux. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant un couleur RGBA8888. 
+
+Definition at line \mbox{\hyperlink{rgbacolor_8h_source_l00025}{25}} of file \mbox{\hyperlink{rgbacolor_8h_source}{rgbacolor.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a6f91976b2d83414329608564615f27b1}\label{classns_graphics_1_1_r_g_b_acolor_a6f91976b2d83414329608564615f27b1}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!RGBAcolor@{RGBAcolor}}
+\index{RGBAcolor@{RGBAcolor}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{RGBAcolor()}{RGBAcolor()}}
+{\footnotesize\ttfamily ns\+Graphics\+::\+RGBAcolor\+::\+RGBAcolor (\begin{DoxyParamCaption}\item[{const GLubyte \&}]{red = {\ttfamily 0},  }\item[{const GLubyte \&}]{green = {\ttfamily 0},  }\item[{const GLubyte \&}]{blue = {\ttfamily 0},  }\item[{const GLubyte \&}]{alpha = {\ttfamily 255} }\end{DoxyParamCaption})}
+
+
+
+Constructeur pour la classe \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em red} & \+: Taux de rouge (0-\/255) \\
+\hline
+\mbox{\texttt{ in}}  & {\em green} & \+: Taux de vert (0-\/255) \\
+\hline
+\mbox{\texttt{ in}}  & {\em blue} & \+: Taux de bleu (0-\/255) \\
+\hline
+\mbox{\texttt{ in}}  & {\em alpha} & \+: Taux de transparence (0-\/255) \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a09154c1fc9ba912860f2b4fac5432298}\label{classns_graphics_1_1_r_g_b_acolor_a09154c1fc9ba912860f2b4fac5432298}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!\_Edit@{\_Edit}}
+\index{\_Edit@{\_Edit}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{\_Edit()}{\_Edit()}}
+{\footnotesize\ttfamily std\+::ostream \& ns\+Graphics\+::\+RGBAcolor\+::\+\_\+\+Edit (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os = {\ttfamily std\+:\+:cout} }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [protected]}, {\ttfamily [virtual]}}
+
+
+
+Fonction appelée pour injecter l\textquotesingle{}objet courant dans un flux. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em os} & \+: Flux dans lequel injecter \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classns_util_1_1_i_editable_ab20bbe582b95383ed3f1453109035853}{ns\+Util\+::\+IEditable}}.
+
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}\label{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!getAlpha@{getAlpha}}
+\index{getAlpha@{getAlpha}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{getAlpha()}{getAlpha()}}
+{\footnotesize\ttfamily GLubyte ns\+Graphics\+::\+RGBAcolor\+::get\+Alpha (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupère le taux de transparence. 
+
+\begin{DoxyReturn}{Returns}
+Une référence constante vers m\+\_\+alpha 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00046}{46}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}\label{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!getBlue@{getBlue}}
+\index{getBlue@{getBlue}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{getBlue()}{getBlue()}}
+{\footnotesize\ttfamily GLubyte ns\+Graphics\+::\+RGBAcolor\+::get\+Blue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupère le taux de bleu. 
+
+\begin{DoxyReturn}{Returns}
+Une référence constante vers m\+\_\+blue 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}\label{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!getGreen@{getGreen}}
+\index{getGreen@{getGreen}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{getGreen()}{getGreen()}}
+{\footnotesize\ttfamily GLubyte ns\+Graphics\+::\+RGBAcolor\+::get\+Green (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupère le taux de vert. 
+
+\begin{DoxyReturn}{Returns}
+Une référence constante vers m\+\_\+green 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00066}{66}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}\label{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!getRed@{getRed}}
+\index{getRed@{getRed}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{getRed()}{getRed()}}
+{\footnotesize\ttfamily GLubyte ns\+Graphics\+::\+RGBAcolor\+::get\+Red (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupère le taux de rouge. 
+
+\begin{DoxyReturn}{Returns}
+Une référence constante vers m\+\_\+red 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a2cf7ff27443450c18368d521546f4e9e}\label{classns_graphics_1_1_r_g_b_acolor_a2cf7ff27443450c18368d521546f4e9e}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool ns\+Graphics\+::\+RGBAcolor\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} \&}]{col }\end{DoxyParamCaption}) const}
+
+
+
+Opérateur d\textquotesingle{}inégalité 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em col} & \+: Couleur a vérifier \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00025}{25}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a1be35bff76dd3859cc714b87db0a1193}\label{classns_graphics_1_1_r_g_b_acolor_a1be35bff76dd3859cc714b87db0a1193}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} ns\+Graphics\+::\+RGBAcolor\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const float \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Opérateur de réduction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & \+: Couleur avec laquelle multiplier la couleur actuelle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00035}{35}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_abb3832c60bec568d1b357955e6be2300}\label{classns_graphics_1_1_r_g_b_acolor_abb3832c60bec568d1b357955e6be2300}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!operator+@{operator+}}
+\index{operator+@{operator+}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} ns\+Graphics\+::\+RGBAcolor\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} \&}]{rhs }\end{DoxyParamCaption}) const}
+
+
+
+Opérateur de décalage. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em rhs} & \+: Couleur a additionner \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a685b4a48d19594bd29f136e1f74fee85}\label{classns_graphics_1_1_r_g_b_acolor_a685b4a48d19594bd29f136e1f74fee85}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!operator==@{operator==}}
+\index{operator==@{operator==}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool ns\+Graphics\+::\+RGBAcolor\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} \&}]{col }\end{DoxyParamCaption}) const}
+
+
+
+Opérateur d\textquotesingle{}égalité 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em col} & \+: Couleur a vérifier \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_aa478d3c5b8b56f590a12461fe2ab4bbf}\label{classns_graphics_1_1_r_g_b_acolor_aa478d3c5b8b56f590a12461fe2ab4bbf}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!setAlpha@{setAlpha}}
+\index{setAlpha@{setAlpha}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{setAlpha()}{setAlpha()}}
+{\footnotesize\ttfamily void ns\+Graphics\+::\+RGBAcolor\+::set\+Alpha (\begin{DoxyParamCaption}\item[{const GLubyte \&}]{alpha }\end{DoxyParamCaption})}
+
+
+
+Définit le nouveau taux de transparence. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em red} & \+: Nouveau taux de transparence \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00051}{51}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_ac6f522de2f51788d98846034174fb16a}\label{classns_graphics_1_1_r_g_b_acolor_ac6f522de2f51788d98846034174fb16a}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!setBlue@{setBlue}}
+\index{setBlue@{setBlue}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{setBlue()}{setBlue()}}
+{\footnotesize\ttfamily void ns\+Graphics\+::\+RGBAcolor\+::set\+Blue (\begin{DoxyParamCaption}\item[{const GLubyte \&}]{blue }\end{DoxyParamCaption})}
+
+
+
+Définit le nouveau taux de bleu. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em red} & \+: Nouveau taux de bleu \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00061}{61}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_a28674ba0fa5f7abc8afb4023c1d0cf25}\label{classns_graphics_1_1_r_g_b_acolor_a28674ba0fa5f7abc8afb4023c1d0cf25}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!setGreen@{setGreen}}
+\index{setGreen@{setGreen}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{setGreen()}{setGreen()}}
+{\footnotesize\ttfamily void ns\+Graphics\+::\+RGBAcolor\+::set\+Green (\begin{DoxyParamCaption}\item[{const GLubyte \&}]{green }\end{DoxyParamCaption})}
+
+
+
+Définit le nouveau taux de vert. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em red} & \+: Nouveau taux de vert \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+\mbox{\Hypertarget{classns_graphics_1_1_r_g_b_acolor_ade94fb53d92392f80a316a2370c8991c}\label{classns_graphics_1_1_r_g_b_acolor_ade94fb53d92392f80a316a2370c8991c}} 
+\index{nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}!setRed@{setRed}}
+\index{setRed@{setRed}!nsGraphics::RGBAcolor@{nsGraphics::RGBAcolor}}
+\doxysubsubsection{\texorpdfstring{setRed()}{setRed()}}
+{\footnotesize\ttfamily void ns\+Graphics\+::\+RGBAcolor\+::set\+Red (\begin{DoxyParamCaption}\item[{const GLubyte \&}]{red }\end{DoxyParamCaption})}
+
+
+
+Définit le nouveau taux de rouge. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em red} & \+: Nouveau taux de rouge \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{rgbacolor_8cpp_source_l00081}{81}} of file \mbox{\hyperlink{rgbacolor_8cpp_source}{rgbacolor.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/graphics/\mbox{\hyperlink{rgbacolor_8h}{rgbacolor.\+h}}\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/src/graphics/\mbox{\hyperlink{rgbacolor_8cpp}{rgbacolor.\+cpp}}\end{DoxyCompactItemize}

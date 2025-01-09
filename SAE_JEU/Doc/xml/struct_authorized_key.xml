@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="struct_authorized_key" kind="struct" language="C++" prot="public">
+    <compoundname>AuthorizedKey</compoundname>
+    <includes refid="type_8h" local="no">type.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_authorized_key_1a1b1aa7863427cc1b43f229423bdd83ba" prot="public" static="no" mutable="no">
+        <type>const std::vector&lt; std::string &gt;</type>
+        <definition>const std::vector&lt;std::string&gt; AuthorizedKey::VParamChar</definition>
+        <argsstring></argsstring>
+        <name>VParamChar</name>
+        <qualifiedname>AuthorizedKey::VParamChar</qualifiedname>
+        <initializer>{&quot;KeyUp&quot;, &quot;KeyDown&quot;, &quot;KeyLeft&quot;, &quot;KeyRight&quot;, &quot;TokenP1&quot;, &quot;TokenP2&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of authorized key for the type char in a struct <ref refid="struct_c_my_param" kindref="compound">CMyParam</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="41" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="41" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73" prot="public" static="no" mutable="no">
+        <type>const std::vector&lt; std::string &gt;</type>
+        <definition>const std::vector&lt;std::string&gt; AuthorizedKey::VParamString</definition>
+        <argsstring></argsstring>
+        <name>VParamString</name>
+        <qualifiedname>AuthorizedKey::VParamString</qualifiedname>
+        <initializer>{&quot;ColorP1&quot;, &quot;ColorP2&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of authorized key for the type string in a struct <ref refid="struct_c_my_param" kindref="compound">CMyParam</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="43" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="43" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_authorized_key_1a871173f4b0c89c91289a10f0ddc1cadd" prot="public" static="no" mutable="no">
+        <type>const std::vector&lt; std::string &gt;</type>
+        <definition>const std::vector&lt;std::string&gt; AuthorizedKey::VParamUnsigned</definition>
+        <argsstring></argsstring>
+        <name>VParamUnsigned</name>
+        <qualifiedname>AuthorizedKey::VParamUnsigned</qualifiedname>
+        <initializer>{&quot;NbRow&quot;, &quot;NbColumn&quot;}</initializer>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>List of authorized key for the type unsigned in a struct <ref refid="struct_c_my_param" kindref="compound">CMyParam</ref> </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="45" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="45" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Struct containing all the authorized keys in the struct <ref refid="struct_c_my_param" kindref="compound">CMyParam</ref>. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="39" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="39" bodyend="46"/>
+    <listofallmembers>
+      <member refid="struct_authorized_key_1a1b1aa7863427cc1b43f229423bdd83ba" prot="public" virt="non-virtual"><scope>AuthorizedKey</scope><name>VParamChar</name></member>
+      <member refid="struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73" prot="public" virt="non-virtual"><scope>AuthorizedKey</scope><name>VParamString</name></member>
+      <member refid="struct_authorized_key_1a871173f4b0c89c91289a10f0ddc1cadd" prot="public" virt="non-virtual"><scope>AuthorizedKey</scope><name>VParamUnsigned</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

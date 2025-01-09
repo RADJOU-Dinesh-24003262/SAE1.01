@@ -1,0 +1,96 @@
+\hypertarget{params_8cpp_source}{}\doxysection{params.\+cpp}
+\label{params_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/Jeu/params.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/Jeu/params.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{params_8h}{params.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00003}00003 \textcolor{comment}{//\#include "{}game.h"{} not use for the moment}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <fstream>}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00007}00007 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00008}00008 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00009}00009 \textcolor{keywordtype}{void} initParams (\mbox{\hyperlink{struct_c_my_param_v2}{CMyParamV2}} \& Param)\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00010}00010     \textcolor{comment}{//Move Keys}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00011}00011     Param.\mbox{\hyperlink{struct_c_my_param_v2_aad1a6b3bf7fa6902378ed9300b1b2123}{Key1Up}} = \textcolor{charliteral}{'z'};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00012}00012     Param.\mbox{\hyperlink{struct_c_my_param_v2_a9f896d98a76257edbd9078d7ec14174d}{Key1Down}} = \textcolor{charliteral}{'s'};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00013}00013     Param.\mbox{\hyperlink{struct_c_my_param_v2_a0939bc7a227af48d018b4b4ae9557af5}{Key1Right}} = \textcolor{charliteral}{'d'};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00014}00014     Param.\mbox{\hyperlink{struct_c_my_param_v2_a5eeb26db1327dee525eed285313227ef}{Key1Left}} = \textcolor{charliteral}{'q'};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00015}00015     Param.\mbox{\hyperlink{struct_c_my_param_v2_a0c46a12758eb400bb5896340f3259901}{Key2Up}} = \textcolor{charliteral}{'o'};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00016}00016     Param.\mbox{\hyperlink{struct_c_my_param_v2_a29b3a67acea1fa5d46b6ed945eea57e1}{Key2Down}} = \textcolor{charliteral}{'l'};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00017}00017     Param.\mbox{\hyperlink{struct_c_my_param_v2_a46141754872e10b2eefcb5b5f4806ebc}{Key2Right}} = \textcolor{charliteral}{'m'};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00018}00018     Param.\mbox{\hyperlink{struct_c_my_param_v2_ae4b4efa184af1e1f424e5d638f0bccd6}{Key2Left}} = \textcolor{charliteral}{'k'};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00020}00020     Param.\mbox{\hyperlink{struct_c_my_param_v2_a7c0b2f03da728e2fc895e2a183f40fd6}{tokenP1}} = \textcolor{charliteral}{'A'};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00021}00021     Param.\mbox{\hyperlink{struct_c_my_param_v2_aa3afdc245cdcc9554c6202547b8d77a6}{tokenP2}} = \textcolor{charliteral}{'X'};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00023}00023     \textcolor{comment}{//Size of grid — suppose to be a rectangle}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00024}00024     Param.\mbox{\hyperlink{struct_c_my_param_v2_aaa29dc608dfd1e775058d16968a9ef6f}{NbColumn}} = 10;}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00025}00025     Param.\mbox{\hyperlink{struct_c_my_param_v2_a0e3766a4e9235043730622571ae2b749}{NbRow}} = 5;}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00027}00027     \textcolor{comment}{//Display Colors}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00028}00028     Param.\mbox{\hyperlink{struct_c_my_param_v2_a4e6ba0cdf0cc18ee5b5b48642cb73c11}{ColorP1}} = \mbox{\hyperlink{type_8h_ac2178f299fb60a3a19c00006603770ec}{KColor}}.find(\textcolor{stringliteral}{"{}KRed"{}})-\/>second ;}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00029}00029     Param.\mbox{\hyperlink{struct_c_my_param_v2_a8351bf9f01ab6294444b4371e0d770a7}{ColorP2}} = \mbox{\hyperlink{type_8h_ac2178f299fb60a3a19c00006603770ec}{KColor}}.find(\textcolor{stringliteral}{"{}KBlue"{}})-\/>second ;}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00030}00030 \}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00032}00032 \textcolor{keywordtype}{void} LoadParams (\mbox{\hyperlink{struct_c_my_param_v2}{CMyParamV2}} \& Param)\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00033}00033     \textcolor{keywordtype}{string} Path = \textcolor{stringliteral}{"{}../../Nos\_fichiers/config.yaml"{}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00034}00034     ifstream ifs(Path);}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00035}00035     \textcolor{keywordflow}{if} (!ifs.is\_open ())\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00036}00036         cerr << \textcolor{stringliteral}{"{}File not found"{}} << endl;}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00037}00037         exit(-\/1);}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00040}00040     \textcolor{keywordflow}{for}(\textcolor{keywordtype}{string} key, tampon; !ifs.eof(); ifs >> key)\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00041}00041         ifs >> tampon;}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00043}00043         \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}Key1Up"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00044}00044             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_aad1a6b3bf7fa6902378ed9300b1b2123}{Key1Up}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00046}00046         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}Key1Down"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00047}00047             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_a9f896d98a76257edbd9078d7ec14174d}{Key1Down}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00049}00049         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}Key1Left"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00050}00050             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_a5eeb26db1327dee525eed285313227ef}{Key1Left}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00052}00052         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}Key1Right"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00053}00053             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_a0939bc7a227af48d018b4b4ae9557af5}{Key1Right}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00055}00055         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}Key2Up"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00056}00056             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_a0c46a12758eb400bb5896340f3259901}{Key2Up}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00058}00058         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}Key2Down"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00059}00059             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_a29b3a67acea1fa5d46b6ed945eea57e1}{Key2Down}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00061}00061         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}Key2Left"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00062}00062             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_ae4b4efa184af1e1f424e5d638f0bccd6}{Key2Left}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00064}00064         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}Key2Right"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00065}00065             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_a46141754872e10b2eefcb5b5f4806ebc}{Key2Right}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00067}00067         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}NbColumn"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00068}00068             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_aaa29dc608dfd1e775058d16968a9ef6f}{NbColumn}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00070}00070         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}NbRow"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00071}00071             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_a0e3766a4e9235043730622571ae2b749}{NbRow}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00073}00073         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}ColorP1"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00074}00074             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_a4e6ba0cdf0cc18ee5b5b48642cb73c11}{ColorP1}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00076}00076         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}ColorP2"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00077}00077             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_a8351bf9f01ab6294444b4371e0d770a7}{ColorP2}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00079}00079         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}TokenP1"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00080}00080             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_a7c0b2f03da728e2fc895e2a183f40fd6}{tokenP1}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00082}00082         \}\textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(key == \textcolor{stringliteral}{"{}TokenP2"{}})\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00083}00083             ifs >> Param.\mbox{\hyperlink{struct_c_my_param_v2_aa3afdc245cdcc9554c6202547b8d77a6}{tokenP2}};}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00084}00084         \}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00085}00085         \textcolor{keywordflow}{else}\{}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00086}00086             getline(ifs, tampon);}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00087}00087         \}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00089}00089     ifs.close ();}
+\DoxyCodeLine{\Hypertarget{params_8cpp_source_l00090}00090 \}}
+
+\end{DoxyCode}

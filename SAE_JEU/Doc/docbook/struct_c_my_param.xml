@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_c_my_param" xml:lang="en-US">
+<title>CMyParam Struct Reference</title>
+<indexterm><primary>CMyParam</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::map&lt; std::string, char &gt; <link linkend="_struct_c_my_param_1ac38ede5a509bd268e749bc9c960466d3">MapParamChar</link></para>
+</listitem>
+            <listitem><para>std::map&lt; std::string, unsigned &gt; <link linkend="_struct_c_my_param_1aece7d4bdf4103e359f769d08e97a459d">MapParamUnsigned</link></para>
+</listitem>
+            <listitem><para>std::map&lt; std::string, std::string &gt; <link linkend="_struct_c_my_param_1a6f22660b5eff76608f47c52930e6ecf1">MapParamString</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00048">48</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_c_my_param_1ac38ede5a509bd268e749bc9c960466d3"/><section>
+    <title>MapParamChar</title>
+<indexterm><primary>MapParamChar</primary><secondary>CMyParam</secondary></indexterm>
+<indexterm><primary>CMyParam</primary><secondary>MapParamChar</secondary></indexterm>
+<para><computeroutput>std::map&lt;std::string, char&gt; CMyParam::MapParamChar</computeroutput></para><para>
+Definition at line <link linkend="_type_8h_source_1l00049">49</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_1a6f22660b5eff76608f47c52930e6ecf1"/><section>
+    <title>MapParamString</title>
+<indexterm><primary>MapParamString</primary><secondary>CMyParam</secondary></indexterm>
+<indexterm><primary>CMyParam</primary><secondary>MapParamString</secondary></indexterm>
+<para><computeroutput>std::map&lt;std::string, std::string&gt; CMyParam::MapParamString</computeroutput></para><para>
+Definition at line <link linkend="_type_8h_source_1l00051">51</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_1aece7d4bdf4103e359f769d08e97a459d"/><section>
+    <title>MapParamUnsigned</title>
+<indexterm><primary>MapParamUnsigned</primary><secondary>CMyParam</secondary></indexterm>
+<indexterm><primary>CMyParam</primary><secondary>MapParamUnsigned</secondary></indexterm>
+<para><computeroutput>std::map&lt;std::string, unsigned&gt; CMyParam::MapParamUnsigned</computeroutput></para><para>
+Definition at line <link linkend="_type_8h_source_1l00050">50</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/<link linkend="_type_8h">type.h</link></section>
+</section>

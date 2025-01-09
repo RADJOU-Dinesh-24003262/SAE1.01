@@ -1,0 +1,192 @@
+\hypertarget{text_8cpp_source}{}\doxysection{text.\+cpp}
+\label{text_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/gui/text.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/gui/text.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{text_8h}{mingl/gui/text.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{macros_8h}{mingl/macros.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00015}\mbox{\hyperlink{classns_gui_1_1_text_a2d86c3b73f670c0ae206c4f35401a09f}{00015}} \mbox{\hyperlink{classns_gui_1_1_text_a2d86c3b73f670c0ae206c4f35401a09f}{nsGui::Text::Text}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&position, \textcolor{keyword}{const} std::string \&content,}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00016}00016            \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \&textColor, \textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_glut_font_aeeeb02d69e7dfc7e57957bd658c465ce}{GlutFont::GlutFonts}} \&textFont,}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00017}00017            \textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dc}{HorizontalAlignment}} \&horizontalAlignment,}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00018}00018            \textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80fa}{VerticalAlignment}} \&verticalAlignment)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00019}00019     : m\_position(position)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00020}00020     , m\_content(content)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00021}00021     , m\_textColor(textColor)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00022}00022     , m\_textFont(textFont)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00023}00023     , m\_horizontalAlignment(horizontalAlignment)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00024}00024     , m\_verticalAlignment(verticalAlignment)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00025}00025 \{\} \textcolor{comment}{// Text()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00027}\mbox{\hyperlink{classns_gui_1_1_text_a6ddbea2ef54c442d44d6e624df486ad7}{00027}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a6ddbea2ef54c442d44d6e624df486ad7}{nsGui::Text::getValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, std::vector<float> \&values)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00028}00028 \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00029}00029     \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00030}00030         \textcolor{keywordflow}{case} TRANSITION\_COLOR\_RGB:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00031}00031             values[0] = m\_textColor.getRed();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00032}00032             values[1] = m\_textColor.getGreen();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00033}00033             values[2] = m\_textColor.getBlue();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00035}00035             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00037}00037         \textcolor{keywordflow}{case} TRANSITION\_COLOR\_ALPHA:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00038}00038             values[0] = m\_textColor.getAlpha();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00040}00040             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00042}00042         \textcolor{keywordflow}{case} TRANSITION\_POSITION:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00043}00043             values[0] = m\_position.getX();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00044}00044             values[1] = m\_position.getY();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00046}00046             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00047}00047     \}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00048}00048 \} \textcolor{comment}{// getValues()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00050}\mbox{\hyperlink{classns_gui_1_1_text_a9fbd7627d5cc5eaa7259f475c73aec73}{00050}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a9fbd7627d5cc5eaa7259f475c73aec73}{nsGui::Text::setValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} std::vector<float> \&values)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00051}00051 \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00052}00052     \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00053}00053         \textcolor{keywordflow}{case} TRANSITION\_COLOR\_RGB:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00054}00054             m\_textColor.setRed(values[0]);}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00055}00055             m\_textColor.setGreen(values[1]);}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00056}00056             m\_textColor.setBlue(values[2]);}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00058}00058             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00060}00060         \textcolor{keywordflow}{case} TRANSITION\_COLOR\_ALPHA:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00061}00061             m\_textColor.setAlpha(values[0]);}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00063}00063             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00065}00065         \textcolor{keywordflow}{case} TRANSITION\_POSITION:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00066}00066             m\_position.setX(values[0]);}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00067}00067             m\_position.setY(values[1]);}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00069}00069             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00070}00070     \}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00071}00071 \} \textcolor{comment}{// setValues()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00073}\mbox{\hyperlink{classns_gui_1_1_text_a5ad119bf3e6c774c00711bb302f4bb1e}{00073}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classns_gui_1_1_text_a5ad119bf3e6c774c00711bb302f4bb1e}{nsGui::Text::computeWidth}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00074}00074 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00075}00075     \textcolor{keywordflow}{return} glutBitmapLength(m\_textFont.convertForGlut(), \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *\textcolor{keyword}{>}(m\_content.c\_str()));}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00076}00076 \} \textcolor{comment}{// computeWidth()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00078}\mbox{\hyperlink{classns_gui_1_1_text_a40e2854b349731f1cdc0574e7297bc50}{00078}} \textcolor{keywordtype}{int} \mbox{\hyperlink{classns_gui_1_1_text_a40e2854b349731f1cdc0574e7297bc50}{nsGui::Text::computeHeight}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00079}00079 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00080}00080     \textcolor{keywordflow}{return} glutBitmapHeight(m\_textFont.convertForGlut());}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00081}00081 \} \textcolor{comment}{// computeHeight()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00083}\mbox{\hyperlink{classns_gui_1_1_text_aa05c15547863bb237374487fe9ccfd2e}{00083}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \mbox{\hyperlink{classns_gui_1_1_text_aa05c15547863bb237374487fe9ccfd2e}{nsGui::Text::computeVisiblePosition}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00084}00084 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00085}00085     \textcolor{keywordtype}{int} posX = m\_position.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_abcf3d729b05b3cd93e9eff21c74b89a1}{getX}}();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00086}00086     \textcolor{keywordflow}{switch} (m\_horizontalAlignment)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00087}00087     \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00088}00088         \textcolor{keywordflow}{case} \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dca464315bc1bcc242334d76eb8b0d1e8f6}{nsGui::Text::ALIGNH\_RIGHT}}:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00089}00089             posX -\/= computeWidth();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00091}00091             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00092}00092         \textcolor{keywordflow}{case} \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dca79703335d1d5367bd5ee2387413c17a9}{nsGui::Text::ALIGNH\_CENTER}}:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00093}00093             posX -\/= computeWidth() / 2;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00095}00095             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00096}00096         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00097}00097             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00098}00098     \}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00099}00099 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00100}00100     \textcolor{keywordtype}{int} posY = m\_position.getY();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00101}00101     \textcolor{keywordflow}{switch} (m\_verticalAlignment)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00102}00102     \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00103}00103         \textcolor{keywordflow}{case} \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80faa3cfba6c9f9e078a9fcd6c4133ecb4c30}{nsGui::Text::ALIGNV\_TOP}}:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00104}00104             posY += computeHeight();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00106}00106             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00107}00107         \textcolor{keywordflow}{case} \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80faa37d3b49647821b7b1808dcd159867a45}{nsGui::Text::ALIGNV\_CENTER}}:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00108}00108             posY += computeHeight() / 2;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00109}00109 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00110}00110             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00111}00111         \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00112}00112             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00113}00113     \}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00115}00115     \textcolor{keywordflow}{return} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(posX, posY);}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00116}00116 \} \textcolor{comment}{// computeVisiblePosition()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00118}\mbox{\hyperlink{classns_gui_1_1_text_af8a352a5cb3b4f849eda7badc11fbb31}{00118}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \mbox{\hyperlink{classns_gui_1_1_text_af8a352a5cb3b4f849eda7badc11fbb31}{nsGui::Text::computeVisibleEndPosition}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00119}00119 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00120}00120     \textcolor{keywordflow}{return} computeVisiblePosition() + \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(computeWidth(), -\/computeHeight());}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00121}00121 \} \textcolor{comment}{// computeVisibleEndPosition()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00122}00122 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00123}\mbox{\hyperlink{classns_gui_1_1_text_adea76711a628669e54020b282152e389}{00123}} \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classns_gui_1_1_text_adea76711a628669e54020b282152e389}{nsGui::Text::getContent}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00124}00124 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00125}00125     \textcolor{keywordflow}{return} m\_content;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00126}00126 \} \textcolor{comment}{// getContent()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00128}\mbox{\hyperlink{classns_gui_1_1_text_a930caeda954e7517aa34bc5965c8709f}{00128}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a930caeda954e7517aa34bc5965c8709f}{nsGui::Text::setContent}}(\textcolor{keyword}{const} std::string \&content)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00129}00129 \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00130}00130     m\_content = content;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00131}00131 \} \textcolor{comment}{// setContent()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00132}00132 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00133}\mbox{\hyperlink{classns_gui_1_1_text_a5118089a93160dde9fb85f2b4b32a5e1}{00133}} \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80fa}{nsGui::Text::VerticalAlignment}} \mbox{\hyperlink{classns_gui_1_1_text_a5118089a93160dde9fb85f2b4b32a5e1}{nsGui::Text::getVerticalAlignment}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00134}00134 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00135}00135     \textcolor{keywordflow}{return} m\_verticalAlignment;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00136}00136 \} \textcolor{comment}{// getVerticalAlignment()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00138}\mbox{\hyperlink{classns_gui_1_1_text_a5b0a3b1a3d31129f2d8aa32b58ea2f8a}{00138}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a5b0a3b1a3d31129f2d8aa32b58ea2f8a}{nsGui::Text::setVerticalAlignment}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_text_a3b0b5071a55982d5612c457a832f80fa}{VerticalAlignment}} \&verticalAlignment)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00139}00139 \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00140}00140     m\_verticalAlignment = verticalAlignment;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00141}00141 \} \textcolor{comment}{// setVerticalAlignment()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00143}\mbox{\hyperlink{classns_gui_1_1_text_a2e3468bf7a3b43e5e87a68ed7876dcfe}{00143}} \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dc}{nsGui::Text::HorizontalAlignment}} \mbox{\hyperlink{classns_gui_1_1_text_a2e3468bf7a3b43e5e87a68ed7876dcfe}{nsGui::Text::getHorizontalAlignment}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00144}00144 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00145}00145     \textcolor{keywordflow}{return} m\_horizontalAlignment;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00146}00146 \} \textcolor{comment}{// getHorizontalAlignment()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00148}\mbox{\hyperlink{classns_gui_1_1_text_a952d6bb9e10c33aa446ff17fd73944a9}{00148}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a952d6bb9e10c33aa446ff17fd73944a9}{nsGui::Text::setHorizontalAlignment}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_text_a78bb37c174a4f37eec2b7d69459ee7dc}{HorizontalAlignment}} \&horizontalAlignment)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00149}00149 \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00150}00150     m\_horizontalAlignment = horizontalAlignment;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00151}00151 \} \textcolor{comment}{// setHorizontalAlignment()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00153}\mbox{\hyperlink{classns_gui_1_1_text_af578710341d0afb6c593550cbc94ca64}{00153}} \textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_glut_font}{nsGui::GlutFont}}\& \mbox{\hyperlink{classns_gui_1_1_text_af578710341d0afb6c593550cbc94ca64}{nsGui::Text::getTextFont}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00154}00154 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00155}00155     \textcolor{keywordflow}{return} m\_textFont;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00156}00156 \} \textcolor{comment}{// getTextFont()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00158}\mbox{\hyperlink{classns_gui_1_1_text_afa19265ff44bdab288fa2a7100dd9c50}{00158}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_afa19265ff44bdab288fa2a7100dd9c50}{nsGui::Text::setTextFont}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_gui_1_1_glut_font}{GlutFont}} \&textFont)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00159}00159 \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00160}00160     m\_textFont = textFont;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00161}00161 \} \textcolor{comment}{// setTextFont()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00162}00162 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00163}\mbox{\hyperlink{classns_gui_1_1_text_a1e06796a15191e7682eb4abd0ecc515e}{00163}} \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& \mbox{\hyperlink{classns_gui_1_1_text_a1e06796a15191e7682eb4abd0ecc515e}{nsGui::Text::getPosition}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00164}00164 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00165}00165     \textcolor{keywordflow}{return} m\_position;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00166}00166 \} \textcolor{comment}{// getPosition()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00167}00167 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00168}\mbox{\hyperlink{classns_gui_1_1_text_ae258c9cd1203c3e52b7728e0211e9daa}{00168}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_ae258c9cd1203c3e52b7728e0211e9daa}{nsGui::Text::setPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&position)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00169}00169 \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00170}00170     m\_position = position;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00171}00171 \} \textcolor{comment}{// setPosition()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00172}00172 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00173}\mbox{\hyperlink{classns_gui_1_1_text_a248f06b3a9a85c05225449424311abd0}{00173}} \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& \mbox{\hyperlink{classns_gui_1_1_text_a248f06b3a9a85c05225449424311abd0}{nsGui::Text::getTextColor}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00174}00174 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00175}00175     \textcolor{keywordflow}{return} m\_textColor;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00176}00176 \} \textcolor{comment}{// getTextColor()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00178}\mbox{\hyperlink{classns_gui_1_1_text_a9e10bb21647ce95f034a4205562e222a}{00178}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a9e10bb21647ce95f034a4205562e222a}{nsGui::Text::setTextColor}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \&textColor)}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00179}00179 \{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00180}00180     m\_textColor = textColor;}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00181}00181 \} \textcolor{comment}{// setTextColor()}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00183}\mbox{\hyperlink{classns_gui_1_1_text_a8b3f43f7582246e916bb2e9403be2180}{00183}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_gui_1_1_text_a8b3f43f7582246e916bb2e9403be2180}{nsGui::Text::draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00184}00184 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00185}00185     \mbox{\hyperlink{macros_8h_a86d500a34c624c2cae56bc25a31b12f3}{UNUSED}}(window);}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00186}00186     }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00187}00187     \textcolor{comment}{// Draw the text with the right color using Glut}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00188}00188     glColor4ub(m\_textColor.getRed(), m\_textColor.getGreen(), m\_textColor.getBlue(), m\_textColor.getAlpha());}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00189}00189 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00190}00190     \textcolor{comment}{// Set the text position according to its alignment}}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00191}00191     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} visiblePos = computeVisiblePosition();}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00192}00192     glRasterPos2i(visiblePos.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_abcf3d729b05b3cd93e9eff21c74b89a1}{getX}}(), visiblePos.\mbox{\hyperlink{classns_graphics_1_1_vec2_d_ae70fbda9cca27b9dc0fe068a38ae5e5e}{getY}}());}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00193}00193 }
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00194}00194     glutBitmapString(m\_textFont.convertForGlut(), \textcolor{keyword}{reinterpret\_cast<}\textcolor{keyword}{const }\textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} *\textcolor{keyword}{>}(m\_content.c\_str()));}
+\DoxyCodeLine{\Hypertarget{text_8cpp_source_l00195}00195 \} \textcolor{comment}{// draw()}}
+
+\end{DoxyCode}

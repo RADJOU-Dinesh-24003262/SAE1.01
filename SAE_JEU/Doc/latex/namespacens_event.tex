@@ -1,0 +1,62 @@
+\hypertarget{namespacens_event}{}\doxysection{ns\+Event Namespace Reference}
+\label{namespacens_event}\index{nsEvent@{nsEvent}}
+
+
+Espace de nom pour la gestion d\textquotesingle{}événements.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structns_event_1_1_event__t}{Event\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Possède des données pour un événement. \end{DoxyCompactList}\item 
+union \mbox{\hyperlink{unionns_event_1_1_event_data__t}{Event\+Data\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Union contenant les données d\textquotesingle{}un événement. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classns_event_1_1_event_manager}{Event\+Manager}}
+\begin{DoxyCompactList}\small\item\em Gère une queue d\textquotesingle{}événement entrants. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structns_event_1_1_mouse_click_data__t}{Mouse\+Click\+Data\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Possède des données pour un événement Mouse\+Click. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structns_event_1_1_mouse_move_data__t}{Mouse\+Move\+Data\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Possède des données pour un événement Mouse\+Move/\+Mouse\+Drag. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{namespacens_event_a6e501b1114a041d127a56f51c66ada72}{Event\+Type\+\_\+t}} \{ \mbox{\hyperlink{namespacens_event_a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7}{Mouse\+Click}}
+, \mbox{\hyperlink{namespacens_event_a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6}{Mouse\+Move}}
+, \mbox{\hyperlink{namespacens_event_a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317}{Mouse\+Drag}}
+ \}
+\begin{DoxyCompactList}\small\item\em Event\+Type\+\_\+t \+: Liste de tout les types d\textquotesingle{}événements. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Espace de nom pour la gestion d\textquotesingle{}événements. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{namespacens_event_a6e501b1114a041d127a56f51c66ada72}\label{namespacens_event_a6e501b1114a041d127a56f51c66ada72}} 
+\index{nsEvent@{nsEvent}!EventType\_t@{EventType\_t}}
+\index{EventType\_t@{EventType\_t}!nsEvent@{nsEvent}}
+\doxysubsubsection{\texorpdfstring{EventType\_t}{EventType\_t}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{namespacens_event_a6e501b1114a041d127a56f51c66ada72}{ns\+Event\+::\+Event\+Type\+\_\+t}}}
+
+
+
+Event\+Type\+\_\+t \+: Liste de tout les types d\textquotesingle{}événements. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MouseClick@{MouseClick}!nsEvent@{nsEvent}}\index{nsEvent@{nsEvent}!MouseClick@{MouseClick}}}\mbox{\Hypertarget{namespacens_event_a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7}\label{namespacens_event_a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7}} 
+Mouse\+Click&L\textquotesingle{}utilisateur a cliqué sur un des boutons de la souris \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MouseMove@{MouseMove}!nsEvent@{nsEvent}}\index{nsEvent@{nsEvent}!MouseMove@{MouseMove}}}\mbox{\Hypertarget{namespacens_event_a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6}\label{namespacens_event_a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6}} 
+Mouse\+Move&Le curseur s\textquotesingle{}est déplacé \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MouseDrag@{MouseDrag}!nsEvent@{nsEvent}}\index{nsEvent@{nsEvent}!MouseDrag@{MouseDrag}}}\mbox{\Hypertarget{namespacens_event_a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317}\label{namespacens_event_a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317}} 
+Mouse\+Drag&Le curseur s\textquotesingle{}est déplacé pendant qu\textquotesingle{}un des boutons de la souris était pressé \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{event_8hpp_source_l00023}{23}} of file \mbox{\hyperlink{event_8hpp_source}{event.\+hpp}}.
+

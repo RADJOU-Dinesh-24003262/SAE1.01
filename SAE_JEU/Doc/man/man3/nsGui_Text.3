@@ -1,0 +1,420 @@
+.TH "nsGui::Text" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsGui::Text \- Gère l'affichage d'un texte\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <text\&.h>\fP
+.PP
+Inherits \fBnsGraphics::IDrawable\fP, and \fBnsTransition::ITransitionable\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTransitionIds\fP { \fBTRANSITION_COLOR_RGB\fP, \fBTRANSITION_COLOR_ALPHA\fP, \fBTRANSITION_POSITION\fP }"
+.br
+.RI "TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. "
+.ti -1c
+.RI "enum \fBVerticalAlignment\fP { \fBALIGNV_TOP\fP, \fBALIGNV_CENTER\fP, \fBALIGNV_BOTTOM\fP }"
+.br
+.RI "VerticalAlignment : Liste de tout les alignements verticaux supportés\&. "
+.ti -1c
+.RI "enum \fBHorizontalAlignment\fP { \fBALIGNH_LEFT\fP, \fBALIGNH_CENTER\fP, \fBALIGNH_RIGHT\fP }"
+.br
+.RI "HorizontalAlignment : Liste de tout les alignements horizontaux supportés\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBText\fP (const \fBnsGraphics::Vec2D\fP &position, const std::string &content, const \fBnsGraphics::RGBAcolor\fP &textColor, const \fBGlutFont::GlutFonts\fP &textFont=GlutFont::GlutFonts::BITMAP_8_BY_13, const \fBHorizontalAlignment\fP &horizontalAlignment=\fBALIGNH_LEFT\fP, const \fBVerticalAlignment\fP &verticalAlignment=\fBALIGNV_BOTTOM\fP)"
+.br
+.RI "Constructeur pour la classe \fBText\fP\&. "
+.ti -1c
+.RI "virtual void \fBdraw\fP (\fBMinGL\fP &window) const override"
+.br
+.RI "Fonction pour afficher l'objet\&. "
+.ti -1c
+.RI "virtual void \fBgetValues\fP (const int &id, std::vector< float > &values) override"
+.br
+.RI "Récupère des valeurs dans un vecteur de float pour l'ID spécifié "
+.ti -1c
+.RI "virtual void \fBsetValues\fP (const int &id, const std::vector< float > &values) override"
+.br
+.RI "Définit les nouvelles valeurs pour l'ID spécifié "
+.ti -1c
+.RI "int \fBcomputeWidth\fP () const"
+.br
+.RI "Calcule la largeur de ce texte\&. "
+.ti -1c
+.RI "int \fBcomputeHeight\fP () const"
+.br
+.RI "Calcule la hauteur de ce texte\&. "
+.ti -1c
+.RI "\fBnsGraphics::Vec2D\fP \fBcomputeVisiblePosition\fP () const"
+.br
+.RI "Calcule la position visible du texte, calculée avec l'alignement vertical et horizontal\&. "
+.ti -1c
+.RI "\fBnsGraphics::Vec2D\fP \fBcomputeVisibleEndPosition\fP () const"
+.br
+.RI "Calcule la position de fin visible du texte, calculée avec l'alignement vertical et horizontal\&. "
+.ti -1c
+.RI "const std::string & \fBgetContent\fP () const"
+.br
+.RI "Récupère le contenu du texte\&. "
+.ti -1c
+.RI "void \fBsetContent\fP (const std::string &content)"
+.br
+.RI "Définit le nouveau contenu du texte\&. "
+.ti -1c
+.RI "const \fBnsGraphics::Vec2D\fP & \fBgetPosition\fP () const"
+.br
+.RI "Récupère la position du texte\&. "
+.ti -1c
+.RI "void \fBsetPosition\fP (const \fBnsGraphics::Vec2D\fP &position)"
+.br
+.RI "Définit la nouvelle position du texte\&. "
+.ti -1c
+.RI "const \fBnsGraphics::RGBAcolor\fP & \fBgetTextColor\fP () const"
+.br
+.RI "Récupère la couleur du texte\&. "
+.ti -1c
+.RI "void \fBsetTextColor\fP (const \fBnsGraphics::RGBAcolor\fP &textColor)"
+.br
+.RI "Définit la nouvelle couleur du texte\&. "
+.ti -1c
+.RI "const \fBGlutFont\fP & \fBgetTextFont\fP () const"
+.br
+.RI "Récupère la police du texte\&. "
+.ti -1c
+.RI "void \fBsetTextFont\fP (const \fBGlutFont\fP &textFont)"
+.br
+.RI "Définit la nouvelle police du texte\&. "
+.ti -1c
+.RI "\fBHorizontalAlignment\fP \fBgetHorizontalAlignment\fP () const"
+.br
+.RI "Récupère l'alignement horizontal du texte\&. "
+.ti -1c
+.RI "void \fBsetHorizontalAlignment\fP (const \fBHorizontalAlignment\fP &horizontalAlignment)"
+.br
+.RI "Définit le nouvel alignement horizontal du texte\&. "
+.ti -1c
+.RI "\fBVerticalAlignment\fP \fBgetVerticalAlignment\fP () const"
+.br
+.RI "Récupère l'alignement vertical du texte\&. "
+.ti -1c
+.RI "void \fBsetVerticalAlignment\fP (const \fBVerticalAlignment\fP &verticalAlignment)"
+.br
+.RI "Définit le nouvel alignement vertical du texte\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Gère l'affichage d'un texte\&. 
+.PP
+Definition at line \fB30\fP of file \fBtext\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBnsGui::Text::HorizontalAlignment\fP"
+
+.PP
+HorizontalAlignment : Liste de tout les alignements horizontaux supportés\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIALIGNH_LEFT \fP\fP
+Le texte sera aligné horizontalement a gauche 
+.TP
+\fB\fIALIGNH_CENTER \fP\fP
+Le texte sera aligné horizontalement au centre 
+.TP
+\fB\fIALIGNH_RIGHT \fP\fP
+Le texte sera aligné horizontalement a droite 
+.PP
+Definition at line \fB54\fP of file \fBtext\&.h\fP\&.
+.SS "enum \fBnsGui::Text::TransitionIds\fP"
+
+.PP
+TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITRANSITION_COLOR_RGB \fP\fP
+Transition pour la couleur RGB 
+.TP
+\fB\fITRANSITION_COLOR_ALPHA \fP\fP
+Transition pour la transparence 
+.TP
+\fB\fITRANSITION_POSITION \fP\fP
+Transition pour la position 
+.PP
+Definition at line \fB36\fP of file \fBtext\&.h\fP\&.
+.SS "enum \fBnsGui::Text::VerticalAlignment\fP"
+
+.PP
+VerticalAlignment : Liste de tout les alignements verticaux supportés\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIALIGNV_TOP \fP\fP
+Le texte sera aligné verticallement en haut 
+.TP
+\fB\fIALIGNV_CENTER \fP\fP
+Le texte sera aligné verticallement au centre 
+.TP
+\fB\fIALIGNV_BOTTOM \fP\fP
+Le texte sera aligné verticallement en bas 
+.PP
+Definition at line \fB45\fP of file \fBtext\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsGui::Text::Text (const \fBnsGraphics::Vec2D\fP & position, const std::string & content, const \fBnsGraphics::RGBAcolor\fP & textColor, const \fBGlutFont::GlutFonts\fP & textFont = \fCGlutFont::GlutFonts::BITMAP_8_BY_13\fP, const \fBHorizontalAlignment\fP & horizontalAlignment = \fC\fBALIGNH_LEFT\fP\fP, const \fBVerticalAlignment\fP & verticalAlignment = \fC\fBALIGNV_BOTTOM\fP\fP)"
+
+.PP
+Constructeur pour la classe \fBText\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP : Position du texte 
+.br
+\fIcontent\fP : Contenu du texte 
+.br
+\fItextColor\fP : Couleur du texte 
+.br
+\fItextFont\fP : Police du texte (8x13 Bitmap par défaut) 
+.br
+\fIhorizontalAlignment\fP : Alignement horizontal du texte (Alignement a gauche par défaut) 
+.br
+\fIverticalAlignment\fP : Alignement vertical du texte (Alignement en bas par défaut) 
+.RE
+.PP
+
+.PP
+Definition at line \fB15\fP of file \fBtext\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "int nsGui::Text::computeHeight () const"
+
+.PP
+Calcule la hauteur de ce texte\&. 
+.PP
+\fBReturns\fP
+.RS 4
+La hauteur du texte 
+.RE
+.PP
+
+.PP
+Definition at line \fB78\fP of file \fBtext\&.cpp\fP\&.
+.SS "\fBnsGraphics::Vec2D\fP nsGui::Text::computeVisibleEndPosition () const"
+
+.PP
+Calcule la position de fin visible du texte, calculée avec l'alignement vertical et horizontal\&. 
+.PP
+\fBReturns\fP
+.RS 4
+La position visible, en bas a droite 
+.RE
+.PP
+
+.PP
+Definition at line \fB118\fP of file \fBtext\&.cpp\fP\&.
+.SS "\fBnsGraphics::Vec2D\fP nsGui::Text::computeVisiblePosition () const"
+
+.PP
+Calcule la position visible du texte, calculée avec l'alignement vertical et horizontal\&. 
+.PP
+\fBReturns\fP
+.RS 4
+La position visible, en haut a gauche 
+.RE
+.PP
+
+.PP
+Definition at line \fB83\fP of file \fBtext\&.cpp\fP\&.
+.SS "int nsGui::Text::computeWidth () const"
+
+.PP
+Calcule la largeur de ce texte\&. 
+.PP
+\fBReturns\fP
+.RS 4
+La largeur du texte 
+.RE
+.PP
+
+.PP
+Definition at line \fB73\fP of file \fBtext\&.cpp\fP\&.
+.SS "void nsGui::Text::draw (\fBMinGL\fP & window) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction pour afficher l'objet\&. 
+.PP
+Implements \fBnsGraphics::IDrawable\fP\&.
+.PP
+Definition at line \fB183\fP of file \fBtext\&.cpp\fP\&.
+.SS "const std::string & nsGui::Text::getContent () const"
+
+.PP
+Récupère le contenu du texte\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence constante vers m_content 
+.RE
+.PP
+
+.PP
+Definition at line \fB123\fP of file \fBtext\&.cpp\fP\&.
+.SS "\fBHorizontalAlignment\fP nsGui::Text::getHorizontalAlignment () const"
+
+.PP
+Récupère l'alignement horizontal du texte\&. 
+.PP
+Definition at line \fB143\fP of file \fBtext\&.cpp\fP\&.
+.SS "const \fBnsGraphics::Vec2D\fP & nsGui::Text::getPosition () const"
+
+.PP
+Récupère la position du texte\&. 
+.PP
+Definition at line \fB163\fP of file \fBtext\&.cpp\fP\&.
+.SS "const \fBnsGraphics::RGBAcolor\fP & nsGui::Text::getTextColor () const"
+
+.PP
+Récupère la couleur du texte\&. 
+.PP
+Definition at line \fB173\fP of file \fBtext\&.cpp\fP\&.
+.SS "const \fBGlutFont\fP & nsGui::Text::getTextFont () const"
+
+.PP
+Récupère la police du texte\&. 
+.PP
+Definition at line \fB153\fP of file \fBtext\&.cpp\fP\&.
+.SS "void nsGui::Text::getValues (const int & id, std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Récupère des valeurs dans un vecteur de float pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a récupérer 
+.br
+\fIvalues\fP Vecteur de valeurs a peupler 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB27\fP of file \fBtext\&.cpp\fP\&.
+.SS "\fBVerticalAlignment\fP nsGui::Text::getVerticalAlignment () const"
+
+.PP
+Récupère l'alignement vertical du texte\&. 
+.PP
+Definition at line \fB133\fP of file \fBtext\&.cpp\fP\&.
+.SS "void nsGui::Text::setContent (const std::string & content)"
+
+.PP
+Définit le nouveau contenu du texte\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontent\fP : Nouveau contenu 
+.RE
+.PP
+
+.PP
+Definition at line \fB128\fP of file \fBtext\&.cpp\fP\&.
+.SS "void nsGui::Text::setHorizontalAlignment (const \fBHorizontalAlignment\fP & horizontalAlignment)"
+
+.PP
+Définit le nouvel alignement horizontal du texte\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIhorizontalAlignment\fP : Nouvel alignement horizontal 
+.RE
+.PP
+
+.PP
+Definition at line \fB148\fP of file \fBtext\&.cpp\fP\&.
+.SS "void nsGui::Text::setPosition (const \fBnsGraphics::Vec2D\fP & position)"
+
+.PP
+Définit la nouvelle position du texte\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP : Nouvelle position 
+.RE
+.PP
+
+.PP
+Definition at line \fB168\fP of file \fBtext\&.cpp\fP\&.
+.SS "void nsGui::Text::setTextColor (const \fBnsGraphics::RGBAcolor\fP & textColor)"
+
+.PP
+Définit la nouvelle couleur du texte\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItextColor\fP : Nouvelle couleur 
+.RE
+.PP
+
+.PP
+Definition at line \fB178\fP of file \fBtext\&.cpp\fP\&.
+.SS "void nsGui::Text::setTextFont (const \fBGlutFont\fP & textFont)"
+
+.PP
+Définit la nouvelle police du texte\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItextFont\fP : Nouvelle police 
+.RE
+.PP
+
+.PP
+Definition at line \fB158\fP of file \fBtext\&.cpp\fP\&.
+.SS "void nsGui::Text::setValues (const int & id, const std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Définit les nouvelles valeurs pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a définir 
+.br
+\fIvalues\fP Vecteur des nouvelles valeurs a appliquer 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB50\fP of file \fBtext\&.cpp\fP\&.
+.SS "void nsGui::Text::setVerticalAlignment (const \fBVerticalAlignment\fP & verticalAlignment)"
+
+.PP
+Définit le nouvel alignement vertical du texte\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIverticalAlignment\fP : Nouvel alignement vertical 
+.RE
+.PP
+
+.PP
+Definition at line \fB138\fP of file \fBtext\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

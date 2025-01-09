@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cexception_8hpp_source" xml:lang="en-US">
+<title>cexception.hpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_cexception_8hpp_source_1l00001"/>00001 
+<anchor xml:id="_cexception_8hpp_source_1l00021"/>00021 <emphasis role="preprocessor">#ifndef&#32;CEXCEPTION_HPP</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00022"/>00022 <emphasis role="preprocessor">#define&#32;CEXCEPTION_HPP</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00023"/>00023 
+<anchor xml:id="_cexception_8hpp_source_1l00024"/>00024 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00025"/>00025 
+<anchor xml:id="_cexception_8hpp_source_1l00026"/>00026 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_cexception_8h">cexception.h</link>&quot;</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00027"/>00027 
+<anchor xml:id="_cexception_8hpp_source_1l00028"/><link linkend="_classns_exception_1_1_c_exception_1aeacba2e2180dd8c00c643e1a67cba423">00028</link> <emphasis role="keyword">inline</emphasis>&#32;<link linkend="_classns_exception_1_1_c_exception_1aeacba2e2180dd8c00c643e1a67cba423">nsException::CException::CException</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;Libelle&#32;<emphasis role="comment">/*&#32;=&#32;std::string&#32;()&#32;*/</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;CodErr&#32;&#32;<emphasis role="comment">/*&#32;=&#32;KNoExc&#32;*/</emphasis>)
+<anchor xml:id="_cexception_8hpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;:&#32;m_Libelle&#32;(Libelle)
+<anchor xml:id="_cexception_8hpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;,&#32;m_CodErr&#32;(CodErr)
+<anchor xml:id="_cexception_8hpp_source_1l00031"/>00031 {}&#32;<emphasis role="comment">//&#32;CException()</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00032"/>00032 
+<anchor xml:id="_cexception_8hpp_source_1l00033"/><link linkend="_classns_exception_1_1_c_exception_1aef8e3d1a4e22ec7045d7d0b14d8b968a">00033</link> <emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;<link linkend="_classns_exception_1_1_c_exception_1aef8e3d1a4e22ec7045d7d0b14d8b968a">nsException::CException::GetLibelle</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00034"/>00034 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_cexception_8hpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_Libelle;
+<anchor xml:id="_cexception_8hpp_source_1l00036"/>00036 }&#32;<emphasis role="comment">//&#32;GetLibelle()</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00037"/>00037 
+<anchor xml:id="_cexception_8hpp_source_1l00038"/><link linkend="_classns_exception_1_1_c_exception_1adf06d1598420c7b60c1b134bf2a946c2">00038</link> <emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<link linkend="_classns_exception_1_1_c_exception_1adf06d1598420c7b60c1b134bf2a946c2">nsException::CException::GetCodErr</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00039"/>00039 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_cexception_8hpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_CodErr;
+<anchor xml:id="_cexception_8hpp_source_1l00041"/>00041 }&#32;<emphasis role="comment">//&#32;GetCoderr()</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00042"/>00042 
+<anchor xml:id="_cexception_8hpp_source_1l00043"/><link linkend="_classns_exception_1_1_c_exception_1a5ef0ababcc3ffc93f70211de1122c9a8">00043</link> <emphasis role="keyword">inline</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_classns_exception_1_1_c_exception_1a5ef0ababcc3ffc93f70211de1122c9a8">nsException::CException::what</link>()&#32;const&#32;noexcept
+<anchor xml:id="_cexception_8hpp_source_1l00044"/>00044 {
+<anchor xml:id="_cexception_8hpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_Libelle.c_str();
+<anchor xml:id="_cexception_8hpp_source_1l00046"/>00046 }&#32;<emphasis role="comment">//&#32;what()</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00047"/>00047 
+<anchor xml:id="_cexception_8hpp_source_1l00048"/>00048 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;CEXCEPTION_HPP</emphasis>
+<anchor xml:id="_cexception_8hpp_source_1l00049"/>00049 
+</programlisting></section>

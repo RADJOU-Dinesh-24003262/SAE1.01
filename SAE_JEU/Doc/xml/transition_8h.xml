@@ -1,0 +1,152 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="transition_8h" kind="file" language="C++">
+    <compoundname>transition.h</compoundname>
+    <includes refid="transition__contract_8h" local="yes">transition_contract.h</includes>
+    <includedby refid="transition__engine_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h</includedby>
+    <includedby refid="transition_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition/transition.cpp</includedby>
+    <incdepgraph>
+      <node id="5">
+        <label>itransitionable.h</label>
+        <link refid="itransitionable_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h</label>
+        <link refid="transition_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>transition_contract.h</label>
+        <link refid="transition__contract_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>transition_types.h</label>
+        <link refid="transition__types_8h"/>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>chrono</label>
+      </node>
+      <node id="3">
+        <label>functional</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source"/>
+      </node>
+      <node id="4">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h</label>
+        <link refid="transition_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_engine.h</label>
+        <link refid="transition__engine_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition/transition.cpp</label>
+        <link refid="transition_8cpp_source"/>
+      </node>
+      <node id="5">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition/transition_engine.cpp</label>
+        <link refid="transition__engine_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classns_transition_1_1_transition" prot="public">nsTransition::Transition</innerclass>
+    <innernamespace refid="namespacens_transition">nsTransition</innernamespace>
+    <briefdescription>
+<para>Definition d&apos;une transition. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexandre Sollier </para>
+</simplesect>
+<simplesect kind="date"><para>Janvier 2020 </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>TRANSITION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TRANSITION_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="transition__contract_8h" kindref="compound">transition_contract.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacens_transition" kindref="compound">nsTransition</ref></highlight></codeline>
+<codeline lineno="21"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="classns_transition_1_1_transition" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classns_transition_1_1_transition" kindref="compound">Transition</ref><sp/>:<sp/></highlight><highlight class="keyword">public</highlight><highlight class="normal"><sp/><ref refid="classns_transition_1_1_transition_contract" kindref="compound">TransitionContract</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/><ref refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19" kindref="member">TransitionFinishModes</ref><sp/>{</highlight></codeline>
+<codeline lineno="34" refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4" kindref="member">FINISH_START</ref>,<sp/></highlight></codeline>
+<codeline lineno="35" refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f" kindref="member">FINISH_CURRENT</ref>,<sp/></highlight></codeline>
+<codeline lineno="36" refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e" kindref="member">FINISH_DESTINATION</ref>,<sp/></highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight></codeline>
+<codeline lineno="44" refid="classns_transition_1_1_transition_1a7c3e692c43aceca5e4f716f3ae22bf05" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_transition_1_1_transition_1a7c3e692c43aceca5e4f716f3ae22bf05" kindref="member">Transition</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_transition_1_1_transition_contract" kindref="compound">TransitionContract</ref>&amp;<sp/>contract);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51" refid="classns_transition_1_1_transition_1a616e0ef596d4e8ebb185a6cf0a685924" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref>&amp;<sp/><ref refid="classns_transition_1_1_transition_1a616e0ef596d4e8ebb185a6cf0a685924" kindref="member">getElapsed</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="classns_transition_1_1_transition_1a0a8e848a50c2e05dc72800abfc6dd6ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_transition_1_1_transition_1a0a8e848a50c2e05dc72800abfc6dd6ef" kindref="member">setElapsed</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref>&amp;<sp/>elapsed);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="66" refid="classns_transition_1_1_transition_1abb421b44828c7b6dec60a0256a97b3d9" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_transition_1_1_transition_1abb421b44828c7b6dec60a0256a97b3d9" kindref="member">addToElapsed</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref>&amp;<sp/>addedTime);</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"></highlight></codeline>
+<codeline lineno="73" refid="classns_transition_1_1_transition_1ab32ef25219cd2227746444ac8794266a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/><ref refid="classns_transition_1_1_transition_1ab32ef25219cd2227746444ac8794266a" kindref="member">isReversed</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80" refid="classns_transition_1_1_transition_1a8c8c7caf7326e24ffa540093ed12f581" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_transition_1_1_transition_1a8c8c7caf7326e24ffa540093ed12f581" kindref="member">finish</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19" kindref="member">TransitionFinishModes</ref>&amp;<sp/>finishMode<sp/>=<sp/>TransitionFinishModes::FINISH_DESTINATION);</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87" refid="classns_transition_1_1_transition_1ad9d358bee54825d2a8bf83e9e21e398b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal">&amp;<sp/><ref refid="classns_transition_1_1_transition_1ad9d358bee54825d2a8bf83e9e21e398b" kindref="member">isFinished</ref>()<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6" kindref="member">SystemTimePoint_t</ref><sp/>m_startTime;</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref><sp/>m_elapsed;</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_reverse;</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"></highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>m_finished;</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"></highlight></codeline>
+<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>updateValues();</highlight></codeline>
+<codeline lineno="118"><highlight class="normal"></highlight></codeline>
+<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>handleEndlife();</highlight></codeline>
+<codeline lineno="124"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>Transition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"></highlight></codeline>
+<codeline lineno="126"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nsTransition</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="127"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TRANSITION_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h"/>
+  </compounddef>
+</doxygen>

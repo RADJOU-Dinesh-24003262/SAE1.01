@@ -1,0 +1,35 @@
+\hypertarget{player2_8h_source}{}\doxysection{player2.\+h}
+\label{player2_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/sprites/player2.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/sprites/player2.h}}
+\mbox{\hyperlink{player2_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00011}00011 \textcolor{comment}{//include les différentes formes pour dessiner les sprites}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{circle_8h}{mingl/shape/circle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{oval_8h}{mingl/shape/oval.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00015}00015 \textcolor{comment}{//défini les éléments du sprite du joueur 2}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00016}00016 \textcolor{keywordtype}{void} Player2(\mbox{\hyperlink{class_min_g_l}{MinGL}} \&window, \textcolor{keywordtype}{int} Circle1, \textcolor{keywordtype}{int} Circle2, \textcolor{keywordtype}{int} mat\_x, \textcolor{keywordtype}{int} mat\_y)\{}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00018}00018     \textcolor{comment}{//calcul variable de position et taille des formes}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00019}00019     \textcolor{keywordtype}{int} foot\_x = 110/mat\_x;}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00020}00020     \textcolor{keywordtype}{int} foot\_y = 80/mat\_y;}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00021}00021     \textcolor{keywordtype}{int} foot\_x\_size = 100/mat\_x;}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00022}00022     \textcolor{keywordtype}{int} foot\_y\_size = 70/mat\_y;}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00023}00023     \textcolor{keywordtype}{int} should\_y = 170/mat\_y;}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00024}00024     \textcolor{keywordtype}{int} should\_size = 90/mat\_x;}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00025}00025     \textcolor{keywordtype}{int} body\_size = 180/mat\_x;}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00026}00026     \textcolor{keywordtype}{int} eye\_x = 130/mat\_x;}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00027}00027     \textcolor{keywordtype}{int} eye\_y = 50/mat\_y;}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00028}00028     \textcolor{keywordtype}{int} eye\_size = 20/mat\_x;}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00030}00030     \textcolor{comment}{//shape formant le sprite}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00031}00031     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Circle1-\/foot\_x,Circle2-\/foot\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(foot\_x\_size,foot\_y\_size), nsGraphics::KMaroon);\textcolor{comment}{// panard droit}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00032}00032     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Circle1-\/foot\_x,Circle2+foot\_y), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((100/mat\_x),(70/mat\_y)), nsGraphics::KMaroon);\textcolor{comment}{// panard gauche}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00033}00033     window << \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Circle1, Circle2-\/should\_y), should\_size, nsGraphics::KMaroon);  \textcolor{comment}{//epaule droite}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00034}00034     window << \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Circle1, Circle2+should\_y), should\_size, nsGraphics::KMaroon);  \textcolor{comment}{//epaule gauche}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00035}00035     window << \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Circle1, Circle2), body\_size, nsGraphics::KGreen);    \textcolor{comment}{//contenant de gras}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00036}00036     window << \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Circle1-\/eye\_x, Circle2-\/eye\_y), eye\_size, nsGraphics::KBlack);   \textcolor{comment}{//oeil droit}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00037}00037     window << \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(Circle1-\/eye\_x, Circle2+eye\_y), eye\_size, nsGraphics::KBlack);   \textcolor{comment}{//oeil gauche}}
+\DoxyCodeLine{\Hypertarget{player2_8h_source_l00038}00038 \}}
+
+\end{DoxyCode}

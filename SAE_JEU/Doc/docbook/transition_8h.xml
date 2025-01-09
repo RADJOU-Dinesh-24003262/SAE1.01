@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_transition_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h</primary></indexterm>
+<para>
+
+<para>Definition d&apos;une transition. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;transition_contract.h&quot;
+</programlisting>Include dependency graph for transition.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="transition_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="transition_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_transition_1_1_transition">nsTransition::Transition</link></para>
+
+<para>Une classe représentant un <link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link> en cours de lecture. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacens_transition">nsTransition</link></para>
+
+<para>Espace de nom pour le moteur de transition et ses composants. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Definition d&apos;une transition. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Janvier 2020 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_transition_8h_source">transition.h</link>.</para>
+</section>
+</section>

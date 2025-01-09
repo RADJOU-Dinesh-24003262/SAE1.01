@@ -1,0 +1,112 @@
+\hypertarget{audioengine_8cpp_source}{}\doxysection{audioengine.\+cpp}
+\label{audioengine_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/audio/audioengine.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/audio/audioengine.cpp}}
+\mbox{\hyperlink{audioengine_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{audioengine_8h}{mingl/audio/audioengine.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{cexception_8h}{mingl/exception/cexception.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00014}00014 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00016}\mbox{\hyperlink{classns_audio_1_1_audio_engine_a6ef72eb80bef2c1b0764c40f629d2536}{00016}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_a6ef72eb80bef2c1b0764c40f629d2536}{nsAudio::AudioEngine::setMusic}}(\textcolor{keyword}{const} std::string\& fileName, \textcolor{keywordtype}{bool} loop \textcolor{comment}{/* = true */})}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00018}00018     \textcolor{keywordflow}{if} (!m\_music.openFromFile(fileName))}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00019}00019         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classns_exception_1_1_c_exception}{nsException::CException}}(fileName + \textcolor{stringliteral}{"{} cannot be loaded"{}}, \mbox{\hyperlink{namespacens_exception_ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999}{nsException::KFileError}});}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00021}00021     m\_music.setLoop(loop);}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00022}00022 \} \textcolor{comment}{// setMusic()}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00024}\mbox{\hyperlink{classns_audio_1_1_audio_engine_aba89263fc9f810bee40dcae229313883}{00024}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_aba89263fc9f810bee40dcae229313883}{nsAudio::AudioEngine::toggleMusicPlaying}}()}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00025}00025 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00026}00026     setMusicPlaying(m\_music.getStatus() != sf::Music::Status::Playing);}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00027}00027 \} \textcolor{comment}{// toggleMusic()}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00029}\mbox{\hyperlink{classns_audio_1_1_audio_engine_ac21b2c1be9590a0f702c48220c59f8c9}{00029}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_ac21b2c1be9590a0f702c48220c59f8c9}{nsAudio::AudioEngine::setMusicPlaying}}(\textcolor{keywordtype}{bool} playing)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00031}00031     \textcolor{keywordflow}{if} (playing)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00032}00032         m\_music.play();}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00033}00033     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00034}00034         m\_music.pause();}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00035}00035 \} \textcolor{comment}{// setMusicPlaying()}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00037}\mbox{\hyperlink{classns_audio_1_1_audio_engine_a57e13380a3039e546a5f1b9242f8709b}{00037}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_audio_1_1_audio_engine_a57e13380a3039e546a5f1b9242f8709b}{nsAudio::AudioEngine::isMusicPlaying}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00038}00038 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00039}00039     \textcolor{keywordflow}{return} m\_music.getStatus() == sf::Music::Status::Playing;}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00040}00040 \} \textcolor{comment}{// isMusicPlaying()}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00042}\mbox{\hyperlink{classns_audio_1_1_audio_engine_a4c88595136327b3805c0322a9a8d2a0f}{00042}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_a4c88595136327b3805c0322a9a8d2a0f}{nsAudio::AudioEngine::loadSound}}(\textcolor{keyword}{const} std::string \& fileName)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00044}00044     \textcolor{keywordflow}{for}(list<pair<string, sf::SoundBuffer>>::iterator it(m\_buffers.begin()); it != m\_buffers.end(); ++it)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00045}00045         \textcolor{keywordflow}{if}(it-\/>first == fileName)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00046}00046             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00047}00047     sf::SoundBuffer sb;}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00048}00048     \textcolor{keywordflow}{if}(!sb.loadFromFile(fileName))}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00049}00049         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classns_exception_1_1_c_exception}{nsException::CException}}(fileName + \textcolor{stringliteral}{"{} cannot be loaded"{}}, \mbox{\hyperlink{namespacens_exception_ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999}{nsException::KFileError}});}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00050}00050     m\_buffers.push\_front(make\_pair(fileName, sb));}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00051}00051 \} \textcolor{comment}{// loadSound()}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00053}\mbox{\hyperlink{classns_audio_1_1_audio_engine_a2b0a1a9b1cb90e1180ddedb5b9e2fad1}{00053}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_a2b0a1a9b1cb90e1180ddedb5b9e2fad1}{nsAudio::AudioEngine::removeBuffer}}(\textcolor{keyword}{const} std::string \& fileName)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00054}00054 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00055}00055     \textcolor{keywordflow}{for}(list<pair<string, sf::SoundBuffer>>::iterator it(m\_buffers.begin()); it != m\_buffers.end(); ++it)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00056}00056     \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00057}00057         \textcolor{keywordflow}{if}(it-\/>first == fileName)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00058}00058         \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00059}00059             m\_buffers.erase(it);}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00060}00060             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00061}00061         \}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00063}00063     \textcolor{keywordflow}{throw} \mbox{\hyperlink{classns_exception_1_1_c_exception}{nsException::CException}}(fileName + \textcolor{stringliteral}{"{} does not exist"{}}, \mbox{\hyperlink{namespacens_exception_ae4cd0d6bbd5590a1b121347632d41376abf0d316d427bbd6c967347e91afd572f}{nsException::KErrArg}});}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00064}00064 \} \textcolor{comment}{// removeBuffer()}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00066}\mbox{\hyperlink{classns_audio_1_1_audio_engine_ac05b3e0d2fd9ecfd1ad8eb110f021bf3}{00066}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_ac05b3e0d2fd9ecfd1ad8eb110f021bf3}{nsAudio::AudioEngine::emptyBufferList}}()}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00067}00067 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00068}00068     m\_buffers.clear();}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00069}00069 \} \textcolor{comment}{// emptyBufferList()}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00071}\mbox{\hyperlink{classns_audio_1_1_audio_engine_ac1343ed3afe38eb80a222969f3d74d6d}{00071}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_ac1343ed3afe38eb80a222969f3d74d6d}{nsAudio::AudioEngine::startMusicFromBeginning}}()}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00072}00072 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00073}00073     m\_music.stop();}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00074}00074     m\_music.play();}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00075}00075 \} \textcolor{comment}{// startMusicFromBeginning()}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00077}\mbox{\hyperlink{classns_audio_1_1_audio_engine_a47d769cc331578a398f422ff497505c8}{00077}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_a47d769cc331578a398f422ff497505c8}{nsAudio::AudioEngine::playSoundFromBuffer}}(\textcolor{keyword}{const} std::string\& fileName)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00078}00078 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00079}00079     \textcolor{keywordtype}{bool} ok(\textcolor{keyword}{false});}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00080}00080     \textcolor{keywordflow}{for}(list<pair<string, sf::SoundBuffer>>::iterator it(m\_buffers.begin()); it != m\_buffers.end(); ++it)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00081}00081     \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00082}00082         \textcolor{keywordflow}{if}(it-\/>first == fileName)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00083}00083         \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00084}00084             m\_sounds.emplace\_front(it-\/>second);}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00085}00085             m\_sounds.front().play();}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00086}00086             ok = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00087}00087         \}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00088}00088     \}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00089}00089     \textcolor{keywordflow}{if}(!ok)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00090}00090         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classns_exception_1_1_c_exception}{nsException::CException}}(fileName + \textcolor{stringliteral}{"{} buffer not found"{}}, \mbox{\hyperlink{namespacens_exception_ae4cd0d6bbd5590a1b121347632d41376abf0d316d427bbd6c967347e91afd572f}{nsException::KErrArg}});}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00092}00092     removeOldSounds();}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00093}00093 \} \textcolor{comment}{// playSoundFromBuffer()}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00095}\mbox{\hyperlink{classns_audio_1_1_audio_engine_aa541e8088c35ab41e4747ecd648e75e9}{00095}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_aa541e8088c35ab41e4747ecd648e75e9}{nsAudio::AudioEngine::playSoundFromFile}}(\textcolor{keyword}{const} std::string\& fileName)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00096}00096 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00097}00097     m\_soundsFromFiles.emplace\_back();}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00098}00098     \textcolor{keywordflow}{if} (!m\_soundsFromFiles.back().openFromFile(fileName))}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00099}00099         \textcolor{keywordflow}{throw} \mbox{\hyperlink{classns_exception_1_1_c_exception}{nsException::CException}}(\textcolor{stringliteral}{"{}file cannot be loaded"{}}, \mbox{\hyperlink{namespacens_exception_ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999}{nsException::KFileError}});}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00101}00101     m\_soundsFromFiles.back().play();}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00103}00103     removeOldSounds();}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00104}00104 \} \textcolor{comment}{// playSoundEffects()}}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00105}00105 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00106}00106 \textcolor{keywordtype}{void} nsAudio::AudioEngine::removeOldSounds()}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00107}00107 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00108}00108     \textcolor{keywordflow}{for}(list<sf::Sound>::iterator it(m\_sounds.begin()); it != m\_sounds.end(); ++it)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00109}00109         \textcolor{keywordflow}{if}(it-\/>getStatus() != sf::Sound::Status::Playing)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00110}00110             it = m\_sounds.erase(it);}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00112}00112     \textcolor{keywordflow}{for}(list<sf::Music>::iterator it(m\_soundsFromFiles.begin()); it != m\_soundsFromFiles.end(); ++it)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00113}00113         \textcolor{keywordflow}{if}(it-\/>getStatus() != sf::Sound::Status::Playing)}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00114}00114             it = m\_soundsFromFiles.erase(it);}
+\DoxyCodeLine{\Hypertarget{audioengine_8cpp_source_l00115}00115 \} \textcolor{comment}{// removeOldSounds()}}
+
+\end{DoxyCode}

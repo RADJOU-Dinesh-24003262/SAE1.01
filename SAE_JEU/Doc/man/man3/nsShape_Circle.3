@@ -1,0 +1,237 @@
+.TH "nsShape::Circle" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsShape::Circle \- Classe représentant un cercle\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <circle\&.h>\fP
+.PP
+Inherits \fBnsShape::Shape\fP, and \fBnsTransition::ITransitionable\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTransitionIds\fP { \fBTRANSITION_FILL_COLOR_RGB\fP, \fBTRANSITION_FILL_COLOR_ALPHA\fP, \fBTRANSITION_BORDER_COLOR_RGB\fP, \fBTRANSITION_BORDER_COLOR_ALPHA\fP, \fBTRANSITION_POSITION\fP, \fBTRANSITION_RADIUS\fP }"
+.br
+.RI "TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBCircle\fP (const \fBnsGraphics::Vec2D\fP &position, const unsigned &radius, const \fBnsGraphics::RGBAcolor\fP &fillColor, const \fBnsGraphics::RGBAcolor\fP &borderColor=nsGraphics::KTransparent)"
+.br
+.RI "Constructeur pour la classe \fBCircle\fP\&. "
+.ti -1c
+.RI "virtual \fB~Circle\fP () override=default"
+.br
+.RI "Destructeur virtuel pour la classe \fBCircle\fP\&. "
+.ti -1c
+.RI "virtual void \fBdraw\fP (\fBMinGL\fP &window) const override"
+.br
+.RI "Fonction pour afficher l'objet\&. "
+.ti -1c
+.RI "virtual void \fBgetValues\fP (const int &id, std::vector< float > &values) override"
+.br
+.RI "Récupère des valeurs dans un vecteur de float pour l'ID spécifié "
+.ti -1c
+.RI "virtual void \fBsetValues\fP (const int &id, const std::vector< float > &values) override"
+.br
+.RI "Définit les nouvelles valeurs pour l'ID spécifié "
+.ti -1c
+.RI "\fBCircle\fP \fBoperator+\fP (const \fBnsGraphics::Vec2D\fP &\fBgetPosition\fP) const"
+.br
+.RI "Opérateur de décalage\&. "
+.ti -1c
+.RI "\fBCircle\fP \fBoperator*\fP (const float &f) const"
+.br
+.RI "Opérateur de réduction\&. "
+.ti -1c
+.RI "const \fBnsGraphics::Vec2D\fP & \fBgetPosition\fP () const"
+.br
+.RI "Récupère la position du cercle\&. "
+.ti -1c
+.RI "void \fBsetPosition\fP (const \fBnsGraphics::Vec2D\fP &position)"
+.br
+.RI "Définit la nouvelle position du cercle\&. "
+.ti -1c
+.RI "unsigned \fBgetRadius\fP () const"
+.br
+.RI "Récupère le rayon du cercle\&. "
+.ti -1c
+.RI "void \fBsetRadius\fP (const unsigned &radius)"
+.br
+.RI "Définit le nouveau rayon du cercle\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Classe représentant un cercle\&. 
+.PP
+Definition at line \fB25\fP of file \fBcircle\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBnsShape::Circle::TransitionIds\fP"
+
+.PP
+TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITRANSITION_FILL_COLOR_RGB \fP\fP
+Transition pour la couleur de remplissage 
+.TP
+\fB\fITRANSITION_FILL_COLOR_ALPHA \fP\fP
+Transition pour la transparence de remplissage 
+.TP
+\fB\fITRANSITION_BORDER_COLOR_RGB \fP\fP
+Transition pour la couleur de bord 
+.TP
+\fB\fITRANSITION_BORDER_COLOR_ALPHA \fP\fP
+Transition pour la transparence de bord 
+.TP
+\fB\fITRANSITION_POSITION \fP\fP
+Transition pour la position 
+.TP
+\fB\fITRANSITION_RADIUS \fP\fP
+Transition pour le rayon 
+.PP
+Definition at line \fB32\fP of file \fBcircle\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsShape::Circle::Circle (const \fBnsGraphics::Vec2D\fP & position, const unsigned & radius, const \fBnsGraphics::RGBAcolor\fP & fillColor, const \fBnsGraphics::RGBAcolor\fP & borderColor = \fCnsGraphics::KTransparent\fP)"
+
+.PP
+Constructeur pour la classe \fBCircle\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirstPosition\fP : Position du centre 
+.br
+\fIradius\fP : Rayon du cercle 
+.br
+\fIfillColor\fP : Couleur de remplissage 
+.br
+\fIborderColor\fP : Couleur de bord 
+.RE
+.PP
+
+.PP
+Definition at line \fB16\fP of file \fBcircle\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void nsShape::Circle::draw (\fBMinGL\fP & window) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction pour afficher l'objet\&. 
+.PP
+Implements \fBnsGraphics::IDrawable\fP\&.
+.PP
+Definition at line \fB22\fP of file \fBcircle\&.cpp\fP\&.
+.SS "const \fBnsGraphics::Vec2D\fP & nsShape::Circle::getPosition () const"
+
+.PP
+Récupère la position du cercle\&. 
+.PP
+Definition at line \fB165\fP of file \fBcircle\&.cpp\fP\&.
+.SS "unsigned nsShape::Circle::getRadius () const"
+
+.PP
+Récupère le rayon du cercle\&. 
+.PP
+Definition at line \fB155\fP of file \fBcircle\&.cpp\fP\&.
+.SS "void nsShape::Circle::getValues (const int & id, std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Récupère des valeurs dans un vecteur de float pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a récupérer 
+.br
+\fIvalues\fP Vecteur de valeurs a peupler 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB65\fP of file \fBcircle\&.cpp\fP\&.
+.SS "\fBCircle\fP nsShape::Circle::operator* (const float & f) const"
+
+.PP
+Opérateur de réduction\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP : Nombre avec lequel multiplier la position actuelle 
+.RE
+.PP
+
+.PP
+Definition at line \fB150\fP of file \fBcircle\&.cpp\fP\&.
+.SS "\fBCircle\fP nsShape::Circle::operator+ (const \fBnsGraphics::Vec2D\fP & position) const"
+
+.PP
+Opérateur de décalage\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP : Position a additionner 
+.RE
+.PP
+
+.PP
+Definition at line \fB145\fP of file \fBcircle\&.cpp\fP\&.
+.SS "void nsShape::Circle::setPosition (const \fBnsGraphics::Vec2D\fP & position)"
+
+.PP
+Définit la nouvelle position du cercle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP : Nouvelle position 
+.RE
+.PP
+
+.PP
+Definition at line \fB170\fP of file \fBcircle\&.cpp\fP\&.
+.SS "void nsShape::Circle::setRadius (const unsigned & radius)"
+
+.PP
+Définit le nouveau rayon du cercle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIradius\fP : Nouveau rayon 
+.RE
+.PP
+
+.PP
+Definition at line \fB160\fP of file \fBcircle\&.cpp\fP\&.
+.SS "void nsShape::Circle::setValues (const int & id, const std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Définit les nouvelles valeurs pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a définir 
+.br
+\fIvalues\fP Vecteur des nouvelles valeurs a appliquer 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB105\fP of file \fBcircle\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

@@ -1,0 +1,56 @@
+\hypertarget{audioengine_8h_source}{}\doxysection{audioengine.\+h}
+\label{audioengine_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/audio/audioengine.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/audio/audioengine.h}}
+\mbox{\hyperlink{audioengine_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef AUDIOENGINE\_H}}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00012}00012 \textcolor{preprocessor}{\#define AUDIOENGINE\_H}}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <list>}}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <SFML/Audio.hpp>} \textcolor{comment}{// based on SFML}}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00022}00022 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_audio}{nsAudio}}}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00023}00023 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00028}\mbox{\hyperlink{classns_audio_1_1_audio_engine}{00028}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_audio_1_1_audio_engine}{AudioEngine}}}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00029}00029 \{}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00031}00031 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00038}00038     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_a6ef72eb80bef2c1b0764c40f629d2536}{setMusic}}(\textcolor{keyword}{const} std::string\& fileName, \textcolor{keywordtype}{bool} loop = \textcolor{keyword}{true});}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00044}00044     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_aba89263fc9f810bee40dcae229313883}{toggleMusicPlaying}}();}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00051}00051     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_ac21b2c1be9590a0f702c48220c59f8c9}{setMusicPlaying}}(\textcolor{keywordtype}{bool} playing);}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00057}00057     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_audio_1_1_audio_engine_a57e13380a3039e546a5f1b9242f8709b}{isMusicPlaying}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00063}00063     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_a4c88595136327b3805c0322a9a8d2a0f}{loadSound}}(\textcolor{keyword}{const} std::string\& fileName);}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00069}00069     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_a2b0a1a9b1cb90e1180ddedb5b9e2fad1}{removeBuffer}}(\textcolor{keyword}{const} std::string \& fileName);}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00075}00075     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_ac05b3e0d2fd9ecfd1ad8eb110f021bf3}{emptyBufferList}}();}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00081}00081     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_ac1343ed3afe38eb80a222969f3d74d6d}{startMusicFromBeginning}}();}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00082}00082 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00088}00088     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_a47d769cc331578a398f422ff497505c8}{playSoundFromBuffer}}(\textcolor{keyword}{const} std::string\& fileName);}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00095}00095     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_audio_1_1_audio_engine_aa541e8088c35ab41e4747ecd648e75e9}{playSoundFromFile}}(\textcolor{keyword}{const} std::string\& fileName);}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00097}00097 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00101}00101     std::list<std::pair<std::string, sf::SoundBuffer>> m\_buffers;}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00102}00102 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00106}00106     std::list<sf::Sound> m\_sounds;}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00111}00111     std::list<sf::Music> m\_soundsFromFiles;}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00116}00116     sf::Music m\_music;}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00122}00122     \textcolor{keywordtype}{void} removeOldSounds();}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00123}00123 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00124}00124 \}; \textcolor{comment}{// class AudioEngine}}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00125}00125 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00126}00126 \} \textcolor{comment}{// namespace nsAudio}}
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{audioengine_8h_source_l00128}00128 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// AUDIOENGINE\_H}}
+
+\end{DoxyCode}

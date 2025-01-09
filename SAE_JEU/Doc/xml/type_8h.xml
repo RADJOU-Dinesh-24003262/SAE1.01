@@ -1,0 +1,307 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="type_8h" kind="file" language="C++">
+    <compoundname>type.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">vector</includes>
+    <includes local="no">map</includes>
+    <includes local="no">optional</includes>
+    <includedby refid="game_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</includedby>
+    <includedby refid="gridmanagement_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp</includedby>
+    <includedby refid="gridmanagement_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h</includedby>
+    <includedby refid="params_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h</label>
+        <link refid="type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>map</label>
+      </node>
+      <node id="5">
+        <label>optional</label>
+      </node>
+      <node id="2">
+        <label>string</label>
+      </node>
+      <node id="3">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
+        <link refid="game_8cpp_source"/>
+      </node>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp</label>
+        <link refid="gridmanagement_8cpp_source"/>
+      </node>
+      <node id="6">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h</label>
+        <link refid="gridmanagement_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.cpp</label>
+        <link refid="params_8cpp_source"/>
+      </node>
+      <node id="7">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.h</label>
+        <link refid="params_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h</label>
+        <link refid="type_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp</label>
+        <link refid="main_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="struct_authorized_key" prot="public">AuthorizedKey</innerclass>
+    <innerclass refid="struct_c_my_param" prot="public">CMyParam</innerclass>
+    <innerclass refid="struct_c_my_param_v2" prot="public">CMyParamV2</innerclass>
+    <innerclass refid="struct_form" prot="public">Form</innerclass>
+    <innerclass refid="struct_collectible" prot="public">Collectible</innerclass>
+    <innerclass refid="struct_node" prot="public">Node</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="type_8h_1af4d6ac508b164138028e81737c7be8a2" prot="public" static="no">
+        <type>std::vector&lt; char &gt;</type>
+        <definition>typedef std::vector&lt;char&gt; CVLine</definition>
+        <argsstring></argsstring>
+        <name>CVLine</name>
+        <briefdescription>
+<para>CVLine : alias to a line of the matrix. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="21" column="22" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="21" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="type_8h_1a64a592133575ccebb1b36453acbec02b" prot="public" static="no">
+        <type>std::vector&lt; <ref refid="type_8h_1af4d6ac508b164138028e81737c7be8a2" kindref="member">CVLine</ref> &gt;</type>
+        <definition>std::vector&lt; CVLine &gt; CMat</definition>
+        <argsstring></argsstring>
+        <name>CMat</name>
+        <briefdescription>
+<para>CMat : alias to a game grid type. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="27" column="22" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" prot="public" static="no">
+        <type>std::pair&lt; unsigned, unsigned &gt;</type>
+        <definition>typedef std::pair&lt;unsigned, unsigned&gt; CPosition</definition>
+        <argsstring></argsstring>
+        <name>CPosition</name>
+        <briefdescription>
+<para>CPosition : a pair gathering the coordinates in the grid. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="32" column="20" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="32" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="var">
+      <memberdef kind="variable" id="type_8h_1aeb6b858f886b8520a7f220b3de0bef1a" prot="public" static="no" mutable="no">
+        <type>const <ref refid="struct_authorized_key" kindref="compound">AuthorizedKey</ref></type>
+        <definition>const AuthorizedKey KAuthorizedKey</definition>
+        <argsstring></argsstring>
+        <name>KAuthorizedKey</name>
+        <briefdescription>
+<para>KAuthorizedKey. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="59" column="21" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="type_8h_1ac2178f299fb60a3a19c00006603770ec" prot="public" static="no" mutable="no">
+        <type>const std::map&lt; std::string, std::string &gt;</type>
+        <definition>const std::map&lt;std::string, std::string&gt; KColor</definition>
+        <argsstring></argsstring>
+        <name>KColor</name>
+        <initializer>{
+  {&quot;KReset&quot;, &quot;0&quot;},
+  {&quot;KBlack&quot;, &quot;30&quot;},
+  {&quot;KRed&quot;, &quot;31&quot;},
+  {&quot;KGreen&quot;, &quot;32&quot;},
+  {&quot;KYellow&quot;, &quot;33&quot;},
+  {&quot;KBlue&quot;, &quot;34&quot;},
+  {&quot;KMAgenta&quot;, &quot;35&quot;},
+  {&quot;KCyan&quot;, &quot;36&quot;},
+
+}</initializer>
+        <briefdescription>
+<para>KColor : map between the &quot;human&quot; color and its correspondence for the Unix terminal. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="65" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="66" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="type_8h_1a1e3f1938007c41f107a8118778f8d08e" prot="public" static="no" mutable="no">
+        <type>const char</type>
+        <definition>const char KEmpty</definition>
+        <argsstring></argsstring>
+        <name>KEmpty</name>
+        <initializer>= &apos; &apos;</initializer>
+        <briefdescription>
+<para>KEmpty : character for an empty cell. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="160" column="12" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="160" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Definition of usefull types or aliases for the project. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alain Casali </para>
+</simplesect>
+<simplesect kind="author"><para>Marc Laporte </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="date"><para>18 décembre 2018 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="preprocessor">#ifndef<sp/>TYPE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>TYPE_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;vector&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;optional&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21" refid="type_8h_1af4d6ac508b164138028e81737c7be8a2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector<sp/>&lt;char&gt;<sp/><ref refid="type_8h_1af4d6ac508b164138028e81737c7be8a2" kindref="member">CVLine</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27" refid="type_8h_1a64a592133575ccebb1b36453acbec02b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::vector<sp/>&lt;CVLine&gt;<sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref>;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"></highlight></codeline>
+<codeline lineno="32" refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">typedef</highlight><highlight class="normal"><sp/>std::pair<sp/>&lt;unsigned,<sp/>unsigned&gt;<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref>;</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="39" refid="struct_authorized_key" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_authorized_key" kindref="compound">AuthorizedKey</ref><sp/>{</highlight></codeline>
+<codeline lineno="41" refid="struct_authorized_key_1a1b1aa7863427cc1b43f229423bdd83ba" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector<sp/>&lt;std::string&gt;<sp/><ref refid="struct_authorized_key_1a1b1aa7863427cc1b43f229423bdd83ba" kindref="member">VParamChar</ref><sp/>{</highlight><highlight class="stringliteral">&quot;KeyUp&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;KeyDown&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;KeyLeft&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;KeyRight&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;TokenP1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;TokenP2&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="43" refid="struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector<sp/>&lt;std::string&gt;<sp/><ref refid="struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73" kindref="member">VParamString</ref><sp/>{</highlight><highlight class="stringliteral">&quot;ColorP1&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;ColorP2&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="45" refid="struct_authorized_key_1a871173f4b0c89c91289a10f0ddc1cadd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::vector<sp/>&lt;std::string&gt;<sp/><ref refid="struct_authorized_key_1a871173f4b0c89c91289a10f0ddc1cadd" kindref="member">VParamUnsigned</ref><sp/>{</highlight><highlight class="stringliteral">&quot;NbRow&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;NbColumn&quot;</highlight><highlight class="normal">};</highlight></codeline>
+<codeline lineno="46"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="48" refid="struct_c_my_param" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_c_my_param" kindref="compound">CMyParam</ref><sp/>{</highlight></codeline>
+<codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map<sp/>&lt;std::string,<sp/>char&gt;<sp/>MapParamChar;</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map<sp/>&lt;std::string,<sp/>unsigned&gt;<sp/>MapParamUnsigned;</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/>std::map<sp/>&lt;std::string,<sp/>std::string&gt;<sp/>MapParamString;</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59" refid="type_8h_1aeb6b858f886b8520a7f220b3de0bef1a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_authorized_key" kindref="compound">AuthorizedKey</ref><sp/><ref refid="type_8h_1aeb6b858f886b8520a7f220b3de0bef1a" kindref="member">KAuthorizedKey</ref>;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65" refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map<sp/>&lt;std::string,<sp/>std::string&gt;<sp/><ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref></highlight></codeline>
+<codeline lineno="66"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="67"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;KReset&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;0&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="68"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;KBlack&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;30&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;KRed&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;31&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;KGreen&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;32&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;KYellow&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;33&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;KBlue&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;34&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;KMAgenta&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;35&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/>{</highlight><highlight class="stringliteral">&quot;KCyan&quot;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&quot;36&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82" refid="struct_c_my_param_v2" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref>{</highlight></codeline>
+<codeline lineno="86" refid="struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6" kindref="member">tokenP1</ref>;</highlight></codeline>
+<codeline lineno="90" refid="struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6" kindref="member">tokenP2</ref>;</highlight></codeline>
+<codeline lineno="94" refid="struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123" kindref="member">Key1Up</ref>;</highlight></codeline>
+<codeline lineno="98" refid="struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d" kindref="member">Key1Down</ref>;</highlight></codeline>
+<codeline lineno="102" refid="struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef" kindref="member">Key1Left</ref>;</highlight></codeline>
+<codeline lineno="106" refid="struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5" kindref="member">Key1Right</ref>;</highlight></codeline>
+<codeline lineno="110" refid="struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901" kindref="member">Key2Up</ref>;</highlight></codeline>
+<codeline lineno="114" refid="struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1" kindref="member">Key2Down</ref>;</highlight></codeline>
+<codeline lineno="118" refid="struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6" kindref="member">Key2Left</ref>;</highlight></codeline>
+<codeline lineno="122" refid="struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc" kindref="member">Key2Right</ref>;</highlight></codeline>
+<codeline lineno="126" refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref>;</highlight></codeline>
+<codeline lineno="130" refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::size_t<sp/><ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref>;</highlight></codeline>
+<codeline lineno="134" refid="struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11" kindref="member">ColorP1</ref>;</highlight></codeline>
+<codeline lineno="138" refid="struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/><ref refid="struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7" kindref="member">ColorP2</ref>;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"></highlight></codeline>
+<codeline lineno="141" refid="struct_form" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_form" kindref="compound">Form</ref></highlight></codeline>
+<codeline lineno="142"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>nom;</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/>std::pair&lt;size_t,size_t&gt;<sp/>dim;</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/>std::vector&lt;<sp/>std::vector&lt;char&gt;&gt;<sp/>piece;</highlight></codeline>
+<codeline lineno="146"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148" refid="struct_collectible" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_collectible" kindref="compound">Collectible</ref></highlight></codeline>
+<codeline lineno="149"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>nom;</highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>id;</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>point;</highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>token;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/>std::pair&lt;size_t,size_t&gt;<sp/>pos;</highlight></codeline>
+<codeline lineno="155"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="156"><highlight class="normal"></highlight></codeline>
+<codeline lineno="160" refid="type_8h_1a1e3f1938007c41f107a8118778f8d08e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a1e3f1938007c41f107a8118778f8d08e" kindref="member">KEmpty</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight></codeline>
+<codeline lineno="164"><highlight class="normal"></highlight></codeline>
+<codeline lineno="170" refid="struct_node" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">struct<sp/></highlight><highlight class="normal"><ref refid="struct_node" kindref="compound">Node</ref>{</highlight></codeline>
+<codeline lineno="171"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>Pos;</highlight></codeline>
+<codeline lineno="172"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>f_cost;</highlight></codeline>
+<codeline lineno="173"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>Parent;</highlight></codeline>
+<codeline lineno="174"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="175"><highlight class="normal"></highlight></codeline>
+<codeline lineno="176"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TYPE_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h"/>
+  </compounddef>
+</doxygen>

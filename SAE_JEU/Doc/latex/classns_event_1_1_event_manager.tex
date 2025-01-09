@@ -1,0 +1,105 @@
+\hypertarget{classns_event_1_1_event_manager}{}\doxysection{ns\+Event\+::Event\+Manager Class Reference}
+\label{classns_event_1_1_event_manager}\index{nsEvent::EventManager@{nsEvent::EventManager}}
+
+
+Gère une queue d\textquotesingle{}événement entrants.  
+
+
+
+
+{\ttfamily \#include $<$event\+\_\+manager.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{classns_event_1_1_event_manager_a5a3119d969a296b8e94f223171fdf2e6}{has\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Vérifie si un événement doit être traité \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_event_1_1_event_manager_a1eff8398ddb0a25da82e52a1067b85b5}{push\+Event}} (const \mbox{\hyperlink{structns_event_1_1_event__t}{Event\+\_\+t}} \&event)
+\begin{DoxyCompactList}\small\item\em Pousse un nouvel événement dans la queue. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{structns_event_1_1_event__t}{Event\+\_\+t}} \mbox{\hyperlink{classns_event_1_1_event_manager_adb00a0a006f4caa976471e74bf99cdc9}{pull\+Event}} ()
+\begin{DoxyCompactList}\small\item\em Tire l\textquotesingle{}événement le plus ancien, et l\textquotesingle{}enlève de la queue. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_event_1_1_event_manager_adbc5ced9a9435f61f58436ff613632b4}{clear\+Events}} ()
+\begin{DoxyCompactList}\small\item\em Vide la queue. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Gère une queue d\textquotesingle{}événement entrants. 
+
+Definition at line \mbox{\hyperlink{event__manager_8h_source_l00024}{24}} of file \mbox{\hyperlink{event__manager_8h_source}{event\+\_\+manager.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns_event_1_1_event_manager_adbc5ced9a9435f61f58436ff613632b4}\label{classns_event_1_1_event_manager_adbc5ced9a9435f61f58436ff613632b4}} 
+\index{nsEvent::EventManager@{nsEvent::EventManager}!clearEvents@{clearEvents}}
+\index{clearEvents@{clearEvents}!nsEvent::EventManager@{nsEvent::EventManager}}
+\doxysubsubsection{\texorpdfstring{clearEvents()}{clearEvents()}}
+{\footnotesize\ttfamily void ns\+Event\+::\+Event\+Manager\+::clear\+Events (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vide la queue. 
+
+
+
+Definition at line \mbox{\hyperlink{event__manager_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{event__manager_8cpp_source}{event\+\_\+manager.\+cpp}}.
+
+\mbox{\Hypertarget{classns_event_1_1_event_manager_a5a3119d969a296b8e94f223171fdf2e6}\label{classns_event_1_1_event_manager_a5a3119d969a296b8e94f223171fdf2e6}} 
+\index{nsEvent::EventManager@{nsEvent::EventManager}!hasEvent@{hasEvent}}
+\index{hasEvent@{hasEvent}!nsEvent::EventManager@{nsEvent::EventManager}}
+\doxysubsubsection{\texorpdfstring{hasEvent()}{hasEvent()}}
+{\footnotesize\ttfamily bool ns\+Event\+::\+Event\+Manager\+::has\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Vérifie si un événement doit être traité 
+
+\begin{DoxyReturn}{Returns}
+Si la queue possède au moins un élément 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{event__manager_8cpp_source_l00013}{13}} of file \mbox{\hyperlink{event__manager_8cpp_source}{event\+\_\+manager.\+cpp}}.
+
+\mbox{\Hypertarget{classns_event_1_1_event_manager_adb00a0a006f4caa976471e74bf99cdc9}\label{classns_event_1_1_event_manager_adb00a0a006f4caa976471e74bf99cdc9}} 
+\index{nsEvent::EventManager@{nsEvent::EventManager}!pullEvent@{pullEvent}}
+\index{pullEvent@{pullEvent}!nsEvent::EventManager@{nsEvent::EventManager}}
+\doxysubsubsection{\texorpdfstring{pullEvent()}{pullEvent()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{structns_event_1_1_event__t}{ns\+Event\+::\+Event\+\_\+t}} ns\+Event\+::\+Event\+Manager\+::pull\+Event (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tire l\textquotesingle{}événement le plus ancien, et l\textquotesingle{}enlève de la queue. 
+
+\begin{DoxyReturn}{Returns}
+Une copie du plus ancien événement 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{event__manager_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{event__manager_8cpp_source}{event\+\_\+manager.\+cpp}}.
+
+\mbox{\Hypertarget{classns_event_1_1_event_manager_a1eff8398ddb0a25da82e52a1067b85b5}\label{classns_event_1_1_event_manager_a1eff8398ddb0a25da82e52a1067b85b5}} 
+\index{nsEvent::EventManager@{nsEvent::EventManager}!pushEvent@{pushEvent}}
+\index{pushEvent@{pushEvent}!nsEvent::EventManager@{nsEvent::EventManager}}
+\doxysubsubsection{\texorpdfstring{pushEvent()}{pushEvent()}}
+{\footnotesize\ttfamily void ns\+Event\+::\+Event\+Manager\+::push\+Event (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structns_event_1_1_event__t}{Event\+\_\+t}} \&}]{event }\end{DoxyParamCaption})}
+
+
+
+Pousse un nouvel événement dans la queue. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em event} & \+: Evénement a pousser \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{event__manager_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{event__manager_8cpp_source}{event\+\_\+manager.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/event/\mbox{\hyperlink{event__manager_8h}{event\+\_\+manager.\+h}}\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/src/event/\mbox{\hyperlink{event__manager_8cpp}{event\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

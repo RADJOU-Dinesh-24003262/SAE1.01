@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>minGL<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">MinGL<sp/>2<sp/>est<sp/>un<sp/>bibliothèque<sp/>écrite<sp/>en<sp/>C++,<sp/>évolution<sp/>de<sp/>MinGL<sp/>par<sp/>Alain<sp/>Casali,<sp/>enseignant<sp/>chercheur<sp/>au<sp/>département<sp/>informatique<sp/>de<sp/>l&apos;IUT<sp/>d&apos;Aix-en-Provence.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Elle<sp/>facilite<sp/>l&apos;affichage<sp/>de<sp/>forme<sp/>primitives<sp/>et<sp/>composées,<sp/>de<sp/>texte<sp/>et<sp/>la<sp/>réalisation<sp/>d&apos;animations.<sp/>Elle<sp/>permet<sp/>également<sp/>de<sp/>jouer<sp/>des<sp/>fichiers<sp/>audios<sp/>et<sp/>de<sp/>gérer<sp/>les<sp/>saisies<sp/>clavier<sp/>et<sp/>souris.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Développé<sp/>dans<sp/>un<sp/>but<sp/>pédagogique.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
+<codeline><highlight class="normal">Les<sp/>dépendances<sp/>suivantes<sp/>sont<sp/>requises<sp/>pour<sp/>utiliser<sp/>minGL<sp/>2:<sp/></highlight></codeline>
+<codeline><highlight class="normal">*<sp/>freeglut</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>sfml<sp/>(audio)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Installation<sp/>sous<sp/>**Debian<sp/>et<sp/>dérivés**:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>freeglut3-dev<sp/>libsfml-dev</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Installation<sp/>sous<sp/>**Arch<sp/>Linux<sp/>et<sp/>Manjaro**: </highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">sudo<sp/>pacman<sp/>-S<sp/>freeglut<sp/>sfml</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Installation<sp/>sous<sp/>**macOS**<sp/>(avec<sp/>[Homebrew](https://brew.sh)<sp/>préalablement<sp/>installé):</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">brew<sp/>cask<sp/>install<sp/>xquartz</highlight></codeline>
+<codeline><highlight class="normal">brew<sp/>install<sp/>freeglut<sp/>sfml</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">**Important**:<sp/>Afin<sp/>de<sp/>terminer<sp/>l&apos;installation<sp/>de<sp/>XQuartz,<sp/>macOS<sp/>doit<sp/>être<sp/>redémarré.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Testé<sp/>sous<sp/>Debian<sp/>10,<sp/>Ubuntu<sp/>20.04,<sp/>macOS<sp/>10.15,<sp/>Manjaro<sp/>GNU/Linux<sp/>(audio<sp/>non<sp/>testé)</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Utilisation</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Avec<sp/>un<sp/>autre<sp/>projet<sp/>qmake</highlight></codeline>
+<codeline><highlight class="normal">Pour<sp/>utiliser<sp/>minGL<sp/>2<sp/>dans<sp/>votre<sp/>projet<sp/>qmake,<sp/>il<sp/>vous<sp/>suffit<sp/>de<sp/>décompresser<sp/>(ou<sp/>encore<sp/>mieux,<sp/>mettre<sp/>en<sp/>sous-module<sp/>git)<sp/>cette<sp/>bibliothèque<sp/>dans<sp/>un<sp/>sous-répertoire<sp/>du<sp/>répertoire<sp/>contenant<sp/>votre<sp/>fichier<sp/>``.pro``.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Il<sp/>vous<sp/>suffit<sp/>ensuite<sp/>de<sp/>rajouter<sp/>dans<sp/>votre<sp/>``.pro``<sp/>la<sp/>directive<sp/>``include(.../mingl.pri)``,<sp/>en<sp/>remplaçant<sp/>``...``<sp/>par<sp/>le<sp/>chemin<sp/>du<sp/>répertoire<sp/>de<sp/>minGL<sp/>2.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Par<sp/>exemple,<sp/>si<sp/>vous<sp/>avez<sp/>décompressé<sp/>minGL<sp/>2<sp/>dans<sp/>le<sp/>sous-répertoire<sp/>``minGL2/``<sp/>présent<sp/>dans<sp/>le<sp/>même<sp/>répertoire<sp/>que<sp/>votre<sp/>``.pro``,<sp/>alors<sp/>vous<sp/>devez<sp/>écrire<sp/>dans<sp/>ce<sp/>dernier:<sp/>``include(minGL2/mingl.pri)``.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>En<sp/>tant<sp/>que<sp/>bibliothèque</highlight></codeline>
+<codeline><highlight class="normal">Vous<sp/>pouvez<sp/>facilement<sp/>compiler<sp/>minGL<sp/>2<sp/>en<sp/>tant<sp/>que<sp/>bibliothèque<sp/>afin<sp/>de<sp/>générer<sp/>le<sp/>fichier<sp/>``libmingl.a``.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Il<sp/>vous<sp/>suffit<sp/>simplement<sp/>d&apos;ouvrir<sp/>le<sp/>fichier<sp/>de<sp/>projet<sp/>``mingl.pro``<sp/>et<sp/>de<sp/>lancer<sp/>la<sp/>compilation,<sp/>vous<sp/>trouverez<sp/>le<sp/>fichier<sp/>``.a``<sp/>dans<sp/>le<sp/>répertoire<sp/>de<sp/>compilation.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Le<sp/>répertoire<sp/>``include/``<sp/>contient<sp/>tout<sp/>les<sp/>fichiers<sp/>d&apos;en-tête<sp/>de<sp/>minGL<sp/>2.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Extras</highlight></codeline>
+<codeline><highlight class="normal">Si<sp/>vous<sp/>avez<sp/>``doxygen``<sp/>installé<sp/>sur<sp/>votre<sp/>machine,<sp/>vous<sp/>pouvez<sp/>générer,<sp/>dans<sp/>le<sp/>répertoire<sp/>``doc/``,<sp/>une<sp/>documentation<sp/>HTML<sp/>de<sp/>minGL<sp/>2<sp/>avec<sp/>la<sp/>commande<sp/>suivante:</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">doxygen<sp/>Doxyfile</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Dans<sp/>le<sp/>répertoire<sp/>``tools/``,<sp/>vous<sp/>trouverez<sp/>des<sp/>outils<sp/>relatif<sp/>a<sp/>l&apos;utilisation<sp/>de<sp/>minGL<sp/>2.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Remerciements</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**Alexandre<sp/>Sollier<sp/>et<sp/>Clément<sp/>Mathieu--Drif**:<sp/>Développeurs<sp/>principaux<sp/>de<sp/>minGL<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>**Alain<sp/>Casali**:<sp/>Auteur<sp/>de<sp/>la<sp/>version<sp/>originale<sp/>de<sp/>MinGL</highlight></codeline>
+<codeline><highlight class="normal">*<sp/>La<sp/>promo<sp/>2020-2021<sp/>de<sp/>la<sp/>2ème<sp/>année<sp/>du<sp/>Département<sp/>Informatique<sp/>de<sp/>l&apos;IUT<sp/>d&apos;Aix-en-Provence</highlight></codeline>
+<codeline></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/README.md"/>
+  </compounddef>
+</doxygen>

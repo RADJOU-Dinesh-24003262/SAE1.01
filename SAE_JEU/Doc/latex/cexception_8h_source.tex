@@ -1,0 +1,49 @@
+\hypertarget{cexception_8h_source}{}\doxysection{cexception.\+h}
+\label{cexception_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/exception/cexception.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/exception/cexception.h}}
+\mbox{\hyperlink{cexception_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00021}00021 \textcolor{preprocessor}{\#ifndef CEXCEPTION\_H}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00022}00022 \textcolor{preprocessor}{\#define CEXCEPTION\_H}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00024}00024 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00025}00025 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00026}00026 \textcolor{preprocessor}{\#include <exception>}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00028}00028 \textcolor{preprocessor}{\#include "{}../tools/ieditable.h"{}}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00029}00029 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{errcode_8h}{errcode.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00035}00035 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_exception}{nsException}}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00036}00036 \{}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00042}\mbox{\hyperlink{classns_exception_1_1_c_exception}{00042}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_exception_1_1_c_exception}{CException}} : \textcolor{keyword}{public} std::exception, \textcolor{keyword}{public} \mbox{\hyperlink{classns_util_1_1_i_editable}{nsUtil::IEditable}}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00043}00043 \{}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00045}00045 public :}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00052}00052     \mbox{\hyperlink{classns_exception_1_1_c_exception_aeacba2e2180dd8c00c643e1a67cba423}{CException}}(\textcolor{keyword}{const} std::string\& Libelle = std::string(), \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} CodErr = \mbox{\hyperlink{namespacens_exception_ae4cd0d6bbd5590a1b121347632d41376a0446a2a6f75ad46276a3c6bfbcf06eb3}{KNoExc}});}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00058}\mbox{\hyperlink{classns_exception_1_1_c_exception_a8b95a8f59d50a7ff3b67423c83cb8501}{00058}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classns_exception_1_1_c_exception_a8b95a8f59d50a7ff3b67423c83cb8501}{\string~CException}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00064}00064     \textcolor{keyword}{const} std::string\& \mbox{\hyperlink{classns_exception_1_1_c_exception_aef8e3d1a4e22ec7045d7d0b14d8b968a}{GetLibelle}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00070}00070     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{classns_exception_1_1_c_exception_adf06d1598420c7b60c1b134bf2a946c2}{GetCodErr}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00076}00076     \textcolor{keyword}{virtual} \textcolor{keyword}{const} \textcolor{keywordtype}{char}* \mbox{\hyperlink{classns_exception_1_1_c_exception_a5ef0ababcc3ffc93f70211de1122c9a8}{what}}() const noexcept override;}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00078}00078 protected :}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00079}00079     virtual std::ostream\& \mbox{\hyperlink{classns_exception_1_1_c_exception_ae4430e1cfaa948dc6f63bb8437fa6027}{\_Edit}}(std::ostream\& os = std::cerr) const override;}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00084}\mbox{\hyperlink{classns_exception_1_1_c_exception_a96c2d653703b2879ff8050cc78bc450a}{00084}}     std::\textcolor{keywordtype}{string} \mbox{\hyperlink{classns_exception_1_1_c_exception_a96c2d653703b2879ff8050cc78bc450a}{m\_Libelle}};}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00089}\mbox{\hyperlink{classns_exception_1_1_c_exception_a9610371f15e2c6d99034c46b632d51da}{00089}}     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{classns_exception_1_1_c_exception_a9610371f15e2c6d99034c46b632d51da}{m\_CodErr}};}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00091}00091 \}; \textcolor{comment}{// class CException}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00092}00092     }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00093}00093 \} \textcolor{comment}{// namespace nsException}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00095}00095 \textcolor{preprocessor}{\#include "{}cexception.hpp"{}}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00096}00096 }
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00097}00097 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CEXCEPTION\_H}}
+\DoxyCodeLine{\Hypertarget{cexception_8h_source_l00098}00098 }
+
+\end{DoxyCode}

@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rectangle_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</primary></indexterm>
+<para>
+
+<para>Représente un rectangle. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;mingl/shape/rectangle.h&quot;
+#include &quot;mingl/macros.h&quot;
+</programlisting>Include dependency graph for rectangle.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="rectangle_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Représente un rectangle. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Janvier 2020 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+</section>

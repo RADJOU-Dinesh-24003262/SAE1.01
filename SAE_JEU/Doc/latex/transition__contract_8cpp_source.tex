@@ -1,0 +1,62 @@
+\hypertarget{transition__contract_8cpp_source}{}\doxysection{transition\+\_\+contract.\+cpp}
+\label{transition__contract_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/transition/transition\_contract.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/transition/transition\_contract.cpp}}
+\mbox{\hyperlink{transition__contract_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{transition__contract_8h}{mingl/transition/transition\_contract.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#define TRANSITIONCONTRACT nsTransition::TransitionContract}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00015}00015 TRANSITIONCONTRACT::TransitionContract(ITransitionable\& target, \textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id},}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00016}00016                                        \textcolor{keyword}{const} \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{SystemDuration\_t}} \&duration, \textcolor{keyword}{const} std::vector<float> \&destination,}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00017}00017                                        \textcolor{keyword}{const} \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{SystemDuration\_t}} \&delay,}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00018}00018                                        \textcolor{keyword}{const} TransitionMode \&transitionMode)}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00019}00019     : m\_id(id)}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00020}00020     , m\_target(target)}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00021}00021     , m\_transitionMode(transitionMode)}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00022}00022     , m\_destination(destination)}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00023}00023     , m\_duration(duration)}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00024}00024     , m\_delay(delay)}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00025}00025 \{}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00026}00026     m\_beginning.resize(destination.size());}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00027}00027     target.getValues(\textcolor{keywordtype}{id}, m\_beginning);}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00028}00028 \} \textcolor{comment}{// TransitionContract()}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00030}00030 \textcolor{keyword}{const} \textcolor{keywordtype}{int}\& TRANSITIONCONTRACT::getId()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00031}00031 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00032}00032     \textcolor{keywordflow}{return} m\_id;}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00033}00033 \} \textcolor{comment}{// getId()}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00035}00035 \textcolor{keyword}{const} TRANSITIONCONTRACT::TransitionMode\& TRANSITIONCONTRACT::getTransitionMode()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00036}00036 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00037}00037     \textcolor{keywordflow}{return} m\_transitionMode;}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00038}00038 \} \textcolor{comment}{// getTransitionMode()}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00040}00040 \textcolor{keyword}{const} std::vector<float>\& TRANSITIONCONTRACT::getBeginning()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00041}00041 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00042}00042     \textcolor{keywordflow}{return} m\_beginning;}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00043}00043 \} \textcolor{comment}{// getBeginning()}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00045}00045 \textcolor{keyword}{const} std::vector<float>\& TRANSITIONCONTRACT::getDestination()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00046}00046 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00047}00047     \textcolor{keywordflow}{return} m\_destination;}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00048}00048 \} \textcolor{comment}{// getDestination()}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00050}00050 \textcolor{keyword}{const} \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{nsTransition::SystemDuration\_t}} \&TRANSITIONCONTRACT::getDuration()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00051}00051 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00052}00052     \textcolor{keywordflow}{return} m\_duration;}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00053}00053 \} \textcolor{comment}{// getDuration()}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00055}00055 \textcolor{keywordtype}{void} TRANSITIONCONTRACT::setDestinationCallback(\textcolor{keyword}{const} std::function<\textcolor{keywordtype}{void} ()> \&callback)}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00056}00056 \{}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00057}00057     m\_destinationCallback = callback;}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00058}00058 \} \textcolor{comment}{// setFinishCallback()}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00060}00060 \textcolor{keyword}{const} \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{nsTransition::ITransitionable}}\& TRANSITIONCONTRACT::getTarget()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00061}00061 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00062}00062     \textcolor{keywordflow}{return} m\_target;}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00063}00063 \} \textcolor{comment}{// getTarget()}}
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{transition__contract_8cpp_source_l00065}00065 \textcolor{preprocessor}{\#undef TRANSITIONCONTRACT}}
+
+\end{DoxyCode}

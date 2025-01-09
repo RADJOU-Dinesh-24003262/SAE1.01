@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cexception_8cpp_source" xml:lang="en-US">
+<title>cexception.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/cexception.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_cexception_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_cexception_8cpp_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_cexception_8cpp_source_1l00016"/>00016 
+<anchor xml:id="_cexception_8cpp_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_cexception_8h">mingl/exception/cexception.h</link>&quot;</emphasis>
+<anchor xml:id="_cexception_8cpp_source_1l00018"/>00018 
+<anchor xml:id="_cexception_8cpp_source_1l00019"/><link linkend="_classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027">00019</link> std::ostream&amp;&#32;<link linkend="_classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027">nsException::CException::_Edit</link>(std::ostream&amp;&#32;os)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_cexception_8cpp_source_1l00020"/>00020 <emphasis role="keyword"></emphasis>{&#32;
+<anchor xml:id="_cexception_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;os&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Exception&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classns_exception_1_1_c_exception_1a96c2d653703b2879ff8050cc78bc450a">m_Libelle</link>&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;\n&apos;</emphasis>
+<anchor xml:id="_cexception_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Code&#32;&#32;&#32;&#32;&#32;&#32;:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;<link linkend="_classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da">m_CodErr</link>;
+<anchor xml:id="_cexception_8cpp_source_1l00023"/>00023 }&#32;<emphasis role="comment">//&#32;_Edit()</emphasis>
+<anchor xml:id="_cexception_8cpp_source_1l00024"/>00024 
+</programlisting></section>

@@ -1,0 +1,578 @@
+.TH "nsGraphics::Vec2D" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsGraphics::Vec2D \- Classe représentant un vecteur deux-dimensionnel\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <vec2d\&.h>\fP
+.PP
+Inherits \fBnsUtil::IEditable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBVec2D\fP (const int &x=0, const int &y=0)"
+.br
+.RI "Constructeur pour la classe \fBVec2D\fP\&. "
+.ti -1c
+.RI "\fBVec2D\fP (const \fBVec2D\fP &pos)"
+.br
+.RI "Constructeur de recopie pour la classe \fBVec2D\fP\&. "
+.ti -1c
+.RI "\fBVec2D\fP \fBoperator+\fP () const"
+.br
+.RI "Opérateur unaire plus\&. "
+.ti -1c
+.RI "\fBVec2D\fP \fBoperator\-\fP () const"
+.br
+.RI "Opérateur unaire moins\&. "
+.ti -1c
+.RI "\fBVec2D\fP \fBoperator+\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur d'addition\&. "
+.ti -1c
+.RI "\fBVec2D\fP \fBoperator\-\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur de soustraction\&. "
+.ti -1c
+.RI "\fBVec2D\fP \fBoperator*\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur de multiplication\&. "
+.ti -1c
+.RI "\fBVec2D\fP \fBoperator*\fP (const float &n) const"
+.br
+.RI "Opérateur de multiplication\&. "
+.ti -1c
+.RI "\fBVec2D\fP \fBoperator/\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur de division\&. "
+.ti -1c
+.RI "\fBVec2D\fP \fBoperator/\fP (const float &n) const"
+.br
+.RI "Opérateur de division\&. "
+.ti -1c
+.RI "\fBVec2D\fP \fBoperator%\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur modulo\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur d'égalité "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur d'inégalité "
+.ti -1c
+.RI "bool \fBoperator<\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur de stricte infériorité (Vérifie la stricte infériorité de la magnitude des deux vecteurs) "
+.ti -1c
+.RI "bool \fBoperator>\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur de stricte supériorité (Vérifie la stricte supériorité de la magnitude des deux vecteurs) "
+.ti -1c
+.RI "bool \fBoperator<=\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur d'infériorité (Vérifie l'infériorité de la magnitude des deux vecteurs) "
+.ti -1c
+.RI "bool \fBoperator>=\fP (const \fBVec2D\fP &pos) const"
+.br
+.RI "Opérateur de supériorité (Vérifie la supériorité de la magnitude des deux vecteurs) "
+.ti -1c
+.RI "\fBVec2D\fP & \fBoperator=\fP (const \fBVec2D\fP &pos)"
+.br
+.RI "Opérateur d'assignement\&. "
+.ti -1c
+.RI "\fBVec2D\fP & \fBoperator+=\fP (const \fBVec2D\fP &pos)"
+.br
+.RI "Opérateur d'addition avec assignement\&. "
+.ti -1c
+.RI "\fBVec2D\fP & \fBoperator\-=\fP (const \fBVec2D\fP &pos)"
+.br
+.RI "Opérateur de soustraction avec assignement\&. "
+.ti -1c
+.RI "\fBVec2D\fP & \fBoperator*=\fP (const \fBVec2D\fP &pos)"
+.br
+.RI "Opérateur de multiplication avec assignement\&. "
+.ti -1c
+.RI "\fBVec2D\fP & \fBoperator/=\fP (const \fBVec2D\fP &pos)"
+.br
+.RI "Opérateur de division avec assignement\&. "
+.ti -1c
+.RI "\fBVec2D\fP & \fBoperator%=\fP (const \fBVec2D\fP &pos)"
+.br
+.RI "Opérateur modulo avec assignement\&. "
+.ti -1c
+.RI "bool \fBisColliding\fP (\fBVec2D\fP firstCorner, \fBVec2D\fP secondCorner) const"
+.br
+.RI "Retourne vrai si le vecteur actuel est compris entre deux vecteurs formant un rectangle\&. "
+.ti -1c
+.RI "double \fBcomputeMagnitude\fP () const"
+.br
+.RI "Calcule la magnitude de ce vecteur\&. "
+.ti -1c
+.RI "int \fBgetX\fP () const"
+.br
+.RI "Récupère la position X (abscisse) "
+.ti -1c
+.RI "void \fBsetX\fP (int x)"
+.br
+.RI "Définit la nouvelle position X (abscisse) "
+.ti -1c
+.RI "int \fBgetY\fP () const"
+.br
+.RI "Récupère la position Y (ordonnée) "
+.ti -1c
+.RI "void \fBsetY\fP (int y)"
+.br
+.RI "Définit la nouvelle position Y (ordonnée) "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static \fBVec2D\fP \fBmin\fP (const \fBVec2D\fP &p1, const \fBVec2D\fP &p2)"
+.br
+.RI "Retourne le vecteur le plus petit entre les deux passés en argument\&. "
+.ti -1c
+.RI "static bool \fBminf\fP (const \fBVec2D\fP &p1, const \fBVec2D\fP &p2)"
+.br
+.RI "Retourne vrai si le premier vecteur est le plus petit des deux\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual std::ostream & \fB_Edit\fP (std::ostream &os=std::cout) const override"
+.br
+.RI "Fonction appelée pour injecter l'objet courant dans un flux\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Classe représentant un vecteur deux-dimensionnel\&. 
+.PP
+Definition at line \fB25\fP of file \fBvec2d\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsGraphics::Vec2D::Vec2D (const int & x = \fC0\fP, const int & y = \fC0\fP)"
+
+.PP
+Constructeur pour la classe \fBVec2D\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP : Position X (abscisse) du vecteur 
+.br
+\fIy\fP : Position Y (ordonnée) du vecteur 
+.RE
+.PP
+
+.PP
+Definition at line \fB15\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "nsGraphics::Vec2D::Vec2D (const \fBVec2D\fP & pos)"
+
+.PP
+Constructeur de recopie pour la classe \fBVec2D\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : \fBVec2D\fP a copier 
+.RE
+.PP
+
+.PP
+Definition at line \fB20\fP of file \fBvec2d\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "std::ostream & nsGraphics::Vec2D::_Edit (std::ostream & os = \fCstd::cout\fP) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction appelée pour injecter l'objet courant dans un flux\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIos\fP : Flux dans lequel injecter 
+.RE
+.PP
+
+.PP
+Implements \fBnsUtil::IEditable\fP\&.
+.PP
+Definition at line \fB198\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "double nsGraphics::Vec2D::computeMagnitude () const"
+
+.PP
+Calcule la magnitude de ce vecteur\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Magnitude du vecteur 
+.RE
+.PP
+
+.PP
+Definition at line \fB173\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "int nsGraphics::Vec2D::getX () const"
+
+.PP
+Récupère la position X (abscisse) 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence constante vers m_x 
+.RE
+.PP
+
+.PP
+Definition at line \fB178\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "int nsGraphics::Vec2D::getY () const"
+
+.PP
+Récupère la position Y (ordonnée) 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence constante vers m_y 
+.RE
+.PP
+
+.PP
+Definition at line \fB188\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "bool nsGraphics::Vec2D::isColliding (\fBVec2D\fP firstCorner, \fBVec2D\fP secondCorner) const"
+
+.PP
+Retourne vrai si le vecteur actuel est compris entre deux vecteurs formant un rectangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirstCorner\fP : Premier vecteur 
+.br
+\fIsecondCorner\fP : Second vecteur 
+.RE
+.PP
+
+.PP
+Definition at line \fB160\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "static \fBVec2D\fP nsGraphics::Vec2D::min (const \fBVec2D\fP & p1, const \fBVec2D\fP & p2)\fC [static]\fP"
+
+.PP
+Retourne le vecteur le plus petit entre les deux passés en argument\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp1\fP : Premier vecteur 
+.br
+\fIp2\fP : Second vecteur 
+.RE
+.PP
+
+.PP
+Definition at line \fB148\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "static bool nsGraphics::Vec2D::minf (const \fBVec2D\fP & p1, const \fBVec2D\fP & p2)\fC [static]\fP"
+
+.PP
+Retourne vrai si le premier vecteur est le plus petit des deux\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIp1\fP : Premier vecteur 
+.br
+\fIp2\fP : Second vecteur 
+.RE
+.PP
+
+.PP
+Definition at line \fB155\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "bool nsGraphics::Vec2D::operator!= (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur d'inégalité 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel vérifier l'inégalité 
+.RE
+.PP
+
+.PP
+Definition at line \fB75\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP nsGraphics::Vec2D::operator% (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur modulo\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel faire un modulo 
+.RE
+.PP
+
+.PP
+Definition at line \fB65\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP & nsGraphics::Vec2D::operator%= (const \fBVec2D\fP & pos)"
+
+.PP
+Opérateur modulo avec assignement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel faire un modulo sur le vecteur actuel 
+.RE
+.PP
+
+.PP
+Definition at line \fB140\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP nsGraphics::Vec2D::operator* (const float & n) const"
+
+.PP
+Opérateur de multiplication\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP : Nombre avec lequel multiplier le vecteur actuel 
+.RE
+.PP
+
+.PP
+Definition at line \fB50\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP nsGraphics::Vec2D::operator* (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur de multiplication\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur a multiplier 
+.RE
+.PP
+
+.PP
+Definition at line \fB45\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP & nsGraphics::Vec2D::operator*= (const \fBVec2D\fP & pos)"
+
+.PP
+Opérateur de multiplication avec assignement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel multiplier le vecteur actuel 
+.RE
+.PP
+
+.PP
+Definition at line \fB124\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP nsGraphics::Vec2D::operator+ () const"
+
+.PP
+Opérateur unaire plus\&. 
+.PP
+Definition at line \fB25\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP nsGraphics::Vec2D::operator+ (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur d'addition\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur a additionner 
+.RE
+.PP
+
+.PP
+Definition at line \fB35\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP & nsGraphics::Vec2D::operator+= (const \fBVec2D\fP & pos)"
+
+.PP
+Opérateur d'addition avec assignement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel additionner le vecteur actuel 
+.RE
+.PP
+
+.PP
+Definition at line \fB108\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP nsGraphics::Vec2D::operator\- () const"
+
+.PP
+Opérateur unaire moins\&. 
+.PP
+Definition at line \fB30\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP nsGraphics::Vec2D::operator\- (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur de soustraction\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur a soustraire 
+.RE
+.PP
+
+.PP
+Definition at line \fB40\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP & nsGraphics::Vec2D::operator\-= (const \fBVec2D\fP & pos)"
+
+.PP
+Opérateur de soustraction avec assignement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel soustraire le vecteur actuel 
+.RE
+.PP
+
+.PP
+Definition at line \fB116\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP nsGraphics::Vec2D::operator/ (const float & n) const"
+
+.PP
+Opérateur de division\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIn\fP : Nombre avec lequel diviser le vecteur actuel 
+.RE
+.PP
+
+.PP
+Definition at line \fB60\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP nsGraphics::Vec2D::operator/ (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur de division\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur a diviser 
+.RE
+.PP
+
+.PP
+Definition at line \fB55\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP & nsGraphics::Vec2D::operator/= (const \fBVec2D\fP & pos)"
+
+.PP
+Opérateur de division avec assignement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel diviser le vecteur actuel 
+.RE
+.PP
+
+.PP
+Definition at line \fB132\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "bool nsGraphics::Vec2D::operator< (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur de stricte infériorité (Vérifie la stricte infériorité de la magnitude des deux vecteurs) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel vérifier la stricte infériorité 
+.RE
+.PP
+
+.PP
+Definition at line \fB80\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "bool nsGraphics::Vec2D::operator<= (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur d'infériorité (Vérifie l'infériorité de la magnitude des deux vecteurs) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel vérifier l'infériorité 
+.RE
+.PP
+
+.PP
+Definition at line \fB90\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "\fBVec2D\fP & nsGraphics::Vec2D::operator= (const \fBVec2D\fP & pos)"
+
+.PP
+Opérateur d'assignement\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur source 
+.RE
+.PP
+
+.PP
+Definition at line \fB100\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "bool nsGraphics::Vec2D::operator== (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur d'égalité 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel vérifier l'égalité 
+.RE
+.PP
+
+.PP
+Definition at line \fB70\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "bool nsGraphics::Vec2D::operator> (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur de stricte supériorité (Vérifie la stricte supériorité de la magnitude des deux vecteurs) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel vérifier la stricte supériorité 
+.RE
+.PP
+
+.PP
+Definition at line \fB85\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "bool nsGraphics::Vec2D::operator>= (const \fBVec2D\fP & pos) const"
+
+.PP
+Opérateur de supériorité (Vérifie la supériorité de la magnitude des deux vecteurs) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpos\fP : Vecteur avec lequel vérifier la supériorité 
+.RE
+.PP
+
+.PP
+Definition at line \fB95\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "void nsGraphics::Vec2D::setX (int x)"
+
+.PP
+Définit la nouvelle position X (abscisse) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIx\fP : Nouvelle position X 
+.RE
+.PP
+
+.PP
+Definition at line \fB183\fP of file \fBvec2d\&.cpp\fP\&.
+.SS "void nsGraphics::Vec2D::setY (int y)"
+
+.PP
+Définit la nouvelle position Y (ordonnée) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIy\fP : Nouvelle position Y 
+.RE
+.PP
+
+.PP
+Definition at line \fB193\fP of file \fBvec2d\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

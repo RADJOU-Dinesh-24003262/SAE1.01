@@ -1,0 +1,89 @@
+\hypertarget{rgbacolor_8h_source}{}\doxysection{rgbacolor.\+h}
+\label{rgbacolor_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/graphics/rgbacolor.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/graphics/rgbacolor.h}}
+\mbox{\hyperlink{rgbacolor_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef RGBACOLOR\_H}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00012}00012 \textcolor{preprocessor}{\#define RGBACOLOR\_H}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <GL/freeglut.h>} \textcolor{comment}{// GLubyte}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00016}00016 \textcolor{preprocessor}{\#include "{}../tools/ieditable.h"{}}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00018}00018 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_graphics}{nsGraphics}}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00025}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{00025}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} : \textcolor{keyword}{public} \mbox{\hyperlink{classns_util_1_1_i_editable}{nsUtil::IEditable}}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00028}00028 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00037}00037     \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a6f91976b2d83414329608564615f27b1}{RGBAcolor}}(\textcolor{keyword}{const} GLubyte\& red = 0, \textcolor{keyword}{const} GLubyte\& green = 0, \textcolor{keyword}{const} GLubyte\& blue = 0, \textcolor{keyword}{const} GLubyte\& alpha = 255);}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00043}\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a229faf986de81a508c37103ca013ad70}{00043}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a229faf986de81a508c37103ca013ad70}{\string~RGBAcolor}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00050}00050     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a685b4a48d19594bd29f136e1f74fee85}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}\& col) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00057}00057     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a2cf7ff27443450c18368d521546f4e9e}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}\& col) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00064}00064     \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_abb3832c60bec568d1b357955e6be2300}{operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}}\& rhs) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00071}00071     \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a1be35bff76dd3859cc714b87db0a1193}{operator*}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& rhs) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00078}00078     GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{getRed}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00085}00085     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_ade94fb53d92392f80a316a2370c8991c}{setRed}}(\textcolor{keyword}{const} GLubyte\& red);}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00092}00092     GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{getGreen}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00093}00093 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00099}00099     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a28674ba0fa5f7abc8afb4023c1d0cf25}{setGreen}}(\textcolor{keyword}{const} GLubyte\& green);}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00106}00106     GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{getBlue}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00113}00113     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_ac6f522de2f51788d98846034174fb16a}{setBlue}}(\textcolor{keyword}{const} GLubyte\& blue);}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00120}00120     GLubyte \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}{getAlpha}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00127}00127     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_aa478d3c5b8b56f590a12461fe2ab4bbf}{setAlpha}}(\textcolor{keyword}{const} GLubyte\& alpha);}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00128}00128 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00129}00129 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00130}00130     \textcolor{keyword}{virtual} std::ostream\& \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a09154c1fc9ba912860f2b4fac5432298}{\_Edit}}(std::ostream\& os = std::cout) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00132}00132 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00136}00136     GLubyte m\_red;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00141}00141     GLubyte m\_green;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00146}00146     GLubyte m\_blue;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00147}00147 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00151}00151     GLubyte m\_alpha;}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00152}00152 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00153}00153 \}; \textcolor{comment}{// class RGBAcolor}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00155}00155 \textcolor{comment}{// Quelques couleurs trouvées sur:}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00156}00156 \textcolor{comment}{// https://www.rapidtables.com/web/color/RGB\_Color.html}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00157}00157 \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{RGBAcolor}} KBlack           \{  0,   0,   0\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00158}00158 \textcolor{keyword}{const} RGBAcolor KWhite           \{255, 255, 255\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00159}00159 \textcolor{keyword}{const} RGBAcolor KRed             \{255,   0,   0\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00160}00160 \textcolor{keyword}{const} RGBAcolor KLime            \{  0, 255,   0\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00161}00161 \textcolor{keyword}{const} RGBAcolor KBlue            \{  0,   0, 255\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00162}00162 \textcolor{keyword}{const} RGBAcolor KYellow          \{255, 255,   0\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00163}00163 \textcolor{keyword}{const} RGBAcolor KCyan            \{  0, 255, 255\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00164}00164 \textcolor{keyword}{const} RGBAcolor KMagenta         \{255,   0, 255\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00165}00165 \textcolor{keyword}{const} RGBAcolor KSilver          \{192, 192, 192\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00166}00166 \textcolor{keyword}{const} RGBAcolor KGray            \{128, 128, 128\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00167}00167 \textcolor{keyword}{const} RGBAcolor KDarkGray        \{200, 200, 200\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00168}00168 \textcolor{keyword}{const} RGBAcolor KMaroon          \{128,   0,   0\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00169}00169 \textcolor{keyword}{const} RGBAcolor KOlive           \{128, 128,   0\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00170}00170 \textcolor{keyword}{const} RGBAcolor KGreen           \{  0, 128,   0\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00171}00171 \textcolor{keyword}{const} RGBAcolor KPurple          \{128,   0, 128\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00172}00172 \textcolor{keyword}{const} RGBAcolor KTeal            \{  0, 128, 128\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00173}00173 \textcolor{keyword}{const} RGBAcolor KNavy            \{  0,   0, 128\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00174}00174 \textcolor{keyword}{const} RGBAcolor KBeige           \{231, 211, 171\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00175}00175 \textcolor{keyword}{const} RGBAcolor KTransparent     \{  0,   0,   0,  0\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00176}00176 \textcolor{keyword}{const} RGBAcolor KBlueTransparent \{  0,   0, 255,  30\};}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00178}00178 \} \textcolor{comment}{// namespace nsGraphics}}
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{rgbacolor_8h_source_l00180}00180 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// RGBACOLOR\_H}}
+
+\end{DoxyCode}

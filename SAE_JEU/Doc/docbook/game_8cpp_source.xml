@@ -1,0 +1,524 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_game_8cpp_source" xml:lang="en-US">
+<title>game.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="_game_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00003"/>00003 
+<anchor xml:id="_game_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;unistd.h&gt;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00005"/>00005 
+<anchor xml:id="_game_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_game_8h">game.h</link>&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00007"/>00007 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_params_8h">params.h</link>&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gridmanagement_8h">gridmanagement.h</link>&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00009"/>00009 
+<anchor xml:id="_game_8cpp_source_1l00010"/>00010 <emphasis role="preprocessor">#define&#32;FPS_LIMIT&#32;15</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00011"/>00011 
+<anchor xml:id="_game_8cpp_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&lt;thread&gt;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&lt;cmath&gt;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00014"/>00014 
+<anchor xml:id="_game_8cpp_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mingl_8h">mingl/mingl.h</link>&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00016"/>00016 
+<anchor xml:id="_game_8cpp_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&lt;tuple&gt;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_player1_8h">sprites/player1.h</link>&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00019"/>00019 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_player2_8h">sprites/player2.h</link>&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00020"/>00020 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_wall_8h">sprites/wall.h</link>&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00021"/>00021 <emphasis role="preprocessor">#include&#32;&quot;sprites/kebab.h&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00022"/>00022 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_cigarette_8h">sprites/cigarette.h</link>&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00023"/>00023 <emphasis role="preprocessor">#include&#32;&quot;sprites/monstre.h&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00024"/>00024 <emphasis role="preprocessor">#include&#32;&quot;sprites/teleporter.h&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00025"/>00025 <emphasis role="preprocessor">#include&#32;&quot;sprites/statue.h&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00026"/>00026 <emphasis role="preprocessor">#include&#32;&quot;MenuManagement.h&quot;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00027"/>00027 
+<anchor xml:id="_game_8cpp_source_1l00028"/>00028 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00029"/>00029 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="_game_8cpp_source_1l00030"/>00030 
+<anchor xml:id="_game_8cpp_source_1l00031"/>00031 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_game_8h_1aeb06160be5949a49243364c546d6abb6">IsMoveLegal</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;&#32;Mat,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyUp,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyDown,
+<anchor xml:id="_game_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyRight,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyLeft,
+<anchor xml:id="_game_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;Pos,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;Param){
+<anchor xml:id="_game_8cpp_source_1l00034"/>00034 
+<anchor xml:id="_game_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(not&#32;KeyUp&#32;&amp;&amp;&#32;not&#32;KeyDown&#32;&amp;&amp;&#32;not&#32;KeyRight&#32;&amp;&amp;&#32;not&#32;KeyLeft){
+<anchor xml:id="_game_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;((KeyUp&#32;&amp;&amp;&#32;KeyDown)&#32;||&#32;(KeyUp&#32;&amp;&amp;&#32;KeyLeft)&#32;||&#32;(KeyUp&#32;&amp;&amp;&#32;KeyRight)||
+<anchor xml:id="_game_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(KeyDown&#32;&amp;&amp;&#32;KeyLeft)&#32;||&#32;(KeyDown&#32;&amp;&amp;&#32;KeyRight)&#32;||
+<anchor xml:id="_game_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(&#32;KeyRight&#32;&amp;&amp;&#32;KeyLeft)){
+<anchor xml:id="_game_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyUp&#32;&amp;&amp;&#32;Pos.first&#32;&gt;&#32;0&#32;&amp;&amp;&#32;Mat&#32;[Pos.first-1][Pos.second]&#32;!=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;&amp;&amp;&#32;Mat&#32;[Pos.first-1][Pos.second]&#32;!=&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>&#32;&#32;&amp;&amp;&#32;Mat&#32;[Pos.first-1][Pos.second]&#32;!=&#32;<emphasis role="charliteral">&apos;X&apos;</emphasis>&#32;&#32;&amp;&amp;&#32;Mat&#32;[Pos.first-1][Pos.second]&#32;!=&#32;<emphasis role="charliteral">&apos;O&apos;</emphasis>){
+<anchor xml:id="_game_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyDown&#32;&amp;&amp;&#32;Pos.first&#32;&lt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;-1&#32;&amp;&amp;&#32;Mat&#32;[Pos.first+1][Pos.second]&#32;!=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;&amp;&amp;&#32;Mat&#32;[Pos.first+1][Pos.second]&#32;!=&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>&#32;&amp;&amp;&#32;Mat&#32;[Pos.first+1][Pos.second]&#32;!=&#32;<emphasis role="charliteral">&apos;X&apos;</emphasis>&#32;&amp;&amp;&#32;Mat&#32;[Pos.first+1][Pos.second]&#32;!=&#32;<emphasis role="charliteral">&apos;O&apos;</emphasis>){
+<anchor xml:id="_game_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyRight&#32;&amp;&amp;&#32;Pos.second&#32;&lt;&#32;Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>-1&#32;&amp;&amp;&#32;Mat&#32;[Pos.first][Pos.second+1]&#32;!=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;&amp;&amp;&#32;Mat&#32;[Pos.first][Pos.second&#32;+&#32;1]&#32;!=&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>&#32;&amp;&amp;&#32;Mat&#32;[Pos.first][Pos.second&#32;+&#32;1]&#32;!=&#32;<emphasis role="charliteral">&apos;X&apos;</emphasis>&#32;&amp;&amp;&#32;Mat&#32;[Pos.first][Pos.second&#32;+&#32;1]&#32;!=&#32;<emphasis role="charliteral">&apos;O&apos;</emphasis>){
+<anchor xml:id="_game_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(KeyLeft&#32;&amp;&amp;&#32;Pos.second&#32;&gt;&#32;0&#32;&amp;&amp;&#32;Mat&#32;[Pos.first][Pos.second-1]&#32;!=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;&amp;&amp;&#32;Mat&#32;[Pos.first][Pos.second&#32;-&#32;1]&#32;!=&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>&#32;&amp;&amp;&#32;Mat&#32;[Pos.first][Pos.second&#32;-&#32;1]&#32;!=&#32;<emphasis role="charliteral">&apos;X&apos;</emphasis>&#32;&amp;&amp;&#32;Mat&#32;[Pos.first][Pos.second&#32;-&#32;1]&#32;!=&#32;<emphasis role="charliteral">&apos;O&apos;</emphasis>){
+<anchor xml:id="_game_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>{
+<anchor xml:id="_game_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KRed&quot;</emphasis>)-&gt;second);
+<anchor xml:id="_game_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Illegal&#32;Move,&#32;Play&#32;again&#32;!&#32;&quot;</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KReset&quot;</emphasis>)-&gt;second);
+<anchor xml:id="_game_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00055"/>00055 }
+<anchor xml:id="_game_8cpp_source_1l00056"/>00056 
+<anchor xml:id="_game_8cpp_source_1l00057"/>00057 pair&lt;char,&#32;CPosition&gt;&#32;<link linkend="_game_8h_1ad05a86bb0b8cfd683ef1c60bd003e3ce">nextMove</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;Mat,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyUp,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyDown,
+<anchor xml:id="_game_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyRight,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyLeft,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;Pos,
+<anchor xml:id="_game_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;Param,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;Tp1,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;Tp2)&#32;{
+<anchor xml:id="_game_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Retourne&#32;le&#32;contenu&#32;de&#32;la&#32;case&#32;suivante&#32;et&#32;sa&#32;position</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyUp&#32;&amp;&amp;&#32;Pos.first&#32;&gt;&#32;0&#32;&amp;&amp;&#32;Mat[Pos.first&#32;-&#32;1][Pos.second]&#32;!=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>)&#32;{
+<anchor xml:id="_game_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Tp1.first&#32;==&#32;Pos.first&#32;-&#32;1&#32;&amp;&amp;&#32;Tp1.second&#32;==&#32;Pos.second)&#32;{&#32;<emphasis role="comment">//&#32;Si&#32;c&apos;est&#32;Tp1,&#32;aller&#32;vers&#32;Tp2</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Tp2.first-1][Tp2.second],&#32;{Tp2.first&#32;-&#32;1,&#32;Tp2.second}};
+<anchor xml:id="_game_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Tp2.first&#32;==&#32;Pos.first&#32;-&#32;1&#32;&amp;&amp;&#32;Tp2.second&#32;==&#32;Pos.second)&#32;{&#32;<emphasis role="comment">//&#32;Si&#32;c&apos;est&#32;Tp2,&#32;aller&#32;vers&#32;Tp1</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Tp1.first&#32;-&#32;1][Tp1.second],&#32;{Tp1.first&#32;-&#32;1,&#32;Tp1.second}};
+<anchor xml:id="_game_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{&#32;<emphasis role="comment">//&#32;Sinon,&#32;déplacement&#32;normal</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Pos.first&#32;-&#32;1][Pos.second],&#32;{Pos.first&#32;-&#32;1,&#32;Pos.second}};
+<anchor xml:id="_game_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyDown&#32;&amp;&amp;&#32;Pos.first&#32;&lt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;-&#32;1&#32;&amp;&amp;&#32;Mat[Pos.first&#32;+&#32;1][Pos.second]&#32;!=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>)&#32;{
+<anchor xml:id="_game_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Tp1.first&#32;==&#32;Pos.first&#32;+&#32;1&#32;&amp;&amp;&#32;Tp1.second&#32;==&#32;Pos.second)&#32;{&#32;<emphasis role="comment">//&#32;Si&#32;c&apos;est&#32;Tp1,&#32;aller&#32;vers&#32;Tp2</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Tp2.first&#32;+&#32;1][Tp2.second],&#32;{Tp2.first&#32;+&#32;1,&#32;Tp2.second}};
+<anchor xml:id="_game_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Tp2.first&#32;==&#32;Pos.first&#32;+&#32;1&#32;&amp;&amp;&#32;Tp2.second&#32;==&#32;Pos.second)&#32;{&#32;<emphasis role="comment">//&#32;Si&#32;c&apos;est&#32;Tp2,&#32;aller&#32;vers&#32;Tp1</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Tp1.first&#32;+&#32;1][Tp1.second],&#32;{Tp1.first&#32;+&#32;1,&#32;Tp1.second}};
+<anchor xml:id="_game_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{&#32;<emphasis role="comment">//&#32;Sinon,&#32;déplacement&#32;normal</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Pos.first&#32;+&#32;1][Pos.second],&#32;{Pos.first&#32;+&#32;1,&#32;Pos.second}};
+<anchor xml:id="_game_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyRight&#32;&amp;&amp;&#32;Pos.second&#32;&lt;&#32;Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;-&#32;1&#32;&amp;&amp;&#32;Mat[Pos.first][Pos.second&#32;+&#32;1]&#32;!=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>)&#32;{
+<anchor xml:id="_game_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Tp1.first&#32;==&#32;Pos.first&#32;&amp;&amp;&#32;Tp1.second&#32;==&#32;Pos.second&#32;+&#32;1)&#32;{&#32;<emphasis role="comment">//&#32;Si&#32;c&apos;est&#32;Tp1,&#32;aller&#32;vers&#32;Tp2</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Tp2.first][Tp2.second&#32;+&#32;1],&#32;{Tp2.first,&#32;Tp2.second&#32;+&#32;1}};
+<anchor xml:id="_game_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Tp2.first&#32;==&#32;Pos.first&#32;&amp;&amp;&#32;Tp2.second&#32;==&#32;Pos.second&#32;+&#32;1)&#32;{&#32;<emphasis role="comment">//&#32;Si&#32;c&apos;est&#32;Tp2,&#32;aller&#32;vers&#32;Tp1</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Tp1.first][Tp1.second&#32;+&#32;1],&#32;{Tp1.first,&#32;Tp1.second&#32;+&#32;1}};
+<anchor xml:id="_game_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{&#32;<emphasis role="comment">//&#32;Sinon,&#32;déplacement&#32;normal</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Pos.first][Pos.second&#32;+&#32;1],&#32;{Pos.first,&#32;Pos.second&#32;+&#32;1}};
+<anchor xml:id="_game_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyLeft&#32;&amp;&amp;&#32;Pos.second&#32;&gt;&#32;0&#32;&amp;&amp;&#32;Mat[Pos.first][Pos.second&#32;-&#32;1]&#32;!=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>)&#32;{
+<anchor xml:id="_game_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Tp1.first&#32;==&#32;Pos.first&#32;&amp;&amp;&#32;Tp1.second&#32;==&#32;Pos.second&#32;-&#32;1)&#32;{&#32;<emphasis role="comment">//&#32;Si&#32;c&apos;est&#32;Tp1,&#32;aller&#32;vers&#32;Tp2</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Tp2.first][Tp2.second&#32;-&#32;1],&#32;{Tp2.first,&#32;Tp2.second&#32;-&#32;1}};
+<anchor xml:id="_game_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Tp2.first&#32;==&#32;Pos.first&#32;&amp;&amp;&#32;Tp2.second&#32;==&#32;Pos.second&#32;-&#32;1)&#32;{&#32;<emphasis role="comment">//&#32;Si&#32;c&apos;est&#32;Tp2,&#32;aller&#32;vers&#32;Tp1</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Tp1.first][Tp1.second&#32;-&#32;1],&#32;{Tp1.first,&#32;Tp1.second&#32;-&#32;1}};
+<anchor xml:id="_game_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">else</emphasis>&#32;{&#32;<emphasis role="comment">//&#32;Sinon,&#32;déplacement&#32;normal</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;{Mat[Pos.first][Pos.second&#32;-&#32;1],&#32;{Pos.first,&#32;Pos.second&#32;-&#32;1}};
+<anchor xml:id="_game_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00094"/>00094 }
+<anchor xml:id="_game_8cpp_source_1l00095"/>00095 
+<anchor xml:id="_game_8cpp_source_1l00096"/>00096 <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_game_8h_1ae80d4e86d02b962374473e98b15c6a1c">IsCollectible</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;move)&#32;<emphasis role="comment">//&#32;On&#32;check&#32;si&#32;la&#32;case&#32;n&apos;est&#32;ni&#32;un&#32;mur,&#32;ni&#32;un&#32;tp,&#32;ni&#32;une&#32;case&#32;vide</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00097"/>00097 {
+<anchor xml:id="_game_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(move&#32;==&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>&#32;||&#32;move&#32;==&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>&#32;||&#32;move&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>)
+<anchor xml:id="_game_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00102"/>00102 }
+<anchor xml:id="_game_8cpp_source_1l00103"/>00103 
+<anchor xml:id="_game_8cpp_source_1l00104"/>00104 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_game_8h_1a1edb4cf36ce7b698766f4456c2977a4b">CalculateScore</link>(vector&lt;char&gt;&#32;&amp;objets,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;score)
+<anchor xml:id="_game_8cpp_source_1l00105"/>00105 {
+<anchor xml:id="_game_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!objets.empty())&#32;{
+<anchor xml:id="_game_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;item&#32;=&#32;objets.back();
+<anchor xml:id="_game_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;objets.pop_back();
+<anchor xml:id="_game_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(item)&#32;{
+<anchor xml:id="_game_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<emphasis role="charliteral">&apos;S&apos;</emphasis>:&#32;score&#32;+=&#32;350;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<emphasis role="charliteral">&apos;C&apos;</emphasis>:&#32;score&#32;+=&#32;100;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<emphasis role="charliteral">&apos;K&apos;</emphasis>:&#32;score&#32;+=&#32;75;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00115"/>00115 }
+<anchor xml:id="_game_8cpp_source_1l00116"/>00116 
+<anchor xml:id="_game_8cpp_source_1l00117"/>00117 <emphasis role="keywordtype">void</emphasis>&#32;Sprite(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;grid_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;grid_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;pos_y,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_y,&#32;<emphasis role="keywordtype">string</emphasis>&#32;sprite){
+<anchor xml:id="_game_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;<emphasis role="comment">//calcule&#32;la&#32;position&#32;de&#32;la&#32;tuile</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;x0&#32;=&#32;(grid_x*pos_x);&#32;<emphasis role="comment">//&#32;coordonées&#32;x&#32;points&#32;en&#32;haut&#32;a&#32;gauche</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;y0&#32;=&#32;(grid_x*pos_y);&#32;<emphasis role="comment">//&#32;coordonées&#32;y&#32;points&#32;en&#32;haut&#32;a&#32;gauche</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;x1&#32;=&#32;(grid_y*(pos_x+1));&#32;<emphasis role="comment">//&#32;coordonées&#32;x&#32;points&#32;en&#32;bas&#32;a&#32;droite</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;y1&#32;=&#32;(grid_y*(pos_y+1));&#32;<emphasis role="comment">//&#32;coordonées&#32;y&#32;points&#32;en&#32;bas&#32;a&#32;droite</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<emphasis role="comment">//calcul&#32;de&#32;la&#32;position&#32;centrale&#32;du&#32;personnage</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Center1&#32;=&#32;x0+((x1-x0)/2);
+<anchor xml:id="_game_8cpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;Center2&#32;=&#32;y0+((y1-y0)/2);
+<anchor xml:id="_game_8cpp_source_1l00126"/>00126 
+<anchor xml:id="_game_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;<emphasis role="comment">//affiche&#32;le&#32;sprite&#32;correspondant&#32;a&#32;l&apos;élément&#32;de&#32;la&#32;case</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sprite&#32;==&#32;<emphasis role="stringliteral">&quot;player1&quot;</emphasis>)Player1(window,&#32;Center1,&#32;Center2,&#32;mat_x,&#32;mat_y);
+<anchor xml:id="_game_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sprite&#32;==&#32;<emphasis role="stringliteral">&quot;player2&quot;</emphasis>)Player2(window,&#32;Center1,&#32;Center2,&#32;mat_x,&#32;mat_y);
+<anchor xml:id="_game_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sprite&#32;==&#32;<emphasis role="stringliteral">&quot;wall&quot;</emphasis>)<link linkend="_wall_8h_1a9c385c3b12f177f9de1377aa883ba224">Wall</link>(window,&#32;Center1,&#32;Center2,&#32;mat_x,&#32;mat_y);
+<anchor xml:id="_game_8cpp_source_1l00131"/>00131 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sprite&#32;==&#32;<emphasis role="stringliteral">&quot;statue&quot;</emphasis>)Statue(window,&#32;Center1,&#32;Center2,&#32;mat_x,&#32;mat_y);
+<anchor xml:id="_game_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sprite&#32;==&#32;<emphasis role="stringliteral">&quot;cigarette&quot;</emphasis>)<link linkend="_cigarette_8h_1af7fde47c9ef13a0f15f176f8c7a9f52c">Cigarette</link>(window,&#32;Center1,&#32;Center2,&#32;mat_x,&#32;mat_y);
+<anchor xml:id="_game_8cpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sprite&#32;==&#32;<emphasis role="stringliteral">&quot;kebab&quot;</emphasis>)Kebab(window,&#32;Center1,&#32;Center2,&#32;mat_x,&#32;mat_y);
+<anchor xml:id="_game_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sprite&#32;==&#32;<emphasis role="stringliteral">&quot;teleporter&quot;</emphasis>)Teleporter(window,&#32;Center1,&#32;Center2,&#32;mat_x,&#32;mat_y);
+<anchor xml:id="_game_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(sprite&#32;==&#32;<emphasis role="stringliteral">&quot;monstre&quot;</emphasis>)Monstre(window,&#32;Center1,&#32;Center2,&#32;mat_x,&#32;mat_y);
+<anchor xml:id="_game_8cpp_source_1l00136"/>00136 }
+<anchor xml:id="_game_8cpp_source_1l00137"/>00137 
+<anchor xml:id="_game_8cpp_source_1l00138"/>00138 <emphasis role="keywordtype">void</emphasis>&#32;DisplayGrid&#32;(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;&#32;mat,&#32;tuple&#32;&lt;int,&#32;int&gt;&#32;Screen_size){
+<anchor xml:id="_game_8cpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(0,&#32;0),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(120,&#32;50),&#32;nsGraphics::KBlueTransparent);
+<anchor xml:id="_game_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_x&#32;=&#32;size(mat);
+<anchor xml:id="_game_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_y&#32;=&#32;size(mat[0]);
+<anchor xml:id="_game_8cpp_source_1l00142"/>00142 
+<anchor xml:id="_game_8cpp_source_1l00143"/>00143 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;grid_x&#32;=&#32;get&lt;0&gt;(Screen_size)/mat_x;
+<anchor xml:id="_game_8cpp_source_1l00144"/>00144 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;grid_y&#32;=&#32;get&lt;1&gt;(Screen_size)/mat_y;
+<anchor xml:id="_game_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;std::map&#32;&lt;char,&#32;string&gt;&#32;sprits&#32;=&#32;{
+<anchor xml:id="_game_8cpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;X&apos;</emphasis>&#32;,&#32;<emphasis role="stringliteral">&quot;player1&quot;</emphasis>&#32;},
+<anchor xml:id="_game_8cpp_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;O&apos;</emphasis>&#32;,&#32;<emphasis role="stringliteral">&quot;player2&quot;</emphasis>&#32;},
+<anchor xml:id="_game_8cpp_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;,&#32;<emphasis role="stringliteral">&quot;wall&quot;</emphasis>&#32;},
+<anchor xml:id="_game_8cpp_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;S&apos;</emphasis>&#32;,&#32;<emphasis role="stringliteral">&quot;statue&quot;</emphasis>&#32;},
+<anchor xml:id="_game_8cpp_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;A&apos;</emphasis>&#32;,&#32;<emphasis role="stringliteral">&quot;monstre&quot;</emphasis>&#32;},
+<anchor xml:id="_game_8cpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;C&apos;</emphasis>&#32;,&#32;<emphasis role="stringliteral">&quot;cigarette&quot;</emphasis>&#32;},
+<anchor xml:id="_game_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;K&apos;</emphasis>&#32;,&#32;<emphasis role="stringliteral">&quot;kebab&quot;</emphasis>&#32;},
+<anchor xml:id="_game_8cpp_source_1l00153"/>00153 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;T&apos;</emphasis>&#32;,&#32;<emphasis role="stringliteral">&quot;teleporter&quot;</emphasis>&#32;}
+<anchor xml:id="_game_8cpp_source_1l00154"/>00154 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_game_8cpp_source_1l00155"/>00155 
+<anchor xml:id="_game_8cpp_source_1l00156"/>00156 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;i=0;&#32;i&#32;&lt;&#32;mat_x;&#32;++i){
+<anchor xml:id="_game_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">int</emphasis>&#32;j=0;&#32;j&#32;&lt;&#32;mat_y;&#32;++j){
+<anchor xml:id="_game_8cpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Sprite(window,&#32;grid_x,&#32;grid_y,&#32;i,&#32;j,&#32;mat_x,&#32;mat_y,&#32;sprits[mat[j][i]]);
+<anchor xml:id="_game_8cpp_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00161"/>00161 }
+<anchor xml:id="_game_8cpp_source_1l00162"/>00162 
+<anchor xml:id="_game_8cpp_source_1l00163"/>00163 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_game_8h_1a8307899b579b12370e9fd3e399e42d04">MoveToken</link>&#32;(<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;Mat,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyUp,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyDown,
+<anchor xml:id="_game_8cpp_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyRight,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&#32;&amp;&#32;KeyLeft,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;Pos,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;Tp1,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;Tp2){
+<anchor xml:id="_game_8cpp_source_1l00165"/>00165 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;car&#32;=&#32;Mat&#32;[Pos.first][Pos.second];
+<anchor xml:id="_game_8cpp_source_1l00166"/>00166 &#32;&#32;&#32;&#32;Mat&#32;[Pos.first][Pos.second]&#32;=&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>;
+<anchor xml:id="_game_8cpp_source_1l00167"/>00167 
+<anchor xml:id="_game_8cpp_source_1l00168"/>00168 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyUp){
+<anchor xml:id="_game_8cpp_source_1l00169"/>00169 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;--Pos.first;
+<anchor xml:id="_game_8cpp_source_1l00170"/>00170 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyDown){
+<anchor xml:id="_game_8cpp_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;++Pos.first;
+<anchor xml:id="_game_8cpp_source_1l00172"/>00172 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyRight){
+<anchor xml:id="_game_8cpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;++Pos.second;
+<anchor xml:id="_game_8cpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(KeyLeft){
+<anchor xml:id="_game_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;--Pos.second;
+<anchor xml:id="_game_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00177"/>00177 
+<anchor xml:id="_game_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;vector&#32;&lt;CPosition&gt;&#32;PosTP&#32;=&#32;{Tp1,Tp2};
+<anchor xml:id="_game_8cpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">unsigned</emphasis>&#32;i&#32;=&#32;0;i&#32;&lt;&#32;2;&#32;++i){
+<anchor xml:id="_game_8cpp_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Pos&#32;==&#32;PosTP[i]){
+<anchor xml:id="_game_8cpp_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Pos.first&#32;=&#32;PosTP[(i+1)%2].first;
+<anchor xml:id="_game_8cpp_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Pos.second&#32;=&#32;PosTP[(i+1)%2].second;
+<anchor xml:id="_game_8cpp_source_1l00183"/>00183 
+<anchor xml:id="_game_8cpp_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyUp){
+<anchor xml:id="_game_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;--Pos.first;
+<anchor xml:id="_game_8cpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyDown){
+<anchor xml:id="_game_8cpp_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;++Pos.first;
+<anchor xml:id="_game_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(KeyRight){
+<anchor xml:id="_game_8cpp_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;++Pos.second;
+<anchor xml:id="_game_8cpp_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(KeyLeft){
+<anchor xml:id="_game_8cpp_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;--Pos.second;
+<anchor xml:id="_game_8cpp_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[PosTP[i].first][PosTP[i].second]&#32;=&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00195"/>00195 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00196"/>00196 
+<anchor xml:id="_game_8cpp_source_1l00197"/>00197 &#32;&#32;&#32;&#32;Mat&#32;[Pos.first][Pos.second]&#32;=&#32;car;
+<anchor xml:id="_game_8cpp_source_1l00198"/>00198 
+<anchor xml:id="_game_8cpp_source_1l00199"/>00199 }&#32;<emphasis role="comment">//MoveToken&#32;()</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00200"/>00200 
+<anchor xml:id="_game_8cpp_source_1l00201"/>00201 <emphasis role="keywordtype">void</emphasis>&#32;MenuP(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;vector&lt;tuple&lt;vector&lt;int&gt;,&#32;vector&lt;int&gt;,&#32;<emphasis role="keywordtype">int</emphasis>&gt;&gt;&#32;clickablepool,
+<anchor xml:id="_game_8cpp_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tuple&#32;&lt;int,&#32;int&gt;&#32;Screen_size,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;&#32;menuid,&#32;chrono::time_point&lt;chrono::steady_clock&gt;&#32;start){
+<anchor xml:id="_game_8cpp_source_1l00203"/>00203 &#32;&#32;&#32;&#32;clickablepool.clear();
+<anchor xml:id="_game_8cpp_source_1l00204"/>00204 &#32;&#32;&#32;&#32;clickablepool&#32;=&#32;{
+<anchor xml:id="_game_8cpp_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_tuple(std::vector&lt;int&gt;{100,&#32;48},&#32;std::vector&lt;int&gt;{300,&#32;148},&#32;4),
+<anchor xml:id="_game_8cpp_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_tuple(std::vector&lt;int&gt;{100,&#32;196},&#32;std::vector&lt;int&gt;{300,&#32;296},&#32;1),
+<anchor xml:id="_game_8cpp_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_tuple(std::vector&lt;int&gt;{100,&#32;344},&#32;std::vector&lt;int&gt;{300,&#32;444},&#32;2),
+<anchor xml:id="_game_8cpp_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_tuple(std::vector&lt;int&gt;{100,&#32;492},&#32;std::vector&lt;int&gt;{300,&#32;592},&#32;6)
+<anchor xml:id="_game_8cpp_source_1l00209"/>00209 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_game_8cpp_source_1l00210"/>00210 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(menuid&#32;==&#32;0){
+<anchor xml:id="_game_8cpp_source_1l00211"/>00211 
+<anchor xml:id="_game_8cpp_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a86c940758616957683ffb2e239bba774">clearScreen</link>();
+<anchor xml:id="_game_8cpp_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InterfaceMenuP(window,&#32;get&lt;0&gt;(Screen_size),&#32;get&lt;1&gt;(Screen_size));
+<anchor xml:id="_game_8cpp_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link>();
+<anchor xml:id="_game_8cpp_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;events(window,&#32;clickablepool,&#32;menuid);
+<anchor xml:id="_game_8cpp_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link>().<link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">clearEvents</link>();
+<anchor xml:id="_game_8cpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this_thread::sleep_for(chrono::milliseconds(1000&#32;/&#32;FPS_LIMIT)&#32;-&#32;chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()&#32;-&#32;start));
+<anchor xml:id="_game_8cpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00219"/>00219 }
+<anchor xml:id="_game_8cpp_source_1l00220"/>00220 
+<anchor xml:id="_game_8cpp_source_1l00221"/>00221 <emphasis role="keywordtype">void</emphasis>&#32;Options(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;vector&lt;tuple&lt;vector&lt;int&gt;,&#32;vector&lt;int&gt;,&#32;<emphasis role="keywordtype">int</emphasis>&gt;&gt;&#32;clickablepool,&#32;tuple&#32;&lt;int,&#32;int&gt;&#32;Screen_size,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;&#32;menuid,&#32;chrono::time_point&lt;chrono::steady_clock&gt;&#32;start){
+<anchor xml:id="_game_8cpp_source_1l00222"/>00222 &#32;&#32;&#32;&#32;clickablepool.clear();
+<anchor xml:id="_game_8cpp_source_1l00223"/>00223 &#32;&#32;&#32;&#32;clickablepool&#32;=&#32;{
+<anchor xml:id="_game_8cpp_source_1l00224"/>00224 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_tuple(std::vector&lt;int&gt;{0,&#32;0},&#32;std::vector&lt;int&gt;{120,&#32;50},&#32;0)
+<anchor xml:id="_game_8cpp_source_1l00225"/>00225 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_game_8cpp_source_1l00226"/>00226 
+<anchor xml:id="_game_8cpp_source_1l00227"/>00227 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(menuid&#32;==&#32;1){
+<anchor xml:id="_game_8cpp_source_1l00228"/>00228 
+<anchor xml:id="_game_8cpp_source_1l00229"/>00229 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a86c940758616957683ffb2e239bba774">clearScreen</link>();
+<anchor xml:id="_game_8cpp_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InterfaceOptions(window,&#32;get&lt;0&gt;(Screen_size),&#32;get&lt;1&gt;(Screen_size));
+<anchor xml:id="_game_8cpp_source_1l00231"/>00231 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link>();
+<anchor xml:id="_game_8cpp_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;events(window,&#32;clickablepool,&#32;menuid);
+<anchor xml:id="_game_8cpp_source_1l00233"/>00233 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link>().<link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">clearEvents</link>();
+<anchor xml:id="_game_8cpp_source_1l00234"/>00234 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this_thread::sleep_for(chrono::milliseconds(1000&#32;/&#32;FPS_LIMIT)&#32;-&#32;chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()&#32;-&#32;start));
+<anchor xml:id="_game_8cpp_source_1l00235"/>00235 
+<anchor xml:id="_game_8cpp_source_1l00236"/>00236 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00237"/>00237 }
+<anchor xml:id="_game_8cpp_source_1l00238"/>00238 
+<anchor xml:id="_game_8cpp_source_1l00239"/>00239 <emphasis role="keywordtype">void</emphasis>&#32;Credits(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;vector&lt;tuple&lt;vector&lt;int&gt;,&#32;vector&lt;int&gt;,&#32;<emphasis role="keywordtype">int</emphasis>&gt;&gt;&#32;clickablepool,
+<anchor xml:id="_game_8cpp_source_1l00240"/>00240 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tuple&#32;&lt;int,&#32;int&gt;&#32;Screen_size,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;&#32;menuid,&#32;chrono::time_point&lt;chrono::steady_clock&gt;&#32;start){
+<anchor xml:id="_game_8cpp_source_1l00241"/>00241 &#32;&#32;&#32;&#32;clickablepool.clear();
+<anchor xml:id="_game_8cpp_source_1l00242"/>00242 &#32;&#32;&#32;&#32;clickablepool&#32;=&#32;{
+<anchor xml:id="_game_8cpp_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_tuple(std::vector&lt;int&gt;{0,&#32;0},&#32;std::vector&lt;int&gt;{120,&#32;50},&#32;0)
+<anchor xml:id="_game_8cpp_source_1l00244"/>00244 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_game_8cpp_source_1l00245"/>00245 
+<anchor xml:id="_game_8cpp_source_1l00246"/>00246 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(menuid&#32;==&#32;2){
+<anchor xml:id="_game_8cpp_source_1l00247"/>00247 
+<anchor xml:id="_game_8cpp_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InterfaceCredits(window,&#32;get&lt;0&gt;(Screen_size),&#32;get&lt;1&gt;(Screen_size));
+<anchor xml:id="_game_8cpp_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link>();
+<anchor xml:id="_game_8cpp_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;events(window,&#32;clickablepool,&#32;menuid);
+<anchor xml:id="_game_8cpp_source_1l00251"/>00251 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link>().<link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">clearEvents</link>();
+<anchor xml:id="_game_8cpp_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this_thread::sleep_for(chrono::milliseconds(1000&#32;/&#32;FPS_LIMIT)&#32;-&#32;chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()&#32;-&#32;start));
+<anchor xml:id="_game_8cpp_source_1l00253"/>00253 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00254"/>00254 }
+<anchor xml:id="_game_8cpp_source_1l00255"/>00255 
+<anchor xml:id="_game_8cpp_source_1l00256"/>00256 <emphasis role="keywordtype">void</emphasis>&#32;Pause(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;vector&lt;tuple&lt;vector&lt;int&gt;,&#32;vector&lt;int&gt;,&#32;<emphasis role="keywordtype">int</emphasis>&gt;&gt;&#32;clickablepool,
+<anchor xml:id="_game_8cpp_source_1l00257"/>00257 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tuple&#32;&lt;int,&#32;int&gt;&#32;Screen_size,&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;&#32;menuid,&#32;chrono::time_point&lt;chrono::steady_clock&gt;&#32;start){
+<anchor xml:id="_game_8cpp_source_1l00258"/>00258 &#32;&#32;&#32;&#32;clickablepool.clear();
+<anchor xml:id="_game_8cpp_source_1l00259"/>00259 &#32;&#32;&#32;&#32;clickablepool&#32;=&#32;{
+<anchor xml:id="_game_8cpp_source_1l00260"/>00260 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_tuple(std::vector&lt;int&gt;{100,&#32;48},&#32;std::vector&lt;int&gt;{300,&#32;148},&#32;4),
+<anchor xml:id="_game_8cpp_source_1l00261"/>00261 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_tuple(std::vector&lt;int&gt;{100,&#32;196},&#32;std::vector&lt;int&gt;{300,&#32;296},&#32;5),
+<anchor xml:id="_game_8cpp_source_1l00262"/>00262 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_tuple(std::vector&lt;int&gt;{100,&#32;344},&#32;std::vector&lt;int&gt;{300,&#32;444},&#32;0),
+<anchor xml:id="_game_8cpp_source_1l00263"/>00263 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="_game_8cpp_source_1l00264"/>00264 
+<anchor xml:id="_game_8cpp_source_1l00265"/>00265 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(menuid&#32;==&#32;3){
+<anchor xml:id="_game_8cpp_source_1l00266"/>00266 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InterfacePause(window,&#32;get&lt;0&gt;(Screen_size),&#32;get&lt;1&gt;(Screen_size));
+<anchor xml:id="_game_8cpp_source_1l00267"/>00267 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link>();
+<anchor xml:id="_game_8cpp_source_1l00268"/>00268 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;events(window,&#32;clickablepool,&#32;menuid);
+<anchor xml:id="_game_8cpp_source_1l00269"/>00269 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link>().<link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">clearEvents</link>();
+<anchor xml:id="_game_8cpp_source_1l00270"/>00270 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this_thread::sleep_for(chrono::milliseconds(1000&#32;/&#32;FPS_LIMIT)&#32;-&#32;chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()&#32;-&#32;start));
+<anchor xml:id="_game_8cpp_source_1l00271"/>00271 
+<anchor xml:id="_game_8cpp_source_1l00272"/>00272 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00273"/>00273 }
+<anchor xml:id="_game_8cpp_source_1l00274"/>00274 
+<anchor xml:id="_game_8cpp_source_1l00275"/>00275 <emphasis role="keywordtype">void</emphasis>&#32;GameLoop(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;vector&lt;tuple&lt;vector&lt;int&gt;,&#32;vector&lt;int&gt;,&#32;<emphasis role="keywordtype">int</emphasis>&gt;&gt;clickablepool,<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;Mat,&#32;<emphasis role="keywordtype">int</emphasis>&#32;menuid,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;PartyNum,
+<anchor xml:id="_game_8cpp_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key1_UP,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key1_DOWN,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key1_RIGHT,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key1_LEFT,
+<anchor xml:id="_game_8cpp_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key2_UP,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key2_DOWN,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key2_RIGHT,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key2_LEFT,
+<anchor xml:id="_game_8cpp_source_1l00278"/>00278 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;tuple&#32;&lt;int,&#32;int&gt;&#32;Screen_size,&#32;<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;param,
+<anchor xml:id="_game_8cpp_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Victory,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;KMaxPartyNum,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;PosPlayer1,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;PosPlayer2,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;PosTP1,
+<anchor xml:id="_game_8cpp_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;PosTP2,&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Player1Turn,&#32;pair&lt;char,CPosition&gt;&#32;N_move1,&#32;pair&lt;char,CPosition&gt;&#32;N_move2,
+<anchor xml:id="_game_8cpp_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vector&lt;char&gt;&#32;objetJ1,&#32;vector&lt;char&gt;&#32;objetJ2,
+<anchor xml:id="_game_8cpp_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;scoreJ1,&#32;<emphasis role="keywordtype">int</emphasis>&#32;scoreJ2,&#32;vector&#32;&lt;CPosition&gt;&#32;PosMonster){
+<anchor xml:id="_game_8cpp_source_1l00283"/>00283 &#32;&#32;&#32;&#32;clickablepool.clear();
+<anchor xml:id="_game_8cpp_source_1l00284"/>00284 &#32;&#32;&#32;&#32;clickablepool&#32;=&#32;{
+<anchor xml:id="_game_8cpp_source_1l00285"/>00285 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::make_tuple(std::vector&lt;int&gt;{0,&#32;0},&#32;std::vector&lt;int&gt;{120,&#32;50},&#32;1),
+<anchor xml:id="_game_8cpp_source_1l00286"/>00286 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;};
+<anchor xml:id="_game_8cpp_source_1l00287"/>00287 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(0,&#32;0),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(120,&#32;50),&#32;nsGraphics::KBlue);
+<anchor xml:id="_game_8cpp_source_1l00288"/>00288 
+<anchor xml:id="_game_8cpp_source_1l00289"/>00289 &#32;&#32;&#32;&#32;DisplayGrid(window,&#32;Mat,&#32;Screen_size);
+<anchor xml:id="_game_8cpp_source_1l00290"/>00290 &#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link>();
+<anchor xml:id="_game_8cpp_source_1l00291"/>00291 
+<anchor xml:id="_game_8cpp_source_1l00292"/>00292 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;i;
+<anchor xml:id="_game_8cpp_source_1l00293"/>00293 &#32;&#32;&#32;&#32;i&#32;=&#32;0;
+<anchor xml:id="_game_8cpp_source_1l00294"/>00294 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>(PartyNum&#32;&lt;=&#32;KMaxPartyNum&#32;&amp;&amp;&#32;!Victory&#32;&amp;&amp;&#32;window.<link linkend="_class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d">isOpen</link>()&#32;&amp;&amp;&#32;(menuid&#32;==&#32;4)){
+<anchor xml:id="_game_8cpp_source_1l00295"/>00295 
+<anchor xml:id="_game_8cpp_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;chrono::time_point&lt;chrono::steady_clock&gt;&#32;start&#32;=&#32;chrono::steady_clock::now();
+<anchor xml:id="_game_8cpp_source_1l00297"/>00297 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a86c940758616957683ffb2e239bba774">clearScreen</link>();
+<anchor xml:id="_game_8cpp_source_1l00298"/>00298 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayGrid(window,&#32;Mat,&#32;Screen_size);
+<anchor xml:id="_game_8cpp_source_1l00299"/>00299 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link>();
+<anchor xml:id="_game_8cpp_source_1l00300"/>00300 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key1_RIGHT&#32;=&#32;window.MinGL::isPressed({param.<link linkend="_struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5">Key1Right</link>,<emphasis role="keyword">false</emphasis>})&#32;||&#32;window.MinGL::isPressed({toupper(param.Key1Right),false});
+<anchor xml:id="_game_8cpp_source_1l00301"/>00301 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key1_LEFT&#32;&#32;=&#32;window.MinGL::isPressed({param.<link linkend="_struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef">Key1Left</link>,&#32;<emphasis role="keyword">false</emphasis>})&#32;||&#32;window.MinGL::isPressed({toupper(param.Key1Left),&#32;false});
+<anchor xml:id="_game_8cpp_source_1l00302"/>00302 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key1_UP&#32;&#32;&#32;&#32;=&#32;window.MinGL::isPressed({param.<link linkend="_struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123">Key1Up</link>,&#32;&#32;&#32;<emphasis role="keyword">false</emphasis>})&#32;||&#32;window.MinGL::isPressed({toupper(param.Key1Up),&#32;&#32;&#32;false});
+<anchor xml:id="_game_8cpp_source_1l00303"/>00303 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key1_DOWN&#32;&#32;=&#32;window.MinGL::isPressed({param.<link linkend="_struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d">Key1Down</link>,&#32;<emphasis role="keyword">false</emphasis>})&#32;||&#32;window.MinGL::isPressed({toupper(param.Key1Down),&#32;false});
+<anchor xml:id="_game_8cpp_source_1l00304"/>00304 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Key1_UP&#32;||&#32;Key1_DOWN){
+<anchor xml:id="_game_8cpp_source_1l00305"/>00305 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key1_RIGHT&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00306"/>00306 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key1_LEFT&#32;&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00307"/>00307 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00308"/>00308 
+<anchor xml:id="_game_8cpp_source_1l00309"/>00309 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key2_RIGHT&#32;=&#32;window.MinGL::isPressed({param.<link linkend="_struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc">Key2Right</link>,<emphasis role="keyword">false</emphasis>})&#32;||&#32;window.MinGL::isPressed({toupper(param.Key2Right),false});
+<anchor xml:id="_game_8cpp_source_1l00310"/>00310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key2_LEFT&#32;&#32;=&#32;window.MinGL::isPressed({param.<link linkend="_struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6">Key2Left</link>,&#32;<emphasis role="keyword">false</emphasis>})&#32;||&#32;window.MinGL::isPressed({toupper(param.Key2Left),&#32;false});
+<anchor xml:id="_game_8cpp_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key2_UP&#32;&#32;&#32;&#32;=&#32;window.MinGL::isPressed({param.<link linkend="_struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901">Key2Up</link>,&#32;&#32;&#32;<emphasis role="keyword">false</emphasis>})&#32;||&#32;window.MinGL::isPressed({toupper(param.Key2Up),&#32;&#32;&#32;false});
+<anchor xml:id="_game_8cpp_source_1l00312"/>00312 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key2_DOWN&#32;&#32;=&#32;window.MinGL::isPressed({param.<link linkend="_struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1">Key2Down</link>,&#32;<emphasis role="keyword">false</emphasis>})&#32;||&#32;window.MinGL::isPressed({toupper(param.Key2Down),&#32;false});
+<anchor xml:id="_game_8cpp_source_1l00313"/>00313 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(Key2_UP&#32;||&#32;Key2_DOWN){
+<anchor xml:id="_game_8cpp_source_1l00314"/>00314 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key2_RIGHT&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00315"/>00315 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key2_LEFT&#32;&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00316"/>00316 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00317"/>00317 
+<anchor xml:id="_game_8cpp_source_1l00318"/>00318 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((Key1_UP&#32;||&#32;Key1_DOWN&#32;||&#32;Key1_RIGHT&#32;||&#32;Key1_LEFT)&#32;&amp;&amp;
+<anchor xml:id="_game_8cpp_source_1l00319"/>00319 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_game_8h_1aeb06160be5949a49243364c546d6abb6">IsMoveLegal</link>(Mat,&#32;Key1_UP,&#32;Key1_DOWN,&#32;Key1_RIGHT,&#32;Key1_LEFT,&#32;PosPlayer1,&#32;param)){
+<anchor xml:id="_game_8cpp_source_1l00320"/>00320 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;N_move1&#32;=&#32;<link linkend="_game_8h_1ad05a86bb0b8cfd683ef1c60bd003e3ce">nextMove</link>(Mat,&#32;Key1_UP,&#32;Key1_DOWN,&#32;Key1_RIGHT,&#32;Key1_LEFT,&#32;PosPlayer1,&#32;param,&#32;PosTP1,&#32;PosTP2);
+<anchor xml:id="_game_8cpp_source_1l00321"/>00321 
+<anchor xml:id="_game_8cpp_source_1l00322"/>00322 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;check&#32;si&#32;il&#32;ya&#32;un&#32;objet&#32;=&gt;&#32;ajouter&#32;a&#32;une&#32;liste</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00323"/>00323 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_game_8h_1ae80d4e86d02b962374473e98b15c6a1c">IsCollectible</link>(N_move1.first))
+<anchor xml:id="_game_8cpp_source_1l00324"/>00324 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_game_8cpp_source_1l00325"/>00325 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;objetJ1.push_back(N_move1.first);
+<anchor xml:id="_game_8cpp_source_1l00326"/>00326 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00327"/>00327 
+<anchor xml:id="_game_8cpp_source_1l00328"/>00328 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;check&#32;si&#32;joueur&#32;arrive&#32;a&#32;la&#32;maison&#32;=&gt;&#32;vide&#32;ses&#32;poches&#32;(comptage&#32;du&#32;score)</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(N_move1.second.first&#32;==&#32;0&#32;&amp;&amp;&#32;N_move1.second.second&#32;==&#32;param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;-&#32;1)
+<anchor xml:id="_game_8cpp_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_game_8h_1a1edb4cf36ce7b698766f4456c2977a4b">CalculateScore</link>(objetJ1,&#32;scoreJ1);
+<anchor xml:id="_game_8cpp_source_1l00331"/>00331 
+<anchor xml:id="_game_8cpp_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_game_8h_1a8307899b579b12370e9fd3e399e42d04">MoveToken</link>(Mat,&#32;Key1_UP,&#32;Key1_DOWN,&#32;Key1_RIGHT,&#32;Key1_LEFT,&#32;PosPlayer1,&#32;PosTP1,&#32;PosTP2);
+<anchor xml:id="_game_8cpp_source_1l00333"/>00333 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00334"/>00334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((Key2_UP&#32;||&#32;Key2_DOWN&#32;||&#32;Key2_RIGHT&#32;||&#32;Key2_LEFT)&#32;&amp;&amp;
+<anchor xml:id="_game_8cpp_source_1l00335"/>00335 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_game_8h_1aeb06160be5949a49243364c546d6abb6">IsMoveLegal</link>(Mat,&#32;Key2_UP,&#32;Key2_DOWN,&#32;Key2_RIGHT,&#32;Key2_LEFT,&#32;PosPlayer2,&#32;param)){
+<anchor xml:id="_game_8cpp_source_1l00336"/>00336 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;N_move2&#32;=&#32;<link linkend="_game_8h_1ad05a86bb0b8cfd683ef1c60bd003e3ce">nextMove</link>(Mat,&#32;Key2_UP,&#32;Key2_DOWN,&#32;Key2_RIGHT,&#32;Key2_LEFT,&#32;PosPlayer2,&#32;param,&#32;PosTP1,&#32;PosTP2);
+<anchor xml:id="_game_8cpp_source_1l00337"/>00337 
+<anchor xml:id="_game_8cpp_source_1l00338"/>00338 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;check&#32;si&#32;il&#32;ya&#32;un&#32;objet&#32;=&gt;&#32;ajouter&#32;a&#32;une&#32;liste</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00339"/>00339 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(<link linkend="_game_8h_1ae80d4e86d02b962374473e98b15c6a1c">IsCollectible</link>(N_move2.first))
+<anchor xml:id="_game_8cpp_source_1l00340"/>00340 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_game_8cpp_source_1l00341"/>00341 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;objetJ2.push_back(N_move2.first);
+<anchor xml:id="_game_8cpp_source_1l00342"/>00342 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00343"/>00343 
+<anchor xml:id="_game_8cpp_source_1l00344"/>00344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;check&#32;si&#32;joueur&#32;arrive&#32;a&#32;la&#32;maison&#32;=&gt;&#32;vide&#32;ses&#32;poches&#32;(comptage&#32;du&#32;score)</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00345"/>00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(N_move2.second.first&#32;==&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;-&#32;1&#32;&amp;&amp;&#32;N_move2.second.second&#32;==&#32;0)
+<anchor xml:id="_game_8cpp_source_1l00346"/>00346 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_game_8h_1a1edb4cf36ce7b698766f4456c2977a4b">CalculateScore</link>(objetJ2,scoreJ2);
+<anchor xml:id="_game_8cpp_source_1l00347"/>00347 
+<anchor xml:id="_game_8cpp_source_1l00348"/>00348 
+<anchor xml:id="_game_8cpp_source_1l00349"/>00349 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_game_8h_1a8307899b579b12370e9fd3e399e42d04">MoveToken</link>(Mat,&#32;Key2_UP,&#32;Key2_DOWN,&#32;Key2_RIGHT,&#32;Key2_LEFT,&#32;PosPlayer2,&#32;PosTP1,&#32;PosTP2);
+<anchor xml:id="_game_8cpp_source_1l00350"/>00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00351"/>00351 
+<anchor xml:id="_game_8cpp_source_1l00352"/>00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//on&#32;fait&#32;jouer&#32;le&#32;bot&#32;1fois/2&#32;sinon&#32;il&#32;aurait&#32;trop&#32;d&apos;avantage</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00353"/>00353 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(i%5&#32;==&#32;0)
+<anchor xml:id="_game_8cpp_source_1l00354"/>00354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1ab909b1026fe66b4055c0be20cd67582f">MoveMonster</link>(PosMonster,&#32;Mat,&#32;param,&#32;PosPlayer1,&#32;PosPlayer2);
+<anchor xml:id="_game_8cpp_source_1l00355"/>00355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;++i;
+<anchor xml:id="_game_8cpp_source_1l00356"/>00356 
+<anchor xml:id="_game_8cpp_source_1l00357"/>00357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[PosPlayer1.first][PosPlayer1.second]&#32;=&#32;param.<link linkend="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6">tokenP1</link>;
+<anchor xml:id="_game_8cpp_source_1l00358"/>00358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[PosPlayer2.first][PosPlayer2.second]&#32;=&#32;param.<link linkend="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6">tokenP2</link>;
+<anchor xml:id="_game_8cpp_source_1l00359"/>00359 
+<anchor xml:id="_game_8cpp_source_1l00360"/>00360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//check&#32;if&#32;Monster&#32;on&#32;player</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00361"/>00361 
+<anchor xml:id="_game_8cpp_source_1l00362"/>00362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;posmonst&#32;:&#32;PosMonster){
+<anchor xml:id="_game_8cpp_source_1l00363"/>00363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(posmonst&#32;==&#32;PosPlayer1&#32;||&#32;posmonst&#32;==&#32;PosPlayer2)
+<anchor xml:id="_game_8cpp_source_1l00364"/>00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_game_8cpp_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(posmonst&#32;==&#32;PosPlayer1){
+<anchor xml:id="_game_8cpp_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[PosPlayer1.first][PosPlayer1.second]&#32;=&#32;param.<link linkend="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6">tokenP1</link>;
+<anchor xml:id="_game_8cpp_source_1l00367"/>00367 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scoreJ1&#32;=&#32;scoreJ1&#32;-&#32;(param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;+&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>)*2;
+<anchor xml:id="_game_8cpp_source_1l00368"/>00368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00369"/>00369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(posmonst&#32;==&#32;PosPlayer2)
+<anchor xml:id="_game_8cpp_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_game_8cpp_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[PosPlayer2.first][PosPlayer2.second]&#32;=&#32;param.<link linkend="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6">tokenP2</link>;
+<anchor xml:id="_game_8cpp_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scoreJ2&#32;=&#32;scoreJ2&#32;-&#32;(param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;+&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>)*2;
+<anchor xml:id="_game_8cpp_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00374"/>00374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[posmonst.first][posmonst.second]&#32;=&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>;
+<anchor xml:id="_game_8cpp_source_1l00375"/>00375 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{
+<anchor xml:id="_game_8cpp_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//replacer&#32;les&#32;montres&#32;plutot&#32;au&#32;centre</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;posmonst&#32;=&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>((rand()%param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>/2)&#32;+&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>/4,
+<anchor xml:id="_game_8cpp_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(rand()%param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>/2)&#32;+&#32;param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>/4);
+<anchor xml:id="_game_8cpp_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">while</emphasis>(Mat[posmonst.first][posmonst.second]&#32;!=&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>);
+<anchor xml:id="_game_8cpp_source_1l00380"/>00380 
+<anchor xml:id="_game_8cpp_source_1l00381"/>00381 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[posmonst.first][posmonst.second]&#32;=&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00382"/>00382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00383"/>00383 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00384"/>00384 
+<anchor xml:id="_game_8cpp_source_1l00385"/>00385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;DisplayGrid(Mat,&#32;param);
+<anchor xml:id="_game_8cpp_source_1l00386"/>00386 
+<anchor xml:id="_game_8cpp_source_1l00387"/>00387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link>();
+<anchor xml:id="_game_8cpp_source_1l00388"/>00388 
+<anchor xml:id="_game_8cpp_source_1l00389"/>00389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;events(window,&#32;clickablepool,&#32;menuid);
+<anchor xml:id="_game_8cpp_source_1l00390"/>00390 
+<anchor xml:id="_game_8cpp_source_1l00391"/>00391 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;vide&#32;la&#32;queue&#32;d&apos;évènements</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00392"/>00392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link>().<link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">clearEvents</link>();
+<anchor xml:id="_game_8cpp_source_1l00393"/>00393 
+<anchor xml:id="_game_8cpp_source_1l00394"/>00394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;attend&#32;un&#32;peu&#32;pour&#32;limiter&#32;le&#32;framerate&#32;et&#32;soulager&#32;le&#32;CPU</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00395"/>00395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this_thread::sleep_for(chrono::milliseconds(1000&#32;/&#32;FPS_LIMIT)&#32;-&#32;chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()&#32;-&#32;start));
+<anchor xml:id="_game_8cpp_source_1l00396"/>00396 
+<anchor xml:id="_game_8cpp_source_1l00397"/>00397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Victory&#32;test</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00398"/>00398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(PosPlayer1&#32;==&#32;PosPlayer2)&#32;Victory&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00399"/>00399 
+<anchor xml:id="_game_8cpp_source_1l00400"/>00400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((scoreJ2&#32;&gt;&#32;0&#32;&amp;&amp;&#32;<emphasis role="keywordtype">size_t</emphasis>(scoreJ2)&#32;&gt;&#32;(param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>+param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>)*15))&#32;Victory&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00401"/>00401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;((scoreJ1&#32;&gt;&#32;0&#32;&#32;&amp;&amp;&#32;<emphasis role="keywordtype">size_t</emphasis>(scoreJ1)&#32;&gt;&#32;(param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>+param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>)*15&#32;))&#32;Victory&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00402"/>00402 
+<anchor xml:id="_game_8cpp_source_1l00403"/>00403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Increase&#32;party&apos;s&#32;number</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00404"/>00404 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;++PartyNum;
+<anchor xml:id="_game_8cpp_source_1l00405"/>00405 
+<anchor xml:id="_game_8cpp_source_1l00406"/>00406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//Player&#32;changing</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00407"/>00407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Player1Turn&#32;=&#32;!Player1Turn;
+<anchor xml:id="_game_8cpp_source_1l00408"/>00408 
+<anchor xml:id="_game_8cpp_source_1l00409"/>00409 &#32;&#32;&#32;&#32;}<emphasis role="comment">//while(no&#32;victory)</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00410"/>00410 
+<anchor xml:id="_game_8cpp_source_1l00411"/>00411 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(scoreJ1&#32;==&#32;scoreJ2&#32;||&#32;!Victory){
+<anchor xml:id="_game_8cpp_source_1l00412"/>00412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KMAgenta&quot;</emphasis>)-&gt;second);
+<anchor xml:id="_game_8cpp_source_1l00413"/>00413 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Égalité&#32;:&#32;Aucun&#32;vainqueur&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_game_8cpp_source_1l00414"/>00414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;menuid&#32;=&#32;0;
+<anchor xml:id="_game_8cpp_source_1l00415"/>00415 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>{
+<anchor xml:id="_game_8cpp_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KGreen&quot;</emphasis>)-&gt;second);
+<anchor xml:id="_game_8cpp_source_1l00417"/>00417 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;Félicitations&#32;Joueur&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;(scoreJ1&#32;&gt;&#32;scoreJ2&#32;?&#32;<emphasis role="charliteral">&apos;1&apos;</emphasis>&#32;:&#32;<emphasis role="charliteral">&apos;2&apos;</emphasis>)&#32;&lt;&lt;
+<anchor xml:id="_game_8cpp_source_1l00418"/>00418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;&#32;vous&#32;avez&#32;gagné&#32;avec&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;(scoreJ1&#32;&gt;&#32;scoreJ2&#32;?&#32;scoreJ1&#32;:&#32;scoreJ2)&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;points!&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_game_8cpp_source_1l00419"/>00419 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00420"/>00420 &#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KReset&quot;</emphasis>)-&gt;second);
+<anchor xml:id="_game_8cpp_source_1l00421"/>00421 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(!(menuid&#32;==&#32;3))menuid&#32;=&#32;0;
+<anchor xml:id="_game_8cpp_source_1l00422"/>00422 &#32;&#32;&#32;&#32;InitGrid(Mat,&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>,&#32;param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>,&#32;PosPlayer1,&#32;PosPlayer2,&#32;param,&#32;PosTP1,&#32;PosTP2,&#32;PosMonster);<emphasis role="comment">//reinitialise&#32;la&#32;grille&#32;pour&#32;la&#32;prochaine&#32;partie</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00423"/>00423 &#32;&#32;&#32;&#32;PartyNum&#32;=&#32;1;
+<anchor xml:id="_game_8cpp_source_1l00424"/>00424 &#32;&#32;&#32;&#32;Victory=<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00425"/>00425 }
+<anchor xml:id="_game_8cpp_source_1l00426"/>00426 
+<anchor xml:id="_game_8cpp_source_1l00427"/><link linkend="_game_8h_1a0b1d64ee76933ef8f007f1208cb869a7">00427</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_game_8h_1a0b1d64ee76933ef8f007f1208cb869a7">ppal</link>&#32;(<emphasis role="keywordtype">void</emphasis>){
+<anchor xml:id="_game_8cpp_source_1l00428"/>00428 
+<anchor xml:id="_game_8cpp_source_1l00429"/>00429 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialise&#32;le&#32;système</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00430"/>00430 &#32;&#32;&#32;&#32;tuple&#32;&lt;int,&#32;int&gt;&#32;Screen_size(640,640);
+<anchor xml:id="_game_8cpp_source_1l00431"/>00431 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l">MinGL</link>&#32;window(<emphasis role="stringliteral">&quot;Lethal&#32;Company&#32;&#32;|&#32;&#32;V0.0.1&quot;</emphasis>,&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(get&lt;0&gt;(Screen_size),&#32;get&lt;1&gt;(Screen_size)),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128,&#32;128),&#32;nsGraphics::KWhite);
+<anchor xml:id="_game_8cpp_source_1l00432"/>00432 &#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d">initGlut</link>();
+<anchor xml:id="_game_8cpp_source_1l00433"/>00433 &#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc">initGraphic</link>();
+<anchor xml:id="_game_8cpp_source_1l00434"/>00434 
+<anchor xml:id="_game_8cpp_source_1l00435"/>00435 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;menuid&#32;(0);
+<anchor xml:id="_game_8cpp_source_1l00436"/>00436 &#32;&#32;&#32;&#32;<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;param;
+<anchor xml:id="_game_8cpp_source_1l00437"/>00437 &#32;&#32;&#32;&#32;initParams(param);
+<anchor xml:id="_game_8cpp_source_1l00438"/>00438 &#32;&#32;&#32;&#32;LoadParams(param);
+<anchor xml:id="_game_8cpp_source_1l00439"/>00439 &#32;&#32;&#32;&#32;vector&lt;tuple&lt;vector&lt;int&gt;,&#32;vector&lt;int&gt;,&#32;<emphasis role="keywordtype">int</emphasis>&gt;&gt;&#32;clickablepool;
+<anchor xml:id="_game_8cpp_source_1l00440"/>00440 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;PartyNum&#32;(1);
+<anchor xml:id="_game_8cpp_source_1l00441"/>00441 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;KMaxPartyNum&#32;(param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;*&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;*&#32;3);
+<anchor xml:id="_game_8cpp_source_1l00442"/>00442 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;scoreJ1&#32;=&#32;0,&#32;scoreJ2&#32;=&#32;0;
+<anchor xml:id="_game_8cpp_source_1l00443"/>00443 &#32;&#32;&#32;&#32;chrono::time_point&lt;chrono::steady_clock&gt;&#32;start&#32;=&#32;chrono::steady_clock::now();
+<anchor xml:id="_game_8cpp_source_1l00444"/>00444 &#32;&#32;&#32;&#32;<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;Mat;
+<anchor xml:id="_game_8cpp_source_1l00445"/>00445 
+<anchor xml:id="_game_8cpp_source_1l00446"/>00446 &#32;&#32;&#32;&#32;<emphasis role="comment">//création&#32;des&#32;variable&#32;pour&#32;les&#32;touches</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00447"/>00447 
+<anchor xml:id="_game_8cpp_source_1l00448"/>00448 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key1_UP&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00449"/>00449 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key1_DOWN&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00450"/>00450 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key1_RIGHT&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00451"/>00451 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key1_LEFT&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00452"/>00452 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key2_UP&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00453"/>00453 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key2_DOWN&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00454"/>00454 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key2_RIGHT&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00455"/>00455 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Key2_LEFT&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00456"/>00456 
+<anchor xml:id="_game_8cpp_source_1l00457"/>00457 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Player1Turn&#32;(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_game_8cpp_source_1l00458"/>00458 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;Victory&#32;(<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="_game_8cpp_source_1l00459"/>00459 
+<anchor xml:id="_game_8cpp_source_1l00460"/>00460 &#32;&#32;&#32;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;PosPlayer1,&#32;PosPlayer2,&#32;PosTP1,&#32;PosTP2;
+<anchor xml:id="_game_8cpp_source_1l00461"/>00461 &#32;&#32;&#32;&#32;vector&#32;&lt;CPosition&gt;&#32;PosMonster;
+<anchor xml:id="_game_8cpp_source_1l00462"/>00462 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_game_8cpp_source_1l00463"/>00463 
+<anchor xml:id="_game_8cpp_source_1l00464"/>00464 &#32;&#32;&#32;&#32;InitGrid(Mat,&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>,&#32;param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>,&#32;PosPlayer1,&#32;PosPlayer2,&#32;param,&#32;PosTP1,&#32;PosTP2,&#32;PosMonster);
+<anchor xml:id="_game_8cpp_source_1l00465"/>00465 
+<anchor xml:id="_game_8cpp_source_1l00466"/>00466 &#32;&#32;&#32;&#32;vector&lt;char&gt;&#32;objetJ1;
+<anchor xml:id="_game_8cpp_source_1l00467"/>00467 &#32;&#32;&#32;&#32;vector&lt;char&gt;&#32;objetJ2;
+<anchor xml:id="_game_8cpp_source_1l00468"/>00468 
+<anchor xml:id="_game_8cpp_source_1l00469"/>00469 &#32;&#32;&#32;&#32;pair&lt;char,CPosition&gt;&#32;N_move1;
+<anchor xml:id="_game_8cpp_source_1l00470"/>00470 &#32;&#32;&#32;&#32;pair&lt;char,CPosition&gt;&#32;N_move2;
+<anchor xml:id="_game_8cpp_source_1l00471"/>00471 
+<anchor xml:id="_game_8cpp_source_1l00472"/>00472 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;run&#32;(<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_game_8cpp_source_1l00473"/>00473 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(run){&#32;<emphasis role="comment">//voir&#32;case&#32;5&#32;pour&#32;break;</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00474"/>00474 
+<anchor xml:id="_game_8cpp_source_1l00475"/>00475 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>(menuid)&#32;{
+<anchor xml:id="_game_8cpp_source_1l00476"/>00476 
+<anchor xml:id="_game_8cpp_source_1l00477"/>00477 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;0:&#32;<emphasis role="comment">//menu&#32;principal</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00478"/>00478 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MenuP(window,&#32;clickablepool,&#32;Screen_size,&#32;menuid,&#32;start);
+<anchor xml:id="_game_8cpp_source_1l00479"/>00479 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00480"/>00480 
+<anchor xml:id="_game_8cpp_source_1l00481"/>00481 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;1:&#32;<emphasis role="comment">//Options</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00482"/>00482 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Options(window,&#32;clickablepool,&#32;Screen_size,&#32;menuid,&#32;start);
+<anchor xml:id="_game_8cpp_source_1l00483"/>00483 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00484"/>00484 
+<anchor xml:id="_game_8cpp_source_1l00485"/>00485 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;2:&#32;<emphasis role="comment">//Credits</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00486"/>00486 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Credits(window,&#32;clickablepool,&#32;Screen_size,&#32;menuid,&#32;start);
+<anchor xml:id="_game_8cpp_source_1l00487"/>00487 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00488"/>00488 
+<anchor xml:id="_game_8cpp_source_1l00489"/>00489 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;3:&#32;<emphasis role="comment">//Pause</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00490"/>00490 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Pause(window,&#32;clickablepool,&#32;Screen_size,&#32;menuid,&#32;start);
+<anchor xml:id="_game_8cpp_source_1l00491"/>00491 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00492"/>00492 
+<anchor xml:id="_game_8cpp_source_1l00493"/>00493 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;4:&#32;<emphasis role="comment">//Jeu</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00494"/>00494 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;GameLoop(window,&#32;clickablepool,&#32;Mat,&#32;menuid,&#32;PartyNum,
+<anchor xml:id="_game_8cpp_source_1l00495"/>00495 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key1_UP,&#32;Key1_DOWN,&#32;Key1_RIGHT,&#32;Key1_LEFT,
+<anchor xml:id="_game_8cpp_source_1l00496"/>00496 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Key2_UP,&#32;Key2_DOWN,&#32;Key2_RIGHT,&#32;Key2_LEFT,
+<anchor xml:id="_game_8cpp_source_1l00497"/>00497 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Screen_size,&#32;param,
+<anchor xml:id="_game_8cpp_source_1l00498"/>00498 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Victory,&#32;KMaxPartyNum,&#32;PosPlayer1,&#32;PosPlayer2,&#32;PosTP1,
+<anchor xml:id="_game_8cpp_source_1l00499"/>00499 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PosTP2,&#32;Player1Turn,&#32;N_move1,&#32;N_move2,
+<anchor xml:id="_game_8cpp_source_1l00500"/>00500 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;objetJ1,&#32;objetJ2,
+<anchor xml:id="_game_8cpp_source_1l00501"/>00501 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;scoreJ1,&#32;scoreJ2,&#32;PosMonster);
+<anchor xml:id="_game_8cpp_source_1l00502"/>00502 
+<anchor xml:id="_game_8cpp_source_1l00503"/>00503 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitGrid(Mat,&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>,&#32;param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>,&#32;PosPlayer1,&#32;PosPlayer2,&#32;param,&#32;PosTP1,&#32;PosTP2,&#32;PosMonster);
+<anchor xml:id="_game_8cpp_source_1l00504"/>00504 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;menuid&#32;=&#32;0;
+<anchor xml:id="_game_8cpp_source_1l00505"/>00505 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00506"/>00506 
+<anchor xml:id="_game_8cpp_source_1l00507"/>00507 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;5&#32;:<emphasis role="comment">//restart</emphasis>
+<anchor xml:id="_game_8cpp_source_1l00508"/>00508 
+<anchor xml:id="_game_8cpp_source_1l00509"/>00509 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;InitGrid(Mat,&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>,&#32;param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>,&#32;PosPlayer1,&#32;PosPlayer2,&#32;param,&#32;PosTP1,&#32;PosTP2,&#32;PosMonster);
+<anchor xml:id="_game_8cpp_source_1l00510"/>00510 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PartyNum&#32;=&#32;1;
+<anchor xml:id="_game_8cpp_source_1l00511"/>00511 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;menuid&#32;=&#32;4;
+<anchor xml:id="_game_8cpp_source_1l00512"/>00512 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00513"/>00513 
+<anchor xml:id="_game_8cpp_source_1l00514"/>00514 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;6&#32;:
+<anchor xml:id="_game_8cpp_source_1l00515"/>00515 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;run&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_game_8cpp_source_1l00516"/>00516 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00517"/>00517 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_game_8cpp_source_1l00518"/>00518 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="_game_8cpp_source_1l00519"/>00519 }<emphasis role="comment">//ppal&#32;()</emphasis>
+</programlisting></section>

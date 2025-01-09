@@ -1,0 +1,67 @@
+.TH "nsEvent" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsEvent \- Espace de nom pour la gestion d'événements\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBEvent_t\fP"
+.br
+.RI "Possède des données pour un événement\&. "
+.ti -1c
+.RI "union \fBEventData_t\fP"
+.br
+.RI "Union contenant les données d'un événement\&. "
+.ti -1c
+.RI "class \fBEventManager\fP"
+.br
+.RI "Gère une queue d'événement entrants\&. "
+.ti -1c
+.RI "struct \fBMouseClickData_t\fP"
+.br
+.RI "Possède des données pour un événement MouseClick\&. "
+.ti -1c
+.RI "struct \fBMouseMoveData_t\fP"
+.br
+.RI "Possède des données pour un événement MouseMove/MouseDrag\&. "
+.in -1c
+.SS "Enumerations"
+
+.in +1c
+.ti -1c
+.RI "enum \fBEventType_t\fP { \fBMouseClick\fP, \fBMouseMove\fP, \fBMouseDrag\fP }"
+.br
+.RI "EventType_t : Liste de tout les types d'événements\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Espace de nom pour la gestion d'événements\&. 
+.SH "Enumeration Type Documentation"
+.PP 
+.SS "enum \fBnsEvent::EventType_t\fP"
+
+.PP
+EventType_t : Liste de tout les types d'événements\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIMouseClick \fP\fP
+L'utilisateur a cliqué sur un des boutons de la souris 
+.TP
+\fB\fIMouseMove \fP\fP
+Le curseur s'est déplacé 
+.TP
+\fB\fIMouseDrag \fP\fP
+Le curseur s'est déplacé pendant qu'un des boutons de la souris était pressé 
+.PP
+Definition at line \fB23\fP of file \fBevent\&.hpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

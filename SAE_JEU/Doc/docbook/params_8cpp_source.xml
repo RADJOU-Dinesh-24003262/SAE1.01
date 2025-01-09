@@ -1,0 +1,95 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_params_8cpp_source" xml:lang="en-US">
+<title>params.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="_params_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_params_8cpp_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_params_8h">params.h</link>&quot;</emphasis>
+<anchor xml:id="_params_8cpp_source_1l00003"/>00003 <emphasis role="comment">//#include&#32;&quot;game.h&quot;&#32;not&#32;use&#32;for&#32;the&#32;moment</emphasis>
+<anchor xml:id="_params_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
+<anchor xml:id="_params_8cpp_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_params_8cpp_source_1l00006"/>00006 
+<anchor xml:id="_params_8cpp_source_1l00007"/>00007 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="_params_8cpp_source_1l00008"/>00008 
+<anchor xml:id="_params_8cpp_source_1l00009"/>00009 <emphasis role="keywordtype">void</emphasis>&#32;initParams&#32;(<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;Param){
+<anchor xml:id="_params_8cpp_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<emphasis role="comment">//Move&#32;Keys</emphasis>
+<anchor xml:id="_params_8cpp_source_1l00011"/>00011 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123">Key1Up</link>&#32;=&#32;<emphasis role="charliteral">&apos;z&apos;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00012"/>00012 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d">Key1Down</link>&#32;=&#32;<emphasis role="charliteral">&apos;s&apos;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00013"/>00013 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5">Key1Right</link>&#32;=&#32;<emphasis role="charliteral">&apos;d&apos;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef">Key1Left</link>&#32;=&#32;<emphasis role="charliteral">&apos;q&apos;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901">Key2Up</link>&#32;=&#32;<emphasis role="charliteral">&apos;o&apos;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1">Key2Down</link>&#32;=&#32;<emphasis role="charliteral">&apos;l&apos;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc">Key2Right</link>&#32;=&#32;<emphasis role="charliteral">&apos;m&apos;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6">Key2Left</link>&#32;=&#32;<emphasis role="charliteral">&apos;k&apos;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00019"/>00019 
+<anchor xml:id="_params_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6">tokenP1</link>&#32;=&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6">tokenP2</link>&#32;=&#32;<emphasis role="charliteral">&apos;X&apos;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00022"/>00022 
+<anchor xml:id="_params_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="comment">//Size&#32;of&#32;grid&#32;—&#32;suppose&#32;to&#32;be&#32;a&#32;rectangle</emphasis>
+<anchor xml:id="_params_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;=&#32;10;
+<anchor xml:id="_params_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;=&#32;5;
+<anchor xml:id="_params_8cpp_source_1l00026"/>00026 
+<anchor xml:id="_params_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="comment">//Display&#32;Colors</emphasis>
+<anchor xml:id="_params_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11">ColorP1</link>&#32;=&#32;<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KRed&quot;</emphasis>)-&gt;second&#32;;
+<anchor xml:id="_params_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7">ColorP2</link>&#32;=&#32;<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KBlue&quot;</emphasis>)-&gt;second&#32;;
+<anchor xml:id="_params_8cpp_source_1l00030"/>00030 }
+<anchor xml:id="_params_8cpp_source_1l00031"/>00031 
+<anchor xml:id="_params_8cpp_source_1l00032"/>00032 <emphasis role="keywordtype">void</emphasis>&#32;LoadParams&#32;(<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;Param){
+<anchor xml:id="_params_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;Path&#32;=&#32;<emphasis role="stringliteral">&quot;../../Nos_fichiers/config.yaml&quot;</emphasis>;
+<anchor xml:id="_params_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;ifstream&#32;ifs(Path);
+<anchor xml:id="_params_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ifs.is_open&#32;()){
+<anchor xml:id="_params_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cerr&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;File&#32;not&#32;found&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_params_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;exit(-1);
+<anchor xml:id="_params_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_params_8cpp_source_1l00039"/>00039 
+<anchor xml:id="_params_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">string</emphasis>&#32;key,&#32;tampon;&#32;!ifs.eof();&#32;ifs&#32;&gt;&gt;&#32;key){
+<anchor xml:id="_params_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;tampon;
+<anchor xml:id="_params_8cpp_source_1l00042"/>00042 
+<anchor xml:id="_params_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;Key1Up&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123">Key1Up</link>;
+<anchor xml:id="_params_8cpp_source_1l00045"/>00045 
+<anchor xml:id="_params_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;Key1Down&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d">Key1Down</link>;
+<anchor xml:id="_params_8cpp_source_1l00048"/>00048 
+<anchor xml:id="_params_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;Key1Left&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef">Key1Left</link>;
+<anchor xml:id="_params_8cpp_source_1l00051"/>00051 
+<anchor xml:id="_params_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;Key1Right&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5">Key1Right</link>;
+<anchor xml:id="_params_8cpp_source_1l00054"/>00054 
+<anchor xml:id="_params_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;Key2Up&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901">Key2Up</link>;
+<anchor xml:id="_params_8cpp_source_1l00057"/>00057 
+<anchor xml:id="_params_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;Key2Down&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1">Key2Down</link>;
+<anchor xml:id="_params_8cpp_source_1l00060"/>00060 
+<anchor xml:id="_params_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;Key2Left&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6">Key2Left</link>;
+<anchor xml:id="_params_8cpp_source_1l00063"/>00063 
+<anchor xml:id="_params_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;Key2Right&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc">Key2Right</link>;
+<anchor xml:id="_params_8cpp_source_1l00066"/>00066 
+<anchor xml:id="_params_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;NbColumn&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>;
+<anchor xml:id="_params_8cpp_source_1l00069"/>00069 
+<anchor xml:id="_params_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;NbRow&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>;
+<anchor xml:id="_params_8cpp_source_1l00072"/>00072 
+<anchor xml:id="_params_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;ColorP1&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11">ColorP1</link>;
+<anchor xml:id="_params_8cpp_source_1l00075"/>00075 
+<anchor xml:id="_params_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;ColorP2&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7">ColorP2</link>;
+<anchor xml:id="_params_8cpp_source_1l00078"/>00078 
+<anchor xml:id="_params_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;TokenP1&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6">tokenP1</link>;
+<anchor xml:id="_params_8cpp_source_1l00081"/>00081 
+<anchor xml:id="_params_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(key&#32;==&#32;<emphasis role="stringliteral">&quot;TokenP2&quot;</emphasis>){
+<anchor xml:id="_params_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ifs&#32;&gt;&gt;&#32;Param.<link linkend="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6">tokenP2</link>;
+<anchor xml:id="_params_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_params_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>{
+<anchor xml:id="_params_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;getline(ifs,&#32;tampon);
+<anchor xml:id="_params_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_params_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_params_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;ifs.close&#32;();
+<anchor xml:id="_params_8cpp_source_1l00090"/>00090 }
+</programlisting></section>

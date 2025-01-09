@@ -1,0 +1,51 @@
+\hypertarget{09-_custom_transitionable_2bgtext_8h_source}{}\doxysection{bgtext.\+h}
+\label{09-_custom_transitionable_2bgtext_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/09-\/CustomTransitionable/bgtext.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/09-\/CustomTransitionable/bgtext.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef BGTEXT\_H}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00002}00002 \textcolor{preprocessor}{\#define BGTEXT\_H}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00004}00004 \textcolor{comment}{// On inclut l'en-\/tête de IDrawable et de ITransitionable}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00005}00005 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{idrawable_8h}{mingl/graphics/idrawable.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{itransitionable_8h}{mingl/transition/itransitionable.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00008}00008 \textcolor{comment}{// Ici, les autres en-\/têtes utiles}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{text_8h}{mingl/gui/text.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00010}00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rectangle_8h}{mingl/shape/rectangle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00012}00012 \textcolor{comment}{// La classe hérite de IDrawable et ITransitionable}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00013}00013 \textcolor{keyword}{class }\mbox{\hyperlink{class_bg_text}{BgText}}: \textcolor{keyword}{public} \mbox{\hyperlink{classns_graphics_1_1_i_drawable}{nsGraphics::IDrawable}}, \textcolor{keyword}{public} \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{nsTransition::ITransitionable}}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00014}00014 \{}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00016}00016 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00017}00017     \textcolor{comment}{// On créé une enumeration pour les différents identifiants des propriétés transitionables}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00018}\mbox{\hyperlink{class_bg_text_a5599f62d188a03c0bf5b51bb71f0ee95}{00018}}     \textcolor{keyword}{enum} \mbox{\hyperlink{class_bg_text_a5599f62d188a03c0bf5b51bb71f0ee95}{TransitionIds}} \{}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00019}\mbox{\hyperlink{class_bg_text_a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3}{00019}}         \mbox{\hyperlink{class_bg_text_a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3}{TRANSITION\_TEXT\_COLOR}}, }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00020}\mbox{\hyperlink{class_bg_text_a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1}{00020}}         \mbox{\hyperlink{class_bg_text_a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1}{TRANSITION\_BACKGROUND\_COLOR}}, }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00021}00021     \};}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00023}00023     \textcolor{comment}{// Le constructeur de la classe, prenant les paramètres lors de l'instanciation}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00024}00024     \mbox{\hyperlink{class_bg_text}{BgText}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position, \textcolor{keyword}{const} std::string\& content, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& textColor, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& backgroundColor);}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00026}00026     \textcolor{comment}{// Ne pas oublier le destructeur virtuel}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00027}00027     \textcolor{keyword}{virtual} \mbox{\hyperlink{class_bg_text}{\string~BgText}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00029}00029     \textcolor{comment}{// On surcharge la fonction draw() qui est appelée lors de l'affichage de notre objet}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00030}\mbox{\hyperlink{class_bg_text_a55fdeb5f3e12dcc2926c87f80fddc6c3}{00030}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bg_text_a55fdeb5f3e12dcc2926c87f80fddc6c3}{draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00032}00032     \textcolor{comment}{// On surcharge la fonction getValues() qui est appelée quand le gestionnaire de transition a besoin de connaitre la valeur d'une propriété}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00033}00033     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bg_text_a01cc8269e39184b805351409aac4feb4}{getValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, std::vector<float> \&values) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00035}00035     \textcolor{comment}{// On surcharge la fonction setValues() qui est appelée quand le gestionnaire de transition veut régler la valeur d'une propriété}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00036}00036     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_bg_text_adb35c1e7e0387e04e8f8e67d9e1468c8}{setValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} std::vector<float> \&values) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00038}00038 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00039}00039     \textcolor{comment}{// On met les variables membres ici}}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00040}00040     \mbox{\hyperlink{classns_gui_1_1_text}{nsGui::Text}} m\_text;}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00041}00041     \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}} m\_background;}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00043}00043 \};}
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{09-_custom_transitionable_2bgtext_8h_source_l00045}00045 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// BGTEXT\_H}}
+
+\end{DoxyCode}

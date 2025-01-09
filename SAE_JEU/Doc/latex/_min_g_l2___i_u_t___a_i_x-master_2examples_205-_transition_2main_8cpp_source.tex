@@ -1,0 +1,96 @@
+\hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source}{}\doxysection{main.\+cpp}
+\label{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/05-\/Transition/main.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/examples/05-\/Transition/main.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#define FPS\_LIMIT 60}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00006}00006 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{mingl_8h}{mingl/mingl.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00008}00008 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{circle_8h}{mingl/shape/circle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00009}00009 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{line_8h}{mingl/shape/line.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00010}00010 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rectangle_8h}{mingl/shape/rectangle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{triangle_8h}{mingl/shape/triangle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{transition__engine_8h}{mingl/transition/transition\_engine.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00014}00014 \textcolor{keyword}{using namespace }std;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00016}00016 \textcolor{keywordtype}{int} main()}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00017}00017 \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00018}00018     \textcolor{comment}{// Initialise le système}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00019}00019     \mbox{\hyperlink{class_min_g_l}{MinGL}} window(\textcolor{stringliteral}{"{}05 -\/ Transition"{}}, \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(640, 640), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(128, 128), nsGraphics::KBlack);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00020}00020     window.initGlut();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00021}00021     window.initGraphic();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00023}00023     \textcolor{comment}{// On instantie quelques objets transitionables}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00024}00024     \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}} circle(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(64, 64), 16, nsGraphics::KRed);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00025}00025     \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}} rect(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(128, 64), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(512, 192), nsGraphics::KBlue);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00026}00026     \mbox{\hyperlink{classns_shape_1_1_triangle}{nsShape::Triangle}} tri(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(256, 256), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(256, 384), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(512, 384), nsGraphics::KPurple);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00027}00027     \mbox{\hyperlink{classns_shape_1_1_line}{nsShape::Line}} line(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(64, 512), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(576, 512), nsGraphics::KNavy);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00029}00029     \textcolor{comment}{// Instantie un gestionnaire de transition}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00030}00030     \mbox{\hyperlink{classns_transition_1_1_transition_engine}{nsTransition::TransitionEngine}} transitionEngine;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00032}00032     \textcolor{comment}{// On démarre une premiere transition simple, qui change le rayon du cercle a 48 pixels pendant 10 secondes}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00033}00033     transitionEngine.\mbox{\hyperlink{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}{startContract}}(\mbox{\hyperlink{classns_transition_1_1_transition_contract}{nsTransition::TransitionContract}}(circle, circle.TRANSITION\_RADIUS, chrono::seconds(10), \{48\}));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00035}00035     \textcolor{comment}{// On peut définir une fonction a appeler quand une transition se termine}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00036}00036     \mbox{\hyperlink{classns_transition_1_1_transition_contract}{nsTransition::TransitionContract}} rectTransitionContract(rect, rect.TRANSITION\_FILL\_COLOR\_ALPHA, chrono::seconds(5), \{64\});}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00037}00037     rectTransitionContract.setDestinationCallback([\&] \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00038}00038         \textcolor{comment}{// On définit ici ce qu'il se passe quand la transition est terminée}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00039}00039         std::cout << \textcolor{stringliteral}{"{}Transition sur rectangle terminé!"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00040}00040         rect.setFillColor(\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}(255, 0, 0, 64));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00041}00041         rect.setBorderColor(nsGraphics::KGreen);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00042}00042     \});}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00044}00044     transitionEngine.\mbox{\hyperlink{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}{startContract}}(rectTransitionContract);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00046}00046     \textcolor{comment}{// On peut aussi définir plusieurs transition en même temps sur un seul objet}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00047}00047     transitionEngine.\mbox{\hyperlink{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}{startContract}}(\mbox{\hyperlink{classns_transition_1_1_transition_contract}{nsTransition::TransitionContract}}(tri, tri.TRANSITION\_THIRD\_POSITION, chrono::seconds(2), \{512, 256\}));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00048}00048     transitionEngine.\mbox{\hyperlink{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}{startContract}}(\mbox{\hyperlink{classns_transition_1_1_transition_contract}{nsTransition::TransitionContract}}(tri, tri.TRANSITION\_SECOND\_POSITION, chrono::seconds(2), \{512, 384\}));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00050}00050     \textcolor{comment}{// Enfin, il existe aussi plusieurs mode de transitions (ici, nous voyons une transition infinie)}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00051}00051     transitionEngine.\mbox{\hyperlink{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}{startContract}}(\mbox{\hyperlink{classns_transition_1_1_transition_contract}{nsTransition::TransitionContract}}(line, line.TRANSITION\_FIRST\_POSITION, chrono::seconds(6), \{288, 512\},}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00052}00052                                                                     chrono::seconds::zero(), nsTransition::Transition::TransitionMode::MODE\_LOOP\_SMOOTH));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00053}00053     transitionEngine.\mbox{\hyperlink{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}{startContract}}(\mbox{\hyperlink{classns_transition_1_1_transition_contract}{nsTransition::TransitionContract}}(line, line.TRANSITION\_SECOND\_POSITION, chrono::seconds(6), \{352, 512\},}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00054}00054                                                                     chrono::seconds::zero(), nsTransition::Transition::TransitionMode::MODE\_LOOP\_SMOOTH));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00055}00055     transitionEngine.\mbox{\hyperlink{classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9}{startContract}}(\mbox{\hyperlink{classns_transition_1_1_transition_contract}{nsTransition::TransitionContract}}(line, line.TRANSITION\_LINE\_WIDTH, chrono::seconds(6), \{20\},}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00056}00056                                                                     chrono::seconds::zero(), nsTransition::Transition::TransitionMode::MODE\_LOOP\_SMOOTH));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00058}00058     \textcolor{comment}{// Variable qui tient le temps de frame}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00059}00059     chrono::microseconds frameTime = chrono::microseconds::zero();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00061}00061     \textcolor{comment}{// On fait tourner la boucle tant que la fenêtre est ouverte}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00062}00062     \textcolor{keywordflow}{while} (window.isOpen())}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00063}00063     \{}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00064}00064         \textcolor{comment}{// Récupère l'heure actuelle}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00065}00065         chrono::time\_point<chrono::steady\_clock> start = chrono::steady\_clock::now();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00067}00067         \textcolor{comment}{// On efface la fenêtre}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00068}00068         window.clearScreen();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00070}00070         \textcolor{comment}{// On met a jour le gestionnaire de transition}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00071}00071         transitionEngine.\mbox{\hyperlink{classns_transition_1_1_transition_engine_a3bc437b23ee918b9ec4af070e205028f}{update}}(frameTime);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00073}00073         \textcolor{comment}{// On affiche tout les objets}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00074}00074         window << circle << rect << tri << line;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00076}00076         \textcolor{comment}{// On finit la frame en cours}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00077}00077         window.finishFrame();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00078}00078 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00079}00079         \textcolor{comment}{// On vide la queue d'évènements}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00080}00080         window.getEventManager().clearEvents();}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00082}00082         \textcolor{comment}{// On attend un peu pour limiter le framerate et soulager le CPU}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00083}00083         this\_thread::sleep\_for(chrono::milliseconds(1000 / FPS\_LIMIT) -\/ chrono::duration\_cast<chrono::microseconds>(chrono::steady\_clock::now() -\/ start));}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00085}00085         \textcolor{comment}{// On récupère le temps de frame}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00086}00086         frameTime = chrono::duration\_cast<chrono::microseconds>(chrono::steady\_clock::now() -\/ start);}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00087}00087     \}}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00089}00089     \textcolor{keywordflow}{return} 0;}
+\DoxyCodeLine{\Hypertarget{_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_l00090}00090 \}}
+
+\end{DoxyCode}

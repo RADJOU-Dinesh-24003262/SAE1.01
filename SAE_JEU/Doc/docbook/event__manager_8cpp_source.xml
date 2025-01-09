@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_event__manager_8cpp_source" xml:lang="en-US">
+<title>event_manager.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_event__manager_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_event__manager_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_event__manager_8h">mingl/event/event_manager.h</link>&quot;</emphasis>
+<anchor xml:id="_event__manager_8cpp_source_1l00012"/>00012 
+<anchor xml:id="_event__manager_8cpp_source_1l00013"/><link linkend="_classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6">00013</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6">nsEvent::EventManager::hasEvent</link>()
+<anchor xml:id="_event__manager_8cpp_source_1l00014"/>00014 {
+<anchor xml:id="_event__manager_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_eventQueue.size()&#32;&gt;&#32;0;
+<anchor xml:id="_event__manager_8cpp_source_1l00016"/>00016 }&#32;<emphasis role="comment">//&#32;hasEvent()</emphasis>
+<anchor xml:id="_event__manager_8cpp_source_1l00017"/>00017 
+<anchor xml:id="_event__manager_8cpp_source_1l00018"/><link linkend="_classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5">00018</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5">nsEvent::EventManager::pushEvent</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structns_event_1_1_event__t">Event_t</link>&amp;&#32;event)
+<anchor xml:id="_event__manager_8cpp_source_1l00019"/>00019 {
+<anchor xml:id="_event__manager_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;m_eventQueue.push(event);
+<anchor xml:id="_event__manager_8cpp_source_1l00021"/>00021 }&#32;<emphasis role="comment">//&#32;pushEvent()</emphasis>
+<anchor xml:id="_event__manager_8cpp_source_1l00022"/>00022 
+<anchor xml:id="_event__manager_8cpp_source_1l00023"/><link linkend="_classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9">00023</link> <emphasis role="keyword">const</emphasis>&#32;<link linkend="_structns_event_1_1_event__t">nsEvent::Event_t</link>&#32;<link linkend="_classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9">nsEvent::EventManager::pullEvent</link>()
+<anchor xml:id="_event__manager_8cpp_source_1l00024"/>00024 {
+<anchor xml:id="_event__manager_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Copy&#32;the&#32;first&#32;element&#32;and&#32;then&#32;remove&#32;it&#32;from&#32;the&#32;queue</emphasis>
+<anchor xml:id="_event__manager_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structns_event_1_1_event__t">Event_t</link>&#32;<emphasis role="keyword">event</emphasis>&#32;=&#32;m_eventQueue.front();
+<anchor xml:id="_event__manager_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;m_eventQueue.pop();
+<anchor xml:id="_event__manager_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;event;
+<anchor xml:id="_event__manager_8cpp_source_1l00029"/>00029 }&#32;<emphasis role="comment">//&#32;pullEvent()</emphasis>
+<anchor xml:id="_event__manager_8cpp_source_1l00030"/>00030 
+<anchor xml:id="_event__manager_8cpp_source_1l00031"/><link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">00031</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">nsEvent::EventManager::clearEvents</link>()
+<anchor xml:id="_event__manager_8cpp_source_1l00032"/>00032 {
+<anchor xml:id="_event__manager_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(!m_eventQueue.empty())
+<anchor xml:id="_event__manager_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_eventQueue.pop();
+<anchor xml:id="_event__manager_8cpp_source_1l00035"/>00035 }&#32;<emphasis role="comment">//&#32;clearEvents()</emphasis>
+</programlisting></section>

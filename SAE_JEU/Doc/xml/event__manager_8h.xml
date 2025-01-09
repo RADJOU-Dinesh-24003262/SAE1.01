@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="event__manager_8h" kind="file" language="C++">
+    <compoundname>event_manager.h</compoundname>
+    <includes local="no">queue</includes>
+    <includes refid="event_8hpp" local="yes">event.hpp</includes>
+    <includedby refid="mingl_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</includedby>
+    <includedby refid="event__manager_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp</includedby>
+    <incdepgraph>
+      <node id="3">
+        <label>event.hpp</label>
+        <link refid="event_8hpp"/>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h</label>
+        <link refid="event__manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>queue</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</label>
+        <link refid="_menu_management_8h_source"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
+        <link refid="game_8cpp_source"/>
+      </node>
+      <node id="5">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/00-Boilerplate/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_source"/>
+      </node>
+      <node id="8">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source"/>
+      </node>
+      <node id="9">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_source"/>
+      </node>
+      <node id="10">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source"/>
+      </node>
+      <node id="11">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_source"/>
+      </node>
+      <node id="12">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source"/>
+      </node>
+      <node id="13">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source"/>
+      </node>
+      <node id="14">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source"/>
+      </node>
+      <node id="15">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_source"/>
+      </node>
+      <node id="16">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h</label>
+        <link refid="event__manager_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</label>
+        <link refid="mingl_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="17" relation="include">
+        </childnode>
+      </node>
+      <node id="18">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp</label>
+        <link refid="event__manager_8cpp"/>
+      </node>
+      <node id="17">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp</label>
+        <link refid="mingl_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp</label>
+        <link refid="main_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="classns_event_1_1_event_manager" prot="public">nsEvent::EventManager</innerclass>
+    <innernamespace refid="namespacens_event">nsEvent</innernamespace>
+    <briefdescription>
+<para>Gestionnaire d&apos;événements de minGL. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alexandre Sollier </para>
+</simplesect>
+<simplesect kind="date"><para>Décembre 2019 </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>EVENTMANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>EVENTMANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;queue&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="event_8hpp" kindref="compound">event.hpp</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacens_event" kindref="compound">nsEvent</ref><sp/>{</highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24" refid="classns_event_1_1_event_manager" refkind="compound"><highlight class="normal"></highlight><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="classns_event_1_1_event_manager" kindref="compound">EventManager</ref></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" kindref="member">hasEvent</ref>();</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5" kindref="member">pushEvent</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structns_event_1_1_event__t" kindref="compound">Event_t</ref>&amp;<sp/>event);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structns_event_1_1_event__t" kindref="compound">Event_t</ref><sp/><ref refid="classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9" kindref="member">pullEvent</ref>();</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" kindref="member">clearEvents</ref>();</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>std::queue&lt;Event_t&gt;<sp/>m_eventQueue;</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};<sp/></highlight><highlight class="comment">//<sp/>class<sp/>EventManager</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nsEvent</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>EVENTMANAGER_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h"/>
+  </compounddef>
+</doxygen>

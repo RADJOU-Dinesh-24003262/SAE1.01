@@ -1,0 +1,59 @@
+\hypertarget{namespacens_transition}{}\doxysection{ns\+Transition Namespace Reference}
+\label{namespacens_transition}\index{nsTransition@{nsTransition}}
+
+
+Espace de nom pour le moteur de transition et ses composants.  
+
+
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{ITransitionable}}
+\begin{DoxyCompactList}\small\item\em Une classe abstraite pour n\textquotesingle{}importe quelle élément pouvant effectuer une transition entre deux états. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classns_transition_1_1_transition}{Transition}}
+\begin{DoxyCompactList}\small\item\em Une classe représentant un \mbox{\hyperlink{classns_transition_1_1_transition_contract}{Transition\+Contract}} en cours de lecture. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classns_transition_1_1_transition_contract}{Transition\+Contract}}
+\begin{DoxyCompactList}\small\item\em Une classe contenant des paramètres pour créer une transition. \end{DoxyCompactList}\item 
+class \mbox{\hyperlink{classns_transition_1_1_transition_engine}{Transition\+Engine}}
+\begin{DoxyCompactList}\small\item\em Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef std\+::chrono\+::duration$<$ float, std\+::nano $>$ \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em System\+Duration\+\_\+t \+: Définition de type stockant une durée exprimée en nanosecondes, sous forme de float. \end{DoxyCompactList}\item 
+typedef std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock, \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}} $>$ \mbox{\hyperlink{namespacens_transition_a83c5a8a16c957b737d76d281c7345aa6}{System\+Time\+Point\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em System\+Time\+Point\+\_\+t \+: Définition de type représentant un point dans le temps basée sur l\textquotesingle{}horloge système. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Espace de nom pour le moteur de transition et ses composants. 
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{namespacens_transition_a260258f249f46ff9a62da721537f87af}\label{namespacens_transition_a260258f249f46ff9a62da721537f87af}} 
+\index{nsTransition@{nsTransition}!SystemDuration\_t@{SystemDuration\_t}}
+\index{SystemDuration\_t@{SystemDuration\_t}!nsTransition@{nsTransition}}
+\doxysubsubsection{\texorpdfstring{SystemDuration\_t}{SystemDuration\_t}}
+{\footnotesize\ttfamily typedef std\+::chrono\+::duration$<$float, std\+::nano$>$ \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{ns\+Transition\+::\+System\+Duration\+\_\+t}}}
+
+
+
+System\+Duration\+\_\+t \+: Définition de type stockant une durée exprimée en nanosecondes, sous forme de float. 
+
+
+
+Definition at line \mbox{\hyperlink{transition__types_8h_source_l00022}{22}} of file \mbox{\hyperlink{transition__types_8h_source}{transition\+\_\+types.\+h}}.
+
+\mbox{\Hypertarget{namespacens_transition_a83c5a8a16c957b737d76d281c7345aa6}\label{namespacens_transition_a83c5a8a16c957b737d76d281c7345aa6}} 
+\index{nsTransition@{nsTransition}!SystemTimePoint\_t@{SystemTimePoint\_t}}
+\index{SystemTimePoint\_t@{SystemTimePoint\_t}!nsTransition@{nsTransition}}
+\doxysubsubsection{\texorpdfstring{SystemTimePoint\_t}{SystemTimePoint\_t}}
+{\footnotesize\ttfamily typedef std\+::chrono\+::time\+\_\+point$<$std\+::chrono\+::steady\+\_\+clock, \mbox{\hyperlink{namespacens_transition_a260258f249f46ff9a62da721537f87af}{System\+Duration\+\_\+t}}$>$ \mbox{\hyperlink{namespacens_transition_a83c5a8a16c957b737d76d281c7345aa6}{ns\+Transition\+::\+System\+Time\+Point\+\_\+t}}}
+
+
+
+System\+Time\+Point\+\_\+t \+: Définition de type représentant un point dans le temps basée sur l\textquotesingle{}horloge système. 
+
+
+
+Definition at line \mbox{\hyperlink{transition__types_8h_source_l00027}{27}} of file \mbox{\hyperlink{transition__types_8h_source}{transition\+\_\+types.\+h}}.
+

@@ -1,0 +1,106 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__menu_management_8h_source" xml:lang="en-US">
+<title>MenuManagement.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__menu_management_8h_source_1l00001"/>00001 <emphasis role="preprocessor">&#32;#ifndef&#32;MENUMANAGEMENT_H</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;MENUMANAGEMENT_H</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00003"/>00003 
+<anchor xml:id="__menu_management_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mingl_8h">mingl/mingl.h</link>&quot;</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;vector&quot;</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00016"/>00016 
+<anchor xml:id="__menu_management_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_rectangle_8h">mingl/shape/rectangle.h</link>&quot;</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&quot;sprites/button.h&quot;</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00019"/>00019 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_text_8h">mingl/gui/text.h</link>&quot;</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00020"/>00020 
+<anchor xml:id="__menu_management_8h_source_1l00021"/>00021 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__menu_management_8h_source_1l00022"/>00022 
+<anchor xml:id="__menu_management_8h_source_1l00023"/>00023 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;MENUMANAGEMENT_H</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00024"/>00024 
+<anchor xml:id="__menu_management_8h_source_1l00031"/>00031 <emphasis role="keywordtype">void</emphasis>&#32;InterfaceMenuP(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_y){
+<anchor xml:id="__menu_management_8h_source_1l00032"/>00032 
+<anchor xml:id="__menu_management_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="comment">//calcul&#32;variable&#32;de&#32;position&#32;et&#32;taille&#32;des&#32;formes</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00034"/>00034 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(0,0),&#32;mat_x,&#32;mat_y,&#32;nsGraphics::KGray);
+<anchor xml:id="__menu_management_8h_source_1l00035"/>00035 &#32;&#32;&#32;&#32;Button(window,&#32;100,&#32;48,&#32;300,&#32;148,&#32;10,&#32;nsGraphics::KBlack);
+<anchor xml:id="__menu_management_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_gui_1_1_text">nsGui::Text</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;(168,&#32;105),&#32;<emphasis role="stringliteral">&quot;PLAY&quot;</emphasis>,nsGraphics::KWhite,&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</link>);
+<anchor xml:id="__menu_management_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;Button(window,&#32;100,&#32;196,&#32;300,&#32;296,&#32;10,&#32;nsGraphics::KBlack);
+<anchor xml:id="__menu_management_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_gui_1_1_text">nsGui::Text</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;(145,&#32;253),&#32;<emphasis role="stringliteral">&quot;In&#32;Progress&quot;</emphasis>,nsGraphics::KWhite,&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</link>);
+<anchor xml:id="__menu_management_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;Button(window,&#32;100,&#32;344,&#32;300,&#32;444,&#32;10,&#32;nsGraphics::KBlack);
+<anchor xml:id="__menu_management_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_gui_1_1_text">nsGui::Text</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;(110,&#32;401),&#32;<emphasis role="stringliteral">&quot;In&#32;Developpement&quot;</emphasis>,nsGraphics::KWhite,&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</link>);
+<anchor xml:id="__menu_management_8h_source_1l00041"/>00041 &#32;&#32;&#32;&#32;Button(window,&#32;100,&#32;492,&#32;300,&#32;592,&#32;10,&#32;nsGraphics::KBlack);
+<anchor xml:id="__menu_management_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_gui_1_1_text">nsGui::Text</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;(170,&#32;549),&#32;<emphasis role="stringliteral">&quot;QUIT&quot;</emphasis>,nsGraphics::KWhite,&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</link>);
+<anchor xml:id="__menu_management_8h_source_1l00043"/>00043 }
+<anchor xml:id="__menu_management_8h_source_1l00044"/>00044 
+<anchor xml:id="__menu_management_8h_source_1l00045"/>00045 
+<anchor xml:id="__menu_management_8h_source_1l00052"/>00052 <emphasis role="keywordtype">void</emphasis>&#32;InterfacePause(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_y){
+<anchor xml:id="__menu_management_8h_source_1l00053"/>00053 
+<anchor xml:id="__menu_management_8h_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="comment">//calcul&#32;variable&#32;de&#32;position&#32;et&#32;taille&#32;des&#32;formes</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(100,&#32;0),&#32;mat_x,&#32;mat_y,&#32;nsGraphics::KGray);
+<anchor xml:id="__menu_management_8h_source_1l00056"/>00056 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(100,&#32;48),&#32;200,&#32;100,&#32;nsGraphics::KBlue);
+<anchor xml:id="__menu_management_8h_source_1l00057"/>00057 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(100,&#32;196),&#32;200,&#32;100,&#32;nsGraphics::KBlue);
+<anchor xml:id="__menu_management_8h_source_1l00058"/>00058 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(100,&#32;344),&#32;200,&#32;100,&#32;nsGraphics::KBlue);
+<anchor xml:id="__menu_management_8h_source_1l00059"/>00059 }
+<anchor xml:id="__menu_management_8h_source_1l00060"/>00060 
+<anchor xml:id="__menu_management_8h_source_1l00067"/>00067 <emphasis role="keywordtype">void</emphasis>&#32;InterfaceOptions(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_y){
+<anchor xml:id="__menu_management_8h_source_1l00068"/>00068 
+<anchor xml:id="__menu_management_8h_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="comment">//calcul&#32;variable&#32;de&#32;position&#32;et&#32;taille&#32;des&#32;formes</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00070"/>00070 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(0,0),&#32;mat_x,&#32;mat_y,&#32;nsGraphics::KGray);
+<anchor xml:id="__menu_management_8h_source_1l00071"/>00071 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(0,0),&#32;120,&#32;50,&#32;nsGraphics::KRed+8,&#32;nsGraphics::KTransparent);
+<anchor xml:id="__menu_management_8h_source_1l00072"/>00072 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(150,150),&#32;340,&#32;340,&#32;nsGraphics::KTransparent,&#32;nsGraphics::KGray);
+<anchor xml:id="__menu_management_8h_source_1l00073"/>00073 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_gui_1_1_text">nsGui::Text</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;(10,&#32;105),
+<anchor xml:id="__menu_management_8h_source_1l00074"/>00074 &#32;&#32;&#32;&#32;<emphasis role="stringliteral">&quot;PLAY&quot;</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00075"/>00075 &#32;&#32;&#32;&#32;,nsGraphics::KWhite,&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</link>);
+<anchor xml:id="__menu_management_8h_source_1l00076"/>00076 }
+<anchor xml:id="__menu_management_8h_source_1l00077"/>00077 
+<anchor xml:id="__menu_management_8h_source_1l00084"/>00084 <emphasis role="keywordtype">void</emphasis>&#32;InterfaceCredits(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_y){
+<anchor xml:id="__menu_management_8h_source_1l00085"/>00085 
+<anchor xml:id="__menu_management_8h_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<emphasis role="comment">//calcul&#32;variable&#32;de&#32;position&#32;et&#32;taille&#32;des&#32;formes</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00087"/>00087 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(0,0),&#32;mat_x,&#32;mat_y,&#32;nsGraphics::KGray);
+<anchor xml:id="__menu_management_8h_source_1l00088"/>00088 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(0,0),&#32;120,&#32;50,&#32;nsGraphics::KGray+8,&#32;nsGraphics::KTransparent);
+<anchor xml:id="__menu_management_8h_source_1l00089"/>00089 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(150,150),&#32;340,&#32;340,&#32;nsGraphics::KTransparent,&#32;nsGraphics::KGray);
+<anchor xml:id="__menu_management_8h_source_1l00090"/>00090 }
+<anchor xml:id="__menu_management_8h_source_1l00091"/>00091 
+<anchor xml:id="__menu_management_8h_source_1l00092"/>00092 
+<anchor xml:id="__menu_management_8h_source_1l00093"/>00093 <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;rectPos;
+<anchor xml:id="__menu_management_8h_source_1l00094"/>00094 <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;rectColor&#32;=&#32;nsGraphics::KCyan;
+<anchor xml:id="__menu_management_8h_source_1l00095"/>00095 
+<anchor xml:id="__menu_management_8h_source_1l00103"/>00103 <emphasis role="keywordtype">void</emphasis>&#32;events(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;vector&lt;tuple&lt;vector&lt;int&gt;,&#32;vector&lt;int&gt;,&#32;<emphasis role="keywordtype">int</emphasis>&gt;&gt;&amp;&#32;clickablepool,&#32;<emphasis role="keywordtype">int</emphasis>&amp;&#32;menuid)
+<anchor xml:id="__menu_management_8h_source_1l00104"/>00104 {
+<anchor xml:id="__menu_management_8h_source_1l00105"/>00105 
+<anchor xml:id="__menu_management_8h_source_1l00106"/>00106 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(window.<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link>().<link linkend="_classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6">hasEvent</link>())
+<anchor xml:id="__menu_management_8h_source_1l00107"/>00107 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__menu_management_8h_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structns_event_1_1_event__t">nsEvent::Event_t</link>&#32;actualEvent&#32;=&#32;window.<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link>().<link linkend="_classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9">pullEvent</link>();
+<anchor xml:id="__menu_management_8h_source_1l00109"/>00109 
+<anchor xml:id="__menu_management_8h_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;regarde&#32;le&#32;type&#32;d&apos;évènement</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(actualEvent.<link linkend="_structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c">eventType</link>)
+<anchor xml:id="__menu_management_8h_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__menu_management_8h_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6">nsEvent::EventType_t::MouseMove</link>:
+<anchor xml:id="__menu_management_8h_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Il&#32;s&apos;agit&#32;d&apos;un&#32;mouvement&#32;de&#32;souris</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d">setX</link>(actualEvent.<link linkend="_structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8">eventData</link>.<link linkend="_unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91">moveData</link>.<link linkend="_structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb">x</link>);
+<anchor xml:id="__menu_management_8h_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f">setY</link>(actualEvent.<link linkend="_structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8">eventData</link>.<link linkend="_unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91">moveData</link>.<link linkend="_structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446">y</link>);
+<anchor xml:id="__menu_management_8h_source_1l00117"/>00117 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__menu_management_8h_source_1l00118"/>00118 
+<anchor xml:id="__menu_management_8h_source_1l00119"/>00119 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;<link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7">nsEvent::EventType_t::MouseClick</link>:
+<anchor xml:id="__menu_management_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Il&#32;s&apos;agit&#32;d&apos;un&#32;clic&#32;de&#32;souris</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(actualEvent.<link linkend="_structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8">eventData</link>.<link linkend="_unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc">clickData</link>.<link linkend="_structns_event_1_1_mouse_click_data__t_1a81252b916361dc4deab0f42510fdc928">state</link>)&#32;<emphasis role="comment">//&#32;Clic&#32;enfoncé</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__menu_management_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">unsigned</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;clickablepool.size()&#32;;&#32;i&#32;=&#32;i+1){
+<anchor xml:id="__menu_management_8h_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()&#32;&gt;=&#32;get&lt;0&gt;(clickablepool[i])[0]&#32;&amp;&amp;&#32;rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()&#32;&lt;=&#32;get&lt;1&gt;(clickablepool[i])[0]&#32;&amp;&amp;
+<anchor xml:id="__menu_management_8h_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>()&#32;&gt;=&#32;get&lt;0&gt;(clickablepool[i])[1]&#32;&amp;&amp;&#32;rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>()&#32;&lt;=&#32;get&lt;1&gt;(clickablepool[i])[1]){
+<anchor xml:id="__menu_management_8h_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(menuid&#32;==&#32;4){menuid&#32;=&#32;3;&#32;<emphasis role="keywordflow">break</emphasis>;}
+<anchor xml:id="__menu_management_8h_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;menuid&#32;=&#32;get&lt;2&gt;(clickablepool[i]);
+<anchor xml:id="__menu_management_8h_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__menu_management_8h_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__menu_management_8h_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__menu_management_8h_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="comment">//&#32;Relâchement&#32;du&#32;clic</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="__menu_management_8h_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rectColor&#32;=&#32;nsGraphics::KPurple;
+<anchor xml:id="__menu_management_8h_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__menu_management_8h_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__menu_management_8h_source_1l00136"/>00136 
+<anchor xml:id="__menu_management_8h_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="__menu_management_8h_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;L&apos;évènement&#32;ne&#32;nous&#32;intéresse&#32;pas</emphasis>
+<anchor xml:id="__menu_management_8h_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="__menu_management_8h_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="__menu_management_8h_source_1l00141"/>00141 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__menu_management_8h_source_1l00142"/>00142 }
+</programlisting></section>

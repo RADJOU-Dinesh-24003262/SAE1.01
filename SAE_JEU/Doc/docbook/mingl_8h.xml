@@ -1,0 +1,68 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mingl_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</primary></indexterm>
+<para>
+
+<para>La bête. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;map&gt;
+#include &lt;memory&gt;
+#include &lt;queue&gt;
+#include &lt;string&gt;
+#include &lt;vector&gt;
+#include &lt;GL/freeglut.h&gt;
+#include &quot;graphics/idrawable.h&quot;
+#include &quot;graphics/rgbacolor.h&quot;
+#include &quot;graphics/vec2d.h&quot;
+#include &quot;event/event_manager.h&quot;
+</programlisting>Include dependency graph for mingl.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="mingl_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="mingl_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_class_min_g_l">MinGL</link></para>
+
+<para>Classe de base de minGL 2. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>La bête. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier, Clément Mathieu&#8211;Drif, Alain Casali </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Janvier 2020 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>2.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_mingl_8h_source">mingl.h</link>.</para>
+</section>
+</section>

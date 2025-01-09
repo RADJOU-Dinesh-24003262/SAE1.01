@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacens_util" xml:lang="en-US">
+<title>nsUtil Namespace Reference</title>
+<indexterm><primary>nsUtil</primary></indexterm>
+<para>
+
+<para>Espace de nom pour les utilitaires lambda. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_util_1_1_i_editable">IEditable</link></para>
+
+<para>Interface pour un objet injectable. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_util_1_1_i_fonctor_unaire">IFonctorUnaire</link></para>
+
+<para>Interface pour un fonctor unaire. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>std::ostream &amp; <link linkend="_namespacens_util_1a95ba3ba3ebef98e447b47ee40f55dd1a">operator&lt;&lt;</link> (std::ostream &amp;os, const <link linkend="_classns_util_1_1_i_editable">IEditable</link> &amp;Obj)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Espace de nom pour les utilitaires lambda. </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespacens_util_1a95ba3ba3ebef98e447b47ee40f55dd1a"/><section>
+    <title>operator&lt;&lt;()</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>nsUtil</secondary></indexterm>
+<indexterm><primary>nsUtil</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; nsUtil::operator&lt;&lt; (std::ostream &amp; os, const <link linkend="_classns_util_1_1_i_editable">IEditable</link> &amp; Obj)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+Definition at line <link linkend="_ieditable_8hpp_source_1l00020">20</link> of file <link linkend="_ieditable_8hpp_source">ieditable.hpp</link>.</para>
+</section>
+</section>
+</section>
