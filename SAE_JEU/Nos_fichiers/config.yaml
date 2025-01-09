@@ -1,7 +1,11 @@
-KeyUp : z
-KeyDown : s
-KeyLeft : q
-KeyRight : d
+Key1Up : z
+Key1Down : s
+Key1Left : q
+Key1Right : d
+Key2Up : o
+Key2Down : l
+Key2Left : k
+Key2Right : m
 NbColumn : 20
 NbRow : 20
 ColorP1 : KBlue
