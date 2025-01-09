@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_text_8h_source" xml:lang="en-US">
+<title>text.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/text.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_text_8h_source_1l00001"/>00001 
+<anchor xml:id="_text_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;TEXT_H</emphasis>
+<anchor xml:id="_text_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;TEXT_H</emphasis>
+<anchor xml:id="_text_8h_source_1l00013"/>00013 
+<anchor xml:id="_text_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_glut__font_8h">glut_font.h</link>&quot;</emphasis>
+<anchor xml:id="_text_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;../graphics/idrawable.h&quot;</emphasis>
+<anchor xml:id="_text_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;../graphics/rgbacolor.h&quot;</emphasis>
+<anchor xml:id="_text_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&quot;../graphics/vec2d.h&quot;</emphasis>
+<anchor xml:id="_text_8h_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&quot;../transition/itransitionable.h&quot;</emphasis>
+<anchor xml:id="_text_8h_source_1l00019"/>00019 
+<anchor xml:id="_text_8h_source_1l00024"/>00024 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_gui">nsGui</link>&#32;{
+<anchor xml:id="_text_8h_source_1l00025"/>00025 
+<anchor xml:id="_text_8h_source_1l00030"/><link linkend="_classns_gui_1_1_text">00030</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_gui_1_1_text">Text</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_graphics_1_1_i_drawable">nsGraphics::IDrawable</link>,&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_transition_1_1_i_transitionable">nsTransition::ITransitionable</link>
+<anchor xml:id="_text_8h_source_1l00031"/>00031 {
+<anchor xml:id="_text_8h_source_1l00032"/>00032 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_text_8h_source_1l00036"/><link linkend="_classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09">00036</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09">TransitionIds</link>&#32;{
+<anchor xml:id="_text_8h_source_1l00037"/><link linkend="_classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09a91cb0804f8ea9e7353a36a52d89fc492">00037</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09a91cb0804f8ea9e7353a36a52d89fc492">TRANSITION_COLOR_RGB</link>,&#32;
+<anchor xml:id="_text_8h_source_1l00038"/><link linkend="_classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09a508f66b682f94f547d3f56062aa1fb3f">00038</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09a508f66b682f94f547d3f56062aa1fb3f">TRANSITION_COLOR_ALPHA</link>,&#32;
+<anchor xml:id="_text_8h_source_1l00039"/><link linkend="_classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09a83fc6bac538e3af4f423c8a4cd0585b8">00039</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09a83fc6bac538e3af4f423c8a4cd0585b8">TRANSITION_POSITION</link>,&#32;
+<anchor xml:id="_text_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_text_8h_source_1l00041"/>00041 
+<anchor xml:id="_text_8h_source_1l00045"/><link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80fa">00045</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80fa">VerticalAlignment</link>&#32;{
+<anchor xml:id="_text_8h_source_1l00046"/><link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80faa3cfba6c9f9e078a9fcd6c4133ecb4c30">00046</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80faa3cfba6c9f9e078a9fcd6c4133ecb4c30">ALIGNV_TOP</link>,&#32;
+<anchor xml:id="_text_8h_source_1l00047"/><link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80faa37d3b49647821b7b1808dcd159867a45">00047</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80faa37d3b49647821b7b1808dcd159867a45">ALIGNV_CENTER</link>,&#32;
+<anchor xml:id="_text_8h_source_1l00048"/><link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80faace396f1024afc2c37173ea637856e25f">00048</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80faace396f1024afc2c37173ea637856e25f">ALIGNV_BOTTOM</link>,&#32;
+<anchor xml:id="_text_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_text_8h_source_1l00050"/>00050 
+<anchor xml:id="_text_8h_source_1l00054"/><link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dc">00054</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dc">HorizontalAlignment</link>&#32;{
+<anchor xml:id="_text_8h_source_1l00055"/><link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dca7b5a51aac14cb50d1840e3f3de485ac2">00055</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dca7b5a51aac14cb50d1840e3f3de485ac2">ALIGNH_LEFT</link>,&#32;
+<anchor xml:id="_text_8h_source_1l00056"/><link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dca79703335d1d5367bd5ee2387413c17a9">00056</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dca79703335d1d5367bd5ee2387413c17a9">ALIGNH_CENTER</link>,&#32;
+<anchor xml:id="_text_8h_source_1l00057"/><link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dca464315bc1bcc242334d76eb8b0d1e8f6">00057</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dca464315bc1bcc242334d76eb8b0d1e8f6">ALIGNH_RIGHT</link>,&#32;
+<anchor xml:id="_text_8h_source_1l00058"/>00058 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_text_8h_source_1l00059"/>00059 
+<anchor xml:id="_text_8h_source_1l00073"/>00073 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a2d86c3b73f670c0ae206c4f35401a09f">Text</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;position,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;content,
+<anchor xml:id="_text_8h_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;textColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce">GlutFont::GlutFonts</link>&#32;&amp;textFont&#32;=&#32;GlutFont::GlutFonts::BITMAP_8_BY_13,
+<anchor xml:id="_text_8h_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dc">HorizontalAlignment</link>&#32;&amp;horizontalAlignment&#32;=&#32;<link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dca7b5a51aac14cb50d1840e3f3de485ac2">ALIGNH_LEFT</link>,
+<anchor xml:id="_text_8h_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80fa">VerticalAlignment</link>&#32;&amp;verticalAlignment&#32;=&#32;<link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80faace396f1024afc2c37173ea637856e25f">ALIGNV_BOTTOM</link>);
+<anchor xml:id="_text_8h_source_1l00077"/>00077 
+<anchor xml:id="_text_8h_source_1l00078"/>00078 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a8b3f43f7582246e916bb2e9403be2180">draw</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+<anchor xml:id="_text_8h_source_1l00079"/>00079 
+<anchor xml:id="_text_8h_source_1l00080"/>00080 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a6ddbea2ef54c442d44d6e624df486ad7">getValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;std::vector&lt;float&gt;&#32;&amp;values)&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="_text_8h_source_1l00081"/>00081 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a9fbd7627d5cc5eaa7259f475c73aec73">setValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;float&gt;&#32;&amp;values)&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="_text_8h_source_1l00082"/>00082 
+<anchor xml:id="_text_8h_source_1l00088"/>00088 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a5ad119bf3e6c774c00711bb302f4bb1e">computeWidth</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_text_8h_source_1l00089"/>00089 
+<anchor xml:id="_text_8h_source_1l00095"/>00095 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a40e2854b349731f1cdc0574e7297bc50">computeHeight</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_text_8h_source_1l00096"/>00096 
+<anchor xml:id="_text_8h_source_1l00102"/>00102 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_gui_1_1_text_1aa05c15547863bb237374487fe9ccfd2e">computeVisiblePosition</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_text_8h_source_1l00103"/>00103 
+<anchor xml:id="_text_8h_source_1l00109"/>00109 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_gui_1_1_text_1af8a352a5cb3b4f849eda7badc11fbb31">computeVisibleEndPosition</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_text_8h_source_1l00110"/>00110 
+<anchor xml:id="_text_8h_source_1l00116"/>00116 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;<link linkend="_classns_gui_1_1_text_1adea76711a628669e54020b282152e389">getContent</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_text_8h_source_1l00117"/>00117 
+<anchor xml:id="_text_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a930caeda954e7517aa34bc5965c8709f">setContent</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;content);
+<anchor xml:id="_text_8h_source_1l00124"/>00124 
+<anchor xml:id="_text_8h_source_1l00129"/>00129 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_gui_1_1_text_1a1e06796a15191e7682eb4abd0ecc515e">getPosition</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_text_8h_source_1l00130"/>00130 
+<anchor xml:id="_text_8h_source_1l00136"/>00136 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1ae258c9cd1203c3e52b7728e0211e9daa">setPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;position);
+<anchor xml:id="_text_8h_source_1l00137"/>00137 
+<anchor xml:id="_text_8h_source_1l00142"/>00142 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;<link linkend="_classns_gui_1_1_text_1a248f06b3a9a85c05225449424311abd0">getTextColor</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_text_8h_source_1l00143"/>00143 
+<anchor xml:id="_text_8h_source_1l00149"/>00149 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a9e10bb21647ce95f034a4205562e222a">setTextColor</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;textColor);
+<anchor xml:id="_text_8h_source_1l00150"/>00150 
+<anchor xml:id="_text_8h_source_1l00155"/>00155 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_gui_1_1_glut_font">GlutFont</link>&amp;&#32;<link linkend="_classns_gui_1_1_text_1af578710341d0afb6c593550cbc94ca64">getTextFont</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_text_8h_source_1l00156"/>00156 
+<anchor xml:id="_text_8h_source_1l00162"/>00162 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1afa19265ff44bdab288fa2a7100dd9c50">setTextFont</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_gui_1_1_glut_font">GlutFont</link>&#32;&amp;textFont);
+<anchor xml:id="_text_8h_source_1l00163"/>00163 
+<anchor xml:id="_text_8h_source_1l00168"/>00168 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dc">HorizontalAlignment</link>&#32;<link linkend="_classns_gui_1_1_text_1a2e3468bf7a3b43e5e87a68ed7876dcfe">getHorizontalAlignment</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_text_8h_source_1l00169"/>00169 
+<anchor xml:id="_text_8h_source_1l00175"/>00175 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a952d6bb9e10c33aa446ff17fd73944a9">setHorizontalAlignment</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dc">HorizontalAlignment</link>&#32;&amp;horizontalAlignment);
+<anchor xml:id="_text_8h_source_1l00176"/>00176 
+<anchor xml:id="_text_8h_source_1l00181"/>00181 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80fa">VerticalAlignment</link>&#32;<link linkend="_classns_gui_1_1_text_1a5118089a93160dde9fb85f2b4b32a5e1">getVerticalAlignment</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_text_8h_source_1l00182"/>00182 
+<anchor xml:id="_text_8h_source_1l00188"/>00188 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a5b0a3b1a3d31129f2d8aa32b58ea2f8a">setVerticalAlignment</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80fa">VerticalAlignment</link>&#32;&amp;verticalAlignment);
+<anchor xml:id="_text_8h_source_1l00189"/>00189 
+<anchor xml:id="_text_8h_source_1l00190"/>00190 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_text_8h_source_1l00194"/>00194 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;m_position;
+<anchor xml:id="_text_8h_source_1l00195"/>00195 
+<anchor xml:id="_text_8h_source_1l00199"/>00199 &#32;&#32;&#32;&#32;std::string&#32;m_content;
+<anchor xml:id="_text_8h_source_1l00200"/>00200 
+<anchor xml:id="_text_8h_source_1l00204"/>00204 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;m_textColor;
+<anchor xml:id="_text_8h_source_1l00205"/>00205 
+<anchor xml:id="_text_8h_source_1l00209"/>00209 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_glut_font">GlutFont</link>&#32;m_textFont;
+<anchor xml:id="_text_8h_source_1l00210"/>00210 
+<anchor xml:id="_text_8h_source_1l00214"/>00214 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dc">HorizontalAlignment</link>&#32;m_horizontalAlignment;
+<anchor xml:id="_text_8h_source_1l00215"/>00215 
+<anchor xml:id="_text_8h_source_1l00219"/>00219 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80fa">VerticalAlignment</link>&#32;m_verticalAlignment;
+<anchor xml:id="_text_8h_source_1l00220"/>00220 };&#32;<emphasis role="comment">//&#32;class&#32;Text</emphasis>
+<anchor xml:id="_text_8h_source_1l00221"/>00221 
+<anchor xml:id="_text_8h_source_1l00222"/>00222 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsGui</emphasis>
+<anchor xml:id="_text_8h_source_1l00223"/>00223 
+<anchor xml:id="_text_8h_source_1l00224"/>00224 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;TEXT_H</emphasis>
+</programlisting></section>

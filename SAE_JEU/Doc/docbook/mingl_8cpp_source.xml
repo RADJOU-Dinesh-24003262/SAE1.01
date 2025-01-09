@@ -1,0 +1,257 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mingl_8cpp_source" xml:lang="en-US">
+<title>mingl.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_mingl_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_mingl_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00012"/>00012 
+<anchor xml:id="_mingl_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mingl_8h">mingl/mingl.h</link>&quot;</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00014"/>00014 
+<anchor xml:id="_mingl_8cpp_source_1l00015"/>00015 <emphasis role="comment">//&#32;Astuce&#32;pour&#32;faire&#32;passer&#32;les&#32;handlers&#32;en&#32;fonction&#32;static&#32;dans&#32;initGraphic()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00016"/>00016 <emphasis role="keyword">namespace&#32;</emphasis>{
+<anchor xml:id="_mingl_8cpp_source_1l00017"/>00017 
+<anchor xml:id="_mingl_8cpp_source_1l00018"/>00018 std::map&lt;int,&#32;MinGL&#32;*&gt;&#32;anyWindow;
+<anchor xml:id="_mingl_8cpp_source_1l00019"/>00019 
+<anchor xml:id="_mingl_8cpp_source_1l00020"/>00020 <emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;T,&#32;T&#32;oHandler&gt;
+<anchor xml:id="_mingl_8cpp_source_1l00021"/>00021 <emphasis role="keyword">struct&#32;</emphasis>callBackBuilder;
+<anchor xml:id="_mingl_8cpp_source_1l00022"/>00022 
+<anchor xml:id="_mingl_8cpp_source_1l00023"/>00023 <emphasis role="keyword">template</emphasis>&lt;<emphasis role="keyword">typename</emphasis>&#32;Obj,&#32;<emphasis role="keyword">typename</emphasis>...&#32;Arg,&#32;void(Obj::*&#32;oHandler)(Arg...)&gt;
+<anchor xml:id="_mingl_8cpp_source_1l00024"/>00024 <emphasis role="keyword">struct&#32;</emphasis>callBackBuilder&lt;void(Obj::*)(Arg...),&#32;oHandler&gt;
+<anchor xml:id="_mingl_8cpp_source_1l00025"/>00025 {
+<anchor xml:id="_mingl_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;callback(Arg...&#32;arg)
+<anchor xml:id="_mingl_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_mingl_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;current_id&#32;=&#32;glutGetWindow();
+<anchor xml:id="_mingl_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//cout&#32;&lt;&lt;&#32;&quot;window&#32;[&quot;&#32;&lt;&lt;&#32;current_id&#32;&lt;&lt;&#32;&quot;]&#32;handler&#32;call&quot;&#32;&lt;&lt;&#32;endl;</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;it&#32;=&#32;anyWindow.find(current_id);
+<anchor xml:id="_mingl_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(it&#32;!=&#32;anyWindow.end())
+<anchor xml:id="_mingl_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_mingl_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;(it-&gt;second-&gt;*oHandler)(arg...);
+<anchor xml:id="_mingl_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_mingl_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_mingl_8cpp_source_1l00036"/>00036 };
+<anchor xml:id="_mingl_8cpp_source_1l00037"/>00037 
+<anchor xml:id="_mingl_8cpp_source_1l00038"/>00038 }&#32;<emphasis role="comment">//&#32;namespace</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00039"/>00039 
+<anchor xml:id="_mingl_8cpp_source_1l00040"/>00040 <emphasis role="preprocessor">#define&#32;BIND_CALLBACK(HANDLER)&#32;callBackBuilder&lt;decltype(HANDLER),&#32;HANDLER&gt;::callback</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00041"/>00041 
+<anchor xml:id="_mingl_8cpp_source_1l00042"/><link linkend="_class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c">00042</link> <link linkend="_class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c">MinGL::MinGL</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;windowSize,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;windowPosition,
+<anchor xml:id="_mingl_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;backgroundColor)
+<anchor xml:id="_mingl_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;:&#32;m_windowName(name)
+<anchor xml:id="_mingl_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;,&#32;m_bgColor(backgroundColor)
+<anchor xml:id="_mingl_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;,&#32;m_eventManager()
+<anchor xml:id="_mingl_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;,&#32;m_windowIsOpen(false)
+<anchor xml:id="_mingl_8cpp_source_1l00048"/>00048 {
+<anchor xml:id="_mingl_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;glutInitWindowSize(windowSize.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>(),&#32;windowSize.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>());
+<anchor xml:id="_mingl_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;glutInitWindowPosition(windowPosition.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>(),&#32;windowPosition.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>());
+<anchor xml:id="_mingl_8cpp_source_1l00051"/>00051 }&#32;<emphasis role="comment">//&#32;MinGL()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00052"/>00052 
+<anchor xml:id="_mingl_8cpp_source_1l00053"/><link linkend="_class_min_g_l_1a0f84e59dd311785a7e6da848abd5d188">00053</link> <link linkend="_class_min_g_l_1a0f84e59dd311785a7e6da848abd5d188">MinGL::~MinGL</link>()
+<anchor xml:id="_mingl_8cpp_source_1l00054"/>00054 {
+<anchor xml:id="_mingl_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="keyword">auto</emphasis>&#32;it&#32;=&#32;anyWindow.find(m_glutWindowId);
+<anchor xml:id="_mingl_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(it&#32;!=&#32;anyWindow.end())
+<anchor xml:id="_mingl_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;anyWindow.erase(it);
+<anchor xml:id="_mingl_8cpp_source_1l00058"/>00058 
+<anchor xml:id="_mingl_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1a9508f3ac9d4cb4f444f56f5d77ed9d86">stopGraphic</link>();
+<anchor xml:id="_mingl_8cpp_source_1l00060"/>00060 }&#32;<emphasis role="comment">//~MinGL()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00061"/>00061 
+<anchor xml:id="_mingl_8cpp_source_1l00062"/><link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">00062</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">MinGL::finishFrame</link>()
+<anchor xml:id="_mingl_8cpp_source_1l00063"/>00063 {
+<anchor xml:id="_mingl_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;glutPostRedisplay();
+<anchor xml:id="_mingl_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;glutMainLoopEvent();
+<anchor xml:id="_mingl_8cpp_source_1l00066"/>00066 }&#32;<emphasis role="comment">//&#32;finishFrame()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00067"/>00067 
+<anchor xml:id="_mingl_8cpp_source_1l00068"/><link linkend="_class_min_g_l_1a86c940758616957683ffb2e239bba774">00068</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a86c940758616957683ffb2e239bba774">MinGL::clearScreen</link>()
+<anchor xml:id="_mingl_8cpp_source_1l00069"/>00069 {
+<anchor xml:id="_mingl_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;glClear(GL_COLOR_BUFFER_BIT);
+<anchor xml:id="_mingl_8cpp_source_1l00071"/>00071 }&#32;<emphasis role="comment">//&#32;clearScreen()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00072"/>00072 
+<anchor xml:id="_mingl_8cpp_source_1l00073"/><link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">00073</link> <link linkend="_classns_event_1_1_event_manager">nsEvent::EventManager</link>&amp;&#32;<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">MinGL::getEventManager</link>()
+<anchor xml:id="_mingl_8cpp_source_1l00074"/>00074 {
+<anchor xml:id="_mingl_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_eventManager;
+<anchor xml:id="_mingl_8cpp_source_1l00076"/>00076 }&#32;<emphasis role="comment">//&#32;getEventManager()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00077"/>00077 
+<anchor xml:id="_mingl_8cpp_source_1l00078"/><link linkend="_class_min_g_l_1a66758e8e6983cc1dd0b10b1ee743a65a">00078</link> <emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;<link linkend="_class_min_g_l_1a66758e8e6983cc1dd0b10b1ee743a65a">MinGL::getBackgroundColor</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00079"/>00079 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_mingl_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_bgColor;
+<anchor xml:id="_mingl_8cpp_source_1l00081"/>00081 }&#32;<emphasis role="comment">//&#32;getBackgroundColor()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00082"/>00082 
+<anchor xml:id="_mingl_8cpp_source_1l00083"/><link linkend="_class_min_g_l_1a4399b7615cea89f850cd5c66e428c367">00083</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a4399b7615cea89f850cd5c66e428c367">MinGL::setBackgroundColor</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;backgroundColor)
+<anchor xml:id="_mingl_8cpp_source_1l00084"/>00084 {
+<anchor xml:id="_mingl_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;m_bgColor&#32;=&#32;backgroundColor;
+<anchor xml:id="_mingl_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;glClearColor(m_bgColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79">getRed</link>()&#32;/&#32;256.f,&#32;m_bgColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</link>()&#32;/&#32;256.f,&#32;m_bgColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129">getBlue</link>()&#32;/&#32;256.f,&#32;m_bgColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e">getAlpha</link>()&#32;/&#32;256.f);
+<anchor xml:id="_mingl_8cpp_source_1l00087"/>00087 }&#32;<emphasis role="comment">//&#32;setBackgroundColor()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00088"/>00088 
+<anchor xml:id="_mingl_8cpp_source_1l00089"/><link linkend="_class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc">00089</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc">MinGL::initGraphic</link>()
+<anchor xml:id="_mingl_8cpp_source_1l00090"/>00090 {
+<anchor xml:id="_mingl_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialisation&#32;GLUT</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;glutInitDisplayMode(GLUT_DOUBLE&#32;|&#32;GLUT_RGBA);
+<anchor xml:id="_mingl_8cpp_source_1l00093"/>00093 
+<anchor xml:id="_mingl_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;m_glutWindowId&#32;=&#32;glutCreateWindow(m_windowName.c_str());
+<anchor xml:id="_mingl_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;anyWindow[m_glutWindowId]&#32;=&#32;<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_mingl_8cpp_source_1l00096"/>00096 
+<anchor xml:id="_mingl_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;active&#32;la&#32;transparence</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;glEnable(GL_BLEND);
+<anchor xml:id="_mingl_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;glBlendFunc(GL_SRC_ALPHA,&#32;GL_ONE_MINUS_SRC_ALPHA);
+<anchor xml:id="_mingl_8cpp_source_1l00100"/>00100 
+<anchor xml:id="_mingl_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE,&#32;GLUT_ACTION_CONTINUE_EXECUTION);
+<anchor xml:id="_mingl_8cpp_source_1l00102"/>00102 
+<anchor xml:id="_mingl_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialisation&#32;handlers</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;glutReshapeFunc(BIND_CALLBACK(&amp;MinGL::callReshape));
+<anchor xml:id="_mingl_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;glutDisplayFunc(BIND_CALLBACK(&amp;MinGL::callDisplay));
+<anchor xml:id="_mingl_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;glutMouseFunc(BIND_CALLBACK(&amp;MinGL::callMouse));
+<anchor xml:id="_mingl_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;glutMotionFunc(BIND_CALLBACK(&amp;MinGL::callMotion));
+<anchor xml:id="_mingl_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;glutPassiveMotionFunc(BIND_CALLBACK(&amp;MinGL::callPassiveMotion));
+<anchor xml:id="_mingl_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;glutKeyboardFunc(BIND_CALLBACK(&amp;MinGL::callKeyboard));
+<anchor xml:id="_mingl_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;glutKeyboardUpFunc(BIND_CALLBACK(&amp;MinGL::callKeyboardUp));
+<anchor xml:id="_mingl_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;glutSpecialFunc(BIND_CALLBACK(&amp;MinGL::callKeyboardSpecial));
+<anchor xml:id="_mingl_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;glutSpecialUpFunc(BIND_CALLBACK(&amp;MinGL::callKeyboardUpSpecial));
+<anchor xml:id="_mingl_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;glutCloseFunc(BIND_CALLBACK(&amp;MinGL::callClose));
+<anchor xml:id="_mingl_8cpp_source_1l00114"/>00114 
+<anchor xml:id="_mingl_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;set&#32;la&#32;couleur&#32;d&apos;effacement&#32;(prend&#32;des&#32;float,&#32;donc&#32;obligé&#32;de&#32;diviser&#32;par&#32;la&#32;taille&#32;d&apos;un&#32;GLuint)</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;glClearColor(m_bgColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79">getRed</link>()&#32;/&#32;256.f,&#32;m_bgColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</link>()&#32;/&#32;256.f,&#32;m_bgColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129">getBlue</link>()&#32;/&#32;256.f,&#32;m_bgColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e">getAlpha</link>()&#32;/&#32;256.f);
+<anchor xml:id="_mingl_8cpp_source_1l00117"/>00117 
+<anchor xml:id="_mingl_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Efface&#32;écran</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1a86c940758616957683ffb2e239bba774">clearScreen</link>();
+<anchor xml:id="_mingl_8cpp_source_1l00120"/>00120 
+<anchor xml:id="_mingl_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Un&#32;tour&#32;de&#32;boucle&#32;pour&#32;lancer&#32;l&apos;affichage</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;glutMainLoopEvent();
+<anchor xml:id="_mingl_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;glutSetKeyRepeat(GLUT_KEY_REPEAT_OFF);&#32;<emphasis role="comment">//&#32;on&#32;désactive&#32;la&#32;répétition&#32;des&#32;touches</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;m_windowIsOpen&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_mingl_8cpp_source_1l00125"/>00125 }&#32;<emphasis role="comment">//&#32;initGraphic()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00126"/>00126 
+<anchor xml:id="_mingl_8cpp_source_1l00127"/><link linkend="_class_min_g_l_1a9508f3ac9d4cb4f444f56f5d77ed9d86">00127</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a9508f3ac9d4cb4f444f56f5d77ed9d86">MinGL::stopGraphic</link>()
+<anchor xml:id="_mingl_8cpp_source_1l00128"/>00128 {
+<anchor xml:id="_mingl_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;glutDestroyWindow(m_glutWindowId);
+<anchor xml:id="_mingl_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;glutMainLoopEvent();
+<anchor xml:id="_mingl_8cpp_source_1l00131"/>00131 }&#32;<emphasis role="comment">//&#32;stopGraphic()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00132"/>00132 
+<anchor xml:id="_mingl_8cpp_source_1l00133"/><link linkend="_class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f">00133</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f">MinGL::isPressed</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>&#32;&amp;key)
+<anchor xml:id="_mingl_8cpp_source_1l00134"/>00134 {
+<anchor xml:id="_mingl_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_keyboardMap[key];
+<anchor xml:id="_mingl_8cpp_source_1l00136"/>00136 }&#32;<emphasis role="comment">//&#32;isPressed()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00137"/>00137 
+<anchor xml:id="_mingl_8cpp_source_1l00138"/><link linkend="_class_min_g_l_1a99750fd4c8f97cfe693b1acb903424cf">00138</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a99750fd4c8f97cfe693b1acb903424cf">MinGL::resetKey</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>&#32;&amp;key)
+<anchor xml:id="_mingl_8cpp_source_1l00139"/>00139 {
+<anchor xml:id="_mingl_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;m_keyboardMap[key]&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_mingl_8cpp_source_1l00141"/>00141 }&#32;<emphasis role="comment">//&#32;resetKey()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00142"/>00142 
+<anchor xml:id="_mingl_8cpp_source_1l00143"/>00143 <emphasis role="keywordtype">void</emphasis>&#32;MinGL::callReshape(<emphasis role="keywordtype">int</emphasis>&#32;h,&#32;<emphasis role="keywordtype">int</emphasis>&#32;w)
+<anchor xml:id="_mingl_8cpp_source_1l00144"/>00144 {
+<anchor xml:id="_mingl_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;glMatrixMode(GL_PROJECTION);
+<anchor xml:id="_mingl_8cpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;glLoadIdentity();
+<anchor xml:id="_mingl_8cpp_source_1l00147"/>00147 
+<anchor xml:id="_mingl_8cpp_source_1l00148"/>00148 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;windowSize&#32;=&#32;<link linkend="_class_min_g_l_1a92bacd1567089fb4641ed7b416cfe74d">getWindowSize</link>();
+<anchor xml:id="_mingl_8cpp_source_1l00149"/>00149 &#32;&#32;&#32;&#32;gluOrtho2D(0.0,&#32;GLfloat&#32;(windowSize.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()),&#32;GLfloat&#32;(windowSize.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>()),&#32;0.0);
+<anchor xml:id="_mingl_8cpp_source_1l00150"/>00150 
+<anchor xml:id="_mingl_8cpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;glMatrixMode(GL_MODELVIEW);
+<anchor xml:id="_mingl_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;glLoadIdentity();
+<anchor xml:id="_mingl_8cpp_source_1l00153"/>00153 &#32;&#32;&#32;&#32;glViewport(0,&#32;0,&#32;h,&#32;w);
+<anchor xml:id="_mingl_8cpp_source_1l00154"/>00154 }&#32;<emphasis role="comment">//&#32;callReshape()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00155"/>00155 
+<anchor xml:id="_mingl_8cpp_source_1l00156"/>00156 <emphasis role="keywordtype">void</emphasis>&#32;MinGL::callDisplay()
+<anchor xml:id="_mingl_8cpp_source_1l00157"/>00157 {
+<anchor xml:id="_mingl_8cpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;glFlush();
+<anchor xml:id="_mingl_8cpp_source_1l00159"/>00159 &#32;&#32;&#32;&#32;glutSwapBuffers();
+<anchor xml:id="_mingl_8cpp_source_1l00160"/>00160 }&#32;<emphasis role="comment">//&#32;callDisplay()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00161"/>00161 
+<anchor xml:id="_mingl_8cpp_source_1l00162"/>00162 <emphasis role="keywordtype">void</emphasis>&#32;MinGL::callMouse(<emphasis role="keywordtype">int</emphasis>&#32;button,&#32;<emphasis role="keywordtype">int</emphasis>&#32;state,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y)
+<anchor xml:id="_mingl_8cpp_source_1l00163"/>00163 {
+<anchor xml:id="_mingl_8cpp_source_1l00164"/>00164 &#32;&#32;&#32;&#32;<link linkend="_structns_event_1_1_event__t">nsEvent::Event_t</link>&#32;event;
+<anchor xml:id="_mingl_8cpp_source_1l00165"/>00165 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.<link linkend="_structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c">eventType</link>&#32;=&#32;<link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7">nsEvent::EventType_t::MouseClick</link>;
+<anchor xml:id="_mingl_8cpp_source_1l00166"/>00166 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.eventData.clickData.button&#32;=&#32;button;
+<anchor xml:id="_mingl_8cpp_source_1l00167"/>00167 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.eventData.clickData.state&#32;=&#32;state;
+<anchor xml:id="_mingl_8cpp_source_1l00168"/>00168 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.eventData.clickData.x&#32;=&#32;x;
+<anchor xml:id="_mingl_8cpp_source_1l00169"/>00169 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.eventData.clickData.y&#32;=&#32;y;
+<anchor xml:id="_mingl_8cpp_source_1l00170"/>00170 
+<anchor xml:id="_mingl_8cpp_source_1l00171"/>00171 &#32;&#32;&#32;&#32;m_eventManager.<link linkend="_classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5">pushEvent</link>(event);
+<anchor xml:id="_mingl_8cpp_source_1l00172"/>00172 }&#32;<emphasis role="comment">//&#32;calMouse()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00173"/>00173 
+<anchor xml:id="_mingl_8cpp_source_1l00174"/>00174 <emphasis role="keywordtype">void</emphasis>&#32;MinGL::callMotion(<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y)
+<anchor xml:id="_mingl_8cpp_source_1l00175"/>00175 {
+<anchor xml:id="_mingl_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;<link linkend="_structns_event_1_1_event__t">nsEvent::Event_t</link>&#32;event;
+<anchor xml:id="_mingl_8cpp_source_1l00177"/>00177 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.<link linkend="_structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c">eventType</link>&#32;=&#32;<link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317">nsEvent::EventType_t::MouseDrag</link>;
+<anchor xml:id="_mingl_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.eventData.moveData.x&#32;=&#32;x;
+<anchor xml:id="_mingl_8cpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.eventData.moveData.y&#32;=&#32;y;
+<anchor xml:id="_mingl_8cpp_source_1l00180"/>00180 
+<anchor xml:id="_mingl_8cpp_source_1l00181"/>00181 &#32;&#32;&#32;&#32;m_eventManager.<link linkend="_classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5">pushEvent</link>(event);
+<anchor xml:id="_mingl_8cpp_source_1l00182"/>00182 }&#32;<emphasis role="comment">//&#32;callMotion()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00183"/>00183 
+<anchor xml:id="_mingl_8cpp_source_1l00184"/>00184 <emphasis role="keywordtype">void</emphasis>&#32;MinGL::callPassiveMotion(<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y)
+<anchor xml:id="_mingl_8cpp_source_1l00185"/>00185 {
+<anchor xml:id="_mingl_8cpp_source_1l00186"/>00186 &#32;&#32;&#32;&#32;<link linkend="_structns_event_1_1_event__t">nsEvent::Event_t</link>&#32;event;
+<anchor xml:id="_mingl_8cpp_source_1l00187"/>00187 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.<link linkend="_structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c">eventType</link>&#32;=&#32;<link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6">nsEvent::EventType_t::MouseMove</link>;
+<anchor xml:id="_mingl_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.eventData.moveData.x&#32;=&#32;x;
+<anchor xml:id="_mingl_8cpp_source_1l00189"/>00189 &#32;&#32;&#32;&#32;<emphasis role="keyword">event</emphasis>.eventData.moveData.y&#32;=&#32;y;
+<anchor xml:id="_mingl_8cpp_source_1l00190"/>00190 
+<anchor xml:id="_mingl_8cpp_source_1l00191"/>00191 &#32;&#32;&#32;&#32;m_eventManager.<link linkend="_classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5">pushEvent</link>(event);
+<anchor xml:id="_mingl_8cpp_source_1l00192"/>00192 }&#32;<emphasis role="comment">//&#32;callPassiveMotion()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00193"/>00193 
+<anchor xml:id="_mingl_8cpp_source_1l00194"/>00194 <emphasis role="keywordtype">void</emphasis>&#32;MinGL::callKeyboard(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;k,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y)
+<anchor xml:id="_mingl_8cpp_source_1l00195"/>00195 {
+<anchor xml:id="_mingl_8cpp_source_1l00196"/>00196 &#32;&#32;&#32;&#32;(void)(x);&#32;(void)(y);
+<anchor xml:id="_mingl_8cpp_source_1l00197"/>00197 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>&#32;key(k,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="_mingl_8cpp_source_1l00198"/>00198 &#32;&#32;&#32;&#32;m_keyboardMap[key]&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_mingl_8cpp_source_1l00199"/>00199 }&#32;<emphasis role="comment">//&#32;callKeyboard()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00200"/>00200 
+<anchor xml:id="_mingl_8cpp_source_1l00201"/>00201 <emphasis role="keywordtype">void</emphasis>&#32;MinGL::callKeyboardUp(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;k,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y)
+<anchor xml:id="_mingl_8cpp_source_1l00202"/>00202 {
+<anchor xml:id="_mingl_8cpp_source_1l00203"/>00203 &#32;&#32;&#32;&#32;(void)(x);&#32;(void)(y);
+<anchor xml:id="_mingl_8cpp_source_1l00204"/>00204 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>&#32;key(k,&#32;<emphasis role="keyword">false</emphasis>);
+<anchor xml:id="_mingl_8cpp_source_1l00205"/>00205 &#32;&#32;&#32;&#32;m_keyboardMap[key]&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_mingl_8cpp_source_1l00206"/>00206 }&#32;<emphasis role="comment">//&#32;callKeyboardUp()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00207"/>00207 
+<anchor xml:id="_mingl_8cpp_source_1l00208"/>00208 <emphasis role="keywordtype">void</emphasis>&#32;MinGL::callKeyboardSpecial(<emphasis role="keywordtype">int</emphasis>&#32;k,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y)
+<anchor xml:id="_mingl_8cpp_source_1l00209"/>00209 {
+<anchor xml:id="_mingl_8cpp_source_1l00210"/>00210 &#32;&#32;&#32;&#32;(void)(x);&#32;(void)(y);
+<anchor xml:id="_mingl_8cpp_source_1l00211"/>00211 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>&#32;key(k,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_mingl_8cpp_source_1l00212"/>00212 &#32;&#32;&#32;&#32;m_keyboardMap[key]&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_mingl_8cpp_source_1l00213"/>00213 }&#32;<emphasis role="comment">//&#32;callKeyboardSpecial()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00214"/>00214 
+<anchor xml:id="_mingl_8cpp_source_1l00215"/>00215 <emphasis role="keywordtype">void</emphasis>&#32;MinGL::callKeyboardUpSpecial(<emphasis role="keywordtype">int</emphasis>&#32;k,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y)
+<anchor xml:id="_mingl_8cpp_source_1l00216"/>00216 {
+<anchor xml:id="_mingl_8cpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;(void)(x);&#32;(void)(y);
+<anchor xml:id="_mingl_8cpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>&#32;key(k,&#32;<emphasis role="keyword">true</emphasis>);
+<anchor xml:id="_mingl_8cpp_source_1l00219"/>00219 &#32;&#32;&#32;&#32;m_keyboardMap[key]&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_mingl_8cpp_source_1l00220"/>00220 }&#32;<emphasis role="comment">//&#32;callKeyboardUpSpecial()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00221"/>00221 
+<anchor xml:id="_mingl_8cpp_source_1l00222"/>00222 <emphasis role="keywordtype">void</emphasis>&#32;MinGL::callClose()
+<anchor xml:id="_mingl_8cpp_source_1l00223"/>00223 {
+<anchor xml:id="_mingl_8cpp_source_1l00224"/>00224 &#32;&#32;&#32;&#32;m_windowIsOpen&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_mingl_8cpp_source_1l00225"/>00225 }&#32;<emphasis role="comment">//&#32;callClose()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00226"/>00226 
+<anchor xml:id="_mingl_8cpp_source_1l00227"/><link linkend="_class_min_g_l_1a92bacd1567089fb4641ed7b416cfe74d">00227</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_class_min_g_l_1a92bacd1567089fb4641ed7b416cfe74d">MinGL::getWindowSize</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00228"/>00228 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_mingl_8cpp_source_1l00229"/>00229 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(glutGet(GLUT_WINDOW_WIDTH),&#32;glutGet(GLUT_WINDOW_HEIGHT));
+<anchor xml:id="_mingl_8cpp_source_1l00230"/>00230 }&#32;<emphasis role="comment">//&#32;getWindowSize()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00231"/>00231 
+<anchor xml:id="_mingl_8cpp_source_1l00232"/><link linkend="_class_min_g_l_1a532d320b7b837998533fe6577ab45bc3">00232</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a532d320b7b837998533fe6577ab45bc3">MinGL::setWindowSize</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;windowSize)
+<anchor xml:id="_mingl_8cpp_source_1l00233"/>00233 {
+<anchor xml:id="_mingl_8cpp_source_1l00234"/>00234 &#32;&#32;&#32;&#32;glutReshapeWindow(windowSize.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>(),&#32;windowSize.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>());
+<anchor xml:id="_mingl_8cpp_source_1l00235"/>00235 }&#32;<emphasis role="comment">//&#32;setWindowSize()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00236"/>00236 
+<anchor xml:id="_mingl_8cpp_source_1l00237"/><link linkend="_class_min_g_l_1a1ea6ea098988db36f5bf18713f9f3347">00237</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_class_min_g_l_1a1ea6ea098988db36f5bf18713f9f3347">MinGL::getWindowPosition</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00238"/>00238 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_mingl_8cpp_source_1l00239"/>00239 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(glutGet(GLUT_WINDOW_X),&#32;glutGet(GLUT_WINDOW_Y));
+<anchor xml:id="_mingl_8cpp_source_1l00240"/>00240 }&#32;<emphasis role="comment">//&#32;getWindowPosition()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00241"/>00241 
+<anchor xml:id="_mingl_8cpp_source_1l00242"/><link linkend="_class_min_g_l_1a9239873a52e437457af03f002f5df2b6">00242</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a9239873a52e437457af03f002f5df2b6">MinGL::setWindowPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;windowPosition)
+<anchor xml:id="_mingl_8cpp_source_1l00243"/>00243 {
+<anchor xml:id="_mingl_8cpp_source_1l00244"/>00244 &#32;&#32;&#32;&#32;glutPositionWindow(windowPosition.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>(),&#32;windowPosition.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>());
+<anchor xml:id="_mingl_8cpp_source_1l00245"/>00245 }&#32;<emphasis role="comment">//&#32;setWindowPosition()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00246"/>00246 
+<anchor xml:id="_mingl_8cpp_source_1l00247"/><link linkend="_class_min_g_l_1a46cea08ec9ef4a0678f425000ca77e5b">00247</link> <emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;<link linkend="_class_min_g_l_1a46cea08ec9ef4a0678f425000ca77e5b">MinGL::getWindowName</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00248"/>00248 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_mingl_8cpp_source_1l00249"/>00249 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_windowName;
+<anchor xml:id="_mingl_8cpp_source_1l00250"/>00250 }&#32;<emphasis role="comment">//&#32;getWindowName()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00251"/>00251 
+<anchor xml:id="_mingl_8cpp_source_1l00252"/><link linkend="_class_min_g_l_1a462ab2edc0eb28990638541873869e0e">00252</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a462ab2edc0eb28990638541873869e0e">MinGL::setWindowName</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;windowName)
+<anchor xml:id="_mingl_8cpp_source_1l00253"/>00253 {
+<anchor xml:id="_mingl_8cpp_source_1l00254"/>00254 &#32;&#32;&#32;&#32;m_windowName&#32;=&#32;windowName;
+<anchor xml:id="_mingl_8cpp_source_1l00255"/>00255 &#32;&#32;&#32;&#32;glutSetWindowTitle(windowName.c_str());
+<anchor xml:id="_mingl_8cpp_source_1l00256"/>00256 }&#32;<emphasis role="comment">//&#32;setWindowName()</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00257"/>00257 
+<anchor xml:id="_mingl_8cpp_source_1l00258"/><link linkend="_class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d">00258</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d">MinGL::isOpen</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_mingl_8cpp_source_1l00259"/>00259 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_mingl_8cpp_source_1l00260"/>00260 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_windowIsOpen;
+<anchor xml:id="_mingl_8cpp_source_1l00261"/>00261 }&#32;<emphasis role="comment">//&#32;isOpen()</emphasis>
+</programlisting></section>

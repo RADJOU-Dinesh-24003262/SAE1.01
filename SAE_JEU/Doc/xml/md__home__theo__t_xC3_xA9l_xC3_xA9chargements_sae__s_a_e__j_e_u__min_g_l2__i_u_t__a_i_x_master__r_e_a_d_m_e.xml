@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master__r_e_a_d_m_e" kind="page">
+    <compoundname>md__home_Theo_Téléchargements_sae_SAE_JEU_MinGL2_IUT_AIX_master_README</compoundname>
+    <title>minGL 2</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<para><ref refid="class_min_g_l" kindref="compound">MinGL</ref> 2 est un bibliothèque écrite en C++, évolution de <ref refid="class_min_g_l" kindref="compound">MinGL</ref> par Alain Casali, enseignant chercheur au département informatique de l&apos;IUT d&apos;Aix-en-Provence. <linebreak/>
+ Elle facilite l&apos;affichage de forme primitives et composées, de texte et la réalisation d&apos;animations. Elle permet également de jouer des fichiers audios et de gérer les saisies clavier et souris.</para>
+<para>Développé dans un but pédagogique.</para>
+<sect1 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master__r_e_a_d_m_e_1autotoc_md15">
+<title>Installation</title>
+<para>Les dépendances suivantes sont requises pour utiliser minGL 2:<itemizedlist>
+<listitem><para>freeglut</para>
+</listitem><listitem><para>sfml (audio)</para>
+</listitem></itemizedlist>
+</para>
+<para>Installation sous <bold>Debian et dérivés</bold>: <programlisting><codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>freeglut3-dev<sp/>libsfml-dev</highlight></codeline>
+</programlisting></para>
+<para>Installation sous <bold>Arch Linux et Manjaro</bold>:  <programlisting><codeline><highlight class="normal">sudo<sp/>pacman<sp/>-S<sp/>freeglut<sp/>sfml</highlight></codeline>
+</programlisting></para>
+<para>Installation sous <bold>macOS</bold> (avec <ulink url="https://brew.sh">Homebrew</ulink> préalablement installé): <programlisting><codeline><highlight class="normal">brew<sp/>cask<sp/>install<sp/>xquartz</highlight></codeline>
+<codeline><highlight class="normal">brew<sp/>install<sp/>freeglut<sp/>sfml</highlight></codeline>
+</programlisting> <bold>Important</bold>: Afin de terminer l&apos;installation de XQuartz, macOS doit être redémarré.</para>
+<para>Testé sous Debian 10, Ubuntu 20.04, macOS 10.15, Manjaro GNU/Linux (audio non testé)</para>
+</sect1>
+<sect1 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master__r_e_a_d_m_e_1autotoc_md16">
+<title>Utilisation</title>
+<sect2 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master__r_e_a_d_m_e_1autotoc_md17">
+<title>Avec un autre projet qmake</title>
+<para>Pour utiliser minGL 2 dans votre projet qmake, il vous suffit de décompresser (ou encore mieux, mettre en sous-module git) cette bibliothèque dans un sous-répertoire du répertoire contenant votre fichier <computeroutput>.pro</computeroutput>. <linebreak/>
+ Il vous suffit ensuite de rajouter dans votre <computeroutput>.pro</computeroutput> la directive <computeroutput>include(.../mingl.pri)</computeroutput>, en remplaçant <computeroutput>...</computeroutput> par le chemin du répertoire de minGL 2.</para>
+<para>Par exemple, si vous avez décompressé minGL 2 dans le sous-répertoire <computeroutput>minGL2/</computeroutput> présent dans le même répertoire que votre <computeroutput>.pro</computeroutput>, alors vous devez écrire dans ce dernier: <computeroutput>include(minGL2/mingl.pri)</computeroutput>.</para>
+</sect2>
+<sect2 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master__r_e_a_d_m_e_1autotoc_md18">
+<title>En tant que bibliothèque</title>
+<para>Vous pouvez facilement compiler minGL 2 en tant que bibliothèque afin de générer le fichier <computeroutput>libmingl.a</computeroutput>. <linebreak/>
+ Il vous suffit simplement d&apos;ouvrir le fichier de projet <computeroutput>mingl.pro</computeroutput> et de lancer la compilation, vous trouverez le fichier <computeroutput>.a</computeroutput> dans le répertoire de compilation. <linebreak/>
+ Le répertoire <computeroutput>include/</computeroutput> contient tout les fichiers d&apos;en-tête de minGL 2.</para>
+</sect2>
+<sect2 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master__r_e_a_d_m_e_1autotoc_md19">
+<title>Extras</title>
+<para>Si vous avez <computeroutput>doxygen</computeroutput> installé sur votre machine, vous pouvez générer, dans le répertoire <computeroutput>doc/</computeroutput>, une documentation HTML de minGL 2 avec la commande suivante: <programlisting><codeline><highlight class="normal">doxygen<sp/>Doxyfile</highlight></codeline>
+</programlisting></para>
+<para>Dans le répertoire <computeroutput>tools/</computeroutput>, vous trouverez des outils relatif a l&apos;utilisation de minGL 2.</para>
+</sect2>
+</sect1>
+<sect1 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master__r_e_a_d_m_e_1autotoc_md20">
+<title>Remerciements</title>
+<para><itemizedlist>
+<listitem><para><bold>Alexandre Sollier et Clément Mathieu<ndash/>Drif</bold>: Développeurs principaux de minGL 2</para>
+</listitem><listitem><para><bold>Alain Casali</bold>: Auteur de la version originale de <ref refid="class_min_g_l" kindref="compound">MinGL</ref></para>
+</listitem><listitem><para>La promo 2020-2021 de la 2ème année du Département Informatique de l&apos;IUT d&apos;Aix-en-Provence </para>
+</listitem></itemizedlist>
+</para>
+</sect1>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/README.md"/>
+  </compounddef>
+</doxygen>

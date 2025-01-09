@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_itransitionable_8h_source" xml:lang="en-US">
+<title>itransitionable.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_itransitionable_8h_source_1l00001"/>00001 
+<anchor xml:id="_itransitionable_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;ITRANSITIONABLE_H</emphasis>
+<anchor xml:id="_itransitionable_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;ITRANSITIONABLE_H</emphasis>
+<anchor xml:id="_itransitionable_8h_source_1l00013"/>00013 
+<anchor xml:id="_itransitionable_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="_itransitionable_8h_source_1l00015"/>00015 
+<anchor xml:id="_itransitionable_8h_source_1l00016"/><link linkend="_namespacens_transition">00016</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_transition">nsTransition</link>
+<anchor xml:id="_itransitionable_8h_source_1l00017"/>00017 {
+<anchor xml:id="_itransitionable_8h_source_1l00018"/>00018 
+<anchor xml:id="_itransitionable_8h_source_1l00023"/><link linkend="_classns_transition_1_1_i_transitionable">00023</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_transition_1_1_i_transitionable">ITransitionable</link>
+<anchor xml:id="_itransitionable_8h_source_1l00024"/>00024 {
+<anchor xml:id="_itransitionable_8h_source_1l00025"/>00025 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_itransitionable_8h_source_1l00030"/><link linkend="_classns_transition_1_1_i_transitionable_1addd11ff845b6387b07672a64c1b8938e">00030</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classns_transition_1_1_i_transitionable_1addd11ff845b6387b07672a64c1b8938e">~ITransitionable</link>()&#32;{}
+<anchor xml:id="_itransitionable_8h_source_1l00031"/>00031 
+<anchor xml:id="_itransitionable_8h_source_1l00038"/><link linkend="_classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">00038</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">getValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&amp;&#32;<emphasis role="keywordtype">id</emphasis>,&#32;std::vector&lt;float&gt;&amp;&#32;values)&#32;=&#32;0;
+<anchor xml:id="_itransitionable_8h_source_1l00039"/>00039 
+<anchor xml:id="_itransitionable_8h_source_1l00046"/><link linkend="_classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">00046</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">setValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&amp;&#32;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;float&gt;&amp;&#32;values)&#32;=&#32;0;
+<anchor xml:id="_itransitionable_8h_source_1l00047"/>00047 };&#32;<emphasis role="comment">//&#32;class&#32;ITransitionable</emphasis>
+<anchor xml:id="_itransitionable_8h_source_1l00048"/>00048 
+<anchor xml:id="_itransitionable_8h_source_1l00049"/>00049 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsTransition</emphasis>
+<anchor xml:id="_itransitionable_8h_source_1l00050"/>00050 
+<anchor xml:id="_itransitionable_8h_source_1l00051"/>00051 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;ITRANSITIONABLE_H</emphasis>
+</programlisting></section>

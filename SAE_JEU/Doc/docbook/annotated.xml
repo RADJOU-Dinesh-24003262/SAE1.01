@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_classns_audio_1_1_audio_engine">nsAudio::AudioEngine</link>
+<para>Une classe de gestion des effets audio et de la musique </para>
+<link linkend="_struct_authorized_key">AuthorizedKey</link>
+<para>Struct containing all the authorized keys in the struct <link linkend="_struct_c_my_param">CMyParam</link> </para>
+<link linkend="_class_bg_text">BgText</link><link linkend="_classns_exception_1_1_c_exception">nsException::CException</link>
+<para>Classe pour créer des exceptions facilement </para>
+<link linkend="_classns_shape_1_1_circle">nsShape::Circle</link>
+<para>Classe représentant un cercle </para>
+<link linkend="_struct_c_my_param">CMyParam</link><link linkend="_struct_c_my_param_v2">CMyParamV2</link>
+<para>Structure contenant les paramètres de configuration du jeu </para>
+<link linkend="_struct_collectible">Collectible</link><link linkend="_structns_event_1_1_event__t">nsEvent::Event_t</link>
+<para>Possède des données pour un événement </para>
+<link linkend="_unionns_event_1_1_event_data__t">nsEvent::EventData_t</link>
+<para>Union contenant les données d&apos;un événement </para>
+<link linkend="_classns_event_1_1_event_manager">nsEvent::EventManager</link>
+<para>Gère une queue d&apos;événement entrants </para>
+<link linkend="_struct_form">Form</link><link linkend="_classns_gui_1_1_glut_font">nsGui::GlutFont</link>
+<para>Classe listant toute les polices rendues disponibles par Glut, a utiliser avec <link linkend="_classns_gui_1_1_text">Text</link> </para>
+<link linkend="_classns_graphics_1_1_i_drawable">nsGraphics::IDrawable</link>
+<para>Interface pour un objet affichable </para>
+<link linkend="_classns_util_1_1_i_editable">nsUtil::IEditable</link>
+<para>Interface pour un objet injectable </para>
+<link linkend="_classns_util_1_1_i_fonctor_unaire">nsUtil::IFonctorUnaire&lt; T1, TRes &gt;</link>
+<para>Interface pour un fonctor unaire </para>
+<link linkend="_classns_transition_1_1_i_transitionable">nsTransition::ITransitionable</link>
+<para>Une classe abstraite pour n&apos;importe quelle élément pouvant effectuer une transition entre deux états </para>
+<link linkend="_classns_shape_1_1_line">nsShape::Line</link>
+<para>Classe représentant une ligne </para>
+<link linkend="_class_min_g_l">MinGL</link>
+<para>Classe de base de minGL 2 </para>
+<link linkend="_structns_event_1_1_mouse_click_data__t">nsEvent::MouseClickData_t</link>
+<para>Possède des données pour un événement MouseClick </para>
+<link linkend="_structns_event_1_1_mouse_move_data__t">nsEvent::MouseMoveData_t</link>
+<para>Possède des données pour un événement MouseMove/MouseDrag </para>
+<link linkend="_struct_node">Node</link>
+<para>Structure représentant un noeud dans un graphe dans Movemonster() struct représentant un noeud dans un graphe, avec pos sa position, f_cost un coût estimé et son parent </para>
+<link linkend="_classns_shape_1_1_oval">nsShape::Oval</link>
+<para>Classe représentant un <link linkend="_classns_shape_1_1_oval">Oval</link> </para>
+<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>
+<para>Classe représentant un rectangle </para>
+<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>
+<para>Classe représentant un couleur RGBA8888 </para>
+<link linkend="_classns_shape_1_1_shape">nsShape::Shape</link>
+<para>Classe de base pour une forme </para>
+<link linkend="_classns_gui_1_1_sprite">nsGui::Sprite</link>
+<para>Permet de charger une image depuis un format créé pour l&apos;occasion, le .si2 </para>
+<link linkend="_classns_gui_1_1_text">nsGui::Text</link>
+<para>Gère l&apos;affichage d&apos;un texte </para>
+<link linkend="_classns_transition_1_1_transition">nsTransition::Transition</link>
+<para>Une classe représentant un <link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link> en cours de lecture </para>
+<link linkend="_classns_transition_1_1_transition_contract">nsTransition::TransitionContract</link>
+<para>Une classe contenant des paramètres pour créer une transition </para>
+<link linkend="_classns_transition_1_1_transition_engine">nsTransition::TransitionEngine</link>
+<para>Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois </para>
+<link linkend="_classns_shape_1_1_triangle">nsShape::Triangle</link>
+<para>Classe représentant un triangle </para>
+<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>
+<para>Classe représentant un vecteur deux-dimensionnel </para>
+</section>

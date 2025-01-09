@@ -1,0 +1,338 @@
+\hypertarget{classns_shape_1_1_circle}{}\doxysection{ns\+Shape\+::Circle Class Reference}
+\label{classns_shape_1_1_circle}\index{nsShape::Circle@{nsShape::Circle}}
+
+
+Classe représentant un cercle.  
+
+
+
+
+{\ttfamily \#include $<$circle.\+h$>$}
+
+
+
+Inheritance diagram for ns\+Shape\+::Circle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_shape_1_1_circle__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ns\+Shape\+::Circle\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_shape_1_1_circle__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235}{Transition\+Ids}} \{ \newline
+\mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a9fe224767a5f886c96a3f23e6355677a}{TRANSITION\+\_\+\+FILL\+\_\+\+COLOR\+\_\+\+RGB}}
+, \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a0df548537c2bd5e8aad51eab0a182d08}{TRANSITION\+\_\+\+FILL\+\_\+\+COLOR\+\_\+\+ALPHA}}
+, \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a2fdc553c832dfca9e296d9775c107732}{TRANSITION\+\_\+\+BORDER\+\_\+\+COLOR\+\_\+\+RGB}}
+, \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a07cbcb4b2a43a087c534998e1ca553ee}{TRANSITION\+\_\+\+BORDER\+\_\+\+COLOR\+\_\+\+ALPHA}}
+, \newline
+\mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235aa2a6bbdede0b294813c638e4359c8603}{TRANSITION\+\_\+\+POSITION}}
+, \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a8a3d4b3560b97d5e11b81b58e2808393}{TRANSITION\+\_\+\+RADIUS}}
+ \}
+\begin{DoxyCompactList}\small\item\em Transition\+Ids \+: Liste de toutes les transitions que cet élément peut exécuter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classns_shape_1_1_circle_a06b1c1c7ea1e4ec8228d929e7b3966ee}{Circle}} (const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&position, const unsigned \&radius, const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&fill\+Color, const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&border\+Color=ns\+Graphics\+::\+KTransparent)
+\begin{DoxyCompactList}\small\item\em Constructeur pour la classe \mbox{\hyperlink{classns_shape_1_1_circle}{Circle}}. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classns_shape_1_1_circle_a2446e688c063dcb2693adfcfacbb2804}\label{classns_shape_1_1_circle_a2446e688c063dcb2693adfcfacbb2804}} 
+virtual {\bfseries $\sim$\+Circle} () override=default
+\begin{DoxyCompactList}\small\item\em Destructeur virtuel pour la classe \mbox{\hyperlink{classns_shape_1_1_circle}{Circle}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classns_shape_1_1_circle_a03be5cdd7d6a0feaa7d6b0a819389a7a}{draw}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window) const override
+\begin{DoxyCompactList}\small\item\em Fonction pour afficher l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classns_shape_1_1_circle_aae4610d0c110ad09da424c5a3ad91aac}{get\+Values}} (const int \&id, std\+::vector$<$ float $>$ \&values) override
+\begin{DoxyCompactList}\small\item\em Récupère des valeurs dans un vecteur de float pour l\textquotesingle{}ID spécifié \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classns_shape_1_1_circle_a9a2fc6b4a852e25922e5a1732d39644a}{set\+Values}} (const int \&id, const std\+::vector$<$ float $>$ \&values) override
+\begin{DoxyCompactList}\small\item\em Définit les nouvelles valeurs pour l\textquotesingle{}ID spécifié \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classns_shape_1_1_circle}{Circle}} \mbox{\hyperlink{classns_shape_1_1_circle_a8b1f88a61fb38c283b11600e4eec6fe3}{operator+}} (const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&\mbox{\hyperlink{classns_shape_1_1_circle_a85b4102c4a23101fba4f90c1f8e84168}{get\+Position}}) const
+\begin{DoxyCompactList}\small\item\em Opérateur de décalage. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classns_shape_1_1_circle}{Circle}} \mbox{\hyperlink{classns_shape_1_1_circle_ad34827f3120b9331389a00cbf02468cb}{operator$\ast$}} (const float \&f) const
+\begin{DoxyCompactList}\small\item\em Opérateur de réduction. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \& \mbox{\hyperlink{classns_shape_1_1_circle_a85b4102c4a23101fba4f90c1f8e84168}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Récupère la position du cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_shape_1_1_circle_ac4e73227c9ec7e22670bd012b6f37bef}{set\+Position}} (const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&position)
+\begin{DoxyCompactList}\small\item\em Définit la nouvelle position du cercle. \end{DoxyCompactList}\item 
+unsigned \mbox{\hyperlink{classns_shape_1_1_circle_afcb275822a67ec49167fe122ab74872c}{get\+Radius}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le rayon du cercle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_shape_1_1_circle_a5f20408e41621d21487b6162eabc3a7d}{set\+Radius}} (const unsigned \&radius)
+\begin{DoxyCompactList}\small\item\em Définit le nouveau rayon du cercle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Additional Inherited Members}
+
+
+\doxysubsection{Detailed Description}
+Classe représentant un cercle. 
+
+Definition at line \mbox{\hyperlink{circle_8h_source_l00025}{25}} of file \mbox{\hyperlink{circle_8h_source}{circle.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235}\label{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235}} 
+\index{nsShape::Circle@{nsShape::Circle}!TransitionIds@{TransitionIds}}
+\index{TransitionIds@{TransitionIds}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{TransitionIds}{TransitionIds}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235}{ns\+Shape\+::\+Circle\+::\+Transition\+Ids}}}
+
+
+
+Transition\+Ids \+: Liste de toutes les transitions que cet élément peut exécuter. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSITION\_FILL\_COLOR\_RGB@{TRANSITION\_FILL\_COLOR\_RGB}!nsShape::Circle@{nsShape::Circle}}\index{nsShape::Circle@{nsShape::Circle}!TRANSITION\_FILL\_COLOR\_RGB@{TRANSITION\_FILL\_COLOR\_RGB}}}\mbox{\Hypertarget{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a9fe224767a5f886c96a3f23e6355677a}\label{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a9fe224767a5f886c96a3f23e6355677a}} 
+TRANSITION\+\_\+\+FILL\+\_\+\+COLOR\+\_\+\+RGB&Transition pour la couleur de remplissage \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSITION\_FILL\_COLOR\_ALPHA@{TRANSITION\_FILL\_COLOR\_ALPHA}!nsShape::Circle@{nsShape::Circle}}\index{nsShape::Circle@{nsShape::Circle}!TRANSITION\_FILL\_COLOR\_ALPHA@{TRANSITION\_FILL\_COLOR\_ALPHA}}}\mbox{\Hypertarget{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a0df548537c2bd5e8aad51eab0a182d08}\label{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a0df548537c2bd5e8aad51eab0a182d08}} 
+TRANSITION\+\_\+\+FILL\+\_\+\+COLOR\+\_\+\+ALPHA&Transition pour la transparence de remplissage \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSITION\_BORDER\_COLOR\_RGB@{TRANSITION\_BORDER\_COLOR\_RGB}!nsShape::Circle@{nsShape::Circle}}\index{nsShape::Circle@{nsShape::Circle}!TRANSITION\_BORDER\_COLOR\_RGB@{TRANSITION\_BORDER\_COLOR\_RGB}}}\mbox{\Hypertarget{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a2fdc553c832dfca9e296d9775c107732}\label{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a2fdc553c832dfca9e296d9775c107732}} 
+TRANSITION\+\_\+\+BORDER\+\_\+\+COLOR\+\_\+\+RGB&Transition pour la couleur de bord \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSITION\_BORDER\_COLOR\_ALPHA@{TRANSITION\_BORDER\_COLOR\_ALPHA}!nsShape::Circle@{nsShape::Circle}}\index{nsShape::Circle@{nsShape::Circle}!TRANSITION\_BORDER\_COLOR\_ALPHA@{TRANSITION\_BORDER\_COLOR\_ALPHA}}}\mbox{\Hypertarget{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a07cbcb4b2a43a087c534998e1ca553ee}\label{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a07cbcb4b2a43a087c534998e1ca553ee}} 
+TRANSITION\+\_\+\+BORDER\+\_\+\+COLOR\+\_\+\+ALPHA&Transition pour la transparence de bord \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSITION\_POSITION@{TRANSITION\_POSITION}!nsShape::Circle@{nsShape::Circle}}\index{nsShape::Circle@{nsShape::Circle}!TRANSITION\_POSITION@{TRANSITION\_POSITION}}}\mbox{\Hypertarget{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235aa2a6bbdede0b294813c638e4359c8603}\label{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235aa2a6bbdede0b294813c638e4359c8603}} 
+TRANSITION\+\_\+\+POSITION&Transition pour la position \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSITION\_RADIUS@{TRANSITION\_RADIUS}!nsShape::Circle@{nsShape::Circle}}\index{nsShape::Circle@{nsShape::Circle}!TRANSITION\_RADIUS@{TRANSITION\_RADIUS}}}\mbox{\Hypertarget{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a8a3d4b3560b97d5e11b81b58e2808393}\label{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a8a3d4b3560b97d5e11b81b58e2808393}} 
+TRANSITION\+\_\+\+RADIUS&Transition pour le rayon \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{circle_8h_source_l00032}{32}} of file \mbox{\hyperlink{circle_8h_source}{circle.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classns_shape_1_1_circle_a06b1c1c7ea1e4ec8228d929e7b3966ee}\label{classns_shape_1_1_circle_a06b1c1c7ea1e4ec8228d929e7b3966ee}} 
+\index{nsShape::Circle@{nsShape::Circle}!Circle@{Circle}}
+\index{Circle@{Circle}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{Circle()}{Circle()}}
+{\footnotesize\ttfamily ns\+Shape\+::\+Circle\+::\+Circle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{position,  }\item[{const unsigned \&}]{radius,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&}]{fill\+Color,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&}]{border\+Color = {\ttfamily nsGraphics\+:\+:KTransparent} }\end{DoxyParamCaption})}
+
+
+
+Constructeur pour la classe \mbox{\hyperlink{classns_shape_1_1_circle}{Circle}}. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em first\+Position} & \+: Position du centre \\
+\hline
+\mbox{\texttt{ in}}  & {\em radius} & \+: Rayon du cercle \\
+\hline
+\mbox{\texttt{ in}}  & {\em fill\+Color} & \+: Couleur de remplissage \\
+\hline
+\mbox{\texttt{ in}}  & {\em border\+Color} & \+: Couleur de bord \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{circle_8cpp_source_l00016}{16}} of file \mbox{\hyperlink{circle_8cpp_source}{circle.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns_shape_1_1_circle_a03be5cdd7d6a0feaa7d6b0a819389a7a}\label{classns_shape_1_1_circle_a03be5cdd7d6a0feaa7d6b0a819389a7a}} 
+\index{nsShape::Circle@{nsShape::Circle}!draw@{draw}}
+\index{draw@{draw}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void ns\+Shape\+::\+Circle\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction pour afficher l\textquotesingle{}objet. 
+
+
+
+Implements \mbox{\hyperlink{classns_graphics_1_1_i_drawable_abed8a61e1d507d31e76f0891f3bf9c51}{ns\+Graphics\+::\+IDrawable}}.
+
+
+
+Definition at line \mbox{\hyperlink{circle_8cpp_source_l00022}{22}} of file \mbox{\hyperlink{circle_8cpp_source}{circle.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_shape_1_1_circle_a03be5cdd7d6a0feaa7d6b0a819389a7a_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classns_shape_1_1_circle_a85b4102c4a23101fba4f90c1f8e84168}\label{classns_shape_1_1_circle_a85b4102c4a23101fba4f90c1f8e84168}} 
+\index{nsShape::Circle@{nsShape::Circle}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \& ns\+Shape\+::\+Circle\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupère la position du cercle. 
+
+
+
+Definition at line \mbox{\hyperlink{circle_8cpp_source_l00165}{165}} of file \mbox{\hyperlink{circle_8cpp_source}{circle.\+cpp}}.
+
+\mbox{\Hypertarget{classns_shape_1_1_circle_afcb275822a67ec49167fe122ab74872c}\label{classns_shape_1_1_circle_afcb275822a67ec49167fe122ab74872c}} 
+\index{nsShape::Circle@{nsShape::Circle}!getRadius@{getRadius}}
+\index{getRadius@{getRadius}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{getRadius()}{getRadius()}}
+{\footnotesize\ttfamily unsigned ns\+Shape\+::\+Circle\+::get\+Radius (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupère le rayon du cercle. 
+
+
+
+Definition at line \mbox{\hyperlink{circle_8cpp_source_l00155}{155}} of file \mbox{\hyperlink{circle_8cpp_source}{circle.\+cpp}}.
+
+\mbox{\Hypertarget{classns_shape_1_1_circle_aae4610d0c110ad09da424c5a3ad91aac}\label{classns_shape_1_1_circle_aae4610d0c110ad09da424c5a3ad91aac}} 
+\index{nsShape::Circle@{nsShape::Circle}!getValues@{getValues}}
+\index{getValues@{getValues}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{getValues()}{getValues()}}
+{\footnotesize\ttfamily void ns\+Shape\+::\+Circle\+::get\+Values (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{std\+::vector$<$ float $>$ \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Récupère des valeurs dans un vecteur de float pour l\textquotesingle{}ID spécifié 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID des valeurs a récupérer \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em values} & Vecteur de valeurs a peupler \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classns_transition_1_1_i_transitionable_a5871a16fd47c1e5c8bacdd5da8597ed9}{ns\+Transition\+::\+ITransitionable}}.
+
+
+
+Definition at line \mbox{\hyperlink{circle_8cpp_source_l00065}{65}} of file \mbox{\hyperlink{circle_8cpp_source}{circle.\+cpp}}.
+
+\mbox{\Hypertarget{classns_shape_1_1_circle_ad34827f3120b9331389a00cbf02468cb}\label{classns_shape_1_1_circle_ad34827f3120b9331389a00cbf02468cb}} 
+\index{nsShape::Circle@{nsShape::Circle}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classns_shape_1_1_circle}{Circle}} ns\+Shape\+::\+Circle\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const float \&}]{f }\end{DoxyParamCaption}) const}
+
+
+
+Opérateur de réduction. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em f} & \+: Nombre avec lequel multiplier la position actuelle \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{circle_8cpp_source_l00150}{150}} of file \mbox{\hyperlink{circle_8cpp_source}{circle.\+cpp}}.
+
+\mbox{\Hypertarget{classns_shape_1_1_circle_a8b1f88a61fb38c283b11600e4eec6fe3}\label{classns_shape_1_1_circle_a8b1f88a61fb38c283b11600e4eec6fe3}} 
+\index{nsShape::Circle@{nsShape::Circle}!operator+@{operator+}}
+\index{operator+@{operator+}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classns_shape_1_1_circle}{Circle}} ns\+Shape\+::\+Circle\+::operator+ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{position }\end{DoxyParamCaption}) const}
+
+
+
+Opérateur de décalage. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & \+: Position a additionner \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{circle_8cpp_source_l00145}{145}} of file \mbox{\hyperlink{circle_8cpp_source}{circle.\+cpp}}.
+
+\mbox{\Hypertarget{classns_shape_1_1_circle_ac4e73227c9ec7e22670bd012b6f37bef}\label{classns_shape_1_1_circle_ac4e73227c9ec7e22670bd012b6f37bef}} 
+\index{nsShape::Circle@{nsShape::Circle}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void ns\+Shape\+::\+Circle\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{position }\end{DoxyParamCaption})}
+
+
+
+Définit la nouvelle position du cercle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & \+: Nouvelle position \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{circle_8cpp_source_l00170}{170}} of file \mbox{\hyperlink{circle_8cpp_source}{circle.\+cpp}}.
+
+\mbox{\Hypertarget{classns_shape_1_1_circle_a5f20408e41621d21487b6162eabc3a7d}\label{classns_shape_1_1_circle_a5f20408e41621d21487b6162eabc3a7d}} 
+\index{nsShape::Circle@{nsShape::Circle}!setRadius@{setRadius}}
+\index{setRadius@{setRadius}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{setRadius()}{setRadius()}}
+{\footnotesize\ttfamily void ns\+Shape\+::\+Circle\+::set\+Radius (\begin{DoxyParamCaption}\item[{const unsigned \&}]{radius }\end{DoxyParamCaption})}
+
+
+
+Définit le nouveau rayon du cercle. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em radius} & \+: Nouveau rayon \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{circle_8cpp_source_l00160}{160}} of file \mbox{\hyperlink{circle_8cpp_source}{circle.\+cpp}}.
+
+\mbox{\Hypertarget{classns_shape_1_1_circle_a9a2fc6b4a852e25922e5a1732d39644a}\label{classns_shape_1_1_circle_a9a2fc6b4a852e25922e5a1732d39644a}} 
+\index{nsShape::Circle@{nsShape::Circle}!setValues@{setValues}}
+\index{setValues@{setValues}!nsShape::Circle@{nsShape::Circle}}
+\doxysubsubsection{\texorpdfstring{setValues()}{setValues()}}
+{\footnotesize\ttfamily void ns\+Shape\+::\+Circle\+::set\+Values (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{const std\+::vector$<$ float $>$ \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Définit les nouvelles valeurs pour l\textquotesingle{}ID spécifié 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID des valeurs a définir \\
+\hline
+\mbox{\texttt{ in}}  & {\em values} & Vecteur des nouvelles valeurs a appliquer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classns_transition_1_1_i_transitionable_ade37d29f7f2ca4890ed0e2e64d033197}{ns\+Transition\+::\+ITransitionable}}.
+
+
+
+Definition at line \mbox{\hyperlink{circle_8cpp_source_l00105}{105}} of file \mbox{\hyperlink{circle_8cpp_source}{circle.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/shape/\mbox{\hyperlink{circle_8h}{circle.\+h}}\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/src/shape/\mbox{\hyperlink{circle_8cpp}{circle.\+cpp}}\end{DoxyCompactItemize}

@@ -1,0 +1,43 @@
+\hypertarget{shape_8h_source}{}\doxysection{shape.\+h}
+\label{shape_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/shape/shape.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/shape/shape.h}}
+\mbox{\hyperlink{shape_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef FIG2\_H}}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00012}00012 \textcolor{preprocessor}{\#define FIG2\_H}}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00014}00014 \textcolor{preprocessor}{\#include "{}../graphics/idrawable.h"{}}}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00015}00015 \textcolor{preprocessor}{\#include "{}../graphics/rgbacolor.h"{}}}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00016}00016 \textcolor{preprocessor}{\#include "{}../graphics/vec2d.h"{}}}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00022}00022 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_shape}{nsShape}}}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00023}00023 \{}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00029}\mbox{\hyperlink{classns_shape_1_1_shape}{00029}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_shape_1_1_shape}{Shape}}: \textcolor{keyword}{public} \mbox{\hyperlink{classns_graphics_1_1_i_drawable}{nsGraphics::IDrawable}}}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00032}00032 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00039}00039     \mbox{\hyperlink{classns_shape_1_1_shape_a879f450649c23c83dee576234703951d}{Shape}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& fillColor, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& borderColor);}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00045}\mbox{\hyperlink{classns_shape_1_1_shape_aaa22752af0d45c4e219e3870baf899d4}{00045}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classns_shape_1_1_shape_aaa22752af0d45c4e219e3870baf899d4}{\string~Shape}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00046}00046 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00051}00051     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& \mbox{\hyperlink{classns_shape_1_1_shape_a8efbd1ac47497b188edeb019557ef754}{getFillColor}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00057}00057     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_shape_aa0e9b22c076b83c4d5014b0213e5ce07}{setFillColor}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& fillColor);}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00063}00063     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& \mbox{\hyperlink{classns_shape_1_1_shape_aca75f4b06e8e5b04d0271d191210299d}{getBorderColor}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00069}00069     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_shape_a48821100aa1856f188bdba257505adc3}{setBorderColor}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& borderColor);}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00071}00071 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00075}\mbox{\hyperlink{classns_shape_1_1_shape_a68841e117adddc95734dcbaa62f68832}{00075}}     \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \mbox{\hyperlink{classns_shape_1_1_shape_a68841e117adddc95734dcbaa62f68832}{m\_fillColor}};}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00080}\mbox{\hyperlink{classns_shape_1_1_shape_a0444014e3ee0fa1e6ba5295e530a4f82}{00080}}     \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \mbox{\hyperlink{classns_shape_1_1_shape_a0444014e3ee0fa1e6ba5295e530a4f82}{m\_borderColor}};}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00082}00082 \}; \textcolor{comment}{// class Shape}}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00084}00084 \} \textcolor{comment}{// namespace nsShape}}
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00085}00085 }
+\DoxyCodeLine{\Hypertarget{shape_8h_source_l00086}00086 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// FIG2\_H}}
+
+\end{DoxyCode}

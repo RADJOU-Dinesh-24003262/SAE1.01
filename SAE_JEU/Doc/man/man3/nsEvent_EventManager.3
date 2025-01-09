@@ -1,0 +1,87 @@
+.TH "nsEvent::EventManager" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsEvent::EventManager \- Gère une queue d'événement entrants\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <event_manager\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBhasEvent\fP ()"
+.br
+.RI "Vérifie si un événement doit être traité "
+.ti -1c
+.RI "void \fBpushEvent\fP (const \fBEvent_t\fP &event)"
+.br
+.RI "Pousse un nouvel événement dans la queue\&. "
+.ti -1c
+.RI "const \fBEvent_t\fP \fBpullEvent\fP ()"
+.br
+.RI "Tire l'événement le plus ancien, et l'enlève de la queue\&. "
+.ti -1c
+.RI "void \fBclearEvents\fP ()"
+.br
+.RI "Vide la queue\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Gère une queue d'événement entrants\&. 
+.PP
+Definition at line \fB24\fP of file \fBevent_manager\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void nsEvent::EventManager::clearEvents ()"
+
+.PP
+Vide la queue\&. 
+.PP
+Definition at line \fB31\fP of file \fBevent_manager\&.cpp\fP\&.
+.SS "bool nsEvent::EventManager::hasEvent ()"
+
+.PP
+Vérifie si un événement doit être traité 
+.PP
+\fBReturns\fP
+.RS 4
+Si la queue possède au moins un élément 
+.RE
+.PP
+
+.PP
+Definition at line \fB13\fP of file \fBevent_manager\&.cpp\fP\&.
+.SS "const \fBnsEvent::Event_t\fP nsEvent::EventManager::pullEvent ()"
+
+.PP
+Tire l'événement le plus ancien, et l'enlève de la queue\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une copie du plus ancien événement 
+.RE
+.PP
+
+.PP
+Definition at line \fB23\fP of file \fBevent_manager\&.cpp\fP\&.
+.SS "void nsEvent::EventManager::pushEvent (const \fBEvent_t\fP & event)"
+
+.PP
+Pousse un nouvel événement dans la queue\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIevent\fP : Evénement a pousser 
+.RE
+.PP
+
+.PP
+Definition at line \fB18\fP of file \fBevent_manager\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

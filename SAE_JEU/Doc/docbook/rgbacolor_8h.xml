@@ -1,0 +1,114 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rgbacolor_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h</primary></indexterm>
+<para>
+
+<para>Représente une couleur RGBA. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;GL/freeglut.h&gt;
+#include &quot;../tools/ieditable.h&quot;
+</programlisting>Include dependency graph for rgbacolor.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="rgbacolor_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="rgbacolor_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link></para>
+
+<para>Classe représentant un couleur RGBA8888. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacens_graphics">nsGraphics</link></para>
+
+<para>Espace de nom pour les utilitaires graphiques. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8">nsGraphics::KBlack</link> { 0, 0, 0}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2">nsGraphics::KWhite</link> {255, 255, 255}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61">nsGraphics::KRed</link> {255, 0, 0}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1abfa46e909a7f8d4d908e70e4b55f734c">nsGraphics::KLime</link> { 0, 255, 0}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e">nsGraphics::KBlue</link> { 0, 0, 255}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a445ddb81e2a910db8e01a70403988966">nsGraphics::KYellow</link> {255, 255, 0}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad">nsGraphics::KCyan</link> { 0, 255, 255}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1ad0a8ee009f367326525d2cbd47cd5dea">nsGraphics::KMagenta</link> {255, 0, 255}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a44884fe5a7841edbad80039e8ad4017c">nsGraphics::KSilver</link> {192, 192, 192}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f">nsGraphics::KGray</link> {128, 128, 128}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a7f6ca880f0cf5e6e76b0081c84d5f1fb">nsGraphics::KDarkGray</link> {200, 200, 200}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a219354b4276a9edbfc436390ba3a4827">nsGraphics::KMaroon</link> {128, 0, 0}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a11591ce1586e827d54a3d10b2fe3fc0c">nsGraphics::KOlive</link> {128, 128, 0}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1ad2a6c119991dbf9f510d68a420524704">nsGraphics::KGreen</link> { 0, 128, 0}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b">nsGraphics::KPurple</link> {128, 0, 128}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a63e989cb02df1c3e6cbd40d0d3e3161d">nsGraphics::KTeal</link> { 0, 128, 128}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a4ea1ef3950c89b063d76e0a13faf5ce8">nsGraphics::KNavy</link> { 0, 0, 128}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a4c07ea95810d52059324d037d9d9c5d4">nsGraphics::KBeige</link> {231, 211, 171}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link> { 0, 0, 0, 0}</para>
+</listitem>
+            <listitem><para>const RGBAcolor <link linkend="_namespacens_graphics_1a9caa4cd9527a2effed87836d78faacef">nsGraphics::KBlueTransparent</link> { 0, 0, 255, 30}</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Représente une couleur RGBA. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Janvier 2020 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.1 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+</section>

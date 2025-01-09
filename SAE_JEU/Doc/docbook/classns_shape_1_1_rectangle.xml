@@ -1,0 +1,529 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_shape_1_1_rectangle" xml:lang="en-US">
+<title>nsShape::Rectangle Class Reference</title>
+<indexterm><primary>nsShape::Rectangle</primary></indexterm>
+<para>
+
+<para>Classe représentant un rectangle. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;rectangle.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsShape::Rectangle:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_rectangle__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for nsShape::Rectangle:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_rectangle__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247">TransitionIds</link> { 
+<link linkend="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a7711b3fc0ebda426d84aba567ef90797">TRANSITION_FILL_COLOR_RGB</link>
+, <link linkend="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a3162d563f05248a8a8e9f0ffed332ef0">TRANSITION_FILL_COLOR_ALPHA</link>
+, <link linkend="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a8ba797ba7b99e6952ab754191bf4e553">TRANSITION_BORDER_COLOR_RGB</link>
+, <link linkend="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247ad44045321ec0fd066d54f5a8f41fd947">TRANSITION_BORDER_COLOR_ALPHA</link>
+, 
+<link linkend="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a59d3d78acfe501ec8bed5b31ac8f4230">TRANSITION_FIRST_POSITION</link>
+, <link linkend="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a039bcc9b4d76cdb9e15debda929f41ef">TRANSITION_SECOND_POSITION</link>
+ }</para>
+
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_shape_1_1_rectangle_1a5d5e8052ba7c35001a30ccc7dad669e2">Rectangle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;secondPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=nsGraphics::KTransparent)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_rectangle">Rectangle</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_shape_1_1_rectangle_1a0c1c16410fb0ee7345449d7bfc9b377b">Rectangle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const unsigned &amp;width, const unsigned &amp;height, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=nsGraphics::KTransparent)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_rectangle">Rectangle</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5">draw</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window) const override</para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_rectangle_1ad62897a44a3af8dfffca0a8a1fa10825">getValues</link> (const int &amp;id, std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_rectangle_1a3b3e28b92f8c22bfe159aea5a91fb5c9">setValues</link> (const int &amp;id, const std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para><link linkend="_classns_shape_1_1_rectangle">Rectangle</link> <link linkend="_classns_shape_1_1_rectangle_1ac86de3402279c3ad0bf6b3869f8e2613">operator+</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position) const</para>
+
+<para>Opérateur de décalage. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_shape_1_1_rectangle">Rectangle</link> <link linkend="_classns_shape_1_1_rectangle_1af7cbf6d75b4bc8fc718d17177abdd344">operator*</link> (const float &amp;f) const</para>
+
+<para>Opérateur de réduction. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; <link linkend="_classns_shape_1_1_rectangle_1a42c38f27b247f6a411a9d1a8de5ceaa4">getFirstPosition</link> () const</para>
+
+<para>Récupère la position du coin haut-gauche du rectangle. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_rectangle_1ae6c787fad1bc33f5a4adf8a697a9a581">setFirstPosition</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;firstPosition)</para>
+
+<para>Définit la nouvelle position du coin haut-gauche du rectangle. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; <link linkend="_classns_shape_1_1_rectangle_1a276bce487fbd9514fcf8e558382d0276">getSecondPosition</link> () const</para>
+
+<para>Récupère la position du coin bas-droit du rectangle. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_rectangle_1ada11c6f627048c51dce9544bff758db4">setSecondPosition</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;secondPosition)</para>
+
+<para>Définit la nouvelle position du coin bas-droit du rectangle. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe représentant un rectangle. </para>
+<para>
+Definition at line <link linkend="_rectangle_8h_source_1l00025">25</link> of file <link linkend="_rectangle_8h_source">rectangle.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247"/><section>
+    <title>TransitionIds</title>
+<indexterm><primary>TransitionIds</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>TransitionIds</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247">nsShape::Rectangle::TransitionIds</link></computeroutput></para><para>
+
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>TRANSITION_FILL_COLOR_RGB</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>TRANSITION_FILL_COLOR_RGB</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a7711b3fc0ebda426d84aba567ef90797"/>TRANSITION_FILL_COLOR_RGB</entry><entry>
+<para>Transition pour la couleur de remplissage </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_FILL_COLOR_ALPHA</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>TRANSITION_FILL_COLOR_ALPHA</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a3162d563f05248a8a8e9f0ffed332ef0"/>TRANSITION_FILL_COLOR_ALPHA</entry><entry>
+<para>Transition pour la transparence de remplissage </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_BORDER_COLOR_RGB</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>TRANSITION_BORDER_COLOR_RGB</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a8ba797ba7b99e6952ab754191bf4e553"/>TRANSITION_BORDER_COLOR_RGB</entry><entry>
+<para>Transition pour la couleur de bord </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_BORDER_COLOR_ALPHA</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>TRANSITION_BORDER_COLOR_ALPHA</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247ad44045321ec0fd066d54f5a8f41fd947"/>TRANSITION_BORDER_COLOR_ALPHA</entry><entry>
+<para>Transition pour la transparence de bord </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_FIRST_POSITION</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>TRANSITION_FIRST_POSITION</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a59d3d78acfe501ec8bed5b31ac8f4230"/>TRANSITION_FIRST_POSITION</entry><entry>
+<para>Transition pour la position du coin haut-gauche </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_SECOND_POSITION</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>TRANSITION_SECOND_POSITION</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a039bcc9b4d76cdb9e15debda929f41ef"/>TRANSITION_SECOND_POSITION</entry><entry>
+<para>Transition pour la position du coin bas-droit </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_rectangle_8h_source_1l00032">32</link> of file <link linkend="_rectangle_8h_source">rectangle.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a5d5e8052ba7c35001a30ccc7dad669e2"/><section>
+    <title>Rectangle()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Rectangle</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>Rectangle</secondary></indexterm>
+<para><computeroutput>nsShape::Rectangle::Rectangle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; secondPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput>nsGraphics::KTransparent</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_rectangle">Rectangle</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>firstPosition</entry><entry>
+<para>: Position du coin haut-gauche </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>secondPosition</entry><entry>
+<para>: Position du coin bas-droit </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>fillColor</entry><entry>
+<para>: Couleur de remplissage </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>borderColor</entry><entry>
+<para>: Couleur de bord </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00014">14</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a0c1c16410fb0ee7345449d7bfc9b377b"/><section>
+    <title>Rectangle()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Rectangle</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>Rectangle</secondary></indexterm>
+<para><computeroutput>nsShape::Rectangle::Rectangle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position, const unsigned &amp; width, const unsigned &amp; height, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput>nsGraphics::KTransparent</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_rectangle">Rectangle</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>position</entry><entry>
+<para>: Position du coin haut-gauche </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>width</entry><entry>
+<para>: Largeur du rectangle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>height</entry><entry>
+<para>: Hauteur du rectangle </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>fillColor</entry><entry>
+<para>: Couleur de remplissage </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>borderColor</entry><entry>
+<para>: Couleur de bord </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00020">20</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5"/><section>
+    <title>draw()</title>
+<indexterm><primary>draw</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void nsShape::Rectangle::draw (<link linkend="_class_min_g_l">MinGL</link> &amp; window) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</para>
+<para>
+Implements <link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">nsGraphics::IDrawable</link>.</para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00026">26</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_rectangle_a87e5544cddc2ed7b3bfd189b796ab2a5_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a42c38f27b247f6a411a9d1a8de5ceaa4"/><section>
+    <title>getFirstPosition()</title>
+<indexterm><primary>getFirstPosition</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>getFirstPosition</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; nsShape::Rectangle::getFirstPosition ( ) const</computeroutput></para><para>
+
+<para>Récupère la position du coin haut-gauche du rectangle. </para>
+</para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00144">144</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a276bce487fbd9514fcf8e558382d0276"/><section>
+    <title>getSecondPosition()</title>
+<indexterm><primary>getSecondPosition</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>getSecondPosition</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; nsShape::Rectangle::getSecondPosition ( ) const</computeroutput></para><para>
+
+<para>Récupère la position du coin bas-droit du rectangle. </para>
+</para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00154">154</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_rectangle_1ad62897a44a3af8dfffca0a8a1fa10825"/><section>
+    <title>getValues()</title>
+<indexterm><primary>getValues</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>getValues</secondary></indexterm>
+<para><computeroutput>void nsShape::Rectangle::getValues (const int &amp; id, std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a récupérer </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>values</entry><entry>
+<para>Vecteur de valeurs a peupler </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00052">52</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_rectangle_1af7cbf6d75b4bc8fc718d17177abdd344"/><section>
+    <title>operator*()</title>
+<indexterm><primary>operator*</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>operator*</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_shape_1_1_rectangle">Rectangle</link> nsShape::Rectangle::operator* (const float &amp; f) const</computeroutput></para><para>
+
+<para>Opérateur de réduction. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>f</entry><entry>
+<para>: Nombre avec lequel multiplier la position actuelle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00139">139</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_rectangle_1ac86de3402279c3ad0bf6b3869f8e2613"/><section>
+    <title>operator+()</title>
+<indexterm><primary>operator+</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_shape_1_1_rectangle">Rectangle</link> nsShape::Rectangle::operator+ (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position) const</computeroutput></para><para>
+
+<para>Opérateur de décalage. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>position</entry><entry>
+<para>: Position a additionner </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00134">134</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_rectangle_1ae6c787fad1bc33f5a4adf8a697a9a581"/><section>
+    <title>setFirstPosition()</title>
+<indexterm><primary>setFirstPosition</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>setFirstPosition</secondary></indexterm>
+<para><computeroutput>void nsShape::Rectangle::setFirstPosition (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; firstPosition)</computeroutput></para><para>
+
+<para>Définit la nouvelle position du coin haut-gauche du rectangle. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>firstPosition</entry><entry>
+<para>: Nouvelle position du coin haut-gauche </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00149">149</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_rectangle_1ada11c6f627048c51dce9544bff758db4"/><section>
+    <title>setSecondPosition()</title>
+<indexterm><primary>setSecondPosition</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>setSecondPosition</secondary></indexterm>
+<para><computeroutput>void nsShape::Rectangle::setSecondPosition (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; secondPosition)</computeroutput></para><para>
+
+<para>Définit la nouvelle position du coin bas-droit du rectangle. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>secondPosition</entry><entry>
+<para>: Nouvelle position du coin bas-droit </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00159">159</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a3b3e28b92f8c22bfe159aea5a91fb5c9"/><section>
+    <title>setValues()</title>
+<indexterm><primary>setValues</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>setValues</secondary></indexterm>
+<para><computeroutput>void nsShape::Rectangle::setValues (const int &amp; id, const std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a définir </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>values</entry><entry>
+<para>Vecteur des nouvelles valeurs a appliquer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_rectangle_8cpp_source_1l00093">93</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_rectangle_8h">rectangle.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_rectangle_8cpp">rectangle.cpp</link></section>
+</section>

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_event__manager_8h_source" xml:lang="en-US">
+<title>event_manager.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_event__manager_8h_source_1l00001"/>00001 
+<anchor xml:id="_event__manager_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;EVENTMANAGER_H</emphasis>
+<anchor xml:id="_event__manager_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;EVENTMANAGER_H</emphasis>
+<anchor xml:id="_event__manager_8h_source_1l00013"/>00013 
+<anchor xml:id="_event__manager_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;queue&gt;</emphasis>
+<anchor xml:id="_event__manager_8h_source_1l00015"/>00015 
+<anchor xml:id="_event__manager_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_event_8hpp">event.hpp</link>&quot;</emphasis>
+<anchor xml:id="_event__manager_8h_source_1l00017"/>00017 
+<anchor xml:id="_event__manager_8h_source_1l00018"/>00018 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_event">nsEvent</link>&#32;{
+<anchor xml:id="_event__manager_8h_source_1l00019"/>00019 
+<anchor xml:id="_event__manager_8h_source_1l00024"/><link linkend="_classns_event_1_1_event_manager">00024</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_event_1_1_event_manager">EventManager</link>
+<anchor xml:id="_event__manager_8h_source_1l00025"/>00025 {
+<anchor xml:id="_event__manager_8h_source_1l00026"/>00026 
+<anchor xml:id="_event__manager_8h_source_1l00027"/>00027 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_event__manager_8h_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6">hasEvent</link>();
+<anchor xml:id="_event__manager_8h_source_1l00034"/>00034 
+<anchor xml:id="_event__manager_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5">pushEvent</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structns_event_1_1_event__t">Event_t</link>&amp;&#32;event);
+<anchor xml:id="_event__manager_8h_source_1l00041"/>00041 
+<anchor xml:id="_event__manager_8h_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_structns_event_1_1_event__t">Event_t</link>&#32;<link linkend="_classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9">pullEvent</link>();
+<anchor xml:id="_event__manager_8h_source_1l00048"/>00048 
+<anchor xml:id="_event__manager_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">clearEvents</link>();
+<anchor xml:id="_event__manager_8h_source_1l00054"/>00054 
+<anchor xml:id="_event__manager_8h_source_1l00055"/>00055 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_event__manager_8h_source_1l00059"/>00059 &#32;&#32;&#32;&#32;std::queue&lt;Event_t&gt;&#32;m_eventQueue;
+<anchor xml:id="_event__manager_8h_source_1l00060"/>00060 
+<anchor xml:id="_event__manager_8h_source_1l00061"/>00061 };&#32;<emphasis role="comment">//&#32;class&#32;EventManager</emphasis>
+<anchor xml:id="_event__manager_8h_source_1l00062"/>00062 
+<anchor xml:id="_event__manager_8h_source_1l00063"/>00063 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsEvent</emphasis>
+<anchor xml:id="_event__manager_8h_source_1l00064"/>00064 
+<anchor xml:id="_event__manager_8h_source_1l00065"/>00065 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;EVENTMANAGER_H</emphasis>
+</programlisting></section>

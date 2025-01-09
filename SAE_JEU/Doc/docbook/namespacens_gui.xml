@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacens_gui" xml:lang="en-US">
+<title>nsGui Namespace Reference</title>
+<indexterm><primary>nsGui</primary></indexterm>
+<para>
+
+<para>Espace de nom pour des éléments d&apos;interface complexes. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_gui_1_1_glut_font">GlutFont</link></para>
+
+<para>Classe listant toute les polices rendues disponibles par Glut, a utiliser avec <link linkend="_classns_gui_1_1_text">Text</link>. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_gui_1_1_sprite">Sprite</link></para>
+
+<para>Permet de charger une image depuis un format créé pour l&apos;occasion, le .si2. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_gui_1_1_text">Text</link></para>
+
+<para>Gère l&apos;affichage d&apos;un texte. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Espace de nom pour des éléments d&apos;interface complexes. </para>
+</section>
+</section>

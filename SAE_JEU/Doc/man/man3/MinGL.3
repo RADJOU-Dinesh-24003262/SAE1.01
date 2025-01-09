@@ -1,0 +1,306 @@
+.TH "MinGL" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+MinGL \- Classe de base de minGL 2\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <mingl\&.h>\fP
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "typedef std::pair< unsigned, bool > \fBKeyType_t\fP"
+.br
+.RI "KeyType_t : Représente une touche du clavier\&. "
+.ti -1c
+.RI "typedef std::map< \fBKeyType_t\fP, bool > \fBKeyMap_t\fP"
+.br
+.RI "KeyMap_t : Map représentant des touches et leurs état (pressée ou non)\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBMinGL\fP (const std::string &name, const \fBnsGraphics::Vec2D\fP &windowSize=\fBnsGraphics::Vec2D\fP(640, 480), const \fBnsGraphics::Vec2D\fP &windowPosition=\fBnsGraphics::Vec2D\fP(128, 128), const \fBnsGraphics::RGBAcolor\fP &backgroundColor=nsGraphics::KWhite)"
+.br
+.RI "Constructeur pour la classe \fBMinGL\fP\&. "
+.ti -1c
+.RI "\fB~MinGL\fP ()"
+.br
+.RI "Destructeur de la classe \fBMinGL\fP\&. "
+.ti -1c
+.RI "void \fBinitGraphic\fP ()"
+.br
+.RI "Initialise minGL et ouvre la fenêtre\&. "
+.ti -1c
+.RI "void \fBstopGraphic\fP ()"
+.br
+.RI "Ferme la fenêtre et minGL proprement\&. "
+.ti -1c
+.RI "bool \fBisPressed\fP (const \fBKeyType_t\fP &key)"
+.br
+.RI "Renvoie l'état d'une touche du clavier (pressée ou non) "
+.ti -1c
+.RI "void \fBresetKey\fP (const \fBKeyType_t\fP &key)"
+.br
+.RI "Force une touche a être relâchée\&. "
+.ti -1c
+.RI "void \fBfinishFrame\fP ()"
+.br
+.RI "Préviens minGL que la frame est terminée\&. "
+.ti -1c
+.RI "void \fBclearScreen\fP ()"
+.br
+.RI "Efface l'écran avec la couleur de fond spécifiée\&. "
+.ti -1c
+.RI "\fBnsEvent::EventManager\fP & \fBgetEventManager\fP ()"
+.br
+.RI "Récupère le gestionnaire d'évènements minGL\&. "
+.ti -1c
+.RI "const \fBnsGraphics::RGBAcolor\fP & \fBgetBackgroundColor\fP () const"
+.br
+.RI "Récupère la couleur de fond de la fenêtre\&. "
+.ti -1c
+.RI "void \fBsetBackgroundColor\fP (const \fBnsGraphics::RGBAcolor\fP &backgroundColor)"
+.br
+.RI "Règle la couleur de fond de la fenêtre\&. "
+.ti -1c
+.RI "\fBnsGraphics::Vec2D\fP \fBgetWindowSize\fP () const"
+.br
+.RI "Récupère la taille de la fenêtre\&. "
+.ti -1c
+.RI "void \fBsetWindowSize\fP (const \fBnsGraphics::Vec2D\fP &windowSize)"
+.br
+.RI "Règle la taille de la fenêtre\&. "
+.ti -1c
+.RI "\fBnsGraphics::Vec2D\fP \fBgetWindowPosition\fP () const"
+.br
+.RI "Récupère la position de la fenêtre\&. "
+.ti -1c
+.RI "void \fBsetWindowPosition\fP (const \fBnsGraphics::Vec2D\fP &windowPosition)"
+.br
+.RI "Règle la position de la fenêtre\&. "
+.ti -1c
+.RI "const std::string & \fBgetWindowName\fP () const"
+.br
+.RI "Récupère le nom de la fenêtre\&. "
+.ti -1c
+.RI "void \fBsetWindowName\fP (const std::string &windowName)"
+.br
+.RI "Règle le nom de la fenêtre\&. "
+.ti -1c
+.RI "bool \fBisOpen\fP () const"
+.br
+.RI "Retourne si la fenêtre est ouverte\&. "
+.in -1c
+.SS "Static Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "static void \fBinitGlut\fP ()"
+.br
+.RI "Initialise la bibliothèque freeglut\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Classe de base de minGL 2\&. 
+.PP
+Definition at line \fB34\fP of file \fBmingl\&.h\fP\&.
+.SH "Member Typedef Documentation"
+.PP 
+.SS "typedef std::map<\fBKeyType_t\fP, bool> \fBMinGL::KeyMap_t\fP"
+
+.PP
+KeyMap_t : Map représentant des touches et leurs état (pressée ou non)\&. La clé de cette map est un \fBKeyType_t\fP représentant une touche, et la valeur est son état\&. 
+.PP
+Definition at line \fB55\fP of file \fBmingl\&.h\fP\&.
+.SS "typedef std::pair<unsigned, bool> \fBMinGL::KeyType_t\fP"
+
+.PP
+KeyType_t : Représente une touche du clavier\&. C'est une paire de nombre entier naturel et booléen 
+.br
+ 
+.PD 0
+
+.IP "\(bu" 2
+L'entier naturel représente le caractère pour une touche non spéciale, ou l'identifiant de touche pour une touche spéciale (\fCVoir ici\fP pour les identifiants)\&.  
+.IP "\(bu" 2
+Le booléen indique si la touche est spéciale ou non\&.
+.PP
+
+.PP
+Definition at line \fB47\fP of file \fBmingl\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "MinGL::MinGL (const std::string & name, const \fBnsGraphics::Vec2D\fP & windowSize = \fC\fBnsGraphics::Vec2D\fP(640, 480)\fP, const \fBnsGraphics::Vec2D\fP & windowPosition = \fC\fBnsGraphics::Vec2D\fP(128, 128)\fP, const \fBnsGraphics::RGBAcolor\fP & backgroundColor = \fCnsGraphics::KWhite\fP)"
+
+.PP
+Constructeur pour la classe \fBMinGL\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIname\fP : Nom de la fenêtre 
+.br
+\fIwindowSize\fP : Taille de la fenêtre 
+.br
+\fIwindowPosition\fP : Position de la fenêtre 
+.br
+\fIbackgroundColor\fP : Couleur de fond de la fenêtre 
+.RE
+.PP
+
+.PP
+Definition at line \fB42\fP of file \fBmingl\&.cpp\fP\&.
+.SS "MinGL::~MinGL ()"
+
+.PP
+Destructeur de la classe \fBMinGL\fP\&. 
+.PP
+Definition at line \fB53\fP of file \fBmingl\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void MinGL::clearScreen ()"
+
+.PP
+Efface l'écran avec la couleur de fond spécifiée\&. 
+.PP
+Definition at line \fB68\fP of file \fBmingl\&.cpp\fP\&.
+.SS "void MinGL::finishFrame ()"
+
+.PP
+Préviens minGL que la frame est terminée\&. 
+.PP
+Definition at line \fB62\fP of file \fBmingl\&.cpp\fP\&.
+.SS "const \fBnsGraphics::RGBAcolor\fP & MinGL::getBackgroundColor () const"
+
+.PP
+Récupère la couleur de fond de la fenêtre\&. 
+.PP
+Definition at line \fB78\fP of file \fBmingl\&.cpp\fP\&.
+.SS "\fBnsEvent::EventManager\fP & MinGL::getEventManager ()"
+
+.PP
+Récupère le gestionnaire d'évènements minGL\&. 
+.PP
+Definition at line \fB73\fP of file \fBmingl\&.cpp\fP\&.
+.SS "const std::string & MinGL::getWindowName () const"
+
+.PP
+Récupère le nom de la fenêtre\&. 
+.PP
+Definition at line \fB247\fP of file \fBmingl\&.cpp\fP\&.
+.SS "\fBnsGraphics::Vec2D\fP MinGL::getWindowPosition () const"
+
+.PP
+Récupère la position de la fenêtre\&. 
+.PP
+Definition at line \fB237\fP of file \fBmingl\&.cpp\fP\&.
+.SS "\fBnsGraphics::Vec2D\fP MinGL::getWindowSize () const"
+
+.PP
+Récupère la taille de la fenêtre\&. 
+.PP
+Definition at line \fB227\fP of file \fBmingl\&.cpp\fP\&.
+.SS "static void MinGL::initGlut ()\fC [inline]\fP, \fC [static]\fP"
+
+.PP
+Initialise la bibliothèque freeglut\&. 
+.PP
+Definition at line \fB81\fP of file \fBmingl\&.h\fP\&.
+.SS "void MinGL::initGraphic ()"
+
+.PP
+Initialise minGL et ouvre la fenêtre\&. 
+.PP
+Definition at line \fB89\fP of file \fBmingl\&.cpp\fP\&.
+.SS "bool MinGL::isOpen () const"
+
+.PP
+Retourne si la fenêtre est ouverte\&. 
+.PP
+Definition at line \fB258\fP of file \fBmingl\&.cpp\fP\&.
+.SS "bool MinGL::isPressed (const \fBKeyType_t\fP & key)"
+
+.PP
+Renvoie l'état d'une touche du clavier (pressée ou non) 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP : Touche du clavier a vérifier 
+.RE
+.PP
+
+.PP
+Definition at line \fB133\fP of file \fBmingl\&.cpp\fP\&.
+.SS "void MinGL::resetKey (const \fBKeyType_t\fP & key)"
+
+.PP
+Force une touche a être relâchée\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIkey\fP : Touche du clavier a relâcher 
+.RE
+.PP
+
+.PP
+Definition at line \fB138\fP of file \fBmingl\&.cpp\fP\&.
+.SS "void MinGL::setBackgroundColor (const \fBnsGraphics::RGBAcolor\fP & backgroundColor)"
+
+.PP
+Règle la couleur de fond de la fenêtre\&. 
+.PP
+Definition at line \fB83\fP of file \fBmingl\&.cpp\fP\&.
+.SS "void MinGL::setWindowName (const std::string & windowName)"
+
+.PP
+Règle le nom de la fenêtre\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindowName\fP : Nouveau nom 
+.RE
+.PP
+
+.PP
+Definition at line \fB252\fP of file \fBmingl\&.cpp\fP\&.
+.SS "void MinGL::setWindowPosition (const \fBnsGraphics::Vec2D\fP & windowPosition)"
+
+.PP
+Règle la position de la fenêtre\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindowPosition\fP : Nouvelle position 
+.RE
+.PP
+
+.PP
+Definition at line \fB242\fP of file \fBmingl\&.cpp\fP\&.
+.SS "void MinGL::setWindowSize (const \fBnsGraphics::Vec2D\fP & windowSize)"
+
+.PP
+Règle la taille de la fenêtre\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindowSize\fP : Nouvelle taille 
+.RE
+.PP
+
+.PP
+Definition at line \fB232\fP of file \fBmingl\&.cpp\fP\&.
+.SS "void MinGL::stopGraphic ()"
+
+.PP
+Ferme la fenêtre et minGL proprement\&. 
+.PP
+Definition at line \fB127\fP of file \fBmingl\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

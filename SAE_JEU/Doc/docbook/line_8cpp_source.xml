@@ -1,0 +1,167 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_line_8cpp_source" xml:lang="en-US">
+<title>line.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/line.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_line_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_line_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;cmath&gt;</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00012"/>00012 
+<anchor xml:id="_line_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_line_8h">mingl/shape/line.h</link>&quot;</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_macros_8h">mingl/macros.h</link>&quot;</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00015"/>00015 
+<anchor xml:id="_line_8cpp_source_1l00016"/><link linkend="_classns_shape_1_1_line_1a7e565c06c16396c7dba0f9d9beedcd17">00016</link> <link linkend="_classns_shape_1_1_line_1a7e565c06c16396c7dba0f9d9beedcd17">nsShape::Line::Line</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;&#32;pos1_,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;&#32;pos2_,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;fillCol_,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;lineWidth_)
+<anchor xml:id="_line_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;:&#32;<link linkend="_classns_shape_1_1_shape">Shape</link>(fillCol_,&#32;fillCol_)
+<anchor xml:id="_line_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;,&#32;m_firstPosition(pos1_)
+<anchor xml:id="_line_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;,&#32;m_secondPosition(pos2_)
+<anchor xml:id="_line_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;,&#32;m_lineWidth(lineWidth_)
+<anchor xml:id="_line_8cpp_source_1l00021"/>00021 {}&#32;<emphasis role="comment">//&#32;Line()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00022"/>00022 
+<anchor xml:id="_line_8cpp_source_1l00023"/><link linkend="_classns_shape_1_1_line_1a593ce7771accbbe3bb0f0baf70ece47b">00023</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_line_1a593ce7771accbbe3bb0f0baf70ece47b">nsShape::Line::draw</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00024"/>00024 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_line_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<link linkend="_macros_8h_1a86d500a34c624c2cae56bc25a31b12f3">UNUSED</link>(window);
+<anchor xml:id="_line_8cpp_source_1l00026"/>00026 
+<anchor xml:id="_line_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;met&#32;la&#32;couleur&#32;de&#32;la&#32;ligne</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;inColor&#32;=&#32;getFillColor();
+<anchor xml:id="_line_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;glColor4ub(inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79">getRed</link>(),&#32;inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</link>(),&#32;inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129">getBlue</link>(),&#32;inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e">getAlpha</link>());
+<anchor xml:id="_line_8cpp_source_1l00030"/>00030 
+<anchor xml:id="_line_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;règle&#32;l&apos;épaisseur&#32;de&#32;la&#32;ligne</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;glLineWidth(m_lineWidth);
+<anchor xml:id="_line_8cpp_source_1l00033"/>00033 
+<anchor xml:id="_line_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;dessine&#32;la&#32;ligne</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;glBegin(GL_LINES);
+<anchor xml:id="_line_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;glVertex2i(m_firstPosition.getX(),&#32;m_firstPosition.getY());
+<anchor xml:id="_line_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;glVertex2i(m_secondPosition.getX(),&#32;m_secondPosition.getY());
+<anchor xml:id="_line_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;glEnd();
+<anchor xml:id="_line_8cpp_source_1l00039"/>00039 }&#32;<emphasis role="comment">//&#32;draw()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00040"/>00040 
+<anchor xml:id="_line_8cpp_source_1l00041"/><link linkend="_classns_shape_1_1_line_1ac529918f8d3d6801c320a24bb225e33a">00041</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_line_1ac529918f8d3d6801c320a24bb225e33a">nsShape::Line::getValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;std::vector&lt;float&gt;&#32;&amp;values)
+<anchor xml:id="_line_8cpp_source_1l00042"/>00042 {
+<anchor xml:id="_line_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>)&#32;{
+<anchor xml:id="_line_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_RGB:
+<anchor xml:id="_line_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_fillColor.getRed();
+<anchor xml:id="_line_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_fillColor.getGreen();
+<anchor xml:id="_line_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[2]&#32;=&#32;m_fillColor.getBlue();
+<anchor xml:id="_line_8cpp_source_1l00048"/>00048 
+<anchor xml:id="_line_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00050"/>00050 
+<anchor xml:id="_line_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_ALPHA:
+<anchor xml:id="_line_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_fillColor.getAlpha();
+<anchor xml:id="_line_8cpp_source_1l00053"/>00053 
+<anchor xml:id="_line_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00055"/>00055 
+<anchor xml:id="_line_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_RGB:
+<anchor xml:id="_line_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_borderColor.getRed();
+<anchor xml:id="_line_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_borderColor.getGreen();
+<anchor xml:id="_line_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[2]&#32;=&#32;m_borderColor.getBlue();
+<anchor xml:id="_line_8cpp_source_1l00060"/>00060 
+<anchor xml:id="_line_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00062"/>00062 
+<anchor xml:id="_line_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_ALPHA:
+<anchor xml:id="_line_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_borderColor.getAlpha();
+<anchor xml:id="_line_8cpp_source_1l00065"/>00065 
+<anchor xml:id="_line_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00067"/>00067 
+<anchor xml:id="_line_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FIRST_POSITION:
+<anchor xml:id="_line_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_firstPosition.getX();
+<anchor xml:id="_line_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_firstPosition.getY();
+<anchor xml:id="_line_8cpp_source_1l00071"/>00071 
+<anchor xml:id="_line_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00073"/>00073 
+<anchor xml:id="_line_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_SECOND_POSITION:
+<anchor xml:id="_line_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_secondPosition.getX();
+<anchor xml:id="_line_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_secondPosition.getY();
+<anchor xml:id="_line_8cpp_source_1l00077"/>00077 
+<anchor xml:id="_line_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00079"/>00079 
+<anchor xml:id="_line_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_LINE_WIDTH:
+<anchor xml:id="_line_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_lineWidth;
+<anchor xml:id="_line_8cpp_source_1l00082"/>00082 
+<anchor xml:id="_line_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_line_8cpp_source_1l00085"/>00085 }&#32;<emphasis role="comment">//&#32;getValues()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00086"/>00086 
+<anchor xml:id="_line_8cpp_source_1l00087"/><link linkend="_classns_shape_1_1_line_1a698db32364db6ad0c29d205940b02631">00087</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_line_1a698db32364db6ad0c29d205940b02631">nsShape::Line::setValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;float&gt;&#32;&amp;values)
+<anchor xml:id="_line_8cpp_source_1l00088"/>00088 {
+<anchor xml:id="_line_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>)&#32;{
+<anchor xml:id="_line_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_RGB:
+<anchor xml:id="_line_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setRed(values[0]);
+<anchor xml:id="_line_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setGreen(values[1]);
+<anchor xml:id="_line_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setBlue(values[2]);
+<anchor xml:id="_line_8cpp_source_1l00094"/>00094 
+<anchor xml:id="_line_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00096"/>00096 
+<anchor xml:id="_line_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_ALPHA:
+<anchor xml:id="_line_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setAlpha(values[0]);
+<anchor xml:id="_line_8cpp_source_1l00099"/>00099 
+<anchor xml:id="_line_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00101"/>00101 
+<anchor xml:id="_line_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_RGB:
+<anchor xml:id="_line_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setRed(values[0]);
+<anchor xml:id="_line_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setGreen(values[1]);
+<anchor xml:id="_line_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setBlue(values[2]);
+<anchor xml:id="_line_8cpp_source_1l00106"/>00106 
+<anchor xml:id="_line_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00108"/>00108 
+<anchor xml:id="_line_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_ALPHA:
+<anchor xml:id="_line_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setAlpha(values[0]);
+<anchor xml:id="_line_8cpp_source_1l00111"/>00111 
+<anchor xml:id="_line_8cpp_source_1l00112"/>00112 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00113"/>00113 
+<anchor xml:id="_line_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FIRST_POSITION:
+<anchor xml:id="_line_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_firstPosition.setX(values[0]);
+<anchor xml:id="_line_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_firstPosition.setY(values[1]);
+<anchor xml:id="_line_8cpp_source_1l00117"/>00117 
+<anchor xml:id="_line_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00119"/>00119 
+<anchor xml:id="_line_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_SECOND_POSITION:
+<anchor xml:id="_line_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_secondPosition.setX(values[0]);
+<anchor xml:id="_line_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_secondPosition.setY(values[1]);
+<anchor xml:id="_line_8cpp_source_1l00123"/>00123 
+<anchor xml:id="_line_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00125"/>00125 
+<anchor xml:id="_line_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_LINE_WIDTH:
+<anchor xml:id="_line_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_lineWidth&#32;=&#32;values[0];
+<anchor xml:id="_line_8cpp_source_1l00128"/>00128 
+<anchor xml:id="_line_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_line_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_line_8cpp_source_1l00131"/>00131 }&#32;<emphasis role="comment">//&#32;setValues()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00132"/>00132 
+<anchor xml:id="_line_8cpp_source_1l00133"/><link linkend="_classns_shape_1_1_line_1adddeb7810639aa3eec2756846d40a430">00133</link> <link linkend="_classns_shape_1_1_line">nsShape::Line</link>&#32;<link linkend="_classns_shape_1_1_line_1adddeb7810639aa3eec2756846d40a430">nsShape::Line::operator+</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00134"/>00134 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_line_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_shape_1_1_line">Line</link>(m_firstPosition&#32;+&#32;position,&#32;m_secondPosition&#32;+&#32;position,&#32;getFillColor());
+<anchor xml:id="_line_8cpp_source_1l00136"/>00136 }&#32;<emphasis role="comment">//&#32;operator+()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00137"/>00137 
+<anchor xml:id="_line_8cpp_source_1l00138"/><link linkend="_classns_shape_1_1_line_1a9686aab308107dff4799ec75a98d3aef">00138</link> <link linkend="_classns_shape_1_1_line">nsShape::Line</link>&#32;<link linkend="_classns_shape_1_1_line_1a9686aab308107dff4799ec75a98d3aef">nsShape::Line::operator*</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&amp;&#32;f)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00139"/>00139 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_line_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_shape_1_1_line">Line</link>(m_firstPosition&#32;*&#32;f,&#32;m_secondPosition&#32;*&#32;f,&#32;getFillColor());
+<anchor xml:id="_line_8cpp_source_1l00141"/>00141 }&#32;<emphasis role="comment">//&#32;operator*()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00142"/>00142 
+<anchor xml:id="_line_8cpp_source_1l00143"/><link linkend="_classns_shape_1_1_line_1aab6e3cacd0062c1d5e2e55e9099a617a">00143</link> <emphasis role="keywordtype">float</emphasis>&#32;<link linkend="_classns_shape_1_1_line_1aab6e3cacd0062c1d5e2e55e9099a617a">nsShape::Line::getLineWidth</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00144"/>00144 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_line_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_lineWidth;
+<anchor xml:id="_line_8cpp_source_1l00146"/>00146 }&#32;<emphasis role="comment">//&#32;getLineWidth()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00147"/>00147 
+<anchor xml:id="_line_8cpp_source_1l00148"/><link linkend="_classns_shape_1_1_line_1ab98591827289680e28b4b0904e6d95f2">00148</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_line_1ab98591827289680e28b4b0904e6d95f2">nsShape::Line::setLineWidth</link>(<emphasis role="keywordtype">float</emphasis>&#32;lineWidth)
+<anchor xml:id="_line_8cpp_source_1l00149"/>00149 {
+<anchor xml:id="_line_8cpp_source_1l00150"/>00150 &#32;&#32;&#32;&#32;m_lineWidth&#32;=&#32;lineWidth;
+<anchor xml:id="_line_8cpp_source_1l00151"/>00151 }&#32;<emphasis role="comment">//&#32;setLineWidth()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00152"/>00152 
+<anchor xml:id="_line_8cpp_source_1l00153"/><link linkend="_classns_shape_1_1_line_1a5e99d542b7557f79f58623b098672fdc">00153</link> <emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_line_1a5e99d542b7557f79f58623b098672fdc">nsShape::Line::getFirstPosition</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00154"/>00154 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_line_8cpp_source_1l00155"/>00155 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_firstPosition;
+<anchor xml:id="_line_8cpp_source_1l00156"/>00156 }&#32;<emphasis role="comment">//&#32;getFirstPosition()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00157"/>00157 
+<anchor xml:id="_line_8cpp_source_1l00158"/><link linkend="_classns_shape_1_1_line_1a62178d318a6b856e574149f58f9838f9">00158</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_line_1a62178d318a6b856e574149f58f9838f9">nsShape::Line::setFirstPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;firstPosition)
+<anchor xml:id="_line_8cpp_source_1l00159"/>00159 {
+<anchor xml:id="_line_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;m_firstPosition&#32;=&#32;firstPosition;
+<anchor xml:id="_line_8cpp_source_1l00161"/>00161 }&#32;<emphasis role="comment">//&#32;setFirstPosition()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00162"/>00162 
+<anchor xml:id="_line_8cpp_source_1l00163"/><link linkend="_classns_shape_1_1_line_1a3e239062daea5c0f247ccd9f454a45e8">00163</link> <emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_line_1a3e239062daea5c0f247ccd9f454a45e8">nsShape::Line::getSecondPosition</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00164"/>00164 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_line_8cpp_source_1l00165"/>00165 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_secondPosition;
+<anchor xml:id="_line_8cpp_source_1l00166"/>00166 }&#32;<emphasis role="comment">//&#32;getSecondPosition()</emphasis>
+<anchor xml:id="_line_8cpp_source_1l00167"/>00167 
+<anchor xml:id="_line_8cpp_source_1l00168"/><link linkend="_classns_shape_1_1_line_1ac8235be2b90d57497875a4265fc2bdc5">00168</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_line_1ac8235be2b90d57497875a4265fc2bdc5">nsShape::Line::setSecondPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;secondPosition)
+<anchor xml:id="_line_8cpp_source_1l00169"/>00169 {
+<anchor xml:id="_line_8cpp_source_1l00170"/>00170 &#32;&#32;&#32;&#32;m_secondPosition&#32;=&#32;secondPosition;
+<anchor xml:id="_line_8cpp_source_1l00171"/>00171 }&#32;<emphasis role="comment">//&#32;setSecondPosition()</emphasis>
+</programlisting></section>

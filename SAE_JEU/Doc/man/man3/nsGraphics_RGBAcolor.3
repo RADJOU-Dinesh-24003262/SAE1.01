@@ -1,0 +1,284 @@
+.TH "nsGraphics::RGBAcolor" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsGraphics::RGBAcolor \- Classe représentant un couleur RGBA8888\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <rgbacolor\&.h>\fP
+.PP
+Inherits \fBnsUtil::IEditable\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBRGBAcolor\fP (const GLubyte &red=0, const GLubyte &green=0, const GLubyte &blue=0, const GLubyte &alpha=255)"
+.br
+.RI "Constructeur pour la classe \fBRGBAcolor\fP\&. "
+.ti -1c
+.RI "virtual \fB~RGBAcolor\fP () override=default"
+.br
+.RI "Destructeur virtuel pour la classe \fBRGBAcolor\fP\&. "
+.ti -1c
+.RI "bool \fBoperator==\fP (const \fBRGBAcolor\fP &col) const"
+.br
+.RI "Opérateur d'égalité "
+.ti -1c
+.RI "bool \fBoperator!=\fP (const \fBRGBAcolor\fP &col) const"
+.br
+.RI "Opérateur d'inégalité "
+.ti -1c
+.RI "\fBRGBAcolor\fP \fBoperator+\fP (const \fBRGBAcolor\fP &rhs) const"
+.br
+.RI "Opérateur de décalage\&. "
+.ti -1c
+.RI "\fBRGBAcolor\fP \fBoperator*\fP (const float &rhs) const"
+.br
+.RI "Opérateur de réduction\&. "
+.ti -1c
+.RI "GLubyte \fBgetRed\fP () const"
+.br
+.RI "Récupère le taux de rouge\&. "
+.ti -1c
+.RI "void \fBsetRed\fP (const GLubyte &red)"
+.br
+.RI "Définit le nouveau taux de rouge\&. "
+.ti -1c
+.RI "GLubyte \fBgetGreen\fP () const"
+.br
+.RI "Récupère le taux de vert\&. "
+.ti -1c
+.RI "void \fBsetGreen\fP (const GLubyte &green)"
+.br
+.RI "Définit le nouveau taux de vert\&. "
+.ti -1c
+.RI "GLubyte \fBgetBlue\fP () const"
+.br
+.RI "Récupère le taux de bleu\&. "
+.ti -1c
+.RI "void \fBsetBlue\fP (const GLubyte &blue)"
+.br
+.RI "Définit le nouveau taux de bleu\&. "
+.ti -1c
+.RI "GLubyte \fBgetAlpha\fP () const"
+.br
+.RI "Récupère le taux de transparence\&. "
+.ti -1c
+.RI "void \fBsetAlpha\fP (const GLubyte &alpha)"
+.br
+.RI "Définit le nouveau taux de transparence\&. "
+.in -1c
+.SS "Protected Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual std::ostream & \fB_Edit\fP (std::ostream &os=std::cout) const override"
+.br
+.RI "Fonction appelée pour injecter l'objet courant dans un flux\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Classe représentant un couleur RGBA8888\&. 
+.PP
+Definition at line \fB25\fP of file \fBrgbacolor\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsGraphics::RGBAcolor::RGBAcolor (const GLubyte & red = \fC0\fP, const GLubyte & green = \fC0\fP, const GLubyte & blue = \fC0\fP, const GLubyte & alpha = \fC255\fP)"
+
+.PP
+Constructeur pour la classe \fBRGBAcolor\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIred\fP : Taux de rouge (0-255) 
+.br
+\fIgreen\fP : Taux de vert (0-255) 
+.br
+\fIblue\fP : Taux de bleu (0-255) 
+.br
+\fIalpha\fP : Taux de transparence (0-255) 
+.RE
+.PP
+
+.PP
+Definition at line \fB13\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "std::ostream & nsGraphics::RGBAcolor::_Edit (std::ostream & os = \fCstd::cout\fP) const\fC [override]\fP, \fC [protected]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction appelée pour injecter l'objet courant dans un flux\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIos\fP : Flux dans lequel injecter 
+.RE
+.PP
+
+.PP
+Implements \fBnsUtil::IEditable\fP\&.
+.PP
+Definition at line \fB40\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "GLubyte nsGraphics::RGBAcolor::getAlpha () const"
+
+.PP
+Récupère le taux de transparence\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence constante vers m_alpha 
+.RE
+.PP
+
+.PP
+Definition at line \fB46\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "GLubyte nsGraphics::RGBAcolor::getBlue () const"
+
+.PP
+Récupère le taux de bleu\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence constante vers m_blue 
+.RE
+.PP
+
+.PP
+Definition at line \fB56\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "GLubyte nsGraphics::RGBAcolor::getGreen () const"
+
+.PP
+Récupère le taux de vert\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence constante vers m_green 
+.RE
+.PP
+
+.PP
+Definition at line \fB66\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "GLubyte nsGraphics::RGBAcolor::getRed () const"
+
+.PP
+Récupère le taux de rouge\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence constante vers m_red 
+.RE
+.PP
+
+.PP
+Definition at line \fB76\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "bool nsGraphics::RGBAcolor::operator!= (const \fBRGBAcolor\fP & col) const"
+
+.PP
+Opérateur d'inégalité 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcol\fP : Couleur a vérifier 
+.RE
+.PP
+
+.PP
+Definition at line \fB25\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "\fBRGBAcolor\fP nsGraphics::RGBAcolor::operator* (const float & rhs) const"
+
+.PP
+Opérateur de réduction\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrhs\fP : Couleur avec laquelle multiplier la couleur actuelle 
+.RE
+.PP
+
+.PP
+Definition at line \fB35\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "\fBRGBAcolor\fP nsGraphics::RGBAcolor::operator+ (const \fBRGBAcolor\fP & rhs) const"
+
+.PP
+Opérateur de décalage\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIrhs\fP : Couleur a additionner 
+.RE
+.PP
+
+.PP
+Definition at line \fB30\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "bool nsGraphics::RGBAcolor::operator== (const \fBRGBAcolor\fP & col) const"
+
+.PP
+Opérateur d'égalité 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcol\fP : Couleur a vérifier 
+.RE
+.PP
+
+.PP
+Definition at line \fB20\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "void nsGraphics::RGBAcolor::setAlpha (const GLubyte & alpha)"
+
+.PP
+Définit le nouveau taux de transparence\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIred\fP : Nouveau taux de transparence 
+.RE
+.PP
+
+.PP
+Definition at line \fB51\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "void nsGraphics::RGBAcolor::setBlue (const GLubyte & blue)"
+
+.PP
+Définit le nouveau taux de bleu\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIred\fP : Nouveau taux de bleu 
+.RE
+.PP
+
+.PP
+Definition at line \fB61\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "void nsGraphics::RGBAcolor::setGreen (const GLubyte & green)"
+
+.PP
+Définit le nouveau taux de vert\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIred\fP : Nouveau taux de vert 
+.RE
+.PP
+
+.PP
+Definition at line \fB71\fP of file \fBrgbacolor\&.cpp\fP\&.
+.SS "void nsGraphics::RGBAcolor::setRed (const GLubyte & red)"
+
+.PP
+Définit le nouveau taux de rouge\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIred\fP : Nouveau taux de rouge 
+.RE
+.PP
+
+.PP
+Definition at line \fB81\fP of file \fBrgbacolor\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

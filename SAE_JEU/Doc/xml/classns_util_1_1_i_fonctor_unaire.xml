@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_util_1_1_i_fonctor_unaire" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>nsUtil::IFonctorUnaire</compoundname>
+    <includes refid="ifonctorunaire_8hpp" local="no">ifonctorunaire.hpp</includes>
+    <templateparamlist>
+      <param>
+        <type>typename T1</type>
+      </param>
+      <param>
+        <type>typename TRes</type>
+      </param>
+    </templateparamlist>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_util_1_1_i_fonctor_unaire_1ae41ac6b220f0afa4b0860e92c27b3cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>nsUtil::IFonctorUnaire&lt; T1, TRes &gt;::~IFonctorUnaire</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IFonctorUnaire</name>
+        <qualifiedname>nsUtil::IFonctorUnaire::~IFonctorUnaire</qualifiedname>
+        <briefdescription>
+<para>Destructeur pour la classe <ref refid="classns_util_1_1_i_fonctor_unaire" kindref="compound">IFonctorUnaire</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ifonctorunaire.hpp" line="20" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_util_1_1_i_fonctor_unaire_1a2f53e65b0a64a4eb543a709eb72ed3ab" prot="public" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>TRes</type>
+        <definition>TRes nsUtil::IFonctorUnaire&lt; T1, TRes &gt;::operator()</definition>
+        <argsstring>(const T1 &amp;in) const =0</argsstring>
+        <name>operator()</name>
+        <qualifiedname>nsUtil::IFonctorUnaire::operator()</qualifiedname>
+        <param>
+          <type>const T1 &amp;</type>
+          <declname>in</declname>
+        </param>
+        <briefdescription>
+<para>Surcharge de l&apos;opérateur d&apos;appel. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">in</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Premier paramètre </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ifonctorunaire.hpp" line="27" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface pour un fonctor unaire. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ifonctorunaire.hpp" line="12" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ifonctorunaire.hpp" bodystart="13" bodyend="29"/>
+    <listofallmembers>
+      <member refid="classns_util_1_1_i_fonctor_unaire_1a2f53e65b0a64a4eb543a709eb72ed3ab" prot="public" virt="pure-virtual"><scope>nsUtil::IFonctorUnaire</scope><name>operator()</name></member>
+      <member refid="classns_util_1_1_i_fonctor_unaire_1ae41ac6b220f0afa4b0860e92c27b3cd1" prot="public" virt="virtual"><scope>nsUtil::IFonctorUnaire</scope><name>~IFonctorUnaire</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

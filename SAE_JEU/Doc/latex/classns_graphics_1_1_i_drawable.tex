@@ -1,0 +1,87 @@
+\hypertarget{classns_graphics_1_1_i_drawable}{}\doxysection{ns\+Graphics\+::IDrawable Class Reference}
+\label{classns_graphics_1_1_i_drawable}\index{nsGraphics::IDrawable@{nsGraphics::IDrawable}}
+
+
+Interface pour un objet affichable.  
+
+
+
+
+{\ttfamily \#include $<$idrawable.\+h$>$}
+
+
+
+Inheritance diagram for ns\+Graphics\+::IDrawable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_graphics_1_1_i_drawable__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns_graphics_1_1_i_drawable_ab7a2ae7682163969bd4627e402ef0867}\label{classns_graphics_1_1_i_drawable_ab7a2ae7682163969bd4627e402ef0867}} 
+virtual {\bfseries $\sim$\+IDrawable} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur pour la classe \mbox{\hyperlink{classns_graphics_1_1_i_drawable}{IDrawable}}. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classns_graphics_1_1_i_drawable_abed8a61e1d507d31e76f0891f3bf9c51}{draw}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window) const =0
+\begin{DoxyCompactList}\small\item\em Fonction pour afficher l\textquotesingle{}objet. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \& \mbox{\hyperlink{classns_graphics_1_1_i_drawable_a9bb3952d4e675a663f2dbbda11e79395}{operator$<$$<$}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, const \mbox{\hyperlink{classns_graphics_1_1_i_drawable}{IDrawable}} \&drawable)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur d\textquotesingle{}injection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface pour un objet affichable. 
+
+Definition at line \mbox{\hyperlink{idrawable_8h_source_l00029}{29}} of file \mbox{\hyperlink{idrawable_8h_source}{idrawable.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns_graphics_1_1_i_drawable_abed8a61e1d507d31e76f0891f3bf9c51}\label{classns_graphics_1_1_i_drawable_abed8a61e1d507d31e76f0891f3bf9c51}} 
+\index{nsGraphics::IDrawable@{nsGraphics::IDrawable}!draw@{draw}}
+\index{draw@{draw}!nsGraphics::IDrawable@{nsGraphics::IDrawable}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void ns\+Graphics\+::\+IDrawable\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Fonction pour afficher l\textquotesingle{}objet. 
+
+
+
+Implemented in \mbox{\hyperlink{class_bg_text_a01df624a8d498766a9eb579eb18f2326}{Bg\+Text}}, \mbox{\hyperlink{class_bg_text_a55fdeb5f3e12dcc2926c87f80fddc6c3}{Bg\+Text}}, \mbox{\hyperlink{classns_gui_1_1_sprite_ac4b29170aef06d46990b68da76480f28}{ns\+Gui\+::\+Sprite}}, \mbox{\hyperlink{classns_gui_1_1_text_a8b3f43f7582246e916bb2e9403be2180}{ns\+Gui\+::\+Text}}, \mbox{\hyperlink{classns_shape_1_1_rectangle_a87e5544cddc2ed7b3bfd189b796ab2a5}{ns\+Shape\+::\+Rectangle}}, \mbox{\hyperlink{classns_shape_1_1_circle_a03be5cdd7d6a0feaa7d6b0a819389a7a}{ns\+Shape\+::\+Circle}}, \mbox{\hyperlink{classns_shape_1_1_oval_a93036caafaf315f62676e95dccb5ec65}{ns\+Shape\+::\+Oval}}, \mbox{\hyperlink{classns_shape_1_1_line_a593ce7771accbbe3bb0f0baf70ece47b}{ns\+Shape\+::\+Line}}, and \mbox{\hyperlink{classns_shape_1_1_triangle_a5586345f4e15181f994a0d4946f61353}{ns\+Shape\+::\+Triangle}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classns_graphics_1_1_i_drawable_a9bb3952d4e675a663f2dbbda11e79395}\label{classns_graphics_1_1_i_drawable_a9bb3952d4e675a663f2dbbda11e79395}} 
+\index{nsGraphics::IDrawable@{nsGraphics::IDrawable}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!nsGraphics::IDrawable@{nsGraphics::IDrawable}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_min_g_l}{Min\+GL}} \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_i_drawable}{IDrawable}} \&}]{drawable }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur d\textquotesingle{}injection. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em window} & \+: Fenêtre dans laquelle injecter l\textquotesingle{}élément \\
+\hline
+\mbox{\texttt{ in}}  & {\em drawable} & \+: Elément a injecter \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{idrawable_8h_source_l00051}{51}} of file \mbox{\hyperlink{idrawable_8h_source}{idrawable.\+h}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/graphics/\mbox{\hyperlink{idrawable_8h}{idrawable.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,121 @@
+.TH "BgText" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+BgText
+.SH SYNOPSIS
+.br
+.PP
+.PP
+Inherits \fBnsGraphics::IDrawable\fP, \fBnsGraphics::IDrawable\fP, and \fBnsTransition::ITransitionable\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTransitionIds\fP { \fBTRANSITION_TEXT_COLOR\fP, \fBTRANSITION_BACKGROUND_COLOR\fP }"
+.br
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBBgText\fP (const \fBnsGraphics::Vec2D\fP &position, const std::string &content, const \fBnsGraphics::RGBAcolor\fP &textColor, const \fBnsGraphics::RGBAcolor\fP &backgroundColor)"
+.br
+.ti -1c
+.RI "virtual void \fBdraw\fP (\fBMinGL\fP &window) const override"
+.br
+.RI "Fonction pour afficher l'objet\&. "
+.ti -1c
+.RI "\fBBgText\fP (const \fBnsGraphics::Vec2D\fP &position, const std::string &content, const \fBnsGraphics::RGBAcolor\fP &textColor, const \fBnsGraphics::RGBAcolor\fP &backgroundColor)"
+.br
+.ti -1c
+.RI "virtual void \fBdraw\fP (\fBMinGL\fP &window) const override"
+.br
+.RI "Fonction pour afficher l'objet\&. "
+.ti -1c
+.RI "virtual void \fBgetValues\fP (const int &id, std::vector< float > &values) override"
+.br
+.RI "Récupère des valeurs dans un vecteur de float pour l'ID spécifié "
+.ti -1c
+.RI "virtual void \fBsetValues\fP (const int &id, const std::vector< float > &values) override"
+.br
+.RI "Définit les nouvelles valeurs pour l'ID spécifié "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition at line \fB12\fP of file \fBbgtext\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBBgText::TransitionIds\fP"
+
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITRANSITION_TEXT_COLOR \fP\fP
+Transition pour la couleur du texte 
+.TP
+\fB\fITRANSITION_BACKGROUND_COLOR \fP\fP
+Transition pour la couleur de fond 
+.PP
+Definition at line \fB18\fP of file \fBbgtext\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "BgText::BgText (const \fBnsGraphics::Vec2D\fP & position, const std::string & content, const \fBnsGraphics::RGBAcolor\fP & textColor, const \fBnsGraphics::RGBAcolor\fP & backgroundColor)"
+
+.PP
+Definition at line \fB3\fP of file \fBbgtext\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void BgText::draw (\fBMinGL\fP & window) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction pour afficher l'objet\&. 
+.PP
+Implements \fBnsGraphics::IDrawable\fP\&.
+.PP
+Definition at line \fB8\fP of file \fBbgtext\&.cpp\fP\&.
+.SS "virtual void BgText::draw (\fBMinGL\fP & window) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction pour afficher l'objet\&. 
+.PP
+Implements \fBnsGraphics::IDrawable\fP\&.
+.SS "void BgText::getValues (const int & id, std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Récupère des valeurs dans un vecteur de float pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a récupérer 
+.br
+\fIvalues\fP Vecteur de valeurs a peupler 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB14\fP of file \fBbgtext\&.cpp\fP\&.
+.SS "void BgText::setValues (const int & id, const std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Définit les nouvelles valeurs pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a définir 
+.br
+\fIvalues\fP Vecteur des nouvelles valeurs a appliquer 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB34\fP of file \fBbgtext\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacens_transition" kind="namespace" language="C++">
+    <compoundname>nsTransition</compoundname>
+    <innerclass refid="classns_transition_1_1_i_transitionable" prot="public">nsTransition::ITransitionable</innerclass>
+    <innerclass refid="classns_transition_1_1_transition" prot="public">nsTransition::Transition</innerclass>
+    <innerclass refid="classns_transition_1_1_transition_contract" prot="public">nsTransition::TransitionContract</innerclass>
+    <innerclass refid="classns_transition_1_1_transition_engine" prot="public">nsTransition::TransitionEngine</innerclass>
+      <sectiondef kind="typedef">
+      <memberdef kind="typedef" id="namespacens_transition_1a260258f249f46ff9a62da721537f87af" prot="public" static="no">
+        <type>std::chrono::duration&lt; float, std::nano &gt;</type>
+        <definition>typedef std::chrono::duration&lt;float, std::nano&gt; nsTransition::SystemDuration_t</definition>
+        <argsstring></argsstring>
+        <name>SystemDuration_t</name>
+        <qualifiedname>nsTransition::SystemDuration_t</qualifiedname>
+        <briefdescription>
+<para>SystemDuration_t : Définition de type stockant une durée exprimée en nanosecondes, sous forme de float. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" line="22" column="31" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" bodystart="22" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="typedef" id="namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6" prot="public" static="no">
+        <type>std::chrono::time_point&lt; std::chrono::steady_clock, <ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref> &gt;</type>
+        <definition>typedef std::chrono::time_point&lt;std::chrono::steady_clock, SystemDuration_t&gt; nsTransition::SystemTimePoint_t</definition>
+        <argsstring></argsstring>
+        <name>SystemTimePoint_t</name>
+        <qualifiedname>nsTransition::SystemTimePoint_t</qualifiedname>
+        <briefdescription>
+<para>SystemTimePoint_t : Définition de type représentant un point dans le temps basée sur l&apos;horloge système. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" line="27" column="33" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Espace de nom pour le moteur de transition et ses composants. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="16" column="1"/>
+  </compounddef>
+</doxygen>

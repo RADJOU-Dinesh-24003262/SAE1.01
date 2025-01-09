@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sprite_8h_source" xml:lang="en-US">
+<title>sprite.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_sprite_8h_source_1l00001"/><link linkend="_sprite_8h_1a7815e2193b5dea24aae35f568006be9a">00001</link> 
+<anchor xml:id="_sprite_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;DISPLAY_SPRITE_H</emphasis>
+<anchor xml:id="_sprite_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;DISPLAY_SPRITE_H</emphasis>
+<anchor xml:id="_sprite_8h_source_1l00013"/>00013 
+<anchor xml:id="_sprite_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;cstdint&gt;</emphasis>
+<anchor xml:id="_sprite_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="_sprite_8h_source_1l00016"/>00016 
+<anchor xml:id="_sprite_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&quot;../graphics/idrawable.h&quot;</emphasis>
+<anchor xml:id="_sprite_8h_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&quot;../graphics/rgbacolor.h&quot;</emphasis>
+<anchor xml:id="_sprite_8h_source_1l00019"/>00019 <emphasis role="preprocessor">#include&#32;&quot;../graphics/vec2d.h&quot;</emphasis>
+<anchor xml:id="_sprite_8h_source_1l00020"/>00020 <emphasis role="preprocessor">#include&#32;&quot;../transition/itransitionable.h&quot;</emphasis>
+<anchor xml:id="_sprite_8h_source_1l00021"/>00021 
+<anchor xml:id="_sprite_8h_source_1l00022"/><link linkend="_namespacens_gui">00022</link> <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_gui">nsGui</link>&#32;{
+<anchor xml:id="_sprite_8h_source_1l00023"/>00023 
+<anchor xml:id="_sprite_8h_source_1l00028"/><link linkend="_classns_gui_1_1_sprite">00028</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_gui_1_1_sprite">Sprite</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_graphics_1_1_i_drawable">nsGraphics::IDrawable</link>,&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_transition_1_1_i_transitionable">nsTransition::ITransitionable</link>
+<anchor xml:id="_sprite_8h_source_1l00029"/>00029 {
+<anchor xml:id="_sprite_8h_source_1l00030"/>00030 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_sprite_8h_source_1l00034"/><link linkend="_classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78">00034</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78">TransitionIds</link>&#32;{
+<anchor xml:id="_sprite_8h_source_1l00035"/><link linkend="_classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54">00035</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54">TRANSITION_POSITION</link>,&#32;
+<anchor xml:id="_sprite_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_sprite_8h_source_1l00037"/>00037 
+<anchor xml:id="_sprite_8h_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_sprite_1a35558b08dfeb3e3a20be52da28e33c4c">Sprite</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;filename,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position&#32;=&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>());
+<anchor xml:id="_sprite_8h_source_1l00045"/>00045 
+<anchor xml:id="_sprite_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_sprite_1a35558b08dfeb3e3a20be52da28e33c4c">Sprite</link>(<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;nsGraphics::RGBAcolor&gt;&amp;&#32;pixelData,&#32;<emphasis role="keyword">const</emphasis>&#32;uint32_t&amp;&#32;<link linkend="_sprite_8h_1a410460a0a75462ae38c5c9daf5fb06ed">rowSize</link>,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position&#32;=&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>());
+<anchor xml:id="_sprite_8h_source_1l00054"/>00054 
+<anchor xml:id="_sprite_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_sprite_1ac4b29170aef06d46990b68da76480f28">draw</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+<anchor xml:id="_sprite_8h_source_1l00056"/>00056 
+<anchor xml:id="_sprite_8h_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_sprite_1a7da27e2ccf7b574896662720d99c0056">getValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;std::vector&lt;float&gt;&#32;&amp;values)&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="_sprite_8h_source_1l00058"/>00058 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_sprite_1a63ad7e76b470c578aecc697203a3eb26">setValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;float&gt;&#32;&amp;values)&#32;<emphasis role="keyword">override</emphasis>;
+<anchor xml:id="_sprite_8h_source_1l00059"/>00059 
+<anchor xml:id="_sprite_8h_source_1l00065"/>00065 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;uint32_t&amp;&#32;<link linkend="_classns_gui_1_1_sprite_1adbe04bd427b6658e0181ce167db83d05">getRowSize</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_sprite_8h_source_1l00066"/>00066 
+<anchor xml:id="_sprite_8h_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;nsGraphics::RGBAcolor&gt;&amp;&#32;<link linkend="_classns_gui_1_1_sprite_1ad8644780a7a7dcbcd5f2e4e7a461b685">getPixelData</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_sprite_8h_source_1l00073"/>00073 
+<anchor xml:id="_sprite_8h_source_1l00079"/>00079 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_gui_1_1_sprite_1a1d6ad6681627aae6c4680fc936da8eb2">getPosition</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_sprite_8h_source_1l00080"/>00080 
+<anchor xml:id="_sprite_8h_source_1l00086"/>00086 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_gui_1_1_sprite_1a4c695910c46504d1e8d47b838394a48e">setPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position);
+<anchor xml:id="_sprite_8h_source_1l00087"/>00087 
+<anchor xml:id="_sprite_8h_source_1l00093"/>00093 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_gui_1_1_sprite_1a26b502e88906860373c278495794998c">computeSize</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_sprite_8h_source_1l00094"/>00094 
+<anchor xml:id="_sprite_8h_source_1l00095"/>00095 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_sprite_8h_source_1l00100"/>00100 &#32;&#32;&#32;&#32;<emphasis role="keyword">struct&#32;</emphasis>FileBegin&#32;{
+<anchor xml:id="_sprite_8h_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_sprite_8h_1a8c61e64b8675498cee79c59d3f8131e2">magic</link>;&#32;
+<anchor xml:id="_sprite_8h_source_1l00102"/>00102 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_sprite_8h_1a7815e2193b5dea24aae35f568006be9a">headmagic</link>;&#32;
+<anchor xml:id="_sprite_8h_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_sprite_8h_1a6ac1f454a7d4e4d64b7ff8ca39ac5920">fileVersion</link>;&#32;
+<anchor xml:id="_sprite_8h_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_sprite_8h_1af73d2febf3dc338c7c8f42922aa7131c">pixelCount</link>;&#32;
+<anchor xml:id="_sprite_8h_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_sprite_8h_1a410460a0a75462ae38c5c9daf5fb06ed">rowSize</link>;&#32;
+<anchor xml:id="_sprite_8h_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;uint32_t&#32;<link linkend="_sprite_8h_1a43e5468a3d445613419004493d2ffac8">datamagic</link>;&#32;
+<anchor xml:id="_sprite_8h_source_1l00107"/>00107 &#32;&#32;&#32;&#32;}&#32;__attribute__((packed));
+<anchor xml:id="_sprite_8h_source_1l00108"/>00108 
+<anchor xml:id="_sprite_8h_source_1l00112"/>00112 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;m_position;
+<anchor xml:id="_sprite_8h_source_1l00113"/>00113 
+<anchor xml:id="_sprite_8h_source_1l00117"/>00117 &#32;&#32;&#32;&#32;uint32_t&#32;m_rowSize;
+<anchor xml:id="_sprite_8h_source_1l00118"/>00118 
+<anchor xml:id="_sprite_8h_source_1l00122"/>00122 &#32;&#32;&#32;&#32;std::vector&lt;nsGraphics::RGBAcolor&gt;&#32;m_pixelData;
+<anchor xml:id="_sprite_8h_source_1l00123"/>00123 };&#32;<emphasis role="comment">//&#32;class&#32;Sprite</emphasis>
+<anchor xml:id="_sprite_8h_source_1l00124"/>00124 
+<anchor xml:id="_sprite_8h_source_1l00125"/>00125 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsGui</emphasis>
+<anchor xml:id="_sprite_8h_source_1l00126"/>00126 
+<anchor xml:id="_sprite_8h_source_1l00127"/>00127 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;DISPLAY_SPRITE_H</emphasis>
+</programlisting></section>

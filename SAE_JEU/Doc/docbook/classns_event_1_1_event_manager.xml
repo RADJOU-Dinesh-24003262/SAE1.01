@@ -1,0 +1,125 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_event_1_1_event_manager" xml:lang="en-US">
+<title>nsEvent::EventManager Class Reference</title>
+<indexterm><primary>nsEvent::EventManager</primary></indexterm>
+<para>
+
+<para>Gère une queue d&apos;événement entrants. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;event_manager.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6">hasEvent</link> ()</para>
+
+<para>Vérifie si un événement doit être traité </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5">pushEvent</link> (const <link linkend="_structns_event_1_1_event__t">Event_t</link> &amp;event)</para>
+
+<para>Pousse un nouvel événement dans la queue. </para>
+</listitem>
+            <listitem><para>const <link linkend="_structns_event_1_1_event__t">Event_t</link> <link linkend="_classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9">pullEvent</link> ()</para>
+
+<para>Tire l&apos;événement le plus ancien, et l&apos;enlève de la queue. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">clearEvents</link> ()</para>
+
+<para>Vide la queue. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Gère une queue d&apos;événement entrants. </para>
+<para>
+Definition at line <link linkend="_event__manager_8h_source_1l00024">24</link> of file <link linkend="_event__manager_8h_source">event_manager.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4"/><section>
+    <title>clearEvents()</title>
+<indexterm><primary>clearEvents</primary><secondary>nsEvent::EventManager</secondary></indexterm>
+<indexterm><primary>nsEvent::EventManager</primary><secondary>clearEvents</secondary></indexterm>
+<para><computeroutput>void nsEvent::EventManager::clearEvents ( )</computeroutput></para><para>
+
+<para>Vide la queue. </para>
+</para>
+<para>
+Definition at line <link linkend="_event__manager_8cpp_source_1l00031">31</link> of file <link linkend="_event__manager_8cpp_source">event_manager.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6"/><section>
+    <title>hasEvent()</title>
+<indexterm><primary>hasEvent</primary><secondary>nsEvent::EventManager</secondary></indexterm>
+<indexterm><primary>nsEvent::EventManager</primary><secondary>hasEvent</secondary></indexterm>
+<para><computeroutput>bool nsEvent::EventManager::hasEvent ( )</computeroutput></para><para>
+
+<para>Vérifie si un événement doit être traité </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Si la queue possède au moins un élément </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_event__manager_8cpp_source_1l00013">13</link> of file <link linkend="_event__manager_8cpp_source">event_manager.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9"/><section>
+    <title>pullEvent()</title>
+<indexterm><primary>pullEvent</primary><secondary>nsEvent::EventManager</secondary></indexterm>
+<indexterm><primary>nsEvent::EventManager</primary><secondary>pullEvent</secondary></indexterm>
+<para><computeroutput>const <link linkend="_structns_event_1_1_event__t">nsEvent::Event_t</link> nsEvent::EventManager::pullEvent ( )</computeroutput></para><para>
+
+<para>Tire l&apos;événement le plus ancien, et l&apos;enlève de la queue. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une copie du plus ancien événement </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_event__manager_8cpp_source_1l00023">23</link> of file <link linkend="_event__manager_8cpp_source">event_manager.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5"/><section>
+    <title>pushEvent()</title>
+<indexterm><primary>pushEvent</primary><secondary>nsEvent::EventManager</secondary></indexterm>
+<indexterm><primary>nsEvent::EventManager</primary><secondary>pushEvent</secondary></indexterm>
+<para><computeroutput>void nsEvent::EventManager::pushEvent (const <link linkend="_structns_event_1_1_event__t">Event_t</link> &amp; event)</computeroutput></para><para>
+
+<para>Pousse un nouvel événement dans la queue. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>event</entry><entry>
+<para>: Evénement a pousser </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_event__manager_8cpp_source_1l00018">18</link> of file <link linkend="_event__manager_8cpp_source">event_manager.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/<link linkend="_event__manager_8h">event_manager.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/<link linkend="_event__manager_8cpp">event_manager.cpp</link></section>
+</section>

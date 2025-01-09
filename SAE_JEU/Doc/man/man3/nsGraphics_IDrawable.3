@@ -1,0 +1,67 @@
+.TH "nsGraphics::IDrawable" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsGraphics::IDrawable \- Interface pour un objet affichable\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <idrawable\&.h>\fP
+.PP
+Inherited by \fBBgText\fP, \fBBgText\fP, \fBnsGui::Sprite\fP, \fBnsGui::Text\fP, and \fBnsShape::Shape\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~IDrawable\fP ()=default"
+.br
+.RI "Destructeur pour la classe \fBIDrawable\fP\&. "
+.ti -1c
+.RI "virtual void \fBdraw\fP (\fBMinGL\fP &window) const =0"
+.br
+.RI "Fonction pour afficher l'objet\&. "
+.in -1c
+.SS "Friends"
+
+.in +1c
+.ti -1c
+.RI "\fBMinGL\fP & \fBoperator<<\fP (\fBMinGL\fP &window, const \fBIDrawable\fP &drawable)"
+.br
+.RI "Surcharge de l'opérateur d'injection\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Interface pour un objet affichable\&. 
+.PP
+Definition at line \fB29\fP of file \fBidrawable\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void nsGraphics::IDrawable::draw (\fBMinGL\fP & window) const\fC [pure virtual]\fP"
+
+.PP
+Fonction pour afficher l'objet\&. 
+.PP
+Implemented in \fBBgText\fP, \fBBgText\fP, \fBnsGui::Sprite\fP, \fBnsGui::Text\fP, \fBnsShape::Rectangle\fP, \fBnsShape::Circle\fP, \fBnsShape::Oval\fP, \fBnsShape::Line\fP, and \fBnsShape::Triangle\fP\&.
+.SH "Friends And Related Function Documentation"
+.PP 
+.SS "\fBMinGL\fP & operator<< (\fBMinGL\fP & window, const \fBIDrawable\fP & drawable)\fC [friend]\fP"
+
+.PP
+Surcharge de l'opérateur d'injection\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP : Fenêtre dans laquelle injecter l'élément 
+.br
+\fIdrawable\fP : Elément a injecter 
+.RE
+.PP
+
+.PP
+Definition at line \fB51\fP of file \fBidrawable\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

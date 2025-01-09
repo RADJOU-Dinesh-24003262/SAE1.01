@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gridmanagement_8h_source" xml:lang="en-US">
+<title>gridmanagement.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_gridmanagement_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;GRIDMANAGEMENT_H</emphasis>
+<anchor xml:id="_gridmanagement_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;GRIDMANAGEMENT_H</emphasis>
+<anchor xml:id="_gridmanagement_8h_source_1l00003"/>00003 
+<anchor xml:id="_gridmanagement_8h_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_gridmanagement_8h_source_1l00014"/>00014 
+<anchor xml:id="_gridmanagement_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_type_8h">type.h</link>&quot;</emphasis>&#32;<emphasis role="comment">//nos&#32;types</emphasis>
+<anchor xml:id="_gridmanagement_8h_source_1l00016"/>00016 
+<anchor xml:id="_gridmanagement_8h_source_1l00021"/>00021 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_gridmanagement_8h_1a6a3ca153f0817e8ba91a023b886bb662">ClearScreen</link>&#32;();
+<anchor xml:id="_gridmanagement_8h_source_1l00022"/>00022 
+<anchor xml:id="_gridmanagement_8h_source_1l00028"/><link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">00028</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;&#32;Col);
+<anchor xml:id="_gridmanagement_8h_source_1l00029"/>00029 
+<anchor xml:id="_gridmanagement_8h_source_1l00030"/>00030 
+<anchor xml:id="_gridmanagement_8h_source_1l00037"/>00037 <emphasis role="keywordtype">void</emphasis>&#32;DisplayGrid&#32;(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;&#32;Mat,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;Param&#32;);
+<anchor xml:id="_gridmanagement_8h_source_1l00038"/>00038 
+<anchor xml:id="_gridmanagement_8h_source_1l00039"/>00039 
+<anchor xml:id="_gridmanagement_8h_source_1l00051"/>00051 <emphasis role="keywordtype">void</emphasis>&#32;InitGrid&#32;(<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;&#32;Mat,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;NbLine,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;NbColumn,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;PosPlayer1,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;PosPlayer2,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;Param,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;Tp1,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;Tp2,&#32;std::vector&#32;&lt;CPosition&gt;&#32;&amp;&#32;PosMonster);
+<anchor xml:id="_gridmanagement_8h_source_1l00052"/>00052 
+<anchor xml:id="_gridmanagement_8h_source_1l00053"/>00053 
+<anchor xml:id="_gridmanagement_8h_source_1l00054"/>00054 
+<anchor xml:id="_gridmanagement_8h_source_1l00055"/>00055 
+<anchor xml:id="_gridmanagement_8h_source_1l00056"/>00056 
+<anchor xml:id="_gridmanagement_8h_source_1l00067"/><link linkend="_gridmanagement_8h_1ab909b1026fe66b4055c0be20cd67582f">00067</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_gridmanagement_8h_1ab909b1026fe66b4055c0be20cd67582f">MoveMonster</link>(std::vector&#32;&lt;CPosition&gt;&#32;&amp;&#32;PosMonster,&#32;<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;&#32;&#32;Mat,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;param,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;PosPlayer1,<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;PosPlayer2);
+<anchor xml:id="_gridmanagement_8h_source_1l00068"/>00068 
+<anchor xml:id="_gridmanagement_8h_source_1l00069"/>00069 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;GRIDMANAGEMENT_H</emphasis>
+</programlisting></section>

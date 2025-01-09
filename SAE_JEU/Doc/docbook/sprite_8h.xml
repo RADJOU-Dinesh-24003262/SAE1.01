@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sprite_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h</primary></indexterm>
+<para>
+
+<para>Image pouvant être chargé depuis un fichier. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;cstdint&gt;
+#include &lt;vector&gt;
+#include &quot;../graphics/idrawable.h&quot;
+#include &quot;../graphics/rgbacolor.h&quot;
+#include &quot;../graphics/vec2d.h&quot;
+#include &quot;../transition/itransitionable.h&quot;
+</programlisting>Include dependency graph for sprite.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sprite_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sprite_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_gui_1_1_sprite">nsGui::Sprite</link></para>
+
+<para>Permet de charger une image depuis un format créé pour l&apos;occasion, le .si2. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacens_gui">nsGui</link></para>
+
+<para>Espace de nom pour des éléments d&apos;interface complexes. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Variables    </title>
+        <itemizedlist>
+            <listitem><para>uint16_t <link linkend="_sprite_8h_1a8c61e64b8675498cee79c59d3f8131e2">magic</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_sprite_8h_1a7815e2193b5dea24aae35f568006be9a">headmagic</link></para>
+</listitem>
+            <listitem><para>uint16_t <link linkend="_sprite_8h_1a6ac1f454a7d4e4d64b7ff8ca39ac5920">fileVersion</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_sprite_8h_1af73d2febf3dc338c7c8f42922aa7131c">pixelCount</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_sprite_8h_1a410460a0a75462ae38c5c9daf5fb06ed">rowSize</link></para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_sprite_8h_1a43e5468a3d445613419004493d2ffac8">datamagic</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Image pouvant être chargé depuis un fichier. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Janvier 2020 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_sprite_8h_source">sprite.h</link>.</para>
+</section>
+<section>
+<title>Variable Documentation</title>
+<anchor xml:id="_sprite_8h_1a43e5468a3d445613419004493d2ffac8"/><section>
+    <title>datamagic</title>
+<indexterm><primary>datamagic</primary><secondary>sprite.h</secondary></indexterm>
+<indexterm><primary>sprite.h</primary><secondary>datamagic</secondary></indexterm>
+<para><computeroutput>uint32_t datamagic</computeroutput></para>
+<para>Le magic number de la section données, doit toujours être &quot;DATA&quot; </para>
+<para>
+Definition at line <link linkend="_sprite_8h_source_1l00005">5</link> of file <link linkend="_sprite_8h_source">sprite.h</link>.</para>
+</section>
+<anchor xml:id="_sprite_8h_1a6ac1f454a7d4e4d64b7ff8ca39ac5920"/><section>
+    <title>fileVersion</title>
+<indexterm><primary>fileVersion</primary><secondary>sprite.h</secondary></indexterm>
+<indexterm><primary>sprite.h</primary><secondary>fileVersion</secondary></indexterm>
+<para><computeroutput>uint16_t fileVersion</computeroutput></para>
+<para>La version du format stockée par le fichier </para>
+<para>
+Definition at line <link linkend="_sprite_8h_source_1l00002">2</link> of file <link linkend="_sprite_8h_source">sprite.h</link>.</para>
+</section>
+<anchor xml:id="_sprite_8h_1a7815e2193b5dea24aae35f568006be9a"/><section>
+    <title>headmagic</title>
+<indexterm><primary>headmagic</primary><secondary>sprite.h</secondary></indexterm>
+<indexterm><primary>sprite.h</primary><secondary>headmagic</secondary></indexterm>
+<para><computeroutput>uint32_t headmagic</computeroutput></para>
+<para>Le magic number de la section en-tête, doit toujours être &quot;HEAD&quot; </para>
+<para>
+Definition at line <link linkend="_sprite_8h_source_1l00001">1</link> of file <link linkend="_sprite_8h_source">sprite.h</link>.</para>
+</section>
+<anchor xml:id="_sprite_8h_1a8c61e64b8675498cee79c59d3f8131e2"/><section>
+    <title>magic</title>
+<indexterm><primary>magic</primary><secondary>sprite.h</secondary></indexterm>
+<indexterm><primary>sprite.h</primary><secondary>magic</secondary></indexterm>
+<para><computeroutput>uint16_t magic</computeroutput></para>
+<para>Le magic number du fichier, doit toujours être &quot;SI&quot; </para>
+<para>
+Definition at line <link linkend="_sprite_8h_source_1l00000">0</link> of file <link linkend="_sprite_8h_source">sprite.h</link>.</para>
+</section>
+<anchor xml:id="_sprite_8h_1af73d2febf3dc338c7c8f42922aa7131c"/><section>
+    <title>pixelCount</title>
+<indexterm><primary>pixelCount</primary><secondary>sprite.h</secondary></indexterm>
+<indexterm><primary>sprite.h</primary><secondary>pixelCount</secondary></indexterm>
+<para><computeroutput>uint32_t pixelCount</computeroutput></para>
+<para>Le nombre de pixels contenus dans la section données </para>
+<para>
+Definition at line <link linkend="_sprite_8h_source_1l00003">3</link> of file <link linkend="_sprite_8h_source">sprite.h</link>.</para>
+</section>
+<anchor xml:id="_sprite_8h_1a410460a0a75462ae38c5c9daf5fb06ed"/><section>
+    <title>rowSize</title>
+<indexterm><primary>rowSize</primary><secondary>sprite.h</secondary></indexterm>
+<indexterm><primary>sprite.h</primary><secondary>rowSize</secondary></indexterm>
+<para><computeroutput>uint32_t rowSize</computeroutput></para>
+<para>Le nombre de pixels par ligne </para>
+<para>
+Definition at line <link linkend="_sprite_8h_source_1l00004">4</link> of file <link linkend="_sprite_8h_source">sprite.h</link>.</para>
+</section>
+</section>
+</section>

@@ -1,0 +1,906 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="game_8h" kind="file" language="C++">
+    <compoundname>game.h</compoundname>
+    <includes refid="type_8h" local="yes">type.h</includes>
+    <includes refid="mingl_8h" local="yes">mingl/mingl.h</includes>
+    <includes local="no">chrono</includes>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
+    <includedby refid="main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
+        <childnode refid="20" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>type.h</label>
+        <link refid="type_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="19">
+        <label>event.hpp</label>
+        <link refid="event_8hpp"/>
+      </node>
+      <node id="18">
+        <label>event/event_manager.h</label>
+        <link refid="event__manager_8h"/>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="19" relation="include">
+        </childnode>
+      </node>
+      <node id="11">
+        <label>graphics/idrawable.h</label>
+        <link refid="idrawable_8h"/>
+        <childnode refid="8" relation="include">
+        </childnode>
+      </node>
+      <node id="12">
+        <label>graphics/rgbacolor.h</label>
+        <link refid="rgbacolor_8h"/>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="16">
+        <label>graphics/vec2d.h</label>
+        <link refid="vec2d_8h"/>
+        <childnode refid="17" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>mingl/mingl.h</label>
+        <link refid="mingl_8h"/>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="8" relation="include">
+        </childnode>
+        <childnode refid="9" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="10" relation="include">
+        </childnode>
+        <childnode refid="11" relation="include">
+        </childnode>
+        <childnode refid="12" relation="include">
+        </childnode>
+        <childnode refid="16" relation="include">
+        </childnode>
+        <childnode refid="18" relation="include">
+        </childnode>
+      </node>
+      <node id="13">
+        <label>../tools/ieditable.h</label>
+        <link refid="ieditable_8h"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="15" relation="include">
+        </childnode>
+      </node>
+      <node id="15">
+        <label>ieditable.hpp</label>
+        <link refid="ieditable_8hpp"/>
+        <childnode refid="14" relation="include">
+        </childnode>
+        <childnode refid="13" relation="include">
+        </childnode>
+      </node>
+      <node id="10">
+        <label>GL/freeglut.h</label>
+      </node>
+      <node id="20">
+        <label>chrono</label>
+      </node>
+      <node id="14">
+        <label>iostream</label>
+      </node>
+      <node id="5">
+        <label>map</label>
+      </node>
+      <node id="8">
+        <label>memory</label>
+      </node>
+      <node id="6">
+        <label>optional</label>
+      </node>
+      <node id="17">
+        <label>ostream</label>
+      </node>
+      <node id="9">
+        <label>queue</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+      <node id="4">
+        <label>vector</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
+        <link refid="game_8cpp_source"/>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</label>
+        <link refid="game_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp</label>
+        <link refid="main_8cpp_source"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="game_8h_1a8307899b579b12370e9fd3e399e42d04" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MoveToken</definition>
+        <argsstring>(CMat &amp;Mat, const char &amp;Move, CPosition &amp;Pos, const CMyParamV2 &amp;Param, CPosition &amp;Tp1, CPosition &amp;Tp2)</argsstring>
+        <name>MoveToken</name>
+        <param>
+          <type><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref> &amp;</type>
+          <declname>Mat</declname>
+        </param>
+        <param>
+          <type>const char &amp;</type>
+          <declname>Move</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>Pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref> &amp;</type>
+          <declname>Param</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>Tp1</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>Tp2</declname>
+        </param>
+        <briefdescription>
+<para>Move the current token according to the character in the 2nd parameter. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">Mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the matrix before and after the move </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the key pressed by the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">Pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the player&apos;s position before and after the move </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter extract from the .yaml file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">Tp1</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position of the first Teleporter in Mat </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="out">Tp2</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position of the second Teleporter in Mat </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="31" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="31" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1aeb06160be5949a49243364c546d6abb6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsMoveLegal</definition>
+        <argsstring>(const CMat &amp;Mat, const char &amp;Move, const CPosition &amp;Pos, const CMyParamV2 &amp;Param)</argsstring>
+        <name>IsMoveLegal</name>
+        <param>
+          <type>const <ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref> &amp;</type>
+          <declname>Mat</declname>
+        </param>
+        <param>
+          <type>const char &amp;</type>
+          <declname>Move</declname>
+        </param>
+        <param>
+          <type>const <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>Pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref> &amp;</type>
+          <declname>Param</declname>
+        </param>
+        <briefdescription>
+<para>Test if the Move made by the player is legal, this mean if there is no wall and no out of bound. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the key pressed by the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the player&apos;s position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter extract from the .yaml file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the Move can be made </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="43" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="43" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1ad05a86bb0b8cfd683ef1c60bd003e3ce" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::pair&lt; char, <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &gt;</type>
+        <definition>std::pair&lt; char, CPosition &gt; nextMove</definition>
+        <argsstring>(const CMat &amp;Mat, const char &amp;Move, const CPosition &amp;Pos, const CMyParamV2 &amp;Param, CPosition &amp;Tp1, CPosition &amp;Tp2)</argsstring>
+        <name>nextMove</name>
+        <param>
+          <type>const <ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref> &amp;</type>
+          <declname>Mat</declname>
+        </param>
+        <param>
+          <type>const char &amp;</type>
+          <declname>Move</declname>
+        </param>
+        <param>
+          <type>const <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>Pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref> &amp;</type>
+          <declname>Param</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>Tp1</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>Tp2</declname>
+        </param>
+        <briefdescription>
+<para>returns the contents of the next cell and its position in the matrix (even with teleporter) </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the key pressed by the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the player&apos;s position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter extract from the .yaml file </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position of teleporter number 1 </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>position of teleporter number 2 </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>&lt;content of the cell &lt;pos x, pos y&gt;&gt; </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="56" column="11" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="56" declcolumn="11"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1ae80d4e86d02b962374473e98b15c6a1c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool IsCollectible</definition>
+        <argsstring>(const CMat &amp;Mat, const char &amp;Move, const CPosition &amp;Pos, const CMyParamV2 &amp;Param)</argsstring>
+        <name>IsCollectible</name>
+        <param>
+          <type>const <ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref> &amp;</type>
+          <declname>Mat</declname>
+        </param>
+        <param>
+          <type>const char &amp;</type>
+          <declname>Move</declname>
+        </param>
+        <param>
+          <type>const <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &amp;</type>
+          <declname>Pos</declname>
+        </param>
+        <param>
+          <type>const <ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref> &amp;</type>
+          <declname>Param</declname>
+        </param>
+        <briefdescription>
+<para>Test whether the content of the next move&apos;s cell is an element. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">Mat</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the matrix </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Move</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the key pressed by the user </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Pos</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>the player&apos;s position </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Parameter extract from the .yaml file </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>true if the next move&apos;s cell is an element </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="68" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="68" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1a1edb4cf36ce7b698766f4456c2977a4b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void CalculateScore</definition>
+        <argsstring>(std::vector&lt; char &gt; &amp;objets, int &amp;score)</argsstring>
+        <name>CalculateScore</name>
+        <param>
+          <type>std::vector&lt; char &gt; &amp;</type>
+          <declname>objets</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>score</declname>
+        </param>
+        <briefdescription>
+<para>Increments the score for each item in the list. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>list of items the player has collected </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">The</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>score increases with each element </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="77" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="77" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1a23ed1f47ce57765cb2fea53223a968fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Sprite</definition>
+        <argsstring>(MinGL &amp;window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, std::string sprite)</argsstring>
+        <name>Sprite</name>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>grid_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>grid_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>pos_y</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mat_x</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>mat_y</declname>
+        </param>
+        <param>
+          <type>std::string</type>
+          <declname>sprite</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="82" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="82" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1ad2fa9861d35e6880ba732c4d42d677fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void DisplayGrid</definition>
+        <argsstring>(MinGL &amp;window, const CMat &amp;mat, std::tuple&lt; int, int &gt; Screen_size)</argsstring>
+        <name>DisplayGrid</name>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>const <ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref> &amp;</type>
+          <declname>mat</declname>
+        </param>
+        <param>
+          <type>std::tuple&lt; int, int &gt;</type>
+          <declname>Screen_size</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="85" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="85" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1a530e82365352a76131d36a602a978087" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void MenuP</definition>
+        <argsstring>(MinGL &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</argsstring>
+        <name>MenuP</name>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt;</type>
+          <declname>clickablepool</declname>
+        </param>
+        <param>
+          <type>std::tuple&lt; int, int &gt;</type>
+          <declname>Screen_size</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>menuid</declname>
+        </param>
+        <param>
+          <type>std::chrono::time_point&lt; std::chrono::steady_clock &gt;</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="87" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="87" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1ac9f54c7b2df4106d5bf5f209f2c1741d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Options</definition>
+        <argsstring>(MinGL &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</argsstring>
+        <name>Options</name>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt;</type>
+          <declname>clickablepool</declname>
+        </param>
+        <param>
+          <type>std::tuple&lt; int, int &gt;</type>
+          <declname>Screen_size</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>menuid</declname>
+        </param>
+        <param>
+          <type>std::chrono::time_point&lt; std::chrono::steady_clock &gt;</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="90" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="90" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1ac7f92aebec3b6b2e6d0b4801d092c04d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Credits</definition>
+        <argsstring>(MinGL &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</argsstring>
+        <name>Credits</name>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt;</type>
+          <declname>clickablepool</declname>
+        </param>
+        <param>
+          <type>std::tuple&lt; int, int &gt;</type>
+          <declname>Screen_size</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>menuid</declname>
+        </param>
+        <param>
+          <type>std::chrono::time_point&lt; std::chrono::steady_clock &gt;</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="92" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="92" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1a4cf82823849638598365d899b482f17a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Pause</definition>
+        <argsstring>(MinGL &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</argsstring>
+        <name>Pause</name>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt;</type>
+          <declname>clickablepool</declname>
+        </param>
+        <param>
+          <type>std::tuple&lt; int, int &gt;</type>
+          <declname>Screen_size</declname>
+        </param>
+        <param>
+          <type>int &amp;</type>
+          <declname>menuid</declname>
+        </param>
+        <param>
+          <type>std::chrono::time_point&lt; std::chrono::steady_clock &gt;</type>
+          <declname>start</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="94" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="94" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1a3555e46045d63ef37f994f3c358945fb" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void GameLoop</definition>
+        <argsstring>(MinGL &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt;clickablepool, CMat Mat, int menuid, unsigned PartyNum, bool Key_UP, bool Key_DOWN, bool Key_RIGHT, bool Key_LEFT, std::tuple&lt; int, int &gt; Screen_size, CMyParamV2 param, bool Victory, unsigned KMaxPartyNum, CPosition PosPlayer1, CPosition PosPlayer2, CPosition PosTP1, CPosition PosTP2, bool Player1Turn, std::pair&lt; char, CPosition &gt; N_move, std::vector&lt; char &gt; objetJ1, std::vector&lt; char &gt; objetJ2, int scoreJ1, int scoreJ2, std::vector&lt; CPosition &gt; PosMonster)</argsstring>
+        <name>GameLoop</name>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt;</type>
+          <declname>clickablepool</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref></type>
+          <declname>Mat</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>menuid</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>PartyNum</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>Key_UP</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>Key_DOWN</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>Key_RIGHT</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>Key_LEFT</declname>
+        </param>
+        <param>
+          <type>std::tuple&lt; int, int &gt;</type>
+          <declname>Screen_size</declname>
+        </param>
+        <param>
+          <type><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref></type>
+          <declname>param</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>Victory</declname>
+        </param>
+        <param>
+          <type>unsigned</type>
+          <declname>KMaxPartyNum</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref></type>
+          <declname>PosPlayer1</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref></type>
+          <declname>PosPlayer2</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref></type>
+          <declname>PosTP1</declname>
+        </param>
+        <param>
+          <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref></type>
+          <declname>PosTP2</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>Player1Turn</declname>
+        </param>
+        <param>
+          <type>std::pair&lt; char, <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &gt;</type>
+          <declname>N_move</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; char &gt;</type>
+          <declname>objetJ1</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; char &gt;</type>
+          <declname>objetJ2</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scoreJ1</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>scoreJ2</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &gt;</type>
+          <declname>PosMonster</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="97" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="97" declcolumn="6"/>
+      </memberdef>
+      <memberdef kind="function" id="game_8h_1a0b1d64ee76933ef8f007f1208cb869a7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int ppal</definition>
+        <argsstring>()</argsstring>
+        <name>ppal</name>
+        <briefdescription>
+<para>new main </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>0 if everything is OK </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" line="108" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="427" bodyend="519" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" declline="108" declcolumn="5"/>
+        <references refid="class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d" compoundref="mingl_8h" startline="81" endline="85">MinGL::initGlut</references>
+        <references refid="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" compoundref="mingl_8cpp" startline="89" endline="125">MinGL::initGraphic</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Set of usefull functions for the game. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="author"><para>Alain Casali </para>
+</simplesect>
+<simplesect kind="author"><para>Marc Laporte </para>
+</simplesect>
+<simplesect kind="version"><para>1.0 </para>
+</simplesect>
+<simplesect kind="date"><para>18 décembre 2018 </para>
+</simplesect>
+</para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="2"><highlight class="normal"></highlight></codeline>
+<codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>GAME_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>GAME_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="5"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="type_8h" kindref="compound">type.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="mingl_8h" kindref="compound">mingl/mingl.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;chrono&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="31" refid="game_8h_1a8307899b579b12370e9fd3e399e42d04" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a8307899b579b12370e9fd3e399e42d04" kindref="member">MoveToken</ref><sp/>(<ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;<sp/>Move,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Tp1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Tp2<sp/>);</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+<codeline lineno="43" refid="game_8h_1aeb06160be5949a49243364c546d6abb6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="game_8h_1aeb06160be5949a49243364c546d6abb6" kindref="member">IsMoveLegal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;<sp/>Move,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56" refid="game_8h_1ad05a86bb0b8cfd683ef1c60bd003e3ce" refkind="member"><highlight class="normal">std::pair&lt;char,<sp/>CPosition&gt;<sp/><ref refid="game_8h_1ad05a86bb0b8cfd683ef1c60bd003e3ce" kindref="member">nextMove</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;Move,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;Pos,</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;Param,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;Tp1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;Tp2);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"></highlight></codeline>
+<codeline lineno="68" refid="game_8h_1ae80d4e86d02b962374473e98b15c6a1c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="game_8h_1ae80d4e86d02b962374473e98b15c6a1c" kindref="member">IsCollectible</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>&amp;<sp/>Move,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"></highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="77" refid="game_8h_1a1edb4cf36ce7b698766f4456c2977a4b" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a1edb4cf36ce7b698766f4456c2977a4b" kindref="member">CalculateScore</ref>(std::vector&lt;char&gt;<sp/>&amp;objets,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;score);</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"></highlight></codeline>
+<codeline lineno="79"><highlight class="normal"></highlight></codeline>
+<codeline lineno="80"><highlight class="normal"></highlight></codeline>
+<codeline lineno="81"><highlight class="normal"></highlight></codeline>
+<codeline lineno="82"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Sprite(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grid_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grid_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y,<sp/>std::string<sp/>sprite);</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DisplayGrid<sp/>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>mat,<sp/>std::tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"></highlight></codeline>
+<codeline lineno="87"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MenuP(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>std::vector&lt;std::tuple&lt;std::vector&lt;int&gt;,<sp/>std::vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>menuid,<sp/>std::chrono::time_point&lt;std::chrono::steady_clock&gt;<sp/>start);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Options(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>std::vector&lt;std::tuple&lt;std::vector&lt;int&gt;,<sp/>std::vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,<sp/>std::tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>menuid,<sp/>std::chrono::time_point&lt;std::chrono::steady_clock&gt;<sp/>start);</highlight></codeline>
+<codeline lineno="91"><highlight class="normal"></highlight></codeline>
+<codeline lineno="92"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Credits(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>std::vector&lt;std::tuple&lt;std::vector&lt;int&gt;,<sp/>std::vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,</highlight></codeline>
+<codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>menuid,<sp/>std::chrono::time_point&lt;std::chrono::steady_clock&gt;<sp/>start);</highlight></codeline>
+<codeline lineno="94"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Pause(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>std::vector&lt;std::tuple&lt;std::vector&lt;int&gt;,<sp/>std::vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,</highlight></codeline>
+<codeline lineno="95"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>menuid,<sp/>std::chrono::time_point&lt;std::chrono::steady_clock&gt;<sp/>start);</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GameLoop(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>std::vector&lt;std::tuple&lt;std::vector&lt;int&gt;,<sp/>std::vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;clickablepool,<ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>Mat,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>menuid,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>PartyNum,</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key_UP,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key_DOWN,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key_RIGHT,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key_LEFT,<sp/>std::tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>param,</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Victory,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>KMaxPartyNum,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>PosPlayer1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>PosPlayer2,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>PosTP1,</highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>PosTP2,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Player1Turn,<sp/>std::pair&lt;char,CPosition&gt;<sp/>N_move,<sp/>std::vector&lt;char&gt;<sp/>objetJ1,<sp/>std::vector&lt;char&gt;<sp/>objetJ2,</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scoreJ1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>scoreJ2,<sp/>std::vector<sp/>&lt;CPosition&gt;<sp/>PosMonster);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a0b1d64ee76933ef8f007f1208cb869a7" kindref="member">ppal</ref><sp/>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>GAME_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h"/>
+  </compounddef>
+</doxygen>

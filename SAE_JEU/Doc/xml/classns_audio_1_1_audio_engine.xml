@@ -1,0 +1,343 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_audio_1_1_audio_engine" kind="class" language="C++" prot="public">
+    <compoundname>nsAudio::AudioEngine</compoundname>
+    <includes refid="audioengine_8h" local="no">audioengine.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classns_audio_1_1_audio_engine_1a5c70458aff2dceefc6208730e9121d5f" prot="private" static="no" mutable="no">
+        <type>std::list&lt; std::pair&lt; std::string, sf::SoundBuffer &gt; &gt;</type>
+        <definition>std::list&lt;std::pair&lt;std::string, sf::SoundBuffer&gt; &gt; nsAudio::AudioEngine::m_buffers</definition>
+        <argsstring></argsstring>
+        <name>m_buffers</name>
+        <qualifiedname>nsAudio::AudioEngine::m_buffers</qualifiedname>
+        <briefdescription>
+<para>m_buffers : Liste des buffers utilisés par les éléments de m_sounds </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="101" column="15" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" bodystart="101" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classns_audio_1_1_audio_engine_1a12db8946f0698e0a108504de26a7e902" prot="private" static="no" mutable="no">
+        <type>std::list&lt; sf::Sound &gt;</type>
+        <definition>std::list&lt;sf::Sound&gt; nsAudio::AudioEngine::m_sounds</definition>
+        <argsstring></argsstring>
+        <name>m_sounds</name>
+        <qualifiedname>nsAudio::AudioEngine::m_sounds</qualifiedname>
+        <briefdescription>
+<para>m_sounds : Liste des effets audio en cours de lecture depuis des buffers </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="106" column="15" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classns_audio_1_1_audio_engine_1ac6f1450ea422e1943494c853ac9049b4" prot="private" static="no" mutable="no">
+        <type>std::list&lt; sf::Music &gt;</type>
+        <definition>std::list&lt;sf::Music&gt; nsAudio::AudioEngine::m_soundsFromFiles</definition>
+        <argsstring></argsstring>
+        <name>m_soundsFromFiles</name>
+        <qualifiedname>nsAudio::AudioEngine::m_soundsFromFiles</qualifiedname>
+        <briefdescription>
+<para>m_soundsFromFiles : Liste des effets audio en cours de lecture depuis des fichiers </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="111" column="15" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" bodystart="111" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classns_audio_1_1_audio_engine_1a6f08cc1ead1048a34ef8733896e586b7" prot="private" static="no" mutable="no">
+        <type>sf::Music</type>
+        <definition>sf::Music nsAudio::AudioEngine::m_music</definition>
+        <argsstring></argsstring>
+        <name>m_music</name>
+        <qualifiedname>nsAudio::AudioEngine::m_music</qualifiedname>
+        <briefdescription>
+<para>m_music : Musique principale </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="116" column="15" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" bodystart="116" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1a6ef72eb80bef2c1b0764c40f629d2536" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsAudio::AudioEngine::setMusic</definition>
+        <argsstring>(const std::string &amp;fileName, bool loop=true)</argsstring>
+        <name>setMusic</name>
+        <qualifiedname>nsAudio::AudioEngine::setMusic</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <param>
+          <type>bool</type>
+          <declname>loop</declname>
+          <defval>true</defval>
+        </param>
+        <briefdescription>
+<para>Définit le fichier audio de la musique. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: nom du fichier </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">loop</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: indique si la musique est lue en boucle ou non (oui par défaut) </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="38" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="16" bodyend="22"/>
+        <references refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999" compoundref="errcode_8h" startline="36">nsException::KFileError</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1aba89263fc9f810bee40dcae229313883" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsAudio::AudioEngine::toggleMusicPlaying</definition>
+        <argsstring>()</argsstring>
+        <name>toggleMusicPlaying</name>
+        <qualifiedname>nsAudio::AudioEngine::toggleMusicPlaying</qualifiedname>
+        <briefdescription>
+<para>Met en pause ou relance la musique. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="44" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="24" bodyend="27"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1ac21b2c1be9590a0f702c48220c59f8c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsAudio::AudioEngine::setMusicPlaying</definition>
+        <argsstring>(bool playing)</argsstring>
+        <name>setMusicPlaying</name>
+        <qualifiedname>nsAudio::AudioEngine::setMusicPlaying</qualifiedname>
+        <param>
+          <type>bool</type>
+          <declname>playing</declname>
+        </param>
+        <briefdescription>
+<para>Règle l&apos;état de lecture de la musique. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">playing</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Nouvel état de lecture </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="51" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="29" bodyend="35"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1a57e13380a3039e546a5f1b9242f8709b" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nsAudio::AudioEngine::isMusicPlaying</definition>
+        <argsstring>() const</argsstring>
+        <name>isMusicPlaying</name>
+        <qualifiedname>nsAudio::AudioEngine::isMusicPlaying</qualifiedname>
+        <briefdescription>
+<para>Récupère l&apos;état de lecture de la musique. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="57" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="37" bodyend="40"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1a4c88595136327b3805c0322a9a8d2a0f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsAudio::AudioEngine::loadSound</definition>
+        <argsstring>(const std::string &amp;fileName)</argsstring>
+        <name>loadSound</name>
+        <qualifiedname>nsAudio::AudioEngine::loadSound</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Charge un fichier audio dans un buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="63" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="42" bodyend="51"/>
+        <references refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999" compoundref="errcode_8h" startline="36">nsException::KFileError</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1a2b0a1a9b1cb90e1180ddedb5b9e2fad1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsAudio::AudioEngine::removeBuffer</definition>
+        <argsstring>(const std::string &amp;fileName)</argsstring>
+        <name>removeBuffer</name>
+        <qualifiedname>nsAudio::AudioEngine::removeBuffer</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Retire un buffer de la liste. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="69" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="53" bodyend="64"/>
+        <references refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376abf0d316d427bbd6c967347e91afd572f" compoundref="errcode_8h" startline="37">nsException::KErrArg</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1ac05b3e0d2fd9ecfd1ad8eb110f021bf3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsAudio::AudioEngine::emptyBufferList</definition>
+        <argsstring>()</argsstring>
+        <name>emptyBufferList</name>
+        <qualifiedname>nsAudio::AudioEngine::emptyBufferList</qualifiedname>
+        <briefdescription>
+<para>Vide la liste des buffers. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="75" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="66" bodyend="69"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1ac1343ed3afe38eb80a222969f3d74d6d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsAudio::AudioEngine::startMusicFromBeginning</definition>
+        <argsstring>()</argsstring>
+        <name>startMusicFromBeginning</name>
+        <qualifiedname>nsAudio::AudioEngine::startMusicFromBeginning</qualifiedname>
+        <briefdescription>
+<para>Relance la musique depuis le début. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="81" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="71" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1a47d769cc331578a398f422ff497505c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsAudio::AudioEngine::playSoundFromBuffer</definition>
+        <argsstring>(const std::string &amp;fileName)</argsstring>
+        <name>playSoundFromBuffer</name>
+        <qualifiedname>nsAudio::AudioEngine::playSoundFromBuffer</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Joue un son depuis un buffer. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: nom du fichier </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="88" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="77" bodyend="93"/>
+        <references refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376abf0d316d427bbd6c967347e91afd572f" compoundref="errcode_8h" startline="37">nsException::KErrArg</references>
+      </memberdef>
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1aa541e8088c35ab41e4747ecd648e75e9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsAudio::AudioEngine::playSoundFromFile</definition>
+        <argsstring>(const std::string &amp;fileName)</argsstring>
+        <name>playSoundFromFile</name>
+        <qualifiedname>nsAudio::AudioEngine::playSoundFromFile</qualifiedname>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>fileName</declname>
+        </param>
+        <briefdescription>
+<para>Joue un son depuis un fichier. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fileName</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: nom du fichier </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="95" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="95" bodyend="104"/>
+        <references refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999" compoundref="errcode_8h" startline="36">nsException::KFileError</references>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-func">
+      <memberdef kind="function" id="classns_audio_1_1_audio_engine_1af89ee6774e0eedf67788f1350632da09" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsAudio::AudioEngine::removeOldSounds</definition>
+        <argsstring>()</argsstring>
+        <name>removeOldSounds</name>
+        <qualifiedname>nsAudio::AudioEngine::removeOldSounds</qualifiedname>
+        <briefdescription>
+<para>Retire les sons terminés des listes m_sounds et m_soundsFromFiles. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="122" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp" bodystart="106" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Une classe de gestion des effets audio et de la musique. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" line="28" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/audioengine.h" bodystart="29" bodyend="124"/>
+    <listofallmembers>
+      <member refid="classns_audio_1_1_audio_engine_1ac05b3e0d2fd9ecfd1ad8eb110f021bf3" prot="public" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>emptyBufferList</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1a57e13380a3039e546a5f1b9242f8709b" prot="public" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>isMusicPlaying</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1a4c88595136327b3805c0322a9a8d2a0f" prot="public" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>loadSound</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1a5c70458aff2dceefc6208730e9121d5f" prot="private" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>m_buffers</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1a6f08cc1ead1048a34ef8733896e586b7" prot="private" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>m_music</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1a12db8946f0698e0a108504de26a7e902" prot="private" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>m_sounds</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1ac6f1450ea422e1943494c853ac9049b4" prot="private" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>m_soundsFromFiles</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1a47d769cc331578a398f422ff497505c8" prot="public" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>playSoundFromBuffer</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1aa541e8088c35ab41e4747ecd648e75e9" prot="public" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>playSoundFromFile</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1a2b0a1a9b1cb90e1180ddedb5b9e2fad1" prot="public" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>removeBuffer</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1af89ee6774e0eedf67788f1350632da09" prot="private" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>removeOldSounds</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1a6ef72eb80bef2c1b0764c40f629d2536" prot="public" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>setMusic</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1ac21b2c1be9590a0f702c48220c59f8c9" prot="public" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>setMusicPlaying</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1ac1343ed3afe38eb80a222969f3d74d6d" prot="public" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>startMusicFromBeginning</name></member>
+      <member refid="classns_audio_1_1_audio_engine_1aba89263fc9f810bee40dcae229313883" prot="public" virt="non-virtual"><scope>nsAudio::AudioEngine</scope><name>toggleMusicPlaying</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,156 @@
+.TH "nsAudio::AudioEngine" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsAudio::AudioEngine \- Une classe de gestion des effets audio et de la musique\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <audioengine\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBsetMusic\fP (const std::string &fileName, bool loop=true)"
+.br
+.RI "Définit le fichier audio de la musique\&. "
+.ti -1c
+.RI "void \fBtoggleMusicPlaying\fP ()"
+.br
+.RI "Met en pause ou relance la musique\&. "
+.ti -1c
+.RI "void \fBsetMusicPlaying\fP (bool playing)"
+.br
+.RI "Règle l'état de lecture de la musique\&. "
+.ti -1c
+.RI "bool \fBisMusicPlaying\fP () const"
+.br
+.RI "Récupère l'état de lecture de la musique\&. "
+.ti -1c
+.RI "void \fBloadSound\fP (const std::string &fileName)"
+.br
+.RI "Charge un fichier audio dans un buffer\&. "
+.ti -1c
+.RI "void \fBremoveBuffer\fP (const std::string &fileName)"
+.br
+.RI "Retire un buffer de la liste\&. "
+.ti -1c
+.RI "void \fBemptyBufferList\fP ()"
+.br
+.RI "Vide la liste des buffers\&. "
+.ti -1c
+.RI "void \fBstartMusicFromBeginning\fP ()"
+.br
+.RI "Relance la musique depuis le début\&. "
+.ti -1c
+.RI "void \fBplaySoundFromBuffer\fP (const std::string &fileName)"
+.br
+.RI "Joue un son depuis un buffer\&. "
+.ti -1c
+.RI "void \fBplaySoundFromFile\fP (const std::string &fileName)"
+.br
+.RI "Joue un son depuis un fichier\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Une classe de gestion des effets audio et de la musique\&. 
+.PP
+Definition at line \fB28\fP of file \fBaudioengine\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void nsAudio::AudioEngine::emptyBufferList ()"
+
+.PP
+Vide la liste des buffers\&. 
+.PP
+Definition at line \fB66\fP of file \fBaudioengine\&.cpp\fP\&.
+.SS "bool nsAudio::AudioEngine::isMusicPlaying () const"
+
+.PP
+Récupère l'état de lecture de la musique\&. 
+.PP
+Definition at line \fB37\fP of file \fBaudioengine\&.cpp\fP\&.
+.SS "void nsAudio::AudioEngine::loadSound (const std::string & fileName)"
+
+.PP
+Charge un fichier audio dans un buffer\&. 
+.PP
+Definition at line \fB42\fP of file \fBaudioengine\&.cpp\fP\&.
+.SS "void nsAudio::AudioEngine::playSoundFromBuffer (const std::string & fileName)"
+
+.PP
+Joue un son depuis un buffer\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileName\fP : nom du fichier 
+.RE
+.PP
+
+.PP
+Definition at line \fB77\fP of file \fBaudioengine\&.cpp\fP\&.
+.SS "void nsAudio::AudioEngine::playSoundFromFile (const std::string & fileName)"
+
+.PP
+Joue un son depuis un fichier\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileName\fP : nom du fichier 
+.RE
+.PP
+
+.PP
+Definition at line \fB95\fP of file \fBaudioengine\&.cpp\fP\&.
+.SS "void nsAudio::AudioEngine::removeBuffer (const std::string & fileName)"
+
+.PP
+Retire un buffer de la liste\&. 
+.PP
+Definition at line \fB53\fP of file \fBaudioengine\&.cpp\fP\&.
+.SS "void nsAudio::AudioEngine::setMusic (const std::string & fileName, bool loop = \fCtrue\fP)"
+
+.PP
+Définit le fichier audio de la musique\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfileName\fP : nom du fichier 
+.br
+\fIloop\fP : indique si la musique est lue en boucle ou non (oui par défaut) 
+.RE
+.PP
+
+.PP
+Definition at line \fB16\fP of file \fBaudioengine\&.cpp\fP\&.
+.SS "void nsAudio::AudioEngine::setMusicPlaying (bool playing)"
+
+.PP
+Règle l'état de lecture de la musique\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIplaying\fP : Nouvel état de lecture 
+.RE
+.PP
+
+.PP
+Definition at line \fB29\fP of file \fBaudioengine\&.cpp\fP\&.
+.SS "void nsAudio::AudioEngine::startMusicFromBeginning ()"
+
+.PP
+Relance la musique depuis le début\&. 
+.PP
+Definition at line \fB71\fP of file \fBaudioengine\&.cpp\fP\&.
+.SS "void nsAudio::AudioEngine::toggleMusicPlaying ()"
+
+.PP
+Met en pause ou relance la musique\&. 
+.PP
+Definition at line \fB24\fP of file \fBaudioengine\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

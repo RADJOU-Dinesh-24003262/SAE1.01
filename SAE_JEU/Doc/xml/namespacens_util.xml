@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacens_util" kind="namespace" language="C++">
+    <compoundname>nsUtil</compoundname>
+    <innerclass refid="classns_util_1_1_i_editable" prot="public">nsUtil::IEditable</innerclass>
+    <innerclass refid="classns_util_1_1_i_fonctor_unaire" prot="public">nsUtil::IFonctorUnaire</innerclass>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="namespacens_util_1a95ba3ba3ebef98e447b47ee40f55dd1a" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; nsUtil::operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const IEditable &amp;Obj)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>nsUtil::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_util_1_1_i_editable" kindref="compound">IEditable</ref> &amp;</type>
+          <declname>Obj</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="65" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.hpp" bodystart="20" bodyend="23" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" declline="65" declcolumn="1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Espace de nom pour les utilitaires lambda. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="27" column="1"/>
+  </compounddef>
+</doxygen>

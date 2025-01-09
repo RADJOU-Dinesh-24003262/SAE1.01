@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_shape_8cpp_source" xml:lang="en-US">
+<title>shape.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_shape_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_shape_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_shape_8h">mingl/shape/shape.h</link>&quot;</emphasis>
+<anchor xml:id="_shape_8cpp_source_1l00012"/>00012 
+<anchor xml:id="_shape_8cpp_source_1l00013"/><link linkend="_classns_shape_1_1_shape_1a879f450649c23c83dee576234703951d">00013</link> <link linkend="_classns_shape_1_1_shape_1a879f450649c23c83dee576234703951d">nsShape::Shape::Shape</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;inColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;borderColor)
+<anchor xml:id="_shape_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;:&#32;m_fillColor(inColor)
+<anchor xml:id="_shape_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;,&#32;m_borderColor(borderColor)
+<anchor xml:id="_shape_8cpp_source_1l00016"/>00016 {}&#32;<emphasis role="comment">//&#32;Shape()</emphasis>
+<anchor xml:id="_shape_8cpp_source_1l00017"/>00017 
+<anchor xml:id="_shape_8cpp_source_1l00018"/><link linkend="_classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754">00018</link> <emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;<link linkend="_classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754">nsShape::Shape::getFillColor</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_shape_8cpp_source_1l00019"/>00019 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_shape_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_fillColor;
+<anchor xml:id="_shape_8cpp_source_1l00021"/>00021 }&#32;<emphasis role="comment">//&#32;getFillColor()</emphasis>
+<anchor xml:id="_shape_8cpp_source_1l00022"/>00022 
+<anchor xml:id="_shape_8cpp_source_1l00023"/><link linkend="_classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07">00023</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07">nsShape::Shape::setFillColor</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;fillColor)
+<anchor xml:id="_shape_8cpp_source_1l00024"/>00024 {
+<anchor xml:id="_shape_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;m_fillColor&#32;=&#32;fillColor;
+<anchor xml:id="_shape_8cpp_source_1l00026"/>00026 }&#32;<emphasis role="comment">//&#32;setFillColor()</emphasis>
+<anchor xml:id="_shape_8cpp_source_1l00027"/>00027 
+<anchor xml:id="_shape_8cpp_source_1l00028"/><link linkend="_classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d">00028</link> <emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;<link linkend="_classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d">nsShape::Shape::getBorderColor</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_shape_8cpp_source_1l00029"/>00029 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_shape_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_borderColor;
+<anchor xml:id="_shape_8cpp_source_1l00031"/>00031 }&#32;<emphasis role="comment">//&#32;getBorderColor()</emphasis>
+<anchor xml:id="_shape_8cpp_source_1l00032"/>00032 
+<anchor xml:id="_shape_8cpp_source_1l00033"/><link linkend="_classns_shape_1_1_shape_1a48821100aa1856f188bdba257505adc3">00033</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_shape_1a48821100aa1856f188bdba257505adc3">nsShape::Shape::setBorderColor</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;borderColor)
+<anchor xml:id="_shape_8cpp_source_1l00034"/>00034 {
+<anchor xml:id="_shape_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;m_borderColor&#32;=&#32;borderColor;
+<anchor xml:id="_shape_8cpp_source_1l00036"/>00036 }&#32;<emphasis role="comment">//&#32;setBorderColor()</emphasis>
+</programlisting></section>

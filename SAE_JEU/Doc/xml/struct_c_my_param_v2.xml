@@ -1,0 +1,241 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="struct_c_my_param_v2" kind="struct" language="C++" prot="public">
+    <compoundname>CMyParamV2</compoundname>
+    <includes refid="type_8h" local="no">type.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CMyParamV2::tokenP1</definition>
+        <argsstring></argsstring>
+        <name>tokenP1</name>
+        <qualifiedname>CMyParamV2::tokenP1</qualifiedname>
+        <briefdescription>
+<para>la forme du joueur 1 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="86" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="86" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CMyParamV2::tokenP2</definition>
+        <argsstring></argsstring>
+        <name>tokenP2</name>
+        <qualifiedname>CMyParamV2::tokenP2</qualifiedname>
+        <briefdescription>
+<para>la forme du joueur 1 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="90" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="90" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CMyParamV2::Key1Up</definition>
+        <argsstring></argsstring>
+        <name>Key1Up</name>
+        <qualifiedname>CMyParamV2::Key1Up</qualifiedname>
+        <briefdescription>
+<para>la touche pour faire monter le token1 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="94" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="94" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CMyParamV2::Key1Down</definition>
+        <argsstring></argsstring>
+        <name>Key1Down</name>
+        <qualifiedname>CMyParamV2::Key1Down</qualifiedname>
+        <briefdescription>
+<para>la touche pour faire descendre le token1 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="98" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="98" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CMyParamV2::Key1Left</definition>
+        <argsstring></argsstring>
+        <name>Key1Left</name>
+        <qualifiedname>CMyParamV2::Key1Left</qualifiedname>
+        <briefdescription>
+<para>la touche pour faire aller à gauche le token1 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="102" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="102" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CMyParamV2::Key1Right</definition>
+        <argsstring></argsstring>
+        <name>Key1Right</name>
+        <qualifiedname>CMyParamV2::Key1Right</qualifiedname>
+        <briefdescription>
+<para>la touche pour faire aller à droite le token1 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="106" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="106" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CMyParamV2::Key2Up</definition>
+        <argsstring></argsstring>
+        <name>Key2Up</name>
+        <qualifiedname>CMyParamV2::Key2Up</qualifiedname>
+        <briefdescription>
+<para>la touche pour faire monter le token2 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="110" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="110" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CMyParamV2::Key2Down</definition>
+        <argsstring></argsstring>
+        <name>Key2Down</name>
+        <qualifiedname>CMyParamV2::Key2Down</qualifiedname>
+        <briefdescription>
+<para>la touche pour faire descendre le token2 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="114" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="114" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CMyParamV2::Key2Left</definition>
+        <argsstring></argsstring>
+        <name>Key2Left</name>
+        <qualifiedname>CMyParamV2::Key2Left</qualifiedname>
+        <briefdescription>
+<para>la touche pour faire aller à gauche le token2 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="118" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="118" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char CMyParamV2::Key2Right</definition>
+        <argsstring></argsstring>
+        <name>Key2Right</name>
+        <qualifiedname>CMyParamV2::Key2Right</qualifiedname>
+        <briefdescription>
+<para>la touche pour faire aller à droite le token2 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="122" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="122" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" prot="public" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t CMyParamV2::NbColumn</definition>
+        <argsstring></argsstring>
+        <name>NbColumn</name>
+        <qualifiedname>CMyParamV2::NbColumn</qualifiedname>
+        <briefdescription>
+<para>le nombre de colone qu&apos;il doit avoir dans la map </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="126" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="126" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" prot="public" static="no" mutable="no">
+        <type>std::size_t</type>
+        <definition>std::size_t CMyParamV2::NbRow</definition>
+        <argsstring></argsstring>
+        <name>NbRow</name>
+        <qualifiedname>CMyParamV2::NbRow</qualifiedname>
+        <briefdescription>
+<para>le nombre de ligne qu&apos;il doit avoir dans la map </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="130" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="130" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CMyParamV2::ColorP1</definition>
+        <argsstring></argsstring>
+        <name>ColorP1</name>
+        <qualifiedname>CMyParamV2::ColorP1</qualifiedname>
+        <briefdescription>
+<para>la couleur du player 1 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="134" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="134" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string CMyParamV2::ColorP2</definition>
+        <argsstring></argsstring>
+        <name>ColorP2</name>
+        <qualifiedname>CMyParamV2::ColorP2</qualifiedname>
+        <briefdescription>
+<para>la couleur du player 2 </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="138" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="138" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure contenant les paramètres de configuration du jeu. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="82" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="82" bodyend="139"/>
+    <listofallmembers>
+      <member refid="struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>ColorP1</name></member>
+      <member refid="struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>ColorP2</name></member>
+      <member refid="struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>Key1Down</name></member>
+      <member refid="struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>Key1Left</name></member>
+      <member refid="struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>Key1Right</name></member>
+      <member refid="struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>Key1Up</name></member>
+      <member refid="struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>Key2Down</name></member>
+      <member refid="struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>Key2Left</name></member>
+      <member refid="struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>Key2Right</name></member>
+      <member refid="struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>Key2Up</name></member>
+      <member refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>NbColumn</name></member>
+      <member refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>NbRow</name></member>
+      <member refid="struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>tokenP1</name></member>
+      <member refid="struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6" prot="public" virt="non-virtual"><scope>CMyParamV2</scope><name>tokenP2</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

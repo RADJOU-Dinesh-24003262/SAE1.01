@@ -1,0 +1,471 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gridmanagement_8cpp_source" xml:lang="en-US">
+<title>gridmanagement.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="_gridmanagement_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_gridmanagement_8h">gridmanagement.h</link>&quot;</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_type_8h">type.h</link>&quot;</emphasis>&#32;<emphasis role="comment">//nos&#32;types</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00004"/>00004 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00005"/>00005 <emphasis role="preprocessor">#include&#32;&lt;bits/stdc++.h&gt;</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00006"/>00006 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00007"/>00007 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&lt;cmath&gt;</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00009"/>00009 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00010"/>00010 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00011"/>00011 <emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_form">Form</link>&#32;F_T(){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00012"/>00012 &#32;&#32;&#32;&#32;<link linkend="_struct_form">Form</link>&#32;formeT;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00013"/>00013 &#32;&#32;&#32;&#32;formeT.nom&#32;=&#32;<emphasis role="stringliteral">&quot;Forme&#32;T&quot;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;formeT.piece&#32;=&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>},
+<anchor xml:id="_gridmanagement_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;formeT.dim&#32;=&#32;{2,3};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;formeT;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00020"/>00020 }
+<anchor xml:id="_gridmanagement_8cpp_source_1l00021"/>00021 <emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_form">Form</link>&#32;F_Carre()&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<link linkend="_struct_form">Form</link>&#32;carre;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;carre.nom&#32;=&#32;<emphasis role="stringliteral">&quot;Forme&#32;Carre&quot;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;carre.piece&#32;=&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>},
+<anchor xml:id="_gridmanagement_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;carre.dim&#32;=&#32;{2,&#32;2};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;carre;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00030"/>00030 }
+<anchor xml:id="_gridmanagement_8cpp_source_1l00031"/>00031 <emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_form">Form</link>&#32;F_L()&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<link linkend="_struct_form">Form</link>&#32;formeL;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;formeL.nom&#32;=&#32;<emphasis role="stringliteral">&quot;Forme&#32;L&quot;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;formeL.piece&#32;=&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>},
+<anchor xml:id="_gridmanagement_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;formeL.dim&#32;=&#32;{2,&#32;3};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;formeL;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00040"/>00040 }
+<anchor xml:id="_gridmanagement_8cpp_source_1l00041"/>00041 <emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_form">Form</link>&#32;F_S()&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<link linkend="_struct_form">Form</link>&#32;carre;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;carre.nom&#32;=&#32;<emphasis role="stringliteral">&quot;Forme&#32;S&quot;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;carre.piece&#32;=&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>},
+<anchor xml:id="_gridmanagement_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;carre.dim&#32;=&#32;{2,&#32;3};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;carre;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00050"/>00050 }
+<anchor xml:id="_gridmanagement_8cpp_source_1l00051"/>00051 <emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_form">Form</link>&#32;F_Z()&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<link linkend="_struct_form">Form</link>&#32;carre;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;carre.nom&#32;=&#32;<emphasis role="stringliteral">&quot;Forme&#32;Z&quot;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;carre.piece&#32;=&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>},
+<anchor xml:id="_gridmanagement_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;carre.dim&#32;=&#32;{2,&#32;3};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;carre;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00060"/>00060 }
+<anchor xml:id="_gridmanagement_8cpp_source_1l00061"/>00061 <emphasis role="keyword">static</emphasis>&#32;<link linkend="_struct_form">Form</link>&#32;F_J()&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<link linkend="_struct_form">Form</link>&#32;carre;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;carre.nom&#32;=&#32;<emphasis role="stringliteral">&quot;Forme&#32;J&quot;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00064"/>00064 &#32;&#32;&#32;&#32;carre.piece&#32;=&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>},
+<anchor xml:id="_gridmanagement_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>},
+<anchor xml:id="_gridmanagement_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="charliteral">&apos;M&apos;</emphasis>,&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;carre.dim&#32;=&#32;{3,&#32;2};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;carre;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00071"/>00071 }
+<anchor xml:id="_gridmanagement_8cpp_source_1l00072"/>00072 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00073"/>00073 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00074"/>00074 <emphasis role="comment">//fonction&#32;pour&#32;ajouter&#32;piece&#32;dans&#32;la&#32;matrice&#32;(si&#32;manque&#32;de&#32;place&#32;=&gt;&#32;on&#32;supprime&#32;le&#32;M&#32;initial&#32;pour&#32;éviter&#32;un&#32;M&#32;seul)</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00075"/>00075 <emphasis role="keywordtype">void</emphasis>&#32;ajouterpiece(<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;Mat,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_form">Form</link>&#32;&amp;forme,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Ajouter&#32;la&#32;pièce&#32;à&#32;partir&#32;de&#32;la&#32;position&#32;(x,&#32;y)&#32;dans&#32;la&#32;matrice&#32;cible</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;forme.dim.first;&#32;++i)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;forme.dim.second;&#32;++j)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Vérifier&#32;que&#32;nous&#32;sommes&#32;dans&#32;les&#32;limites&#32;de&#32;la&#32;matrice&#32;cible</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(x&#32;+&#32;i&#32;&lt;&#32;Mat.size()&#32;&amp;&amp;&#32;y&#32;+&#32;j&#32;&lt;&#32;Mat[0].size())
+<anchor xml:id="_gridmanagement_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Ajouter&#32;la&#32;pièce&#32;uniquement&#32;si&#32;ce&#32;n&apos;est&#32;pas&#32;un&#32;espace&#32;vide</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(forme.piece[i][j]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[x&#32;+&#32;i][y&#32;+&#32;j]&#32;=&#32;forme.piece[i][j];
+<anchor xml:id="_gridmanagement_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{<emphasis role="comment">//sinon&#32;on&#32;supprime&#32;le&#32;M&#32;initial</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00091"/>00091 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[x][y]&#32;=&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00095"/>00095 }
+<anchor xml:id="_gridmanagement_8cpp_source_1l00096"/>00096 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00097"/>00097 <emphasis role="keywordtype">void</emphasis>&#32;rotation90(<link linkend="_struct_form">Form</link>&#32;&amp;forme)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Créer&#32;une&#32;nouvelle&#32;matrice&#32;avec&#32;les&#32;dimensions&#32;inversées</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;vector&lt;vector&lt;char&gt;&gt;&#32;matrice;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00100"/>00100 &#32;&#32;&#32;&#32;matrice.resize(forme.dim.second,&#32;vector&lt;char&gt;(forme.dim.first));
+<anchor xml:id="_gridmanagement_8cpp_source_1l00101"/>00101 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Effectuer&#32;la&#32;rotation&#32;de&#32;90°&#32;(sens&#32;horaire)</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;forme.dim.first;&#32;++i)&#32;{&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Parcours&#32;des&#32;lignes&#32;de&#32;l&apos;ancienne&#32;matrice</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;forme.dim.second;&#32;++j)&#32;{&#32;<emphasis role="comment">//&#32;Parcours&#32;des&#32;colonnes&#32;de&#32;l&apos;ancienne&#32;matrice</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;matrice[j][forme.dim.first&#32;-&#32;1&#32;-&#32;i]&#32;=&#32;forme.piece[i][j];
+<anchor xml:id="_gridmanagement_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;forme.piece&#32;=&#32;matrice;&#32;<emphasis role="comment">//&#32;Remplacer&#32;la&#32;matrice&#32;actuelle&#32;par&#32;la&#32;matrice&#32;pivotée</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;swap(forme.dim.first,&#32;forme.dim.second);&#32;<emphasis role="comment">//&#32;Mettre&#32;à&#32;jour&#32;les&#32;dimensions&#32;de&#32;la&#32;forme</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00110"/>00110 }
+<anchor xml:id="_gridmanagement_8cpp_source_1l00111"/>00111 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00112"/>00112 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00113"/><link linkend="_gridmanagement_8h_1a6a3ca153f0817e8ba91a023b886bb662">00113</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_gridmanagement_8h_1a6a3ca153f0817e8ba91a023b886bb662">ClearScreen</link>(){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00114"/>00114 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\033[H\033[2J&quot;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00115"/>00115 }<emphasis role="comment">//&#32;ClearScreen&#32;()</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00116"/>00116 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00117"/>00117 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">string</emphasis>&#32;&amp;&#32;Col){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\033[&quot;</emphasis>&#32;&lt;&lt;&#32;Col.c_str&#32;()&#32;&lt;&lt;<emphasis role="stringliteral">&quot;m&quot;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00119"/>00119 }&#32;<emphasis role="comment">//&#32;Color&#32;()</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00120"/>00120 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00121"/>00121 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00122"/>00122 <emphasis role="keywordtype">void</emphasis>&#32;DisplayGrid&#32;(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;&#32;Mat,<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;Param){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;KNbLine&#32;=&#32;Mat.size&#32;();
+<anchor xml:id="_gridmanagement_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;KNbCol&#32;&#32;=&#32;Mat[0].size&#32;();
+<anchor xml:id="_gridmanagement_8cpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;string&#32;(KNbCol&#32;+&#32;2&#32;,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>)&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;i&#32;(0);&#32;i&#32;&lt;&#32;KNbLine;&#32;++i){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;|&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">char</emphasis>&#32;c&#32;:&#32;Mat[i]){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(c&#32;==&#32;Param.<link linkend="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6">tokenP1</link>){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(Param.<link linkend="_struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11">ColorP1</link>)-&gt;second);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00131"/>00131 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;c;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KReset&quot;</emphasis>)-&gt;second);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(c&#32;==&#32;Param.<link linkend="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6">tokenP2</link>){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(Param.<link linkend="_struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7">ColorP2</link>)-&gt;second);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;c;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KReset&quot;</emphasis>)-&gt;second);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(c&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00140"/>00140 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<emphasis role="stringliteral">&quot;\e[7;33&quot;</emphasis>);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00142"/>00142 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KReset&quot;</emphasis>)-&gt;second);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00143"/>00143 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00144"/>00144 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>(c&#32;==&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\e[6;34m&quot;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;c;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00147"/>00147 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KReset&quot;</emphasis>)-&gt;second);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00148"/>00148 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00149"/>00149 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(c&#32;==&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00150"/>00150 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;\e[6;35m&quot;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;c;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80">Color</link>&#32;(<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KReset&quot;</emphasis>)-&gt;second);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00153"/>00153 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00154"/>00154 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00155"/>00155 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00156"/>00156 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;c;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00158"/>00158 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00159"/>00159 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="charliteral">&apos;|&apos;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00160"/>00160 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;string&#32;(KNbCol&#32;+&#32;2&#32;,&#32;<emphasis role="charliteral">&apos;-&apos;</emphasis>)&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00162"/>00162 }<emphasis role="comment">//&#32;ShowMatrix&#32;()</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00163"/>00163 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00164"/>00164 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00165"/>00165 <emphasis role="keywordtype">void</emphasis>&#32;InitGrid&#32;(<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;&#32;Mat,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;NbLine,&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;NbColumn,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;PosPlayer1,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;PosPlayer2,
+<anchor xml:id="_gridmanagement_8cpp_source_1l00166"/>00166 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;Param,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;Tp1,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;Tp2,&#32;vector&#32;&lt;CPosition&gt;&#32;&amp;&#32;PosMonster&#32;){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00167"/>00167 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00168"/>00168 &#32;&#32;&#32;&#32;Mat.resize&#32;(NbLine);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00169"/>00169 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1af4d6ac508b164138028e81737c7be8a2">CVLine</link>&#32;KLine&#32;(NbColumn,&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00170"/>00170 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_type_8h_1af4d6ac508b164138028e81737c7be8a2">CVLine</link>&#32;&amp;&#32;ALine&#32;:&#32;Mat)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00171"/>00171 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ALine&#32;=&#32;KLine;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00172"/>00172 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00173"/>00173 &#32;&#32;&#32;&#32;srand(time(0));
+<anchor xml:id="_gridmanagement_8cpp_source_1l00174"/>00174 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;x&#32;=&#32;0,&#32;y&#32;=&#32;0,val&#32;=&#32;0,&#32;last_rand&#32;=&#32;0;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;NbLine;&#32;i&#32;=&#32;i&#32;+&#32;5)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00176"/>00176 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00177"/>00177 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>&#32;j&#32;=&#32;0;&#32;j&#32;&lt;&#32;NbColumn;&#32;j&#32;=&#32;j+5)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00178"/>00178 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00179"/>00179 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;p&#32;=&#32;0;&#32;p&#32;&lt;&#32;1;&#32;++p)&#32;<emphasis role="comment">//&#32;si&#32;on&#32;veut&#32;ajouter&#32;plus&#32;de&#32;mur</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00180"/>00180 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00181"/>00181 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;x&#32;=&#32;x&#32;+&#32;rand();
+<anchor xml:id="_gridmanagement_8cpp_source_1l00182"/>00182 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;y&#32;=&#32;y&#32;+&#32;rand();
+<anchor xml:id="_gridmanagement_8cpp_source_1l00183"/>00183 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;x&#32;=&#32;x%(5-1);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00184"/>00184 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;y&#32;=&#32;y%(5-1);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[i+x][j+y]&#32;=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00186"/>00186 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00187"/>00187 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;val&#32;=&#32;rand()%6;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00188"/>00188 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;last_rand&#32;=&#32;rand()%3+0;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00189"/>00189 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_form">Form</link>&#32;mur;&#32;<emphasis role="comment">//jsp&#32;pas&#32;pourquoi&#32;je&#32;doit&#32;initialiser&#32;mur&#32;ici&#32;pour&#32;éviter&#32;un&#32;bug&#32;dans&#32;le&#32;switch</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00190"/>00190 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(val)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00191"/>00191 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00192"/>00192 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;0:
+<anchor xml:id="_gridmanagement_8cpp_source_1l00193"/>00193 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mur&#32;=&#32;F_T();
+<anchor xml:id="_gridmanagement_8cpp_source_1l00194"/>00194 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;un&#32;nbr&#32;random&#32;de&#32;rotation&#32;de&#32;90°&#32;(entre&#32;0&#32;et&#32;3)</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00195"/>00195 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;puis&#32;on&#32;ajouter&#32;cette&#32;piece&#32;a&#32;MAT</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00196"/>00196 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00197"/>00197 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;1:
+<anchor xml:id="_gridmanagement_8cpp_source_1l00198"/>00198 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mur&#32;=&#32;F_Carre();
+<anchor xml:id="_gridmanagement_8cpp_source_1l00199"/>00199 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00200"/>00200 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;2:
+<anchor xml:id="_gridmanagement_8cpp_source_1l00201"/>00201 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mur&#32;=&#32;F_L();
+<anchor xml:id="_gridmanagement_8cpp_source_1l00202"/>00202 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00203"/>00203 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;3:
+<anchor xml:id="_gridmanagement_8cpp_source_1l00204"/>00204 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mur&#32;=&#32;F_J();
+<anchor xml:id="_gridmanagement_8cpp_source_1l00205"/>00205 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00206"/>00206 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;4:
+<anchor xml:id="_gridmanagement_8cpp_source_1l00207"/>00207 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mur&#32;=&#32;F_S();
+<anchor xml:id="_gridmanagement_8cpp_source_1l00208"/>00208 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00209"/>00209 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;5:
+<anchor xml:id="_gridmanagement_8cpp_source_1l00210"/>00210 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;mur&#32;=&#32;F_Z();
+<anchor xml:id="_gridmanagement_8cpp_source_1l00211"/>00211 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00212"/>00212 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00213"/>00213 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;k&#32;=&#32;0;&#32;k&#32;&lt;&#32;last_rand;&#32;++k)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00214"/>00214 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00215"/>00215 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rotation90(mur);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00216"/>00216 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00217"/>00217 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ajouterpiece(Mat,&#32;mur,&#32;i&#32;+&#32;x,&#32;j&#32;+&#32;y);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00218"/>00218 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00219"/>00219 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00220"/>00220 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00221"/>00221 <emphasis role="comment">//empecher&#32;les&#32;murs</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00222"/>00222 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00223"/>00223 &#32;&#32;&#32;&#32;<emphasis role="comment">//J2</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00224"/>00224 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Mat[Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;-&#32;2][0]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00225"/>00225 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;-&#32;2][0]&#32;=&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00226"/>00226 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Mat[Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;-&#32;1][1]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00227"/>00227 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;-&#32;1][1]&#32;=&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00228"/>00228 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00229"/>00229 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Mat[0][Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;-&#32;2]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00230"/>00230 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[0][Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;-&#32;2]&#32;=&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00231"/>00231 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Mat[1][Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;-&#32;1]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00232"/>00232 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[1][Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;-&#32;1]&#32;=&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00233"/>00233 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00234"/>00234 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00235"/>00235 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00236"/>00236 &#32;&#32;&#32;&#32;<emphasis role="comment">//Init&#32;teleporter</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00237"/>00237 &#32;&#32;&#32;&#32;vector&#32;&lt;long&#32;long&gt;&#32;teleportX&#32;(2);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00238"/>00238 &#32;&#32;&#32;&#32;vector&#32;&lt;long&#32;long&gt;&#32;teleportY&#32;(2);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00239"/>00239 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;&#32;distx,&#32;disty;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00240"/>00240 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00241"/>00241 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00242"/>00242 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//placer&#32;deux&#32;teleporteur</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00243"/>00243 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">unsigned</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;2;&#32;++i){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00244"/>00244 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00245"/>00245 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;teleportX[i]&#32;=&#32;rand()%(Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>-3)+1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00246"/>00246 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;teleportY[i]&#32;=&#32;rand()%(Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>-3)+1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00247"/>00247 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//pour&#32;eviter&#32;que&#32;autour&#32;du&#32;Tp&#32;qu&apos;il&#32;ait&#32;des&#32;murs</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00248"/>00248 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">while</emphasis>(Mat[teleportX[i]][teleportY[i]]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;||&#32;Mat[teleportX[i]-1][teleportY[i]]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;||
+<anchor xml:id="_gridmanagement_8cpp_source_1l00249"/>00249 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[teleportX[i]+1][teleportY[i]]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;||&#32;Mat[teleportX[i]][teleportY[i]-1]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;||
+<anchor xml:id="_gridmanagement_8cpp_source_1l00250"/>00250 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[teleportX[i]][teleportY[i]+1]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00251"/>00251 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00252"/>00252 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00253"/>00253 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//regarder&#32;la&#32;distance&#32;entre&#32;les&#32;Tp&#32;et&#32;éviter&#32;qu&apos;il&#32;soit&#32;trop&#32;pres</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00254"/>00254 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;distx&#32;=&#32;std::abs(teleportY[0]&#32;-&#32;teleportY[1]);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00255"/>00255 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;disty&#32;=&#32;std::abs(teleportX[0]&#32;-&#32;teleportX[1]);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00256"/>00256 &#32;&#32;&#32;&#32;}<emphasis role="keywordflow">while</emphasis>(distx&#32;&lt;&#32;Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>/3&#32;||&#32;disty&#32;&lt;&#32;Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>/3);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00257"/>00257 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00258"/>00258 &#32;&#32;&#32;&#32;Mat[teleportX[0]][teleportY[0]]&#32;=&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00259"/>00259 &#32;&#32;&#32;&#32;Tp1&#32;=&#32;{teleportX[0],&#32;teleportY[0]};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00260"/>00260 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00261"/>00261 &#32;&#32;&#32;&#32;Mat[teleportX[1]][teleportY[1]]&#32;=&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00262"/>00262 &#32;&#32;&#32;&#32;Tp2&#32;=&#32;{teleportX[1],&#32;teleportY[1]};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00263"/>00263 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00264"/>00264 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00265"/>00265 &#32;&#32;&#32;&#32;srand(time(0));&#32;<emphasis role="comment">//&#32;a&#32;test</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00266"/>00266 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00267"/>00267 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;nbr_item,&#32;cpt;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00268"/>00268 &#32;&#32;&#32;&#32;x&#32;=&#32;0,&#32;y&#32;=&#32;0,&#32;cpt&#32;=&#32;0;&#32;&#32;<emphasis role="comment">//On&#32;reféfinit&#32;nos&#32;valeurs&#32;x&#32;et&#32;y&#32;pour&#32;placer&#32;les&#32;items(pour&#32;l&apos;instant,&#32;un&#32;seul&#32;type)</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00269"/>00269 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00270"/>00270 &#32;&#32;&#32;&#32;nbr_item&#32;=&#32;(((Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;*&#32;Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>)&#32;/&#32;(Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;+&#32;Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>))&#32;*&#32;1.5)&#32;;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00271"/>00271 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00272"/>00272 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(nbr_item&#32;%&#32;2&#32;==&#32;0)&#32;<emphasis role="comment">//&#32;pour&#32;avoir&#32;un&#32;nbr&#32;impaire&#32;d&apos;item&#32;afin&#32;éviter&#32;égalité</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00273"/>00273 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;nbr_item&#32;+=&#32;1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00274"/>00274 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00275"/>00275 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{<emphasis role="comment">//&#32;Les&#32;clopes</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00276"/>00276 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;x&#32;=&#32;rand()%(Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>-3)+1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00277"/>00277 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;y&#32;=&#32;rand()%(Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>-3)+1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00278"/>00278 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00279"/>00279 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Mat[x][y]&#32;!=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;&amp;&amp;&#32;Mat[x][y]&#32;!=&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>&#32;&amp;&amp;&#32;Mat[x][y]&#32;!=&#32;<emphasis role="charliteral">&apos;C&apos;</emphasis>)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00280"/>00280 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00281"/>00281 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cpt&#32;+=&#32;1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00282"/>00282 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[x][y]&#32;=&#32;<emphasis role="charliteral">&apos;C&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00283"/>00283 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00284"/>00284 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00285"/>00285 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(cpt&#32;&lt;&#32;nbr_item/2);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00286"/>00286 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00287"/>00287 &#32;&#32;&#32;&#32;cpt&#32;=&#32;0;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00288"/>00288 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{<emphasis role="comment">//&#32;Les&#32;tacos&#32;(kebab)</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00289"/>00289 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;x&#32;=&#32;rand()%(Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>-3)+1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00290"/>00290 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;y&#32;=&#32;rand()%(Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>-3)+1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00291"/>00291 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00292"/>00292 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(Mat[x][y]&#32;!=&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;&amp;&amp;&#32;Mat[x][y]&#32;!=&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>&#32;&amp;&amp;&#32;Mat[x][y]&#32;!=&#32;<emphasis role="charliteral">&apos;C&apos;</emphasis>&#32;&#32;&amp;&amp;&#32;Mat[x][y]&#32;!=&#32;<emphasis role="charliteral">&apos;K&apos;</emphasis>)
+<anchor xml:id="_gridmanagement_8cpp_source_1l00293"/>00293 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00294"/>00294 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cpt&#32;+=&#32;1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00295"/>00295 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[x][y]&#32;=&#32;<emphasis role="charliteral">&apos;K&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00296"/>00296 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00297"/>00297 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00298"/>00298 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(cpt&#32;&lt;&#32;nbr_item/2);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00299"/>00299 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00300"/>00300 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;La&#32;statue&#32;(unique&#32;et&#32;pour&#32;rester&#32;fairplay,&#32;dans&#32;un&#32;rayon&#32;de&#32;3&#32;du&#32;milleu&#32;de&#32;la&#32;matrice)</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00301"/>00301 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;centerX&#32;=&#32;Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;/&#32;2;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00302"/>00302 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;centerY&#32;=&#32;Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;/&#32;2;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00303"/>00303 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00304"/>00304 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;minX&#32;=&#32;centerX&#32;-&#32;3;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00305"/>00305 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;maxX&#32;=&#32;centerX&#32;+&#32;3;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00306"/>00306 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;minY&#32;=&#32;centerY&#32;-&#32;3;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00307"/>00307 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;maxY&#32;=&#32;centerY&#32;+&#32;3;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00308"/>00308 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00309"/>00309 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00310"/>00310 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;x&#32;=&#32;rand()&#32;%&#32;(maxX&#32;-&#32;minX)&#32;+&#32;minX;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00311"/>00311 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;y&#32;=&#32;rand()&#32;%&#32;(maxY&#32;-&#32;minY)&#32;+&#32;minY;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00312"/>00312 &#32;&#32;&#32;&#32;}&#32;<emphasis role="keywordflow">while</emphasis>&#32;(Mat[x][y]&#32;==&#32;<emphasis role="charliteral">&apos;M&apos;</emphasis>&#32;||&#32;Mat[x][y]&#32;==&#32;<emphasis role="charliteral">&apos;T&apos;</emphasis>&#32;||&#32;Mat[x][y]&#32;==&#32;<emphasis role="charliteral">&apos;C&apos;</emphasis>&#32;||&#32;Mat[x][y]&#32;==&#32;<emphasis role="charliteral">&apos;K&apos;</emphasis>);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00313"/>00313 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00314"/>00314 &#32;&#32;&#32;&#32;<emphasis role="comment">//Placer&#32;la&#32;statue</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00315"/>00315 &#32;&#32;&#32;&#32;Mat[x][y]&#32;=&#32;<emphasis role="charliteral">&apos;S&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00316"/>00316 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00317"/>00317 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00318"/>00318 &#32;&#32;&#32;&#32;PosPlayer1.first&#32;=&#32;0;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00319"/>00319 &#32;&#32;&#32;&#32;PosPlayer1.second&#32;=&#32;NbColumn&#32;-&#32;1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00320"/>00320 &#32;&#32;&#32;&#32;Mat&#32;[PosPlayer1.first][PosPlayer1.second]&#32;=&#32;Param.<link linkend="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6">tokenP1</link>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00321"/>00321 &#32;&#32;&#32;&#32;PosPlayer2.first&#32;=&#32;NbLine&#32;-&#32;1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00322"/>00322 &#32;&#32;&#32;&#32;PosPlayer2.second&#32;=0;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00323"/>00323 &#32;&#32;&#32;&#32;Mat&#32;[PosPlayer2.first][PosPlayer2.second]&#32;=&#32;Param.<link linkend="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6">tokenP2</link>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00324"/>00324 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00325"/>00325 &#32;&#32;&#32;&#32;<emphasis role="comment">//Init&#32;Monster</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00326"/>00326 &#32;&#32;&#32;&#32;PosMonster.resize((Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>&#32;+&#32;Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>-1)/20);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00327"/>00327 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00328"/>00328 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">unsigned</emphasis>&#32;i&#32;=&#32;0;&#32;i&#32;&lt;&#32;PosMonster.size();&#32;++i){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00329"/>00329 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00330"/>00330 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//placer&#32;les&#32;montres&#32;plutot&#32;au&#32;centre</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00331"/>00331 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PosMonster[i]&#32;=&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>((rand()%Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>/2)+Param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>/4,&#32;(rand()%Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>/2)+Param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>/4);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00332"/>00332 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">while</emphasis>(Mat[PosMonster[i].first][PosMonster[i].second]&#32;!=&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00333"/>00333 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00334"/>00334 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[PosMonster[i].first][PosMonster[i].second]&#32;=&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00335"/>00335 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00336"/>00336 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00337"/>00337 }<emphasis role="comment">//InitMat&#32;()</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00338"/>00338 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00339"/>00339 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00340"/>00340 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00341"/>00341 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_gridmanagement_8h_1ab909b1026fe66b4055c0be20cd67582f">MoveMonster</link>(vector&lt;CPosition&gt;&#32;&amp;&#32;VPosMonster,&#32;<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link>&#32;&amp;&#32;&#32;Mat,<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;param,<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;PosPlayer1,<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;PosPlayer2){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00342"/>00342 &#32;&#32;&#32;&#32;vector&#32;&lt;CPosition&gt;&#32;VPosPlayer&#32;=&#32;{PosPlayer1,&#32;PosPlayer2};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00343"/>00343 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;PosMonster&#32;:&#32;VPosMonster)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00344"/>00344 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vector&lt;&#32;vector&#32;&lt;Node&gt;&gt;&#32;MapNode(Mat.size(),&#32;vector&lt;Node&gt;(Mat[0].size()));
+<anchor xml:id="_gridmanagement_8cpp_source_1l00345"/>00345 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;finish;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00346"/>00346 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00347"/>00347 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00348"/>00348 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00349"/>00349 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00350"/>00350 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;trouver&#32;le&#32;joueur&#32;le&#32;plus&#32;proche</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00351"/>00351 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;posplay&#32;=&#32;VPosPlayer[0];
+<anchor xml:id="_gridmanagement_8cpp_source_1l00352"/>00352 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;minDistance&#32;=&#32;abs(<emphasis role="keywordtype">int</emphasis>(PosMonster.first&#32;-&#32;VPosPlayer[0].first))&#32;+&#32;abs(<emphasis role="keywordtype">int</emphasis>(PosMonster.second&#32;-&#32;VPosPlayer[0].second));
+<anchor xml:id="_gridmanagement_8cpp_source_1l00353"/>00353 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00354"/>00354 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;&amp;&#32;test&#32;:&#32;VPosPlayer)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00355"/>00355 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;distance&#32;=&#32;abs(<emphasis role="keywordtype">int</emphasis>(PosMonster.first&#32;-&#32;test.first))&#32;+&#32;abs(<emphasis role="keywordtype">int</emphasis>(PosMonster.second&#32;-&#32;test.second));
+<anchor xml:id="_gridmanagement_8cpp_source_1l00356"/>00356 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(distance&#32;&lt;&#32;minDistance)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00357"/>00357 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;minDistance&#32;=&#32;distance;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00358"/>00358 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;posplay&#32;=&#32;test;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00359"/>00359 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00360"/>00360 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00361"/>00361 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00362"/>00362 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//regarder&#32;si&#32;le&#32;jouer&#32;est&#32;pres&#32;du&#32;montre&#32;et&#32;s&apos;il&#32;n&apos;est&#32;dans&#32;une&#32;safe&#32;zone</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00363"/>00363 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//pour&#32;activer&#32;le&#32;pathfinding&#32;et&#32;suivre&#32;le&#32;bot</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00364"/>00364 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(<emphasis role="keywordtype">size_t</emphasis>(minDistance)&#32;&lt;&#32;(param.<link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link>&#32;+&#32;param.<link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link>)&#32;/&#32;3&#32;&amp;&amp;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00365"/>00365 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;posplay.second&#32;&gt;&#32;2&#32;&amp;&amp;&#32;posplay.first&#32;&gt;&#32;2&#32;&amp;&amp;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00366"/>00366 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat.size()&#32;-&#32;posplay.first&#32;&gt;&#32;2&#32;&amp;&amp;&#32;Mat[0].size()&#32;-&#32;posplay.second&#32;&gt;&#32;2){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00367"/>00367 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00368"/>00368 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//l&apos;Algo&#32;A*</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00369"/>00369 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;finish&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00370"/>00370 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vector&#32;&lt;Node&gt;&#32;PosOpen&#32;=&#32;{<link linkend="_struct_node">Node</link>&#32;{posplay,&#32;0,&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>(-1,-1)}};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00371"/>00371 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;vector&#32;&lt;Node&gt;&#32;PosClose&#32;=&#32;{};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00372"/>00372 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;finish&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00373"/>00373 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_node">Node</link>&#32;CurrentNode;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00374"/>00374 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(not&#32;finish)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00375"/>00375 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00376"/>00376 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(PosOpen.empty())&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00377"/>00377 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;cout&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;PosOpen&#32;is&#32;empty.&#32;Exiting...&quot;</emphasis>&#32;&lt;&lt;&#32;endl;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00378"/>00378 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00379"/>00379 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00380"/>00380 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00381"/>00381 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00382"/>00382 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;indice&#32;=&#32;0&#32;;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00383"/>00383 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00384"/>00384 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keywordtype">size_t</emphasis>&#32;i&#32;=&#32;1;&#32;i&#32;&lt;&#32;PosOpen.size();&#32;++i){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00385"/>00385 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(PosOpen[i].f_cost&#32;&lt;&#32;PosOpen[indice].f_cost)&#32;indice&#32;=&#32;i;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00386"/>00386 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00387"/>00387 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;CurrentNode&#32;=&#32;PosOpen[indice];
+<anchor xml:id="_gridmanagement_8cpp_source_1l00388"/>00388 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PosOpen.erase&#32;(PosOpen.begin()&#32;+&#32;indice);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00389"/>00389 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PosClose.push_back(CurrentNode);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00390"/>00390 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;MapNode[CurrentNode.Pos.first][CurrentNode.Pos.second]&#32;=&#32;CurrentNode;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00391"/>00391 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00392"/>00392 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(CurrentNode.Pos&#32;==&#32;PosMonster){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00393"/>00393 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;finish&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00394"/>00394 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00395"/>00395 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00396"/>00396 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00397"/>00397 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//regarder&#32;les&#32;voisins</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00398"/>00398 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;&#32;i&#32;:&#32;{-1,0,1}){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00399"/>00399 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;&#32;j&#32;:&#32;{-1,0,1})&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00400"/>00400 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;voisin_i&#32;=&#32;CurrentNode.Pos.first&#32;+&#32;i;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00401"/>00401 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;voisin_j&#32;=&#32;CurrentNode.Pos.second&#32;+&#32;j;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00402"/>00402 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;cout&#32;&lt;&lt;&#32;voisin_i&#32;&lt;&lt;&#32;&quot;&#32;&quot;&#32;&lt;&lt;&#32;voisin_j&#32;&lt;&lt;&#32;endl;</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00403"/>00403 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(((i&#32;==&#32;0&#32;&amp;&amp;&#32;j&#32;==&#32;0)&#32;||&#32;(i&#32;!=&#32;0&#32;&amp;&amp;&#32;j&#32;!=&#32;0))&#32;&amp;&amp;&#32;voisin_i&#32;==&#32;0&#32;&amp;&amp;&#32;voisin_j&#32;==&#32;0)&#32;<emphasis role="keywordflow">continue</emphasis>;&#32;<emphasis role="comment">//éviter&#32;de&#32;reprendre&#32;lui&#32;même</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00404"/>00404 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00405"/>00405 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//regarder&#32;si&#32;le&#32;voisin&#32;est&#32;la&#32;liste&#32;fermé</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00406"/>00406 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;inClose&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00407"/>00407 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_struct_node">Node</link>&#32;&amp;&#32;node_test&#32;:&#32;PosClose)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00408"/>00408 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(node_test.Pos.first&#32;==&#32;<emphasis role="keywordtype">unsigned</emphasis>(voisin_i)&#32;&amp;&amp;&#32;node_test.Pos.second&#32;==&#32;<emphasis role="keywordtype">unsigned</emphasis>(voisin_j))&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00409"/>00409 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;inClose&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00410"/>00410 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00411"/>00411 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00412"/>00412 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00413"/>00413 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00414"/>00414 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//regarder&#32;si&#32;le&#32;voisin&#32;n&apos;est&#32;pas&#32;un&#32;mur</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00415"/>00415 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(voisin_i&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;voisin_j&#32;&gt;=&#32;0&#32;&amp;&amp;&#32;<emphasis role="keywordtype">size_t</emphasis>(voisin_i)&#32;&lt;&#32;Mat.size()&#32;&amp;&amp;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00416"/>00416 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>(voisin_j)&#32;&lt;&#32;Mat[voisin_i].size()&#32;&amp;&amp;&#32;(Mat[voisin_i][voisin_j]&#32;==&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>&#32;||&#32;Mat[voisin_i][voisin_j]&#32;==&#32;param.<link linkend="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6">tokenP2</link>&#32;||Mat[voisin_i][voisin_j]&#32;==&#32;param.<link linkend="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6">tokenP1</link>&#32;||&#32;Mat[voisin_i][voisin_j]&#32;==&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>)&#32;&amp;&amp;&#32;not&#32;inClose){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00417"/>00417 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00418"/>00418 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_struct_node">Node</link>&#32;NodeVoisin&#32;=&#32;{<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>(voisin_i,&#32;voisin_j),&#32;CurrentNode.f_cost&#32;+&#32;1,&#32;CurrentNode.Pos};
+<anchor xml:id="_gridmanagement_8cpp_source_1l00419"/>00419 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00420"/>00420 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00421"/>00421 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;inOpen&#32;=&#32;<emphasis role="keyword">false</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00422"/>00422 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>&#32;(<link linkend="_struct_node">Node</link>&#32;&amp;&#32;node_test&#32;:&#32;PosOpen)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00423"/>00423 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(node_test.Pos&#32;==&#32;NodeVoisin.Pos)&#32;{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00424"/>00424 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;inOpen&#32;=&#32;<emphasis role="keyword">true</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00425"/>00425 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(node_test.f_cost&#32;&gt;&#32;NodeVoisin.f_cost){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00426"/>00426 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node_test.f_cost&#32;=&#32;NodeVoisin.f_cost;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00427"/>00427 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;node_test.Parent&#32;=&#32;CurrentNode.Pos;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00428"/>00428 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00429"/>00429 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00430"/>00430 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00431"/>00431 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00432"/>00432 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00433"/>00433 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>(not&#32;inOpen){
+<anchor xml:id="_gridmanagement_8cpp_source_1l00434"/>00434 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PosOpen.push_back(NodeVoisin);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00435"/>00435 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00436"/>00436 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00437"/>00437 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00438"/>00438 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00439"/>00439 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00440"/>00440 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00441"/>00441 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00442"/>00442 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//deplacer&#32;le&#32;monstre</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00443"/>00443 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[PosMonster.first][PosMonster.second]&#32;=&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00444"/>00444 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[&#32;MapNode[PosMonster.first][PosMonster.second].Parent.first][MapNode[PosMonster.first][PosMonster.second].Parent.second]&#32;=&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00445"/>00445 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PosMonster&#32;=&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>(MapNode[PosMonster.first][PosMonster.second].Parent.first,MapNode[PosMonster.first][PosMonster.second].Parent.second);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00446"/>00446 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00447"/>00447 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">else</emphasis>{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00448"/>00448 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//deplacer&#32;le&#32;monstre&#32;aléatoirement</emphasis>
+<anchor xml:id="_gridmanagement_8cpp_source_1l00449"/>00449 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[PosMonster.first][PosMonster.second]&#32;=&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00450"/>00450 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;i&#32;;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00451"/>00451 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;j;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00452"/>00452 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">do</emphasis>{
+<anchor xml:id="_gridmanagement_8cpp_source_1l00453"/>00453 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;i&#32;=&#32;rand()%3&#32;-&#32;1;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00454"/>00454 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;j&#32;=&#32;rand()%3&#32;-&#32;1&#32;;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00455"/>00455 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00456"/>00456 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}<emphasis role="keywordflow">while</emphasis>(not(PosMonster.first+i&#32;&gt;&#32;0&#32;&amp;&amp;&#32;PosMonster.second+j&#32;&gt;&#32;0&#32;&amp;&amp;&#32;<emphasis role="keywordtype">size_t</emphasis>(PosMonster.first+i)&#32;&lt;&#32;Mat.size()&#32;&amp;&amp;&#32;<emphasis role="keywordtype">size_t</emphasis>(PosMonster.second+j)&#32;&lt;&#32;Mat[PosMonster.first+i].size()&#32;&amp;&amp;&#32;(Mat[PosMonster.first+i][PosMonster.second+j]&#32;==&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>)));
+<anchor xml:id="_gridmanagement_8cpp_source_1l00457"/>00457 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00458"/>00458 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;Mat[PosMonster.first+i][PosMonster.second+j]&#32;=&#32;<emphasis role="charliteral">&apos;A&apos;</emphasis>;
+<anchor xml:id="_gridmanagement_8cpp_source_1l00459"/>00459 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;PosMonster&#32;=&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>(PosMonster.first+i,PosMonster.second+j);
+<anchor xml:id="_gridmanagement_8cpp_source_1l00460"/>00460 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00461"/>00461 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00462"/>00462 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00463"/>00463 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_gridmanagement_8cpp_source_1l00464"/>00464 }
+<anchor xml:id="_gridmanagement_8cpp_source_1l00465"/>00465 
+<anchor xml:id="_gridmanagement_8cpp_source_1l00466"/>00466 
+</programlisting></section>

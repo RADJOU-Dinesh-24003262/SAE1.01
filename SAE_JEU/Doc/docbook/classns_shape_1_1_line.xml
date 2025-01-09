@@ -1,0 +1,532 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_shape_1_1_line" xml:lang="en-US">
+<title>nsShape::Line Class Reference</title>
+<indexterm><primary>nsShape::Line</primary></indexterm>
+<para>
+
+<para>Classe représentant une ligne. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;line.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsShape::Line:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_line__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for nsShape::Line:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_line__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58">TransitionIds</link> { 
+<link linkend="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a9f84f457c9a24574ae17018656830364">TRANSITION_FILL_COLOR_RGB</link>
+, <link linkend="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a2860b432942d04ad21cf17a11776b748">TRANSITION_FILL_COLOR_ALPHA</link>
+, <link linkend="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58ab4facc5aca748b4570273d0b13813dda">TRANSITION_BORDER_COLOR_RGB</link>
+, <link linkend="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58ad2f2a6854611b0b18a8d1805cfca13f1">TRANSITION_BORDER_COLOR_ALPHA</link>
+, 
+<link linkend="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58ade8f8b210eda14b4f6e940f8f72346f8">TRANSITION_FIRST_POSITION</link>
+, <link linkend="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a55cf135d3e37710549d41ae3faf0f80b">TRANSITION_SECOND_POSITION</link>
+, <link linkend="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a58ffbb046bb10ae9ed84a672d9daea03">TRANSITION_LINE_WIDTH</link>
+ }</para>
+
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_shape_1_1_line_1a7e565c06c16396c7dba0f9d9beedcd17">Line</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;secondPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const float &amp;lineWidth=1.f)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_line">Line</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_classns_shape_1_1_line_1a5e867a9bf0795b3a89cffb0c84e21b13"/>virtual <emphasis role="strong">~Line</emphasis> () override=default</para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_line">Line</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_line_1a593ce7771accbbe3bb0f0baf70ece47b">draw</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window) const override</para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_line_1ac529918f8d3d6801c320a24bb225e33a">getValues</link> (const int &amp;id, std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_shape_1_1_line_1a698db32364db6ad0c29d205940b02631">setValues</link> (const int &amp;id, const std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para><link linkend="_classns_shape_1_1_line">Line</link> <link linkend="_classns_shape_1_1_line_1adddeb7810639aa3eec2756846d40a430">operator+</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position) const</para>
+
+<para>Opérateur de décalage. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_shape_1_1_line">Line</link> <link linkend="_classns_shape_1_1_line_1a9686aab308107dff4799ec75a98d3aef">operator*</link> (const float &amp;f) const</para>
+
+<para>Opérateur de réduction. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; <link linkend="_classns_shape_1_1_line_1a5e99d542b7557f79f58623b098672fdc">getFirstPosition</link> () const</para>
+
+<para>Récupère la position du premier sommet de la ligne. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_line_1a62178d318a6b856e574149f58f9838f9">setFirstPosition</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;firstPosition)</para>
+
+<para>Définit la nouvelle position du premier sommet de la ligne. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; <link linkend="_classns_shape_1_1_line_1a3e239062daea5c0f247ccd9f454a45e8">getSecondPosition</link> () const</para>
+
+<para>Récupère la position du second sommet de la ligne. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_line_1ac8235be2b90d57497875a4265fc2bdc5">setSecondPosition</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;secondPosition)</para>
+
+<para>Définit la nouvelle position du second sommet de la ligne. </para>
+</listitem>
+            <listitem><para>float <link linkend="_classns_shape_1_1_line_1aab6e3cacd0062c1d5e2e55e9099a617a">getLineWidth</link> () const</para>
+
+<para>Récupère l&apos;épaisseur de la ligne. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_shape_1_1_line_1ab98591827289680e28b4b0904e6d95f2">setLineWidth</link> (float lineWidth)</para>
+
+<para>Définit la nouvelle épaisseur de la ligne. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Additional Inherited Members    </title>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe représentant une ligne. </para>
+<para>
+Definition at line <link linkend="_line_8h_source_1l00025">25</link> of file <link linkend="_line_8h_source">line.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58"/><section>
+    <title>TransitionIds</title>
+<indexterm><primary>TransitionIds</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>TransitionIds</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58">nsShape::Line::TransitionIds</link></computeroutput></para><para>
+
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>TRANSITION_FILL_COLOR_RGB</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>TRANSITION_FILL_COLOR_RGB</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a9f84f457c9a24574ae17018656830364"/>TRANSITION_FILL_COLOR_RGB</entry><entry>
+<para>Transition pour la couleur de remplissage </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_FILL_COLOR_ALPHA</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>TRANSITION_FILL_COLOR_ALPHA</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a2860b432942d04ad21cf17a11776b748"/>TRANSITION_FILL_COLOR_ALPHA</entry><entry>
+<para>Transition pour la transparence de remplissage </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_BORDER_COLOR_RGB</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>TRANSITION_BORDER_COLOR_RGB</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58ab4facc5aca748b4570273d0b13813dda"/>TRANSITION_BORDER_COLOR_RGB</entry><entry>
+<para>Transition pour la couleur de bord </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_BORDER_COLOR_ALPHA</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>TRANSITION_BORDER_COLOR_ALPHA</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58ad2f2a6854611b0b18a8d1805cfca13f1"/>TRANSITION_BORDER_COLOR_ALPHA</entry><entry>
+<para>Transition pour la transparence de bord </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_FIRST_POSITION</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>TRANSITION_FIRST_POSITION</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58ade8f8b210eda14b4f6e940f8f72346f8"/>TRANSITION_FIRST_POSITION</entry><entry>
+<para>Transition pour la position du premier sommet </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_SECOND_POSITION</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>TRANSITION_SECOND_POSITION</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a55cf135d3e37710549d41ae3faf0f80b"/>TRANSITION_SECOND_POSITION</entry><entry>
+<para>Transition pour la position du second sommet </para>
+</entry></row><row><entry><indexterm><primary>TRANSITION_LINE_WIDTH</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>TRANSITION_LINE_WIDTH</secondary></indexterm>
+<anchor xml:id="_classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a58ffbb046bb10ae9ed84a672d9daea03"/>TRANSITION_LINE_WIDTH</entry><entry>
+<para>Transition pour l&apos;épaisseur de la ligne </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_line_8h_source_1l00032">32</link> of file <link linkend="_line_8h_source">line.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_shape_1_1_line_1a7e565c06c16396c7dba0f9d9beedcd17"/><section>
+    <title>Line()</title>
+<indexterm><primary>Line</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>Line</secondary></indexterm>
+<para><computeroutput>nsShape::Line::Line (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; secondPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const float &amp; lineWidth = <computeroutput>1.f</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_shape_1_1_line">Line</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>firstPosition</entry><entry>
+<para>: Position du premier sommet </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>secondPosition</entry><entry>
+<para>: Position du second sommet </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>fillColor</entry><entry>
+<para>: Couleur de remplissage </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>lineWidth</entry><entry>
+<para>: Epaisseur de la ligne </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00016">16</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_shape_1_1_line_1a593ce7771accbbe3bb0f0baf70ece47b"/><section>
+    <title>draw()</title>
+<indexterm><primary>draw</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void nsShape::Line::draw (<link linkend="_class_min_g_l">MinGL</link> &amp; window) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</para>
+<para>
+Implements <link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">nsGraphics::IDrawable</link>.</para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00023">23</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_line_a593ce7771accbbe3bb0f0baf70ece47b_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1a5e99d542b7557f79f58623b098672fdc"/><section>
+    <title>getFirstPosition()</title>
+<indexterm><primary>getFirstPosition</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>getFirstPosition</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; nsShape::Line::getFirstPosition ( ) const</computeroutput></para><para>
+
+<para>Récupère la position du premier sommet de la ligne. </para>
+</para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00153">153</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1aab6e3cacd0062c1d5e2e55e9099a617a"/><section>
+    <title>getLineWidth()</title>
+<indexterm><primary>getLineWidth</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>getLineWidth</secondary></indexterm>
+<para><computeroutput>float nsShape::Line::getLineWidth ( ) const</computeroutput></para><para>
+
+<para>Récupère l&apos;épaisseur de la ligne. </para>
+</para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00143">143</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1a3e239062daea5c0f247ccd9f454a45e8"/><section>
+    <title>getSecondPosition()</title>
+<indexterm><primary>getSecondPosition</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>getSecondPosition</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; nsShape::Line::getSecondPosition ( ) const</computeroutput></para><para>
+
+<para>Récupère la position du second sommet de la ligne. </para>
+</para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00163">163</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1ac529918f8d3d6801c320a24bb225e33a"/><section>
+    <title>getValues()</title>
+<indexterm><primary>getValues</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>getValues</secondary></indexterm>
+<para><computeroutput>void nsShape::Line::getValues (const int &amp; id, std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a récupérer </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>values</entry><entry>
+<para>Vecteur de valeurs a peupler </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00041">41</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1a9686aab308107dff4799ec75a98d3aef"/><section>
+    <title>operator*()</title>
+<indexterm><primary>operator*</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>operator*</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_shape_1_1_line">Line</link> nsShape::Line::operator* (const float &amp; f) const</computeroutput></para><para>
+
+<para>Opérateur de réduction. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>f</entry><entry>
+<para>: Nombre avec lequel multiplier la position actuelle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00138">138</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1adddeb7810639aa3eec2756846d40a430"/><section>
+    <title>operator+()</title>
+<indexterm><primary>operator+</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_shape_1_1_line">Line</link> nsShape::Line::operator+ (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position) const</computeroutput></para><para>
+
+<para>Opérateur de décalage. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>position</entry><entry>
+<para>: Position a additionner </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00133">133</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1a62178d318a6b856e574149f58f9838f9"/><section>
+    <title>setFirstPosition()</title>
+<indexterm><primary>setFirstPosition</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>setFirstPosition</secondary></indexterm>
+<para><computeroutput>void nsShape::Line::setFirstPosition (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; firstPosition)</computeroutput></para><para>
+
+<para>Définit la nouvelle position du premier sommet de la ligne. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>firstPosition</entry><entry>
+<para>: Nouvelle position du premier sommet </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00158">158</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1ab98591827289680e28b4b0904e6d95f2"/><section>
+    <title>setLineWidth()</title>
+<indexterm><primary>setLineWidth</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>setLineWidth</secondary></indexterm>
+<para><computeroutput>void nsShape::Line::setLineWidth (float lineWidth)</computeroutput></para><para>
+
+<para>Définit la nouvelle épaisseur de la ligne. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>lineWidth</entry><entry>
+<para>: Nouvelle épaisseur </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00148">148</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1ac8235be2b90d57497875a4265fc2bdc5"/><section>
+    <title>setSecondPosition()</title>
+<indexterm><primary>setSecondPosition</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>setSecondPosition</secondary></indexterm>
+<para><computeroutput>void nsShape::Line::setSecondPosition (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; secondPosition)</computeroutput></para><para>
+
+<para>Définit la nouvelle position du second sommet de la ligne. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>secondPosition</entry><entry>
+<para>: Nouvelle position du second sommet </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00168">168</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1a698db32364db6ad0c29d205940b02631"/><section>
+    <title>setValues()</title>
+<indexterm><primary>setValues</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>setValues</secondary></indexterm>
+<para><computeroutput>void nsShape::Line::setValues (const int &amp; id, const std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a définir </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>values</entry><entry>
+<para>Vecteur des nouvelles valeurs a appliquer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_line_8cpp_source_1l00087">87</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_line_8h">line.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_line_8cpp">line.cpp</link></section>
+</section>

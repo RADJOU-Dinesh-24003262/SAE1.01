@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_08-_custom_drawable_2bgtext_8cpp_source" xml:lang="en-US">
+<title>bgtext.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&quot;bgtext.h&quot;</emphasis>
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00002"/>00002 
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00003"/>00003 BgText::BgText(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;content,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;textColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;backgroundColor)
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00004"/>00004 &#32;&#32;&#32;&#32;:&#32;m_text(position,&#32;content,&#32;textColor)
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00005"/>00005 &#32;&#32;&#32;&#32;,&#32;m_background(m_text.computeVisiblePosition(),&#32;m_text.computeVisibleEndPosition(),&#32;backgroundColor)
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00006"/>00006 {}&#32;<emphasis role="comment">//&#32;BgText()</emphasis>
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00007"/>00007 
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00008"/>00008 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_bg_text_1a01df624a8d498766a9eb579eb18f2326">BgText::draw</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00009"/>00009 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Affiche&#32;le&#32;fond&#32;puis&#32;le&#32;texte</emphasis>
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00011"/>00011 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;m_background&#32;&lt;&lt;&#32;m_text;
+<anchor xml:id="_08-_custom_drawable_2bgtext_8cpp_source_1l00012"/>00012 }&#32;<emphasis role="comment">//&#32;draw()</emphasis>
+</programlisting></section>

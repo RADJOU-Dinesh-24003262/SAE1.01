@@ -1,0 +1,606 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_class_min_g_l" xml:lang="en-US">
+<title>MinGL Class Reference</title>
+<indexterm><primary>MinGL</primary></indexterm>
+<para>
+
+<para>Classe de base de minGL 2. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;mingl.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>typedef std::pair&lt; unsigned, bool &gt; <link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link></para>
+
+<para>KeyType_t : Représente une touche du clavier. </para>
+</listitem>
+            <listitem><para>typedef std::map&lt; <link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>, bool &gt; <link linkend="_class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1">KeyMap_t</link></para>
+
+<para>KeyMap_t : Map représentant des touches et leurs état (pressée ou non). </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c">MinGL</link> (const std::string &amp;name, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;windowSize=<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(640, 480), const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;windowPosition=<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128, 128), const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;backgroundColor=nsGraphics::KWhite)</para>
+
+<para>Constructeur pour la classe <link linkend="_class_min_g_l">MinGL</link>. </para>
+</listitem>
+            <listitem><para><link linkend="_class_min_g_l_1a0f84e59dd311785a7e6da848abd5d188">~MinGL</link> ()</para>
+
+<para>Destructeur de la classe <link linkend="_class_min_g_l">MinGL</link>. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc">initGraphic</link> ()</para>
+
+<para>Initialise minGL et ouvre la fenêtre. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_min_g_l_1a9508f3ac9d4cb4f444f56f5d77ed9d86">stopGraphic</link> ()</para>
+
+<para>Ferme la fenêtre et minGL proprement. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f">isPressed</link> (const <link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link> &amp;key)</para>
+
+<para>Renvoie l&apos;état d&apos;une touche du clavier (pressée ou non) </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_min_g_l_1a99750fd4c8f97cfe693b1acb903424cf">resetKey</link> (const <link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link> &amp;key)</para>
+
+<para>Force une touche a être relâchée. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link> ()</para>
+
+<para>Préviens minGL que la frame est terminée. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_min_g_l_1a86c940758616957683ffb2e239bba774">clearScreen</link> ()</para>
+
+<para>Efface l&apos;écran avec la couleur de fond spécifiée. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_event_1_1_event_manager">nsEvent::EventManager</link> &amp; <link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link> ()</para>
+
+<para>Récupère le gestionnaire d&apos;évènements minGL. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; <link linkend="_class_min_g_l_1a66758e8e6983cc1dd0b10b1ee743a65a">getBackgroundColor</link> () const</para>
+
+<para>Récupère la couleur de fond de la fenêtre. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_min_g_l_1a4399b7615cea89f850cd5c66e428c367">setBackgroundColor</link> (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;backgroundColor)</para>
+
+<para>Règle la couleur de fond de la fenêtre. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> <link linkend="_class_min_g_l_1a92bacd1567089fb4641ed7b416cfe74d">getWindowSize</link> () const</para>
+
+<para>Récupère la taille de la fenêtre. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_min_g_l_1a532d320b7b837998533fe6577ab45bc3">setWindowSize</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;windowSize)</para>
+
+<para>Règle la taille de la fenêtre. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> <link linkend="_class_min_g_l_1a1ea6ea098988db36f5bf18713f9f3347">getWindowPosition</link> () const</para>
+
+<para>Récupère la position de la fenêtre. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_min_g_l_1a9239873a52e437457af03f002f5df2b6">setWindowPosition</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;windowPosition)</para>
+
+<para>Règle la position de la fenêtre. </para>
+</listitem>
+            <listitem><para>const std::string &amp; <link linkend="_class_min_g_l_1a46cea08ec9ef4a0678f425000ca77e5b">getWindowName</link> () const</para>
+
+<para>Récupère le nom de la fenêtre. </para>
+</listitem>
+            <listitem><para>void <link linkend="_class_min_g_l_1a462ab2edc0eb28990638541873869e0e">setWindowName</link> (const std::string &amp;windowName)</para>
+
+<para>Règle le nom de la fenêtre. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d">isOpen</link> () const</para>
+
+<para>Retourne si la fenêtre est ouverte. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>static void <link linkend="_class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d">initGlut</link> ()</para>
+
+<para>Initialise la bibliothèque freeglut. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe de base de minGL 2. </para>
+<para>
+Definition at line <link linkend="_mingl_8h_source_1l00034">34</link> of file <link linkend="_mingl_8h_source">mingl.h</link>.</para>
+</section>
+<section>
+<title>Member Typedef Documentation</title>
+<anchor xml:id="_class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1"/><section>
+    <title>KeyMap_t</title>
+<indexterm><primary>KeyMap_t</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>KeyMap_t</secondary></indexterm>
+<para><computeroutput>typedef std::map&lt;<link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>, bool&gt; <link linkend="_class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1">MinGL::KeyMap_t</link></computeroutput></para><para>
+
+<para>KeyMap_t : Map représentant des touches et leurs état (pressée ou non). </para>
+</para>
+
+<para>La clé de cette map est un <link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link> représentant une touche, et la valeur est son état. </para>
+<para>
+Definition at line <link linkend="_mingl_8h_source_1l00055">55</link> of file <link linkend="_mingl_8h_source">mingl.h</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96"/><section>
+    <title>KeyType_t</title>
+<indexterm><primary>KeyType_t</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>KeyType_t</secondary></indexterm>
+<para><computeroutput>typedef std::pair&lt;unsigned, bool&gt; <link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">MinGL::KeyType_t</link></computeroutput></para><para>
+
+<para>KeyType_t : Représente une touche du clavier. </para>
+</para>
+
+<para>C&apos;est une paire de nombre entier naturel et booléen 
+<literallayout>&#160;&#xa;</literallayout>
+ <itemizedlist>
+<listitem>
+
+<para>L&apos;entier naturel représente le caractère pour une touche non spéciale, ou l&apos;identifiant de touche pour une touche spéciale (<link xlink:href="https://www.opengl.org/resources/libraries/glut/spec3/node54.html">Voir ici</link> pour les identifiants).  </para>
+</listitem>
+<itemizedlist>
+<listitem>
+
+<para>Le booléen indique si la touche est spéciale ou non.</para>
+</listitem>
+</itemizedlist>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8h_source_1l00047">47</link> of file <link linkend="_mingl_8h_source">mingl.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c"/><section>
+    <title>MinGL()</title>
+<indexterm><primary>MinGL</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>MinGL</secondary></indexterm>
+<para><computeroutput>MinGL::MinGL (const std::string &amp; name, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; windowSize = <computeroutput><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(640, 480)</computeroutput>
+, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; windowPosition = <computeroutput><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128, 128)</computeroutput>
+, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; backgroundColor = <computeroutput>nsGraphics::KWhite</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_class_min_g_l">MinGL</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>name</entry><entry>
+<para>: Nom de la fenêtre </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>windowSize</entry><entry>
+<para>: Taille de la fenêtre </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>windowPosition</entry><entry>
+<para>: Position de la fenêtre </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>backgroundColor</entry><entry>
+<para>: Couleur de fond de la fenêtre </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00042">42</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_aecc35a286d1adbcbdc76bf26df18169c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a0f84e59dd311785a7e6da848abd5d188"/><section>
+    <title>~MinGL()</title>
+<indexterm><primary>~MinGL</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>~MinGL</secondary></indexterm>
+<para><computeroutput>MinGL::~MinGL ( )</computeroutput></para><para>
+
+<para>Destructeur de la classe <link linkend="_class_min_g_l">MinGL</link>. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00053">53</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a0f84e59dd311785a7e6da848abd5d188_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_class_min_g_l_1a86c940758616957683ffb2e239bba774"/><section>
+    <title>clearScreen()</title>
+<indexterm><primary>clearScreen</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>clearScreen</secondary></indexterm>
+<para><computeroutput>void MinGL::clearScreen ( )</computeroutput></para><para>
+
+<para>Efface l&apos;écran avec la couleur de fond spécifiée. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00068">68</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda"/><section>
+    <title>finishFrame()</title>
+<indexterm><primary>finishFrame</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>finishFrame</secondary></indexterm>
+<para><computeroutput>void MinGL::finishFrame ( )</computeroutput></para><para>
+
+<para>Préviens minGL que la frame est terminée. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00062">62</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a66758e8e6983cc1dd0b10b1ee743a65a"/><section>
+    <title>getBackgroundColor()</title>
+<indexterm><primary>getBackgroundColor</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>getBackgroundColor</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; MinGL::getBackgroundColor ( ) const</computeroutput></para><para>
+
+<para>Récupère la couleur de fond de la fenêtre. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00078">78</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1ab558253439905930836ab4910a7ae253"/><section>
+    <title>getEventManager()</title>
+<indexterm><primary>getEventManager</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>getEventManager</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_event_1_1_event_manager">nsEvent::EventManager</link> &amp; MinGL::getEventManager ( )</computeroutput></para><para>
+
+<para>Récupère le gestionnaire d&apos;évènements minGL. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00073">73</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a46cea08ec9ef4a0678f425000ca77e5b"/><section>
+    <title>getWindowName()</title>
+<indexterm><primary>getWindowName</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>getWindowName</secondary></indexterm>
+<para><computeroutput>const std::string &amp; MinGL::getWindowName ( ) const</computeroutput></para><para>
+
+<para>Récupère le nom de la fenêtre. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00247">247</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a1ea6ea098988db36f5bf18713f9f3347"/><section>
+    <title>getWindowPosition()</title>
+<indexterm><primary>getWindowPosition</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>getWindowPosition</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> MinGL::getWindowPosition ( ) const</computeroutput></para><para>
+
+<para>Récupère la position de la fenêtre. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00237">237</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a92bacd1567089fb4641ed7b416cfe74d"/><section>
+    <title>getWindowSize()</title>
+<indexterm><primary>getWindowSize</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>getWindowSize</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> MinGL::getWindowSize ( ) const</computeroutput></para><para>
+
+<para>Récupère la taille de la fenêtre. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00227">227</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d"/><section>
+    <title>initGlut()</title>
+<indexterm><primary>initGlut</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>initGlut</secondary></indexterm>
+<para><computeroutput>static void MinGL::initGlut ( )<computeroutput>[inline]</computeroutput>, <computeroutput>[static]</computeroutput></computeroutput></para><para>
+
+<para>Initialise la bibliothèque freeglut. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8h_source_1l00081">81</link> of file <link linkend="_mingl_8h_source">mingl.h</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a17c7718b9e966c8147cd56483dcf4e8d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc"/><section>
+    <title>initGraphic()</title>
+<indexterm><primary>initGraphic</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>initGraphic</secondary></indexterm>
+<para><computeroutput>void MinGL::initGraphic ( )</computeroutput></para><para>
+
+<para>Initialise minGL et ouvre la fenêtre. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00089">89</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a5962a0a0ced7879bc0cc65e267e8d7fc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d"/><section>
+    <title>isOpen()</title>
+<indexterm><primary>isOpen</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>isOpen</secondary></indexterm>
+<para><computeroutput>bool MinGL::isOpen ( ) const</computeroutput></para><para>
+
+<para>Retourne si la fenêtre est ouverte. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00258">258</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f"/><section>
+    <title>isPressed()</title>
+<indexterm><primary>isPressed</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>isPressed</secondary></indexterm>
+<para><computeroutput>bool MinGL::isPressed (const <link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link> &amp; key)</computeroutput></para><para>
+
+<para>Renvoie l&apos;état d&apos;une touche du clavier (pressée ou non) </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>key</entry><entry>
+<para>: Touche du clavier a vérifier </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00133">133</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a99750fd4c8f97cfe693b1acb903424cf"/><section>
+    <title>resetKey()</title>
+<indexterm><primary>resetKey</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>resetKey</secondary></indexterm>
+<para><computeroutput>void MinGL::resetKey (const <link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link> &amp; key)</computeroutput></para><para>
+
+<para>Force une touche a être relâchée. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>key</entry><entry>
+<para>: Touche du clavier a relâcher </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00138">138</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a4399b7615cea89f850cd5c66e428c367"/><section>
+    <title>setBackgroundColor()</title>
+<indexterm><primary>setBackgroundColor</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>setBackgroundColor</secondary></indexterm>
+<para><computeroutput>void MinGL::setBackgroundColor (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; backgroundColor)</computeroutput></para><para>
+
+<para>Règle la couleur de fond de la fenêtre. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00083">83</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a4399b7615cea89f850cd5c66e428c367_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a462ab2edc0eb28990638541873869e0e"/><section>
+    <title>setWindowName()</title>
+<indexterm><primary>setWindowName</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>setWindowName</secondary></indexterm>
+<para><computeroutput>void MinGL::setWindowName (const std::string &amp; windowName)</computeroutput></para><para>
+
+<para>Règle le nom de la fenêtre. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>windowName</entry><entry>
+<para>: Nouveau nom </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00252">252</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a9239873a52e437457af03f002f5df2b6"/><section>
+    <title>setWindowPosition()</title>
+<indexterm><primary>setWindowPosition</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>setWindowPosition</secondary></indexterm>
+<para><computeroutput>void MinGL::setWindowPosition (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; windowPosition)</computeroutput></para><para>
+
+<para>Règle la position de la fenêtre. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>windowPosition</entry><entry>
+<para>: Nouvelle position </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00242">242</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a9239873a52e437457af03f002f5df2b6_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a532d320b7b837998533fe6577ab45bc3"/><section>
+    <title>setWindowSize()</title>
+<indexterm><primary>setWindowSize</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>setWindowSize</secondary></indexterm>
+<para><computeroutput>void MinGL::setWindowSize (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; windowSize)</computeroutput></para><para>
+
+<para>Règle la taille de la fenêtre. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>windowSize</entry><entry>
+<para>: Nouvelle taille </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00232">232</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a532d320b7b837998533fe6577ab45bc3_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_class_min_g_l_1a9508f3ac9d4cb4f444f56f5d77ed9d86"/><section>
+    <title>stopGraphic()</title>
+<indexterm><primary>stopGraphic</primary><secondary>MinGL</secondary></indexterm>
+<indexterm><primary>MinGL</primary><secondary>stopGraphic</secondary></indexterm>
+<para><computeroutput>void MinGL::stopGraphic ( )</computeroutput></para><para>
+
+<para>Ferme la fenêtre et minGL proprement. </para>
+</para>
+<para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00127">127</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a9508f3ac9d4cb4f444f56f5d77ed9d86_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/<link linkend="_mingl_8h">mingl.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/<link linkend="_mingl_8cpp">mingl.cpp</link></section>
+</section>

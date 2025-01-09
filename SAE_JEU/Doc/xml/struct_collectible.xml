@@ -1,0 +1,90 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="struct_collectible" kind="struct" language="C++" prot="public">
+    <compoundname>Collectible</compoundname>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_collectible_1a0a00b0a796870738fe04dc543b71cce0" prot="public" static="no" mutable="no">
+        <type>std::string</type>
+        <definition>std::string Collectible::nom</definition>
+        <argsstring></argsstring>
+        <name>nom</name>
+        <qualifiedname>Collectible::nom</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="150" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="150" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_collectible_1abf1987ff63d140278258450bb62ba01a" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Collectible::id</definition>
+        <argsstring></argsstring>
+        <name>id</name>
+        <qualifiedname>Collectible::id</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="151" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="151" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_collectible_1acfc630ec9af3da2f12fcb09150cc047b" prot="public" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Collectible::point</definition>
+        <argsstring></argsstring>
+        <name>point</name>
+        <qualifiedname>Collectible::point</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="152" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="152" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_collectible_1a9ff30a5f026c7a7d57504312b32af548" prot="public" static="no" mutable="no">
+        <type>char</type>
+        <definition>char Collectible::token</definition>
+        <argsstring></argsstring>
+        <name>token</name>
+        <qualifiedname>Collectible::token</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="153" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="153" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_collectible_1a34fd332c39e0936e48eb5605df7cd6ea" prot="public" static="no" mutable="no">
+        <type>std::pair&lt; size_t, size_t &gt;</type>
+        <definition>std::pair&lt;size_t,size_t&gt; Collectible::pos</definition>
+        <argsstring></argsstring>
+        <name>pos</name>
+        <qualifiedname>Collectible::pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="154" column="15" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="154" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="148" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="149" bodyend="155"/>
+    <listofallmembers>
+      <member refid="struct_collectible_1abf1987ff63d140278258450bb62ba01a" prot="public" virt="non-virtual"><scope>Collectible</scope><name>id</name></member>
+      <member refid="struct_collectible_1a0a00b0a796870738fe04dc543b71cce0" prot="public" virt="non-virtual"><scope>Collectible</scope><name>nom</name></member>
+      <member refid="struct_collectible_1acfc630ec9af3da2f12fcb09150cc047b" prot="public" virt="non-virtual"><scope>Collectible</scope><name>point</name></member>
+      <member refid="struct_collectible_1a34fd332c39e0936e48eb5605df7cd6ea" prot="public" virt="non-virtual"><scope>Collectible</scope><name>pos</name></member>
+      <member refid="struct_collectible_1a9ff30a5f026c7a7d57504312b32af548" prot="public" virt="non-virtual"><scope>Collectible</scope><name>token</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

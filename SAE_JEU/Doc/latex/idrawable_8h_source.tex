@@ -1,0 +1,37 @@
+\hypertarget{idrawable_8h_source}{}\doxysection{idrawable.\+h}
+\label{idrawable_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/graphics/idrawable.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/graphics/idrawable.h}}
+\mbox{\hyperlink{idrawable_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef DRAWABLE\_H}}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00012}00012 \textcolor{preprocessor}{\#define DRAWABLE\_H}}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <memory>}}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00016}00016 \textcolor{keyword}{class }\mbox{\hyperlink{class_min_g_l}{MinGL}};}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00022}00022 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_graphics}{nsGraphics}}}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00023}00023 \{}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00029}\mbox{\hyperlink{classns_graphics_1_1_i_drawable}{00029}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_graphics_1_1_i_drawable}{IDrawable}}}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00030}00030 \{}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00031}00031 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00032}00032 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00037}\mbox{\hyperlink{classns_graphics_1_1_i_drawable_ab7a2ae7682163969bd4627e402ef0867}{00037}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classns_graphics_1_1_i_drawable_ab7a2ae7682163969bd4627e402ef0867}{\string~IDrawable}}() = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00043}\mbox{\hyperlink{classns_graphics_1_1_i_drawable_abed8a61e1d507d31e76f0891f3bf9c51}{00043}}     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_i_drawable_abed8a61e1d507d31e76f0891f3bf9c51}{draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window) \textcolor{keyword}{const} = 0;}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00051}\mbox{\hyperlink{classns_graphics_1_1_i_drawable_a9bb3952d4e675a663f2dbbda11e79395}{00051}}     \textcolor{keyword}{friend} \mbox{\hyperlink{class_min_g_l}{MinGL}}\& \mbox{\hyperlink{classns_graphics_1_1_i_drawable_a9bb3952d4e675a663f2dbbda11e79395}{operator<<}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_i_drawable}{IDrawable}}\& drawable)}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00052}00052     \{}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00053}00053         drawable.\mbox{\hyperlink{classns_graphics_1_1_i_drawable_abed8a61e1d507d31e76f0891f3bf9c51}{draw}}(window);}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00055}00055         \textcolor{keywordflow}{return} window;}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00056}00056     \}}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00058}00058 \}; \textcolor{comment}{// class IDrawable}}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00060}00060 \} \textcolor{comment}{// namespace nsGraphics}}
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{idrawable_8h_source_l00062}00062 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// DRAWABLE\_H}}
+
+\end{DoxyCode}

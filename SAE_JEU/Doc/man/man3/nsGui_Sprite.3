@@ -1,0 +1,231 @@
+.TH "nsGui::Sprite" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsGui::Sprite \- Permet de charger une image depuis un format créé pour l'occasion, le \&.si2\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <sprite\&.h>\fP
+.PP
+Inherits \fBnsGraphics::IDrawable\fP, and \fBnsTransition::ITransitionable\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTransitionIds\fP { \fBTRANSITION_POSITION\fP }"
+.br
+.RI "TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBSprite\fP (const std::string &filename, const \fBnsGraphics::Vec2D\fP &position=\fBnsGraphics::Vec2D\fP())"
+.br
+.RI "Constructeur pour la classe \fBSprite\fP, charge les données depuis un fichier\&. "
+.ti -1c
+.RI "\fBSprite\fP (const std::vector< \fBnsGraphics::RGBAcolor\fP > &pixelData, const uint32_t &\fBrowSize\fP, const \fBnsGraphics::Vec2D\fP &position=\fBnsGraphics::Vec2D\fP())"
+.br
+.RI "Constructeur pour la classe \fBSprite\fP, copie les données depuis un vecteur de pixels\&. "
+.ti -1c
+.RI "virtual void \fBdraw\fP (\fBMinGL\fP &window) const override"
+.br
+.RI "Fonction pour afficher l'objet\&. "
+.ti -1c
+.RI "virtual void \fBgetValues\fP (const int &id, std::vector< float > &values) override"
+.br
+.RI "Récupère des valeurs dans un vecteur de float pour l'ID spécifié "
+.ti -1c
+.RI "virtual void \fBsetValues\fP (const int &id, const std::vector< float > &values) override"
+.br
+.RI "Définit les nouvelles valeurs pour l'ID spécifié "
+.ti -1c
+.RI "const uint32_t & \fBgetRowSize\fP () const"
+.br
+.RI "Récupère le nombre de pixels par ligne\&. "
+.ti -1c
+.RI "const std::vector< \fBnsGraphics::RGBAcolor\fP > & \fBgetPixelData\fP () const"
+.br
+.RI "Récupère le vecteur contenant les pixels de l'image\&. "
+.ti -1c
+.RI "const \fBnsGraphics::Vec2D\fP & \fBgetPosition\fP () const"
+.br
+.RI "Récupère la position du sprite\&. "
+.ti -1c
+.RI "void \fBsetPosition\fP (const \fBnsGraphics::Vec2D\fP &position)"
+.br
+.RI "Définit la nouvelle position du sprite\&. "
+.ti -1c
+.RI "\fBnsGraphics::Vec2D\fP \fBcomputeSize\fP () const"
+.br
+.RI "Calcule la taille du sprite\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Permet de charger une image depuis un format créé pour l'occasion, le \&.si2\&. 
+.PP
+Definition at line \fB28\fP of file \fBsprite\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBnsGui::Sprite::TransitionIds\fP"
+
+.PP
+TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITRANSITION_POSITION \fP\fP
+Transition pour la position 
+.PP
+Definition at line \fB34\fP of file \fBsprite\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsGui::Sprite::Sprite (const std::string & filename, const \fBnsGraphics::Vec2D\fP & position = \fC\fBnsGraphics::Vec2D\fP()\fP)"
+
+.PP
+Constructeur pour la classe \fBSprite\fP, charge les données depuis un fichier\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfilename\fP : Chemin d'accès vers le fichier image 
+.br
+\fIposition\fP : Position du sprite 
+.RE
+.PP
+
+.PP
+Definition at line \fB20\fP of file \fBsprite\&.cpp\fP\&.
+.SS "nsGui::Sprite::Sprite (const std::vector< \fBnsGraphics::RGBAcolor\fP > & pixelData, const uint32_t & rowSize, const \fBnsGraphics::Vec2D\fP & position = \fC\fBnsGraphics::Vec2D\fP()\fP)"
+
+.PP
+Constructeur pour la classe \fBSprite\fP, copie les données depuis un vecteur de pixels\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIpixelData\fP : Vecteur contenant des données sur les pixels 
+.br
+\fIrowSize\fP : Nombre de pixels par ligne 
+.br
+\fIposition\fP : Position du sprite 
+.RE
+.PP
+
+.PP
+Definition at line \fB49\fP of file \fBsprite\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "Vec2D nsGui::Sprite::computeSize () const"
+
+.PP
+Calcule la taille du sprite\&. 
+.PP
+\fBReturns\fP
+.RS 4
+La taille calculée 
+.RE
+.PP
+
+.PP
+Definition at line \fB116\fP of file \fBsprite\&.cpp\fP\&.
+.SS "void nsGui::Sprite::draw (\fBMinGL\fP & window) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction pour afficher l'objet\&. 
+.PP
+Implements \fBnsGraphics::IDrawable\fP\&.
+.PP
+Definition at line \fB55\fP of file \fBsprite\&.cpp\fP\&.
+.SS "const std::vector< \fBnsGraphics::RGBAcolor\fP > & nsGui::Sprite::getPixelData () const"
+
+.PP
+Récupère le vecteur contenant les pixels de l'image\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence constante vers m_pixelData 
+.RE
+.PP
+
+.PP
+Definition at line \fB101\fP of file \fBsprite\&.cpp\fP\&.
+.SS "const \fBnsGraphics::Vec2D\fP & nsGui::Sprite::getPosition () const"
+
+.PP
+Récupère la position du sprite\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence const vers m_position 
+.RE
+.PP
+
+.PP
+Definition at line \fB106\fP of file \fBsprite\&.cpp\fP\&.
+.SS "const uint32_t & nsGui::Sprite::getRowSize () const"
+
+.PP
+Récupère le nombre de pixels par ligne\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence constante vers m_rowSize 
+.RE
+.PP
+
+.PP
+Definition at line \fB96\fP of file \fBsprite\&.cpp\fP\&.
+.SS "void nsGui::Sprite::getValues (const int & id, std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Récupère des valeurs dans un vecteur de float pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a récupérer 
+.br
+\fIvalues\fP Vecteur de valeurs a peupler 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB74\fP of file \fBsprite\&.cpp\fP\&.
+.SS "void nsGui::Sprite::setPosition (const \fBnsGraphics::Vec2D\fP & position)"
+
+.PP
+Définit la nouvelle position du sprite\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP : Nouvelle position 
+.RE
+.PP
+
+.PP
+Definition at line \fB111\fP of file \fBsprite\&.cpp\fP\&.
+.SS "void nsGui::Sprite::setValues (const int & id, const std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Définit les nouvelles valeurs pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a définir 
+.br
+\fIvalues\fP Vecteur des nouvelles valeurs a appliquer 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB85\fP of file \fBsprite\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

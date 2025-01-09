@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="namespacens_event" kind="namespace" language="C++">
+    <compoundname>nsEvent</compoundname>
+    <innerclass refid="structns_event_1_1_event__t" prot="public">nsEvent::Event_t</innerclass>
+    <innerclass refid="unionns_event_1_1_event_data__t" prot="public">nsEvent::EventData_t</innerclass>
+    <innerclass refid="classns_event_1_1_event_manager" prot="public">nsEvent::EventManager</innerclass>
+    <innerclass refid="structns_event_1_1_mouse_click_data__t" prot="public">nsEvent::MouseClickData_t</innerclass>
+    <innerclass refid="structns_event_1_1_mouse_move_data__t" prot="public">nsEvent::MouseMoveData_t</innerclass>
+      <sectiondef kind="enum">
+      <memberdef kind="enum" id="namespacens_event_1a6e501b1114a041d127a56f51c66ada72" prot="public" static="no" strong="no">
+        <type></type>
+        <name>EventType_t</name>
+        <qualifiedname>nsEvent::EventType_t</qualifiedname>
+        <enumvalue id="namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7" prot="public">
+          <name>MouseClick</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>L&apos;utilisateur a cliqué sur un des boutons de la souris </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6" prot="public">
+          <name>MouseMove</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Le curseur s&apos;est déplacé </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="namespacens_event_1a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317" prot="public">
+          <name>MouseDrag</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Le curseur s&apos;est déplacé pendant qu&apos;un des boutons de la souris était pressé </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+<para>EventType_t : Liste de tout les types d&apos;événements. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="23" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="23" bodyend="27"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Espace de nom pour la gestion d&apos;événements. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="15" column="1"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,88 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rgbacolor_8h_source" xml:lang="en-US">
+<title>rgbacolor.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_rgbacolor_8h_source_1l00001"/>00001 
+<anchor xml:id="_rgbacolor_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;RGBACOLOR_H</emphasis>
+<anchor xml:id="_rgbacolor_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;RGBACOLOR_H</emphasis>
+<anchor xml:id="_rgbacolor_8h_source_1l00013"/>00013 
+<anchor xml:id="_rgbacolor_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;GL/freeglut.h&gt;</emphasis>&#32;<emphasis role="comment">//&#32;GLubyte</emphasis>
+<anchor xml:id="_rgbacolor_8h_source_1l00015"/>00015 
+<anchor xml:id="_rgbacolor_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&quot;../tools/ieditable.h&quot;</emphasis>
+<anchor xml:id="_rgbacolor_8h_source_1l00017"/>00017 
+<anchor xml:id="_rgbacolor_8h_source_1l00018"/>00018 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_graphics">nsGraphics</link>
+<anchor xml:id="_rgbacolor_8h_source_1l00019"/>00019 {
+<anchor xml:id="_rgbacolor_8h_source_1l00020"/>00020 
+<anchor xml:id="_rgbacolor_8h_source_1l00025"/><link linkend="_classns_graphics_1_1_r_g_b_acolor">00025</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_util_1_1_i_editable">nsUtil::IEditable</link>
+<anchor xml:id="_rgbacolor_8h_source_1l00026"/>00026 {
+<anchor xml:id="_rgbacolor_8h_source_1l00027"/>00027 
+<anchor xml:id="_rgbacolor_8h_source_1l00028"/>00028 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_rgbacolor_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a6f91976b2d83414329608564615f27b1">RGBAcolor</link>(<emphasis role="keyword">const</emphasis>&#32;GLubyte&amp;&#32;red&#32;=&#32;0,&#32;<emphasis role="keyword">const</emphasis>&#32;GLubyte&amp;&#32;green&#32;=&#32;0,&#32;<emphasis role="keyword">const</emphasis>&#32;GLubyte&amp;&#32;blue&#32;=&#32;0,&#32;<emphasis role="keyword">const</emphasis>&#32;GLubyte&amp;&#32;alpha&#32;=&#32;255);
+<anchor xml:id="_rgbacolor_8h_source_1l00038"/>00038 
+<anchor xml:id="_rgbacolor_8h_source_1l00043"/><link linkend="_classns_graphics_1_1_r_g_b_acolor_1a229faf986de81a508c37103ca013ad70">00043</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a229faf986de81a508c37103ca013ad70">~RGBAcolor</link>()&#32;<emphasis role="keyword">override</emphasis>&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+<anchor xml:id="_rgbacolor_8h_source_1l00044"/>00044 
+<anchor xml:id="_rgbacolor_8h_source_1l00050"/>00050 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a685b4a48d19594bd29f136e1f74fee85">operator==</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>&amp;&#32;col)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_rgbacolor_8h_source_1l00051"/>00051 
+<anchor xml:id="_rgbacolor_8h_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a2cf7ff27443450c18368d521546f4e9e">operator!=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>&amp;&#32;col)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_rgbacolor_8h_source_1l00058"/>00058 
+<anchor xml:id="_rgbacolor_8h_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1abb3832c60bec568d1b357955e6be2300">operator+</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>&amp;&#32;rhs)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_rgbacolor_8h_source_1l00065"/>00065 
+<anchor xml:id="_rgbacolor_8h_source_1l00071"/>00071 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a1be35bff76dd3859cc714b87db0a1193">operator*</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&amp;&#32;rhs)&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_rgbacolor_8h_source_1l00072"/>00072 
+<anchor xml:id="_rgbacolor_8h_source_1l00078"/>00078 &#32;&#32;&#32;&#32;GLubyte&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79">getRed</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_rgbacolor_8h_source_1l00079"/>00079 
+<anchor xml:id="_rgbacolor_8h_source_1l00085"/>00085 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1ade94fb53d92392f80a316a2370c8991c">setRed</link>(<emphasis role="keyword">const</emphasis>&#32;GLubyte&amp;&#32;red);
+<anchor xml:id="_rgbacolor_8h_source_1l00086"/>00086 
+<anchor xml:id="_rgbacolor_8h_source_1l00092"/>00092 &#32;&#32;&#32;&#32;GLubyte&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_rgbacolor_8h_source_1l00093"/>00093 
+<anchor xml:id="_rgbacolor_8h_source_1l00099"/>00099 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a28674ba0fa5f7abc8afb4023c1d0cf25">setGreen</link>(<emphasis role="keyword">const</emphasis>&#32;GLubyte&amp;&#32;green);
+<anchor xml:id="_rgbacolor_8h_source_1l00100"/>00100 
+<anchor xml:id="_rgbacolor_8h_source_1l00106"/>00106 &#32;&#32;&#32;&#32;GLubyte&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129">getBlue</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_rgbacolor_8h_source_1l00107"/>00107 
+<anchor xml:id="_rgbacolor_8h_source_1l00113"/>00113 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1ac6f522de2f51788d98846034174fb16a">setBlue</link>(<emphasis role="keyword">const</emphasis>&#32;GLubyte&amp;&#32;blue);
+<anchor xml:id="_rgbacolor_8h_source_1l00114"/>00114 
+<anchor xml:id="_rgbacolor_8h_source_1l00120"/>00120 &#32;&#32;&#32;&#32;GLubyte&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e">getAlpha</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_rgbacolor_8h_source_1l00121"/>00121 
+<anchor xml:id="_rgbacolor_8h_source_1l00127"/>00127 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1aa478d3c5b8b56f590a12461fe2ab4bbf">setAlpha</link>(<emphasis role="keyword">const</emphasis>&#32;GLubyte&amp;&#32;alpha);
+<anchor xml:id="_rgbacolor_8h_source_1l00128"/>00128 
+<anchor xml:id="_rgbacolor_8h_source_1l00129"/>00129 <emphasis role="keyword">protected</emphasis>:
+<anchor xml:id="_rgbacolor_8h_source_1l00130"/>00130 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;std::ostream&amp;&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a09154c1fc9ba912860f2b4fac5432298">_Edit</link>(std::ostream&amp;&#32;os&#32;=&#32;std::cout)&#32;<emphasis role="keyword">const&#32;override</emphasis>;
+<anchor xml:id="_rgbacolor_8h_source_1l00131"/>00131 
+<anchor xml:id="_rgbacolor_8h_source_1l00132"/>00132 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_rgbacolor_8h_source_1l00136"/>00136 &#32;&#32;&#32;&#32;GLubyte&#32;m_red;
+<anchor xml:id="_rgbacolor_8h_source_1l00137"/>00137 
+<anchor xml:id="_rgbacolor_8h_source_1l00141"/>00141 &#32;&#32;&#32;&#32;GLubyte&#32;m_green;
+<anchor xml:id="_rgbacolor_8h_source_1l00142"/>00142 
+<anchor xml:id="_rgbacolor_8h_source_1l00146"/>00146 &#32;&#32;&#32;&#32;GLubyte&#32;m_blue;
+<anchor xml:id="_rgbacolor_8h_source_1l00147"/>00147 
+<anchor xml:id="_rgbacolor_8h_source_1l00151"/>00151 &#32;&#32;&#32;&#32;GLubyte&#32;m_alpha;
+<anchor xml:id="_rgbacolor_8h_source_1l00152"/>00152 
+<anchor xml:id="_rgbacolor_8h_source_1l00153"/>00153 };&#32;<emphasis role="comment">//&#32;class&#32;RGBAcolor</emphasis>
+<anchor xml:id="_rgbacolor_8h_source_1l00154"/>00154 
+<anchor xml:id="_rgbacolor_8h_source_1l00155"/>00155 <emphasis role="comment">//&#32;Quelques&#32;couleurs&#32;trouvées&#32;sur:</emphasis>
+<anchor xml:id="_rgbacolor_8h_source_1l00156"/>00156 <emphasis role="comment">//&#32;https://www.rapidtables.com/web/color/RGB_Color.html</emphasis>
+<anchor xml:id="_rgbacolor_8h_source_1l00157"/>00157 <emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>&#32;KBlack&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;0,&#32;&#32;&#32;0,&#32;&#32;&#32;0};
+<anchor xml:id="_rgbacolor_8h_source_1l00158"/>00158 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KWhite&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{255,&#32;255,&#32;255};
+<anchor xml:id="_rgbacolor_8h_source_1l00159"/>00159 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KRed&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{255,&#32;&#32;&#32;0,&#32;&#32;&#32;0};
+<anchor xml:id="_rgbacolor_8h_source_1l00160"/>00160 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KLime&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;0,&#32;255,&#32;&#32;&#32;0};
+<anchor xml:id="_rgbacolor_8h_source_1l00161"/>00161 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KBlue&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;0,&#32;&#32;&#32;0,&#32;255};
+<anchor xml:id="_rgbacolor_8h_source_1l00162"/>00162 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KYellow&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{255,&#32;255,&#32;&#32;&#32;0};
+<anchor xml:id="_rgbacolor_8h_source_1l00163"/>00163 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KCyan&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;0,&#32;255,&#32;255};
+<anchor xml:id="_rgbacolor_8h_source_1l00164"/>00164 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KMagenta&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{255,&#32;&#32;&#32;0,&#32;255};
+<anchor xml:id="_rgbacolor_8h_source_1l00165"/>00165 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KSilver&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{192,&#32;192,&#32;192};
+<anchor xml:id="_rgbacolor_8h_source_1l00166"/>00166 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KGray&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{128,&#32;128,&#32;128};
+<anchor xml:id="_rgbacolor_8h_source_1l00167"/>00167 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KDarkGray&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{200,&#32;200,&#32;200};
+<anchor xml:id="_rgbacolor_8h_source_1l00168"/>00168 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KMaroon&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{128,&#32;&#32;&#32;0,&#32;&#32;&#32;0};
+<anchor xml:id="_rgbacolor_8h_source_1l00169"/>00169 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KOlive&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{128,&#32;128,&#32;&#32;&#32;0};
+<anchor xml:id="_rgbacolor_8h_source_1l00170"/>00170 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KGreen&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;0,&#32;128,&#32;&#32;&#32;0};
+<anchor xml:id="_rgbacolor_8h_source_1l00171"/>00171 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KPurple&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{128,&#32;&#32;&#32;0,&#32;128};
+<anchor xml:id="_rgbacolor_8h_source_1l00172"/>00172 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KTeal&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;0,&#32;128,&#32;128};
+<anchor xml:id="_rgbacolor_8h_source_1l00173"/>00173 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KNavy&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{&#32;&#32;0,&#32;&#32;&#32;0,&#32;128};
+<anchor xml:id="_rgbacolor_8h_source_1l00174"/>00174 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KBeige&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;{231,&#32;211,&#32;171};
+<anchor xml:id="_rgbacolor_8h_source_1l00175"/>00175 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KTransparent&#32;&#32;&#32;&#32;&#32;{&#32;&#32;0,&#32;&#32;&#32;0,&#32;&#32;&#32;0,&#32;&#32;0};
+<anchor xml:id="_rgbacolor_8h_source_1l00176"/>00176 <emphasis role="keyword">const</emphasis>&#32;RGBAcolor&#32;KBlueTransparent&#32;{&#32;&#32;0,&#32;&#32;&#32;0,&#32;255,&#32;&#32;30};
+<anchor xml:id="_rgbacolor_8h_source_1l00177"/>00177 
+<anchor xml:id="_rgbacolor_8h_source_1l00178"/>00178 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsGraphics</emphasis>
+<anchor xml:id="_rgbacolor_8h_source_1l00179"/>00179 
+<anchor xml:id="_rgbacolor_8h_source_1l00180"/>00180 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;RGBACOLOR_H</emphasis>
+</programlisting></section>

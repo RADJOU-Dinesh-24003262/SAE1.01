@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source" xml:lang="en-US">
+<title>main.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered"><anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#define&#32;FPS_LIMIT&#32;60</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00002"/>00002 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;thread&gt;</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00005"/>00005 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00006"/>00006 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_mingl_8h">mingl/mingl.h</link>&quot;</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00007"/>00007 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00008"/>00008 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_rectangle_8h">mingl/shape/rectangle.h</link>&quot;</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00009"/>00009 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00010"/>00010 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00011"/>00011 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00012"/>00012 <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;rectPos;
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00013"/>00013 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00014"/>00014 <emphasis role="keywordtype">void</emphasis>&#32;clavier(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window)
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00015"/>00015 {
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;vérifie&#32;si&#32;ZQSD&#32;est&#32;pressé,&#32;et&#32;met&#32;a&#32;jour&#32;la&#32;position</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(window.<link linkend="_class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f">isPressed</link>({<emphasis role="stringliteral">&apos;z&apos;</emphasis>,&#32;false}))
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f">setY</link>(rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>()&#32;-&#32;1);
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(window.<link linkend="_class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f">isPressed</link>({<emphasis role="stringliteral">&apos;s&apos;</emphasis>,&#32;false}))
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f">setY</link>(rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>()&#32;+&#32;1);
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(window.<link linkend="_class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f">isPressed</link>({<emphasis role="stringliteral">&apos;q&apos;</emphasis>,&#32;false}))
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d">setX</link>(rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()&#32;-&#32;1);
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(window.<link linkend="_class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f">isPressed</link>({<emphasis role="stringliteral">&apos;d&apos;</emphasis>,&#32;false}))
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d">setX</link>(rectPos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()&#32;+&#32;1);
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00025"/>00025 }
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00026"/>00026 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00027"/>00027 <emphasis role="keywordtype">void</emphasis>&#32;dessiner(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window)
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00028"/>00028 {
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;dessine&#32;le&#32;rectangle</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(rectPos,&#32;rectPos&#32;+&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(20,&#32;20),&#32;nsGraphics::KCyan);
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00031"/>00031 }
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00032"/>00032 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00033"/>00033 <emphasis role="keywordtype">int</emphasis>&#32;main()
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00034"/>00034 {
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialise&#32;le&#32;système</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l">MinGL</link>&#32;window(<emphasis role="stringliteral">&quot;03&#32;-&#32;Clavier&quot;</emphasis>,&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(640,&#32;640),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128,&#32;128),&#32;nsGraphics::KBlack);
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d">initGlut</link>();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc">initGraphic</link>();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00039"/>00039 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Variable&#32;qui&#32;tient&#32;le&#32;temps&#32;de&#32;frame</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;chrono::microseconds&#32;frameTime&#32;=&#32;chrono::microseconds::zero();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00042"/>00042 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;fait&#32;tourner&#32;la&#32;boucle&#32;tant&#32;que&#32;la&#32;fenêtre&#32;est&#32;ouverte</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(window.<link linkend="_class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d">isOpen</link>())
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;{
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Récupère&#32;l&apos;heure&#32;actuelle</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;chrono::time_point&lt;chrono::steady_clock&gt;&#32;start&#32;=&#32;chrono::steady_clock::now();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00048"/>00048 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;efface&#32;la&#32;fenêtre</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a86c940758616957683ffb2e239bba774">clearScreen</link>();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00051"/>00051 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;fait&#32;tourner&#32;les&#32;procédures</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;clavier(window);
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;dessiner(window);
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00055"/>00055 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;finit&#32;la&#32;frame&#32;en&#32;cours</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link>();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00058"/>00058 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;vide&#32;la&#32;queue&#32;d&apos;évènements</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link>().<link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">clearEvents</link>();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00061"/>00061 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;attend&#32;un&#32;peu&#32;pour&#32;limiter&#32;le&#32;framerate&#32;et&#32;soulager&#32;le&#32;CPU</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this_thread::sleep_for(chrono::milliseconds(1000&#32;/&#32;FPS_LIMIT)&#32;-&#32;chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()&#32;-&#32;start));
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00064"/>00064 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;récupère&#32;le&#32;temps&#32;de&#32;frame</emphasis>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00066"/>00066 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;frameTime&#32;=&#32;chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()&#32;-&#32;start);
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;}
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00068"/>00068 
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;0;
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source_1l00070"/>00070 }
+</programlisting></section>

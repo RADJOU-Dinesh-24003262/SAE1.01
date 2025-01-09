@@ -1,0 +1,267 @@
+.TH "nsShape::Line" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsShape::Line \- Classe représentant une ligne\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <line\&.h>\fP
+.PP
+Inherits \fBnsShape::Shape\fP, and \fBnsTransition::ITransitionable\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTransitionIds\fP { \fBTRANSITION_FILL_COLOR_RGB\fP, \fBTRANSITION_FILL_COLOR_ALPHA\fP, \fBTRANSITION_BORDER_COLOR_RGB\fP, \fBTRANSITION_BORDER_COLOR_ALPHA\fP, \fBTRANSITION_FIRST_POSITION\fP, \fBTRANSITION_SECOND_POSITION\fP, \fBTRANSITION_LINE_WIDTH\fP }"
+.br
+.RI "TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBLine\fP (const \fBnsGraphics::Vec2D\fP &firstPosition, const \fBnsGraphics::Vec2D\fP &secondPosition, const \fBnsGraphics::RGBAcolor\fP &fillColor, const float &lineWidth=1\&.f)"
+.br
+.RI "Constructeur pour la classe \fBLine\fP\&. "
+.ti -1c
+.RI "virtual \fB~Line\fP () override=default"
+.br
+.RI "Destructeur virtuel pour la classe \fBLine\fP\&. "
+.ti -1c
+.RI "virtual void \fBdraw\fP (\fBMinGL\fP &window) const override"
+.br
+.RI "Fonction pour afficher l'objet\&. "
+.ti -1c
+.RI "virtual void \fBgetValues\fP (const int &id, std::vector< float > &values) override"
+.br
+.RI "Récupère des valeurs dans un vecteur de float pour l'ID spécifié "
+.ti -1c
+.RI "virtual void \fBsetValues\fP (const int &id, const std::vector< float > &values) override"
+.br
+.RI "Définit les nouvelles valeurs pour l'ID spécifié "
+.ti -1c
+.RI "\fBLine\fP \fBoperator+\fP (const \fBnsGraphics::Vec2D\fP &position) const"
+.br
+.RI "Opérateur de décalage\&. "
+.ti -1c
+.RI "\fBLine\fP \fBoperator*\fP (const float &f) const"
+.br
+.RI "Opérateur de réduction\&. "
+.ti -1c
+.RI "const \fBnsGraphics::Vec2D\fP & \fBgetFirstPosition\fP () const"
+.br
+.RI "Récupère la position du premier sommet de la ligne\&. "
+.ti -1c
+.RI "void \fBsetFirstPosition\fP (const \fBnsGraphics::Vec2D\fP &firstPosition)"
+.br
+.RI "Définit la nouvelle position du premier sommet de la ligne\&. "
+.ti -1c
+.RI "const \fBnsGraphics::Vec2D\fP & \fBgetSecondPosition\fP () const"
+.br
+.RI "Récupère la position du second sommet de la ligne\&. "
+.ti -1c
+.RI "void \fBsetSecondPosition\fP (const \fBnsGraphics::Vec2D\fP &secondPosition)"
+.br
+.RI "Définit la nouvelle position du second sommet de la ligne\&. "
+.ti -1c
+.RI "float \fBgetLineWidth\fP () const"
+.br
+.RI "Récupère l'épaisseur de la ligne\&. "
+.ti -1c
+.RI "void \fBsetLineWidth\fP (float lineWidth)"
+.br
+.RI "Définit la nouvelle épaisseur de la ligne\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Classe représentant une ligne\&. 
+.PP
+Definition at line \fB25\fP of file \fBline\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBnsShape::Line::TransitionIds\fP"
+
+.PP
+TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITRANSITION_FILL_COLOR_RGB \fP\fP
+Transition pour la couleur de remplissage 
+.TP
+\fB\fITRANSITION_FILL_COLOR_ALPHA \fP\fP
+Transition pour la transparence de remplissage 
+.TP
+\fB\fITRANSITION_BORDER_COLOR_RGB \fP\fP
+Transition pour la couleur de bord 
+.TP
+\fB\fITRANSITION_BORDER_COLOR_ALPHA \fP\fP
+Transition pour la transparence de bord 
+.TP
+\fB\fITRANSITION_FIRST_POSITION \fP\fP
+Transition pour la position du premier sommet 
+.TP
+\fB\fITRANSITION_SECOND_POSITION \fP\fP
+Transition pour la position du second sommet 
+.TP
+\fB\fITRANSITION_LINE_WIDTH \fP\fP
+Transition pour l'épaisseur de la ligne 
+.PP
+Definition at line \fB32\fP of file \fBline\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsShape::Line::Line (const \fBnsGraphics::Vec2D\fP & firstPosition, const \fBnsGraphics::Vec2D\fP & secondPosition, const \fBnsGraphics::RGBAcolor\fP & fillColor, const float & lineWidth = \fC1\&.f\fP)"
+
+.PP
+Constructeur pour la classe \fBLine\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirstPosition\fP : Position du premier sommet 
+.br
+\fIsecondPosition\fP : Position du second sommet 
+.br
+\fIfillColor\fP : Couleur de remplissage 
+.br
+\fIlineWidth\fP : Epaisseur de la ligne 
+.RE
+.PP
+
+.PP
+Definition at line \fB16\fP of file \fBline\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void nsShape::Line::draw (\fBMinGL\fP & window) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction pour afficher l'objet\&. 
+.PP
+Implements \fBnsGraphics::IDrawable\fP\&.
+.PP
+Definition at line \fB23\fP of file \fBline\&.cpp\fP\&.
+.SS "const \fBnsGraphics::Vec2D\fP & nsShape::Line::getFirstPosition () const"
+
+.PP
+Récupère la position du premier sommet de la ligne\&. 
+.PP
+Definition at line \fB153\fP of file \fBline\&.cpp\fP\&.
+.SS "float nsShape::Line::getLineWidth () const"
+
+.PP
+Récupère l'épaisseur de la ligne\&. 
+.PP
+Definition at line \fB143\fP of file \fBline\&.cpp\fP\&.
+.SS "const \fBnsGraphics::Vec2D\fP & nsShape::Line::getSecondPosition () const"
+
+.PP
+Récupère la position du second sommet de la ligne\&. 
+.PP
+Definition at line \fB163\fP of file \fBline\&.cpp\fP\&.
+.SS "void nsShape::Line::getValues (const int & id, std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Récupère des valeurs dans un vecteur de float pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a récupérer 
+.br
+\fIvalues\fP Vecteur de valeurs a peupler 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB41\fP of file \fBline\&.cpp\fP\&.
+.SS "\fBLine\fP nsShape::Line::operator* (const float & f) const"
+
+.PP
+Opérateur de réduction\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP : Nombre avec lequel multiplier la position actuelle 
+.RE
+.PP
+
+.PP
+Definition at line \fB138\fP of file \fBline\&.cpp\fP\&.
+.SS "\fBLine\fP nsShape::Line::operator+ (const \fBnsGraphics::Vec2D\fP & position) const"
+
+.PP
+Opérateur de décalage\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP : Position a additionner 
+.RE
+.PP
+
+.PP
+Definition at line \fB133\fP of file \fBline\&.cpp\fP\&.
+.SS "void nsShape::Line::setFirstPosition (const \fBnsGraphics::Vec2D\fP & firstPosition)"
+
+.PP
+Définit la nouvelle position du premier sommet de la ligne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirstPosition\fP : Nouvelle position du premier sommet 
+.RE
+.PP
+
+.PP
+Definition at line \fB158\fP of file \fBline\&.cpp\fP\&.
+.SS "void nsShape::Line::setLineWidth (float lineWidth)"
+
+.PP
+Définit la nouvelle épaisseur de la ligne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIlineWidth\fP : Nouvelle épaisseur 
+.RE
+.PP
+
+.PP
+Definition at line \fB148\fP of file \fBline\&.cpp\fP\&.
+.SS "void nsShape::Line::setSecondPosition (const \fBnsGraphics::Vec2D\fP & secondPosition)"
+
+.PP
+Définit la nouvelle position du second sommet de la ligne\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsecondPosition\fP : Nouvelle position du second sommet 
+.RE
+.PP
+
+.PP
+Definition at line \fB168\fP of file \fBline\&.cpp\fP\&.
+.SS "void nsShape::Line::setValues (const int & id, const std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Définit les nouvelles valeurs pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a définir 
+.br
+\fIvalues\fP Vecteur des nouvelles valeurs a appliquer 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB87\fP of file \fBline\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

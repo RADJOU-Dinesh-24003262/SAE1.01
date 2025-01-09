@@ -1,0 +1,582 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_graphics_1_1_r_g_b_acolor" xml:lang="en-US">
+<title>nsGraphics::RGBAcolor Class Reference</title>
+<indexterm><primary>nsGraphics::RGBAcolor</primary></indexterm>
+<para>
+
+<para>Classe représentant un couleur RGBA8888. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;rgbacolor.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsGraphics::RGBAcolor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_r_g_b_acolor__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for nsGraphics::RGBAcolor:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_r_g_b_acolor__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_graphics_1_1_r_g_b_acolor_1a6f91976b2d83414329608564615f27b1">RGBAcolor</link> (const GLubyte &amp;red=0, const GLubyte &amp;green=0, const GLubyte &amp;blue=0, const GLubyte &amp;alpha=255)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a229faf986de81a508c37103ca013ad70"/>virtual <emphasis role="strong">~RGBAcolor</emphasis> () override=default</para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a685b4a48d19594bd29f136e1f74fee85">operator==</link> (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> &amp;col) const</para>
+
+<para>Opérateur d&apos;égalité </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a2cf7ff27443450c18368d521546f4e9e">operator!=</link> (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> &amp;col) const</para>
+
+<para>Opérateur d&apos;inégalité </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_classns_graphics_1_1_r_g_b_acolor_1abb3832c60bec568d1b357955e6be2300">operator+</link> (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> &amp;rhs) const</para>
+
+<para>Opérateur de décalage. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a1be35bff76dd3859cc714b87db0a1193">operator*</link> (const float &amp;rhs) const</para>
+
+<para>Opérateur de réduction. </para>
+</listitem>
+            <listitem><para>GLubyte <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79">getRed</link> () const</para>
+
+<para>Récupère le taux de rouge. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_graphics_1_1_r_g_b_acolor_1ade94fb53d92392f80a316a2370c8991c">setRed</link> (const GLubyte &amp;red)</para>
+
+<para>Définit le nouveau taux de rouge. </para>
+</listitem>
+            <listitem><para>GLubyte <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</link> () const</para>
+
+<para>Récupère le taux de vert. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a28674ba0fa5f7abc8afb4023c1d0cf25">setGreen</link> (const GLubyte &amp;green)</para>
+
+<para>Définit le nouveau taux de vert. </para>
+</listitem>
+            <listitem><para>GLubyte <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129">getBlue</link> () const</para>
+
+<para>Récupère le taux de bleu. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_graphics_1_1_r_g_b_acolor_1ac6f522de2f51788d98846034174fb16a">setBlue</link> (const GLubyte &amp;blue)</para>
+
+<para>Définit le nouveau taux de bleu. </para>
+</listitem>
+            <listitem><para>GLubyte <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e">getAlpha</link> () const</para>
+
+<para>Récupère le taux de transparence. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_graphics_1_1_r_g_b_acolor_1aa478d3c5b8b56f590a12461fe2ab4bbf">setAlpha</link> (const GLubyte &amp;alpha)</para>
+
+<para>Définit le nouveau taux de transparence. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual std::ostream &amp; <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a09154c1fc9ba912860f2b4fac5432298">_Edit</link> (std::ostream &amp;os=std::cout) const override</para>
+
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe représentant un couleur RGBA8888. </para>
+<para>
+Definition at line <link linkend="_rgbacolor_8h_source_1l00025">25</link> of file <link linkend="_rgbacolor_8h_source">rgbacolor.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a6f91976b2d83414329608564615f27b1"/><section>
+    <title>RGBAcolor()</title>
+<indexterm><primary>RGBAcolor</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>RGBAcolor</secondary></indexterm>
+<para><computeroutput>nsGraphics::RGBAcolor::RGBAcolor (const GLubyte &amp; red = <computeroutput>0</computeroutput>
+, const GLubyte &amp; green = <computeroutput>0</computeroutput>
+, const GLubyte &amp; blue = <computeroutput>0</computeroutput>
+, const GLubyte &amp; alpha = <computeroutput>255</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>red</entry><entry>
+<para>: Taux de rouge (0-255) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>green</entry><entry>
+<para>: Taux de vert (0-255) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>blue</entry><entry>
+<para>: Taux de bleu (0-255) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>alpha</entry><entry>
+<para>: Taux de transparence (0-255) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00013">13</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a09154c1fc9ba912860f2b4fac5432298"/><section>
+    <title>_Edit()</title>
+<indexterm><primary>_Edit</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>_Edit</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; nsGraphics::RGBAcolor::_Edit (std::ostream &amp; os = <computeroutput>std::cout</computeroutput>
+) const<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>os</entry><entry>
+<para>: Flux dans lequel injecter </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853">nsUtil::IEditable</link>.</para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00040">40</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e"/><section>
+    <title>getAlpha()</title>
+<indexterm><primary>getAlpha</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>getAlpha</secondary></indexterm>
+<para><computeroutput>GLubyte nsGraphics::RGBAcolor::getAlpha ( ) const</computeroutput></para><para>
+
+<para>Récupère le taux de transparence. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence constante vers m_alpha </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00046">46</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129"/><section>
+    <title>getBlue()</title>
+<indexterm><primary>getBlue</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>getBlue</secondary></indexterm>
+<para><computeroutput>GLubyte nsGraphics::RGBAcolor::getBlue ( ) const</computeroutput></para><para>
+
+<para>Récupère le taux de bleu. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence constante vers m_blue </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00056">56</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4"/><section>
+    <title>getGreen()</title>
+<indexterm><primary>getGreen</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>getGreen</secondary></indexterm>
+<para><computeroutput>GLubyte nsGraphics::RGBAcolor::getGreen ( ) const</computeroutput></para><para>
+
+<para>Récupère le taux de vert. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence constante vers m_green </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00066">66</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79"/><section>
+    <title>getRed()</title>
+<indexterm><primary>getRed</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>getRed</secondary></indexterm>
+<para><computeroutput>GLubyte nsGraphics::RGBAcolor::getRed ( ) const</computeroutput></para><para>
+
+<para>Récupère le taux de rouge. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence constante vers m_red </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00076">76</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a2cf7ff27443450c18368d521546f4e9e"/><section>
+    <title>operator!=()</title>
+<indexterm><primary>operator!=</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>operator!=</secondary></indexterm>
+<para><computeroutput>bool nsGraphics::RGBAcolor::operator!= (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> &amp; col) const</computeroutput></para><para>
+
+<para>Opérateur d&apos;inégalité </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>col</entry><entry>
+<para>: Couleur a vérifier </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00025">25</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a1be35bff76dd3859cc714b87db0a1193"/><section>
+    <title>operator*()</title>
+<indexterm><primary>operator*</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>operator*</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::RGBAcolor::operator* (const float &amp; rhs) const</computeroutput></para><para>
+
+<para>Opérateur de réduction. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>rhs</entry><entry>
+<para>: Couleur avec laquelle multiplier la couleur actuelle </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00035">35</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1abb3832c60bec568d1b357955e6be2300"/><section>
+    <title>operator+()</title>
+<indexterm><primary>operator+</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>operator+</secondary></indexterm>
+<para><computeroutput><link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> nsGraphics::RGBAcolor::operator+ (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> &amp; rhs) const</computeroutput></para><para>
+
+<para>Opérateur de décalage. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>rhs</entry><entry>
+<para>: Couleur a additionner </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00030">30</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a685b4a48d19594bd29f136e1f74fee85"/><section>
+    <title>operator==()</title>
+<indexterm><primary>operator==</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>operator==</secondary></indexterm>
+<para><computeroutput>bool nsGraphics::RGBAcolor::operator== (const <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link> &amp; col) const</computeroutput></para><para>
+
+<para>Opérateur d&apos;égalité </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>col</entry><entry>
+<para>: Couleur a vérifier </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00020">20</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1aa478d3c5b8b56f590a12461fe2ab4bbf"/><section>
+    <title>setAlpha()</title>
+<indexterm><primary>setAlpha</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>setAlpha</secondary></indexterm>
+<para><computeroutput>void nsGraphics::RGBAcolor::setAlpha (const GLubyte &amp; alpha)</computeroutput></para><para>
+
+<para>Définit le nouveau taux de transparence. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>red</entry><entry>
+<para>: Nouveau taux de transparence </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00051">51</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1ac6f522de2f51788d98846034174fb16a"/><section>
+    <title>setBlue()</title>
+<indexterm><primary>setBlue</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>setBlue</secondary></indexterm>
+<para><computeroutput>void nsGraphics::RGBAcolor::setBlue (const GLubyte &amp; blue)</computeroutput></para><para>
+
+<para>Définit le nouveau taux de bleu. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>red</entry><entry>
+<para>: Nouveau taux de bleu </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00061">61</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a28674ba0fa5f7abc8afb4023c1d0cf25"/><section>
+    <title>setGreen()</title>
+<indexterm><primary>setGreen</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>setGreen</secondary></indexterm>
+<para><computeroutput>void nsGraphics::RGBAcolor::setGreen (const GLubyte &amp; green)</computeroutput></para><para>
+
+<para>Définit le nouveau taux de vert. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>red</entry><entry>
+<para>: Nouveau taux de vert </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00071">71</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1ade94fb53d92392f80a316a2370c8991c"/><section>
+    <title>setRed()</title>
+<indexterm><primary>setRed</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>setRed</secondary></indexterm>
+<para><computeroutput>void nsGraphics::RGBAcolor::setRed (const GLubyte &amp; red)</computeroutput></para><para>
+
+<para>Définit le nouveau taux de rouge. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>red</entry><entry>
+<para>: Nouveau taux de rouge </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_rgbacolor_8cpp_source_1l00081">81</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/<link linkend="_rgbacolor_8h">rgbacolor.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/<link linkend="_rgbacolor_8cpp">rgbacolor.cpp</link></section>
+</section>

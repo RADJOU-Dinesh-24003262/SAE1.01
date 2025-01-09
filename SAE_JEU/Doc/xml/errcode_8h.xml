@@ -1,0 +1,126 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="errcode_8h" kind="file" language="C++">
+    <compoundname>errcode.h</compoundname>
+    <includes local="no">map</includes>
+    <includes local="no">string</includes>
+    <includedby refid="cexception_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h</includedby>
+    <incdepgraph>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h</label>
+        <link refid="errcode_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+        <childnode refid="3" relation="include">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>map</label>
+      </node>
+      <node id="3">
+        <label>string</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="2">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h</label>
+        <link refid="cexception_8h"/>
+        <childnode refid="3" relation="include">
+        </childnode>
+        <childnode refid="4" relation="include">
+        </childnode>
+        <childnode refid="5" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp</label>
+        <link refid="cexception_8hpp"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h</label>
+        <link refid="errcode_8h"/>
+        <childnode refid="2" relation="include">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp</label>
+        <link refid="audioengine_8cpp"/>
+      </node>
+      <node id="5">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/cexception.cpp</label>
+        <link refid="cexception_8cpp"/>
+      </node>
+      <node id="6">
+        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp</label>
+        <link refid="sprite_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innernamespace refid="namespacens_exception">nsException</innernamespace>
+    <briefdescription>
+<para>Codes d&apos;erreurs. </para>
+    </briefdescription>
+    <detaileddescription>
+<para><simplesect kind="authors"><para>D. Mathieu</para>
+</simplesect>
+<simplesect kind="date"><para>28/08/2010</para>
+</simplesect>
+<simplesect kind="version"><para>V2.0</para>
+</simplesect>
+<simplesect kind="version"><para>V2.1</para>
+</simplesect>
+<simplesect kind="author"><para>Alexandre Sollier</para>
+</simplesect>
+Ajout de la documentation, renommage du fichier </para>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>CSTCODERR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>CSTCODERR_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight><highlight class="keyword">namespace<sp/></highlight><highlight class="normal"><ref refid="namespacens_exception" kindref="compound">nsException</ref></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"></highlight><highlight class="keyword">enum</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="31" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a0446a2a6f75ad46276a3c6bfbcf06eb3" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a0446a2a6f75ad46276a3c6bfbcf06eb3" kindref="member">KNoExc</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="32" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a024799617058782e76ecaf33dd2ffdbd" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a024799617058782e76ecaf33dd2ffdbd" kindref="member">KNoError</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>0,<sp/></highlight></codeline>
+<codeline lineno="34" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a46f2c8022474b53a5755bec5237fe459" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a46f2c8022474b53a5755bec5237fe459" kindref="member">kColorOutOfBounds</ref><sp/>=<sp/>100,<sp/></highlight></codeline>
+<codeline lineno="36" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999" kindref="member">KFileError</ref><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>252,<sp/></highlight></codeline>
+<codeline lineno="37" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376abf0d316d427bbd6c967347e91afd572f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376abf0d316d427bbd6c967347e91afd572f" kindref="member">KErrArg</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>253,<sp/></highlight></codeline>
+<codeline lineno="38" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a8146cc15721aba3bf04728fe064a59c4" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a8146cc15721aba3bf04728fe064a59c4" kindref="member">KExcStd</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>254,<sp/></highlight></codeline>
+<codeline lineno="39" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376acf3752166b5752ab5b203c5f536caf88" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376acf3752166b5752ab5b203c5f536caf88" kindref="member">kExcInconnue</ref><sp/><sp/><sp/><sp/>=<sp/>-1,<sp/></highlight></codeline>
+<codeline lineno="41" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a123e9c1829e779b75c070e9c8fdb188f" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a123e9c1829e779b75c070e9c8fdb188f" kindref="member">kErrTooHight</ref><sp/><sp/><sp/><sp/>=<sp/>300,<sp/></highlight></codeline>
+<codeline lineno="42" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aff4f15361ad4d1b254751071ad21e3e6" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aff4f15361ad4d1b254751071ad21e3e6" kindref="member">kErrTooRight</ref><sp/><sp/><sp/><sp/>=<sp/>301,<sp/></highlight></codeline>
+<codeline lineno="43" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a526faf634cffcb857a4b99b82a0f4d03" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a526faf634cffcb857a4b99b82a0f4d03" kindref="member">kErrFontSize</ref><sp/><sp/><sp/><sp/>=<sp/>302,<sp/></highlight></codeline>
+<codeline lineno="44" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a4117018a026c58336132da21ff52b840" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a4117018a026c58336132da21ff52b840" kindref="member">kNoTriangle</ref><sp/><sp/><sp/><sp/><sp/>=<sp/>303,<sp/></highlight></codeline>
+<codeline lineno="45" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a35eb9a961a3b4627ee0801912e781e2e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a35eb9a961a3b4627ee0801912e781e2e" kindref="member">kNoLine</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>304,<sp/></highlight></codeline>
+<codeline lineno="46" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a8f9b0ec84f1fdf7b138e9a9039ef31e5" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a8f9b0ec84f1fdf7b138e9a9039ef31e5" kindref="member">kNoRectangle</ref><sp/><sp/><sp/><sp/>=<sp/>305,<sp/></highlight></codeline>
+<codeline lineno="47" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a83bc80fd1df49b7c72bede3cfdf0220e" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a83bc80fd1df49b7c72bede3cfdf0220e" kindref="member">kNoCircle</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/>=<sp/>306,<sp/></highlight></codeline>
+<codeline lineno="48" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aaebf556f9516d8fa517d75821ff43073" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aaebf556f9516d8fa517d75821ff43073" kindref="member">kTypeNotFound</ref><sp/><sp/><sp/>=<sp/>307,<sp/></highlight></codeline>
+<codeline lineno="49"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map<sp/>&lt;unsigned,<sp/>std::string&gt;<sp/>kError</highlight></codeline>
+<codeline lineno="52"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a123e9c1829e779b75c070e9c8fdb188f" kindref="member">kErrTooHight</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Trop<sp/>haut&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aff4f15361ad4d1b254751071ad21e3e6" kindref="member">kErrTooRight</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Trop<sp/>à<sp/>droite&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>{<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a526faf634cffcb857a4b99b82a0f4d03" kindref="member">kErrFontSize</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Taille<sp/>de<sp/>police<sp/>incorrecte&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>{<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a4117018a026c58336132da21ff52b840" kindref="member">kNoTriangle</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Nombre<sp/>incorrect<sp/>de<sp/>points<sp/>pour<sp/>la<sp/>construction<sp/>du<sp/>triangle&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>{<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a35eb9a961a3b4627ee0801912e781e2e" kindref="member">kNoLine</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Nombre<sp/>incorrect<sp/>de<sp/>points<sp/>pour<sp/>la<sp/>construction<sp/>d&apos;une<sp/>ligne&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>{<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a8f9b0ec84f1fdf7b138e9a9039ef31e5" kindref="member">kNoRectangle</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Nombre<sp/>incorrect<sp/>de<sp/>points<sp/>pour<sp/>la<sp/>construction<sp/>d&apos;un<sp/>rectangle&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>{<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a83bc80fd1df49b7c72bede3cfdf0220e" kindref="member">kNoCircle</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Nombre<sp/>incorrect<sp/>de<sp/>points<sp/>pour<sp/>la<sp/>construction<sp/>d&apos;un<sp/>cercle&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>{<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aaebf556f9516d8fa517d75821ff43073" kindref="member">kTypeNotFound</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Instanciation<sp/>impossible:<sp/>Pas<sp/>le<sp/>bon<sp/>type&quot;</highlight><highlight class="normal">},</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nsException</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CSTCODERR_H</highlight><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h"/>
+  </compounddef>
+</doxygen>

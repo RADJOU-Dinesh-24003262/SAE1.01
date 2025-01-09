@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_transition__types_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h</primary></indexterm>
+<para>
+
+<para>Définit quelques types pour les transitions. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;chrono&gt;
+</programlisting>Include dependency graph for transition_types.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="transition__types_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="transition__types_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacens_transition">nsTransition</link></para>
+
+<para>Espace de nom pour le moteur de transition et ses composants. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef std::chrono::duration&lt; float, std::nano &gt; <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">nsTransition::SystemDuration_t</link></para>
+
+<para>SystemDuration_t : Définition de type stockant une durée exprimée en nanosecondes, sous forme de float. </para>
+</listitem>
+            <listitem><para>typedef std::chrono::time_point&lt; std::chrono::steady_clock, SystemDuration_t &gt; <link linkend="_namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6">nsTransition::SystemTimePoint_t</link></para>
+
+<para>SystemTimePoint_t : Définition de type représentant un point dans le temps basée sur l&apos;horloge système. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Définit quelques types pour les transitions. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Janvier 2020 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_transition__types_8h_source">transition_types.h</link>.</para>
+</section>
+</section>

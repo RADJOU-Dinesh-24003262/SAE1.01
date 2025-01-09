@@ -1,0 +1,158 @@
+.TH "/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h \- Definition of usefull types or aliases for the project\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <string>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <map>\fP
+.br
+\fC#include <optional>\fP
+.br
+
+.SS "Classes"
+
+.in +1c
+.ti -1c
+.RI "struct \fBAuthorizedKey\fP"
+.br
+.RI "Struct containing all the authorized keys in the struct \fBCMyParam\fP\&. "
+.ti -1c
+.RI "struct \fBCMyParam\fP"
+.br
+.ti -1c
+.RI "struct \fBCMyParamV2\fP"
+.br
+.RI "Structure contenant les paramètres de configuration du jeu\&. "
+.ti -1c
+.RI "struct \fBForm\fP"
+.br
+.ti -1c
+.RI "struct \fBCollectible\fP"
+.br
+.ti -1c
+.RI "struct \fBNode\fP"
+.br
+.RI "Structure représentant un noeud dans un graphe dans Movemonster() struct représentant un noeud dans un graphe, avec pos sa position, f_cost un coût estimé et son parent\&. "
+.in -1c
+.SS "Typedefs"
+
+.in +1c
+.ti -1c
+.RI "typedef std::vector< char > \fBCVLine\fP"
+.br
+.RI "CVLine : alias to a line of the matrix\&. "
+.ti -1c
+.RI "typedef std::vector< \fBCVLine\fP > \fBCMat\fP"
+.br
+.RI "CMat : alias to a game grid type\&. "
+.ti -1c
+.RI "typedef std::pair< unsigned, unsigned > \fBCPosition\fP"
+.br
+.RI "CPosition : a pair gathering the coordinates in the grid\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "const \fBAuthorizedKey\fP \fBKAuthorizedKey\fP"
+.br
+.RI "KAuthorizedKey\&. "
+.ti -1c
+.RI "const std::map< std::string, std::string > \fBKColor\fP"
+.br
+.RI "KColor : map between the 'human' color and its correspondence for the Unix terminal\&. "
+.ti -1c
+.RI "const char \fBKEmpty\fP = ' '"
+.br
+.RI "KEmpty : character for an empty cell\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Definition of usefull types or aliases for the project\&. 
+
+
+.PP
+\fBAuthor\fP
+.RS 4
+Alain Casali 
+.PP
+Marc Laporte 
+.RE
+.PP
+\fBVersion\fP
+.RS 4
+1\&.0 
+.RE
+.PP
+\fBDate\fP
+.RS 4
+18 décembre 2018 
+.RE
+.PP
+
+.PP
+Definition in file \fBtype\&.h\fP\&.
+.SH "Typedef Documentation"
+.PP 
+.SS "std::vector< \fBCVLine\fP > \fBCMat\fP"
+
+.PP
+CMat : alias to a game grid type\&. 
+.PP
+Definition at line \fB27\fP of file \fBtype\&.h\fP\&.
+.SS "typedef std::pair<unsigned, unsigned> \fBCPosition\fP"
+
+.PP
+CPosition : a pair gathering the coordinates in the grid\&. 
+.PP
+Definition at line \fB32\fP of file \fBtype\&.h\fP\&.
+.SS "typedef std::vector<char> \fBCVLine\fP"
+
+.PP
+CVLine : alias to a line of the matrix\&. 
+.PP
+Definition at line \fB21\fP of file \fBtype\&.h\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "const \fBAuthorizedKey\fP KAuthorizedKey"
+
+.PP
+KAuthorizedKey\&. 
+.PP
+Definition at line \fB59\fP of file \fBtype\&.h\fP\&.
+.SS "const std::map<std::string, std::string> KColor"
+\fBInitial value:\fP
+.PP
+.nf
+{
+  {"KReset", "0"},
+  {"KBlack", "30"},
+  {"KRed", "31"},
+  {"KGreen", "32"},
+  {"KYellow", "33"},
+  {"KBlue", "34"},
+  {"KMAgenta", "35"},
+  {"KCyan", "36"},
+
+}
+.fi
+.PP
+KColor : map between the 'human' color and its correspondence for the Unix terminal\&. 
+.PP
+Definition at line \fB65\fP of file \fBtype\&.h\fP\&.
+.SS "const char KEmpty = ' '"
+
+.PP
+KEmpty : character for an empty cell\&. 
+.PP
+Definition at line \fB160\fP of file \fBtype\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

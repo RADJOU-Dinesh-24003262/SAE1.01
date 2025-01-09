@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_gui_1_1_glut_font" xml:lang="en-US">
+<title>nsGui::GlutFont Class Reference</title>
+<indexterm><primary>nsGui::GlutFont</primary></indexterm>
+<para>
+
+<para>Classe listant toute les polices rendues disponibles par Glut, a utiliser avec <link linkend="_classns_gui_1_1_text">Text</link>. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;glut_font.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce">GlutFonts</link> { 
+<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea9c75a2a144604631db2af2ae284a9d82">BITMAP_8_BY_13</link>
+, <link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceafc7dc7274d17bd604f3cf91412650df0">BITMAP_9_BY_15</link>
+, <link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea35de9b7dc33c5aa8672423552fe83b38">BITMAP_TIMES_ROMAN_10</link>
+, <link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0">BITMAP_TIMES_ROMAN_24</link>
+, 
+<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceae127744cea36edcff85327da64221d14">BITMAP_HELVETICA_10</link>
+, <link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceab87b397237206af607190619163ec1e6">BITMAP_HELVETICA_12</link>
+, <link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea11c7a92d3233d33d71de4ca2f0e27437">BITMAP_HELVETICA_18</link>
+ }</para>
+
+<para>GlutFonts : Liste de toutes les polices Glut. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_gui_1_1_glut_font_1ac8e33c6ba8a95edcdcee4dd4d1a283ac">GlutFont</link> (const <link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce">GlutFonts</link> &amp;font)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_gui_1_1_glut_font">GlutFont</link>. </para>
+</listitem>
+            <listitem><para>void * <link linkend="_classns_gui_1_1_glut_font_1a10921b4183b246e9cfdebaca6b9e91a2">convertForGlut</link> () const</para>
+
+<para>Récupère l&apos;identificateur de police utilisable par Glut. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe listant toute les polices rendues disponibles par Glut, a utiliser avec <link linkend="_classns_gui_1_1_text">Text</link>. </para>
+<para>
+Definition at line <link linkend="_glut__font_8h_source_1l00019">19</link> of file <link linkend="_glut__font_8h_source">glut_font.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce"/><section>
+    <title>GlutFonts</title>
+<indexterm><primary>GlutFonts</primary><secondary>nsGui::GlutFont</secondary></indexterm>
+<indexterm><primary>nsGui::GlutFont</primary><secondary>GlutFonts</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce">nsGui::GlutFont::GlutFonts</link></computeroutput></para><para>
+
+<para>GlutFonts : Liste de toutes les polices Glut. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>BITMAP_8_BY_13</primary><secondary>nsGui::GlutFont</secondary></indexterm>
+<indexterm><primary>nsGui::GlutFont</primary><secondary>BITMAP_8_BY_13</secondary></indexterm>
+<anchor xml:id="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea9c75a2a144604631db2af2ae284a9d82"/>BITMAP_8_BY_13</entry><entry>
+<para>Police 8x13 Bitmap </para>
+</entry></row><row><entry><indexterm><primary>BITMAP_9_BY_15</primary><secondary>nsGui::GlutFont</secondary></indexterm>
+<indexterm><primary>nsGui::GlutFont</primary><secondary>BITMAP_9_BY_15</secondary></indexterm>
+<anchor xml:id="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceafc7dc7274d17bd604f3cf91412650df0"/>BITMAP_9_BY_15</entry><entry>
+<para>Police 9x15 Bitmap </para>
+</entry></row><row><entry><indexterm><primary>BITMAP_TIMES_ROMAN_10</primary><secondary>nsGui::GlutFont</secondary></indexterm>
+<indexterm><primary>nsGui::GlutFont</primary><secondary>BITMAP_TIMES_ROMAN_10</secondary></indexterm>
+<anchor xml:id="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea35de9b7dc33c5aa8672423552fe83b38"/>BITMAP_TIMES_ROMAN_10</entry><entry>
+<para>Police 10px Times New Roman </para>
+</entry></row><row><entry><indexterm><primary>BITMAP_TIMES_ROMAN_24</primary><secondary>nsGui::GlutFont</secondary></indexterm>
+<indexterm><primary>nsGui::GlutFont</primary><secondary>BITMAP_TIMES_ROMAN_24</secondary></indexterm>
+<anchor xml:id="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0"/>BITMAP_TIMES_ROMAN_24</entry><entry>
+<para>Police 24px Times New Roman </para>
+</entry></row><row><entry><indexterm><primary>BITMAP_HELVETICA_10</primary><secondary>nsGui::GlutFont</secondary></indexterm>
+<indexterm><primary>nsGui::GlutFont</primary><secondary>BITMAP_HELVETICA_10</secondary></indexterm>
+<anchor xml:id="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceae127744cea36edcff85327da64221d14"/>BITMAP_HELVETICA_10</entry><entry>
+<para>Police 10px Helvetica </para>
+</entry></row><row><entry><indexterm><primary>BITMAP_HELVETICA_12</primary><secondary>nsGui::GlutFont</secondary></indexterm>
+<indexterm><primary>nsGui::GlutFont</primary><secondary>BITMAP_HELVETICA_12</secondary></indexterm>
+<anchor xml:id="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceab87b397237206af607190619163ec1e6"/>BITMAP_HELVETICA_12</entry><entry>
+<para>Police 12px Helvetica </para>
+</entry></row><row><entry><indexterm><primary>BITMAP_HELVETICA_18</primary><secondary>nsGui::GlutFont</secondary></indexterm>
+<indexterm><primary>nsGui::GlutFont</primary><secondary>BITMAP_HELVETICA_18</secondary></indexterm>
+<anchor xml:id="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea11c7a92d3233d33d71de4ca2f0e27437"/>BITMAP_HELVETICA_18</entry><entry>
+<para>Police 18px Helvetica </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_glut__font_8h_source_1l00026">26</link> of file <link linkend="_glut__font_8h_source">glut_font.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_gui_1_1_glut_font_1ac8e33c6ba8a95edcdcee4dd4d1a283ac"/><section>
+    <title>GlutFont()</title>
+<indexterm><primary>GlutFont</primary><secondary>nsGui::GlutFont</secondary></indexterm>
+<indexterm><primary>nsGui::GlutFont</primary><secondary>GlutFont</secondary></indexterm>
+<para><computeroutput>nsGui::GlutFont::GlutFont (const <link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce">GlutFonts</link> &amp; font)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_gui_1_1_glut_font">GlutFont</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>font_</entry><entry>
+<para>: Police représentée par cette instance </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_glut__font_8cpp_source_1l00013">13</link> of file <link linkend="_glut__font_8cpp_source">glut_font.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_gui_1_1_glut_font_1a10921b4183b246e9cfdebaca6b9e91a2"/><section>
+    <title>convertForGlut()</title>
+<indexterm><primary>convertForGlut</primary><secondary>nsGui::GlutFont</secondary></indexterm>
+<indexterm><primary>nsGui::GlutFont</primary><secondary>convertForGlut</secondary></indexterm>
+<para><computeroutput>void * nsGui::GlutFont::convertForGlut ( ) const</computeroutput></para><para>
+
+<para>Récupère l&apos;identificateur de police utilisable par Glut. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Un identificateur de police Glut </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_glut__font_8cpp_source_1l00017">17</link> of file <link linkend="_glut__font_8cpp_source">glut_font.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/<link linkend="_glut__font_8h">glut_font.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/<link linkend="_glut__font_8cpp">glut_font.cpp</link></section>
+</section>

@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_transition_8h_source" xml:lang="en-US">
+<title>transition.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_transition_8h_source_1l00001"/>00001 
+<anchor xml:id="_transition_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;TRANSITION_H</emphasis>
+<anchor xml:id="_transition_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;TRANSITION_H</emphasis>
+<anchor xml:id="_transition_8h_source_1l00013"/>00013 
+<anchor xml:id="_transition_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_transition__contract_8h">transition_contract.h</link>&quot;</emphasis>
+<anchor xml:id="_transition_8h_source_1l00015"/>00015 
+<anchor xml:id="_transition_8h_source_1l00020"/>00020 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_transition">nsTransition</link>
+<anchor xml:id="_transition_8h_source_1l00021"/>00021 {
+<anchor xml:id="_transition_8h_source_1l00022"/>00022 
+<anchor xml:id="_transition_8h_source_1l00027"/><link linkend="_classns_transition_1_1_transition">00027</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_transition_1_1_transition">Transition</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link>
+<anchor xml:id="_transition_8h_source_1l00028"/>00028 {
+<anchor xml:id="_transition_8h_source_1l00029"/>00029 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_transition_8h_source_1l00033"/><link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">00033</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">TransitionFinishModes</link>&#32;{
+<anchor xml:id="_transition_8h_source_1l00034"/><link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4">FINISH_START</link>,&#32;
+<anchor xml:id="_transition_8h_source_1l00035"/><link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f">00035</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f">FINISH_CURRENT</link>,&#32;
+<anchor xml:id="_transition_8h_source_1l00036"/><link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e">00036</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e">FINISH_DESTINATION</link>,&#32;
+<anchor xml:id="_transition_8h_source_1l00037"/>00037 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_transition_8h_source_1l00038"/>00038 
+<anchor xml:id="_transition_8h_source_1l00044"/><link linkend="_classns_transition_1_1_transition_1a7c3e692c43aceca5e4f716f3ae22bf05">00044</link> &#32;&#32;&#32;&#32;<link linkend="_classns_transition_1_1_transition_1a7c3e692c43aceca5e4f716f3ae22bf05">Transition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link>&amp;&#32;contract);
+<anchor xml:id="_transition_8h_source_1l00045"/>00045 
+<anchor xml:id="_transition_8h_source_1l00051"/><link linkend="_classns_transition_1_1_transition_1a616e0ef596d4e8ebb185a6cf0a685924">00051</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link>&amp;&#32;<link linkend="_classns_transition_1_1_transition_1a616e0ef596d4e8ebb185a6cf0a685924">getElapsed</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_transition_8h_source_1l00052"/>00052 
+<anchor xml:id="_transition_8h_source_1l00059"/><link linkend="_classns_transition_1_1_transition_1a0a8e848a50c2e05dc72800abfc6dd6ef">00059</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_1a0a8e848a50c2e05dc72800abfc6dd6ef">setElapsed</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link>&amp;&#32;elapsed);
+<anchor xml:id="_transition_8h_source_1l00060"/>00060 
+<anchor xml:id="_transition_8h_source_1l00066"/><link linkend="_classns_transition_1_1_transition_1abb421b44828c7b6dec60a0256a97b3d9">00066</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_1abb421b44828c7b6dec60a0256a97b3d9">addToElapsed</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link>&amp;&#32;addedTime);
+<anchor xml:id="_transition_8h_source_1l00067"/>00067 
+<anchor xml:id="_transition_8h_source_1l00073"/><link linkend="_classns_transition_1_1_transition_1ab32ef25219cd2227746444ac8794266a">00073</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&amp;&#32;<link linkend="_classns_transition_1_1_transition_1ab32ef25219cd2227746444ac8794266a">isReversed</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_transition_8h_source_1l00074"/>00074 
+<anchor xml:id="_transition_8h_source_1l00080"/><link linkend="_classns_transition_1_1_transition_1a8c8c7caf7326e24ffa540093ed12f581">00080</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_1a8c8c7caf7326e24ffa540093ed12f581">finish</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">TransitionFinishModes</link>&amp;&#32;finishMode&#32;=&#32;TransitionFinishModes::FINISH_DESTINATION);
+<anchor xml:id="_transition_8h_source_1l00081"/>00081 
+<anchor xml:id="_transition_8h_source_1l00087"/><link linkend="_classns_transition_1_1_transition_1ad9d358bee54825d2a8bf83e9e21e398b">00087</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">bool</emphasis>&amp;&#32;<link linkend="_classns_transition_1_1_transition_1ad9d358bee54825d2a8bf83e9e21e398b">isFinished</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_transition_8h_source_1l00088"/>00088 
+<anchor xml:id="_transition_8h_source_1l00089"/>00089 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_transition_8h_source_1l00093"/>00093 &#32;&#32;&#32;&#32;<link linkend="_namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6">SystemTimePoint_t</link>&#32;m_startTime;
+<anchor xml:id="_transition_8h_source_1l00094"/>00094 
+<anchor xml:id="_transition_8h_source_1l00098"/>00098 &#32;&#32;&#32;&#32;<link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link>&#32;m_elapsed;
+<anchor xml:id="_transition_8h_source_1l00099"/>00099 
+<anchor xml:id="_transition_8h_source_1l00104"/>00104 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;m_reverse;
+<anchor xml:id="_transition_8h_source_1l00105"/>00105 
+<anchor xml:id="_transition_8h_source_1l00110"/>00110 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;m_finished;
+<anchor xml:id="_transition_8h_source_1l00111"/>00111 
+<anchor xml:id="_transition_8h_source_1l00117"/>00117 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;updateValues();
+<anchor xml:id="_transition_8h_source_1l00118"/>00118 
+<anchor xml:id="_transition_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;handleEndlife();
+<anchor xml:id="_transition_8h_source_1l00124"/>00124 };&#32;<emphasis role="comment">//&#32;class&#32;Transition</emphasis>
+<anchor xml:id="_transition_8h_source_1l00125"/>00125 
+<anchor xml:id="_transition_8h_source_1l00126"/>00126 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsTransition</emphasis>
+<anchor xml:id="_transition_8h_source_1l00127"/>00127 
+<anchor xml:id="_transition_8h_source_1l00128"/>00128 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;TRANSITION_H</emphasis>
+</programlisting></section>

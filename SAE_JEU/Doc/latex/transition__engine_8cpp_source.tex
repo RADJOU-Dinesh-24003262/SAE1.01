@@ -1,0 +1,57 @@
+\hypertarget{transition__engine_8cpp_source}{}\doxysection{transition\+\_\+engine.\+cpp}
+\label{transition__engine_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/transition/transition\_engine.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/transition/transition\_engine.cpp}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{transition__engine_8h}{mingl/transition/transition\_engine.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#define TRANSITIONENGINE nsTransition::TransitionEngine}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00014}00014 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00015}00015 \textcolor{keywordtype}{void} TRANSITIONENGINE::update(\textcolor{keyword}{const} std::chrono::microseconds \&delta)}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00016}00016 \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00017}00017     \textcolor{comment}{// Update every transitioned items}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00018}00018     TransitionVector\_t::iterator iter = m\_transitionList.begin();}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00019}00019     \textcolor{keywordflow}{while} (iter != m\_transitionList.end())}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00020}00020     \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00021}00021         \textcolor{comment}{// Check if the item is finished, and remove it from the list in that case}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00022}00022         \textcolor{keywordflow}{if} (iter-\/>isFinished())}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00023}00023         \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00024}00024             m\_transitionList.erase(iter++);}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00025}00025         \}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00026}00026         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00027}00027         \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00028}00028             iter-\/>addToElapsed(delta);}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00029}00029             ++iter;}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00030}00030         \}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00031}00031     \}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00032}00032 \} \textcolor{comment}{// update()}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00034}00034 \textcolor{keywordtype}{void} TRANSITIONENGINE::startContract(\textcolor{keyword}{const} TransitionContract \&contract)}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00035}00035 \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00036}00036     m\_transitionList.push\_back(Transition(contract));}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00037}00037 \} \textcolor{comment}{// startContract()}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00039}00039 \textcolor{keywordtype}{void} TRANSITIONENGINE::finishEveryTransition(\textcolor{keyword}{const} Transition::TransitionFinishModes \&finishMode)}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00040}00040 \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00041}00041     \textcolor{comment}{// Mark every transition as finished}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00042}00042     \textcolor{keywordflow}{for} (Transition \&transition : m\_transitionList)}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00043}00043     \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00044}00044         transition.finish(finishMode);}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00045}00045     \}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00046}00046 \} \textcolor{comment}{// finishEveryTransition()}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00048}00048 \textcolor{keywordtype}{void} TRANSITIONENGINE::finishEveryTransitionOfTarget(\textcolor{keyword}{const} ITransitionable \&transitionable, \textcolor{keyword}{const} Transition::TransitionFinishModes \&finishMode)}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00049}00049 \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00050}00050     \textcolor{keywordflow}{for} (Transition \&transition : m\_transitionList)}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00051}00051     \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00052}00052         \textcolor{comment}{// Check if the address of the target is the same one as the address of transitionable}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00053}00053         \textcolor{keywordflow}{if} (\&(transition.getTarget()) == \&transitionable)}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00054}00054         \{}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00055}00055             transition.finish(finishMode);}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00056}00056         \}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00057}00057     \}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00058}00058 \}  \textcolor{comment}{// finishEveryTransitionOfTarget()}}
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{transition__engine_8cpp_source_l00060}00060 \textcolor{preprocessor}{\#undef TRANSITIONENGINE}}
+
+\end{DoxyCode}

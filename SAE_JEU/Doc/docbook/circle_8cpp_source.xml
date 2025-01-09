@@ -1,0 +1,169 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_circle_8cpp_source" xml:lang="en-US">
+<title>circle.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_circle_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_circle_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;cmath&gt;</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00012"/>00012 
+<anchor xml:id="_circle_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_circle_8h">mingl/shape/circle.h</link>&quot;</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_macros_8h">mingl/macros.h</link>&quot;</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00015"/>00015 
+<anchor xml:id="_circle_8cpp_source_1l00016"/><link linkend="_classns_shape_1_1_circle_1a06b1c1c7ea1e4ec8228d929e7b3966ee">00016</link> <link linkend="_classns_shape_1_1_circle_1a06b1c1c7ea1e4ec8228d929e7b3966ee">nsShape::Circle::Circle</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;position,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;&amp;radius,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;fillColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;&amp;borderColor)
+<anchor xml:id="_circle_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;:&#32;<link linkend="_classns_shape_1_1_shape">Shape</link>(fillColor,&#32;borderColor)
+<anchor xml:id="_circle_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;,&#32;m_position(position)
+<anchor xml:id="_circle_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;,&#32;m_radius(radius)
+<anchor xml:id="_circle_8cpp_source_1l00020"/>00020 {}&#32;<emphasis role="comment">//&#32;Circle()</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00021"/>00021 
+<anchor xml:id="_circle_8cpp_source_1l00022"/><link linkend="_classns_shape_1_1_circle_1a03be5cdd7d6a0feaa7d6b0a819389a7a">00022</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_circle_1a03be5cdd7d6a0feaa7d6b0a819389a7a">nsShape::Circle::draw</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00023"/>00023 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_circle_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;<link linkend="_macros_8h_1a86d500a34c624c2cae56bc25a31b12f3">UNUSED</link>(window);
+<anchor xml:id="_circle_8cpp_source_1l00025"/>00025 
+<anchor xml:id="_circle_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Source:&#32;https://gist.github.com/linusthe3rd/803118</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00027"/>00027 
+<anchor xml:id="_circle_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;i;
+<anchor xml:id="_circle_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;triangleAmount&#32;=&#32;20;&#32;<emphasis role="comment">//&#32;Nombre&#32;de&#32;triangles&#32;a&#32;dessiner</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00030"/>00030 
+<anchor xml:id="_circle_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;règle&#32;la&#32;couleur&#32;du&#32;cercle</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;inColor&#32;=&#32;getFillColor();
+<anchor xml:id="_circle_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;glColor4ub(inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79">getRed</link>(),&#32;inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</link>(),&#32;inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129">getBlue</link>(),&#32;inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e">getAlpha</link>());&#32;<emphasis role="comment">//&#32;Couleur&#32;du&#32;cercle</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00034"/>00034 
+<anchor xml:id="_circle_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;GLfloat&#32;twicePi&#32;=&#32;2.0f&#32;*&#32;M_PI;
+<anchor xml:id="_circle_8cpp_source_1l00036"/>00036 
+<anchor xml:id="_circle_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;glBegin(GL_TRIANGLE_FAN);
+<anchor xml:id="_circle_8cpp_source_1l00038"/>00038 
+<anchor xml:id="_circle_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;glVertex2f(m_position.getX(),&#32;m_position.getY());&#32;<emphasis role="comment">//&#32;Centre&#32;du&#32;cercle</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00040"/>00040 
+<anchor xml:id="_circle_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(i&#32;=&#32;0;&#32;i&#32;&lt;=&#32;triangleAmount;i++)&#32;{
+<anchor xml:id="_circle_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glVertex2f(m_position.getX()&#32;+&#32;(m_radius&#32;*&#32;cos(i&#32;*&#32;twicePi&#32;/&#32;triangleAmount)),
+<anchor xml:id="_circle_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_position.getY()&#32;+&#32;(m_radius&#32;*&#32;sin(i&#32;*&#32;twicePi&#32;/&#32;triangleAmount)));
+<anchor xml:id="_circle_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_circle_8cpp_source_1l00045"/>00045 
+<anchor xml:id="_circle_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;glEnd();
+<anchor xml:id="_circle_8cpp_source_1l00047"/>00047 
+<anchor xml:id="_circle_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(getBorderColor()&#32;!=&#32;nsGraphics::KTransparent)&#32;{
+<anchor xml:id="_circle_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;a&#32;une&#32;bordure,&#32;on&#32;l&apos;affiche</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00050"/>00050 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;borderColor&#32;=&#32;getBorderColor();
+<anchor xml:id="_circle_8cpp_source_1l00051"/>00051 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glColor4ub(borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79">getRed</link>(),&#32;borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</link>(),&#32;borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129">getBlue</link>(),&#32;borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e">getAlpha</link>());
+<anchor xml:id="_circle_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glLineWidth(1.f);
+<anchor xml:id="_circle_8cpp_source_1l00053"/>00053 
+<anchor xml:id="_circle_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glBegin(GL_LINE_LOOP);
+<anchor xml:id="_circle_8cpp_source_1l00055"/>00055 
+<anchor xml:id="_circle_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">for</emphasis>(i&#32;=&#32;0;&#32;i&#32;&lt;=&#32;triangleAmount;i++)&#32;{
+<anchor xml:id="_circle_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glVertex2f(m_position.getX()&#32;+&#32;(m_radius&#32;*&#32;cos(i&#32;*&#32;twicePi&#32;/&#32;triangleAmount)),
+<anchor xml:id="_circle_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_position.getY()&#32;+&#32;(m_radius&#32;*&#32;sin(i&#32;*&#32;twicePi&#32;/&#32;triangleAmount)));
+<anchor xml:id="_circle_8cpp_source_1l00059"/>00059 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;}
+<anchor xml:id="_circle_8cpp_source_1l00060"/>00060 
+<anchor xml:id="_circle_8cpp_source_1l00061"/>00061 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glEnd();
+<anchor xml:id="_circle_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_circle_8cpp_source_1l00063"/>00063 }&#32;<emphasis role="comment">//&#32;draw()</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00064"/>00064 
+<anchor xml:id="_circle_8cpp_source_1l00065"/><link linkend="_classns_shape_1_1_circle_1aae4610d0c110ad09da424c5a3ad91aac">00065</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_circle_1aae4610d0c110ad09da424c5a3ad91aac">nsShape::Circle::getValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;std::vector&lt;float&gt;&#32;&amp;values)
+<anchor xml:id="_circle_8cpp_source_1l00066"/>00066 {
+<anchor xml:id="_circle_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>)&#32;{
+<anchor xml:id="_circle_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_RGB:
+<anchor xml:id="_circle_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_fillColor.getRed();
+<anchor xml:id="_circle_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_fillColor.getGreen();
+<anchor xml:id="_circle_8cpp_source_1l00071"/>00071 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[2]&#32;=&#32;m_fillColor.getBlue();
+<anchor xml:id="_circle_8cpp_source_1l00072"/>00072 
+<anchor xml:id="_circle_8cpp_source_1l00073"/>00073 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00074"/>00074 
+<anchor xml:id="_circle_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_ALPHA:
+<anchor xml:id="_circle_8cpp_source_1l00076"/>00076 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_fillColor.getAlpha();
+<anchor xml:id="_circle_8cpp_source_1l00077"/>00077 
+<anchor xml:id="_circle_8cpp_source_1l00078"/>00078 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00079"/>00079 
+<anchor xml:id="_circle_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_RGB:
+<anchor xml:id="_circle_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_borderColor.getRed();
+<anchor xml:id="_circle_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_borderColor.getGreen();
+<anchor xml:id="_circle_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[2]&#32;=&#32;m_borderColor.getBlue();
+<anchor xml:id="_circle_8cpp_source_1l00084"/>00084 
+<anchor xml:id="_circle_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00086"/>00086 
+<anchor xml:id="_circle_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_ALPHA:
+<anchor xml:id="_circle_8cpp_source_1l00088"/>00088 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_borderColor.getAlpha();
+<anchor xml:id="_circle_8cpp_source_1l00089"/>00089 
+<anchor xml:id="_circle_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00091"/>00091 
+<anchor xml:id="_circle_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_POSITION:
+<anchor xml:id="_circle_8cpp_source_1l00093"/>00093 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_position.getX();
+<anchor xml:id="_circle_8cpp_source_1l00094"/>00094 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_position.getY();
+<anchor xml:id="_circle_8cpp_source_1l00095"/>00095 
+<anchor xml:id="_circle_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00097"/>00097 
+<anchor xml:id="_circle_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_RADIUS:
+<anchor xml:id="_circle_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_radius;
+<anchor xml:id="_circle_8cpp_source_1l00100"/>00100 
+<anchor xml:id="_circle_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_circle_8cpp_source_1l00103"/>00103 }&#32;<emphasis role="comment">//&#32;getValues()</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00104"/>00104 
+<anchor xml:id="_circle_8cpp_source_1l00105"/><link linkend="_classns_shape_1_1_circle_1a9a2fc6b4a852e25922e5a1732d39644a">00105</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_circle_1a9a2fc6b4a852e25922e5a1732d39644a">nsShape::Circle::setValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;float&gt;&#32;&amp;values)
+<anchor xml:id="_circle_8cpp_source_1l00106"/>00106 {
+<anchor xml:id="_circle_8cpp_source_1l00107"/>00107 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>)&#32;{
+<anchor xml:id="_circle_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_RGB:
+<anchor xml:id="_circle_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setRed(values[0]);
+<anchor xml:id="_circle_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setGreen(values[1]);
+<anchor xml:id="_circle_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setBlue(values[2]);
+<anchor xml:id="_circle_8cpp_source_1l00112"/>00112 
+<anchor xml:id="_circle_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00114"/>00114 
+<anchor xml:id="_circle_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_ALPHA:
+<anchor xml:id="_circle_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setAlpha(values[0]);
+<anchor xml:id="_circle_8cpp_source_1l00117"/>00117 
+<anchor xml:id="_circle_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00119"/>00119 
+<anchor xml:id="_circle_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_RGB:
+<anchor xml:id="_circle_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setRed(values[0]);
+<anchor xml:id="_circle_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setGreen(values[1]);
+<anchor xml:id="_circle_8cpp_source_1l00123"/>00123 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setBlue(values[2]);
+<anchor xml:id="_circle_8cpp_source_1l00124"/>00124 
+<anchor xml:id="_circle_8cpp_source_1l00125"/>00125 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00126"/>00126 
+<anchor xml:id="_circle_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_ALPHA:
+<anchor xml:id="_circle_8cpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setAlpha(values[0]);
+<anchor xml:id="_circle_8cpp_source_1l00129"/>00129 
+<anchor xml:id="_circle_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00131"/>00131 
+<anchor xml:id="_circle_8cpp_source_1l00132"/>00132 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_POSITION:
+<anchor xml:id="_circle_8cpp_source_1l00133"/>00133 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_position.setX(values[0]);
+<anchor xml:id="_circle_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_position.setY(values[1]);
+<anchor xml:id="_circle_8cpp_source_1l00135"/>00135 
+<anchor xml:id="_circle_8cpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00137"/>00137 
+<anchor xml:id="_circle_8cpp_source_1l00138"/>00138 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_RADIUS:
+<anchor xml:id="_circle_8cpp_source_1l00139"/>00139 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_radius&#32;=&#32;values[0];
+<anchor xml:id="_circle_8cpp_source_1l00140"/>00140 
+<anchor xml:id="_circle_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_circle_8cpp_source_1l00142"/>00142 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_circle_8cpp_source_1l00143"/>00143 }&#32;<emphasis role="comment">//&#32;setValues()</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00144"/>00144 
+<anchor xml:id="_circle_8cpp_source_1l00145"/><link linkend="_classns_shape_1_1_circle_1a8b1f88a61fb38c283b11600e4eec6fe3">00145</link> <link linkend="_classns_shape_1_1_circle">nsShape::Circle</link>&#32;<link linkend="_classns_shape_1_1_circle_1a8b1f88a61fb38c283b11600e4eec6fe3">nsShape::Circle::operator+</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00146"/>00146 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_circle_8cpp_source_1l00147"/>00147 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_shape_1_1_circle">Circle</link>(m_position&#32;+&#32;position,&#32;m_radius,&#32;getFillColor(),&#32;getBorderColor());
+<anchor xml:id="_circle_8cpp_source_1l00148"/>00148 }&#32;<emphasis role="comment">//&#32;operator+()</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00149"/>00149 
+<anchor xml:id="_circle_8cpp_source_1l00150"/><link linkend="_classns_shape_1_1_circle_1ad34827f3120b9331389a00cbf02468cb">00150</link> <link linkend="_classns_shape_1_1_circle">nsShape::Circle</link>&#32;<link linkend="_classns_shape_1_1_circle_1ad34827f3120b9331389a00cbf02468cb">nsShape::Circle::operator*</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&amp;&#32;f)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00151"/>00151 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_circle_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_shape_1_1_circle">Circle</link>(m_position&#32;*&#32;f,&#32;m_radius,&#32;getFillColor(),&#32;getBorderColor());
+<anchor xml:id="_circle_8cpp_source_1l00153"/>00153 }&#32;<emphasis role="comment">//&#32;operator*()</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00154"/>00154 
+<anchor xml:id="_circle_8cpp_source_1l00155"/><link linkend="_classns_shape_1_1_circle_1afcb275822a67ec49167fe122ab74872c">00155</link> <emphasis role="keywordtype">unsigned</emphasis>&#32;<link linkend="_classns_shape_1_1_circle_1afcb275822a67ec49167fe122ab74872c">nsShape::Circle::getRadius</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00156"/>00156 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_circle_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_radius;
+<anchor xml:id="_circle_8cpp_source_1l00158"/>00158 }&#32;<emphasis role="comment">//&#32;getRadius()</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00159"/>00159 
+<anchor xml:id="_circle_8cpp_source_1l00160"/><link linkend="_classns_shape_1_1_circle_1a5f20408e41621d21487b6162eabc3a7d">00160</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_circle_1a5f20408e41621d21487b6162eabc3a7d">nsShape::Circle::setRadius</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;&amp;radius)
+<anchor xml:id="_circle_8cpp_source_1l00161"/>00161 {
+<anchor xml:id="_circle_8cpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;m_radius&#32;=&#32;radius;
+<anchor xml:id="_circle_8cpp_source_1l00163"/>00163 }&#32;<emphasis role="comment">//&#32;setRadius()</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00164"/>00164 
+<anchor xml:id="_circle_8cpp_source_1l00165"/><link linkend="_classns_shape_1_1_circle_1a85b4102c4a23101fba4f90c1f8e84168">00165</link> <emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_circle_1a85b4102c4a23101fba4f90c1f8e84168">nsShape::Circle::getPosition</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00166"/>00166 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_circle_8cpp_source_1l00167"/>00167 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_position;
+<anchor xml:id="_circle_8cpp_source_1l00168"/>00168 }&#32;<emphasis role="comment">//&#32;getPosition()</emphasis>
+<anchor xml:id="_circle_8cpp_source_1l00169"/>00169 
+<anchor xml:id="_circle_8cpp_source_1l00170"/><link linkend="_classns_shape_1_1_circle_1ac4e73227c9ec7e22670bd012b6f37bef">00170</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_circle_1ac4e73227c9ec7e22670bd012b6f37bef">nsShape::Circle::setPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;position)
+<anchor xml:id="_circle_8cpp_source_1l00171"/>00171 {
+<anchor xml:id="_circle_8cpp_source_1l00172"/>00172 &#32;&#32;&#32;&#32;m_position&#32;=&#32;position;
+<anchor xml:id="_circle_8cpp_source_1l00173"/>00173 }&#32;<emphasis role="comment">//&#32;setPosition()</emphasis>
+</programlisting></section>

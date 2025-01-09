@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_event_1_1_event_manager" kind="class" language="C++" prot="public">
+    <compoundname>nsEvent::EventManager</compoundname>
+    <includes refid="event__manager_8h" local="no">event_manager.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classns_event_1_1_event_manager_1a37768646cf534df3360aa4a431078e22" prot="private" static="no" mutable="no">
+        <type>std::queue&lt; <ref refid="structns_event_1_1_event__t" kindref="compound">Event_t</ref> &gt;</type>
+        <definition>std::queue&lt;Event_t&gt; nsEvent::EventManager::m_eventQueue</definition>
+        <argsstring></argsstring>
+        <name>m_eventQueue</name>
+        <qualifiedname>nsEvent::EventManager::m_eventQueue</qualifiedname>
+        <briefdescription>
+<para>m_eventQueue : Queue possèdant des événement entrants </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h" line="59" column="16" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h" bodystart="59" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool nsEvent::EventManager::hasEvent</definition>
+        <argsstring>()</argsstring>
+        <name>hasEvent</name>
+        <qualifiedname>nsEvent::EventManager::hasEvent</qualifiedname>
+        <briefdescription>
+<para>Vérifie si un événement doit être traité </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Si la queue possède au moins un élément </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h" line="33" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsEvent::EventManager::pushEvent</definition>
+        <argsstring>(const Event_t &amp;event)</argsstring>
+        <name>pushEvent</name>
+        <qualifiedname>nsEvent::EventManager::pushEvent</qualifiedname>
+        <param>
+          <type>const <ref refid="structns_event_1_1_event__t" kindref="compound">Event_t</ref> &amp;</type>
+          <declname>event</declname>
+        </param>
+        <briefdescription>
+<para>Pousse un nouvel événement dans la queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">event</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Evénement a pousser </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h" line="40" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp" bodystart="18" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="structns_event_1_1_event__t" kindref="compound">Event_t</ref></type>
+        <definition>const nsEvent::Event_t nsEvent::EventManager::pullEvent</definition>
+        <argsstring>()</argsstring>
+        <name>pullEvent</name>
+        <qualifiedname>nsEvent::EventManager::pullEvent</qualifiedname>
+        <briefdescription>
+<para>Tire l&apos;événement le plus ancien, et l&apos;enlève de la queue. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>Une copie du plus ancien événement </para>
+</simplesect>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h" line="47" column="19" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp" bodystart="23" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsEvent::EventManager::clearEvents</definition>
+        <argsstring>()</argsstring>
+        <name>clearEvents</name>
+        <qualifiedname>nsEvent::EventManager::clearEvents</qualifiedname>
+        <briefdescription>
+<para>Vide la queue. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h" line="53" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event/event_manager.cpp" bodystart="31" bodyend="35"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Gère une queue d&apos;événement entrants. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h" line="24" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event_manager.h" bodystart="25" bodyend="61"/>
+    <listofallmembers>
+      <member refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" prot="public" virt="non-virtual"><scope>nsEvent::EventManager</scope><name>clearEvents</name></member>
+      <member refid="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" prot="public" virt="non-virtual"><scope>nsEvent::EventManager</scope><name>hasEvent</name></member>
+      <member refid="classns_event_1_1_event_manager_1a37768646cf534df3360aa4a431078e22" prot="private" virt="non-virtual"><scope>nsEvent::EventManager</scope><name>m_eventQueue</name></member>
+      <member refid="classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9" prot="public" virt="non-virtual"><scope>nsEvent::EventManager</scope><name>pullEvent</name></member>
+      <member refid="classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5" prot="public" virt="non-virtual"><scope>nsEvent::EventManager</scope><name>pushEvent</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

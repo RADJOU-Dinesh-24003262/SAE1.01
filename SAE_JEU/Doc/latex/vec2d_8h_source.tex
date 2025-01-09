@@ -1,0 +1,96 @@
+\hypertarget{vec2d_8h_source}{}\doxysection{vec2d.\+h}
+\label{vec2d_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/graphics/vec2d.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/graphics/vec2d.h}}
+\mbox{\hyperlink{vec2d_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef VEC2D\_H}}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00012}00012 \textcolor{preprocessor}{\#define VEC2D\_H}}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <ostream>}}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00016}00016 \textcolor{preprocessor}{\#include "{}../tools/ieditable.h"{}}}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00018}00018 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_graphics}{nsGraphics}}}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00025}\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{00025}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} : \textcolor{keyword}{public} \mbox{\hyperlink{classns_util_1_1_i_editable}{nsUtil::IEditable}}}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00028}00028 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00035}00035     \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a4a2fdd532ded3c29b7a3bd6e5a23fadf}{Vec2D}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int}\& x = 0, \textcolor{keyword}{const} \textcolor{keywordtype}{int}\& y = 0);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00042}00042     \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a4a2fdd532ded3c29b7a3bd6e5a23fadf}{Vec2D}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00048}00048     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_aded521aea98ae5b1fdd19f4f9e2df74a}{operator+}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00049}00049 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00054}00054     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a3cc10af3b04df2c6bf85460ced5c63a7}{operator-\/}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00061}00061     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_aded521aea98ae5b1fdd19f4f9e2df74a}{operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00068}00068     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a3cc10af3b04df2c6bf85460ced5c63a7}{operator-\/}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00075}00075     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_afed7035dfbafeffbfac737fb39d4fb90}{operator*}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00082}00082     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_afed7035dfbafeffbfac737fb39d4fb90}{operator*}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& n) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00083}00083 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00089}00089     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_aaabc44f047e46433d0115fbc49b3ae2f}{operator/}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00090}00090 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00096}00096     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_aaabc44f047e46433d0115fbc49b3ae2f}{operator/}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& n) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00103}00103     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a43281403abbad9948eacca4d37fc61dc}{operator\%}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00110}00110     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a94b4b8420a450dd284311c49cb0b2e6b}{operator==}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00111}00111 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00117}00117     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_affaed949190e8cb5a3c8f9813b31eb0d}{operator!=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00118}00118 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00125}00125     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_accfe96cfa5b8495a0b14c7087068064e}{operator<}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00133}00133     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a30da0e7984d8c3e7a66bbdcdcc24c9cb}{operator>}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00141}00141     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_afd5e0e3ba77ef971f8d022d69a4a2647}{operator<=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00142}00142 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00149}00149     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a478dad2852611070874c6c9e5663b570}{operator>=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00150}00150 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00156}00156     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a041926192c1d2c579b12dcf1eb1725d5}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00157}00157 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00163}00163     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& \mbox{\hyperlink{classns_graphics_1_1_vec2_d_aafd8b68f1cb9dcfcf92a96714e58c5ec}{operator+=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00170}00170     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& \mbox{\hyperlink{classns_graphics_1_1_vec2_d_aa9b0986206c35bb5c0043db02548fce4}{operator-\/=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00171}00171 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00177}00177     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a6e0e661361c0f3081fa2d9488978771e}{operator*=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00184}00184     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a1146ac9d05c667bb4a46140858953711}{operator/=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00185}00185 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00191}00191     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a57003f3d4660f986c3c21c027ac8b154}{operator\%=}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& pos);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00192}00192 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00199}00199     \textcolor{keyword}{static} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a8a4760c6a33beb77d1e7a850b44129fc}{min}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& p1, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& p2);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00200}00200 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00207}00207     \textcolor{keyword}{static} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_a77c8619c34dcb2e7b5d9337da0fcfe59}{minf}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& p1, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}}\& p2);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00208}00208 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00215}00215     \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_aa02cee45c2d8aa2d9b7e08dfb6c1dfca}{isColliding}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} firstCorner, \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{Vec2D}} secondCorner) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00216}00216 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00222}00222     \textcolor{keywordtype}{double} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_adf603dcb6f44ff82f3d48df141e11fe7}{computeMagnitude}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00223}00223 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00229}00229     \textcolor{keywordtype}{int} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_abcf3d729b05b3cd93e9eff21c74b89a1}{getX}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00230}00230 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00236}00236     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_ae9d371fdd3817c6e9a3a1ae6ed3fd17d}{setX}}(\textcolor{keywordtype}{int} x);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00237}00237 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00243}00243     \textcolor{keywordtype}{int} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_ae70fbda9cca27b9dc0fe068a38ae5e5e}{getY}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00250}00250     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_graphics_1_1_vec2_d_ac0e752e399ab2f727fe2644540b1208f}{setY}}(\textcolor{keywordtype}{int} y);}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00251}00251 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00252}00252 \textcolor{keyword}{protected}:}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00253}00253     \textcolor{keyword}{virtual} std::ostream\& \mbox{\hyperlink{classns_graphics_1_1_vec2_d_ad416f3698e43099990b3d96d9099c65f}{\_Edit}}(std::ostream\& os = std::cout) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00254}00254 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00255}00255 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00259}00259     \textcolor{keywordtype}{int} m\_x;}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00260}00260 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00264}00264     \textcolor{keywordtype}{int} m\_y;}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00265}00265 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00266}00266 \}; \textcolor{comment}{// class Vec2D}}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00267}00267 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00268}00268 \} \textcolor{comment}{// namespace nsGraphics}}
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00269}00269 }
+\DoxyCodeLine{\Hypertarget{vec2d_8h_source_l00270}00270 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// VEC2D\_H}}
+
+\end{DoxyCode}

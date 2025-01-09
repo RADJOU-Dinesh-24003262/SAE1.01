@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="struct_node" kind="struct" language="C++" prot="public">
+    <compoundname>Node</compoundname>
+    <includes refid="type_8h" local="no">type.h</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="struct_node_1a9cad2079ec0b0727d201af00d854511f" prot="public" static="no" mutable="no">
+        <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref></type>
+        <definition>CPosition Node::Pos</definition>
+        <argsstring></argsstring>
+        <name>Pos</name>
+        <qualifiedname>Node::Pos</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="171" column="15" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="171" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_node_1af8ae2d34f6bd51c23bb0976f44639e2f" prot="public" static="no" mutable="no">
+        <type>size_t</type>
+        <definition>size_t Node::f_cost</definition>
+        <argsstring></argsstring>
+        <name>f_cost</name>
+        <qualifiedname>Node::f_cost</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="172" column="12" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="172" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="struct_node_1a0e58fa24ad68622e5592a391b6e2dd20" prot="public" static="no" mutable="no">
+        <type><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref></type>
+        <definition>CPosition Node::Parent</definition>
+        <argsstring></argsstring>
+        <name>Parent</name>
+        <qualifiedname>Node::Parent</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="173" column="15" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="173" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Structure représentant un noeud dans un graphe dans Movemonster() struct représentant un noeud dans un graphe, avec pos sa position, f_cost un coût estimé et son parent. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="170" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="170" bodyend="174"/>
+    <listofallmembers>
+      <member refid="struct_node_1af8ae2d34f6bd51c23bb0976f44639e2f" prot="public" virt="non-virtual"><scope>Node</scope><name>f_cost</name></member>
+      <member refid="struct_node_1a0e58fa24ad68622e5592a391b6e2dd20" prot="public" virt="non-virtual"><scope>Node</scope><name>Parent</name></member>
+      <member refid="struct_node_1a9cad2079ec0b0727d201af00d854511f" prot="public" virt="non-virtual"><scope>Node</scope><name>Pos</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

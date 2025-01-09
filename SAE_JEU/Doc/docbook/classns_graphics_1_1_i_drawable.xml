@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_graphics_1_1_i_drawable" xml:lang="en-US">
+<title>nsGraphics::IDrawable Class Reference</title>
+<indexterm><primary>nsGraphics::IDrawable</primary></indexterm>
+<para>
+
+<para>Interface pour un objet affichable. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;idrawable.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsGraphics::IDrawable:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_i_drawable__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867"/>virtual <emphasis role="strong">~IDrawable</emphasis> ()=default</para>
+
+<para>Destructeur pour la classe <link linkend="_classns_graphics_1_1_i_drawable">IDrawable</link>. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">draw</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window) const =0</para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Friends    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_class_min_g_l">MinGL</link> &amp; <link linkend="_classns_graphics_1_1_i_drawable_1a9bb3952d4e675a663f2dbbda11e79395">operator&lt;&lt;</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, const <link linkend="_classns_graphics_1_1_i_drawable">IDrawable</link> &amp;drawable)</para>
+
+<para>Surcharge de l&apos;opérateur d&apos;injection. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Interface pour un objet affichable. </para>
+<para>
+Definition at line <link linkend="_idrawable_8h_source_1l00029">29</link> of file <link linkend="_idrawable_8h_source">idrawable.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51"/><section>
+    <title>draw()</title>
+<indexterm><primary>draw</primary><secondary>nsGraphics::IDrawable</secondary></indexterm>
+<indexterm><primary>nsGraphics::IDrawable</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void nsGraphics::IDrawable::draw (<link linkend="_class_min_g_l">MinGL</link> &amp; window) const<computeroutput>[pure virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</para>
+<para>
+Implemented in <link linkend="_class_bg_text_1a01df624a8d498766a9eb579eb18f2326">BgText</link>, <link linkend="_class_bg_text_1a55fdeb5f3e12dcc2926c87f80fddc6c3">BgText</link>, <link linkend="_classns_gui_1_1_sprite_1ac4b29170aef06d46990b68da76480f28">nsGui::Sprite</link>, <link linkend="_classns_gui_1_1_text_1a8b3f43f7582246e916bb2e9403be2180">nsGui::Text</link>, <link linkend="_classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5">nsShape::Rectangle</link>, <link linkend="_classns_shape_1_1_circle_1a03be5cdd7d6a0feaa7d6b0a819389a7a">nsShape::Circle</link>, <link linkend="_classns_shape_1_1_oval_1a93036caafaf315f62676e95dccb5ec65">nsShape::Oval</link>, <link linkend="_classns_shape_1_1_line_1a593ce7771accbbe3bb0f0baf70ece47b">nsShape::Line</link>, and <link linkend="_classns_shape_1_1_triangle_1a5586345f4e15181f994a0d4946f61353">nsShape::Triangle</link>.</para>
+</section>
+</section>
+<section>
+<title>Friends And Related Function Documentation</title>
+<anchor xml:id="_classns_graphics_1_1_i_drawable_1a9bb3952d4e675a663f2dbbda11e79395"/><section>
+    <title>operator&lt;&lt;</title>
+<indexterm><primary>operator&lt;&lt;</primary><secondary>nsGraphics::IDrawable</secondary></indexterm>
+<indexterm><primary>nsGraphics::IDrawable</primary><secondary>operator&lt;&lt;</secondary></indexterm>
+<para><computeroutput><link linkend="_class_min_g_l">MinGL</link> &amp; operator&lt;&lt; (<link linkend="_class_min_g_l">MinGL</link> &amp; window, const <link linkend="_classns_graphics_1_1_i_drawable">IDrawable</link> &amp; drawable)<computeroutput>[friend]</computeroutput></computeroutput></para><para>
+
+<para>Surcharge de l&apos;opérateur d&apos;injection. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>window</entry><entry>
+<para>: Fenêtre dans laquelle injecter l&apos;élément </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>drawable</entry><entry>
+<para>: Elément a injecter </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_idrawable_8h_source_1l00051">51</link> of file <link linkend="_idrawable_8h_source">idrawable.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/<link linkend="_idrawable_8h">idrawable.h</link></section>
+</section>

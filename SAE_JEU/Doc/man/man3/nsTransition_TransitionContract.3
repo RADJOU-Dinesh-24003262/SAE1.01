@@ -1,0 +1,277 @@
+.TH "nsTransition::TransitionContract" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsTransition::TransitionContract \- Une classe contenant des paramètres pour créer une transition\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <transition_contract\&.h>\fP
+.PP
+Inherited by \fBnsTransition::Transition\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTransitionMode\fP { \fBMODE_FINITE\fP, \fBMODE_FINITE_REVERSE\fP, \fBMODE_LOOP\fP, \fBMODE_LOOP_SMOOTH\fP }"
+.br
+.RI "TransitionMode : Liste de tout les modes de transition\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTransitionContract\fP (\fBITransitionable\fP &target, const int &id, const \fBSystemDuration_t\fP &duration, const std::vector< float > &destination, const \fBSystemDuration_t\fP &delay=std::chrono::seconds::zero(), const \fBTransitionMode\fP &transitionMode=TransitionMode::MODE_FINITE)"
+.br
+.RI "Constructeur pour la classe \fBTransitionContract\fP\&. "
+.ti -1c
+.RI "const int & \fBgetId\fP () const"
+.br
+.RI "Retourne l'ID de transition, utilisé par la cible pour connaitre les valeurs a utiliser\&. "
+.ti -1c
+.RI "const \fBITransitionable\fP & \fBgetTarget\fP () const"
+.br
+.RI "Retourne la cible de transition\&. "
+.ti -1c
+.RI "const \fBTransitionMode\fP & \fBgetTransitionMode\fP () const"
+.br
+.RI "Retourne le mode de transition\&. "
+.ti -1c
+.RI "const std::vector< float > & \fBgetBeginning\fP () const"
+.br
+.RI "Retourne les valeurs de départ\&. "
+.ti -1c
+.RI "const std::vector< float > & \fBgetDestination\fP () const"
+.br
+.RI "Retourne les valeurs d'arrivée\&. "
+.ti -1c
+.RI "const \fBSystemDuration_t\fP & \fBgetDuration\fP () const"
+.br
+.RI "Retourne la durée de la transition\&. "
+.ti -1c
+.RI "void \fBsetDestinationCallback\fP (const std::function< void()> &callback)"
+.br
+.RI "Définit la fonction de callback a appeler quand la transition est achevée\&. "
+.in -1c
+.SS "Protected Attributes"
+
+.in +1c
+.ti -1c
+.RI "const int \fBm_id\fP"
+.br
+.RI "m_id : L'ID de la transition "
+.ti -1c
+.RI "\fBITransitionable\fP & \fBm_target\fP"
+.br
+.RI "m_target : Une référence vers une instance d'une classe dérivée d'\fBITransitionable\fP "
+.ti -1c
+.RI "const \fBTransitionMode\fP \fBm_transitionMode\fP"
+.br
+.RI "m_transitionMode : Le mode de transition "
+.ti -1c
+.RI "std::vector< float > \fBm_beginning\fP"
+.br
+.RI "m_beginning : Contient les valeurs de départ "
+.ti -1c
+.RI "const std::vector< float > \fBm_destination\fP"
+.br
+.RI "m_destination : Contient les valeurs d'arrivées "
+.ti -1c
+.RI "\fBSystemDuration_t\fP \fBm_duration\fP"
+.br
+.RI "m_duration : La durée de la transition "
+.ti -1c
+.RI "\fBSystemDuration_t\fP \fBm_delay\fP"
+.br
+.RI "m_delay : Délai a attendre avant que la transition ne démarre "
+.ti -1c
+.RI "std::function< void()> \fBm_destinationCallback\fP"
+.br
+.RI "m_duration : Un pointeur vers la fonction a appeler une fois la transition achevée "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Une classe contenant des paramètres pour créer une transition\&. 
+.PP
+Definition at line \fB27\fP of file \fBtransition_contract\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBnsTransition::TransitionContract::TransitionMode\fP"
+
+.PP
+TransitionMode : Liste de tout les modes de transition\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fIMODE_FINITE \fP\fP
+Ce mode marque la \fBTransition\fP comme terminée une fois achevée 
+.TP
+\fB\fIMODE_FINITE_REVERSE \fP\fP
+Ce mode va jouer la \fBTransition\fP a l'envers une fois achevée, puis marquer la \fBTransition\fP comme étant terminée 
+.TP
+\fB\fIMODE_LOOP \fP\fP
+Ce mode va définir les valeurs de départ a la cible une fois la \fBTransition\fP achevée, puis se rejouer en boucle 
+.TP
+\fB\fIMODE_LOOP_SMOOTH \fP\fP
+Ce mode va jouer la \fBTransition\fP a l'envers une fois achevée, puis se rejouer en boucle 
+.PP
+Definition at line \fB33\fP of file \fBtransition_contract\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsTransition::TransitionContract::TransitionContract (\fBITransitionable\fP & target, const int & id, const \fBSystemDuration_t\fP & duration, const std::vector< float > & destination, const \fBSystemDuration_t\fP & delay = \fCstd::chrono::seconds::zero()\fP, const \fBTransitionMode\fP & transitionMode = \fCTransitionMode::MODE_FINITE\fP)"
+
+.PP
+Constructeur pour la classe \fBTransitionContract\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItarget\fP : Une référence vers une classe dérivée d'\fBITransitionable\fP qui sera la cible 
+.br
+\fIid\fP : L'ID de la transition a appliquer 
+.br
+\fIduration\fP : La durée de la transition 
+.br
+\fIdestination\fP : Les valeurs d'arrivée 
+.br
+\fIdelay\fP : Délai avant que la transition commence (Zéro par défaut) 
+.br
+\fItransitionMode\fP : Mode de transition (\fBTransition\fP finie par défaut) 
+.RE
+.PP
+
+.SH "Member Function Documentation"
+.PP 
+.SS "const std::vector< float > & nsTransition::TransitionContract::getBeginning () const"
+
+.PP
+Retourne les valeurs de départ\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence const vers m_beginning 
+.RE
+.PP
+
+.SS "const std::vector< float > & nsTransition::TransitionContract::getDestination () const"
+
+.PP
+Retourne les valeurs d'arrivée\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence const vers m_destination 
+.RE
+.PP
+
+.SS "const \fBSystemDuration_t\fP & nsTransition::TransitionContract::getDuration () const"
+
+.PP
+Retourne la durée de la transition\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence const vers m_duration 
+.RE
+.PP
+
+.SS "const int & nsTransition::TransitionContract::getId () const"
+
+.PP
+Retourne l'ID de transition, utilisé par la cible pour connaitre les valeurs a utiliser\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence const vers m_id 
+.RE
+.PP
+
+.SS "const \fBITransitionable\fP & nsTransition::TransitionContract::getTarget () const"
+
+.PP
+Retourne la cible de transition\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence const vers m_target 
+.RE
+.PP
+
+.SS "const \fBTransitionMode\fP & nsTransition::TransitionContract::getTransitionMode () const"
+
+.PP
+Retourne le mode de transition\&. 
+.PP
+\fBReturns\fP
+.RS 4
+Une référence const vers m_transitionMode 
+.RE
+.PP
+
+.SS "void nsTransition::TransitionContract::setDestinationCallback (const std::function< void()> & callback)"
+
+.PP
+Définit la fonction de callback a appeler quand la transition est achevée\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcallback\fP : La fonction a appeler 
+.RE
+.PP
+
+.SH "Member Data Documentation"
+.PP 
+.SS "std::vector<float> nsTransition::TransitionContract::m_beginning\fC [protected]\fP"
+
+.PP
+m_beginning : Contient les valeurs de départ 
+.PP
+Definition at line \fB133\fP of file \fBtransition_contract\&.h\fP\&.
+.SS "\fBSystemDuration_t\fP nsTransition::TransitionContract::m_delay\fC [protected]\fP"
+
+.PP
+m_delay : Délai a attendre avant que la transition ne démarre 
+.PP
+Definition at line \fB148\fP of file \fBtransition_contract\&.h\fP\&.
+.SS "const std::vector<float> nsTransition::TransitionContract::m_destination\fC [protected]\fP"
+
+.PP
+m_destination : Contient les valeurs d'arrivées 
+.PP
+Definition at line \fB138\fP of file \fBtransition_contract\&.h\fP\&.
+.SS "std::function<void()> nsTransition::TransitionContract::m_destinationCallback\fC [protected]\fP"
+
+.PP
+m_duration : Un pointeur vers la fonction a appeler une fois la transition achevée 
+.PP
+Definition at line \fB153\fP of file \fBtransition_contract\&.h\fP\&.
+.SS "\fBSystemDuration_t\fP nsTransition::TransitionContract::m_duration\fC [protected]\fP"
+
+.PP
+m_duration : La durée de la transition 
+.PP
+Definition at line \fB143\fP of file \fBtransition_contract\&.h\fP\&.
+.SS "const int nsTransition::TransitionContract::m_id\fC [protected]\fP"
+
+.PP
+m_id : L'ID de la transition Ceci est seulement utile pour la cible, car lui seul sait a quel ID correspond quelles valeurs\&. Ainsi, l'ID n'est jamais utilisée directement par la transition et est seulement passée a la cible\&. 
+.PP
+Definition at line \fB114\fP of file \fBtransition_contract\&.h\fP\&.
+.SS "\fBITransitionable\fP& nsTransition::TransitionContract::m_target\fC [protected]\fP"
+
+.PP
+m_target : Une référence vers une instance d'une classe dérivée d'\fBITransitionable\fP C'est la cible de la transition, sur laquelle vont s'appliquer les modifications de valeurs\&. 
+.PP
+Definition at line \fB121\fP of file \fBtransition_contract\&.h\fP\&.
+.SS "const \fBTransitionMode\fP nsTransition::TransitionContract::m_transitionMode\fC [protected]\fP"
+
+.PP
+m_transitionMode : Le mode de transition Pour plus d'informations, voyez les valeurs de l'énumération TransitionMode\&. 
+.PP
+Definition at line \fB128\fP of file \fBtransition_contract\&.h\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

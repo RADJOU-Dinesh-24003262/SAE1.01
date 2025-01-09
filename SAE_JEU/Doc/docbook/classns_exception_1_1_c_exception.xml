@@ -1,0 +1,229 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_exception_1_1_c_exception" xml:lang="en-US">
+<title>nsException::CException Class Reference</title>
+<indexterm><primary>nsException::CException</primary></indexterm>
+<para>
+
+<para>Classe pour créer des exceptions facilement. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;cexception.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsException::CException:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_exception_1_1_c_exception__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for nsException::CException:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_exception_1_1_c_exception__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_exception_1_1_c_exception_1aeacba2e2180dd8c00c643e1a67cba423">CException</link> (const std::string &amp;Libelle=std::string(), const unsigned CodErr=<link linkend="_namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a0446a2a6f75ad46276a3c6bfbcf06eb3">KNoExc</link>)</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_exception_1_1_c_exception">CException</link>. </para>
+</listitem>
+            <listitem><para><anchor xml:id="_classns_exception_1_1_c_exception_1a8b95a8f59d50a7ff3b67423c83cb8501"/>virtual <emphasis role="strong">~CException</emphasis> () override=default</para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_exception_1_1_c_exception">CException</link>. </para>
+</listitem>
+            <listitem><para>const std::string &amp; <link linkend="_classns_exception_1_1_c_exception_1aef8e3d1a4e22ec7045d7d0b14d8b968a">GetLibelle</link> () const</para>
+
+<para>Récupère le libellé de l&apos;exception. </para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_classns_exception_1_1_c_exception_1adf06d1598420c7b60c1b134bf2a946c2">GetCodErr</link> () const</para>
+
+<para>Récupère le code erreur de l&apos;exception. </para>
+</listitem>
+            <listitem><para>virtual const char * <link linkend="_classns_exception_1_1_c_exception_1a5ef0ababcc3ffc93f70211de1122c9a8">what</link> () const noexcept override</para>
+
+<para>Retourne une chaine de caractère C décrivant l&apos;exception. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>virtual std::ostream &amp; <link linkend="_classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027">_Edit</link> (std::ostream &amp;os=std::cerr) const override</para>
+
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_classns_exception_1_1_c_exception_1a96c2d653703b2879ff8050cc78bc450a">m_Libelle</link></para>
+
+<para>m_Libelle : Libellé de l&apos;exception </para>
+</listitem>
+            <listitem><para>unsigned <link linkend="_classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da">m_CodErr</link></para>
+
+<para>m_CodErr : Code erreur de l&apos;exception </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Classe pour créer des exceptions facilement. </para>
+<para>
+Definition at line <link linkend="_cexception_8h_source_1l00042">42</link> of file <link linkend="_cexception_8h_source">cexception.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_exception_1_1_c_exception_1aeacba2e2180dd8c00c643e1a67cba423"/><section>
+    <title>CException()</title>
+<indexterm><primary>CException</primary><secondary>nsException::CException</secondary></indexterm>
+<indexterm><primary>nsException::CException</primary><secondary>CException</secondary></indexterm>
+<para><computeroutput>nsException::CException::CException (const std::string &amp; Libelle = <computeroutput>std::string()</computeroutput>
+, const unsigned CodErr = <computeroutput><link linkend="_namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a0446a2a6f75ad46276a3c6bfbcf06eb3">KNoExc</link></computeroutput>
+)<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_exception_1_1_c_exception">CException</link>. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>Libelle</entry><entry>
+<para>: Libellé de l&apos;exception </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>CodErr</entry><entry>
+<para>: Code erreur de l&apos;exception </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_cexception_8hpp_source_1l00028">28</link> of file <link linkend="_cexception_8hpp_source">cexception.hpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027"/><section>
+    <title>_Edit()</title>
+<indexterm><primary>_Edit</primary><secondary>nsException::CException</secondary></indexterm>
+<indexterm><primary>nsException::CException</primary><secondary>_Edit</secondary></indexterm>
+<para><computeroutput>std::ostream &amp; nsException::CException::_Edit (std::ostream &amp; os = <computeroutput>std::cerr</computeroutput>
+) const<computeroutput>[override]</computeroutput>, <computeroutput>[protected]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>os</entry><entry>
+<para>: Flux dans lequel injecter </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853">nsUtil::IEditable</link>.</para>
+<para>
+Definition at line <link linkend="_cexception_8cpp_source_1l00019">19</link> of file <link linkend="_cexception_8cpp_source">cexception.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_exception_1_1_c_exception_1adf06d1598420c7b60c1b134bf2a946c2"/><section>
+    <title>GetCodErr()</title>
+<indexterm><primary>GetCodErr</primary><secondary>nsException::CException</secondary></indexterm>
+<indexterm><primary>nsException::CException</primary><secondary>GetCodErr</secondary></indexterm>
+<para><computeroutput>unsigned nsException::CException::GetCodErr ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Récupère le code erreur de l&apos;exception. </para>
+</para>
+<para>
+Definition at line <link linkend="_cexception_8hpp_source_1l00038">38</link> of file <link linkend="_cexception_8hpp_source">cexception.hpp</link>.</para>
+</section>
+<anchor xml:id="_classns_exception_1_1_c_exception_1aef8e3d1a4e22ec7045d7d0b14d8b968a"/><section>
+    <title>GetLibelle()</title>
+<indexterm><primary>GetLibelle</primary><secondary>nsException::CException</secondary></indexterm>
+<indexterm><primary>nsException::CException</primary><secondary>GetLibelle</secondary></indexterm>
+<para><computeroutput>const std::string &amp; nsException::CException::GetLibelle ( ) const<computeroutput>[inline]</computeroutput></computeroutput></para><para>
+
+<para>Récupère le libellé de l&apos;exception. </para>
+</para>
+<para>
+Definition at line <link linkend="_cexception_8hpp_source_1l00033">33</link> of file <link linkend="_cexception_8hpp_source">cexception.hpp</link>.</para>
+</section>
+<anchor xml:id="_classns_exception_1_1_c_exception_1a5ef0ababcc3ffc93f70211de1122c9a8"/><section>
+    <title>what()</title>
+<indexterm><primary>what</primary><secondary>nsException::CException</secondary></indexterm>
+<indexterm><primary>nsException::CException</primary><secondary>what</secondary></indexterm>
+<para><computeroutput>const char * nsException::CException::what ( ) const<computeroutput>[inline]</computeroutput>, <computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput>, <computeroutput>[noexcept]</computeroutput></computeroutput></para><para>
+
+<para>Retourne une chaine de caractère C décrivant l&apos;exception. </para>
+</para>
+<para>
+Definition at line <link linkend="_cexception_8hpp_source_1l00043">43</link> of file <link linkend="_cexception_8hpp_source">cexception.hpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da"/><section>
+    <title>m_CodErr</title>
+<indexterm><primary>m_CodErr</primary><secondary>nsException::CException</secondary></indexterm>
+<indexterm><primary>nsException::CException</primary><secondary>m_CodErr</secondary></indexterm>
+<para><computeroutput>unsigned nsException::CException::m_CodErr<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>m_CodErr : Code erreur de l&apos;exception </para>
+</para>
+<para>
+Definition at line <link linkend="_cexception_8h_source_1l00089">89</link> of file <link linkend="_cexception_8h_source">cexception.h</link>.</para>
+</section>
+<anchor xml:id="_classns_exception_1_1_c_exception_1a96c2d653703b2879ff8050cc78bc450a"/><section>
+    <title>m_Libelle</title>
+<indexterm><primary>m_Libelle</primary><secondary>nsException::CException</secondary></indexterm>
+<indexterm><primary>nsException::CException</primary><secondary>m_Libelle</secondary></indexterm>
+<para><computeroutput>std::string nsException::CException::m_Libelle<computeroutput>[protected]</computeroutput></computeroutput></para><para>
+
+<para>m_Libelle : Libellé de l&apos;exception </para>
+</para>
+<para>
+Definition at line <link linkend="_cexception_8h_source_1l00084">84</link> of file <link linkend="_cexception_8h_source">cexception.h</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/<link linkend="_cexception_8h">cexception.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/<link linkend="_cexception_8cpp">cexception.cpp</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/<link linkend="_cexception_8hpp">cexception.hpp</link></section>
+</section>

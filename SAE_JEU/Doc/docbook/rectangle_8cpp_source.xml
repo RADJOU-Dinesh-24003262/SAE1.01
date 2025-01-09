@@ -1,0 +1,158 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_rectangle_8cpp_source" xml:lang="en-US">
+<title>rectangle.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_rectangle_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_rectangle_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_rectangle_8h">mingl/shape/rectangle.h</link>&quot;</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_macros_8h">mingl/macros.h</link>&quot;</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00013"/>00013 
+<anchor xml:id="_rectangle_8cpp_source_1l00014"/><link linkend="_classns_shape_1_1_rectangle_1a5d5e8052ba7c35001a30ccc7dad669e2">00014</link> <link linkend="_classns_shape_1_1_rectangle_1a5d5e8052ba7c35001a30ccc7dad669e2">nsShape::Rectangle::Rectangle</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;firstPosition,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;secondPosition,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;fillColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;borderColor)
+<anchor xml:id="_rectangle_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;:&#32;<link linkend="_classns_shape_1_1_shape">Shape</link>(fillColor,&#32;borderColor)
+<anchor xml:id="_rectangle_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;,&#32;m_firstPosition(firstPosition)
+<anchor xml:id="_rectangle_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;,&#32;m_secondPosition(secondPosition)
+<anchor xml:id="_rectangle_8cpp_source_1l00018"/>00018 {}&#32;<emphasis role="comment">//&#32;Rectangle()</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00019"/>00019 
+<anchor xml:id="_rectangle_8cpp_source_1l00020"/><link linkend="_classns_shape_1_1_rectangle_1a0c1c16410fb0ee7345449d7bfc9b377b">00020</link> <link linkend="_classns_shape_1_1_rectangle_1a5d5e8052ba7c35001a30ccc7dad669e2">nsShape::Rectangle::Rectangle</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&amp;&#32;width,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&amp;&#32;height,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;fillColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;borderColor)
+<anchor xml:id="_rectangle_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;:&#32;<link linkend="_classns_shape_1_1_shape">Shape</link>(fillColor,&#32;borderColor)
+<anchor xml:id="_rectangle_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;,&#32;m_firstPosition(position)
+<anchor xml:id="_rectangle_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;,&#32;m_secondPosition(<link linkend="_namespacens_graphics">nsGraphics</link>::Vec2D(position.getX()&#32;+&#32;width,&#32;position.getY()&#32;+&#32;height))
+<anchor xml:id="_rectangle_8cpp_source_1l00024"/>00024 {}&#32;<emphasis role="comment">//&#32;Rectangle()</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00025"/>00025 
+<anchor xml:id="_rectangle_8cpp_source_1l00026"/><link linkend="_classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5">00026</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5">nsShape::Rectangle::draw</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00027"/>00027 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_rectangle_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<link linkend="_macros_8h_1a86d500a34c624c2cae56bc25a31b12f3">UNUSED</link>(window);
+<anchor xml:id="_rectangle_8cpp_source_1l00029"/>00029 
+<anchor xml:id="_rectangle_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;règle&#32;la&#32;couleur&#32;du&#32;rectangle</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;inColor&#32;=&#32;getFillColor();
+<anchor xml:id="_rectangle_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;glColor4ub(inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79">getRed</link>(),&#32;inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</link>(),&#32;inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129">getBlue</link>(),&#32;inColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e">getAlpha</link>());
+<anchor xml:id="_rectangle_8cpp_source_1l00033"/>00033 
+<anchor xml:id="_rectangle_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Affiche&#32;un&#32;rectangle&#32;via&#32;la&#32;routine&#32;OpenGL</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;glRecti(m_firstPosition.getX(),&#32;m_firstPosition.getY(),&#32;m_secondPosition.getX(),&#32;m_secondPosition.getY());
+<anchor xml:id="_rectangle_8cpp_source_1l00036"/>00036 
+<anchor xml:id="_rectangle_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(getBorderColor()&#32;!=&#32;nsGraphics::KTransparent)&#32;{
+<anchor xml:id="_rectangle_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;a&#32;une&#32;bordure,&#32;on&#32;l&apos;affiche</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00039"/>00039 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;borderColor&#32;=&#32;getBorderColor();
+<anchor xml:id="_rectangle_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glColor4ub(borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79">getRed</link>(),&#32;borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</link>(),&#32;borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129">getBlue</link>(),&#32;borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e">getAlpha</link>());
+<anchor xml:id="_rectangle_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glLineWidth(1.f);
+<anchor xml:id="_rectangle_8cpp_source_1l00042"/>00042 
+<anchor xml:id="_rectangle_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glBegin(GL_LINE_LOOP);
+<anchor xml:id="_rectangle_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glVertex2i(m_firstPosition.getX(),&#32;m_firstPosition.getY());
+<anchor xml:id="_rectangle_8cpp_source_1l00045"/>00045 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glVertex2i(m_firstPosition.getX(),&#32;m_secondPosition.getY());
+<anchor xml:id="_rectangle_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glVertex2i(m_secondPosition.getX(),&#32;m_secondPosition.getY());
+<anchor xml:id="_rectangle_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glVertex2i(m_secondPosition.getX(),&#32;m_firstPosition.getY());
+<anchor xml:id="_rectangle_8cpp_source_1l00048"/>00048 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glEnd();
+<anchor xml:id="_rectangle_8cpp_source_1l00049"/>00049 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_rectangle_8cpp_source_1l00050"/>00050 }&#32;<emphasis role="comment">//&#32;draw()</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00051"/>00051 
+<anchor xml:id="_rectangle_8cpp_source_1l00052"/><link linkend="_classns_shape_1_1_rectangle_1ad62897a44a3af8dfffca0a8a1fa10825">00052</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_rectangle_1ad62897a44a3af8dfffca0a8a1fa10825">nsShape::Rectangle::getValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;std::vector&lt;float&gt;&#32;&amp;values)
+<anchor xml:id="_rectangle_8cpp_source_1l00053"/>00053 {
+<anchor xml:id="_rectangle_8cpp_source_1l00054"/>00054 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>)&#32;{
+<anchor xml:id="_rectangle_8cpp_source_1l00055"/>00055 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_RGB:
+<anchor xml:id="_rectangle_8cpp_source_1l00056"/>00056 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_fillColor.getRed();
+<anchor xml:id="_rectangle_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_fillColor.getGreen();
+<anchor xml:id="_rectangle_8cpp_source_1l00058"/>00058 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[2]&#32;=&#32;m_fillColor.getBlue();
+<anchor xml:id="_rectangle_8cpp_source_1l00059"/>00059 
+<anchor xml:id="_rectangle_8cpp_source_1l00060"/>00060 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00061"/>00061 
+<anchor xml:id="_rectangle_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_ALPHA:
+<anchor xml:id="_rectangle_8cpp_source_1l00063"/>00063 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_fillColor.getAlpha();
+<anchor xml:id="_rectangle_8cpp_source_1l00064"/>00064 
+<anchor xml:id="_rectangle_8cpp_source_1l00065"/>00065 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00066"/>00066 
+<anchor xml:id="_rectangle_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_RGB:
+<anchor xml:id="_rectangle_8cpp_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_borderColor.getRed();
+<anchor xml:id="_rectangle_8cpp_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_borderColor.getGreen();
+<anchor xml:id="_rectangle_8cpp_source_1l00070"/>00070 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[2]&#32;=&#32;m_borderColor.getBlue();
+<anchor xml:id="_rectangle_8cpp_source_1l00071"/>00071 
+<anchor xml:id="_rectangle_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00073"/>00073 
+<anchor xml:id="_rectangle_8cpp_source_1l00074"/>00074 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_ALPHA:
+<anchor xml:id="_rectangle_8cpp_source_1l00075"/>00075 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_borderColor.getAlpha();
+<anchor xml:id="_rectangle_8cpp_source_1l00076"/>00076 
+<anchor xml:id="_rectangle_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00078"/>00078 
+<anchor xml:id="_rectangle_8cpp_source_1l00079"/>00079 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FIRST_POSITION:
+<anchor xml:id="_rectangle_8cpp_source_1l00080"/>00080 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_firstPosition.getX();
+<anchor xml:id="_rectangle_8cpp_source_1l00081"/>00081 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_firstPosition.getY();
+<anchor xml:id="_rectangle_8cpp_source_1l00082"/>00082 
+<anchor xml:id="_rectangle_8cpp_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00084"/>00084 
+<anchor xml:id="_rectangle_8cpp_source_1l00085"/>00085 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_SECOND_POSITION:
+<anchor xml:id="_rectangle_8cpp_source_1l00086"/>00086 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[0]&#32;=&#32;m_secondPosition.getX();
+<anchor xml:id="_rectangle_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;values[1]&#32;=&#32;m_secondPosition.getY();
+<anchor xml:id="_rectangle_8cpp_source_1l00088"/>00088 
+<anchor xml:id="_rectangle_8cpp_source_1l00089"/>00089 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00090"/>00090 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_rectangle_8cpp_source_1l00091"/>00091 }&#32;<emphasis role="comment">//&#32;getValues()</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00092"/>00092 
+<anchor xml:id="_rectangle_8cpp_source_1l00093"/><link linkend="_classns_shape_1_1_rectangle_1a3b3e28b92f8c22bfe159aea5a91fb5c9">00093</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_rectangle_1a3b3e28b92f8c22bfe159aea5a91fb5c9">nsShape::Rectangle::setValues</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&#32;&amp;<emphasis role="keywordtype">id</emphasis>,&#32;<emphasis role="keyword">const</emphasis>&#32;std::vector&lt;float&gt;&#32;&amp;values)
+<anchor xml:id="_rectangle_8cpp_source_1l00094"/>00094 {
+<anchor xml:id="_rectangle_8cpp_source_1l00095"/>00095 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(<emphasis role="keywordtype">id</emphasis>)&#32;{
+<anchor xml:id="_rectangle_8cpp_source_1l00096"/>00096 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_RGB:
+<anchor xml:id="_rectangle_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setRed(values[0]);
+<anchor xml:id="_rectangle_8cpp_source_1l00098"/>00098 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setGreen(values[1]);
+<anchor xml:id="_rectangle_8cpp_source_1l00099"/>00099 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setBlue(values[2]);
+<anchor xml:id="_rectangle_8cpp_source_1l00100"/>00100 
+<anchor xml:id="_rectangle_8cpp_source_1l00101"/>00101 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00102"/>00102 
+<anchor xml:id="_rectangle_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FILL_COLOR_ALPHA:
+<anchor xml:id="_rectangle_8cpp_source_1l00104"/>00104 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_fillColor.setAlpha(values[0]);
+<anchor xml:id="_rectangle_8cpp_source_1l00105"/>00105 
+<anchor xml:id="_rectangle_8cpp_source_1l00106"/>00106 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00107"/>00107 
+<anchor xml:id="_rectangle_8cpp_source_1l00108"/>00108 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_RGB:
+<anchor xml:id="_rectangle_8cpp_source_1l00109"/>00109 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setRed(values[0]);
+<anchor xml:id="_rectangle_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setGreen(values[1]);
+<anchor xml:id="_rectangle_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setBlue(values[2]);
+<anchor xml:id="_rectangle_8cpp_source_1l00112"/>00112 
+<anchor xml:id="_rectangle_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00114"/>00114 
+<anchor xml:id="_rectangle_8cpp_source_1l00115"/>00115 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_BORDER_COLOR_ALPHA:
+<anchor xml:id="_rectangle_8cpp_source_1l00116"/>00116 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_borderColor.setAlpha(values[0]);
+<anchor xml:id="_rectangle_8cpp_source_1l00117"/>00117 
+<anchor xml:id="_rectangle_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00119"/>00119 
+<anchor xml:id="_rectangle_8cpp_source_1l00120"/>00120 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_FIRST_POSITION:
+<anchor xml:id="_rectangle_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_firstPosition.setX(values[0]);
+<anchor xml:id="_rectangle_8cpp_source_1l00122"/>00122 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_firstPosition.setY(values[1]);
+<anchor xml:id="_rectangle_8cpp_source_1l00123"/>00123 
+<anchor xml:id="_rectangle_8cpp_source_1l00124"/>00124 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00125"/>00125 
+<anchor xml:id="_rectangle_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;TRANSITION_SECOND_POSITION:
+<anchor xml:id="_rectangle_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_secondPosition.setX(values[0]);
+<anchor xml:id="_rectangle_8cpp_source_1l00128"/>00128 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;m_secondPosition.setY(values[1]);
+<anchor xml:id="_rectangle_8cpp_source_1l00129"/>00129 
+<anchor xml:id="_rectangle_8cpp_source_1l00130"/>00130 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">break</emphasis>;
+<anchor xml:id="_rectangle_8cpp_source_1l00131"/>00131 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_rectangle_8cpp_source_1l00132"/>00132 }&#32;<emphasis role="comment">//&#32;setValues()</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00133"/>00133 
+<anchor xml:id="_rectangle_8cpp_source_1l00134"/><link linkend="_classns_shape_1_1_rectangle_1ac86de3402279c3ad0bf6b3869f8e2613">00134</link> <link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>&#32;<link linkend="_classns_shape_1_1_rectangle_1ac86de3402279c3ad0bf6b3869f8e2613">nsShape::Rectangle::operator+</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00135"/>00135 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_rectangle_8cpp_source_1l00136"/>00136 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_shape_1_1_rectangle">Rectangle</link>(m_firstPosition&#32;+&#32;position,&#32;m_secondPosition&#32;+&#32;position,&#32;getFillColor(),&#32;getBorderColor());
+<anchor xml:id="_rectangle_8cpp_source_1l00137"/>00137 }&#32;<emphasis role="comment">//&#32;operator+()</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00138"/>00138 
+<anchor xml:id="_rectangle_8cpp_source_1l00139"/><link linkend="_classns_shape_1_1_rectangle_1af7cbf6d75b4bc8fc718d17177abdd344">00139</link> <link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>&#32;<link linkend="_classns_shape_1_1_rectangle_1af7cbf6d75b4bc8fc718d17177abdd344">nsShape::Rectangle::operator*</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&amp;&#32;f)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00140"/>00140 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_rectangle_8cpp_source_1l00141"/>00141 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_shape_1_1_rectangle">Rectangle</link>(m_firstPosition&#32;*&#32;f,&#32;m_secondPosition&#32;*&#32;f,&#32;getFillColor(),&#32;getBorderColor());
+<anchor xml:id="_rectangle_8cpp_source_1l00142"/>00142 }&#32;<emphasis role="comment">//&#32;operator*()</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00143"/>00143 
+<anchor xml:id="_rectangle_8cpp_source_1l00144"/><link linkend="_classns_shape_1_1_rectangle_1a42c38f27b247f6a411a9d1a8de5ceaa4">00144</link> <emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_rectangle_1a42c38f27b247f6a411a9d1a8de5ceaa4">nsShape::Rectangle::getFirstPosition</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00145"/>00145 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_rectangle_8cpp_source_1l00146"/>00146 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_firstPosition;
+<anchor xml:id="_rectangle_8cpp_source_1l00147"/>00147 }&#32;<emphasis role="comment">//&#32;getFirstPosition()</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00148"/>00148 
+<anchor xml:id="_rectangle_8cpp_source_1l00149"/><link linkend="_classns_shape_1_1_rectangle_1ae6c787fad1bc33f5a4adf8a697a9a581">00149</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_rectangle_1ae6c787fad1bc33f5a4adf8a697a9a581">nsShape::Rectangle::setFirstPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;firstPosition)
+<anchor xml:id="_rectangle_8cpp_source_1l00150"/>00150 {
+<anchor xml:id="_rectangle_8cpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;m_firstPosition&#32;=&#32;firstPosition;
+<anchor xml:id="_rectangle_8cpp_source_1l00152"/>00152 }&#32;<emphasis role="comment">//&#32;setFirstPosition()</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00153"/>00153 
+<anchor xml:id="_rectangle_8cpp_source_1l00154"/><link linkend="_classns_shape_1_1_rectangle_1a276bce487fbd9514fcf8e558382d0276">00154</link> <emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_shape_1_1_rectangle_1a276bce487fbd9514fcf8e558382d0276">nsShape::Rectangle::getSecondPosition</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00155"/>00155 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_rectangle_8cpp_source_1l00156"/>00156 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_secondPosition;
+<anchor xml:id="_rectangle_8cpp_source_1l00157"/>00157 }&#32;<emphasis role="comment">//&#32;getSecondPosition()</emphasis>
+<anchor xml:id="_rectangle_8cpp_source_1l00158"/>00158 
+<anchor xml:id="_rectangle_8cpp_source_1l00159"/><link linkend="_classns_shape_1_1_rectangle_1ada11c6f627048c51dce9544bff758db4">00159</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_shape_1_1_rectangle_1ada11c6f627048c51dce9544bff758db4">nsShape::Rectangle::setSecondPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;secondPosition)
+<anchor xml:id="_rectangle_8cpp_source_1l00160"/>00160 {
+<anchor xml:id="_rectangle_8cpp_source_1l00161"/>00161 &#32;&#32;&#32;&#32;m_secondPosition&#32;=&#32;secondPosition;
+<anchor xml:id="_rectangle_8cpp_source_1l00162"/>00162 }&#32;<emphasis role="comment">//&#32;setSecondPosition()</emphasis>
+</programlisting></section>

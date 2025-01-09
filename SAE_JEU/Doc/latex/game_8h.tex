@@ -1,0 +1,228 @@
+\hypertarget{game_8h}{}\doxysection{/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Jeu/game.h File Reference}
+\label{game_8h}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/Jeu/game.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/Jeu/game.h}}
+
+
+Set of usefull functions for the game.  
+
+
+{\ttfamily \#include \char`\"{}type.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mingl/mingl.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$chrono$>$}\newline
+Include dependency graph for game.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{game_8h_a8307899b579b12370e9fd3e399e42d04}{Move\+Token}} (\mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&Mat, const char \&Move, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos, const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&Param, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Tp1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Tp2)
+\begin{DoxyCompactList}\small\item\em Move the current token according to the character in the 2nd parameter. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game_8h_aeb06160be5949a49243364c546d6abb6}{Is\+Move\+Legal}} (const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&Mat, const char \&Move, const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos, const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&Param)
+\begin{DoxyCompactList}\small\item\em Test if the Move made by the player is legal, this mean if there is no wall and no out of bound. \end{DoxyCompactList}\item 
+std\+::pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ \mbox{\hyperlink{game_8h_ad05a86bb0b8cfd683ef1c60bd003e3ce}{next\+Move}} (const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&Mat, const char \&Move, const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos, const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&Param, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Tp1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Tp2)
+\begin{DoxyCompactList}\small\item\em returns the contents of the next cell and its position in the matrix (even with teleporter) \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{game_8h_ae80d4e86d02b962374473e98b15c6a1c}{Is\+Collectible}} (const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&Mat, const char \&Move, const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos, const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&Param)
+\begin{DoxyCompactList}\small\item\em Test whether the content of the next move\textquotesingle{}s cell is an element. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a1edb4cf36ce7b698766f4456c2977a4b}{Calculate\+Score}} (std\+::vector$<$ char $>$ \&objets, int \&score)
+\begin{DoxyCompactList}\small\item\em Increments the score for each item in the list. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{game_8h_a23ed1f47ce57765cb2fea53223a968fa}\label{game_8h_a23ed1f47ce57765cb2fea53223a968fa}} 
+void {\bfseries Sprite} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, int grid\+\_\+x, int grid\+\_\+y, int pos\+\_\+x, int pos\+\_\+y, int mat\+\_\+x, int mat\+\_\+y, std\+::string sprite)
+\item 
+\mbox{\Hypertarget{game_8h_ad2fa9861d35e6880ba732c4d42d677fb}\label{game_8h_ad2fa9861d35e6880ba732c4d42d677fb}} 
+void {\bfseries Display\+Grid} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&mat, std\+::tuple$<$ int, int $>$ Screen\+\_\+size)
+\item 
+\mbox{\Hypertarget{game_8h_a530e82365352a76131d36a602a978087}\label{game_8h_a530e82365352a76131d36a602a978087}} 
+void {\bfseries MenuP} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
+\item 
+\mbox{\Hypertarget{game_8h_ac9f54c7b2df4106d5bf5f209f2c1741d}\label{game_8h_ac9f54c7b2df4106d5bf5f209f2c1741d}} 
+void {\bfseries Options} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
+\item 
+\mbox{\Hypertarget{game_8h_ac7f92aebec3b6b2e6d0b4801d092c04d}\label{game_8h_ac7f92aebec3b6b2e6d0b4801d092c04d}} 
+void {\bfseries Credits} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
+\item 
+\mbox{\Hypertarget{game_8h_a4cf82823849638598365d899b482f17a}\label{game_8h_a4cf82823849638598365d899b482f17a}} 
+void {\bfseries Pause} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
+\item 
+\mbox{\Hypertarget{game_8h_a3555e46045d63ef37f994f3c358945fb}\label{game_8h_a3555e46045d63ef37f994f3c358945fb}} 
+void {\bfseries Game\+Loop} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$clickablepool, \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} Mat, int menuid, unsigned Party\+Num, bool Key\+\_\+\+UP, bool Key\+\_\+\+DOWN, bool Key\+\_\+\+RIGHT, bool Key\+\_\+\+LEFT, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} param, bool Victory, unsigned KMax\+Party\+Num, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+Player1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+Player2, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+TP1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+TP2, bool Player1\+Turn, std\+::pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ N\+\_\+move, std\+::vector$<$ char $>$ objet\+J1, std\+::vector$<$ char $>$ objet\+J2, int score\+J1, int score\+J2, std\+::vector$<$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ Pos\+Monster)
+\item 
+int \mbox{\hyperlink{game_8h_a0b1d64ee76933ef8f007f1208cb869a7}{ppal}} ()
+\begin{DoxyCompactList}\small\item\em new main \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Set of usefull functions for the game. 
+
+\begin{DoxyAuthor}{Author}
+Alain Casali 
+
+Marc Laporte 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+18 décembre 2018 
+\end{DoxyDate}
+
+
+Definition in file \mbox{\hyperlink{game_8h_source}{game.\+h}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game_8h_a1edb4cf36ce7b698766f4456c2977a4b}\label{game_8h_a1edb4cf36ce7b698766f4456c2977a4b}} 
+\index{game.h@{game.h}!CalculateScore@{CalculateScore}}
+\index{CalculateScore@{CalculateScore}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{CalculateScore()}{CalculateScore()}}
+{\footnotesize\ttfamily void Calculate\+Score (\begin{DoxyParamCaption}\item[{std\+::vector$<$ char $>$ \&}]{objets,  }\item[{int \&}]{score }\end{DoxyParamCaption})}
+
+
+
+Increments the score for each item in the list. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em The} & list of items the player has collected \\
+\hline
+\mbox{\texttt{ in}}  & {\em The} & score increases with each element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_ae80d4e86d02b962374473e98b15c6a1c}\label{game_8h_ae80d4e86d02b962374473e98b15c6a1c}} 
+\index{game.h@{game.h}!IsCollectible@{IsCollectible}}
+\index{IsCollectible@{IsCollectible}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{IsCollectible()}{IsCollectible()}}
+{\footnotesize\ttfamily bool Is\+Collectible (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{Mat,  }\item[{const char \&}]{Move,  }\item[{const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Pos,  }\item[{const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&}]{Param }\end{DoxyParamCaption})}
+
+
+
+Test whether the content of the next move\textquotesingle{}s cell is an element. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Mat} & the matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em Move} & the key pressed by the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em Pos} & the player\textquotesingle{}s position \\
+\hline
+\mbox{\texttt{ in}}  & {\em The} & Parameter extract from the .yaml file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the next move\textquotesingle{}s cell is an element 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_aeb06160be5949a49243364c546d6abb6}\label{game_8h_aeb06160be5949a49243364c546d6abb6}} 
+\index{game.h@{game.h}!IsMoveLegal@{IsMoveLegal}}
+\index{IsMoveLegal@{IsMoveLegal}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{IsMoveLegal()}{IsMoveLegal()}}
+{\footnotesize\ttfamily bool Is\+Move\+Legal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{Mat,  }\item[{const char \&}]{Move,  }\item[{const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Pos,  }\item[{const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&}]{Param }\end{DoxyParamCaption})}
+
+
+
+Test if the Move made by the player is legal, this mean if there is no wall and no out of bound. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Mat} & the matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em Move} & the key pressed by the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em Pos} & the player\textquotesingle{}s position \\
+\hline
+\mbox{\texttt{ in}}  & {\em The} & Parameter extract from the .yaml file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if the Move can be made 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a8307899b579b12370e9fd3e399e42d04}\label{game_8h_a8307899b579b12370e9fd3e399e42d04}} 
+\index{game.h@{game.h}!MoveToken@{MoveToken}}
+\index{MoveToken@{MoveToken}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{MoveToken()}{MoveToken()}}
+{\footnotesize\ttfamily void Move\+Token (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{Mat,  }\item[{const char \&}]{Move,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Pos,  }\item[{const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&}]{Param,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Tp1,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Tp2 }\end{DoxyParamCaption})}
+
+
+
+Move the current token according to the character in the 2nd parameter. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in,out}}  & {\em Mat} & the matrix before and after the move \\
+\hline
+\mbox{\texttt{ in}}  & {\em Move} & the key pressed by the user \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em Pos} & the player\textquotesingle{}s position before and after the move \\
+\hline
+\mbox{\texttt{ in}}  & {\em The} & Parameter extract from the .yaml file \\
+\hline
+\mbox{\texttt{ out}}  & {\em Tp1} & position of the first Teleporter in Mat \\
+\hline
+\mbox{\texttt{ out}}  & {\em Tp2} & position of the second Teleporter in Mat \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_ad05a86bb0b8cfd683ef1c60bd003e3ce}\label{game_8h_ad05a86bb0b8cfd683ef1c60bd003e3ce}} 
+\index{game.h@{game.h}!nextMove@{nextMove}}
+\index{nextMove@{nextMove}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{nextMove()}{nextMove()}}
+{\footnotesize\ttfamily std\+::pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ next\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{Mat,  }\item[{const char \&}]{Move,  }\item[{const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Pos,  }\item[{const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&}]{Param,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Tp1,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Tp2 }\end{DoxyParamCaption})}
+
+
+
+returns the contents of the next cell and its position in the matrix (even with teleporter) 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em Mat} & the matrix \\
+\hline
+\mbox{\texttt{ in}}  & {\em Move} & the key pressed by the user \\
+\hline
+\mbox{\texttt{ in}}  & {\em Pos} & the player\textquotesingle{}s position \\
+\hline
+\mbox{\texttt{ in}}  & {\em The} & Parameter extract from the .yaml file \\
+\hline
+\mbox{\texttt{ in}}  & {\em The} & position of teleporter number 1 \\
+\hline
+\mbox{\texttt{ in}}  & {\em The} & position of teleporter number 2 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\texorpdfstring{$<$}{<}content of the cell \texorpdfstring{$<$}{<}pos x, pos y\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a0b1d64ee76933ef8f007f1208cb869a7}\label{game_8h_a0b1d64ee76933ef8f007f1208cb869a7}} 
+\index{game.h@{game.h}!ppal@{ppal}}
+\index{ppal@{ppal}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{ppal()}{ppal()}}
+{\footnotesize\ttfamily int ppal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+new main 
+
+\begin{DoxyReturn}{Returns}
+0 if everything is OK 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00427}{427}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=261pt]{game_8h_a0b1d64ee76933ef8f007f1208cb869a7_cgraph}
+\end{center}
+\end{figure}

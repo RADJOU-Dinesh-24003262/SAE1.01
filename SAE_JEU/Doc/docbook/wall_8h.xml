@@ -1,0 +1,129 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_wall_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h</primary></indexterm>
+<para>
+
+<para>Affiche le sprite d&apos;un mur. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;mingl/shape/rectangle.h&quot;
+</programlisting>Include dependency graph for wall.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="wall_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="wall_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_wall_8h_1a9c385c3b12f177f9de1377aa883ba224">Wall</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, int Circle1, int Circle2, int mat_x, int mat_y)</para>
+
+<para>cette fonction dessine un mur </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Affiche le sprite d&apos;un mur. </para>
+
+<para>Affiche le sprite d&apos;un bouton.</para>
+
+<para><formalpara><title>Author</title>
+
+<para>Matisse Quilliec </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>December 2024 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0</para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>Matisse Quilliec </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Janvier 2025 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_wall_8h_source">wall.h</link>.</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_wall_8h_1a9c385c3b12f177f9de1377aa883ba224"/><section>
+    <title>Wall()</title>
+<indexterm><primary>Wall</primary><secondary>wall.h</secondary></indexterm>
+<indexterm><primary>wall.h</primary><secondary>Wall</secondary></indexterm>
+<para><computeroutput>void Wall (<link linkend="_class_min_g_l">MinGL</link> &amp; window, int Circle1, int Circle2, int mat_x, int mat_y)</computeroutput></para><para>
+
+<para>cette fonction dessine un mur </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>Référence à l&apos;objet <link linkend="_class_min_g_l">MinGL</link> pour dessiner la forme. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Circle1</entry><entry>
+<para>Position x du centre du mur. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Circle2</entry><entry>
+<para>Position y du centre du mur. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mat_x</entry><entry>
+<para>Facteur d&apos;échelle pour la dimension horizontale du mur. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mat_y</entry><entry>
+<para>Facteur d&apos;échelle pour la dimension verticale du mur. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_wall_8h_source_1l00024">24</link> of file <link linkend="_wall_8h_source">wall.h</link>.</para>
+</section>
+</section>
+</section>

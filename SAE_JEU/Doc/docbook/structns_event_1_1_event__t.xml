@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structns_event_1_1_event__t" xml:lang="en-US">
+<title>nsEvent::Event_t Struct Reference</title>
+<indexterm><primary>nsEvent::Event_t</primary></indexterm>
+<para>
+
+<para>Possède des données pour un événement. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;event.hpp&gt;</computeroutput>
+</para>
+Collaboration diagram for nsEvent::Event_t:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="structns_event_1_1_event__t__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72">EventType_t</link> <link linkend="_structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c">eventType</link></para>
+</listitem>
+            <listitem><para><link linkend="_unionns_event_1_1_event_data__t">EventData_t</link> <link linkend="_structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8">eventData</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Possède des données pour un événement. </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00062">62</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8"/><section>
+    <title>eventData</title>
+<indexterm><primary>eventData</primary><secondary>nsEvent::Event_t</secondary></indexterm>
+<indexterm><primary>nsEvent::Event_t</primary><secondary>eventData</secondary></indexterm>
+<para><computeroutput><link linkend="_unionns_event_1_1_event_data__t">EventData_t</link> nsEvent::Event_t::eventData</computeroutput></para>
+<para>Données de l&apos;événement </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00064">64</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<anchor xml:id="_structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c"/><section>
+    <title>eventType</title>
+<indexterm><primary>eventType</primary><secondary>nsEvent::Event_t</secondary></indexterm>
+<indexterm><primary>nsEvent::Event_t</primary><secondary>eventType</secondary></indexterm>
+<para><computeroutput><link linkend="_namespacens_event_1a6e501b1114a041d127a56f51c66ada72">EventType_t</link> nsEvent::Event_t::eventType</computeroutput></para>
+<para>Type de l&apos;événement </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00063">63</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/<link linkend="_event_8hpp">event.hpp</link></section>
+</section>

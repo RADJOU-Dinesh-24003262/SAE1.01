@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_68def87b39a4c02963117a60aff47409" kind="dir">
+    <compoundname>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition</compoundname>
+    <innerfile refid="transition_8cpp">transition.cpp</innerfile>
+    <innerfile refid="transition__contract_8cpp">transition_contract.cpp</innerfile>
+    <innerfile refid="transition__engine_8cpp">transition_engine.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition/"/>
+  </compounddef>
+</doxygen>

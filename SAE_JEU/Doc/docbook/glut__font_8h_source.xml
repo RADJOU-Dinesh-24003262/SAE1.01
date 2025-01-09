@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_glut__font_8h_source" xml:lang="en-US">
+<title>glut_font.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/glut_font.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_glut__font_8h_source_1l00001"/>00001 
+<anchor xml:id="_glut__font_8h_source_1l00009"/>00009 <emphasis role="preprocessor">#ifndef&#32;GLUT_FONTS_H</emphasis>
+<anchor xml:id="_glut__font_8h_source_1l00010"/>00010 <emphasis role="preprocessor">#define&#32;GLUT_FONTS_H</emphasis>
+<anchor xml:id="_glut__font_8h_source_1l00011"/>00011 
+<anchor xml:id="_glut__font_8h_source_1l00012"/>00012 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_gui">nsGui</link>
+<anchor xml:id="_glut__font_8h_source_1l00013"/>00013 {
+<anchor xml:id="_glut__font_8h_source_1l00014"/>00014 
+<anchor xml:id="_glut__font_8h_source_1l00019"/><link linkend="_classns_gui_1_1_glut_font">00019</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_gui_1_1_glut_font">GlutFont</link>
+<anchor xml:id="_glut__font_8h_source_1l00020"/>00020 {
+<anchor xml:id="_glut__font_8h_source_1l00021"/>00021 
+<anchor xml:id="_glut__font_8h_source_1l00022"/>00022 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_glut__font_8h_source_1l00026"/><link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce">00026</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">enum</emphasis>&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce">GlutFonts</link>
+<anchor xml:id="_glut__font_8h_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_glut__font_8h_source_1l00028"/><link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea9c75a2a144604631db2af2ae284a9d82">00028</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea9c75a2a144604631db2af2ae284a9d82">BITMAP_8_BY_13</link>,&#32;
+<anchor xml:id="_glut__font_8h_source_1l00029"/><link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceafc7dc7274d17bd604f3cf91412650df0">00029</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceafc7dc7274d17bd604f3cf91412650df0">BITMAP_9_BY_15</link>,&#32;
+<anchor xml:id="_glut__font_8h_source_1l00030"/><link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea35de9b7dc33c5aa8672423552fe83b38">00030</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea35de9b7dc33c5aa8672423552fe83b38">BITMAP_TIMES_ROMAN_10</link>,&#32;
+<anchor xml:id="_glut__font_8h_source_1l00031"/><link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0">00031</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0">BITMAP_TIMES_ROMAN_24</link>,&#32;
+<anchor xml:id="_glut__font_8h_source_1l00032"/><link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceae127744cea36edcff85327da64221d14">00032</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceae127744cea36edcff85327da64221d14">BITMAP_HELVETICA_10</link>,&#32;
+<anchor xml:id="_glut__font_8h_source_1l00033"/><link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceab87b397237206af607190619163ec1e6">00033</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceab87b397237206af607190619163ec1e6">BITMAP_HELVETICA_12</link>,&#32;
+<anchor xml:id="_glut__font_8h_source_1l00034"/><link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea11c7a92d3233d33d71de4ca2f0e27437">00034</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea11c7a92d3233d33d71de4ca2f0e27437">BITMAP_HELVETICA_18</link>,&#32;
+<anchor xml:id="_glut__font_8h_source_1l00035"/>00035 &#32;&#32;&#32;&#32;};
+<anchor xml:id="_glut__font_8h_source_1l00036"/>00036 
+<anchor xml:id="_glut__font_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_glut_font_1ac8e33c6ba8a95edcdcee4dd4d1a283ac">GlutFont</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce">GlutFonts</link>&amp;&#32;font);
+<anchor xml:id="_glut__font_8h_source_1l00043"/>00043 
+<anchor xml:id="_glut__font_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>*&#32;<link linkend="_classns_gui_1_1_glut_font_1a10921b4183b246e9cfdebaca6b9e91a2">convertForGlut</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_glut__font_8h_source_1l00050"/>00050 
+<anchor xml:id="_glut__font_8h_source_1l00051"/>00051 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_glut__font_8h_source_1l00055"/>00055 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce">GlutFonts</link>&#32;m_font;
+<anchor xml:id="_glut__font_8h_source_1l00056"/>00056 
+<anchor xml:id="_glut__font_8h_source_1l00057"/>00057 };&#32;<emphasis role="comment">//&#32;class&#32;GlutFont</emphasis>
+<anchor xml:id="_glut__font_8h_source_1l00058"/>00058 
+<anchor xml:id="_glut__font_8h_source_1l00059"/>00059 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsGui</emphasis>
+<anchor xml:id="_glut__font_8h_source_1l00060"/>00060 
+<anchor xml:id="_glut__font_8h_source_1l00061"/>00061 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;GLUT_FONTS_H</emphasis>
+</programlisting></section>

@@ -1,0 +1,32 @@
+\hypertarget{event__manager_8cpp_source}{}\doxysection{event\+\_\+manager.\+cpp}
+\label{event__manager_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/event/event\_manager.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/event/event\_manager.cpp}}
+\mbox{\hyperlink{event__manager_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{event__manager_8h}{mingl/event/event\_manager.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00013}\mbox{\hyperlink{classns_event_1_1_event_manager_a5a3119d969a296b8e94f223171fdf2e6}{00013}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{classns_event_1_1_event_manager_a5a3119d969a296b8e94f223171fdf2e6}{nsEvent::EventManager::hasEvent}}()}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00014}00014 \{}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00015}00015     \textcolor{keywordflow}{return} m\_eventQueue.size() > 0;}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00016}00016 \} \textcolor{comment}{// hasEvent()}}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00018}\mbox{\hyperlink{classns_event_1_1_event_manager_a1eff8398ddb0a25da82e52a1067b85b5}{00018}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_event_1_1_event_manager_a1eff8398ddb0a25da82e52a1067b85b5}{nsEvent::EventManager::pushEvent}}(\textcolor{keyword}{const} \mbox{\hyperlink{structns_event_1_1_event__t}{Event\_t}}\& event)}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00020}00020     m\_eventQueue.push(event);}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00021}00021 \} \textcolor{comment}{// pushEvent()}}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00022}00022 }
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00023}\mbox{\hyperlink{classns_event_1_1_event_manager_adb00a0a006f4caa976471e74bf99cdc9}{00023}} \textcolor{keyword}{const} \mbox{\hyperlink{structns_event_1_1_event__t}{nsEvent::Event\_t}} \mbox{\hyperlink{classns_event_1_1_event_manager_adb00a0a006f4caa976471e74bf99cdc9}{nsEvent::EventManager::pullEvent}}()}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00024}00024 \{}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00025}00025     \textcolor{comment}{// Copy the first element and then remove it from the queue}}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00026}00026     \textcolor{keyword}{const} \mbox{\hyperlink{structns_event_1_1_event__t}{Event\_t}} \textcolor{keyword}{event} = m\_eventQueue.front();}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00027}00027     m\_eventQueue.pop();}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00028}00028     \textcolor{keywordflow}{return} event;}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00029}00029 \} \textcolor{comment}{// pullEvent()}}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00031}\mbox{\hyperlink{classns_event_1_1_event_manager_adbc5ced9a9435f61f58436ff613632b4}{00031}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_event_1_1_event_manager_adbc5ced9a9435f61f58436ff613632b4}{nsEvent::EventManager::clearEvents}}()}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00032}00032 \{}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00033}00033     \textcolor{keywordflow}{while} (!m\_eventQueue.empty())}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00034}00034         m\_eventQueue.pop();}
+\DoxyCodeLine{\Hypertarget{event__manager_8cpp_source_l00035}00035 \} \textcolor{comment}{// clearEvents()}}
+
+\end{DoxyCode}

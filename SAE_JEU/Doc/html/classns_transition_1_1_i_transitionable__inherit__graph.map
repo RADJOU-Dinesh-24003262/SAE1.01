@@ -1,0 +1,11 @@
+<map id="nsTransition::ITransitionable" name="nsTransition::ITransitionable">
+<area shape="rect" id="node1" title="Une classe abstraite pour n&#39;importe quelle élément pouvant effectuer une transition entre deux états." alt="" coords="5,183,211,209"/>
+<area shape="rect" id="node2" href="$class_bg_text.html" title=" " alt="" coords="301,5,367,32"/>
+<area shape="rect" id="node3" href="$classns_gui_1_1_sprite.html" title="Permet de charger une image depuis un format créé pour l&#39;occasion, le .si2." alt="" coords="281,56,387,83"/>
+<area shape="rect" id="node4" href="$classns_gui_1_1_text.html" title="Gère l&#39;affichage d&#39;un texte." alt="" coords="287,107,381,133"/>
+<area shape="rect" id="node5" href="$classns_shape_1_1_circle.html" title="Classe représentant un cercle." alt="" coords="273,157,395,184"/>
+<area shape="rect" id="node6" href="$classns_shape_1_1_line.html" title="Classe représentant une ligne." alt="" coords="278,208,390,235"/>
+<area shape="rect" id="node7" href="$classns_shape_1_1_oval.html" title="Classe représentant un Oval." alt="" coords="277,259,391,285"/>
+<area shape="rect" id="node8" href="$classns_shape_1_1_rectangle.html" title="Classe représentant un rectangle." alt="" coords="259,309,409,336"/>
+<area shape="rect" id="node9" href="$classns_shape_1_1_triangle.html" title="Classe représentant un triangle." alt="" coords="265,360,403,387"/>
+</map>

@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="unionns_event_1_1_event_data__t" kind="union" language="C++" prot="public">
+    <compoundname>nsEvent::EventData_t</compoundname>
+    <includes refid="event_8hpp" local="no">event.hpp</includes>
+      <sectiondef kind="public-attrib">
+      <memberdef kind="variable" id="unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc" prot="public" static="no" mutable="no">
+        <type><ref refid="structns_event_1_1_mouse_click_data__t" kindref="compound">MouseClickData_t</ref></type>
+        <definition>MouseClickData_t nsEvent::EventData_t::clickData</definition>
+        <argsstring></argsstring>
+        <name>clickData</name>
+        <qualifiedname>nsEvent::EventData_t::clickData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Données pour un événement MouseClick </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="54" column="22" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="54" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" prot="public" static="no" mutable="no">
+        <type><ref refid="structns_event_1_1_mouse_move_data__t" kindref="compound">MouseMoveData_t</ref></type>
+        <definition>MouseMoveData_t nsEvent::EventData_t::moveData</definition>
+        <argsstring></argsstring>
+        <name>moveData</name>
+        <qualifiedname>nsEvent::EventData_t::moveData</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+<para>Données pour un événment MouseMove/MouseDrag </para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="55" column="21" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="55" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Union contenant les données d&apos;un événement. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <collaborationgraph>
+      <node id="1">
+        <label>nsEvent::EventData_t</label>
+        <link refid="unionns_event_1_1_event_data__t"/>
+        <childnode refid="2" relation="usage">
+          <edgelabel>clickData</edgelabel>
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>moveData</edgelabel>
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nsEvent::MouseClickData_t</label>
+        <link refid="structns_event_1_1_mouse_click_data__t"/>
+      </node>
+      <node id="3">
+        <label>nsEvent::MouseMoveData_t</label>
+        <link refid="structns_event_1_1_mouse_move_data__t"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="53" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="53" bodyend="56"/>
+    <listofallmembers>
+      <member refid="unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc" prot="public" virt="non-virtual"><scope>nsEvent::EventData_t</scope><name>clickData</name></member>
+      <member refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" prot="public" virt="non-virtual"><scope>nsEvent::EventData_t</scope><name>moveData</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

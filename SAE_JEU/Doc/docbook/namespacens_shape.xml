@@ -1,0 +1,44 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacens_shape" xml:lang="en-US">
+<title>nsShape Namespace Reference</title>
+<indexterm><primary>nsShape</primary></indexterm>
+<para>
+
+<para>Espace de nom pour différentes formes. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_shape_1_1_circle">Circle</link></para>
+
+<para>Classe représentant un cercle. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_shape_1_1_line">Line</link></para>
+
+<para>Classe représentant une ligne. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_shape_1_1_oval">Oval</link></para>
+
+<para>Classe représentant un <link linkend="_classns_shape_1_1_oval">Oval</link>. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_shape_1_1_rectangle">Rectangle</link></para>
+
+<para>Classe représentant un rectangle. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_shape_1_1_shape">Shape</link></para>
+
+<para>Classe de base pour une forme. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_shape_1_1_triangle">Triangle</link></para>
+
+<para>Classe représentant un triangle. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Espace de nom pour différentes formes. </para>
+</section>
+</section>

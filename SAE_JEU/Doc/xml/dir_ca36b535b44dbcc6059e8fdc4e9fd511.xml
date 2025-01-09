@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_ca36b535b44dbcc6059e8fdc4e9fd511" kind="dir">
+    <compoundname>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples</compoundname>
+    <innerdir refid="dir_3f60e2185dae4bed229c4b41fe4c0018">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/00-Boilerplate</innerdir>
+    <innerdir refid="dir_650e47c632ab91d6d0177286122f0948">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes</innerdir>
+    <innerdir refid="dir_b8e88759b6f07db0054c9e7a17f2bf73">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte</innerdir>
+    <innerdir refid="dir_3bee9b599783c1dbbfda24553e5b7690">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier</innerdir>
+    <innerdir refid="dir_e486342ecde50baaea91a4e96ab2916d">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris</innerdir>
+    <innerdir refid="dir_f7417cbdb8b53f12fa076e8bcb2e07ff">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition</innerdir>
+    <innerdir refid="dir_3c1b0828f67bf7d432174f89c06032c5">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite</innerdir>
+    <innerdir refid="dir_ecff7987652ed959180be81717f3c8bc">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio</innerdir>
+    <innerdir refid="dir_137739a7e658bc7b78cf3733c3fbc476">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable</innerdir>
+    <innerdir refid="dir_a30337348e1081de8e18835606f4e1d8">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,88 @@
+.TH "nsTransition::TransitionEngine" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsTransition::TransitionEngine \- Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <transition_engine\&.h>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBupdate\fP (const std::chrono::microseconds &delta)"
+.br
+.RI "Met a jour toutes les transitions dans la liste\&. "
+.ti -1c
+.RI "void \fBstartContract\fP (const \fBTransitionContract\fP &contract)"
+.br
+.RI "Démarre un contrat\&. "
+.ti -1c
+.RI "void \fBfinishEveryTransition\fP (const \fBTransition::TransitionFinishModes\fP &finishMode=\fBTransition::FINISH_DESTINATION\fP)"
+.br
+.RI "Termine toutes les transitions de la liste\&. "
+.ti -1c
+.RI "void \fBfinishEveryTransitionOfTarget\fP (const \fBITransitionable\fP &transitionable, const \fBTransition::TransitionFinishModes\fP &finishMode=\fBTransition::FINISH_DESTINATION\fP)"
+.br
+.RI "Termine toutes les transitions d'une certaine cible de la liste\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois\&. 
+.PP
+Definition at line \fB27\fP of file \fBtransition_engine\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void nsTransition::TransitionEngine::finishEveryTransition (const \fBTransition::TransitionFinishModes\fP & finishMode = \fC\fBTransition::FINISH_DESTINATION\fP\fP)"
+
+.PP
+Termine toutes les transitions de la liste\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfinishMode\fP : finishMode : Mode utilisé pour finir cette \fBTransition\fP (Valeurs d'arrivé par défaut) 
+.RE
+.PP
+
+.SS "void nsTransition::TransitionEngine::finishEveryTransitionOfTarget (const \fBITransitionable\fP & transitionable, const \fBTransition::TransitionFinishModes\fP & finishMode = \fC\fBTransition::FINISH_DESTINATION\fP\fP)"
+
+.PP
+Termine toutes les transitions d'une certaine cible de la liste\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fItransitionable\fP : La cible où arrêter les transitions 
+.br
+\fIfinishMode\fP : finishMode : Mode utilisé pour finir cette \fBTransition\fP (Valeurs d'arrivé par défaut) 
+.RE
+.PP
+
+.SS "void nsTransition::TransitionEngine::startContract (const \fBTransitionContract\fP & contract)"
+
+.PP
+Démarre un contrat\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIcontract\fP : Contrat de transition a démarrer 
+.RE
+.PP
+
+.SS "void nsTransition::TransitionEngine::update (const std::chrono::microseconds & delta)"
+
+.PP
+Met a jour toutes les transitions dans la liste\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIdelta\fP : Temps que la dernière image a mis pour faire son rendu
+.RE
+.PP
+Cette fonction rajoute la valeur de delta aux temps écoulés des différentes transitions, et supprime les transitions terminées de la liste\&. 
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

@@ -1,0 +1,135 @@
+\hypertarget{sprite_8h}{}\doxysection{/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/gui/sprite.h File Reference}
+\label{sprite_8h}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/gui/sprite.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/gui/sprite.h}}
+
+
+Image pouvant être chargé depuis un fichier.  
+
+
+{\ttfamily \#include $<$cstdint$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include \char`\"{}../graphics/idrawable.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../graphics/rgbacolor.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../graphics/vec2d.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}../transition/itransitionable.\+h\char`\"{}}\newline
+Include dependency graph for sprite.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprite_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{sprite_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classns_gui_1_1_sprite}{ns\+Gui\+::\+Sprite}}
+\begin{DoxyCompactList}\small\item\em Permet de charger une image depuis un format créé pour l\textquotesingle{}occasion, le .si2. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+namespace \mbox{\hyperlink{namespacens_gui}{ns\+Gui}}
+\begin{DoxyCompactList}\small\item\em Espace de nom pour des éléments d\textquotesingle{}interface complexes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{sprite_8h_a8c61e64b8675498cee79c59d3f8131e2}{magic}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{sprite_8h_a7815e2193b5dea24aae35f568006be9a}{headmagic}}
+\item 
+uint16\+\_\+t \mbox{\hyperlink{sprite_8h_a6ac1f454a7d4e4d64b7ff8ca39ac5920}{file\+Version}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{sprite_8h_af73d2febf3dc338c7c8f42922aa7131c}{pixel\+Count}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{sprite_8h_a410460a0a75462ae38c5c9daf5fb06ed}{row\+Size}}
+\item 
+uint32\+\_\+t \mbox{\hyperlink{sprite_8h_a43e5468a3d445613419004493d2ffac8}{datamagic}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Image pouvant être chargé depuis un fichier. 
+
+\begin{DoxyAuthor}{Author}
+Alexandre Sollier 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+Janvier 2020 
+\end{DoxyDate}
+\begin{DoxyVersion}{Version}
+1.\+0 
+\end{DoxyVersion}
+
+
+Definition in file \mbox{\hyperlink{sprite_8h_source}{sprite.\+h}}.
+
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{sprite_8h_a43e5468a3d445613419004493d2ffac8}\label{sprite_8h_a43e5468a3d445613419004493d2ffac8}} 
+\index{sprite.h@{sprite.h}!datamagic@{datamagic}}
+\index{datamagic@{datamagic}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{datamagic}{datamagic}}
+{\footnotesize\ttfamily uint32\+\_\+t datamagic}
+
+Le magic number de la section données, doit toujours être \char`\"{}\+DATA\char`\"{} 
+
+Definition at line \mbox{\hyperlink{sprite_8h_source_l00005}{5}} of file \mbox{\hyperlink{sprite_8h_source}{sprite.\+h}}.
+
+\mbox{\Hypertarget{sprite_8h_a6ac1f454a7d4e4d64b7ff8ca39ac5920}\label{sprite_8h_a6ac1f454a7d4e4d64b7ff8ca39ac5920}} 
+\index{sprite.h@{sprite.h}!fileVersion@{fileVersion}}
+\index{fileVersion@{fileVersion}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{fileVersion}{fileVersion}}
+{\footnotesize\ttfamily uint16\+\_\+t file\+Version}
+
+La version du format stockée par le fichier 
+
+Definition at line \mbox{\hyperlink{sprite_8h_source_l00002}{2}} of file \mbox{\hyperlink{sprite_8h_source}{sprite.\+h}}.
+
+\mbox{\Hypertarget{sprite_8h_a7815e2193b5dea24aae35f568006be9a}\label{sprite_8h_a7815e2193b5dea24aae35f568006be9a}} 
+\index{sprite.h@{sprite.h}!headmagic@{headmagic}}
+\index{headmagic@{headmagic}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{headmagic}{headmagic}}
+{\footnotesize\ttfamily uint32\+\_\+t headmagic}
+
+Le magic number de la section en-\/tête, doit toujours être \char`\"{}\+HEAD\char`\"{} 
+
+Definition at line \mbox{\hyperlink{sprite_8h_source_l00001}{1}} of file \mbox{\hyperlink{sprite_8h_source}{sprite.\+h}}.
+
+\mbox{\Hypertarget{sprite_8h_a8c61e64b8675498cee79c59d3f8131e2}\label{sprite_8h_a8c61e64b8675498cee79c59d3f8131e2}} 
+\index{sprite.h@{sprite.h}!magic@{magic}}
+\index{magic@{magic}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{magic}{magic}}
+{\footnotesize\ttfamily uint16\+\_\+t magic}
+
+Le magic number du fichier, doit toujours être \char`\"{}\+SI\char`\"{} 
+
+Definition at line \mbox{\hyperlink{sprite_8h_source_l00000}{0}} of file \mbox{\hyperlink{sprite_8h_source}{sprite.\+h}}.
+
+\mbox{\Hypertarget{sprite_8h_af73d2febf3dc338c7c8f42922aa7131c}\label{sprite_8h_af73d2febf3dc338c7c8f42922aa7131c}} 
+\index{sprite.h@{sprite.h}!pixelCount@{pixelCount}}
+\index{pixelCount@{pixelCount}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{pixelCount}{pixelCount}}
+{\footnotesize\ttfamily uint32\+\_\+t pixel\+Count}
+
+Le nombre de pixels contenus dans la section données 
+
+Definition at line \mbox{\hyperlink{sprite_8h_source_l00003}{3}} of file \mbox{\hyperlink{sprite_8h_source}{sprite.\+h}}.
+
+\mbox{\Hypertarget{sprite_8h_a410460a0a75462ae38c5c9daf5fb06ed}\label{sprite_8h_a410460a0a75462ae38c5c9daf5fb06ed}} 
+\index{sprite.h@{sprite.h}!rowSize@{rowSize}}
+\index{rowSize@{rowSize}!sprite.h@{sprite.h}}
+\doxysubsubsection{\texorpdfstring{rowSize}{rowSize}}
+{\footnotesize\ttfamily uint32\+\_\+t row\+Size}
+
+Le nombre de pixels par ligne 
+
+Definition at line \mbox{\hyperlink{sprite_8h_source_l00004}{4}} of file \mbox{\hyperlink{sprite_8h_source}{sprite.\+h}}.
+

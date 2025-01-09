@@ -1,0 +1,269 @@
+.TH "nsShape::Triangle" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsShape::Triangle \- Classe représentant un triangle\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <triangle\&.h>\fP
+.PP
+Inherits \fBnsShape::Shape\fP, and \fBnsTransition::ITransitionable\fP\&.
+.SS "Public Types"
+
+.in +1c
+.ti -1c
+.RI "enum \fBTransitionIds\fP { \fBTRANSITION_FILL_COLOR_RGB\fP, \fBTRANSITION_FILL_COLOR_ALPHA\fP, \fBTRANSITION_BORDER_COLOR_RGB\fP, \fBTRANSITION_BORDER_COLOR_ALPHA\fP, \fBTRANSITION_FIRST_POSITION\fP, \fBTRANSITION_SECOND_POSITION\fP, \fBTRANSITION_THIRD_POSITION\fP }"
+.br
+.RI "TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. "
+.in -1c
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "\fBTriangle\fP (const \fBnsGraphics::Vec2D\fP &firstPosition, const \fBnsGraphics::Vec2D\fP &secondPosition, const \fBnsGraphics::Vec2D\fP &thirdPosition, const \fBnsGraphics::RGBAcolor\fP &fillColor, const \fBnsGraphics::RGBAcolor\fP &borderColor=nsGraphics::KTransparent)"
+.br
+.RI "Constructeur pour la classe \fBTriangle\fP\&. "
+.ti -1c
+.RI "virtual \fB~Triangle\fP () override=default"
+.br
+.RI "Destructeur virtuel pour la classe \fBTriangle\fP\&. "
+.ti -1c
+.RI "virtual void \fBdraw\fP (\fBMinGL\fP &window) const override"
+.br
+.RI "Fonction pour afficher l'objet\&. "
+.ti -1c
+.RI "virtual void \fBgetValues\fP (const int &id, std::vector< float > &values) override"
+.br
+.RI "Récupère des valeurs dans un vecteur de float pour l'ID spécifié "
+.ti -1c
+.RI "virtual void \fBsetValues\fP (const int &id, const std::vector< float > &values) override"
+.br
+.RI "Définit les nouvelles valeurs pour l'ID spécifié "
+.ti -1c
+.RI "\fBTriangle\fP \fBoperator+\fP (const \fBnsGraphics::Vec2D\fP &position) const"
+.br
+.RI "Opérateur de décalage\&. "
+.ti -1c
+.RI "\fBTriangle\fP \fBoperator*\fP (const float &f) const"
+.br
+.RI "Opérateur de réduction\&. "
+.ti -1c
+.RI "const \fBnsGraphics::Vec2D\fP & \fBgetFirstPosition\fP () const"
+.br
+.RI "Récupère la position du premier sommet du triangle\&. "
+.ti -1c
+.RI "void \fBsetFirstPosition\fP (const \fBnsGraphics::Vec2D\fP &firstPosition)"
+.br
+.RI "Définit la nouvelle position du premier sommet du triangle\&. "
+.ti -1c
+.RI "const \fBnsGraphics::Vec2D\fP & \fBgetSecondPosition\fP () const"
+.br
+.RI "Récupère la position du second sommet du triangle\&. "
+.ti -1c
+.RI "void \fBsetSecondPosition\fP (const \fBnsGraphics::Vec2D\fP &secondPosition)"
+.br
+.RI "Définit la nouvelle position du second sommet du triangle\&. "
+.ti -1c
+.RI "const \fBnsGraphics::Vec2D\fP & \fBgetThirdPosition\fP () const"
+.br
+.RI "Récupère la position du troisième sommet du triangle\&. "
+.ti -1c
+.RI "void \fBsetThirdPosition\fP (const \fBnsGraphics::Vec2D\fP &thirdPosition)"
+.br
+.RI "Définit la nouvelle position du troisième sommet du triangle\&. "
+.in -1c
+.SS "Additional Inherited Members"
+.SH "Detailed Description"
+.PP 
+Classe représentant un triangle\&. 
+.PP
+Definition at line \fB25\fP of file \fBtriangle\&.h\fP\&.
+.SH "Member Enumeration Documentation"
+.PP 
+.SS "enum \fBnsShape::Triangle::TransitionIds\fP"
+
+.PP
+TransitionIds : Liste de toutes les transitions que cet élément peut exécuter\&. 
+.PP
+\fBEnumerator\fP
+.in +1c
+.TP
+\fB\fITRANSITION_FILL_COLOR_RGB \fP\fP
+Transition pour la couleur de remplissage 
+.TP
+\fB\fITRANSITION_FILL_COLOR_ALPHA \fP\fP
+Transition pour la transparence de remplissage 
+.TP
+\fB\fITRANSITION_BORDER_COLOR_RGB \fP\fP
+Transition pour la couleur de bord 
+.TP
+\fB\fITRANSITION_BORDER_COLOR_ALPHA \fP\fP
+Transition pour la transparence de bord 
+.TP
+\fB\fITRANSITION_FIRST_POSITION \fP\fP
+Transition pour la position du premier sommet 
+.TP
+\fB\fITRANSITION_SECOND_POSITION \fP\fP
+Transition pour la position du second sommet 
+.TP
+\fB\fITRANSITION_THIRD_POSITION \fP\fP
+Transition pour la position du troisième sommet 
+.PP
+Definition at line \fB32\fP of file \fBtriangle\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsShape::Triangle::Triangle (const \fBnsGraphics::Vec2D\fP & firstPosition, const \fBnsGraphics::Vec2D\fP & secondPosition, const \fBnsGraphics::Vec2D\fP & thirdPosition, const \fBnsGraphics::RGBAcolor\fP & fillColor, const \fBnsGraphics::RGBAcolor\fP & borderColor = \fCnsGraphics::KTransparent\fP)"
+
+.PP
+Constructeur pour la classe \fBTriangle\fP\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirstPosition\fP : Position du premier sommet 
+.br
+\fIsecondPosition\fP : Position du second sommet 
+.br
+\fIthirdPosition\fP : Position du troisième sommet 
+.br
+\fIfillColor\fP : Couleur de remplissage 
+.br
+\fIborderColor\fP : Couleur de bord 
+.RE
+.PP
+
+.PP
+Definition at line \fB17\fP of file \fBtriangle\&.cpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void nsShape::Triangle::draw (\fBMinGL\fP & window) const\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Fonction pour afficher l'objet\&. 
+.PP
+Implements \fBnsGraphics::IDrawable\fP\&.
+.PP
+Definition at line \fB25\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "const \fBnsGraphics::Vec2D\fP & nsShape::Triangle::getFirstPosition () const"
+
+.PP
+Récupère la position du premier sommet du triangle\&. 
+.PP
+Definition at line \fB158\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "const \fBnsGraphics::Vec2D\fP & nsShape::Triangle::getSecondPosition () const"
+
+.PP
+Récupère la position du second sommet du triangle\&. 
+.PP
+Definition at line \fB168\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "const \fBnsGraphics::Vec2D\fP & nsShape::Triangle::getThirdPosition () const"
+
+.PP
+Récupère la position du troisième sommet du triangle\&. 
+.PP
+Definition at line \fB178\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "void nsShape::Triangle::getValues (const int & id, std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Récupère des valeurs dans un vecteur de float pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a récupérer 
+.br
+\fIvalues\fP Vecteur de valeurs a peupler 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB54\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "\fBTriangle\fP nsShape::Triangle::operator* (const float & f) const"
+
+.PP
+Opérateur de réduction\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIf\fP : Nombre avec lequel multiplier la position actuelle 
+.RE
+.PP
+
+.PP
+Definition at line \fB153\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "\fBTriangle\fP nsShape::Triangle::operator+ (const \fBnsGraphics::Vec2D\fP & position) const"
+
+.PP
+Opérateur de décalage\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIposition\fP : Position a additionner 
+.RE
+.PP
+
+.PP
+Definition at line \fB148\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "void nsShape::Triangle::setFirstPosition (const \fBnsGraphics::Vec2D\fP & firstPosition)"
+
+.PP
+Définit la nouvelle position du premier sommet du triangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIfirstPosition\fP : Nouvelle position du premier sommet 
+.RE
+.PP
+
+.PP
+Definition at line \fB163\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "void nsShape::Triangle::setSecondPosition (const \fBnsGraphics::Vec2D\fP & secondPosition)"
+
+.PP
+Définit la nouvelle position du second sommet du triangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIsecondPosition\fP : Nouvelle position du second sommet 
+.RE
+.PP
+
+.PP
+Definition at line \fB173\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "void nsShape::Triangle::setThirdPosition (const \fBnsGraphics::Vec2D\fP & thirdPosition)"
+
+.PP
+Définit la nouvelle position du troisième sommet du triangle\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIthirdPosition\fP : Nouvelle position du troisième sommet 
+.RE
+.PP
+
+.PP
+Definition at line \fB183\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "void nsShape::Triangle::setValues (const int & id, const std::vector< float > & values)\fC [override]\fP, \fC [virtual]\fP"
+
+.PP
+Définit les nouvelles valeurs pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a définir 
+.br
+\fIvalues\fP Vecteur des nouvelles valeurs a appliquer 
+.RE
+.PP
+
+.PP
+Implements \fBnsTransition::ITransitionable\fP\&.
+.PP
+Definition at line \fB101\fP of file \fBtriangle\&.cpp\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

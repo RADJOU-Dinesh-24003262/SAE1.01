@@ -1,0 +1,181 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_transition_1_1_transition_engine" xml:lang="en-US">
+<title>nsTransition::TransitionEngine Class Reference</title>
+<indexterm><primary>nsTransition::TransitionEngine</primary></indexterm>
+<para>
+
+<para>Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;transition_engine.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classns_transition_1_1_transition_engine_1a3bc437b23ee918b9ec4af070e205028f">update</link> (const std::chrono::microseconds &amp;delta)</para>
+
+<para>Met a jour toutes les transitions dans la liste. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_transition_1_1_transition_engine_1ae04163c3488c93e111b9d2638a27d6a9">startContract</link> (const <link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link> &amp;contract)</para>
+
+<para>Démarre un contrat. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_transition_1_1_transition_engine_1a91235836b50f216b61b5ff3fb31cd5f8">finishEveryTransition</link> (const <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">Transition::TransitionFinishModes</link> &amp;finishMode=<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e">Transition::FINISH_DESTINATION</link>)</para>
+
+<para>Termine toutes les transitions de la liste. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_transition_1_1_transition_engine_1adcd7bce2bb158224303b532c27f9b559">finishEveryTransitionOfTarget</link> (const <link linkend="_classns_transition_1_1_i_transitionable">ITransitionable</link> &amp;transitionable, const <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">Transition::TransitionFinishModes</link> &amp;finishMode=<link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e">Transition::FINISH_DESTINATION</link>)</para>
+
+<para>Termine toutes les transitions d&apos;une certaine cible de la liste. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois. </para>
+<para>
+Definition at line <link linkend="_transition__engine_8h_source_1l00027">27</link> of file <link linkend="_transition__engine_8h_source">transition_engine.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_transition_1_1_transition_engine_1a91235836b50f216b61b5ff3fb31cd5f8"/><section>
+    <title>finishEveryTransition()</title>
+<indexterm><primary>finishEveryTransition</primary><secondary>nsTransition::TransitionEngine</secondary></indexterm>
+<indexterm><primary>nsTransition::TransitionEngine</primary><secondary>finishEveryTransition</secondary></indexterm>
+<para><computeroutput>void nsTransition::TransitionEngine::finishEveryTransition (const <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">Transition::TransitionFinishModes</link> &amp; finishMode = <computeroutput><link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e">Transition::FINISH_DESTINATION</link></computeroutput>
+)</computeroutput></para><para>
+
+<para>Termine toutes les transitions de la liste. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>finishMode</entry><entry>
+<para>: finishMode : Mode utilisé pour finir cette <link linkend="_classns_transition_1_1_transition">Transition</link> (Valeurs d&apos;arrivé par défaut) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classns_transition_1_1_transition_engine_1adcd7bce2bb158224303b532c27f9b559"/><section>
+    <title>finishEveryTransitionOfTarget()</title>
+<indexterm><primary>finishEveryTransitionOfTarget</primary><secondary>nsTransition::TransitionEngine</secondary></indexterm>
+<indexterm><primary>nsTransition::TransitionEngine</primary><secondary>finishEveryTransitionOfTarget</secondary></indexterm>
+<para><computeroutput>void nsTransition::TransitionEngine::finishEveryTransitionOfTarget (const <link linkend="_classns_transition_1_1_i_transitionable">ITransitionable</link> &amp; transitionable, const <link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19">Transition::TransitionFinishModes</link> &amp; finishMode = <computeroutput><link linkend="_classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e">Transition::FINISH_DESTINATION</link></computeroutput>
+)</computeroutput></para><para>
+
+<para>Termine toutes les transitions d&apos;une certaine cible de la liste. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>transitionable</entry><entry>
+<para>: La cible où arrêter les transitions </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>finishMode</entry><entry>
+<para>: finishMode : Mode utilisé pour finir cette <link linkend="_classns_transition_1_1_transition">Transition</link> (Valeurs d&apos;arrivé par défaut) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classns_transition_1_1_transition_engine_1ae04163c3488c93e111b9d2638a27d6a9"/><section>
+    <title>startContract()</title>
+<indexterm><primary>startContract</primary><secondary>nsTransition::TransitionEngine</secondary></indexterm>
+<indexterm><primary>nsTransition::TransitionEngine</primary><secondary>startContract</secondary></indexterm>
+<para><computeroutput>void nsTransition::TransitionEngine::startContract (const <link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link> &amp; contract)</computeroutput></para><para>
+
+<para>Démarre un contrat. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>contract</entry><entry>
+<para>: Contrat de transition a démarrer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_classns_transition_1_1_transition_engine_1a3bc437b23ee918b9ec4af070e205028f"/><section>
+    <title>update()</title>
+<indexterm><primary>update</primary><secondary>nsTransition::TransitionEngine</secondary></indexterm>
+<indexterm><primary>nsTransition::TransitionEngine</primary><secondary>update</secondary></indexterm>
+<para><computeroutput>void nsTransition::TransitionEngine::update (const std::chrono::microseconds &amp; delta)</computeroutput></para><para>
+
+<para>Met a jour toutes les transitions dans la liste. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>delta</entry><entry>
+<para>: Temps que la dernière image a mis pour faire son rendu</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Cette fonction rajoute la valeur de delta aux temps écoulés des différentes transitions, et supprime les transitions terminées de la liste. </para>
+</section>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/<link linkend="_transition__engine_8h">transition_engine.h</link></section>
+</section>

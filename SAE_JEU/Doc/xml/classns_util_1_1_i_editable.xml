@@ -1,0 +1,139 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_util_1_1_i_editable" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>nsUtil::IEditable</compoundname>
+    <derivedcompoundref refid="classns_exception_1_1_c_exception" prot="public" virt="non-virtual">nsException::CException</derivedcompoundref>
+    <derivedcompoundref refid="classns_graphics_1_1_r_g_b_acolor" prot="public" virt="non-virtual">nsGraphics::RGBAcolor</derivedcompoundref>
+    <derivedcompoundref refid="classns_graphics_1_1_vec2_d" prot="public" virt="non-virtual">nsGraphics::Vec2D</derivedcompoundref>
+    <includes refid="ieditable_8h" local="no">ieditable.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>nsUtil::IEditable::~IEditable</definition>
+        <argsstring>()=default</argsstring>
+        <name>~IEditable</name>
+        <qualifiedname>nsUtil::IEditable::~IEditable</qualifiedname>
+        <briefdescription>
+<para>Destructeur pour la classe <ref refid="classns_util_1_1_i_editable" kindref="compound">IEditable</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="45" column="13"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classns_util_1_1_i_editable_1a53db4e7832b7c4579b331800bb0cae70" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(std::ostream &amp;os, const IEditable &amp;Obj)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <qualifiedname>nsUtil::IEditable::operator&lt;&lt;</qualifiedname>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_util_1_1_i_editable" kindref="compound">IEditable</ref> &amp;</type>
+          <declname>Obj</declname>
+        </param>
+        <briefdescription>
+<para>Surcharge de l&apos;opérateur d&apos;injection. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Flux dans lequel injecter </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">Obj</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Objet a injecter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="53" column="12"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="protected-func">
+      <memberdef kind="function" id="classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853" prot="protected" static="no" const="yes" explicit="no" inline="no" virt="pure-virtual">
+        <type>std::ostream &amp;</type>
+        <definition>std::ostream &amp; nsUtil::IEditable::_Edit</definition>
+        <argsstring>(std::ostream &amp;os) const =0</argsstring>
+        <name>_Edit</name>
+        <qualifiedname>nsUtil::IEditable::_Edit</qualifiedname>
+        <reimplementedby refid="classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027">_Edit</reimplementedby>
+        <reimplementedby refid="classns_graphics_1_1_r_g_b_acolor_1a09154c1fc9ba912860f2b4fac5432298">_Edit</reimplementedby>
+        <reimplementedby refid="classns_graphics_1_1_vec2_d_1ad416f3698e43099990b3d96d9099c65f">_Edit</reimplementedby>
+        <param>
+          <type>std::ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <briefdescription>
+<para>Fonction appelée pour injecter l&apos;objet courant dans un flux. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Flux dans lequel injecter </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="61" column="26"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Interface pour un objet injectable. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>nsException::CException</label>
+        <link refid="classns_exception_1_1_c_exception"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nsGraphics::RGBAcolor</label>
+        <link refid="classns_graphics_1_1_r_g_b_acolor"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>nsGraphics::Vec2D</label>
+        <link refid="classns_graphics_1_1_vec2_d"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>nsUtil::IEditable</label>
+        <link refid="classns_util_1_1_i_editable"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="37" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" bodystart="38" bodyend="63"/>
+    <listofallmembers>
+      <member refid="classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853" prot="protected" virt="pure-virtual"><scope>nsUtil::IEditable</scope><name>_Edit</name></member>
+      <member refid="classns_util_1_1_i_editable_1a53db4e7832b7c4579b331800bb0cae70" prot="public" virt="non-virtual"><scope>nsUtil::IEditable</scope><name>operator&lt;&lt;</name></member>
+      <member refid="classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e" prot="public" virt="virtual"><scope>nsUtil::IEditable</scope><name>~IEditable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,48 @@
+.TH "nsUtil::IFonctorUnaire< T1, TRes >" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsUtil::IFonctorUnaire< T1, TRes > \- Interface pour un fonctor unaire\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <ifonctorunaire\&.hpp>\fP
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~IFonctorUnaire\fP ()=default"
+.br
+.RI "Destructeur pour la classe \fBIFonctorUnaire\fP\&. "
+.ti -1c
+.RI "virtual TRes \fBoperator()\fP (const T1 &in) const =0"
+.br
+.RI "Surcharge de l'opérateur d'appel\&. "
+.in -1c
+.SH "Detailed Description"
+.PP 
+
+.SS "template<typename T1, typename TRes>
+.br
+class nsUtil::IFonctorUnaire< T1, TRes >"Interface pour un fonctor unaire\&. 
+.PP
+Definition at line \fB12\fP of file \fBifonctorunaire\&.hpp\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "template<typename T1 , typename TRes > TRes \fBnsUtil::IFonctorUnaire\fP< T1, TRes >::operator() (const T1 & in) const\fC [pure virtual]\fP"
+
+.PP
+Surcharge de l'opérateur d'appel\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIin\fP : Premier paramètre 
+.RE
+.PP
+
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

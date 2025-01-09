@@ -1,0 +1,61 @@
+\hypertarget{circle_8h_source}{}\doxysection{circle.\+h}
+\label{circle_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/shape/circle.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/include/mingl/shape/circle.h}}
+\mbox{\hyperlink{circle_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00011}00011 \textcolor{preprocessor}{\#ifndef CIRCLE\_H}}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00012}00012 \textcolor{preprocessor}{\#define CIRCLE\_H}}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{shape_8h}{shape.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00016}00016 \textcolor{preprocessor}{\#include "{}../transition/itransitionable.h"{}}}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00018}00018 \textcolor{keyword}{namespace }\mbox{\hyperlink{namespacens_shape}{nsShape}}}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00019}00019 \{}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00025}\mbox{\hyperlink{classns_shape_1_1_circle}{00025}} \textcolor{keyword}{class }\mbox{\hyperlink{classns_shape_1_1_circle}{Circle}} : \textcolor{keyword}{public} \mbox{\hyperlink{classns_shape_1_1_shape}{Shape}}, \textcolor{keyword}{public} \mbox{\hyperlink{classns_transition_1_1_i_transitionable}{nsTransition::ITransitionable}}}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00026}00026 \{}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00028}00028 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00032}\mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235}{00032}}     \textcolor{keyword}{enum} \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235}{TransitionIds}} \{}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00033}\mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a9fe224767a5f886c96a3f23e6355677a}{00033}}         \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a9fe224767a5f886c96a3f23e6355677a}{TRANSITION\_FILL\_COLOR\_RGB}}, }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00034}\mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a0df548537c2bd5e8aad51eab0a182d08}{00034}}         \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a0df548537c2bd5e8aad51eab0a182d08}{TRANSITION\_FILL\_COLOR\_ALPHA}}, }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00035}\mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a2fdc553c832dfca9e296d9775c107732}{00035}}         \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a2fdc553c832dfca9e296d9775c107732}{TRANSITION\_BORDER\_COLOR\_RGB}}, }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00036}\mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a07cbcb4b2a43a087c534998e1ca553ee}{00036}}         \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a07cbcb4b2a43a087c534998e1ca553ee}{TRANSITION\_BORDER\_COLOR\_ALPHA}}, }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00037}\mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235aa2a6bbdede0b294813c638e4359c8603}{00037}}         \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235aa2a6bbdede0b294813c638e4359c8603}{TRANSITION\_POSITION}}, }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00038}\mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a8a3d4b3560b97d5e11b81b58e2808393}{00038}}         \mbox{\hyperlink{classns_shape_1_1_circle_a65ce20b6f5c10a111c1542f06154a235a8a3d4b3560b97d5e11b81b58e2808393}{TRANSITION\_RADIUS}}, }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00039}00039     \};}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00049}00049     \mbox{\hyperlink{classns_shape_1_1_circle_a06b1c1c7ea1e4ec8228d929e7b3966ee}{Circle}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned}\& radius, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& fillColor, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& borderColor = nsGraphics::KTransparent);}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00055}\mbox{\hyperlink{classns_shape_1_1_circle_a2446e688c063dcb2693adfcfacbb2804}{00055}}     \textcolor{keyword}{virtual} \mbox{\hyperlink{classns_shape_1_1_circle_a2446e688c063dcb2693adfcfacbb2804}{\string~Circle}}() \textcolor{keyword}{override} = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00057}00057     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_circle_a03be5cdd7d6a0feaa7d6b0a819389a7a}{draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window) \textcolor{keyword}{const override};}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00058}00058 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00059}00059     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_circle_aae4610d0c110ad09da424c5a3ad91aac}{getValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, std::vector<float> \&values) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00060}00060     \textcolor{keyword}{virtual} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_circle_a9a2fc6b4a852e25922e5a1732d39644a}{setValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} std::vector<float> \&values) \textcolor{keyword}{override};}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00067}00067     \mbox{\hyperlink{classns_shape_1_1_circle}{Circle}} \mbox{\hyperlink{classns_shape_1_1_circle_a8b1f88a61fb38c283b11600e4eec6fe3}{operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& \mbox{\hyperlink{classns_shape_1_1_circle_a85b4102c4a23101fba4f90c1f8e84168}{getPosition}}) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00074}00074     \mbox{\hyperlink{classns_shape_1_1_circle}{Circle}} \mbox{\hyperlink{classns_shape_1_1_circle_ad34827f3120b9331389a00cbf02468cb}{operator*}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& f) \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00075}00075 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00080}00080     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& \mbox{\hyperlink{classns_shape_1_1_circle_a85b4102c4a23101fba4f90c1f8e84168}{getPosition}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00081}00081 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00087}00087     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_circle_ac4e73227c9ec7e22670bd012b6f37bef}{setPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&position);}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00088}00088 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00093}00093     \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{classns_shape_1_1_circle_afcb275822a67ec49167fe122ab74872c}{getRadius}}() \textcolor{keyword}{const};}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00094}00094 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00100}00100     \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_circle_a5f20408e41621d21487b6162eabc3a7d}{setRadius}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \&radius);}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00101}00101 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00102}00102 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00106}00106     \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} m\_position;}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00111}00111     \textcolor{keywordtype}{unsigned} m\_radius;}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00113}00113 \}; \textcolor{comment}{// class Circle}}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00115}00115 \} \textcolor{comment}{// namespace nsShape}}
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00116}00116 }
+\DoxyCodeLine{\Hypertarget{circle_8h_source_l00117}00117 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// CIRCLE\_H}}
+
+\end{DoxyCode}

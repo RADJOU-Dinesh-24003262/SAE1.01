@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_node" xml:lang="en-US">
+<title>Node Struct Reference</title>
+<indexterm><primary>Node</primary></indexterm>
+<para>
+
+<para>Structure représentant un noeud dans un graphe dans Movemonster() struct représentant un noeud dans un graphe, avec pos sa position, f_cost un coût estimé et son parent. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;type.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> <link linkend="_struct_node_1a9cad2079ec0b0727d201af00d854511f">Pos</link></para>
+</listitem>
+            <listitem><para>size_t <link linkend="_struct_node_1af8ae2d34f6bd51c23bb0976f44639e2f">f_cost</link></para>
+</listitem>
+            <listitem><para><link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> <link linkend="_struct_node_1a0e58fa24ad68622e5592a391b6e2dd20">Parent</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure représentant un noeud dans un graphe dans Movemonster() struct représentant un noeud dans un graphe, avec pos sa position, f_cost un coût estimé et son parent. </para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00170">170</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_node_1af8ae2d34f6bd51c23bb0976f44639e2f"/><section>
+    <title>f_cost</title>
+<indexterm><primary>f_cost</primary><secondary>Node</secondary></indexterm>
+<indexterm><primary>Node</primary><secondary>f_cost</secondary></indexterm>
+<para><computeroutput>size_t Node::f_cost</computeroutput></para><para>
+Definition at line <link linkend="_type_8h_source_1l00172">172</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_node_1a0e58fa24ad68622e5592a391b6e2dd20"/><section>
+    <title>Parent</title>
+<indexterm><primary>Parent</primary><secondary>Node</secondary></indexterm>
+<indexterm><primary>Node</primary><secondary>Parent</secondary></indexterm>
+<para><computeroutput><link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> Node::Parent</computeroutput></para><para>
+Definition at line <link linkend="_type_8h_source_1l00173">173</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_node_1a9cad2079ec0b0727d201af00d854511f"/><section>
+    <title>Pos</title>
+<indexterm><primary>Pos</primary><secondary>Node</secondary></indexterm>
+<indexterm><primary>Node</primary><secondary>Pos</secondary></indexterm>
+<para><computeroutput><link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> Node::Pos</computeroutput></para><para>
+Definition at line <link linkend="_type_8h_source_1l00171">171</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/<link linkend="_type_8h">type.h</link></section>
+</section>

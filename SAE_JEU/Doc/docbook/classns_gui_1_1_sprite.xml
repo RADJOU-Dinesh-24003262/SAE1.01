@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_gui_1_1_sprite" xml:lang="en-US">
+<title>nsGui::Sprite Class Reference</title>
+<indexterm><primary>nsGui::Sprite</primary></indexterm>
+<para>
+
+<para>Permet de charger une image depuis un format créé pour l&apos;occasion, le .si2. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;sprite.h&gt;</computeroutput>
+</para>
+Inheritance diagram for nsGui::Sprite:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_gui_1_1_sprite__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for nsGui::Sprite:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_gui_1_1_sprite__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Types    </title>
+        <itemizedlist>
+            <listitem><para>enum <link linkend="_classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78">TransitionIds</link> { <link linkend="_classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54">TRANSITION_POSITION</link>
+ }</para>
+
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_classns_gui_1_1_sprite_1a35558b08dfeb3e3a20be52da28e33c4c">Sprite</link> (const std::string &amp;filename, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position=<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>())</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_gui_1_1_sprite">Sprite</link>, charge les données depuis un fichier. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_gui_1_1_sprite_1abee8e5a2740555d46f19af3d4b489453">Sprite</link> (const std::vector&lt; <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &gt; &amp;pixelData, const uint32_t &amp;<link linkend="_sprite_8h_1a410460a0a75462ae38c5c9daf5fb06ed">rowSize</link>, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position=<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>())</para>
+
+<para>Constructeur pour la classe <link linkend="_classns_gui_1_1_sprite">Sprite</link>, copie les données depuis un vecteur de pixels. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_gui_1_1_sprite_1ac4b29170aef06d46990b68da76480f28">draw</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window) const override</para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_gui_1_1_sprite_1a7da27e2ccf7b574896662720d99c0056">getValues</link> (const int &amp;id, std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para>virtual void <link linkend="_classns_gui_1_1_sprite_1a63ad7e76b470c578aecc697203a3eb26">setValues</link> (const int &amp;id, const std::vector&lt; float &gt; &amp;values) override</para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</listitem>
+            <listitem><para>const uint32_t &amp; <link linkend="_classns_gui_1_1_sprite_1adbe04bd427b6658e0181ce167db83d05">getRowSize</link> () const</para>
+
+<para>Récupère le nombre de pixels par ligne. </para>
+</listitem>
+            <listitem><para>const std::vector&lt; <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &gt; &amp; <link linkend="_classns_gui_1_1_sprite_1ad8644780a7a7dcbcd5f2e4e7a461b685">getPixelData</link> () const</para>
+
+<para>Récupère le vecteur contenant les pixels de l&apos;image. </para>
+</listitem>
+            <listitem><para>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; <link linkend="_classns_gui_1_1_sprite_1a1d6ad6681627aae6c4680fc936da8eb2">getPosition</link> () const</para>
+
+<para>Récupère la position du sprite. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_gui_1_1_sprite_1a4c695910c46504d1e8d47b838394a48e">setPosition</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position)</para>
+
+<para>Définit la nouvelle position du sprite. </para>
+</listitem>
+            <listitem><para><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> <link linkend="_classns_gui_1_1_sprite_1a26b502e88906860373c278495794998c">computeSize</link> () const</para>
+
+<para>Calcule la taille du sprite. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Permet de charger une image depuis un format créé pour l&apos;occasion, le .si2. </para>
+<para>
+Definition at line <link linkend="_sprite_8h_source_1l00028">28</link> of file <link linkend="_sprite_8h_source">sprite.h</link>.</para>
+</section>
+<section>
+<title>Member Enumeration Documentation</title>
+<anchor xml:id="_classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78"/><section>
+    <title>TransitionIds</title>
+<indexterm><primary>TransitionIds</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>TransitionIds</secondary></indexterm>
+<para><computeroutput>enum <link linkend="_classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78">nsGui::Sprite::TransitionIds</link></computeroutput></para><para>
+
+<para>TransitionIds : Liste de toutes les transitions que cet élément peut exécuter. </para>
+</para>
+<informaltable frame="all">
+<title>Enumerator</title>
+    <tgroup cols="2" align="left" colsep="1" rowsep="1">
+      <colspec colname='c1'/>
+      <colspec colname='c2'/>
+<tbody>
+<row><entry><indexterm><primary>TRANSITION_POSITION</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>TRANSITION_POSITION</secondary></indexterm>
+<anchor xml:id="_classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54"/>TRANSITION_POSITION</entry><entry>
+<para>Transition pour la position </para>
+</entry></row>    </tbody>
+    </tgroup>
+</informaltable>
+<para>
+Definition at line <link linkend="_sprite_8h_source_1l00034">34</link> of file <link linkend="_sprite_8h_source">sprite.h</link>.</para>
+</section>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_gui_1_1_sprite_1a35558b08dfeb3e3a20be52da28e33c4c"/><section>
+    <title>Sprite()<computeroutput>[1/2]</computeroutput></title>
+<indexterm><primary>Sprite</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>Sprite</secondary></indexterm>
+<para><computeroutput>nsGui::Sprite::Sprite (const std::string &amp; filename, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position = <computeroutput><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>()</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_gui_1_1_sprite">Sprite</link>, charge les données depuis un fichier. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>filename</entry><entry>
+<para>: Chemin d&apos;accès vers le fichier image </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>position</entry><entry>
+<para>: Position du sprite </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_sprite_8cpp_source_1l00020">20</link> of file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_gui_1_1_sprite_1abee8e5a2740555d46f19af3d4b489453"/><section>
+    <title>Sprite()<computeroutput>[2/2]</computeroutput></title>
+<indexterm><primary>Sprite</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>Sprite</secondary></indexterm>
+<para><computeroutput>nsGui::Sprite::Sprite (const std::vector&lt; <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &gt; &amp; pixelData, const uint32_t &amp; rowSize, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position = <computeroutput><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>()</computeroutput>
+)</computeroutput></para><para>
+
+<para>Constructeur pour la classe <link linkend="_classns_gui_1_1_sprite">Sprite</link>, copie les données depuis un vecteur de pixels. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>pixelData</entry><entry>
+<para>: Vecteur contenant des données sur les pixels </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>rowSize</entry><entry>
+<para>: Nombre de pixels par ligne </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>position</entry><entry>
+<para>: Position du sprite </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_sprite_8cpp_source_1l00049">49</link> of file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_gui_1_1_sprite_1a26b502e88906860373c278495794998c"/><section>
+    <title>computeSize()</title>
+<indexterm><primary>computeSize</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>computeSize</secondary></indexterm>
+<para><computeroutput>Vec2D nsGui::Sprite::computeSize ( ) const</computeroutput></para><para>
+
+<para>Calcule la taille du sprite. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>La taille calculée </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_sprite_8cpp_source_1l00116">116</link> of file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_gui_1_1_sprite_1ac4b29170aef06d46990b68da76480f28"/><section>
+    <title>draw()</title>
+<indexterm><primary>draw</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>draw</secondary></indexterm>
+<para><computeroutput>void nsGui::Sprite::draw (<link linkend="_class_min_g_l">MinGL</link> &amp; window) const<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Fonction pour afficher l&apos;objet. </para>
+</para>
+<para>
+Implements <link linkend="_classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">nsGraphics::IDrawable</link>.</para>
+<para>
+Definition at line <link linkend="_sprite_8cpp_source_1l00055">55</link> of file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_gui_1_1_sprite_ac4b29170aef06d46990b68da76480f28_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_classns_gui_1_1_sprite_1ad8644780a7a7dcbcd5f2e4e7a461b685"/><section>
+    <title>getPixelData()</title>
+<indexterm><primary>getPixelData</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>getPixelData</secondary></indexterm>
+<para><computeroutput>const std::vector&lt; <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &gt; &amp; nsGui::Sprite::getPixelData ( ) const</computeroutput></para><para>
+
+<para>Récupère le vecteur contenant les pixels de l&apos;image. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence constante vers m_pixelData </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_sprite_8cpp_source_1l00101">101</link> of file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_gui_1_1_sprite_1a1d6ad6681627aae6c4680fc936da8eb2"/><section>
+    <title>getPosition()</title>
+<indexterm><primary>getPosition</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>getPosition</secondary></indexterm>
+<para><computeroutput>const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; nsGui::Sprite::getPosition ( ) const</computeroutput></para><para>
+
+<para>Récupère la position du sprite. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence const vers m_position </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_sprite_8cpp_source_1l00106">106</link> of file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_gui_1_1_sprite_1adbe04bd427b6658e0181ce167db83d05"/><section>
+    <title>getRowSize()</title>
+<indexterm><primary>getRowSize</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>getRowSize</secondary></indexterm>
+<para><computeroutput>const uint32_t &amp; nsGui::Sprite::getRowSize ( ) const</computeroutput></para><para>
+
+<para>Récupère le nombre de pixels par ligne. </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>Une référence constante vers m_rowSize </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_sprite_8cpp_source_1l00096">96</link> of file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_gui_1_1_sprite_1a7da27e2ccf7b574896662720d99c0056"/><section>
+    <title>getValues()</title>
+<indexterm><primary>getValues</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>getValues</secondary></indexterm>
+<para><computeroutput>void nsGui::Sprite::getValues (const int &amp; id, std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a récupérer </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in,out</entry><entry>values</entry><entry>
+<para>Vecteur de valeurs a peupler </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_sprite_8cpp_source_1l00074">74</link> of file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_gui_1_1_sprite_1a4c695910c46504d1e8d47b838394a48e"/><section>
+    <title>setPosition()</title>
+<indexterm><primary>setPosition</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>setPosition</secondary></indexterm>
+<para><computeroutput>void nsGui::Sprite::setPosition (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position)</computeroutput></para><para>
+
+<para>Définit la nouvelle position du sprite. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>position</entry><entry>
+<para>: Nouvelle position </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_sprite_8cpp_source_1l00111">111</link> of file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_gui_1_1_sprite_1a63ad7e76b470c578aecc697203a3eb26"/><section>
+    <title>setValues()</title>
+<indexterm><primary>setValues</primary><secondary>nsGui::Sprite</secondary></indexterm>
+<indexterm><primary>nsGui::Sprite</primary><secondary>setValues</secondary></indexterm>
+<para><computeroutput>void nsGui::Sprite::setValues (const int &amp; id, const std::vector&lt; float &gt; &amp; values)<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput></computeroutput></para><para>
+
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>id</entry><entry>
+<para>ID des valeurs a définir </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>values</entry><entry>
+<para>Vecteur des nouvelles valeurs a appliquer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Implements <link linkend="_classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">nsTransition::ITransitionable</link>.</para>
+<para>
+Definition at line <link linkend="_sprite_8cpp_source_1l00085">85</link> of file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/<link linkend="_sprite_8h">sprite.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/<link linkend="_sprite_8cpp">sprite.cpp</link></section>
+</section>

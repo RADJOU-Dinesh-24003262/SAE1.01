@@ -1,0 +1,170 @@
+\hypertarget{circle_8cpp_source}{}\doxysection{circle.\+cpp}
+\label{circle_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/shape/circle.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/shape/circle.cpp}}
+\mbox{\hyperlink{circle_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00011}00011 \textcolor{preprocessor}{\#include <cmath>}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00013}00013 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{circle_8h}{mingl/shape/circle.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00014}00014 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{macros_8h}{mingl/macros.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00016}\mbox{\hyperlink{classns_shape_1_1_circle_a06b1c1c7ea1e4ec8228d929e7b3966ee}{00016}} \mbox{\hyperlink{classns_shape_1_1_circle_a06b1c1c7ea1e4ec8228d929e7b3966ee}{nsShape::Circle::Circle}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&position, \textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \&radius, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \&fillColor, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} \&borderColor)}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00017}00017     : \mbox{\hyperlink{classns_shape_1_1_shape}{Shape}}(fillColor, borderColor)}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00018}00018     , m\_position(position)}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00019}00019     , m\_radius(radius)}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00020}00020 \{\} \textcolor{comment}{// Circle()}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00022}\mbox{\hyperlink{classns_shape_1_1_circle_a03be5cdd7d6a0feaa7d6b0a819389a7a}{00022}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_circle_a03be5cdd7d6a0feaa7d6b0a819389a7a}{nsShape::Circle::draw}}(\mbox{\hyperlink{class_min_g_l}{MinGL}}\& window)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00023}00023 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00024}00024     \mbox{\hyperlink{macros_8h_a86d500a34c624c2cae56bc25a31b12f3}{UNUSED}}(window);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00026}00026     \textcolor{comment}{// Source: https://gist.github.com/linusthe3rd/803118}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00028}00028     \textcolor{keywordtype}{int} i;}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00029}00029     \textcolor{keywordtype}{int} triangleAmount = 20; \textcolor{comment}{// Nombre de triangles a dessiner}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00031}00031     \textcolor{comment}{// On règle la couleur du cercle}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00032}00032     \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} inColor = getFillColor();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00033}00033     glColor4ub(inColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{getRed}}(), inColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{getGreen}}(), inColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{getBlue}}(), inColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}{getAlpha}}()); \textcolor{comment}{// Couleur du cercle}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00035}00035     GLfloat twicePi = 2.0f * M\_PI;}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00037}00037     glBegin(GL\_TRIANGLE\_FAN);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00039}00039     glVertex2f(m\_position.getX(), m\_position.getY()); \textcolor{comment}{// Centre du cercle}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00040}00040 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00041}00041     \textcolor{keywordflow}{for}(i = 0; i <= triangleAmount;i++) \{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00042}00042         glVertex2f(m\_position.getX() + (m\_radius * cos(i * twicePi / triangleAmount)),}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00043}00043                    m\_position.getY() + (m\_radius * sin(i * twicePi / triangleAmount)));}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00044}00044     \}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00046}00046     glEnd();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00048}00048     \textcolor{keywordflow}{if} (getBorderColor() != nsGraphics::KTransparent) \{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00049}00049         \textcolor{comment}{// On a une bordure, on l'affiche}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00050}00050         \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}} borderColor = getBorderColor();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00051}00051         glColor4ub(borderColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{getRed}}(), borderColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{getGreen}}(), borderColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{getBlue}}(), borderColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}{getAlpha}}());}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00052}00052         glLineWidth(1.f);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00054}00054         glBegin(GL\_LINE\_LOOP);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00056}00056         \textcolor{keywordflow}{for}(i = 0; i <= triangleAmount;i++) \{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00057}00057             glVertex2f(m\_position.getX() + (m\_radius * cos(i * twicePi / triangleAmount)),}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00058}00058                        m\_position.getY() + (m\_radius * sin(i * twicePi / triangleAmount)));}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00059}00059         \}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00061}00061         glEnd();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00062}00062     \}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00063}00063 \} \textcolor{comment}{// draw()}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00065}\mbox{\hyperlink{classns_shape_1_1_circle_aae4610d0c110ad09da424c5a3ad91aac}{00065}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_circle_aae4610d0c110ad09da424c5a3ad91aac}{nsShape::Circle::getValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, std::vector<float> \&values)}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00066}00066 \{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00067}00067     \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00068}00068         \textcolor{keywordflow}{case} TRANSITION\_FILL\_COLOR\_RGB:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00069}00069             values[0] = m\_fillColor.getRed();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00070}00070             values[1] = m\_fillColor.getGreen();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00071}00071             values[2] = m\_fillColor.getBlue();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00073}00073             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00075}00075         \textcolor{keywordflow}{case} TRANSITION\_FILL\_COLOR\_ALPHA:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00076}00076             values[0] = m\_fillColor.getAlpha();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00077}00077 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00078}00078             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00079}00079 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00080}00080         \textcolor{keywordflow}{case} TRANSITION\_BORDER\_COLOR\_RGB:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00081}00081             values[0] = m\_borderColor.getRed();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00082}00082             values[1] = m\_borderColor.getGreen();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00083}00083             values[2] = m\_borderColor.getBlue();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00084}00084 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00085}00085             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00087}00087         \textcolor{keywordflow}{case} TRANSITION\_BORDER\_COLOR\_ALPHA:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00088}00088             values[0] = m\_borderColor.getAlpha();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00089}00089 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00090}00090             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00091}00091 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00092}00092         \textcolor{keywordflow}{case} TRANSITION\_POSITION:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00093}00093             values[0] = m\_position.getX();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00094}00094             values[1] = m\_position.getY();}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00095}00095 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00096}00096             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00097}00097 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00098}00098         \textcolor{keywordflow}{case} TRANSITION\_RADIUS:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00099}00099             values[0] = m\_radius;}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00101}00101             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00102}00102     \}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00103}00103 \} \textcolor{comment}{// getValues()}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00104}00104 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00105}\mbox{\hyperlink{classns_shape_1_1_circle_a9a2fc6b4a852e25922e5a1732d39644a}{00105}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_circle_a9a2fc6b4a852e25922e5a1732d39644a}{nsShape::Circle::setValues}}(\textcolor{keyword}{const} \textcolor{keywordtype}{int} \&\textcolor{keywordtype}{id}, \textcolor{keyword}{const} std::vector<float> \&values)}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00106}00106 \{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00107}00107     \textcolor{keywordflow}{switch} (\textcolor{keywordtype}{id}) \{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00108}00108         \textcolor{keywordflow}{case} TRANSITION\_FILL\_COLOR\_RGB:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00109}00109             m\_fillColor.setRed(values[0]);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00110}00110             m\_fillColor.setGreen(values[1]);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00111}00111             m\_fillColor.setBlue(values[2]);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00112}00112 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00113}00113             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00115}00115         \textcolor{keywordflow}{case} TRANSITION\_FILL\_COLOR\_ALPHA:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00116}00116             m\_fillColor.setAlpha(values[0]);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00117}00117 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00118}00118             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00119}00119 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00120}00120         \textcolor{keywordflow}{case} TRANSITION\_BORDER\_COLOR\_RGB:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00121}00121             m\_borderColor.setRed(values[0]);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00122}00122             m\_borderColor.setGreen(values[1]);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00123}00123             m\_borderColor.setBlue(values[2]);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00124}00124 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00125}00125             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00126}00126 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00127}00127         \textcolor{keywordflow}{case} TRANSITION\_BORDER\_COLOR\_ALPHA:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00128}00128             m\_borderColor.setAlpha(values[0]);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00129}00129 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00130}00130             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00131}00131 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00132}00132         \textcolor{keywordflow}{case} TRANSITION\_POSITION:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00133}00133             m\_position.setX(values[0]);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00134}00134             m\_position.setY(values[1]);}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00136}00136             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00137}00137 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00138}00138         \textcolor{keywordflow}{case} TRANSITION\_RADIUS:}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00139}00139             m\_radius = values[0];}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00141}00141             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00142}00142     \}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00143}00143 \} \textcolor{comment}{// setValues()}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00144}00144 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00145}\mbox{\hyperlink{classns_shape_1_1_circle_a8b1f88a61fb38c283b11600e4eec6fe3}{00145}} \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}} \mbox{\hyperlink{classns_shape_1_1_circle_a8b1f88a61fb38c283b11600e4eec6fe3}{nsShape::Circle::operator+}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& position)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00146}00146 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00147}00147     \textcolor{keywordflow}{return} \mbox{\hyperlink{classns_shape_1_1_circle}{Circle}}(m\_position + position, m\_radius, getFillColor(), getBorderColor());}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00148}00148 \} \textcolor{comment}{// operator+()}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00149}00149 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00150}\mbox{\hyperlink{classns_shape_1_1_circle_ad34827f3120b9331389a00cbf02468cb}{00150}} \mbox{\hyperlink{classns_shape_1_1_circle}{nsShape::Circle}} \mbox{\hyperlink{classns_shape_1_1_circle_ad34827f3120b9331389a00cbf02468cb}{nsShape::Circle::operator*}}(\textcolor{keyword}{const} \textcolor{keywordtype}{float}\& f)\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00151}00151 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00152}00152     \textcolor{keywordflow}{return} \mbox{\hyperlink{classns_shape_1_1_circle}{Circle}}(m\_position * f, m\_radius, getFillColor(), getBorderColor());}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00153}00153 \} \textcolor{comment}{// operator*()}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00154}00154 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00155}\mbox{\hyperlink{classns_shape_1_1_circle_afcb275822a67ec49167fe122ab74872c}{00155}} \textcolor{keywordtype}{unsigned} \mbox{\hyperlink{classns_shape_1_1_circle_afcb275822a67ec49167fe122ab74872c}{nsShape::Circle::getRadius}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00156}00156 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00157}00157     \textcolor{keywordflow}{return} m\_radius;}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00158}00158 \} \textcolor{comment}{// getRadius()}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00160}\mbox{\hyperlink{classns_shape_1_1_circle_a5f20408e41621d21487b6162eabc3a7d}{00160}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_circle_a5f20408e41621d21487b6162eabc3a7d}{nsShape::Circle::setRadius}}(\textcolor{keyword}{const} \textcolor{keywordtype}{unsigned} \&radius)}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00161}00161 \{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00162}00162     m\_radius = radius;}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00163}00163 \} \textcolor{comment}{// setRadius()}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00164}00164 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00165}\mbox{\hyperlink{classns_shape_1_1_circle_a85b4102c4a23101fba4f90c1f8e84168}{00165}} \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& \mbox{\hyperlink{classns_shape_1_1_circle_a85b4102c4a23101fba4f90c1f8e84168}{nsShape::Circle::getPosition}}()\textcolor{keyword}{ const}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00166}00166 \textcolor{keyword}{}\{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00167}00167     \textcolor{keywordflow}{return} m\_position;}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00168}00168 \} \textcolor{comment}{// getPosition()}}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00170}\mbox{\hyperlink{classns_shape_1_1_circle_ac4e73227c9ec7e22670bd012b6f37bef}{00170}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classns_shape_1_1_circle_ac4e73227c9ec7e22670bd012b6f37bef}{nsShape::Circle::setPosition}}(\textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}} \&position)}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00171}00171 \{}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00172}00172     m\_position = position;}
+\DoxyCodeLine{\Hypertarget{circle_8cpp_source_l00173}00173 \} \textcolor{comment}{// setPosition()}}
+
+\end{DoxyCode}

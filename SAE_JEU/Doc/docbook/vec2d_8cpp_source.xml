@@ -1,0 +1,198 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_vec2d_8cpp_source" xml:lang="en-US">
+<title>vec2d.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/vec2d.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_vec2d_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_vec2d_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;cmath&gt;</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00012"/>00012 
+<anchor xml:id="_vec2d_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_vec2d_8h">mingl/graphics/vec2d.h</link>&quot;</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00014"/>00014 
+<anchor xml:id="_vec2d_8cpp_source_1l00015"/><link linkend="_classns_graphics_1_1_vec2_d_1a4a2fdd532ded3c29b7a3bd6e5a23fadf">00015</link> <link linkend="_classns_graphics_1_1_vec2_d_1a4a2fdd532ded3c29b7a3bd6e5a23fadf">nsGraphics::Vec2D::Vec2D</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&amp;&#32;x,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">int</emphasis>&amp;&#32;y)
+<anchor xml:id="_vec2d_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;:&#32;m_x(x)
+<anchor xml:id="_vec2d_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;,&#32;m_y(y)
+<anchor xml:id="_vec2d_8cpp_source_1l00018"/>00018 {}&#32;<emphasis role="comment">//&#32;Vec2D()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00019"/>00019 
+<anchor xml:id="_vec2d_8cpp_source_1l00020"/><link linkend="_classns_graphics_1_1_vec2_d_1ae409c698404abced934b589d58513767">00020</link> <link linkend="_classns_graphics_1_1_vec2_d_1a4a2fdd532ded3c29b7a3bd6e5a23fadf">nsGraphics::Vec2D::Vec2D</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;pos)
+<anchor xml:id="_vec2d_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;:&#32;m_x(pos.getX())
+<anchor xml:id="_vec2d_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;,&#32;m_y(pos.getY())
+<anchor xml:id="_vec2d_8cpp_source_1l00023"/>00023 {}&#32;<emphasis role="comment">//&#32;Vec2D()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00024"/>00024 
+<anchor xml:id="_vec2d_8cpp_source_1l00025"/><link linkend="_classns_graphics_1_1_vec2_d_1aded521aea98ae5b1fdd19f4f9e2df74a">00025</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1aded521aea98ae5b1fdd19f4f9e2df74a">nsGraphics::Vec2D::operator+</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00026"/>00026 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>(+m_x,&#32;+m_y);
+<anchor xml:id="_vec2d_8cpp_source_1l00028"/>00028 }&#32;<emphasis role="comment">//&#32;operator+()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00029"/>00029 
+<anchor xml:id="_vec2d_8cpp_source_1l00030"/><link linkend="_classns_graphics_1_1_vec2_d_1a3cc10af3b04df2c6bf85460ced5c63a7">00030</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1a3cc10af3b04df2c6bf85460ced5c63a7">nsGraphics::Vec2D::operator-</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00031"/>00031 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>(-m_x,&#32;-m_y);
+<anchor xml:id="_vec2d_8cpp_source_1l00033"/>00033 }&#32;<emphasis role="comment">//&#32;operator-()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00034"/>00034 
+<anchor xml:id="_vec2d_8cpp_source_1l00035"/><link linkend="_classns_graphics_1_1_vec2_d_1a59d565535347c6d0974be9a2333a5806">00035</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1aded521aea98ae5b1fdd19f4f9e2df74a">nsGraphics::Vec2D::operator+</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00036"/>00036 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>(m_x&#32;+&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>(),&#32;m_y&#32;+&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>());
+<anchor xml:id="_vec2d_8cpp_source_1l00038"/>00038 }&#32;<emphasis role="comment">//&#32;operator+()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00039"/>00039 
+<anchor xml:id="_vec2d_8cpp_source_1l00040"/><link linkend="_classns_graphics_1_1_vec2_d_1a6431bcd5dd86fbaf119bed9cf01a13f2">00040</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1a3cc10af3b04df2c6bf85460ced5c63a7">nsGraphics::Vec2D::operator-</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&#32;&amp;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00041"/>00041 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>(m_x&#32;-&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>(),&#32;m_y&#32;-&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>());
+<anchor xml:id="_vec2d_8cpp_source_1l00043"/>00043 }&#32;<emphasis role="comment">//&#32;operator-()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00044"/>00044 
+<anchor xml:id="_vec2d_8cpp_source_1l00045"/><link linkend="_classns_graphics_1_1_vec2_d_1afed7035dfbafeffbfac737fb39d4fb90">00045</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1afed7035dfbafeffbfac737fb39d4fb90">nsGraphics::Vec2D::operator*</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00046"/>00046 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>(m_x&#32;*&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>(),&#32;m_y&#32;*&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>());
+<anchor xml:id="_vec2d_8cpp_source_1l00048"/>00048 }&#32;<emphasis role="comment">//&#32;operator*()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00049"/>00049 
+<anchor xml:id="_vec2d_8cpp_source_1l00050"/><link linkend="_classns_graphics_1_1_vec2_d_1a7eb4139a171785d5f2f337cee77b9fb0">00050</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1afed7035dfbafeffbfac737fb39d4fb90">nsGraphics::Vec2D::operator*</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&amp;&#32;n)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00051"/>00051 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>(m_x&#32;*&#32;n,&#32;m_y&#32;*&#32;n);
+<anchor xml:id="_vec2d_8cpp_source_1l00053"/>00053 }&#32;<emphasis role="comment">//&#32;operator*()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00054"/>00054 
+<anchor xml:id="_vec2d_8cpp_source_1l00055"/><link linkend="_classns_graphics_1_1_vec2_d_1aaabc44f047e46433d0115fbc49b3ae2f">00055</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1aaabc44f047e46433d0115fbc49b3ae2f">nsGraphics::Vec2D::operator/</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&#32;&amp;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00056"/>00056 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00057"/>00057 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>(m_x&#32;/&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>(),&#32;m_y&#32;/&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>());
+<anchor xml:id="_vec2d_8cpp_source_1l00058"/>00058 }&#32;<emphasis role="comment">//&#32;operator/()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00059"/>00059 
+<anchor xml:id="_vec2d_8cpp_source_1l00060"/><link linkend="_classns_graphics_1_1_vec2_d_1ae3adeb741fa6137acf0edbcf02ca58af">00060</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1aaabc44f047e46433d0115fbc49b3ae2f">nsGraphics::Vec2D::operator/</link>(<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">float</emphasis>&#32;&amp;n)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00061"/>00061 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00062"/>00062 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>(m_x&#32;/&#32;n,&#32;m_y&#32;/&#32;n);
+<anchor xml:id="_vec2d_8cpp_source_1l00063"/>00063 }&#32;<emphasis role="comment">//&#32;operator/()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00064"/>00064 
+<anchor xml:id="_vec2d_8cpp_source_1l00065"/><link linkend="_classns_graphics_1_1_vec2_d_1a43281403abbad9948eacca4d37fc61dc">00065</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1a43281403abbad9948eacca4d37fc61dc">nsGraphics::Vec2D::operator%</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&#32;&amp;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00066"/>00066 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>(m_x&#32;%&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>(),&#32;m_y&#32;%&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>());
+<anchor xml:id="_vec2d_8cpp_source_1l00068"/>00068 }&#32;<emphasis role="comment">//&#32;operator%()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00069"/>00069 
+<anchor xml:id="_vec2d_8cpp_source_1l00070"/><link linkend="_classns_graphics_1_1_vec2_d_1a94b4b8420a450dd284311c49cb0b2e6b">00070</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1a94b4b8420a450dd284311c49cb0b2e6b">nsGraphics::Vec2D::operator==</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00071"/>00071 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00072"/>00072 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_x&#32;==&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()&#32;&amp;&amp;&#32;m_y&#32;==&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00073"/>00073 }&#32;<emphasis role="comment">//&#32;operator==()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00074"/>00074 
+<anchor xml:id="_vec2d_8cpp_source_1l00075"/><link linkend="_classns_graphics_1_1_vec2_d_1affaed949190e8cb5a3c8f9813b31eb0d">00075</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1affaed949190e8cb5a3c8f9813b31eb0d">nsGraphics::Vec2D::operator!=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&#32;&amp;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00076"/>00076 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00077"/>00077 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_x&#32;!=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()&#32;||&#32;m_y&#32;!=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00078"/>00078 }&#32;<emphasis role="comment">//&#32;operator!=()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00079"/>00079 
+<anchor xml:id="_vec2d_8cpp_source_1l00080"/><link linkend="_classns_graphics_1_1_vec2_d_1accfe96cfa5b8495a0b14c7087068064e">00080</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1accfe96cfa5b8495a0b14c7087068064e">nsGraphics::Vec2D::operator&lt;</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00081"/>00081 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00082"/>00082 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;computeMagnitude()&#32;&lt;&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7">computeMagnitude</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00083"/>00083 }&#32;<emphasis role="comment">//&#32;operator&lt;()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00084"/>00084 
+<anchor xml:id="_vec2d_8cpp_source_1l00085"/><link linkend="_classns_graphics_1_1_vec2_d_1a30da0e7984d8c3e7a66bbdcdcc24c9cb">00085</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1a30da0e7984d8c3e7a66bbdcdcc24c9cb">nsGraphics::Vec2D::operator&gt;</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00086"/>00086 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00087"/>00087 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;computeMagnitude()&#32;&gt;&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7">computeMagnitude</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00088"/>00088 }&#32;<emphasis role="comment">//&#32;operator&gt;()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00089"/>00089 
+<anchor xml:id="_vec2d_8cpp_source_1l00090"/><link linkend="_classns_graphics_1_1_vec2_d_1afd5e0e3ba77ef971f8d022d69a4a2647">00090</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1afd5e0e3ba77ef971f8d022d69a4a2647">nsGraphics::Vec2D::operator&lt;=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00091"/>00091 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00092"/>00092 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;computeMagnitude()&#32;&lt;=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7">computeMagnitude</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00093"/>00093 }&#32;<emphasis role="comment">//&#32;operator&lt;=()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00094"/>00094 
+<anchor xml:id="_vec2d_8cpp_source_1l00095"/><link linkend="_classns_graphics_1_1_vec2_d_1a478dad2852611070874c6c9e5663b570">00095</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1a478dad2852611070874c6c9e5663b570">nsGraphics::Vec2D::operator&gt;=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;pos)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00096"/>00096 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00097"/>00097 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;computeMagnitude()&#32;&gt;=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7">computeMagnitude</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00098"/>00098 }&#32;<emphasis role="comment">//&#32;operator&gt;=()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00099"/>00099 
+<anchor xml:id="_vec2d_8cpp_source_1l00100"/><link linkend="_classns_graphics_1_1_vec2_d_1a041926192c1d2c579b12dcf1eb1725d5">00100</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_graphics_1_1_vec2_d_1a041926192c1d2c579b12dcf1eb1725d5">nsGraphics::Vec2D::operator=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;pos)
+<anchor xml:id="_vec2d_8cpp_source_1l00101"/>00101 {
+<anchor xml:id="_vec2d_8cpp_source_1l00102"/>00102 &#32;&#32;&#32;&#32;m_x&#32;=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00103"/>00103 &#32;&#32;&#32;&#32;m_y&#32;=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00104"/>00104 
+<anchor xml:id="_vec2d_8cpp_source_1l00105"/>00105 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_vec2d_8cpp_source_1l00106"/>00106 }&#32;<emphasis role="comment">//&#32;operator=()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00107"/>00107 
+<anchor xml:id="_vec2d_8cpp_source_1l00108"/><link linkend="_classns_graphics_1_1_vec2_d_1aafd8b68f1cb9dcfcf92a96714e58c5ec">00108</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;<link linkend="_classns_graphics_1_1_vec2_d_1aafd8b68f1cb9dcfcf92a96714e58c5ec">nsGraphics::Vec2D::operator+=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;pos)
+<anchor xml:id="_vec2d_8cpp_source_1l00109"/>00109 {
+<anchor xml:id="_vec2d_8cpp_source_1l00110"/>00110 &#32;&#32;&#32;&#32;m_x&#32;+=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00111"/>00111 &#32;&#32;&#32;&#32;m_y&#32;+=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00112"/>00112 
+<anchor xml:id="_vec2d_8cpp_source_1l00113"/>00113 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_vec2d_8cpp_source_1l00114"/>00114 }&#32;<emphasis role="comment">//&#32;operator+=()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00115"/>00115 
+<anchor xml:id="_vec2d_8cpp_source_1l00116"/><link linkend="_classns_graphics_1_1_vec2_d_1aa9b0986206c35bb5c0043db02548fce4">00116</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;<link linkend="_classns_graphics_1_1_vec2_d_1aa9b0986206c35bb5c0043db02548fce4">nsGraphics::Vec2D::operator-=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;pos)
+<anchor xml:id="_vec2d_8cpp_source_1l00117"/>00117 {
+<anchor xml:id="_vec2d_8cpp_source_1l00118"/>00118 &#32;&#32;&#32;&#32;m_x&#32;-=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00119"/>00119 &#32;&#32;&#32;&#32;m_y&#32;-=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00120"/>00120 
+<anchor xml:id="_vec2d_8cpp_source_1l00121"/>00121 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_vec2d_8cpp_source_1l00122"/>00122 }&#32;<emphasis role="comment">//&#32;operator-=()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00123"/>00123 
+<anchor xml:id="_vec2d_8cpp_source_1l00124"/><link linkend="_classns_graphics_1_1_vec2_d_1a6e0e661361c0f3081fa2d9488978771e">00124</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;<link linkend="_classns_graphics_1_1_vec2_d_1a6e0e661361c0f3081fa2d9488978771e">nsGraphics::Vec2D::operator*=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;pos)
+<anchor xml:id="_vec2d_8cpp_source_1l00125"/>00125 {
+<anchor xml:id="_vec2d_8cpp_source_1l00126"/>00126 &#32;&#32;&#32;&#32;m_x&#32;*=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00127"/>00127 &#32;&#32;&#32;&#32;m_y&#32;*=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00128"/>00128 
+<anchor xml:id="_vec2d_8cpp_source_1l00129"/>00129 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_vec2d_8cpp_source_1l00130"/>00130 }&#32;<emphasis role="comment">//&#32;operator*=()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00131"/>00131 
+<anchor xml:id="_vec2d_8cpp_source_1l00132"/><link linkend="_classns_graphics_1_1_vec2_d_1a1146ac9d05c667bb4a46140858953711">00132</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;<link linkend="_classns_graphics_1_1_vec2_d_1a1146ac9d05c667bb4a46140858953711">nsGraphics::Vec2D::operator/=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;pos)
+<anchor xml:id="_vec2d_8cpp_source_1l00133"/>00133 {
+<anchor xml:id="_vec2d_8cpp_source_1l00134"/>00134 &#32;&#32;&#32;&#32;m_x&#32;/=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00135"/>00135 &#32;&#32;&#32;&#32;m_y&#32;/=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00136"/>00136 
+<anchor xml:id="_vec2d_8cpp_source_1l00137"/>00137 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_vec2d_8cpp_source_1l00138"/>00138 }&#32;<emphasis role="comment">//&#32;operator/=()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00139"/>00139 
+<anchor xml:id="_vec2d_8cpp_source_1l00140"/><link linkend="_classns_graphics_1_1_vec2_d_1a57003f3d4660f986c3c21c027ac8b154">00140</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;<link linkend="_classns_graphics_1_1_vec2_d_1a57003f3d4660f986c3c21c027ac8b154">nsGraphics::Vec2D::operator%=</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;pos)
+<anchor xml:id="_vec2d_8cpp_source_1l00141"/>00141 {
+<anchor xml:id="_vec2d_8cpp_source_1l00142"/>00142 &#32;&#32;&#32;&#32;m_x&#32;%=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00143"/>00143 &#32;&#32;&#32;&#32;m_y&#32;%=&#32;pos.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>();
+<anchor xml:id="_vec2d_8cpp_source_1l00144"/>00144 
+<anchor xml:id="_vec2d_8cpp_source_1l00145"/>00145 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;*<emphasis role="keyword">this</emphasis>;
+<anchor xml:id="_vec2d_8cpp_source_1l00146"/>00146 }&#32;<emphasis role="comment">//&#32;operator%=()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00147"/>00147 
+<anchor xml:id="_vec2d_8cpp_source_1l00148"/><link linkend="_classns_graphics_1_1_vec2_d_1a8a4760c6a33beb77d1e7a850b44129fc">00148</link> <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1a8a4760c6a33beb77d1e7a850b44129fc">nsGraphics::Vec2D::min</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;p1,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;p2)
+<anchor xml:id="_vec2d_8cpp_source_1l00149"/>00149 {
+<anchor xml:id="_vec2d_8cpp_source_1l00150"/>00150 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(p1.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()&#32;&lt;&#32;p2.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>())&#32;<emphasis role="keywordflow">return</emphasis>&#32;p1;
+<anchor xml:id="_vec2d_8cpp_source_1l00151"/>00151 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">else</emphasis>&#32;<emphasis role="keywordflow">if</emphasis>&#32;(p1.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()&#32;==&#32;p2.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()&#32;&amp;&amp;&#32;p1.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>()&#32;&lt;&#32;p2.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>())&#32;<emphasis role="keywordflow">return</emphasis>&#32;p1;
+<anchor xml:id="_vec2d_8cpp_source_1l00152"/>00152 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;p2;
+<anchor xml:id="_vec2d_8cpp_source_1l00153"/>00153 }&#32;<emphasis role="comment">//&#32;min()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00154"/>00154 
+<anchor xml:id="_vec2d_8cpp_source_1l00155"/><link linkend="_classns_graphics_1_1_vec2_d_1a77c8619c34dcb2e7b5d9337da0fcfe59">00155</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1a77c8619c34dcb2e7b5d9337da0fcfe59">nsGraphics::Vec2D::minf</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;p1,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&amp;&#32;p2)
+<anchor xml:id="_vec2d_8cpp_source_1l00156"/>00156 {
+<anchor xml:id="_vec2d_8cpp_source_1l00157"/>00157 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(p1&#32;==&#32;min(p1,&#32;p2));
+<anchor xml:id="_vec2d_8cpp_source_1l00158"/>00158 }&#32;<emphasis role="comment">//&#32;minf()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00159"/>00159 
+<anchor xml:id="_vec2d_8cpp_source_1l00160"/><link linkend="_classns_graphics_1_1_vec2_d_1aa02cee45c2d8aa2d9b7e08dfb6c1dfca">00160</link> <emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1aa02cee45c2d8aa2d9b7e08dfb6c1dfca">nsGraphics::Vec2D::isColliding</link>(<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&#32;firstCorner,&#32;<link linkend="_classns_graphics_1_1_vec2_d">Vec2D</link>&#32;secondCorner)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00161"/>00161 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00162"/>00162 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;inverse&#32;les&#32;coordonnées&#32;si&#32;nécessaire</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00163"/>00163 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(secondCorner.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>()&#32;&lt;&#32;firstCorner.<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">getX</link>())
+<anchor xml:id="_vec2d_8cpp_source_1l00164"/>00164 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::swap(secondCorner.m_x,&#32;firstCorner.m_x);
+<anchor xml:id="_vec2d_8cpp_source_1l00165"/>00165 
+<anchor xml:id="_vec2d_8cpp_source_1l00166"/>00166 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(secondCorner.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>()&#32;&lt;&#32;firstCorner.<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">getY</link>())
+<anchor xml:id="_vec2d_8cpp_source_1l00167"/>00167 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;std::swap(secondCorner.m_y,&#32;firstCorner.m_y);
+<anchor xml:id="_vec2d_8cpp_source_1l00168"/>00168 
+<anchor xml:id="_vec2d_8cpp_source_1l00169"/>00169 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;retourne&#32;si&#32;notre&#32;vecteur&#32;est&#32;entre&#32;ces&#32;deux&#32;coins</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00170"/>00170 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;(<emphasis role="keyword">operator</emphasis>&gt;=(firstCorner)&#32;&amp;&amp;&#32;<emphasis role="keyword">operator</emphasis>&lt;=(secondCorner));
+<anchor xml:id="_vec2d_8cpp_source_1l00171"/>00171 }&#32;<emphasis role="comment">//&#32;isColliding()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00172"/>00172 
+<anchor xml:id="_vec2d_8cpp_source_1l00173"/><link linkend="_classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7">00173</link> <emphasis role="keywordtype">double</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7">nsGraphics::Vec2D::computeMagnitude</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00174"/>00174 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00175"/>00175 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;sqrt(m_x&#32;*&#32;m_x&#32;+&#32;m_y&#32;*&#32;m_y);
+<anchor xml:id="_vec2d_8cpp_source_1l00176"/>00176 }&#32;<emphasis role="comment">//&#32;getMagnitude()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00177"/>00177 
+<anchor xml:id="_vec2d_8cpp_source_1l00178"/><link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">00178</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1">nsGraphics::Vec2D::getX</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00179"/>00179 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00180"/>00180 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_x;
+<anchor xml:id="_vec2d_8cpp_source_1l00181"/>00181 }&#32;<emphasis role="comment">//&#32;getX()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00182"/>00182 
+<anchor xml:id="_vec2d_8cpp_source_1l00183"/><link linkend="_classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d">00183</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d">nsGraphics::Vec2D::setX</link>(<emphasis role="keywordtype">int</emphasis>&#32;x)
+<anchor xml:id="_vec2d_8cpp_source_1l00184"/>00184 {
+<anchor xml:id="_vec2d_8cpp_source_1l00185"/>00185 &#32;&#32;&#32;&#32;m_x&#32;=&#32;x;
+<anchor xml:id="_vec2d_8cpp_source_1l00186"/>00186 }&#32;<emphasis role="comment">//&#32;setX()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00187"/>00187 
+<anchor xml:id="_vec2d_8cpp_source_1l00188"/><link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">00188</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e">nsGraphics::Vec2D::getY</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00189"/>00189 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00190"/>00190 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;m_y;
+<anchor xml:id="_vec2d_8cpp_source_1l00191"/>00191 }&#32;<emphasis role="comment">//&#32;getY()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00192"/>00192 
+<anchor xml:id="_vec2d_8cpp_source_1l00193"/><link linkend="_classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f">00193</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f">nsGraphics::Vec2D::setY</link>(<emphasis role="keywordtype">int</emphasis>&#32;y)
+<anchor xml:id="_vec2d_8cpp_source_1l00194"/>00194 {
+<anchor xml:id="_vec2d_8cpp_source_1l00195"/>00195 &#32;&#32;&#32;&#32;m_y&#32;=&#32;y;
+<anchor xml:id="_vec2d_8cpp_source_1l00196"/>00196 }&#32;<emphasis role="comment">//&#32;setY()</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00197"/>00197 
+<anchor xml:id="_vec2d_8cpp_source_1l00198"/><link linkend="_classns_graphics_1_1_vec2_d_1ad416f3698e43099990b3d96d9099c65f">00198</link> std::ostream&amp;&#32;<link linkend="_classns_graphics_1_1_vec2_d_1ad416f3698e43099990b3d96d9099c65f">nsGraphics::Vec2D::_Edit</link>(std::ostream&amp;&#32;os)<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_vec2d_8cpp_source_1l00199"/>00199 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_vec2d_8cpp_source_1l00200"/>00200 &#32;&#32;&#32;&#32;os&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;X:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;m_x&#32;&lt;&lt;&#32;<emphasis role="stringliteral">&quot;,&#32;Y:&#32;&quot;</emphasis>&#32;&lt;&lt;&#32;m_y;
+<anchor xml:id="_vec2d_8cpp_source_1l00201"/>00201 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;os;
+<anchor xml:id="_vec2d_8cpp_source_1l00202"/>00202 }&#32;<emphasis role="comment">//&#32;_Edit()</emphasis>
+</programlisting></section>

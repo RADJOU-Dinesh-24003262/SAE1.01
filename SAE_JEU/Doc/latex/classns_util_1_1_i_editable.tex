@@ -1,0 +1,91 @@
+\hypertarget{classns_util_1_1_i_editable}{}\doxysection{ns\+Util\+::IEditable Class Reference}
+\label{classns_util_1_1_i_editable}\index{nsUtil::IEditable@{nsUtil::IEditable}}
+
+
+Interface pour un objet injectable.  
+
+
+
+
+{\ttfamily \#include $<$ieditable.\+h$>$}
+
+
+
+Inheritance diagram for ns\+Util\+::IEditable\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_util_1_1_i_editable__inherit__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classns_util_1_1_i_editable_a504b91af8e4efa46357d7236b86b8e2e}\label{classns_util_1_1_i_editable_a504b91af8e4efa46357d7236b86b8e2e}} 
+virtual {\bfseries $\sim$\+IEditable} ()=default
+\begin{DoxyCompactList}\small\item\em Destructeur pour la classe \mbox{\hyperlink{classns_util_1_1_i_editable}{IEditable}}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+virtual std\+::ostream \& \mbox{\hyperlink{classns_util_1_1_i_editable_ab20bbe582b95383ed3f1453109035853}{\+\_\+\+Edit}} (std\+::ostream \&os) const =0
+\begin{DoxyCompactList}\small\item\em Fonction appelée pour injecter l\textquotesingle{}objet courant dans un flux. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{classns_util_1_1_i_editable_a53db4e7832b7c4579b331800bb0cae70}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{classns_util_1_1_i_editable}{IEditable}} \&Obj)
+\begin{DoxyCompactList}\small\item\em Surcharge de l\textquotesingle{}opérateur d\textquotesingle{}injection. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface pour un objet injectable. 
+
+Definition at line \mbox{\hyperlink{ieditable_8h_source_l00037}{37}} of file \mbox{\hyperlink{ieditable_8h_source}{ieditable.\+h}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns_util_1_1_i_editable_ab20bbe582b95383ed3f1453109035853}\label{classns_util_1_1_i_editable_ab20bbe582b95383ed3f1453109035853}} 
+\index{nsUtil::IEditable@{nsUtil::IEditable}!\_Edit@{\_Edit}}
+\index{\_Edit@{\_Edit}!nsUtil::IEditable@{nsUtil::IEditable}}
+\doxysubsubsection{\texorpdfstring{\_Edit()}{\_Edit()}}
+{\footnotesize\ttfamily std\+::ostream \& ns\+Util\+::\+IEditable\+::\+\_\+\+Edit (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [protected]}, {\ttfamily [pure virtual]}}
+
+
+
+Fonction appelée pour injecter l\textquotesingle{}objet courant dans un flux. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em os} & \+: Flux dans lequel injecter \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{classns_exception_1_1_c_exception_ae4430e1cfaa948dc6f63bb8437fa6027}{ns\+Exception\+::\+CException}}, \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a09154c1fc9ba912860f2b4fac5432298}{ns\+Graphics\+::\+RGBAcolor}}, and \mbox{\hyperlink{classns_graphics_1_1_vec2_d_ad416f3698e43099990b3d96d9099c65f}{ns\+Graphics\+::\+Vec2D}}.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classns_util_1_1_i_editable_a53db4e7832b7c4579b331800bb0cae70}\label{classns_util_1_1_i_editable_a53db4e7832b7c4579b331800bb0cae70}} 
+\index{nsUtil::IEditable@{nsUtil::IEditable}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!nsUtil::IEditable@{nsUtil::IEditable}}
+\doxysubsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{classns_util_1_1_i_editable}{IEditable}} \&}]{Obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Surcharge de l\textquotesingle{}opérateur d\textquotesingle{}injection. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em os} & \+: Flux dans lequel injecter \\
+\hline
+\mbox{\texttt{ in}}  & {\em Obj} & \+: Objet a injecter \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/tools/\mbox{\hyperlink{ieditable_8h}{ieditable.\+h}}\end{DoxyCompactItemize}

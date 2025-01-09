@@ -1,0 +1,914 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygenindex xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="index.xsd" version="1.9.4" xml:lang="en-US">
+  <compound refid="classns_audio_1_1_audio_engine" kind="class"><name>nsAudio::AudioEngine</name>
+    <member refid="classns_audio_1_1_audio_engine_1a5c70458aff2dceefc6208730e9121d5f" kind="variable"><name>m_buffers</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1a12db8946f0698e0a108504de26a7e902" kind="variable"><name>m_sounds</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1ac6f1450ea422e1943494c853ac9049b4" kind="variable"><name>m_soundsFromFiles</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1a6f08cc1ead1048a34ef8733896e586b7" kind="variable"><name>m_music</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1a6ef72eb80bef2c1b0764c40f629d2536" kind="function"><name>setMusic</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1aba89263fc9f810bee40dcae229313883" kind="function"><name>toggleMusicPlaying</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1ac21b2c1be9590a0f702c48220c59f8c9" kind="function"><name>setMusicPlaying</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1a57e13380a3039e546a5f1b9242f8709b" kind="function"><name>isMusicPlaying</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1a4c88595136327b3805c0322a9a8d2a0f" kind="function"><name>loadSound</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1a2b0a1a9b1cb90e1180ddedb5b9e2fad1" kind="function"><name>removeBuffer</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1ac05b3e0d2fd9ecfd1ad8eb110f021bf3" kind="function"><name>emptyBufferList</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1ac1343ed3afe38eb80a222969f3d74d6d" kind="function"><name>startMusicFromBeginning</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1a47d769cc331578a398f422ff497505c8" kind="function"><name>playSoundFromBuffer</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1aa541e8088c35ab41e4747ecd648e75e9" kind="function"><name>playSoundFromFile</name></member>
+    <member refid="classns_audio_1_1_audio_engine_1af89ee6774e0eedf67788f1350632da09" kind="function"><name>removeOldSounds</name></member>
+  </compound>
+  <compound refid="struct_authorized_key" kind="struct"><name>AuthorizedKey</name>
+    <member refid="struct_authorized_key_1a1b1aa7863427cc1b43f229423bdd83ba" kind="variable"><name>VParamChar</name></member>
+    <member refid="struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73" kind="variable"><name>VParamString</name></member>
+    <member refid="struct_authorized_key_1a871173f4b0c89c91289a10f0ddc1cadd" kind="variable"><name>VParamUnsigned</name></member>
+  </compound>
+  <compound refid="class_bg_text" kind="class"><name>BgText</name>
+    <member refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95" kind="enum"><name>TransitionIds</name></member>
+    <member refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3" kind="enumvalue"><name>TRANSITION_TEXT_COLOR</name></member>
+    <member refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1" kind="enumvalue"><name>TRANSITION_BACKGROUND_COLOR</name></member>
+    <member refid="class_bg_text_1a1c6ea6b570ee47f209a8cf41d6548380" kind="variable"><name>m_text</name></member>
+    <member refid="class_bg_text_1a4c5e8e4e270d6b114aa248c479b36cb5" kind="variable"><name>m_background</name></member>
+    <member refid="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" kind="function"><name>BgText</name></member>
+    <member refid="class_bg_text_1a19f8e1aa743e37d252b5b46ca98b7cd1" kind="function"><name>~BgText</name></member>
+    <member refid="class_bg_text_1a01df624a8d498766a9eb579eb18f2326" kind="function"><name>draw</name></member>
+    <member refid="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" kind="function"><name>BgText</name></member>
+    <member refid="class_bg_text_1a19f8e1aa743e37d252b5b46ca98b7cd1" kind="function"><name>~BgText</name></member>
+    <member refid="class_bg_text_1a55fdeb5f3e12dcc2926c87f80fddc6c3" kind="function"><name>draw</name></member>
+    <member refid="class_bg_text_1a01cc8269e39184b805351409aac4feb4" kind="function"><name>getValues</name></member>
+    <member refid="class_bg_text_1adb35c1e7e0387e04e8f8e67d9e1468c8" kind="function"><name>setValues</name></member>
+  </compound>
+  <compound refid="classns_exception_1_1_c_exception" kind="class"><name>nsException::CException</name>
+    <member refid="classns_exception_1_1_c_exception_1a96c2d653703b2879ff8050cc78bc450a" kind="variable"><name>m_Libelle</name></member>
+    <member refid="classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da" kind="variable"><name>m_CodErr</name></member>
+    <member refid="classns_exception_1_1_c_exception_1aeacba2e2180dd8c00c643e1a67cba423" kind="function"><name>CException</name></member>
+    <member refid="classns_exception_1_1_c_exception_1a8b95a8f59d50a7ff3b67423c83cb8501" kind="function"><name>~CException</name></member>
+    <member refid="classns_exception_1_1_c_exception_1aef8e3d1a4e22ec7045d7d0b14d8b968a" kind="function"><name>GetLibelle</name></member>
+    <member refid="classns_exception_1_1_c_exception_1adf06d1598420c7b60c1b134bf2a946c2" kind="function"><name>GetCodErr</name></member>
+    <member refid="classns_exception_1_1_c_exception_1a5ef0ababcc3ffc93f70211de1122c9a8" kind="function"><name>what</name></member>
+    <member refid="classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027" kind="function"><name>_Edit</name></member>
+  </compound>
+  <compound refid="classns_shape_1_1_circle" kind="class"><name>nsShape::Circle</name>
+    <member refid="classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235" kind="enum"><name>TransitionIds</name></member>
+    <member refid="classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a9fe224767a5f886c96a3f23e6355677a" kind="enumvalue"><name>TRANSITION_FILL_COLOR_RGB</name></member>
+    <member refid="classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a0df548537c2bd5e8aad51eab0a182d08" kind="enumvalue"><name>TRANSITION_FILL_COLOR_ALPHA</name></member>
+    <member refid="classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a2fdc553c832dfca9e296d9775c107732" kind="enumvalue"><name>TRANSITION_BORDER_COLOR_RGB</name></member>
+    <member refid="classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a07cbcb4b2a43a087c534998e1ca553ee" kind="enumvalue"><name>TRANSITION_BORDER_COLOR_ALPHA</name></member>
+    <member refid="classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235aa2a6bbdede0b294813c638e4359c8603" kind="enumvalue"><name>TRANSITION_POSITION</name></member>
+    <member refid="classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a8a3d4b3560b97d5e11b81b58e2808393" kind="enumvalue"><name>TRANSITION_RADIUS</name></member>
+    <member refid="classns_shape_1_1_circle_1a763e696416299f2ef620bf2a3a15dc6b" kind="variable"><name>m_position</name></member>
+    <member refid="classns_shape_1_1_circle_1aa1b42f82217c300a282d9e42079b530f" kind="variable"><name>m_radius</name></member>
+    <member refid="classns_shape_1_1_circle_1a06b1c1c7ea1e4ec8228d929e7b3966ee" kind="function"><name>Circle</name></member>
+    <member refid="classns_shape_1_1_circle_1a2446e688c063dcb2693adfcfacbb2804" kind="function"><name>~Circle</name></member>
+    <member refid="classns_shape_1_1_circle_1a03be5cdd7d6a0feaa7d6b0a819389a7a" kind="function"><name>draw</name></member>
+    <member refid="classns_shape_1_1_circle_1aae4610d0c110ad09da424c5a3ad91aac" kind="function"><name>getValues</name></member>
+    <member refid="classns_shape_1_1_circle_1a9a2fc6b4a852e25922e5a1732d39644a" kind="function"><name>setValues</name></member>
+    <member refid="classns_shape_1_1_circle_1a8b1f88a61fb38c283b11600e4eec6fe3" kind="function"><name>operator+</name></member>
+    <member refid="classns_shape_1_1_circle_1ad34827f3120b9331389a00cbf02468cb" kind="function"><name>operator*</name></member>
+    <member refid="classns_shape_1_1_circle_1a85b4102c4a23101fba4f90c1f8e84168" kind="function"><name>getPosition</name></member>
+    <member refid="classns_shape_1_1_circle_1ac4e73227c9ec7e22670bd012b6f37bef" kind="function"><name>setPosition</name></member>
+    <member refid="classns_shape_1_1_circle_1afcb275822a67ec49167fe122ab74872c" kind="function"><name>getRadius</name></member>
+    <member refid="classns_shape_1_1_circle_1a5f20408e41621d21487b6162eabc3a7d" kind="function"><name>setRadius</name></member>
+  </compound>
+  <compound refid="struct_c_my_param" kind="struct"><name>CMyParam</name>
+    <member refid="struct_c_my_param_1ac38ede5a509bd268e749bc9c960466d3" kind="variable"><name>MapParamChar</name></member>
+    <member refid="struct_c_my_param_1aece7d4bdf4103e359f769d08e97a459d" kind="variable"><name>MapParamUnsigned</name></member>
+    <member refid="struct_c_my_param_1a6f22660b5eff76608f47c52930e6ecf1" kind="variable"><name>MapParamString</name></member>
+  </compound>
+  <compound refid="struct_c_my_param_v2" kind="struct"><name>CMyParamV2</name>
+    <member refid="struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6" kind="variable"><name>tokenP1</name></member>
+    <member refid="struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6" kind="variable"><name>tokenP2</name></member>
+    <member refid="struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123" kind="variable"><name>Key1Up</name></member>
+    <member refid="struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d" kind="variable"><name>Key1Down</name></member>
+    <member refid="struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef" kind="variable"><name>Key1Left</name></member>
+    <member refid="struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5" kind="variable"><name>Key1Right</name></member>
+    <member refid="struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901" kind="variable"><name>Key2Up</name></member>
+    <member refid="struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1" kind="variable"><name>Key2Down</name></member>
+    <member refid="struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6" kind="variable"><name>Key2Left</name></member>
+    <member refid="struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc" kind="variable"><name>Key2Right</name></member>
+    <member refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kind="variable"><name>NbColumn</name></member>
+    <member refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kind="variable"><name>NbRow</name></member>
+    <member refid="struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11" kind="variable"><name>ColorP1</name></member>
+    <member refid="struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7" kind="variable"><name>ColorP2</name></member>
+  </compound>
+  <compound refid="struct_collectible" kind="struct"><name>Collectible</name>
+    <member refid="struct_collectible_1a0a00b0a796870738fe04dc543b71cce0" kind="variable"><name>nom</name></member>
+    <member refid="struct_collectible_1abf1987ff63d140278258450bb62ba01a" kind="variable"><name>id</name></member>
+    <member refid="struct_collectible_1acfc630ec9af3da2f12fcb09150cc047b" kind="variable"><name>point</name></member>
+    <member refid="struct_collectible_1a9ff30a5f026c7a7d57504312b32af548" kind="variable"><name>token</name></member>
+    <member refid="struct_collectible_1a34fd332c39e0936e48eb5605df7cd6ea" kind="variable"><name>pos</name></member>
+  </compound>
+  <compound refid="structns_event_1_1_event__t" kind="struct"><name>nsEvent::Event_t</name>
+    <member refid="structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c" kind="variable"><name>eventType</name></member>
+    <member refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kind="variable"><name>eventData</name></member>
+  </compound>
+  <compound refid="unionns_event_1_1_event_data__t" kind="union"><name>nsEvent::EventData_t</name>
+    <member refid="unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc" kind="variable"><name>clickData</name></member>
+    <member refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" kind="variable"><name>moveData</name></member>
+  </compound>
+  <compound refid="classns_event_1_1_event_manager" kind="class"><name>nsEvent::EventManager</name>
+    <member refid="classns_event_1_1_event_manager_1a37768646cf534df3360aa4a431078e22" kind="variable"><name>m_eventQueue</name></member>
+    <member refid="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" kind="function"><name>hasEvent</name></member>
+    <member refid="classns_event_1_1_event_manager_1a1eff8398ddb0a25da82e52a1067b85b5" kind="function"><name>pushEvent</name></member>
+    <member refid="classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9" kind="function"><name>pullEvent</name></member>
+    <member refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" kind="function"><name>clearEvents</name></member>
+  </compound>
+  <compound refid="structns_gui_1_1_sprite_1_1_file_begin" kind="struct"><name>nsGui::Sprite::FileBegin</name>
+    <member refid="structns_gui_1_1_sprite_1_1_file_begin_1ae0da211e8abd838acfcc6ad15a7b7f10" kind="variable"><name>magic</name></member>
+    <member refid="structns_gui_1_1_sprite_1_1_file_begin_1a6ff3a139ea89258e3b5f15303227a884" kind="variable"><name>headmagic</name></member>
+    <member refid="structns_gui_1_1_sprite_1_1_file_begin_1a16b8384ffc6b6de5f04d0d5289d6beae" kind="variable"><name>fileVersion</name></member>
+    <member refid="structns_gui_1_1_sprite_1_1_file_begin_1a6fb6c4c39b8e98f701a2ef1eead0bac5" kind="variable"><name>pixelCount</name></member>
+    <member refid="structns_gui_1_1_sprite_1_1_file_begin_1aa4d932a4f388b391a1e2b6e5ab2b1044" kind="variable"><name>rowSize</name></member>
+    <member refid="structns_gui_1_1_sprite_1_1_file_begin_1a832f2dcfef4bdb4e9524ab3191591014" kind="variable"><name>datamagic</name></member>
+  </compound>
+  <compound refid="struct_form" kind="struct"><name>Form</name>
+    <member refid="struct_form_1a75a4fb47a91fe43764d6a084f31b7b01" kind="variable"><name>nom</name></member>
+    <member refid="struct_form_1a38baf309bd4277f942aeb9152f1f1960" kind="variable"><name>dim</name></member>
+    <member refid="struct_form_1a4c5e21f69e4faffc2ee679a124e0c776" kind="variable"><name>piece</name></member>
+  </compound>
+  <compound refid="classns_gui_1_1_glut_font" kind="class"><name>nsGui::GlutFont</name>
+    <member refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce" kind="enum"><name>GlutFonts</name></member>
+    <member refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea9c75a2a144604631db2af2ae284a9d82" kind="enumvalue"><name>BITMAP_8_BY_13</name></member>
+    <member refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceafc7dc7274d17bd604f3cf91412650df0" kind="enumvalue"><name>BITMAP_9_BY_15</name></member>
+    <member refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea35de9b7dc33c5aa8672423552fe83b38" kind="enumvalue"><name>BITMAP_TIMES_ROMAN_10</name></member>
+    <member refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kind="enumvalue"><name>BITMAP_TIMES_ROMAN_24</name></member>
+    <member refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceae127744cea36edcff85327da64221d14" kind="enumvalue"><name>BITMAP_HELVETICA_10</name></member>
+    <member refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceab87b397237206af607190619163ec1e6" kind="enumvalue"><name>BITMAP_HELVETICA_12</name></member>
+    <member refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea11c7a92d3233d33d71de4ca2f0e27437" kind="enumvalue"><name>BITMAP_HELVETICA_18</name></member>
+    <member refid="classns_gui_1_1_glut_font_1ad913fc64a59c5a7a434eef05ffb98a7d" kind="variable"><name>m_font</name></member>
+    <member refid="classns_gui_1_1_glut_font_1ac8e33c6ba8a95edcdcee4dd4d1a283ac" kind="function"><name>GlutFont</name></member>
+    <member refid="classns_gui_1_1_glut_font_1a10921b4183b246e9cfdebaca6b9e91a2" kind="function"><name>convertForGlut</name></member>
+  </compound>
+  <compound refid="classns_graphics_1_1_i_drawable" kind="class"><name>nsGraphics::IDrawable</name>
+    <member refid="classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867" kind="function"><name>~IDrawable</name></member>
+    <member refid="classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51" kind="function"><name>draw</name></member>
+    <member refid="classns_graphics_1_1_i_drawable_1a9bb3952d4e675a663f2dbbda11e79395" kind="friend"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="classns_util_1_1_i_editable" kind="class"><name>nsUtil::IEditable</name>
+    <member refid="classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e" kind="function"><name>~IEditable</name></member>
+    <member refid="classns_util_1_1_i_editable_1a53db4e7832b7c4579b331800bb0cae70" kind="friend"><name>operator&lt;&lt;</name></member>
+    <member refid="classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853" kind="function"><name>_Edit</name></member>
+  </compound>
+  <compound refid="classns_util_1_1_i_fonctor_unaire" kind="class"><name>nsUtil::IFonctorUnaire</name>
+    <member refid="classns_util_1_1_i_fonctor_unaire_1ae41ac6b220f0afa4b0860e92c27b3cd1" kind="function"><name>~IFonctorUnaire</name></member>
+    <member refid="classns_util_1_1_i_fonctor_unaire_1a2f53e65b0a64a4eb543a709eb72ed3ab" kind="function"><name>operator()</name></member>
+  </compound>
+  <compound refid="classns_transition_1_1_i_transitionable" kind="class"><name>nsTransition::ITransitionable</name>
+    <member refid="classns_transition_1_1_i_transitionable_1addd11ff845b6387b07672a64c1b8938e" kind="function"><name>~ITransitionable</name></member>
+    <member refid="classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9" kind="function"><name>getValues</name></member>
+    <member refid="classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197" kind="function"><name>setValues</name></member>
+  </compound>
+  <compound refid="classns_shape_1_1_line" kind="class"><name>nsShape::Line</name>
+    <member refid="classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58" kind="enum"><name>TransitionIds</name></member>
+    <member refid="classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a9f84f457c9a24574ae17018656830364" kind="enumvalue"><name>TRANSITION_FILL_COLOR_RGB</name></member>
+    <member refid="classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a2860b432942d04ad21cf17a11776b748" kind="enumvalue"><name>TRANSITION_FILL_COLOR_ALPHA</name></member>
+    <member refid="classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58ab4facc5aca748b4570273d0b13813dda" kind="enumvalue"><name>TRANSITION_BORDER_COLOR_RGB</name></member>
+    <member refid="classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58ad2f2a6854611b0b18a8d1805cfca13f1" kind="enumvalue"><name>TRANSITION_BORDER_COLOR_ALPHA</name></member>
+    <member refid="classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58ade8f8b210eda14b4f6e940f8f72346f8" kind="enumvalue"><name>TRANSITION_FIRST_POSITION</name></member>
+    <member refid="classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a55cf135d3e37710549d41ae3faf0f80b" kind="enumvalue"><name>TRANSITION_SECOND_POSITION</name></member>
+    <member refid="classns_shape_1_1_line_1a446a1bbc370b3426afe05f22b681ea58a58ffbb046bb10ae9ed84a672d9daea03" kind="enumvalue"><name>TRANSITION_LINE_WIDTH</name></member>
+    <member refid="classns_shape_1_1_line_1aa89e97f5c2bdc8858b766645a27262c5" kind="variable"><name>m_firstPosition</name></member>
+    <member refid="classns_shape_1_1_line_1ae0e14fa3615bd0743c0dad75e9db7ac6" kind="variable"><name>m_secondPosition</name></member>
+    <member refid="classns_shape_1_1_line_1ac8a19fd41cd9ca692dd608543c28b958" kind="variable"><name>m_lineWidth</name></member>
+    <member refid="classns_shape_1_1_line_1a7e565c06c16396c7dba0f9d9beedcd17" kind="function"><name>Line</name></member>
+    <member refid="classns_shape_1_1_line_1a5e867a9bf0795b3a89cffb0c84e21b13" kind="function"><name>~Line</name></member>
+    <member refid="classns_shape_1_1_line_1a593ce7771accbbe3bb0f0baf70ece47b" kind="function"><name>draw</name></member>
+    <member refid="classns_shape_1_1_line_1ac529918f8d3d6801c320a24bb225e33a" kind="function"><name>getValues</name></member>
+    <member refid="classns_shape_1_1_line_1a698db32364db6ad0c29d205940b02631" kind="function"><name>setValues</name></member>
+    <member refid="classns_shape_1_1_line_1adddeb7810639aa3eec2756846d40a430" kind="function"><name>operator+</name></member>
+    <member refid="classns_shape_1_1_line_1a9686aab308107dff4799ec75a98d3aef" kind="function"><name>operator*</name></member>
+    <member refid="classns_shape_1_1_line_1a5e99d542b7557f79f58623b098672fdc" kind="function"><name>getFirstPosition</name></member>
+    <member refid="classns_shape_1_1_line_1a62178d318a6b856e574149f58f9838f9" kind="function"><name>setFirstPosition</name></member>
+    <member refid="classns_shape_1_1_line_1a3e239062daea5c0f247ccd9f454a45e8" kind="function"><name>getSecondPosition</name></member>
+    <member refid="classns_shape_1_1_line_1ac8235be2b90d57497875a4265fc2bdc5" kind="function"><name>setSecondPosition</name></member>
+    <member refid="classns_shape_1_1_line_1aab6e3cacd0062c1d5e2e55e9099a617a" kind="function"><name>getLineWidth</name></member>
+    <member refid="classns_shape_1_1_line_1ab98591827289680e28b4b0904e6d95f2" kind="function"><name>setLineWidth</name></member>
+  </compound>
+  <compound refid="class_min_g_l" kind="class"><name>MinGL</name>
+    <member refid="class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96" kind="typedef"><name>KeyType_t</name></member>
+    <member refid="class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1" kind="typedef"><name>KeyMap_t</name></member>
+    <member refid="class_min_g_l_1a62d2752f6ee82d8a7c55f8ed8217540f" kind="variable"><name>m_windowName</name></member>
+    <member refid="class_min_g_l_1a9e6c21fbff1924505fad179485709997" kind="variable"><name>m_bgColor</name></member>
+    <member refid="class_min_g_l_1af332476b2b81b98e1f26199bb53417e7" kind="variable"><name>m_keyboardMap</name></member>
+    <member refid="class_min_g_l_1af40082bd76caa922579cd39842c4790f" kind="variable"><name>m_glutWindowId</name></member>
+    <member refid="class_min_g_l_1afe2bd120b2b6d4d364ea3f22a88d1442" kind="variable"><name>m_eventManager</name></member>
+    <member refid="class_min_g_l_1a3543e7c3257de2cbf3cfa2aafbae3236" kind="variable"><name>m_windowIsOpen</name></member>
+    <member refid="class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c" kind="function"><name>MinGL</name></member>
+    <member refid="class_min_g_l_1a0f84e59dd311785a7e6da848abd5d188" kind="function"><name>~MinGL</name></member>
+    <member refid="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" kind="function"><name>initGraphic</name></member>
+    <member refid="class_min_g_l_1a9508f3ac9d4cb4f444f56f5d77ed9d86" kind="function"><name>stopGraphic</name></member>
+    <member refid="class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f" kind="function"><name>isPressed</name></member>
+    <member refid="class_min_g_l_1a99750fd4c8f97cfe693b1acb903424cf" kind="function"><name>resetKey</name></member>
+    <member refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kind="function"><name>finishFrame</name></member>
+    <member refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" kind="function"><name>clearScreen</name></member>
+    <member refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kind="function"><name>getEventManager</name></member>
+    <member refid="class_min_g_l_1a66758e8e6983cc1dd0b10b1ee743a65a" kind="function"><name>getBackgroundColor</name></member>
+    <member refid="class_min_g_l_1a4399b7615cea89f850cd5c66e428c367" kind="function"><name>setBackgroundColor</name></member>
+    <member refid="class_min_g_l_1a92bacd1567089fb4641ed7b416cfe74d" kind="function"><name>getWindowSize</name></member>
+    <member refid="class_min_g_l_1a532d320b7b837998533fe6577ab45bc3" kind="function"><name>setWindowSize</name></member>
+    <member refid="class_min_g_l_1a1ea6ea098988db36f5bf18713f9f3347" kind="function"><name>getWindowPosition</name></member>
+    <member refid="class_min_g_l_1a9239873a52e437457af03f002f5df2b6" kind="function"><name>setWindowPosition</name></member>
+    <member refid="class_min_g_l_1a46cea08ec9ef4a0678f425000ca77e5b" kind="function"><name>getWindowName</name></member>
+    <member refid="class_min_g_l_1a462ab2edc0eb28990638541873869e0e" kind="function"><name>setWindowName</name></member>
+    <member refid="class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d" kind="function"><name>isOpen</name></member>
+    <member refid="class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d" kind="function"><name>initGlut</name></member>
+    <member refid="class_min_g_l_1abfab363ae61205a27d9efe1a163e2f2b" kind="function"><name>callReshape</name></member>
+    <member refid="class_min_g_l_1ae71dc646c80911464c894be0baef1ee7" kind="function"><name>callDisplay</name></member>
+    <member refid="class_min_g_l_1adbfb411b829a994dae7cb3386147de37" kind="function"><name>callMouse</name></member>
+    <member refid="class_min_g_l_1a4b4efe5e69eb3bd53187a49378387b04" kind="function"><name>callMotion</name></member>
+    <member refid="class_min_g_l_1a2f23fcf1dcf6fb984a1da4fd4852db12" kind="function"><name>callPassiveMotion</name></member>
+    <member refid="class_min_g_l_1aac47c1b6f86ad464a4428901674e75e1" kind="function"><name>callKeyboard</name></member>
+    <member refid="class_min_g_l_1af8593e8ca2ae0763a9557bddb55611aa" kind="function"><name>callKeyboardUp</name></member>
+    <member refid="class_min_g_l_1a6a165ace4759e8bed20b2d97061ab3ce" kind="function"><name>callKeyboardSpecial</name></member>
+    <member refid="class_min_g_l_1ae1f50c8c113180fdfb70df4770c4e182" kind="function"><name>callKeyboardUpSpecial</name></member>
+    <member refid="class_min_g_l_1a9f18353c69c9f66b15a79d081160ab27" kind="function"><name>callClose</name></member>
+  </compound>
+  <compound refid="structns_event_1_1_mouse_click_data__t" kind="struct"><name>nsEvent::MouseClickData_t</name>
+    <member refid="structns_event_1_1_mouse_click_data__t_1a8c4c8e7b68c38ee4819957050bfd2926" kind="variable"><name>button</name></member>
+    <member refid="structns_event_1_1_mouse_click_data__t_1a81252b916361dc4deab0f42510fdc928" kind="variable"><name>state</name></member>
+    <member refid="structns_event_1_1_mouse_click_data__t_1a57f8fe6b3c3fb74e0d657158fb24010e" kind="variable"><name>x</name></member>
+    <member refid="structns_event_1_1_mouse_click_data__t_1a0a2e34034a5b6c8c44087966243fc261" kind="variable"><name>y</name></member>
+  </compound>
+  <compound refid="structns_event_1_1_mouse_move_data__t" kind="struct"><name>nsEvent::MouseMoveData_t</name>
+    <member refid="structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb" kind="variable"><name>x</name></member>
+    <member refid="structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446" kind="variable"><name>y</name></member>
+  </compound>
+  <compound refid="struct_node" kind="struct"><name>Node</name>
+    <member refid="struct_node_1a9cad2079ec0b0727d201af00d854511f" kind="variable"><name>Pos</name></member>
+    <member refid="struct_node_1af8ae2d34f6bd51c23bb0976f44639e2f" kind="variable"><name>f_cost</name></member>
+    <member refid="struct_node_1a0e58fa24ad68622e5592a391b6e2dd20" kind="variable"><name>Parent</name></member>
+  </compound>
+  <compound refid="classns_shape_1_1_oval" kind="class"><name>nsShape::Oval</name>
+    <member refid="classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51f" kind="enum"><name>TransitionIds</name></member>
+    <member refid="classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa11de15749de0fd7d832aaadcd9850ee1" kind="enumvalue"><name>TRANSITION_FILL_COLOR_RGB</name></member>
+    <member refid="classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa16791213f05fcf1ef8d379521bfba0fa" kind="enumvalue"><name>TRANSITION_FILL_COLOR_ALPHA</name></member>
+    <member refid="classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa9cd5532f1ff73015ed6a5741625bc8de" kind="enumvalue"><name>TRANSITION_BORDER_COLOR_RGB</name></member>
+    <member refid="classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa2959f9a10af80841f7b581bd6e65df48" kind="enumvalue"><name>TRANSITION_BORDER_COLOR_ALPHA</name></member>
+    <member refid="classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fa84bcce94438bb134d3d344ef0ae27fa4" kind="enumvalue"><name>TRANSITION_POSITION</name></member>
+    <member refid="classns_shape_1_1_oval_1a0378c58dcf35bd9d829f49bebdcdf51fad7142f5e149dd1f2d7c1b35f390ce2b4" kind="enumvalue"><name>TRANSITION_RADIUS</name></member>
+    <member refid="classns_shape_1_1_oval_1a3068550e5804b17cbe3f7f216acf9f07" kind="variable"><name>m_position</name></member>
+    <member refid="classns_shape_1_1_oval_1aa95470b20a5d3d940e033e50f04d348d" kind="variable"><name>m_radius</name></member>
+    <member refid="classns_shape_1_1_oval_1af839fdfa08b1b77edc54a83e1abcadfb" kind="function"><name>Oval</name></member>
+    <member refid="classns_shape_1_1_oval_1a323e0bcaf712c2ddad124adc42ca433b" kind="function"><name>~Oval</name></member>
+    <member refid="classns_shape_1_1_oval_1a93036caafaf315f62676e95dccb5ec65" kind="function"><name>draw</name></member>
+    <member refid="classns_shape_1_1_oval_1a24b1974daa7894aee5dce3edb9056e03" kind="function"><name>getValues</name></member>
+    <member refid="classns_shape_1_1_oval_1a56c7b08484c2dc730e4850ff191aa80d" kind="function"><name>setValues</name></member>
+    <member refid="classns_shape_1_1_oval_1af87d45ca6ab470b17189fc1d50a14343" kind="function"><name>operator+</name></member>
+    <member refid="classns_shape_1_1_oval_1a265f23778e17f28a9cf247bf3fe25c9d" kind="function"><name>operator*</name></member>
+    <member refid="classns_shape_1_1_oval_1a446b4eee9569adca380f5f9ba1ddc832" kind="function"><name>getPosition</name></member>
+    <member refid="classns_shape_1_1_oval_1addd2809c1ba6ec90453a75b94d9707ff" kind="function"><name>setPosition</name></member>
+    <member refid="classns_shape_1_1_oval_1abb39756c5ed715fed211eba826db7506" kind="function"><name>getRadius</name></member>
+    <member refid="classns_shape_1_1_oval_1af8569e0b2f6549b4bec902f87618a1f5" kind="function"><name>setRadius</name></member>
+  </compound>
+  <compound refid="classns_shape_1_1_rectangle" kind="class"><name>nsShape::Rectangle</name>
+    <member refid="classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247" kind="enum"><name>TransitionIds</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a7711b3fc0ebda426d84aba567ef90797" kind="enumvalue"><name>TRANSITION_FILL_COLOR_RGB</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a3162d563f05248a8a8e9f0ffed332ef0" kind="enumvalue"><name>TRANSITION_FILL_COLOR_ALPHA</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a8ba797ba7b99e6952ab754191bf4e553" kind="enumvalue"><name>TRANSITION_BORDER_COLOR_RGB</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247ad44045321ec0fd066d54f5a8f41fd947" kind="enumvalue"><name>TRANSITION_BORDER_COLOR_ALPHA</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a59d3d78acfe501ec8bed5b31ac8f4230" kind="enumvalue"><name>TRANSITION_FIRST_POSITION</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a7c29d64ac1e4ed57a3d70b5616813247a039bcc9b4d76cdb9e15debda929f41ef" kind="enumvalue"><name>TRANSITION_SECOND_POSITION</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a1ee80e67fdc2f004867dc461663199c7" kind="variable"><name>m_firstPosition</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a5110455daae5d8c91bb6ddfee7ad5fb4" kind="variable"><name>m_secondPosition</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a5d5e8052ba7c35001a30ccc7dad669e2" kind="function"><name>Rectangle</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a0c1c16410fb0ee7345449d7bfc9b377b" kind="function"><name>Rectangle</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a8c5a662392d6ff84a852c4f70e8b1d1d" kind="function"><name>~Rectangle</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5" kind="function"><name>draw</name></member>
+    <member refid="classns_shape_1_1_rectangle_1ad62897a44a3af8dfffca0a8a1fa10825" kind="function"><name>getValues</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a3b3e28b92f8c22bfe159aea5a91fb5c9" kind="function"><name>setValues</name></member>
+    <member refid="classns_shape_1_1_rectangle_1ac86de3402279c3ad0bf6b3869f8e2613" kind="function"><name>operator+</name></member>
+    <member refid="classns_shape_1_1_rectangle_1af7cbf6d75b4bc8fc718d17177abdd344" kind="function"><name>operator*</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a42c38f27b247f6a411a9d1a8de5ceaa4" kind="function"><name>getFirstPosition</name></member>
+    <member refid="classns_shape_1_1_rectangle_1ae6c787fad1bc33f5a4adf8a697a9a581" kind="function"><name>setFirstPosition</name></member>
+    <member refid="classns_shape_1_1_rectangle_1a276bce487fbd9514fcf8e558382d0276" kind="function"><name>getSecondPosition</name></member>
+    <member refid="classns_shape_1_1_rectangle_1ada11c6f627048c51dce9544bff758db4" kind="function"><name>setSecondPosition</name></member>
+  </compound>
+  <compound refid="classns_graphics_1_1_r_g_b_acolor" kind="class"><name>nsGraphics::RGBAcolor</name>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a2c7f69201716598d0029f7792bd020ad" kind="variable"><name>m_red</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a22990bbd85cbe835b8d946915141c019" kind="variable"><name>m_green</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1aec9c5fcd6c258219fa77e764acbf5568" kind="variable"><name>m_blue</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a960c7a9a6fb20046900d5af6cf0a5287" kind="variable"><name>m_alpha</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a6f91976b2d83414329608564615f27b1" kind="function"><name>RGBAcolor</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a229faf986de81a508c37103ca013ad70" kind="function"><name>~RGBAcolor</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a685b4a48d19594bd29f136e1f74fee85" kind="function"><name>operator==</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a2cf7ff27443450c18368d521546f4e9e" kind="function"><name>operator!=</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1abb3832c60bec568d1b357955e6be2300" kind="function"><name>operator+</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a1be35bff76dd3859cc714b87db0a1193" kind="function"><name>operator*</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79" kind="function"><name>getRed</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1ade94fb53d92392f80a316a2370c8991c" kind="function"><name>setRed</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" kind="function"><name>getGreen</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a28674ba0fa5f7abc8afb4023c1d0cf25" kind="function"><name>setGreen</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" kind="function"><name>getBlue</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1ac6f522de2f51788d98846034174fb16a" kind="function"><name>setBlue</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" kind="function"><name>getAlpha</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1aa478d3c5b8b56f590a12461fe2ab4bbf" kind="function"><name>setAlpha</name></member>
+    <member refid="classns_graphics_1_1_r_g_b_acolor_1a09154c1fc9ba912860f2b4fac5432298" kind="function"><name>_Edit</name></member>
+  </compound>
+  <compound refid="classns_shape_1_1_shape" kind="class"><name>nsShape::Shape</name>
+    <member refid="classns_shape_1_1_shape_1a68841e117adddc95734dcbaa62f68832" kind="variable"><name>m_fillColor</name></member>
+    <member refid="classns_shape_1_1_shape_1a0444014e3ee0fa1e6ba5295e530a4f82" kind="variable"><name>m_borderColor</name></member>
+    <member refid="classns_shape_1_1_shape_1a879f450649c23c83dee576234703951d" kind="function"><name>Shape</name></member>
+    <member refid="classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4" kind="function"><name>~Shape</name></member>
+    <member refid="classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754" kind="function"><name>getFillColor</name></member>
+    <member refid="classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07" kind="function"><name>setFillColor</name></member>
+    <member refid="classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d" kind="function"><name>getBorderColor</name></member>
+    <member refid="classns_shape_1_1_shape_1a48821100aa1856f188bdba257505adc3" kind="function"><name>setBorderColor</name></member>
+  </compound>
+  <compound refid="classns_gui_1_1_sprite" kind="class"><name>nsGui::Sprite</name>
+    <member refid="classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78" kind="enum"><name>TransitionIds</name></member>
+    <member refid="classns_gui_1_1_sprite_1a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54" kind="enumvalue"><name>TRANSITION_POSITION</name></member>
+    <member refid="classns_gui_1_1_sprite_1ac9d70829930aa0ff75d2c2c99f134aaf" kind="variable"><name>m_position</name></member>
+    <member refid="classns_gui_1_1_sprite_1a994cf4ac14111db5a81630412a2fc39f" kind="variable"><name>m_rowSize</name></member>
+    <member refid="classns_gui_1_1_sprite_1a2f7716974d7b2a4ac71914bc8dce6d29" kind="variable"><name>m_pixelData</name></member>
+    <member refid="classns_gui_1_1_sprite_1a35558b08dfeb3e3a20be52da28e33c4c" kind="function"><name>Sprite</name></member>
+    <member refid="classns_gui_1_1_sprite_1abee8e5a2740555d46f19af3d4b489453" kind="function"><name>Sprite</name></member>
+    <member refid="classns_gui_1_1_sprite_1ac4b29170aef06d46990b68da76480f28" kind="function"><name>draw</name></member>
+    <member refid="classns_gui_1_1_sprite_1a7da27e2ccf7b574896662720d99c0056" kind="function"><name>getValues</name></member>
+    <member refid="classns_gui_1_1_sprite_1a63ad7e76b470c578aecc697203a3eb26" kind="function"><name>setValues</name></member>
+    <member refid="classns_gui_1_1_sprite_1adbe04bd427b6658e0181ce167db83d05" kind="function"><name>getRowSize</name></member>
+    <member refid="classns_gui_1_1_sprite_1ad8644780a7a7dcbcd5f2e4e7a461b685" kind="function"><name>getPixelData</name></member>
+    <member refid="classns_gui_1_1_sprite_1a1d6ad6681627aae6c4680fc936da8eb2" kind="function"><name>getPosition</name></member>
+    <member refid="classns_gui_1_1_sprite_1a4c695910c46504d1e8d47b838394a48e" kind="function"><name>setPosition</name></member>
+    <member refid="classns_gui_1_1_sprite_1a26b502e88906860373c278495794998c" kind="function"><name>computeSize</name></member>
+    <member refid="classns_gui_1_1_sprite_1acae60739742f5b9dd1963a209204c116" kind="function"><name>__attribute__</name></member>
+  </compound>
+  <compound refid="classns_gui_1_1_text" kind="class"><name>nsGui::Text</name>
+    <member refid="classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09" kind="enum"><name>TransitionIds</name></member>
+    <member refid="classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09a91cb0804f8ea9e7353a36a52d89fc492" kind="enumvalue"><name>TRANSITION_COLOR_RGB</name></member>
+    <member refid="classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09a508f66b682f94f547d3f56062aa1fb3f" kind="enumvalue"><name>TRANSITION_COLOR_ALPHA</name></member>
+    <member refid="classns_gui_1_1_text_1a5fa355035f5afc9c896fa8138c29ea09a83fc6bac538e3af4f423c8a4cd0585b8" kind="enumvalue"><name>TRANSITION_POSITION</name></member>
+    <member refid="classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80fa" kind="enum"><name>VerticalAlignment</name></member>
+    <member refid="classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80faa3cfba6c9f9e078a9fcd6c4133ecb4c30" kind="enumvalue"><name>ALIGNV_TOP</name></member>
+    <member refid="classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80faa37d3b49647821b7b1808dcd159867a45" kind="enumvalue"><name>ALIGNV_CENTER</name></member>
+    <member refid="classns_gui_1_1_text_1a3b0b5071a55982d5612c457a832f80faace396f1024afc2c37173ea637856e25f" kind="enumvalue"><name>ALIGNV_BOTTOM</name></member>
+    <member refid="classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dc" kind="enum"><name>HorizontalAlignment</name></member>
+    <member refid="classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dca7b5a51aac14cb50d1840e3f3de485ac2" kind="enumvalue"><name>ALIGNH_LEFT</name></member>
+    <member refid="classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dca79703335d1d5367bd5ee2387413c17a9" kind="enumvalue"><name>ALIGNH_CENTER</name></member>
+    <member refid="classns_gui_1_1_text_1a78bb37c174a4f37eec2b7d69459ee7dca464315bc1bcc242334d76eb8b0d1e8f6" kind="enumvalue"><name>ALIGNH_RIGHT</name></member>
+    <member refid="classns_gui_1_1_text_1aeca5c6d2a736d64414473acaa7bb4634" kind="variable"><name>m_position</name></member>
+    <member refid="classns_gui_1_1_text_1ac2c70a8e06390486ab98bac08a05cb90" kind="variable"><name>m_content</name></member>
+    <member refid="classns_gui_1_1_text_1a95f62c7eb0782219c0c0b82f9d5631e1" kind="variable"><name>m_textColor</name></member>
+    <member refid="classns_gui_1_1_text_1a41a3062dc097e4009b5e53f0d0bd535c" kind="variable"><name>m_textFont</name></member>
+    <member refid="classns_gui_1_1_text_1a3112a46f2a096e46621b4d00a115e188" kind="variable"><name>m_horizontalAlignment</name></member>
+    <member refid="classns_gui_1_1_text_1a98913216e75cc941259aa4a9857262d3" kind="variable"><name>m_verticalAlignment</name></member>
+    <member refid="classns_gui_1_1_text_1a2d86c3b73f670c0ae206c4f35401a09f" kind="function"><name>Text</name></member>
+    <member refid="classns_gui_1_1_text_1a8b3f43f7582246e916bb2e9403be2180" kind="function"><name>draw</name></member>
+    <member refid="classns_gui_1_1_text_1a6ddbea2ef54c442d44d6e624df486ad7" kind="function"><name>getValues</name></member>
+    <member refid="classns_gui_1_1_text_1a9fbd7627d5cc5eaa7259f475c73aec73" kind="function"><name>setValues</name></member>
+    <member refid="classns_gui_1_1_text_1a5ad119bf3e6c774c00711bb302f4bb1e" kind="function"><name>computeWidth</name></member>
+    <member refid="classns_gui_1_1_text_1a40e2854b349731f1cdc0574e7297bc50" kind="function"><name>computeHeight</name></member>
+    <member refid="classns_gui_1_1_text_1aa05c15547863bb237374487fe9ccfd2e" kind="function"><name>computeVisiblePosition</name></member>
+    <member refid="classns_gui_1_1_text_1af8a352a5cb3b4f849eda7badc11fbb31" kind="function"><name>computeVisibleEndPosition</name></member>
+    <member refid="classns_gui_1_1_text_1adea76711a628669e54020b282152e389" kind="function"><name>getContent</name></member>
+    <member refid="classns_gui_1_1_text_1a930caeda954e7517aa34bc5965c8709f" kind="function"><name>setContent</name></member>
+    <member refid="classns_gui_1_1_text_1a1e06796a15191e7682eb4abd0ecc515e" kind="function"><name>getPosition</name></member>
+    <member refid="classns_gui_1_1_text_1ae258c9cd1203c3e52b7728e0211e9daa" kind="function"><name>setPosition</name></member>
+    <member refid="classns_gui_1_1_text_1a248f06b3a9a85c05225449424311abd0" kind="function"><name>getTextColor</name></member>
+    <member refid="classns_gui_1_1_text_1a9e10bb21647ce95f034a4205562e222a" kind="function"><name>setTextColor</name></member>
+    <member refid="classns_gui_1_1_text_1af578710341d0afb6c593550cbc94ca64" kind="function"><name>getTextFont</name></member>
+    <member refid="classns_gui_1_1_text_1afa19265ff44bdab288fa2a7100dd9c50" kind="function"><name>setTextFont</name></member>
+    <member refid="classns_gui_1_1_text_1a2e3468bf7a3b43e5e87a68ed7876dcfe" kind="function"><name>getHorizontalAlignment</name></member>
+    <member refid="classns_gui_1_1_text_1a952d6bb9e10c33aa446ff17fd73944a9" kind="function"><name>setHorizontalAlignment</name></member>
+    <member refid="classns_gui_1_1_text_1a5118089a93160dde9fb85f2b4b32a5e1" kind="function"><name>getVerticalAlignment</name></member>
+    <member refid="classns_gui_1_1_text_1a5b0a3b1a3d31129f2d8aa32b58ea2f8a" kind="function"><name>setVerticalAlignment</name></member>
+  </compound>
+  <compound refid="classns_transition_1_1_transition" kind="class"><name>nsTransition::Transition</name>
+    <member refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19" kind="enum"><name>TransitionFinishModes</name></member>
+    <member refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a87bacef756b461171816412a31e19ad4" kind="enumvalue"><name>FINISH_START</name></member>
+    <member refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19a4d57dbd11ced739957f0609922a6dc9f" kind="enumvalue"><name>FINISH_CURRENT</name></member>
+    <member refid="classns_transition_1_1_transition_1a0bf761e331527477ce0c5e496b722a19ad32a777c01bab232b51e5eeb31e2b03e" kind="enumvalue"><name>FINISH_DESTINATION</name></member>
+    <member refid="classns_transition_1_1_transition_1a5f246bf1358d31b1385bebebe6b4739f" kind="variable"><name>m_startTime</name></member>
+    <member refid="classns_transition_1_1_transition_1a96975bc3d4641f4a6b07d6190a8d9ecd" kind="variable"><name>m_elapsed</name></member>
+    <member refid="classns_transition_1_1_transition_1a411c9072b6185e08bf6dedad2613a7fc" kind="variable"><name>m_reverse</name></member>
+    <member refid="classns_transition_1_1_transition_1abe61245c03f50b8b916e300f0b9001f7" kind="variable"><name>m_finished</name></member>
+    <member refid="classns_transition_1_1_transition_1a7c3e692c43aceca5e4f716f3ae22bf05" kind="function"><name>Transition</name></member>
+    <member refid="classns_transition_1_1_transition_1a616e0ef596d4e8ebb185a6cf0a685924" kind="function"><name>getElapsed</name></member>
+    <member refid="classns_transition_1_1_transition_1a0a8e848a50c2e05dc72800abfc6dd6ef" kind="function"><name>setElapsed</name></member>
+    <member refid="classns_transition_1_1_transition_1abb421b44828c7b6dec60a0256a97b3d9" kind="function"><name>addToElapsed</name></member>
+    <member refid="classns_transition_1_1_transition_1ab32ef25219cd2227746444ac8794266a" kind="function"><name>isReversed</name></member>
+    <member refid="classns_transition_1_1_transition_1a8c8c7caf7326e24ffa540093ed12f581" kind="function"><name>finish</name></member>
+    <member refid="classns_transition_1_1_transition_1ad9d358bee54825d2a8bf83e9e21e398b" kind="function"><name>isFinished</name></member>
+    <member refid="classns_transition_1_1_transition_1adad8f7fad9145677c0e4cbb7012f0f7d" kind="function"><name>updateValues</name></member>
+    <member refid="classns_transition_1_1_transition_1a23ab128b87f3cfb133fcd53745909ff9" kind="function"><name>handleEndlife</name></member>
+  </compound>
+  <compound refid="classns_transition_1_1_transition_contract" kind="class"><name>nsTransition::TransitionContract</name>
+    <member refid="classns_transition_1_1_transition_contract_1a40118ebf3c1a0a486934ce2b9ddc3edb" kind="enum"><name>TransitionMode</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a40118ebf3c1a0a486934ce2b9ddc3edba8e6b597d9cc193da6eb40a6be5dc544b" kind="enumvalue"><name>MODE_FINITE</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a40118ebf3c1a0a486934ce2b9ddc3edbada40ee822d94803e81878d415e46ef6a" kind="enumvalue"><name>MODE_FINITE_REVERSE</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a40118ebf3c1a0a486934ce2b9ddc3edbaaf7f662702b3f37a41b8cfb86598f857" kind="enumvalue"><name>MODE_LOOP</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a40118ebf3c1a0a486934ce2b9ddc3edba5aa6e1fbf9670aa9ecd96beff2ba6abb" kind="enumvalue"><name>MODE_LOOP_SMOOTH</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a48e1b58bc26cb8b6167fb6b76911c941" kind="variable"><name>m_id</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a1066c3c1526a519276b75a4f4c5206b2" kind="variable"><name>m_target</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a9634edf746d8605e78ae30f7a0e6efd3" kind="variable"><name>m_transitionMode</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a5f804f0f4cc00d48e139ff93c5469954" kind="variable"><name>m_beginning</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1adc660e53bde2e552bb4148ac7abc4e42" kind="variable"><name>m_destination</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a0c8ac97863022965d6ac0539d972c325" kind="variable"><name>m_duration</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a5c317b573104f3d3c9caafbc3014ac16" kind="variable"><name>m_delay</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1ac95072df084f1edbd63479c68228b9d6" kind="variable"><name>m_destinationCallback</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a8ec4ef83c08901c9b93cec5eb0bfd06b" kind="function"><name>TransitionContract</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a34a594d05171628bca81120c768c86b9" kind="function"><name>getId</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a464b06c739e50a374c4d11509cf6e5ee" kind="function"><name>getTarget</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1ad5d6524d7e2eeddf9f06204b8245c484" kind="function"><name>getTransitionMode</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a8dc505c54df5d1f09a482a1b56676cd4" kind="function"><name>getBeginning</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1ae4ce420a4376e1d372efb3fd046410df" kind="function"><name>getDestination</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a9b900986c8f271729f99c88fa1b0a5e1" kind="function"><name>getDuration</name></member>
+    <member refid="classns_transition_1_1_transition_contract_1a8f1ebafd9966553678fd7845f35bac33" kind="function"><name>setDestinationCallback</name></member>
+  </compound>
+  <compound refid="classns_transition_1_1_transition_engine" kind="class"><name>nsTransition::TransitionEngine</name>
+    <member refid="classns_transition_1_1_transition_engine_1a6e1a61518fda99acaefc546fea28a4de" kind="typedef"><name>TransitionVector_t</name></member>
+    <member refid="classns_transition_1_1_transition_engine_1af050c2a44a3cf31bcd2c4fd29ba2761f" kind="variable"><name>m_transitionList</name></member>
+    <member refid="classns_transition_1_1_transition_engine_1a3bc437b23ee918b9ec4af070e205028f" kind="function"><name>update</name></member>
+    <member refid="classns_transition_1_1_transition_engine_1ae04163c3488c93e111b9d2638a27d6a9" kind="function"><name>startContract</name></member>
+    <member refid="classns_transition_1_1_transition_engine_1a91235836b50f216b61b5ff3fb31cd5f8" kind="function"><name>finishEveryTransition</name></member>
+    <member refid="classns_transition_1_1_transition_engine_1adcd7bce2bb158224303b532c27f9b559" kind="function"><name>finishEveryTransitionOfTarget</name></member>
+  </compound>
+  <compound refid="classns_shape_1_1_triangle" kind="class"><name>nsShape::Triangle</name>
+    <member refid="classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758" kind="enum"><name>TransitionIds</name></member>
+    <member refid="classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a9f20afd121f616d684ec0bd6b31dab54" kind="enumvalue"><name>TRANSITION_FILL_COLOR_RGB</name></member>
+    <member refid="classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a62867e3ea6657dbc0f9cc61bdca87be8" kind="enumvalue"><name>TRANSITION_FILL_COLOR_ALPHA</name></member>
+    <member refid="classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a43cba48c71b5804af47f7e1d5e1ecc9a" kind="enumvalue"><name>TRANSITION_BORDER_COLOR_RGB</name></member>
+    <member refid="classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a541ff20fa337c2bfaaf7b29fbce4f586" kind="enumvalue"><name>TRANSITION_BORDER_COLOR_ALPHA</name></member>
+    <member refid="classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758aba96bb1e08665d081bedc72f56a85976" kind="enumvalue"><name>TRANSITION_FIRST_POSITION</name></member>
+    <member refid="classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a183e546c687567c28475575d67a12562" kind="enumvalue"><name>TRANSITION_SECOND_POSITION</name></member>
+    <member refid="classns_shape_1_1_triangle_1adef21dd21ed3b5e4aa378f264abbe758a634481d887d4cd8f6d5349d795c930cc" kind="enumvalue"><name>TRANSITION_THIRD_POSITION</name></member>
+    <member refid="classns_shape_1_1_triangle_1a5c7b5220ae46a9212f09f64202951297" kind="variable"><name>m_firstPosition</name></member>
+    <member refid="classns_shape_1_1_triangle_1aa554e3fa29e316ed4fca43c48677cccc" kind="variable"><name>m_secondPosition</name></member>
+    <member refid="classns_shape_1_1_triangle_1a7d7c2e936aee318713f132a5dcd20899" kind="variable"><name>m_thirdPosition</name></member>
+    <member refid="classns_shape_1_1_triangle_1a72e60fed26e09d01757828ec019134c7" kind="function"><name>Triangle</name></member>
+    <member refid="classns_shape_1_1_triangle_1ae59fd091a1005d0e4a7e648487c69739" kind="function"><name>~Triangle</name></member>
+    <member refid="classns_shape_1_1_triangle_1a5586345f4e15181f994a0d4946f61353" kind="function"><name>draw</name></member>
+    <member refid="classns_shape_1_1_triangle_1a11b2ff1bbd168d0d90fe3707eeeb869c" kind="function"><name>getValues</name></member>
+    <member refid="classns_shape_1_1_triangle_1ac2919ceeb740f05597c5839e92204f87" kind="function"><name>setValues</name></member>
+    <member refid="classns_shape_1_1_triangle_1a828914e234103dd5efece0030bd6ea12" kind="function"><name>operator+</name></member>
+    <member refid="classns_shape_1_1_triangle_1adf2b03fb750f4269ed8ebfd25b5cb665" kind="function"><name>operator*</name></member>
+    <member refid="classns_shape_1_1_triangle_1ad82e289ac4c9fd8cc569b7a79771fc5f" kind="function"><name>getFirstPosition</name></member>
+    <member refid="classns_shape_1_1_triangle_1a9cbdb05c4f337961adccadf1aec48b1b" kind="function"><name>setFirstPosition</name></member>
+    <member refid="classns_shape_1_1_triangle_1a0222c889721e15942fde8719727da6ef" kind="function"><name>getSecondPosition</name></member>
+    <member refid="classns_shape_1_1_triangle_1a18f911ec00c99e29eec695a49c2e051e" kind="function"><name>setSecondPosition</name></member>
+    <member refid="classns_shape_1_1_triangle_1a8ff04f062cf1dcb119f9e814ce8f943a" kind="function"><name>getThirdPosition</name></member>
+    <member refid="classns_shape_1_1_triangle_1a7af3264cac9e8333ec5d7315bc931047" kind="function"><name>setThirdPosition</name></member>
+  </compound>
+  <compound refid="classns_graphics_1_1_vec2_d" kind="class"><name>nsGraphics::Vec2D</name>
+    <member refid="classns_graphics_1_1_vec2_d_1ab51a03411fdf20584e5e49cf62b38da4" kind="variable"><name>m_x</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1ae51a7acf3515e876d50e2f26c19eb9d7" kind="variable"><name>m_y</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a4a2fdd532ded3c29b7a3bd6e5a23fadf" kind="function"><name>Vec2D</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1ae409c698404abced934b589d58513767" kind="function"><name>Vec2D</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1aded521aea98ae5b1fdd19f4f9e2df74a" kind="function"><name>operator+</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a3cc10af3b04df2c6bf85460ced5c63a7" kind="function"><name>operator-</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a59d565535347c6d0974be9a2333a5806" kind="function"><name>operator+</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a6431bcd5dd86fbaf119bed9cf01a13f2" kind="function"><name>operator-</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1afed7035dfbafeffbfac737fb39d4fb90" kind="function"><name>operator*</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a7eb4139a171785d5f2f337cee77b9fb0" kind="function"><name>operator*</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1aaabc44f047e46433d0115fbc49b3ae2f" kind="function"><name>operator/</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1ae3adeb741fa6137acf0edbcf02ca58af" kind="function"><name>operator/</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a43281403abbad9948eacca4d37fc61dc" kind="function"><name>operator%</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a94b4b8420a450dd284311c49cb0b2e6b" kind="function"><name>operator==</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1affaed949190e8cb5a3c8f9813b31eb0d" kind="function"><name>operator!=</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1accfe96cfa5b8495a0b14c7087068064e" kind="function"><name>operator&lt;</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a30da0e7984d8c3e7a66bbdcdcc24c9cb" kind="function"><name>operator&gt;</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1afd5e0e3ba77ef971f8d022d69a4a2647" kind="function"><name>operator&lt;=</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a478dad2852611070874c6c9e5663b570" kind="function"><name>operator&gt;=</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a041926192c1d2c579b12dcf1eb1725d5" kind="function"><name>operator=</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1aafd8b68f1cb9dcfcf92a96714e58c5ec" kind="function"><name>operator+=</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1aa9b0986206c35bb5c0043db02548fce4" kind="function"><name>operator-=</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a6e0e661361c0f3081fa2d9488978771e" kind="function"><name>operator*=</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a1146ac9d05c667bb4a46140858953711" kind="function"><name>operator/=</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a57003f3d4660f986c3c21c027ac8b154" kind="function"><name>operator%=</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1aa02cee45c2d8aa2d9b7e08dfb6c1dfca" kind="function"><name>isColliding</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1adf603dcb6f44ff82f3d48df141e11fe7" kind="function"><name>computeMagnitude</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" kind="function"><name>getX</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d" kind="function"><name>setX</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" kind="function"><name>getY</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f" kind="function"><name>setY</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a8a4760c6a33beb77d1e7a850b44129fc" kind="function"><name>min</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1a77c8619c34dcb2e7b5d9337da0fcfe59" kind="function"><name>minf</name></member>
+    <member refid="classns_graphics_1_1_vec2_d_1ad416f3698e43099990b3d96d9099c65f" kind="function"><name>_Edit</name></member>
+  </compound>
+  <compound refid="namespace_0d13" kind="namespace"><name>@13</name>
+  </compound>
+  <compound refid="namespaceimg2si" kind="namespace"><name>img2si</name>
+    <member refid="img2si_8py_1abcc3e8d7a68483db9b400f68496bd7f9" kind="variable"><name>__author__</name></member>
+    <member refid="img2si_8py_1a416c93cc9556ba6f82fc8312a7d0558f" kind="variable"><name>__version__</name></member>
+    <member refid="img2si_8py_1a5971fdb9af437359d12be6c17db92119" kind="variable"><name>__license__</name></member>
+    <member refid="img2si_8py_1ae37b6f3bba8bbf990c6f8c84cd2a79bd" kind="function"><name>is_file_si2</name></member>
+    <member refid="img2si_8py_1a86753e07bbef076355a407a398a418bf" kind="function"><name>convert_from_si2</name></member>
+    <member refid="img2si_8py_1a07d658824b99acc387c6444863bebd5c" kind="function"><name>convert_to_si2</name></member>
+    <member refid="img2si_8py_1afce854986e241b3a756dc2eb0a333f49" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="namespacens_audio" kind="namespace"><name>nsAudio</name>
+  </compound>
+  <compound refid="namespacens_event" kind="namespace"><name>nsEvent</name>
+    <member refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72" kind="enum"><name>EventType_t</name></member>
+    <member refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7" kind="enumvalue"><name>MouseClick</name></member>
+    <member refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6" kind="enumvalue"><name>MouseMove</name></member>
+    <member refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317" kind="enumvalue"><name>MouseDrag</name></member>
+  </compound>
+  <compound refid="namespacens_exception" kind="namespace"><name>nsException</name>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376" kind="enum"><name>@0</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a0446a2a6f75ad46276a3c6bfbcf06eb3" kind="enumvalue"><name>KNoExc</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a024799617058782e76ecaf33dd2ffdbd" kind="enumvalue"><name>KNoError</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a46f2c8022474b53a5755bec5237fe459" kind="enumvalue"><name>kColorOutOfBounds</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999" kind="enumvalue"><name>KFileError</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376abf0d316d427bbd6c967347e91afd572f" kind="enumvalue"><name>KErrArg</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a8146cc15721aba3bf04728fe064a59c4" kind="enumvalue"><name>KExcStd</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376acf3752166b5752ab5b203c5f536caf88" kind="enumvalue"><name>kExcInconnue</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a123e9c1829e779b75c070e9c8fdb188f" kind="enumvalue"><name>kErrTooHight</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aff4f15361ad4d1b254751071ad21e3e6" kind="enumvalue"><name>kErrTooRight</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a526faf634cffcb857a4b99b82a0f4d03" kind="enumvalue"><name>kErrFontSize</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a4117018a026c58336132da21ff52b840" kind="enumvalue"><name>kNoTriangle</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a35eb9a961a3b4627ee0801912e781e2e" kind="enumvalue"><name>kNoLine</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a8f9b0ec84f1fdf7b138e9a9039ef31e5" kind="enumvalue"><name>kNoRectangle</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a83bc80fd1df49b7c72bede3cfdf0220e" kind="enumvalue"><name>kNoCircle</name></member>
+    <member refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aaebf556f9516d8fa517d75821ff43073" kind="enumvalue"><name>kTypeNotFound</name></member>
+    <member refid="namespacens_exception_1af1e302dd5a468c59cfa32ee30bc6503a" kind="variable"><name>kError</name></member>
+  </compound>
+  <compound refid="namespacens_graphics" kind="namespace"><name>nsGraphics</name>
+    <member refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" kind="variable"><name>KBlack</name></member>
+    <member refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kind="variable"><name>KWhite</name></member>
+    <member refid="namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61" kind="variable"><name>KRed</name></member>
+    <member refid="namespacens_graphics_1abfa46e909a7f8d4d908e70e4b55f734c" kind="variable"><name>KLime</name></member>
+    <member refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" kind="variable"><name>KBlue</name></member>
+    <member refid="namespacens_graphics_1a445ddb81e2a910db8e01a70403988966" kind="variable"><name>KYellow</name></member>
+    <member refid="namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad" kind="variable"><name>KCyan</name></member>
+    <member refid="namespacens_graphics_1ad0a8ee009f367326525d2cbd47cd5dea" kind="variable"><name>KMagenta</name></member>
+    <member refid="namespacens_graphics_1a44884fe5a7841edbad80039e8ad4017c" kind="variable"><name>KSilver</name></member>
+    <member refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" kind="variable"><name>KGray</name></member>
+    <member refid="namespacens_graphics_1a7f6ca880f0cf5e6e76b0081c84d5f1fb" kind="variable"><name>KDarkGray</name></member>
+    <member refid="namespacens_graphics_1a219354b4276a9edbfc436390ba3a4827" kind="variable"><name>KMaroon</name></member>
+    <member refid="namespacens_graphics_1a11591ce1586e827d54a3d10b2fe3fc0c" kind="variable"><name>KOlive</name></member>
+    <member refid="namespacens_graphics_1ad2a6c119991dbf9f510d68a420524704" kind="variable"><name>KGreen</name></member>
+    <member refid="namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b" kind="variable"><name>KPurple</name></member>
+    <member refid="namespacens_graphics_1a63e989cb02df1c3e6cbd40d0d3e3161d" kind="variable"><name>KTeal</name></member>
+    <member refid="namespacens_graphics_1a4ea1ef3950c89b063d76e0a13faf5ce8" kind="variable"><name>KNavy</name></member>
+    <member refid="namespacens_graphics_1a4c07ea95810d52059324d037d9d9c5d4" kind="variable"><name>KBeige</name></member>
+    <member refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kind="variable"><name>KTransparent</name></member>
+    <member refid="namespacens_graphics_1a9caa4cd9527a2effed87836d78faacef" kind="variable"><name>KBlueTransparent</name></member>
+  </compound>
+  <compound refid="namespacens_gui" kind="namespace"><name>nsGui</name>
+  </compound>
+  <compound refid="namespacens_shape" kind="namespace"><name>nsShape</name>
+  </compound>
+  <compound refid="namespacens_transition" kind="namespace"><name>nsTransition</name>
+    <member refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kind="typedef"><name>SystemDuration_t</name></member>
+    <member refid="namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6" kind="typedef"><name>SystemTimePoint_t</name></member>
+  </compound>
+  <compound refid="namespacens_util" kind="namespace"><name>nsUtil</name>
+    <member refid="namespacens_util_1a95ba3ba3ebef98e447b47ee40f55dd1a" kind="function"><name>operator&lt;&lt;</name></member>
+  </compound>
+  <compound refid="namespacestd" kind="namespace"><name>std</name>
+  </compound>
+  <compound refid="glut__font_8h" kind="file"><name>glut_font.h</name>
+  </compound>
+  <compound refid="oval_8h" kind="file"><name>oval.h</name>
+  </compound>
+  <compound refid="line_8h" kind="file"><name>line.h</name>
+  </compound>
+  <compound refid="triangle_8h" kind="file"><name>triangle.h</name>
+  </compound>
+  <compound refid="transition_8h" kind="file"><name>transition.h</name>
+  </compound>
+  <compound refid="transition__contract_8h" kind="file"><name>transition_contract.h</name>
+  </compound>
+  <compound refid="itransitionable_8h" kind="file"><name>itransitionable.h</name>
+  </compound>
+  <compound refid="transition__engine_8h" kind="file"><name>transition_engine.h</name>
+  </compound>
+  <compound refid="transition__types_8h" kind="file"><name>transition_types.h</name>
+  </compound>
+  <compound refid="circle_8h" kind="file"><name>circle.h</name>
+  </compound>
+  <compound refid="sprite_8h" kind="file"><name>sprite.h</name>
+    <member refid="sprite_8h_1a8c61e64b8675498cee79c59d3f8131e2" kind="variable"><name>magic</name></member>
+    <member refid="sprite_8h_1a7815e2193b5dea24aae35f568006be9a" kind="variable"><name>headmagic</name></member>
+    <member refid="sprite_8h_1a6ac1f454a7d4e4d64b7ff8ca39ac5920" kind="variable"><name>fileVersion</name></member>
+    <member refid="sprite_8h_1af73d2febf3dc338c7c8f42922aa7131c" kind="variable"><name>pixelCount</name></member>
+    <member refid="sprite_8h_1a410460a0a75462ae38c5c9daf5fb06ed" kind="variable"><name>rowSize</name></member>
+    <member refid="sprite_8h_1a43e5468a3d445613419004493d2ffac8" kind="variable"><name>datamagic</name></member>
+  </compound>
+  <compound refid="text_8h" kind="file"><name>text.h</name>
+  </compound>
+  <compound refid="idrawable_8h" kind="file"><name>idrawable.h</name>
+  </compound>
+  <compound refid="rgbacolor_8h" kind="file"><name>rgbacolor.h</name>
+  </compound>
+  <compound refid="vec2d_8h" kind="file"><name>vec2d.h</name>
+  </compound>
+  <compound refid="audioengine_8h" kind="file"><name>audioengine.h</name>
+  </compound>
+  <compound refid="mingl_8h" kind="file"><name>mingl.h</name>
+  </compound>
+  <compound refid="wall_8h" kind="file"><name>wall.h</name>
+    <member refid="wall_8h_1a9c385c3b12f177f9de1377aa883ba224" kind="function"><name>Wall</name></member>
+  </compound>
+  <compound refid="button_8h" kind="file"><name>button.h</name>
+    <member refid="button_8h_1a9139d7539d77e69aa7b38e4976a62306" kind="function"><name>Button</name></member>
+  </compound>
+  <compound refid="player2_8h" kind="file"><name>player2.h</name>
+    <member refid="player2_8h_1aeb54b2bbe53214deec7a41951a3ac1e7" kind="function"><name>Player2</name></member>
+  </compound>
+  <compound refid="player1_8h" kind="file"><name>player1.h</name>
+    <member refid="player1_8h_1ae9c272b2658c6c4acfd2caed5eb9a74b" kind="function"><name>Player1</name></member>
+  </compound>
+  <compound refid="cigarette_8h" kind="file"><name>cigarette.h</name>
+    <member refid="cigarette_8h_1af7fde47c9ef13a0f15f176f8c7a9f52c" kind="function"><name>Cigarette</name></member>
+  </compound>
+  <compound refid="teleporter_8h" kind="file"><name>teleporter.h</name>
+    <member refid="teleporter_8h_1abd3383003d3b5afeac6ab5231f4a96bc" kind="function"><name>Teleporter</name></member>
+  </compound>
+  <compound refid="kebab_8h" kind="file"><name>kebab.h</name>
+    <member refid="kebab_8h_1a43f800ad6cdaede6ba76a8c7d22bc463" kind="function"><name>Kebab</name></member>
+  </compound>
+  <compound refid="statue_8h" kind="file"><name>statue.h</name>
+    <member refid="statue_8h_1a775457201f1ab220eb0f565c9811b1e7" kind="function"><name>Statue</name></member>
+  </compound>
+  <compound refid="monstre_8h" kind="file"><name>monstre.h</name>
+    <member refid="monstre_8h_1a1bdf648b0b46f6c35eeae63523d4eac8" kind="function"><name>Monstre</name></member>
+  </compound>
+  <compound refid="event_8hpp" kind="file"><name>event.hpp</name>
+  </compound>
+  <compound refid="img2si_8py" kind="file"><name>img2si.py</name>
+  </compound>
+  <compound refid="ieditable_8hpp" kind="file"><name>ieditable.hpp</name>
+  </compound>
+  <compound refid="ieditable_8h" kind="file"><name>ieditable.h</name>
+  </compound>
+  <compound refid="ifonctorunaire_8hpp" kind="file"><name>ifonctorunaire.hpp</name>
+  </compound>
+  <compound refid="macros_8h" kind="file"><name>macros.h</name>
+    <member refid="macros_8h_1a86d500a34c624c2cae56bc25a31b12f3" kind="define"><name>UNUSED</name></member>
+  </compound>
+  <compound refid="rectangle_8h" kind="file"><name>rectangle.h</name>
+  </compound>
+  <compound refid="shape_8h" kind="file"><name>shape.h</name>
+  </compound>
+  <compound refid="mingl_8cpp" kind="file"><name>mingl.cpp</name>
+    <member refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kind="define"><name>BIND_CALLBACK</name></member>
+  </compound>
+  <compound refid="sprite_8cpp" kind="file"><name>sprite.cpp</name>
+  </compound>
+  <compound refid="glut__font_8cpp" kind="file"><name>glut_font.cpp</name>
+  </compound>
+  <compound refid="text_8cpp" kind="file"><name>text.cpp</name>
+  </compound>
+  <compound refid="rgbacolor_8cpp" kind="file"><name>rgbacolor.cpp</name>
+  </compound>
+  <compound refid="vec2d_8cpp" kind="file"><name>vec2d.cpp</name>
+  </compound>
+  <compound refid="audioengine_8cpp" kind="file"><name>audioengine.cpp</name>
+  </compound>
+  <compound refid="event__manager_8cpp" kind="file"><name>event_manager.cpp</name>
+  </compound>
+  <compound refid="cexception_8cpp" kind="file"><name>cexception.cpp</name>
+  </compound>
+  <compound refid="transition__contract_8cpp" kind="file"><name>transition_contract.cpp</name>
+    <member refid="transition__contract_8cpp_1a0afdcb60b1233a816e83a58ddcb1d50f" kind="define"><name>TRANSITIONCONTRACT</name></member>
+  </compound>
+  <compound refid="gridmanagement_8cpp" kind="file"><name>gridmanagement.cpp</name>
+    <member refid="gridmanagement_8cpp_1a9c522c8d868b51fcb931cfe9f3851e2b" kind="function"><name>F_T</name></member>
+    <member refid="gridmanagement_8cpp_1ac5c07602ff8979d6346aa38727718532" kind="function"><name>F_Carre</name></member>
+    <member refid="gridmanagement_8cpp_1aac4f9b3f7541d997a8889833f03aa38d" kind="function"><name>F_L</name></member>
+    <member refid="gridmanagement_8cpp_1af59fd256653a9b8a1c7e994a33847832" kind="function"><name>F_S</name></member>
+    <member refid="gridmanagement_8cpp_1a7c9f9c29d4ac8cf866ba3d47f0fe5ada" kind="function"><name>F_Z</name></member>
+    <member refid="gridmanagement_8cpp_1abca4d2d45919b942d7593c2b83eab844" kind="function"><name>F_J</name></member>
+    <member refid="gridmanagement_8cpp_1ab9580be20ea977cfc148161bbd19cc7b" kind="function"><name>ajouterpiece</name></member>
+    <member refid="gridmanagement_8cpp_1afd0452ea965a63c8d1c5f84541bb5a00" kind="function"><name>rotation90</name></member>
+    <member refid="gridmanagement_8cpp_1a6a3ca153f0817e8ba91a023b886bb662" kind="function"><name>ClearScreen</name></member>
+    <member refid="gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6" kind="function"><name>Color</name></member>
+    <member refid="gridmanagement_8cpp_1a9719c69096bb9d1a111ecff4023ee183" kind="function"><name>DisplayGrid</name></member>
+    <member refid="gridmanagement_8cpp_1aeec8c3cd8d226f13c4b651e70988240f" kind="function"><name>InitGrid</name></member>
+    <member refid="gridmanagement_8cpp_1ae8509127a309e7bfd2673d39ca1b5375" kind="function"><name>MoveMonster</name></member>
+  </compound>
+  <compound refid="game_8cpp" kind="file"><name>game.cpp</name>
+    <member refid="game_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="game_8cpp_1aa61e0829c615216027761f9feafa253c" kind="function"><name>IsMoveLegal</name></member>
+    <member refid="game_8cpp_1a0e70e085afb41e8db9d8c7c8936dfad7" kind="function"><name>nextMove</name></member>
+    <member refid="game_8cpp_1a35057878b4faca7c5b0d80ba8a9a7608" kind="function"><name>IsCollectible</name></member>
+    <member refid="game_8cpp_1ab465081d6f14034e76b3e4efd1d092db" kind="function"><name>CalculateScore</name></member>
+    <member refid="game_8cpp_1a57e55da876e34d1b049962d00fac607e" kind="function"><name>Sprite</name></member>
+    <member refid="game_8cpp_1a1598d2cc705c314acea3323f69b0b372" kind="function"><name>DisplayGrid</name></member>
+    <member refid="game_8cpp_1ac95434408d3f8bf774e3032eaa73ae4e" kind="function"><name>MoveToken</name></member>
+    <member refid="game_8cpp_1a0845b941aa45002f46dd1653274997dc" kind="function"><name>MenuP</name></member>
+    <member refid="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" kind="function"><name>Options</name></member>
+    <member refid="game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4" kind="function"><name>Credits</name></member>
+    <member refid="game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626" kind="function"><name>Pause</name></member>
+    <member refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" kind="function"><name>GameLoop</name></member>
+    <member refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" kind="function"><name>ppal</name></member>
+  </compound>
+  <compound refid="type_8h" kind="file"><name>type.h</name>
+    <member refid="type_8h_1af4d6ac508b164138028e81737c7be8a2" kind="typedef"><name>CVLine</name></member>
+    <member refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kind="typedef"><name>CMat</name></member>
+    <member refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kind="typedef"><name>CPosition</name></member>
+    <member refid="type_8h_1aeb6b858f886b8520a7f220b3de0bef1a" kind="variable"><name>KAuthorizedKey</name></member>
+    <member refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kind="variable"><name>KColor</name></member>
+    <member refid="type_8h_1a1e3f1938007c41f107a8118778f8d08e" kind="variable"><name>KEmpty</name></member>
+  </compound>
+  <compound refid="gridmanagement_8h" kind="file"><name>gridmanagement.h</name>
+    <member refid="gridmanagement_8h_1a6a3ca153f0817e8ba91a023b886bb662" kind="function"><name>ClearScreen</name></member>
+    <member refid="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" kind="function"><name>Color</name></member>
+    <member refid="gridmanagement_8h_1a9719c69096bb9d1a111ecff4023ee183" kind="function"><name>DisplayGrid</name></member>
+    <member refid="gridmanagement_8h_1ae2e8e943b22b9297c505a335c58135b6" kind="function"><name>InitGrid</name></member>
+    <member refid="gridmanagement_8h_1ab909b1026fe66b4055c0be20cd67582f" kind="function"><name>MoveMonster</name></member>
+  </compound>
+  <compound refid="_menu_management_8h" kind="file"><name>MenuManagement.h</name>
+    <member refid="_menu_management_8h_1a11e48c63494b713861dcee17f0efcd33" kind="variable"><name>rectPos</name></member>
+    <member refid="_menu_management_8h_1a8a2590fbfc4686aa615f6ca9824224f9" kind="variable"><name>rectColor</name></member>
+    <member refid="_menu_management_8h_1afab161c3544224d228a3e8e64a3eae08" kind="function"><name>InterfaceMenuP</name></member>
+    <member refid="_menu_management_8h_1ab2a2e33bb6aff7164d540d7a50bdd38f" kind="function"><name>InterfacePause</name></member>
+    <member refid="_menu_management_8h_1afc733d7fa1650fe258aa4fd3c704b799" kind="function"><name>InterfaceOptions</name></member>
+    <member refid="_menu_management_8h_1ae72c2fefee518b729a3c7a320d27265a" kind="function"><name>InterfaceCredits</name></member>
+    <member refid="_menu_management_8h_1a4502ca76132916f74305fe40f59ae97d" kind="function"><name>events</name></member>
+  </compound>
+  <compound refid="params_8h" kind="file"><name>params.h</name>
+    <member refid="params_8h_1ade03faad985499a8668d06f81c996971" kind="function"><name>initParams</name></member>
+    <member refid="params_8h_1a58a5b91bf92420913240e20c743401cf" kind="function"><name>initParamsV2</name></member>
+    <member refid="params_8h_1ac3adf30120fc96c74f84762bf232cd54" kind="function"><name>LoadParams</name></member>
+  </compound>
+  <compound refid="params_8cpp" kind="file"><name>params.cpp</name>
+    <member refid="params_8cpp_1a725b86f4f23b75fda4f70441f7b0fcca" kind="function"><name>initParams</name></member>
+    <member refid="params_8cpp_1ac3adf30120fc96c74f84762bf232cd54" kind="function"><name>LoadParams</name></member>
+  </compound>
+  <compound refid="shape_8cpp" kind="file"><name>shape.cpp</name>
+  </compound>
+  <compound refid="event__manager_8h" kind="file"><name>event_manager.h</name>
+  </compound>
+  <compound refid="cexception_8h" kind="file"><name>cexception.h</name>
+  </compound>
+  <compound refid="cexception_8hpp" kind="file"><name>cexception.hpp</name>
+  </compound>
+  <compound refid="errcode_8h" kind="file"><name>errcode.h</name>
+  </compound>
+  <compound refid="examples_2_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="tools_2_r_e_a_d_m_e_8md" kind="file"><name>README.md</name>
+  </compound>
+  <compound refid="09-_custom_transitionable_2bgtext_8h" kind="file"><name>bgtext.h</name>
+  </compound>
+  <compound refid="08-_custom_drawable_2bgtext_8h" kind="file"><name>bgtext.h</name>
+  </compound>
+  <compound refid="09-_custom_transitionable_2bgtext_8cpp" kind="file"><name>bgtext.cpp</name>
+  </compound>
+  <compound refid="08-_custom_drawable_2bgtext_8cpp" kind="file"><name>bgtext.cpp</name>
+  </compound>
+  <compound refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" kind="function"><name>dessiner</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a11e48c63494b713861dcee17f0efcd33" kind="variable"><name>rectPos</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a8a2590fbfc4686aa615f6ca9824224f9" kind="variable"><name>rectColor</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" kind="function"><name>events</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" kind="function"><name>dessiner</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" kind="function"><name>dessiner</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_1a11e48c63494b713861dcee17f0efcd33" kind="variable"><name>rectPos</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_1a3b1be47d68f5800c6bfbb2cc3764c151" kind="function"><name>clavier</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" kind="function"><name>dessiner</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_1a69c339b2966791489487938c49401cf3" kind="define"><name>FPS_LIMIT</name></member>
+    <member refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="main_8cpp" kind="file"><name>main.cpp</name>
+    <member refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kind="function"><name>main</name></member>
+  </compound>
+  <compound refid="game_8h" kind="file"><name>game.h</name>
+    <member refid="game_8h_1a8307899b579b12370e9fd3e399e42d04" kind="function"><name>MoveToken</name></member>
+    <member refid="game_8h_1aeb06160be5949a49243364c546d6abb6" kind="function"><name>IsMoveLegal</name></member>
+    <member refid="game_8h_1ad05a86bb0b8cfd683ef1c60bd003e3ce" kind="function"><name>nextMove</name></member>
+    <member refid="game_8h_1ae80d4e86d02b962374473e98b15c6a1c" kind="function"><name>IsCollectible</name></member>
+    <member refid="game_8h_1a1edb4cf36ce7b698766f4456c2977a4b" kind="function"><name>CalculateScore</name></member>
+    <member refid="game_8h_1a23ed1f47ce57765cb2fea53223a968fa" kind="function"><name>Sprite</name></member>
+    <member refid="game_8h_1ad2fa9861d35e6880ba732c4d42d677fb" kind="function"><name>DisplayGrid</name></member>
+    <member refid="game_8h_1a530e82365352a76131d36a602a978087" kind="function"><name>MenuP</name></member>
+    <member refid="game_8h_1ac9f54c7b2df4106d5bf5f209f2c1741d" kind="function"><name>Options</name></member>
+    <member refid="game_8h_1ac7f92aebec3b6b2e6d0b4801d092c04d" kind="function"><name>Credits</name></member>
+    <member refid="game_8h_1a4cf82823849638598365d899b482f17a" kind="function"><name>Pause</name></member>
+    <member refid="game_8h_1a3555e46045d63ef37f994f3c358945fb" kind="function"><name>GameLoop</name></member>
+    <member refid="game_8h_1a0b1d64ee76933ef8f007f1208cb869a7" kind="function"><name>ppal</name></member>
+  </compound>
+  <compound refid="circle_8cpp" kind="file"><name>circle.cpp</name>
+  </compound>
+  <compound refid="triangle_8cpp" kind="file"><name>triangle.cpp</name>
+  </compound>
+  <compound refid="oval_8cpp" kind="file"><name>oval.cpp</name>
+  </compound>
+  <compound refid="rectangle_8cpp" kind="file"><name>rectangle.cpp</name>
+  </compound>
+  <compound refid="line_8cpp" kind="file"><name>line.cpp</name>
+  </compound>
+  <compound refid="transition_8cpp" kind="file"><name>transition.cpp</name>
+    <member refid="transition_8cpp_1adf1b33de7a9f44e3126ab220c751d392" kind="define"><name>TRANSITION</name></member>
+  </compound>
+  <compound refid="transition__engine_8cpp" kind="file"><name>transition_engine.cpp</name>
+    <member refid="transition__engine_8cpp_1a8f5466d77f69760bca9bb92217754d56" kind="define"><name>TRANSITIONENGINE</name></member>
+  </compound>
+  <compound refid="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e" kind="page"><name>md__home_Theo_Téléchargements_sae_SAE_JEU_MinGL2_IUT_AIX_master_examples_README</name>
+  </compound>
+  <compound refid="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_tools__r_e_a_d_m_e" kind="page"><name>md__home_Theo_Téléchargements_sae_SAE_JEU_MinGL2_IUT_AIX_master_tools_README</name>
+  </compound>
+  <compound refid="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master__r_e_a_d_m_e" kind="page"><name>md__home_Theo_Téléchargements_sae_SAE_JEU_MinGL2_IUT_AIX_master_README</name>
+  </compound>
+  <compound refid="dir_3f60e2185dae4bed229c4b41fe4c0018" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/00-Boilerplate</name>
+  </compound>
+  <compound refid="dir_650e47c632ab91d6d0177286122f0948" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes</name>
+  </compound>
+  <compound refid="dir_b8e88759b6f07db0054c9e7a17f2bf73" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte</name>
+  </compound>
+  <compound refid="dir_3bee9b599783c1dbbfda24553e5b7690" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier</name>
+  </compound>
+  <compound refid="dir_e486342ecde50baaea91a4e96ab2916d" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris</name>
+  </compound>
+  <compound refid="dir_f7417cbdb8b53f12fa076e8bcb2e07ff" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition</name>
+  </compound>
+  <compound refid="dir_3c1b0828f67bf7d432174f89c06032c5" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite</name>
+  </compound>
+  <compound refid="dir_ecff7987652ed959180be81717f3c8bc" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio</name>
+  </compound>
+  <compound refid="dir_137739a7e658bc7b78cf3733c3fbc476" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable</name>
+  </compound>
+  <compound refid="dir_a30337348e1081de8e18835606f4e1d8" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable</name>
+  </compound>
+  <compound refid="dir_65e536d4020854c3e075b80df5ef35db" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio</name>
+  </compound>
+  <compound refid="dir_9423f88c1a0ed4dc41a67a2dec1c5120" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio</name>
+  </compound>
+  <compound refid="dir_15f68f5d27791ec2059dd23db9236d6e" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event</name>
+  </compound>
+  <compound refid="dir_4fae9784f0beb5d3e724651e38c88582" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/event</name>
+  </compound>
+  <compound refid="dir_ca36b535b44dbcc6059e8fdc4e9fd511" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples</name>
+  </compound>
+  <compound refid="dir_fcdf295df63954d3fbe95a13cc696a87" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception</name>
+  </compound>
+  <compound refid="dir_a2cc1ff13d49f1b23dcb7b16b430cdae" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception</name>
+  </compound>
+  <compound refid="dir_44c23b50388e6b76ad7de4feb91ef15a" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics</name>
+  </compound>
+  <compound refid="dir_b8e469d62494c34d39bee4d96a3b89c6" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics</name>
+  </compound>
+  <compound refid="dir_0f0c1e1dc57a43a119e5afd51c05d823" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui</name>
+  </compound>
+  <compound refid="dir_a08b179cbd591e18336129b4102f0453" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui</name>
+  </compound>
+  <compound refid="dir_3a8ab3d082ac0d718156572a476e6cc8" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include</name>
+  </compound>
+  <compound refid="dir_f65ac141c5563af7e75649025b3fab42" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu</name>
+  </compound>
+  <compound refid="dir_4f9d2adf95a552824d2fdbdca9f6a398" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl</name>
+  </compound>
+  <compound refid="dir_c1b858e4ccae31fa1f3a3631d9de3e1a" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master</name>
+  </compound>
+  <compound refid="dir_9bc27c3a15165b903513c0caa2551462" kind="dir"><name>/home/Theo/Téléchargements/sae</name>
+  </compound>
+  <compound refid="dir_6776d252bbc60daf06bcfa47d0063ff8" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU</name>
+  </compound>
+  <compound refid="dir_bbff5ab93c17d787a30401c1c8704444" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape</name>
+  </compound>
+  <compound refid="dir_61b0ff1c79280479569e64d838bd0a8f" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape</name>
+  </compound>
+  <compound refid="dir_6c6de58e5962bd976e0f6a50c95223d0" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/sprites</name>
+  </compound>
+  <compound refid="dir_030fc6c80df3f93d3ce96ad611f8db21" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src</name>
+  </compound>
+  <compound refid="dir_68def87b39a4c02963117a60aff47409" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition</name>
+  </compound>
+  <compound refid="dir_d384f0949c75b552cc226f58166ece8e" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition</name>
+  </compound>
+  <compound refid="dir_79f149efd30d37738a8a961658db751b" kind="dir"><name>/home/Theo/Téléchargements</name>
+  </compound>
+  <compound refid="dir_02daf92501ea91f50a2370c00ee6c7bd" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools</name>
+  </compound>
+  <compound refid="dir_08534f0927ef6fcc5317d7948e98c479" kind="dir"><name>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools</name>
+  </compound>
+</doxygenindex>

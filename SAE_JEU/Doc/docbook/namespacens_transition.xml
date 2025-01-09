@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespacens_transition" xml:lang="en-US">
+<title>nsTransition Namespace Reference</title>
+<indexterm><primary>nsTransition</primary></indexterm>
+<para>
+
+<para>Espace de nom pour le moteur de transition et ses composants. </para>
+ 
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_transition_1_1_i_transitionable">ITransitionable</link></para>
+
+<para>Une classe abstraite pour n&apos;importe quelle élément pouvant effectuer une transition entre deux états. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_transition_1_1_transition">Transition</link></para>
+
+<para>Une classe représentant un <link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link> en cours de lecture. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_transition_1_1_transition_contract">TransitionContract</link></para>
+
+<para>Une classe contenant des paramètres pour créer une transition. </para>
+</listitem>
+            <listitem><para>class <link linkend="_classns_transition_1_1_transition_engine">TransitionEngine</link></para>
+
+<para>Une classe implémentant un moteur de transition supportant plusieurs transitions a la fois. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Typedefs    </title>
+        <itemizedlist>
+            <listitem><para>typedef std::chrono::duration&lt; float, std::nano &gt; <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link></para>
+
+<para>SystemDuration_t : Définition de type stockant une durée exprimée en nanosecondes, sous forme de float. </para>
+</listitem>
+            <listitem><para>typedef std::chrono::time_point&lt; std::chrono::steady_clock, <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link> &gt; <link linkend="_namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6">SystemTimePoint_t</link></para>
+
+<para>SystemTimePoint_t : Définition de type représentant un point dans le temps basée sur l&apos;horloge système. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Espace de nom pour le moteur de transition et ses composants. </para>
+</section>
+<section>
+<title>Typedef Documentation</title>
+<anchor xml:id="_namespacens_transition_1a260258f249f46ff9a62da721537f87af"/><section>
+    <title>SystemDuration_t</title>
+<indexterm><primary>SystemDuration_t</primary><secondary>nsTransition</secondary></indexterm>
+<indexterm><primary>nsTransition</primary><secondary>SystemDuration_t</secondary></indexterm>
+<para><computeroutput>typedef std::chrono::duration&lt;float, std::nano&gt; <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">nsTransition::SystemDuration_t</link></computeroutput></para><para>
+
+<para>SystemDuration_t : Définition de type stockant une durée exprimée en nanosecondes, sous forme de float. </para>
+</para>
+<para>
+Definition at line <link linkend="_transition__types_8h_source_1l00022">22</link> of file <link linkend="_transition__types_8h_source">transition_types.h</link>.</para>
+</section>
+<anchor xml:id="_namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6"/><section>
+    <title>SystemTimePoint_t</title>
+<indexterm><primary>SystemTimePoint_t</primary><secondary>nsTransition</secondary></indexterm>
+<indexterm><primary>nsTransition</primary><secondary>SystemTimePoint_t</secondary></indexterm>
+<para><computeroutput>typedef std::chrono::time_point&lt;std::chrono::steady_clock, <link linkend="_namespacens_transition_1a260258f249f46ff9a62da721537f87af">SystemDuration_t</link>&gt; <link linkend="_namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6">nsTransition::SystemTimePoint_t</link></computeroutput></para><para>
+
+<para>SystemTimePoint_t : Définition de type représentant un point dans le temps basée sur l&apos;horloge système. </para>
+</para>
+<para>
+Definition at line <link linkend="_transition__types_8h_source_1l00027">27</link> of file <link linkend="_transition__types_8h_source">transition_types.h</link>.</para>
+</section>
+</section>
+</section>

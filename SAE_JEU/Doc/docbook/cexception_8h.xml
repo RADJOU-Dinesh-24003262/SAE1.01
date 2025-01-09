@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cexception_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h</primary></indexterm>
+<para>
+
+<para>Declaration de la classe CException. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;
+#include &lt;iostream&gt;
+#include &lt;exception&gt;
+#include &quot;../tools/ieditable.h&quot;
+#include &quot;errcode.h&quot;
+#include &quot;cexception.hpp&quot;
+</programlisting>Include dependency graph for cexception.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="cexception_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="cexception_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classns_exception_1_1_c_exception">nsException::CException</link></para>
+
+<para>Classe pour créer des exceptions facilement. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespacens_exception">nsException</link></para>
+
+<para>Espace de nom pour la gestion d&apos;exceptions. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Declaration de la classe CException. </para>
+
+<para><formalpara><title>Authors</title>
+
+<para>M. Laporte, D. Mathieu</para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>23/03/2010</para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.0</para>
+
+<para>V1.1</para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>Alexandre Sollier</para>
+</formalpara>
+Ajout de la documentation </para>
+<para>
+Definition in file <link linkend="_cexception_8h_source">cexception.h</link>.</para>
+</section>
+</section>

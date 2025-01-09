@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_shape_1_1_shape" kind="class" language="C++" prot="public">
+    <compoundname>nsShape::Shape</compoundname>
+    <basecompoundref refid="classns_graphics_1_1_i_drawable" prot="public" virt="non-virtual">nsGraphics::IDrawable</basecompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_circle" prot="public" virt="non-virtual">nsShape::Circle</derivedcompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_line" prot="public" virt="non-virtual">nsShape::Line</derivedcompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_oval" prot="public" virt="non-virtual">nsShape::Oval</derivedcompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_rectangle" prot="public" virt="non-virtual">nsShape::Rectangle</derivedcompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_triangle" prot="public" virt="non-virtual">nsShape::Triangle</derivedcompoundref>
+    <includes refid="shape_8h" local="no">shape.h</includes>
+      <sectiondef kind="protected-attrib">
+      <memberdef kind="variable" id="classns_shape_1_1_shape_1a68841e117adddc95734dcbaa62f68832" prot="protected" static="no" mutable="no">
+        <type><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref></type>
+        <definition>nsGraphics::RGBAcolor nsShape::Shape::m_fillColor</definition>
+        <argsstring></argsstring>
+        <name>m_fillColor</name>
+        <qualifiedname>nsShape::Shape::m_fillColor</qualifiedname>
+        <briefdescription>
+<para>m_fillColor : Couleur de remplissage </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="75" column="27" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" bodystart="75" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="classns_shape_1_1_shape_1a0444014e3ee0fa1e6ba5295e530a4f82" prot="protected" static="no" mutable="no">
+        <type><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref></type>
+        <definition>nsGraphics::RGBAcolor nsShape::Shape::m_borderColor</definition>
+        <argsstring></argsstring>
+        <name>m_borderColor</name>
+        <qualifiedname>nsShape::Shape::m_borderColor</qualifiedname>
+        <briefdescription>
+<para>m_borderColor : Couleur de bord </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="80" column="27" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" bodystart="80" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_shape_1_1_shape_1a879f450649c23c83dee576234703951d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>nsShape::Shape::Shape</definition>
+        <argsstring>(const nsGraphics::RGBAcolor &amp;fillColor, const nsGraphics::RGBAcolor &amp;borderColor)</argsstring>
+        <name>Shape</name>
+        <qualifiedname>nsShape::Shape::Shape</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
+          <declname>fillColor</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
+          <declname>borderColor</declname>
+        </param>
+        <briefdescription>
+<para>Constructeur pour la classe <ref refid="classns_shape_1_1_shape" kindref="compound">Shape</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">fillColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Couleur de remplissage de la forme </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">borderColor</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>: Couleur de bord de la forme </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="39" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="13" bodyend="16"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>nsShape::Shape::~Shape</definition>
+        <argsstring>()=default</argsstring>
+        <name>~Shape</name>
+        <qualifiedname>nsShape::Shape::~Shape</qualifiedname>
+        <briefdescription>
+<para>Destructeur virtuel pour la classe <ref refid="classns_shape_1_1_shape" kindref="compound">Shape</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="45" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
+        <definition>const nsGraphics::RGBAcolor &amp; nsShape::Shape::getFillColor</definition>
+        <argsstring>() const</argsstring>
+        <name>getFillColor</name>
+        <qualifiedname>nsShape::Shape::getFillColor</qualifiedname>
+        <briefdescription>
+<para>Retourne la couleur de remplissage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="51" column="33" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="18" bodyend="21"/>
+        <referencedby refid="class_bg_text_1a01cc8269e39184b805351409aac4feb4" compoundref="09-_custom_transitionable_2bgtext_8cpp" startline="14" endline="32">BgText::getValues</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>cvoid nsShape::Shape::setFillColor</definition>
+        <argsstring>(const nsGraphics::RGBAcolor &amp;fillColor)</argsstring>
+        <name>setFillColor</name>
+        <qualifiedname>nsShape::Shape::setFillColor</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
+          <declname>fillColor</declname>
+        </param>
+        <briefdescription>
+<para>Règle la couleur de remplissage. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="57" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="23" bodyend="26"/>
+        <referencedby refid="class_bg_text_1adb35c1e7e0387e04e8f8e67d9e1468c8" compoundref="09-_custom_transitionable_2bgtext_8cpp" startline="34" endline="48">BgText::setValues</referencedby>
+      </memberdef>
+      <memberdef kind="function" id="classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
+        <definition>const nsGraphics::RGBAcolor &amp; nsShape::Shape::getBorderColor</definition>
+        <argsstring>() const</argsstring>
+        <name>getBorderColor</name>
+        <qualifiedname>nsShape::Shape::getBorderColor</qualifiedname>
+        <briefdescription>
+<para>Retourne la couleur de bord. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="63" column="33" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="28" bodyend="31"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_shape_1_1_shape_1a48821100aa1856f188bdba257505adc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void nsShape::Shape::setBorderColor</definition>
+        <argsstring>(const nsGraphics::RGBAcolor &amp;borderColor)</argsstring>
+        <name>setBorderColor</name>
+        <qualifiedname>nsShape::Shape::setBorderColor</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
+          <declname>borderColor</declname>
+        </param>
+        <briefdescription>
+<para>Règle la couleur de bord. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="69" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="33" bodyend="36"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe de base pour une forme. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>nsGraphics::IDrawable</label>
+        <link refid="classns_graphics_1_1_i_drawable"/>
+      </node>
+      <node id="3">
+        <label>nsShape::Circle</label>
+        <link refid="classns_shape_1_1_circle"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>nsShape::Line</label>
+        <link refid="classns_shape_1_1_line"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>nsShape::Oval</label>
+        <link refid="classns_shape_1_1_oval"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>nsShape::Rectangle</label>
+        <link refid="classns_shape_1_1_rectangle"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>nsShape::Shape</label>
+        <link refid="classns_shape_1_1_shape"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>nsShape::Triangle</label>
+        <link refid="classns_shape_1_1_triangle"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="2">
+        <label>nsGraphics::IDrawable</label>
+        <link refid="classns_graphics_1_1_i_drawable"/>
+      </node>
+      <node id="3">
+        <label>nsGraphics::RGBAcolor</label>
+        <link refid="classns_graphics_1_1_r_g_b_acolor"/>
+        <childnode refid="4" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>nsShape::Shape</label>
+        <link refid="classns_shape_1_1_shape"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="usage">
+          <edgelabel>m_borderColor</edgelabel>
+          <edgelabel>m_fillColor</edgelabel>
+        </childnode>
+      </node>
+      <node id="4">
+        <label>nsUtil::IEditable</label>
+        <link refid="classns_util_1_1_i_editable"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="29" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" bodystart="30" bodyend="82"/>
+    <listofallmembers>
+      <member refid="classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51" prot="public" virt="pure-virtual"><scope>nsShape::Shape</scope><name>draw</name></member>
+      <member refid="classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d" prot="public" virt="non-virtual"><scope>nsShape::Shape</scope><name>getBorderColor</name></member>
+      <member refid="classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754" prot="public" virt="non-virtual"><scope>nsShape::Shape</scope><name>getFillColor</name></member>
+      <member refid="classns_shape_1_1_shape_1a0444014e3ee0fa1e6ba5295e530a4f82" prot="protected" virt="non-virtual"><scope>nsShape::Shape</scope><name>m_borderColor</name></member>
+      <member refid="classns_shape_1_1_shape_1a68841e117adddc95734dcbaa62f68832" prot="protected" virt="non-virtual"><scope>nsShape::Shape</scope><name>m_fillColor</name></member>
+      <member refid="classns_shape_1_1_shape_1a48821100aa1856f188bdba257505adc3" prot="public" virt="non-virtual"><scope>nsShape::Shape</scope><name>setBorderColor</name></member>
+      <member refid="classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07" prot="public" virt="non-virtual"><scope>nsShape::Shape</scope><name>setFillColor</name></member>
+      <member refid="classns_shape_1_1_shape_1a879f450649c23c83dee576234703951d" prot="public" virt="non-virtual"><scope>nsShape::Shape</scope><name>Shape</name></member>
+      <member refid="classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867" prot="public" virt="virtual"><scope>nsShape::Shape</scope><name>~IDrawable</name></member>
+      <member refid="classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4" prot="public" virt="virtual"><scope>nsShape::Shape</scope><name>~Shape</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

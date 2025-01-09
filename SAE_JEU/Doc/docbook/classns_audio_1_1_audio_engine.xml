@@ -1,0 +1,278 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classns_audio_1_1_audio_engine" xml:lang="en-US">
+<title>nsAudio::AudioEngine Class Reference</title>
+<indexterm><primary>nsAudio::AudioEngine</primary></indexterm>
+<para>
+
+<para>Une classe de gestion des effets audio et de la musique. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;audioengine.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_classns_audio_1_1_audio_engine_1a6ef72eb80bef2c1b0764c40f629d2536">setMusic</link> (const std::string &amp;fileName, bool loop=true)</para>
+
+<para>Définit le fichier audio de la musique. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_audio_1_1_audio_engine_1aba89263fc9f810bee40dcae229313883">toggleMusicPlaying</link> ()</para>
+
+<para>Met en pause ou relance la musique. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_audio_1_1_audio_engine_1ac21b2c1be9590a0f702c48220c59f8c9">setMusicPlaying</link> (bool playing)</para>
+
+<para>Règle l&apos;état de lecture de la musique. </para>
+</listitem>
+            <listitem><para>bool <link linkend="_classns_audio_1_1_audio_engine_1a57e13380a3039e546a5f1b9242f8709b">isMusicPlaying</link> () const</para>
+
+<para>Récupère l&apos;état de lecture de la musique. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_audio_1_1_audio_engine_1a4c88595136327b3805c0322a9a8d2a0f">loadSound</link> (const std::string &amp;fileName)</para>
+
+<para>Charge un fichier audio dans un buffer. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_audio_1_1_audio_engine_1a2b0a1a9b1cb90e1180ddedb5b9e2fad1">removeBuffer</link> (const std::string &amp;fileName)</para>
+
+<para>Retire un buffer de la liste. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_audio_1_1_audio_engine_1ac05b3e0d2fd9ecfd1ad8eb110f021bf3">emptyBufferList</link> ()</para>
+
+<para>Vide la liste des buffers. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_audio_1_1_audio_engine_1ac1343ed3afe38eb80a222969f3d74d6d">startMusicFromBeginning</link> ()</para>
+
+<para>Relance la musique depuis le début. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_audio_1_1_audio_engine_1a47d769cc331578a398f422ff497505c8">playSoundFromBuffer</link> (const std::string &amp;fileName)</para>
+
+<para>Joue un son depuis un buffer. </para>
+</listitem>
+            <listitem><para>void <link linkend="_classns_audio_1_1_audio_engine_1aa541e8088c35ab41e4747ecd648e75e9">playSoundFromFile</link> (const std::string &amp;fileName)</para>
+
+<para>Joue un son depuis un fichier. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Une classe de gestion des effets audio et de la musique. </para>
+<para>
+Definition at line <link linkend="_audioengine_8h_source_1l00028">28</link> of file <link linkend="_audioengine_8h_source">audioengine.h</link>.</para>
+</section>
+<section>
+<title>Member Function Documentation</title>
+<anchor xml:id="_classns_audio_1_1_audio_engine_1ac05b3e0d2fd9ecfd1ad8eb110f021bf3"/><section>
+    <title>emptyBufferList()</title>
+<indexterm><primary>emptyBufferList</primary><secondary>nsAudio::AudioEngine</secondary></indexterm>
+<indexterm><primary>nsAudio::AudioEngine</primary><secondary>emptyBufferList</secondary></indexterm>
+<para><computeroutput>void nsAudio::AudioEngine::emptyBufferList ( )</computeroutput></para><para>
+
+<para>Vide la liste des buffers. </para>
+</para>
+<para>
+Definition at line <link linkend="_audioengine_8cpp_source_1l00066">66</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_audio_1_1_audio_engine_1a57e13380a3039e546a5f1b9242f8709b"/><section>
+    <title>isMusicPlaying()</title>
+<indexterm><primary>isMusicPlaying</primary><secondary>nsAudio::AudioEngine</secondary></indexterm>
+<indexterm><primary>nsAudio::AudioEngine</primary><secondary>isMusicPlaying</secondary></indexterm>
+<para><computeroutput>bool nsAudio::AudioEngine::isMusicPlaying ( ) const</computeroutput></para><para>
+
+<para>Récupère l&apos;état de lecture de la musique. </para>
+</para>
+<para>
+Definition at line <link linkend="_audioengine_8cpp_source_1l00037">37</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_audio_1_1_audio_engine_1a4c88595136327b3805c0322a9a8d2a0f"/><section>
+    <title>loadSound()</title>
+<indexterm><primary>loadSound</primary><secondary>nsAudio::AudioEngine</secondary></indexterm>
+<indexterm><primary>nsAudio::AudioEngine</primary><secondary>loadSound</secondary></indexterm>
+<para><computeroutput>void nsAudio::AudioEngine::loadSound (const std::string &amp; fileName)</computeroutput></para><para>
+
+<para>Charge un fichier audio dans un buffer. </para>
+</para>
+<para>
+Definition at line <link linkend="_audioengine_8cpp_source_1l00042">42</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_audio_1_1_audio_engine_1a47d769cc331578a398f422ff497505c8"/><section>
+    <title>playSoundFromBuffer()</title>
+<indexterm><primary>playSoundFromBuffer</primary><secondary>nsAudio::AudioEngine</secondary></indexterm>
+<indexterm><primary>nsAudio::AudioEngine</primary><secondary>playSoundFromBuffer</secondary></indexterm>
+<para><computeroutput>void nsAudio::AudioEngine::playSoundFromBuffer (const std::string &amp; fileName)</computeroutput></para><para>
+
+<para>Joue un son depuis un buffer. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>fileName</entry><entry>
+<para>: nom du fichier </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_audioengine_8cpp_source_1l00077">77</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_audio_1_1_audio_engine_1aa541e8088c35ab41e4747ecd648e75e9"/><section>
+    <title>playSoundFromFile()</title>
+<indexterm><primary>playSoundFromFile</primary><secondary>nsAudio::AudioEngine</secondary></indexterm>
+<indexterm><primary>nsAudio::AudioEngine</primary><secondary>playSoundFromFile</secondary></indexterm>
+<para><computeroutput>void nsAudio::AudioEngine::playSoundFromFile (const std::string &amp; fileName)</computeroutput></para><para>
+
+<para>Joue un son depuis un fichier. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>fileName</entry><entry>
+<para>: nom du fichier </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_audioengine_8cpp_source_1l00095">95</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_audio_1_1_audio_engine_1a2b0a1a9b1cb90e1180ddedb5b9e2fad1"/><section>
+    <title>removeBuffer()</title>
+<indexterm><primary>removeBuffer</primary><secondary>nsAudio::AudioEngine</secondary></indexterm>
+<indexterm><primary>nsAudio::AudioEngine</primary><secondary>removeBuffer</secondary></indexterm>
+<para><computeroutput>void nsAudio::AudioEngine::removeBuffer (const std::string &amp; fileName)</computeroutput></para><para>
+
+<para>Retire un buffer de la liste. </para>
+</para>
+<para>
+Definition at line <link linkend="_audioengine_8cpp_source_1l00053">53</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_audio_1_1_audio_engine_1a6ef72eb80bef2c1b0764c40f629d2536"/><section>
+    <title>setMusic()</title>
+<indexterm><primary>setMusic</primary><secondary>nsAudio::AudioEngine</secondary></indexterm>
+<indexterm><primary>nsAudio::AudioEngine</primary><secondary>setMusic</secondary></indexterm>
+<para><computeroutput>void nsAudio::AudioEngine::setMusic (const std::string &amp; fileName, bool loop = <computeroutput>true</computeroutput>
+)</computeroutput></para><para>
+
+<para>Définit le fichier audio de la musique. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>fileName</entry><entry>
+<para>: nom du fichier </para>
+</entry>
+                            </row>
+                            <row>
+<entry>in</entry><entry>loop</entry><entry>
+<para>: indique si la musique est lue en boucle ou non (oui par défaut) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_audioengine_8cpp_source_1l00016">16</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_audio_1_1_audio_engine_1ac21b2c1be9590a0f702c48220c59f8c9"/><section>
+    <title>setMusicPlaying()</title>
+<indexterm><primary>setMusicPlaying</primary><secondary>nsAudio::AudioEngine</secondary></indexterm>
+<indexterm><primary>nsAudio::AudioEngine</primary><secondary>setMusicPlaying</secondary></indexterm>
+<para><computeroutput>void nsAudio::AudioEngine::setMusicPlaying (bool playing)</computeroutput></para><para>
+
+<para>Règle l&apos;état de lecture de la musique. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="3" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>in</entry><entry>playing</entry><entry>
+<para>: Nouvel état de lecture </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_audioengine_8cpp_source_1l00029">29</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_audio_1_1_audio_engine_1ac1343ed3afe38eb80a222969f3d74d6d"/><section>
+    <title>startMusicFromBeginning()</title>
+<indexterm><primary>startMusicFromBeginning</primary><secondary>nsAudio::AudioEngine</secondary></indexterm>
+<indexterm><primary>nsAudio::AudioEngine</primary><secondary>startMusicFromBeginning</secondary></indexterm>
+<para><computeroutput>void nsAudio::AudioEngine::startMusicFromBeginning ( )</computeroutput></para><para>
+
+<para>Relance la musique depuis le début. </para>
+</para>
+<para>
+Definition at line <link linkend="_audioengine_8cpp_source_1l00071">71</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_audio_1_1_audio_engine_1aba89263fc9f810bee40dcae229313883"/><section>
+    <title>toggleMusicPlaying()</title>
+<indexterm><primary>toggleMusicPlaying</primary><secondary>nsAudio::AudioEngine</secondary></indexterm>
+<indexterm><primary>nsAudio::AudioEngine</primary><secondary>toggleMusicPlaying</secondary></indexterm>
+<para><computeroutput>void nsAudio::AudioEngine::toggleMusicPlaying ( )</computeroutput></para><para>
+
+<para>Met en pause ou relance la musique. </para>
+</para>
+<para>
+Definition at line <link linkend="_audioengine_8cpp_source_1l00024">24</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+</section>
+<para>
+The documentation for this class was generated from the following files:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/<link linkend="_audioengine_8h">audioengine.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/<link linkend="_audioengine_8cpp">audioengine.cpp</link></section>
+</section>

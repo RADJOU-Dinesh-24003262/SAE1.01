@@ -1,0 +1,309 @@
+\hypertarget{classns_gui_1_1_sprite}{}\doxysection{ns\+Gui\+::Sprite Class Reference}
+\label{classns_gui_1_1_sprite}\index{nsGui::Sprite@{nsGui::Sprite}}
+
+
+Permet de charger une image depuis un format créé pour l\textquotesingle{}occasion, le .si2.  
+
+
+
+
+{\ttfamily \#include $<$sprite.\+h$>$}
+
+
+
+Inheritance diagram for ns\+Gui\+::Sprite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_gui_1_1_sprite__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for ns\+Gui\+::Sprite\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_gui_1_1_sprite__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78}{Transition\+Ids}} \{ \mbox{\hyperlink{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54}{TRANSITION\+\_\+\+POSITION}}
+ \}
+\begin{DoxyCompactList}\small\item\em Transition\+Ids \+: Liste de toutes les transitions que cet élément peut exécuter. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classns_gui_1_1_sprite_a35558b08dfeb3e3a20be52da28e33c4c}{Sprite}} (const std\+::string \&filename, const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&position=\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}}())
+\begin{DoxyCompactList}\small\item\em Constructeur pour la classe \mbox{\hyperlink{classns_gui_1_1_sprite}{Sprite}}, charge les données depuis un fichier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classns_gui_1_1_sprite_abee8e5a2740555d46f19af3d4b489453}{Sprite}} (const std\+::vector$<$ \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} $>$ \&pixel\+Data, const uint32\+\_\+t \&\mbox{\hyperlink{sprite_8h_a410460a0a75462ae38c5c9daf5fb06ed}{row\+Size}}, const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&position=\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}}())
+\begin{DoxyCompactList}\small\item\em Constructeur pour la classe \mbox{\hyperlink{classns_gui_1_1_sprite}{Sprite}}, copie les données depuis un vecteur de pixels. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classns_gui_1_1_sprite_ac4b29170aef06d46990b68da76480f28}{draw}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window) const override
+\begin{DoxyCompactList}\small\item\em Fonction pour afficher l\textquotesingle{}objet. \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classns_gui_1_1_sprite_a7da27e2ccf7b574896662720d99c0056}{get\+Values}} (const int \&id, std\+::vector$<$ float $>$ \&values) override
+\begin{DoxyCompactList}\small\item\em Récupère des valeurs dans un vecteur de float pour l\textquotesingle{}ID spécifié \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{classns_gui_1_1_sprite_a63ad7e76b470c578aecc697203a3eb26}{set\+Values}} (const int \&id, const std\+::vector$<$ float $>$ \&values) override
+\begin{DoxyCompactList}\small\item\em Définit les nouvelles valeurs pour l\textquotesingle{}ID spécifié \end{DoxyCompactList}\item 
+const uint32\+\_\+t \& \mbox{\hyperlink{classns_gui_1_1_sprite_adbe04bd427b6658e0181ce167db83d05}{get\+Row\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le nombre de pixels par ligne. \end{DoxyCompactList}\item 
+const std\+::vector$<$ \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} $>$ \& \mbox{\hyperlink{classns_gui_1_1_sprite_ad8644780a7a7dcbcd5f2e4e7a461b685}{get\+Pixel\+Data}} () const
+\begin{DoxyCompactList}\small\item\em Récupère le vecteur contenant les pixels de l\textquotesingle{}image. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \& \mbox{\hyperlink{classns_gui_1_1_sprite_a1d6ad6681627aae6c4680fc936da8eb2}{get\+Position}} () const
+\begin{DoxyCompactList}\small\item\em Récupère la position du sprite. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classns_gui_1_1_sprite_a4c695910c46504d1e8d47b838394a48e}{set\+Position}} (const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&position)
+\begin{DoxyCompactList}\small\item\em Définit la nouvelle position du sprite. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \mbox{\hyperlink{classns_gui_1_1_sprite_a26b502e88906860373c278495794998c}{compute\+Size}} () const
+\begin{DoxyCompactList}\small\item\em Calcule la taille du sprite. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Permet de charger une image depuis un format créé pour l\textquotesingle{}occasion, le .si2. 
+
+Definition at line \mbox{\hyperlink{sprite_8h_source_l00028}{28}} of file \mbox{\hyperlink{sprite_8h_source}{sprite.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78}\label{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!TransitionIds@{TransitionIds}}
+\index{TransitionIds@{TransitionIds}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{TransitionIds}{TransitionIds}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78}{ns\+Gui\+::\+Sprite\+::\+Transition\+Ids}}}
+
+
+
+Transition\+Ids \+: Liste de toutes les transitions que cet élément peut exécuter. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TRANSITION\_POSITION@{TRANSITION\_POSITION}!nsGui::Sprite@{nsGui::Sprite}}\index{nsGui::Sprite@{nsGui::Sprite}!TRANSITION\_POSITION@{TRANSITION\_POSITION}}}\mbox{\Hypertarget{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54}\label{classns_gui_1_1_sprite_a09069244e6b3e580f8511496c7ae1b78a90092e9cd093f4ef21dab0a68fbe6c54}} 
+TRANSITION\+\_\+\+POSITION&Transition pour la position \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{sprite_8h_source_l00034}{34}} of file \mbox{\hyperlink{sprite_8h_source}{sprite.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classns_gui_1_1_sprite_a35558b08dfeb3e3a20be52da28e33c4c}\label{classns_gui_1_1_sprite_a35558b08dfeb3e3a20be52da28e33c4c}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily ns\+Gui\+::\+Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::string \&}]{filename,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{position = {\ttfamily \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}}()} }\end{DoxyParamCaption})}
+
+
+
+Constructeur pour la classe \mbox{\hyperlink{classns_gui_1_1_sprite}{Sprite}}, charge les données depuis un fichier. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em filename} & \+: Chemin d\textquotesingle{}accès vers le fichier image \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & \+: Position du sprite \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{sprite_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{sprite_8cpp_source}{sprite.\+cpp}}.
+
+\mbox{\Hypertarget{classns_gui_1_1_sprite_abee8e5a2740555d46f19af3d4b489453}\label{classns_gui_1_1_sprite_abee8e5a2740555d46f19af3d4b489453}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily ns\+Gui\+::\+Sprite\+::\+Sprite (\begin{DoxyParamCaption}\item[{const std\+::vector$<$ \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} $>$ \&}]{pixel\+Data,  }\item[{const uint32\+\_\+t \&}]{row\+Size,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{position = {\ttfamily \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}}()} }\end{DoxyParamCaption})}
+
+
+
+Constructeur pour la classe \mbox{\hyperlink{classns_gui_1_1_sprite}{Sprite}}, copie les données depuis un vecteur de pixels. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em pixel\+Data} & \+: Vecteur contenant des données sur les pixels \\
+\hline
+\mbox{\texttt{ in}}  & {\em row\+Size} & \+: Nombre de pixels par ligne \\
+\hline
+\mbox{\texttt{ in}}  & {\em position} & \+: Position du sprite \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{sprite_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{sprite_8cpp_source}{sprite.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classns_gui_1_1_sprite_a26b502e88906860373c278495794998c}\label{classns_gui_1_1_sprite_a26b502e88906860373c278495794998c}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!computeSize@{computeSize}}
+\index{computeSize@{computeSize}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{computeSize()}{computeSize()}}
+{\footnotesize\ttfamily Vec2D ns\+Gui\+::\+Sprite\+::compute\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Calcule la taille du sprite. 
+
+\begin{DoxyReturn}{Returns}
+La taille calculée 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sprite_8cpp_source_l00116}{116}} of file \mbox{\hyperlink{sprite_8cpp_source}{sprite.\+cpp}}.
+
+\mbox{\Hypertarget{classns_gui_1_1_sprite_ac4b29170aef06d46990b68da76480f28}\label{classns_gui_1_1_sprite_ac4b29170aef06d46990b68da76480f28}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!draw@{draw}}
+\index{draw@{draw}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{draw()}{draw()}}
+{\footnotesize\ttfamily void ns\+Gui\+::\+Sprite\+::draw (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Fonction pour afficher l\textquotesingle{}objet. 
+
+
+
+Implements \mbox{\hyperlink{classns_graphics_1_1_i_drawable_abed8a61e1d507d31e76f0891f3bf9c51}{ns\+Graphics\+::\+IDrawable}}.
+
+
+
+Definition at line \mbox{\hyperlink{sprite_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{sprite_8cpp_source}{sprite.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classns_gui_1_1_sprite_ac4b29170aef06d46990b68da76480f28_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classns_gui_1_1_sprite_ad8644780a7a7dcbcd5f2e4e7a461b685}\label{classns_gui_1_1_sprite_ad8644780a7a7dcbcd5f2e4e7a461b685}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!getPixelData@{getPixelData}}
+\index{getPixelData@{getPixelData}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{getPixelData()}{getPixelData()}}
+{\footnotesize\ttfamily const std\+::vector$<$ \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} $>$ \& ns\+Gui\+::\+Sprite\+::get\+Pixel\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupère le vecteur contenant les pixels de l\textquotesingle{}image. 
+
+\begin{DoxyReturn}{Returns}
+Une référence constante vers m\+\_\+pixel\+Data 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sprite_8cpp_source_l00101}{101}} of file \mbox{\hyperlink{sprite_8cpp_source}{sprite.\+cpp}}.
+
+\mbox{\Hypertarget{classns_gui_1_1_sprite_a1d6ad6681627aae6c4680fc936da8eb2}\label{classns_gui_1_1_sprite_a1d6ad6681627aae6c4680fc936da8eb2}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!getPosition@{getPosition}}
+\index{getPosition@{getPosition}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{getPosition()}{getPosition()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \& ns\+Gui\+::\+Sprite\+::get\+Position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupère la position du sprite. 
+
+\begin{DoxyReturn}{Returns}
+Une référence const vers m\+\_\+position 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sprite_8cpp_source_l00106}{106}} of file \mbox{\hyperlink{sprite_8cpp_source}{sprite.\+cpp}}.
+
+\mbox{\Hypertarget{classns_gui_1_1_sprite_adbe04bd427b6658e0181ce167db83d05}\label{classns_gui_1_1_sprite_adbe04bd427b6658e0181ce167db83d05}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!getRowSize@{getRowSize}}
+\index{getRowSize@{getRowSize}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{getRowSize()}{getRowSize()}}
+{\footnotesize\ttfamily const uint32\+\_\+t \& ns\+Gui\+::\+Sprite\+::get\+Row\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Récupère le nombre de pixels par ligne. 
+
+\begin{DoxyReturn}{Returns}
+Une référence constante vers m\+\_\+row\+Size 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{sprite_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{sprite_8cpp_source}{sprite.\+cpp}}.
+
+\mbox{\Hypertarget{classns_gui_1_1_sprite_a7da27e2ccf7b574896662720d99c0056}\label{classns_gui_1_1_sprite_a7da27e2ccf7b574896662720d99c0056}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!getValues@{getValues}}
+\index{getValues@{getValues}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{getValues()}{getValues()}}
+{\footnotesize\ttfamily void ns\+Gui\+::\+Sprite\+::get\+Values (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{std\+::vector$<$ float $>$ \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Récupère des valeurs dans un vecteur de float pour l\textquotesingle{}ID spécifié 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID des valeurs a récupérer \\
+\hline
+\mbox{\texttt{ in,out}}  & {\em values} & Vecteur de valeurs a peupler \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classns_transition_1_1_i_transitionable_a5871a16fd47c1e5c8bacdd5da8597ed9}{ns\+Transition\+::\+ITransitionable}}.
+
+
+
+Definition at line \mbox{\hyperlink{sprite_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{sprite_8cpp_source}{sprite.\+cpp}}.
+
+\mbox{\Hypertarget{classns_gui_1_1_sprite_a4c695910c46504d1e8d47b838394a48e}\label{classns_gui_1_1_sprite_a4c695910c46504d1e8d47b838394a48e}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!setPosition@{setPosition}}
+\index{setPosition@{setPosition}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{setPosition()}{setPosition()}}
+{\footnotesize\ttfamily void ns\+Gui\+::\+Sprite\+::set\+Position (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{position }\end{DoxyParamCaption})}
+
+
+
+Définit la nouvelle position du sprite. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em position} & \+: Nouvelle position \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{sprite_8cpp_source_l00111}{111}} of file \mbox{\hyperlink{sprite_8cpp_source}{sprite.\+cpp}}.
+
+\mbox{\Hypertarget{classns_gui_1_1_sprite_a63ad7e76b470c578aecc697203a3eb26}\label{classns_gui_1_1_sprite_a63ad7e76b470c578aecc697203a3eb26}} 
+\index{nsGui::Sprite@{nsGui::Sprite}!setValues@{setValues}}
+\index{setValues@{setValues}!nsGui::Sprite@{nsGui::Sprite}}
+\doxysubsubsection{\texorpdfstring{setValues()}{setValues()}}
+{\footnotesize\ttfamily void ns\+Gui\+::\+Sprite\+::set\+Values (\begin{DoxyParamCaption}\item[{const int \&}]{id,  }\item[{const std\+::vector$<$ float $>$ \&}]{values }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Définit les nouvelles valeurs pour l\textquotesingle{}ID spécifié 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em id} & ID des valeurs a définir \\
+\hline
+\mbox{\texttt{ in}}  & {\em values} & Vecteur des nouvelles valeurs a appliquer \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{classns_transition_1_1_i_transitionable_ade37d29f7f2ca4890ed0e2e64d033197}{ns\+Transition\+::\+ITransitionable}}.
+
+
+
+Definition at line \mbox{\hyperlink{sprite_8cpp_source_l00085}{85}} of file \mbox{\hyperlink{sprite_8cpp_source}{sprite.\+cpp}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/gui/\mbox{\hyperlink{sprite_8h}{sprite.\+h}}\item 
+/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/src/gui/\mbox{\hyperlink{sprite_8cpp}{sprite.\+cpp}}\end{DoxyCompactItemize}

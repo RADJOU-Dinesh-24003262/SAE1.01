@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structns_event_1_1_mouse_click_data__t" xml:lang="en-US">
+<title>nsEvent::MouseClickData_t Struct Reference</title>
+<indexterm><primary>nsEvent::MouseClickData_t</primary></indexterm>
+<para>
+
+<para>Possède des données pour un événement MouseClick. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;event.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structns_event_1_1_mouse_click_data__t_1a8c4c8e7b68c38ee4819957050bfd2926">button</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structns_event_1_1_mouse_click_data__t_1a81252b916361dc4deab0f42510fdc928">state</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structns_event_1_1_mouse_click_data__t_1a57f8fe6b3c3fb74e0d657158fb24010e">x</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structns_event_1_1_mouse_click_data__t_1a0a2e34034a5b6c8c44087966243fc261">y</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Possède des données pour un événement MouseClick. </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00033">33</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structns_event_1_1_mouse_click_data__t_1a8c4c8e7b68c38ee4819957050bfd2926"/><section>
+    <title>button</title>
+<indexterm><primary>button</primary><secondary>nsEvent::MouseClickData_t</secondary></indexterm>
+<indexterm><primary>nsEvent::MouseClickData_t</primary><secondary>button</secondary></indexterm>
+<para><computeroutput>int nsEvent::MouseClickData_t::button</computeroutput></para>
+<para>ID numérique du bouton </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00034">34</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<anchor xml:id="_structns_event_1_1_mouse_click_data__t_1a81252b916361dc4deab0f42510fdc928"/><section>
+    <title>state</title>
+<indexterm><primary>state</primary><secondary>nsEvent::MouseClickData_t</secondary></indexterm>
+<indexterm><primary>nsEvent::MouseClickData_t</primary><secondary>state</secondary></indexterm>
+<para><computeroutput>int nsEvent::MouseClickData_t::state</computeroutput></para>
+<para>Nouvel état du bouton </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00035">35</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<anchor xml:id="_structns_event_1_1_mouse_click_data__t_1a57f8fe6b3c3fb74e0d657158fb24010e"/><section>
+    <title>x</title>
+<indexterm><primary>x</primary><secondary>nsEvent::MouseClickData_t</secondary></indexterm>
+<indexterm><primary>nsEvent::MouseClickData_t</primary><secondary>x</secondary></indexterm>
+<para><computeroutput>int nsEvent::MouseClickData_t::x</computeroutput></para>
+<para>Coordonnée X du curseur, relative au coin supérieur-gauche de la fenêtre </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00036">36</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<anchor xml:id="_structns_event_1_1_mouse_click_data__t_1a0a2e34034a5b6c8c44087966243fc261"/><section>
+    <title>y</title>
+<indexterm><primary>y</primary><secondary>nsEvent::MouseClickData_t</secondary></indexterm>
+<indexterm><primary>nsEvent::MouseClickData_t</primary><secondary>y</secondary></indexterm>
+<para><computeroutput>int nsEvent::MouseClickData_t::y</computeroutput></para>
+<para>Coordonnée Y du curseur, relative au coin supérieur-gauche de la fenêtre </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00037">37</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/<link linkend="_event_8hpp">event.hpp</link></section>
+</section>

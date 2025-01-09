@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_glut__font_8cpp_source" xml:lang="en-US">
+<title>glut_font.cpp</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/glut_font.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_glut__font_8cpp_source_1l00001"/>00001 
+<anchor xml:id="_glut__font_8cpp_source_1l00009"/>00009 <emphasis role="preprocessor">#include&#32;&lt;GL/freeglut_std.h&gt;</emphasis>
+<anchor xml:id="_glut__font_8cpp_source_1l00010"/>00010 
+<anchor xml:id="_glut__font_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_glut__font_8h">mingl/gui/glut_font.h</link>&quot;</emphasis>
+<anchor xml:id="_glut__font_8cpp_source_1l00012"/>00012 
+<anchor xml:id="_glut__font_8cpp_source_1l00013"/><link linkend="_classns_gui_1_1_glut_font_1ac8e33c6ba8a95edcdcee4dd4d1a283ac">00013</link> <link linkend="_classns_gui_1_1_glut_font_1ac8e33c6ba8a95edcdcee4dd4d1a283ac">nsGui::GlutFont::GlutFont</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ce">GlutFont::GlutFonts</link>&#32;&amp;font)
+<anchor xml:id="_glut__font_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;:&#32;m_font(font)
+<anchor xml:id="_glut__font_8cpp_source_1l00015"/>00015 {}&#32;<emphasis role="comment">//&#32;GlutFont()</emphasis>
+<anchor xml:id="_glut__font_8cpp_source_1l00016"/>00016 
+<anchor xml:id="_glut__font_8cpp_source_1l00017"/><link linkend="_classns_gui_1_1_glut_font_1a10921b4183b246e9cfdebaca6b9e91a2">00017</link> <emphasis role="keywordtype">void</emphasis>*&#32;<link linkend="_classns_gui_1_1_glut_font_1a10921b4183b246e9cfdebaca6b9e91a2">nsGui::GlutFont::convertForGlut</link>()<emphasis role="keyword">&#32;const</emphasis>
+<anchor xml:id="_glut__font_8cpp_source_1l00018"/>00018 <emphasis role="keyword"></emphasis>{
+<anchor xml:id="_glut__font_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Check&#32;the&#32;current&#32;font&#32;and&#32;return&#32;the&#32;right&#32;Glut&#32;identifier</emphasis>
+<anchor xml:id="_glut__font_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">switch</emphasis>&#32;(m_font)
+<anchor xml:id="_glut__font_8cpp_source_1l00021"/>00021 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_glut__font_8cpp_source_1l00022"/>00022 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;BITMAP_9_BY_15:
+<anchor xml:id="_glut__font_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GLUT_BITMAP_9_BY_15;
+<anchor xml:id="_glut__font_8cpp_source_1l00024"/>00024 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;BITMAP_TIMES_ROMAN_10:
+<anchor xml:id="_glut__font_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GLUT_BITMAP_TIMES_ROMAN_10;
+<anchor xml:id="_glut__font_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;BITMAP_TIMES_ROMAN_24:
+<anchor xml:id="_glut__font_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GLUT_BITMAP_TIMES_ROMAN_24;
+<anchor xml:id="_glut__font_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;BITMAP_HELVETICA_10:
+<anchor xml:id="_glut__font_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GLUT_BITMAP_HELVETICA_10;
+<anchor xml:id="_glut__font_8cpp_source_1l00030"/>00030 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;BITMAP_HELVETICA_12:
+<anchor xml:id="_glut__font_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GLUT_BITMAP_HELVETICA_12;
+<anchor xml:id="_glut__font_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">case</emphasis>&#32;BITMAP_HELVETICA_18:
+<anchor xml:id="_glut__font_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GLUT_BITMAP_HELVETICA_18;
+<anchor xml:id="_glut__font_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">default</emphasis>:
+<anchor xml:id="_glut__font_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordflow">return</emphasis>&#32;GLUT_BITMAP_8_BY_13;
+<anchor xml:id="_glut__font_8cpp_source_1l00036"/>00036 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_glut__font_8cpp_source_1l00037"/>00037 }&#32;<emphasis role="comment">//&#32;convertForGlut()</emphasis>
+</programlisting></section>

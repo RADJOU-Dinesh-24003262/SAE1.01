@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cexception_8h_source" xml:lang="en-US">
+<title>cexception.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_cexception_8h_source_1l00001"/>00001 
+<anchor xml:id="_cexception_8h_source_1l00021"/>00021 <emphasis role="preprocessor">#ifndef&#32;CEXCEPTION_H</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00022"/>00022 <emphasis role="preprocessor">#define&#32;CEXCEPTION_H</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00023"/>00023 
+<anchor xml:id="_cexception_8h_source_1l00024"/>00024 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00025"/>00025 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00026"/>00026 <emphasis role="preprocessor">#include&#32;&lt;exception&gt;</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00027"/>00027 
+<anchor xml:id="_cexception_8h_source_1l00028"/>00028 <emphasis role="preprocessor">#include&#32;&quot;../tools/ieditable.h&quot;</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00029"/>00029 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_errcode_8h">errcode.h</link>&quot;</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00030"/>00030 
+<anchor xml:id="_cexception_8h_source_1l00035"/>00035 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_exception">nsException</link>
+<anchor xml:id="_cexception_8h_source_1l00036"/>00036 {
+<anchor xml:id="_cexception_8h_source_1l00037"/>00037 
+<anchor xml:id="_cexception_8h_source_1l00042"/><link linkend="_classns_exception_1_1_c_exception">00042</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_classns_exception_1_1_c_exception">CException</link>&#32;:&#32;<emphasis role="keyword">public</emphasis>&#32;std::exception,&#32;<emphasis role="keyword">public</emphasis>&#32;<link linkend="_classns_util_1_1_i_editable">nsUtil::IEditable</link>
+<anchor xml:id="_cexception_8h_source_1l00043"/>00043 {
+<anchor xml:id="_cexception_8h_source_1l00044"/>00044 
+<anchor xml:id="_cexception_8h_source_1l00045"/>00045 public&#32;:
+<anchor xml:id="_cexception_8h_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<link linkend="_classns_exception_1_1_c_exception_1aeacba2e2180dd8c00c643e1a67cba423">CException</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;Libelle&#32;=&#32;std::string(),&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;CodErr&#32;=&#32;<link linkend="_namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a0446a2a6f75ad46276a3c6bfbcf06eb3">KNoExc</link>);
+<anchor xml:id="_cexception_8h_source_1l00053"/>00053 
+<anchor xml:id="_cexception_8h_source_1l00058"/><link linkend="_classns_exception_1_1_c_exception_1a8b95a8f59d50a7ff3b67423c83cb8501">00058</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classns_exception_1_1_c_exception_1a8b95a8f59d50a7ff3b67423c83cb8501">~CException</link>()&#32;<emphasis role="keyword">override</emphasis>&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+<anchor xml:id="_cexception_8h_source_1l00059"/>00059 
+<anchor xml:id="_cexception_8h_source_1l00064"/>00064 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;<link linkend="_classns_exception_1_1_c_exception_1aef8e3d1a4e22ec7045d7d0b14d8b968a">GetLibelle</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_cexception_8h_source_1l00065"/>00065 
+<anchor xml:id="_cexception_8h_source_1l00070"/>00070 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<link linkend="_classns_exception_1_1_c_exception_1adf06d1598420c7b60c1b134bf2a946c2">GetCodErr</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_cexception_8h_source_1l00071"/>00071 
+<anchor xml:id="_cexception_8h_source_1l00076"/>00076 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>*&#32;<link linkend="_classns_exception_1_1_c_exception_1a5ef0ababcc3ffc93f70211de1122c9a8">what</link>()&#32;const&#32;noexcept&#32;override;
+<anchor xml:id="_cexception_8h_source_1l00077"/>00077 
+<anchor xml:id="_cexception_8h_source_1l00078"/>00078 protected&#32;:
+<anchor xml:id="_cexception_8h_source_1l00079"/>00079 &#32;&#32;&#32;&#32;virtual&#32;std::ostream&amp;&#32;<link linkend="_classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027">_Edit</link>(std::ostream&amp;&#32;os&#32;=&#32;std::cerr)&#32;const&#32;override;
+<anchor xml:id="_cexception_8h_source_1l00080"/>00080 
+<anchor xml:id="_cexception_8h_source_1l00084"/><link linkend="_classns_exception_1_1_c_exception_1a96c2d653703b2879ff8050cc78bc450a">00084</link> &#32;&#32;&#32;&#32;std::<emphasis role="keywordtype">string</emphasis>&#32;<link linkend="_classns_exception_1_1_c_exception_1a96c2d653703b2879ff8050cc78bc450a">m_Libelle</link>;
+<anchor xml:id="_cexception_8h_source_1l00085"/>00085 
+<anchor xml:id="_cexception_8h_source_1l00089"/><link linkend="_classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da">00089</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">unsigned</emphasis>&#32;<link linkend="_classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da">m_CodErr</link>;
+<anchor xml:id="_cexception_8h_source_1l00090"/>00090 
+<anchor xml:id="_cexception_8h_source_1l00091"/>00091 };&#32;<emphasis role="comment">//&#32;class&#32;CException</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00092"/>00092 &#32;&#32;&#32;&#32;
+<anchor xml:id="_cexception_8h_source_1l00093"/>00093 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsException</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00094"/>00094 
+<anchor xml:id="_cexception_8h_source_1l00095"/>00095 <emphasis role="preprocessor">#include&#32;&quot;cexception.hpp&quot;</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00096"/>00096 
+<anchor xml:id="_cexception_8h_source_1l00097"/>00097 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;CEXCEPTION_H</emphasis>
+<anchor xml:id="_cexception_8h_source_1l00098"/>00098 
+</programlisting></section>

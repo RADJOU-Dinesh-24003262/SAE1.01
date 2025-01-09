@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_form" xml:lang="en-US">
+<title>Form Struct Reference</title>
+<indexterm><primary>Form</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>std::string <link linkend="_struct_form_1a75a4fb47a91fe43764d6a084f31b7b01">nom</link></para>
+</listitem>
+            <listitem><para>std::pair&lt; size_t, size_t &gt; <link linkend="_struct_form_1a38baf309bd4277f942aeb9152f1f1960">dim</link></para>
+</listitem>
+            <listitem><para>std::vector&lt; std::vector&lt; char &gt; &gt; <link linkend="_struct_form_1a4c5e21f69e4faffc2ee679a124e0c776">piece</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00141">141</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_form_1a38baf309bd4277f942aeb9152f1f1960"/><section>
+    <title>dim</title>
+<indexterm><primary>dim</primary><secondary>Form</secondary></indexterm>
+<indexterm><primary>Form</primary><secondary>dim</secondary></indexterm>
+<para><computeroutput>std::pair&lt;size_t,size_t&gt; Form::dim</computeroutput></para><para>
+Definition at line <link linkend="_type_8h_source_1l00144">144</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_form_1a75a4fb47a91fe43764d6a084f31b7b01"/><section>
+    <title>nom</title>
+<indexterm><primary>nom</primary><secondary>Form</secondary></indexterm>
+<indexterm><primary>Form</primary><secondary>nom</secondary></indexterm>
+<para><computeroutput>std::string Form::nom</computeroutput></para><para>
+Definition at line <link linkend="_type_8h_source_1l00143">143</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_form_1a4c5e21f69e4faffc2ee679a124e0c776"/><section>
+    <title>piece</title>
+<indexterm><primary>piece</primary><secondary>Form</secondary></indexterm>
+<indexterm><primary>Form</primary><secondary>piece</secondary></indexterm>
+<para><computeroutput>std::vector&lt; std::vector&lt;char&gt; &gt; Form::piece</computeroutput></para><para>
+Definition at line <link linkend="_type_8h_source_1l00145">145</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/<link linkend="_type_8h">type.h</link></section>
+</section>

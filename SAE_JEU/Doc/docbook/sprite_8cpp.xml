@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_sprite_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp</primary></indexterm>
+<para>
+
+<para>Image pouvant être chargé depuis un fichier. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;mingl/gui/sprite.h&quot;
+#include &lt;unistd.h&gt;
+#include &lt;fcntl.h&gt;
+#include &lt;iostream&gt;
+#include &quot;mingl/macros.h&quot;
+#include &quot;mingl/exception/cexception.h&quot;
+</programlisting>Include dependency graph for sprite.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="sprite_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>Image pouvant être chargé depuis un fichier. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Janvier 2020 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>1.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_sprite_8cpp_source">sprite.cpp</link>.</para>
+</section>
+</section>

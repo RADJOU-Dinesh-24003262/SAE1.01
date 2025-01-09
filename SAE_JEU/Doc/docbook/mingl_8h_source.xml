@@ -1,0 +1,117 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mingl_8h_source" xml:lang="en-US">
+<title>mingl.h</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_mingl_8h_source_1l00001"/>00001 
+<anchor xml:id="_mingl_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;MINGL_H</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;MINGL_H</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00013"/>00013 
+<anchor xml:id="_mingl_8h_source_1l00014"/>00014 <emphasis role="preprocessor">#include&#32;&lt;map&gt;</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00015"/>00015 <emphasis role="preprocessor">#include&#32;&lt;memory&gt;</emphasis>&#32;<emphasis role="comment">//&#32;shared_ptr</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00016"/>00016 <emphasis role="preprocessor">#include&#32;&lt;queue&gt;</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00017"/>00017 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00018"/>00018 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00019"/>00019 
+<anchor xml:id="_mingl_8h_source_1l00020"/>00020 <emphasis role="preprocessor">#include&#32;&lt;GL/freeglut.h&gt;</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00021"/>00021 
+<anchor xml:id="_mingl_8h_source_1l00022"/>00022 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_idrawable_8h">graphics/idrawable.h</link>&quot;</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00023"/>00023 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_rgbacolor_8h">graphics/rgbacolor.h</link>&quot;</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00024"/>00024 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_vec2d_8h">graphics/vec2d.h</link>&quot;</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00025"/>00025 
+<anchor xml:id="_mingl_8h_source_1l00026"/>00026 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_event__manager_8h">event/event_manager.h</link>&quot;</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00027"/>00027 
+<anchor xml:id="_mingl_8h_source_1l00032"/>00032 <emphasis role="comment">//&#32;Pour&#32;les&#32;polices&#32;et&#32;l&apos;affichage&#32;des&#32;chaines&#32;de&#32;caractères,&#32;voir:&#32;https://www.opengl.org/resources/libraries/glut/spec3/node76.html</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00033"/>00033 
+<anchor xml:id="_mingl_8h_source_1l00034"/><link linkend="_class_min_g_l">00034</link> <emphasis role="keyword">class&#32;</emphasis><link linkend="_class_min_g_l">MinGL</link>
+<anchor xml:id="_mingl_8h_source_1l00035"/>00035 {
+<anchor xml:id="_mingl_8h_source_1l00036"/>00036 
+<anchor xml:id="_mingl_8h_source_1l00037"/>00037 <emphasis role="keyword">public</emphasis>:
+<anchor xml:id="_mingl_8h_source_1l00047"/><link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">00047</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;std::pair&lt;unsigned,&#32;bool&gt;&#32;<link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>;&#32;<emphasis role="comment">//&#32;cle,&#32;spécial</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00048"/>00048 
+<anchor xml:id="_mingl_8h_source_1l00055"/><link linkend="_class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1">00055</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">typedef</emphasis>&#32;std::map&lt;KeyType_t,&#32;bool&gt;&#32;<link linkend="_class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1">KeyMap_t</link>;
+<anchor xml:id="_mingl_8h_source_1l00056"/>00056 
+<anchor xml:id="_mingl_8h_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c">MinGL</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;windowSize&#32;=&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(640,&#32;480),
+<anchor xml:id="_mingl_8h_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;windowPosition&#32;=&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128,&#32;128),
+<anchor xml:id="_mingl_8h_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;backgroundColor&#32;=&#32;nsGraphics::KWhite);
+<anchor xml:id="_mingl_8h_source_1l00070"/>00070 
+<anchor xml:id="_mingl_8h_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1a0f84e59dd311785a7e6da848abd5d188">~MinGL</link>();
+<anchor xml:id="_mingl_8h_source_1l00076"/>00076 
+<anchor xml:id="_mingl_8h_source_1l00081"/><link linkend="_class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d">00081</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">static</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d">initGlut</link>()
+<anchor xml:id="_mingl_8h_source_1l00082"/>00082 &#32;&#32;&#32;&#32;{
+<anchor xml:id="_mingl_8h_source_1l00083"/>00083 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;tmp&#32;=&#32;0;
+<anchor xml:id="_mingl_8h_source_1l00084"/>00084 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glutInit(&amp;tmp,&#32;NULL);
+<anchor xml:id="_mingl_8h_source_1l00085"/>00085 &#32;&#32;&#32;&#32;}
+<anchor xml:id="_mingl_8h_source_1l00086"/>00086 
+<anchor xml:id="_mingl_8h_source_1l00091"/>00091 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc">initGraphic</link>();
+<anchor xml:id="_mingl_8h_source_1l00092"/>00092 
+<anchor xml:id="_mingl_8h_source_1l00097"/>00097 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a9508f3ac9d4cb4f444f56f5d77ed9d86">stopGraphic</link>();
+<anchor xml:id="_mingl_8h_source_1l00098"/>00098 
+<anchor xml:id="_mingl_8h_source_1l00104"/>00104 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f">isPressed</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>&amp;&#32;key);
+<anchor xml:id="_mingl_8h_source_1l00105"/>00105 
+<anchor xml:id="_mingl_8h_source_1l00111"/>00111 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a99750fd4c8f97cfe693b1acb903424cf">resetKey</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96">KeyType_t</link>&amp;&#32;key);
+<anchor xml:id="_mingl_8h_source_1l00112"/>00112 
+<anchor xml:id="_mingl_8h_source_1l00117"/>00117 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link>();
+<anchor xml:id="_mingl_8h_source_1l00118"/>00118 
+<anchor xml:id="_mingl_8h_source_1l00123"/>00123 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a86c940758616957683ffb2e239bba774">clearScreen</link>();
+<anchor xml:id="_mingl_8h_source_1l00124"/>00124 
+<anchor xml:id="_mingl_8h_source_1l00129"/>00129 &#32;&#32;&#32;&#32;<link linkend="_classns_event_1_1_event_manager">nsEvent::EventManager</link>&amp;&#32;<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link>();
+<anchor xml:id="_mingl_8h_source_1l00130"/>00130 
+<anchor xml:id="_mingl_8h_source_1l00135"/>00135 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;<link linkend="_class_min_g_l_1a66758e8e6983cc1dd0b10b1ee743a65a">getBackgroundColor</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mingl_8h_source_1l00136"/>00136 
+<anchor xml:id="_mingl_8h_source_1l00141"/>00141 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a4399b7615cea89f850cd5c66e428c367">setBackgroundColor</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;backgroundColor);
+<anchor xml:id="_mingl_8h_source_1l00142"/>00142 
+<anchor xml:id="_mingl_8h_source_1l00147"/>00147 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_class_min_g_l_1a92bacd1567089fb4641ed7b416cfe74d">getWindowSize</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mingl_8h_source_1l00148"/>00148 
+<anchor xml:id="_mingl_8h_source_1l00154"/>00154 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a532d320b7b837998533fe6577ab45bc3">setWindowSize</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;windowSize);
+<anchor xml:id="_mingl_8h_source_1l00155"/>00155 
+<anchor xml:id="_mingl_8h_source_1l00160"/>00160 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;<link linkend="_class_min_g_l_1a1ea6ea098988db36f5bf18713f9f3347">getWindowPosition</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mingl_8h_source_1l00161"/>00161 
+<anchor xml:id="_mingl_8h_source_1l00167"/>00167 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a9239873a52e437457af03f002f5df2b6">setWindowPosition</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&#32;&amp;windowPosition);
+<anchor xml:id="_mingl_8h_source_1l00168"/>00168 
+<anchor xml:id="_mingl_8h_source_1l00173"/>00173 &#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;<link linkend="_class_min_g_l_1a46cea08ec9ef4a0678f425000ca77e5b">getWindowName</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mingl_8h_source_1l00174"/>00174 
+<anchor xml:id="_mingl_8h_source_1l00180"/>00180 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_min_g_l_1a462ab2edc0eb28990638541873869e0e">setWindowName</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&#32;&amp;windowName);
+<anchor xml:id="_mingl_8h_source_1l00181"/>00181 
+<anchor xml:id="_mingl_8h_source_1l00186"/>00186 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;<link linkend="_class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d">isOpen</link>()&#32;<emphasis role="keyword">const</emphasis>;
+<anchor xml:id="_mingl_8h_source_1l00187"/>00187 
+<anchor xml:id="_mingl_8h_source_1l00188"/>00188 <emphasis role="keyword">private</emphasis>:
+<anchor xml:id="_mingl_8h_source_1l00189"/>00189 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Les&#32;données&#32;membres&#32;en&#32;tant&#32;que&#32;tel</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00190"/>00190 
+<anchor xml:id="_mingl_8h_source_1l00194"/>00194 &#32;&#32;&#32;&#32;std::string&#32;m_windowName;
+<anchor xml:id="_mingl_8h_source_1l00195"/>00195 
+<anchor xml:id="_mingl_8h_source_1l00199"/>00199 &#32;&#32;&#32;&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;m_bgColor;
+<anchor xml:id="_mingl_8h_source_1l00200"/>00200 
+<anchor xml:id="_mingl_8h_source_1l00204"/>00204 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1">KeyMap_t</link>&#32;m_keyboardMap;
+<anchor xml:id="_mingl_8h_source_1l00205"/>00205 
+<anchor xml:id="_mingl_8h_source_1l00209"/>00209 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">short</emphasis>&#32;m_glutWindowId&#32;=&#32;0;
+<anchor xml:id="_mingl_8h_source_1l00210"/>00210 
+<anchor xml:id="_mingl_8h_source_1l00214"/>00214 &#32;&#32;&#32;&#32;<link linkend="_classns_event_1_1_event_manager">nsEvent::EventManager</link>&#32;m_eventManager;
+<anchor xml:id="_mingl_8h_source_1l00215"/>00215 
+<anchor xml:id="_mingl_8h_source_1l00219"/>00219 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">bool</emphasis>&#32;m_windowIsOpen;
+<anchor xml:id="_mingl_8h_source_1l00220"/>00220 
+<anchor xml:id="_mingl_8h_source_1l00221"/>00221 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Les&#32;handlers</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00222"/>00222 
+<anchor xml:id="_mingl_8h_source_1l00229"/>00229 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;callReshape(<emphasis role="keywordtype">int</emphasis>&#32;h,&#32;<emphasis role="keywordtype">int</emphasis>&#32;w);
+<anchor xml:id="_mingl_8h_source_1l00230"/>00230 
+<anchor xml:id="_mingl_8h_source_1l00235"/>00235 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;callDisplay();
+<anchor xml:id="_mingl_8h_source_1l00236"/>00236 
+<anchor xml:id="_mingl_8h_source_1l00245"/>00245 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;callMouse(<emphasis role="keywordtype">int</emphasis>&#32;button,&#32;<emphasis role="keywordtype">int</emphasis>&#32;state,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;0,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y&#32;=&#32;0);
+<anchor xml:id="_mingl_8h_source_1l00246"/>00246 
+<anchor xml:id="_mingl_8h_source_1l00253"/>00253 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;callMotion(<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y);
+<anchor xml:id="_mingl_8h_source_1l00254"/>00254 
+<anchor xml:id="_mingl_8h_source_1l00261"/>00261 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;callPassiveMotion(<emphasis role="keywordtype">int</emphasis>&#32;x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y);
+<anchor xml:id="_mingl_8h_source_1l00262"/>00262 
+<anchor xml:id="_mingl_8h_source_1l00270"/>00270 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;callKeyboard(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;key,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;0,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y&#32;=&#32;0);
+<anchor xml:id="_mingl_8h_source_1l00271"/>00271 
+<anchor xml:id="_mingl_8h_source_1l00279"/>00279 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;callKeyboardUp(<emphasis role="keywordtype">unsigned</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;key,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;0,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y&#32;=&#32;0);
+<anchor xml:id="_mingl_8h_source_1l00280"/>00280 
+<anchor xml:id="_mingl_8h_source_1l00288"/>00288 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;callKeyboardSpecial(<emphasis role="keywordtype">int</emphasis>&#32;key,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;0,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y&#32;=&#32;0);
+<anchor xml:id="_mingl_8h_source_1l00289"/>00289 
+<anchor xml:id="_mingl_8h_source_1l00297"/>00297 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;callKeyboardUpSpecial(<emphasis role="keywordtype">int</emphasis>&#32;key,&#32;<emphasis role="keywordtype">int</emphasis>&#32;x&#32;=&#32;0,&#32;<emphasis role="keywordtype">int</emphasis>&#32;y&#32;=&#32;0);
+<anchor xml:id="_mingl_8h_source_1l00298"/>00298 
+<anchor xml:id="_mingl_8h_source_1l00303"/>00303 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;callClose();
+<anchor xml:id="_mingl_8h_source_1l00304"/>00304 
+<anchor xml:id="_mingl_8h_source_1l00305"/>00305 };&#32;<emphasis role="comment">//&#32;class&#32;MinGL</emphasis>
+<anchor xml:id="_mingl_8h_source_1l00306"/>00306 
+<anchor xml:id="_mingl_8h_source_1l00307"/>00307 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;MINGL_H</emphasis>
+</programlisting></section>

@@ -1,0 +1,5 @@
+<map id="ppal" name="ppal">
+<area shape="rect" id="node1" title="new main" alt="" coords="5,31,56,57"/>
+<area shape="rect" id="node2" href="$class_min_g_l.html#a17c7718b9e966c8147cd56483dcf4e8d" title="Initialise la bibliothèque freeglut." alt="" coords="116,5,235,32"/>
+<area shape="rect" id="node3" href="$class_min_g_l.html#a5962a0a0ced7879bc0cc65e267e8d7fc" title="Initialise minGL et ouvre la fenêtre." alt="" coords="104,56,247,83"/>
+</map>

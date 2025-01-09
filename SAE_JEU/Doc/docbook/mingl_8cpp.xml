@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mingl_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp</primary></indexterm>
+<para>
+
+<para>La bête. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;map&gt;
+#include &quot;mingl/mingl.h&quot;
+</programlisting>Include dependency graph for mingl.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="mingl_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</link>(HANDLER)   callBackBuilder&lt;decltype(HANDLER), HANDLER&gt;::callback</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>La bête. </para>
+
+<para><formalpara><title>Author</title>
+
+<para>Alexandre Sollier, Clément Mathieu&#8211;Drif, Alain Casali </para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>Janvier 2020 </para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>2.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11"/><section>
+    <title>BIND_CALLBACK</title>
+<indexterm><primary>BIND_CALLBACK</primary><secondary>mingl.cpp</secondary></indexterm>
+<indexterm><primary>mingl.cpp</primary><secondary>BIND_CALLBACK</secondary></indexterm>
+<para><computeroutput>#define BIND_CALLBACK( HANDLER)   callBackBuilder&lt;decltype(HANDLER), HANDLER&gt;::callback</computeroutput></para><para>
+Definition at line <link linkend="_mingl_8cpp_source_1l00040">40</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+</section>
+</section>
+</section>

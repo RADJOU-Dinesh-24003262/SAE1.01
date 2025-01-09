@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structns_event_1_1_mouse_move_data__t" xml:lang="en-US">
+<title>nsEvent::MouseMoveData_t Struct Reference</title>
+<indexterm><primary>nsEvent::MouseMoveData_t</primary></indexterm>
+<para>
+
+<para>Possède des données pour un événement MouseMove/MouseDrag. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;event.hpp&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="_structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb">x</link></para>
+</listitem>
+            <listitem><para>int <link linkend="_structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446">y</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Possède des données pour un événement MouseMove/MouseDrag. </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00044">44</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb"/><section>
+    <title>x</title>
+<indexterm><primary>x</primary><secondary>nsEvent::MouseMoveData_t</secondary></indexterm>
+<indexterm><primary>nsEvent::MouseMoveData_t</primary><secondary>x</secondary></indexterm>
+<para><computeroutput>int nsEvent::MouseMoveData_t::x</computeroutput></para>
+<para>Coordonnée X du curseur, relative au coin supérieur-gauche de la fenêtre </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00045">45</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<anchor xml:id="_structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446"/><section>
+    <title>y</title>
+<indexterm><primary>y</primary><secondary>nsEvent::MouseMoveData_t</secondary></indexterm>
+<indexterm><primary>nsEvent::MouseMoveData_t</primary><secondary>y</secondary></indexterm>
+<para><computeroutput>int nsEvent::MouseMoveData_t::y</computeroutput></para>
+<para>Coordonnée Y du curseur, relative au coin supérieur-gauche de la fenêtre </para>
+<para>
+Definition at line <link linkend="_event_8hpp_source_1l00046">46</link> of file <link linkend="_event_8hpp_source">event.hpp</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/<link linkend="_event_8hpp">event.hpp</link></section>
+</section>

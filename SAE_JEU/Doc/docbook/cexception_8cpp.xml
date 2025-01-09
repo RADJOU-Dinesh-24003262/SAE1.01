@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cexception_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/cexception.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/cexception.cpp</primary></indexterm>
+<para>
+
+<para>classe CException </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;
+#include &quot;mingl/exception/cexception.h&quot;
+</programlisting>Include dependency graph for cexception.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="cexception_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<section>
+<title>Detailed Description</title>
+
+<para>classe CException </para>
+
+<para><formalpara><title>Authors</title>
+
+<para>M. Laporte, D. Mathieu</para>
+</formalpara>
+<formalpara><title>Date</title>
+
+<para>23/03/2010</para>
+</formalpara>
+<formalpara><title>Version</title>
+
+<para>V1.0 </para>
+</formalpara>
+</para>
+<para>
+Definition in file <link linkend="_cexception_8cpp_source">cexception.cpp</link>.</para>
+</section>
+</section>

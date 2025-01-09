@@ -1,0 +1,78 @@
+.TH "nsTransition::ITransitionable" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+nsTransition::ITransitionable \- Une classe abstraite pour n'importe quelle élément pouvant effectuer une transition entre deux états\&.  
+
+.SH SYNOPSIS
+.br
+.PP
+.PP
+\fC#include <itransitionable\&.h>\fP
+.PP
+Inherited by \fBBgText\fP, \fBnsGui::Sprite\fP, \fBnsGui::Text\fP, \fBnsShape::Circle\fP, \fBnsShape::Line\fP, \fBnsShape::Oval\fP, \fBnsShape::Rectangle\fP, and \fBnsShape::Triangle\fP\&.
+.SS "Public Member Functions"
+
+.in +1c
+.ti -1c
+.RI "virtual \fB~ITransitionable\fP ()"
+.br
+.RI "Destructeur pour la classe \fBITransitionable\fP\&. "
+.ti -1c
+.RI "virtual void \fBgetValues\fP (const int &id, std::vector< float > &values)=0"
+.br
+.RI "Récupère des valeurs dans un vecteur de float pour l'ID spécifié "
+.ti -1c
+.RI "virtual void \fBsetValues\fP (const int &id, const std::vector< float > &values)=0"
+.br
+.RI "Définit les nouvelles valeurs pour l'ID spécifié "
+.in -1c
+.SH "Detailed Description"
+.PP 
+Une classe abstraite pour n'importe quelle élément pouvant effectuer une transition entre deux états\&. 
+.PP
+Definition at line \fB23\fP of file \fBitransitionable\&.h\fP\&.
+.SH "Constructor & Destructor Documentation"
+.PP 
+.SS "nsTransition::ITransitionable::~ITransitionable ()\fC [inline]\fP, \fC [virtual]\fP"
+
+.PP
+Destructeur pour la classe \fBITransitionable\fP\&. 
+.PP
+Definition at line \fB30\fP of file \fBitransitionable\&.h\fP\&.
+.SH "Member Function Documentation"
+.PP 
+.SS "void nsTransition::ITransitionable::getValues (const int & id, std::vector< float > & values)\fC [pure virtual]\fP"
+
+.PP
+Récupère des valeurs dans un vecteur de float pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a récupérer 
+.br
+\fIvalues\fP Vecteur de valeurs a peupler 
+.RE
+.PP
+
+.PP
+Implemented in \fBBgText\fP, \fBnsGui::Sprite\fP, \fBnsGui::Text\fP, \fBnsShape::Rectangle\fP, \fBnsShape::Circle\fP, \fBnsShape::Oval\fP, \fBnsShape::Line\fP, and \fBnsShape::Triangle\fP\&.
+.SS "void nsTransition::ITransitionable::setValues (const int & id, const std::vector< float > & values)\fC [pure virtual]\fP"
+
+.PP
+Définit les nouvelles valeurs pour l'ID spécifié 
+.PP
+\fBParameters\fP
+.RS 4
+\fIid\fP ID des valeurs a définir 
+.br
+\fIvalues\fP Vecteur des nouvelles valeurs a appliquer 
+.RE
+.PP
+
+.PP
+Implemented in \fBBgText\fP, \fBnsGui::Sprite\fP, \fBnsGui::Text\fP, \fBnsShape::Rectangle\fP, \fBnsShape::Circle\fP, \fBnsShape::Oval\fP, \fBnsShape::Line\fP, and \fBnsShape::Triangle\fP\&.
+
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.

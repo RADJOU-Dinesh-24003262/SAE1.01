@@ -1,0 +1,356 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="class_bg_text" kind="class" language="C++" prot="public">
+    <compoundname>BgText</compoundname>
+    <basecompoundref refid="classns_graphics_1_1_i_drawable" prot="public" virt="non-virtual">nsGraphics::IDrawable</basecompoundref>
+    <basecompoundref refid="classns_graphics_1_1_i_drawable" prot="public" virt="non-virtual">nsGraphics::IDrawable</basecompoundref>
+    <basecompoundref refid="classns_transition_1_1_i_transitionable" prot="public" virt="non-virtual">nsTransition::ITransitionable</basecompoundref>
+      <sectiondef kind="public-type">
+      <memberdef kind="enum" id="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95" prot="public" static="no" strong="no">
+        <type></type>
+        <name>TransitionIds</name>
+        <qualifiedname>BgText::TransitionIds</qualifiedname>
+        <enumvalue id="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3" prot="public">
+          <name>TRANSITION_TEXT_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Transition pour la couleur du texte </para>
+          </detaileddescription>
+        </enumvalue>
+        <enumvalue id="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1" prot="public">
+          <name>TRANSITION_BACKGROUND_COLOR</name>
+          <briefdescription>
+          </briefdescription>
+          <detaileddescription>
+<para>Transition pour la couleur de fond </para>
+          </detaileddescription>
+        </enumvalue>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="18" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" bodystart="18" bodyend="21"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bg_text_1a1c6ea6b570ee47f209a8cf41d6548380" prot="private" static="no" mutable="no">
+        <type><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref></type>
+        <definition>nsGui::Text BgText::m_text</definition>
+        <argsstring></argsstring>
+        <name>m_text</name>
+        <qualifiedname>BgText::m_text</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="27" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" bodystart="27" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bg_text_1a4c5e8e4e270d6b114aa248c479b36cb5" prot="private" static="no" mutable="no">
+        <type><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref></type>
+        <definition>nsShape::Rectangle BgText::m_background</definition>
+        <argsstring></argsstring>
+        <name>m_background</name>
+        <qualifiedname>BgText::m_background</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="28" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" bodystart="28" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BgText::BgText</definition>
+        <argsstring>(const nsGraphics::Vec2D &amp;position, const std::string &amp;content, const nsGraphics::RGBAcolor &amp;textColor, const nsGraphics::RGBAcolor &amp;backgroundColor)</argsstring>
+        <name>BgText</name>
+        <qualifiedname>BgText::BgText</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>content</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
+          <declname>textColor</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
+          <declname>backgroundColor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="17" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="3" bodyend="6"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bg_text_1a19f8e1aa743e37d252b5b46ca98b7cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual BgText::~BgText</definition>
+        <argsstring>()=default</argsstring>
+        <name>~BgText</name>
+        <qualifiedname>BgText::~BgText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="20" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bg_text_1a01df624a8d498766a9eb579eb18f2326" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BgText::draw</definition>
+        <argsstring>(MinGL &amp;window) const override</argsstring>
+        <name>draw</name>
+        <qualifiedname>BgText::draw</qualifiedname>
+        <reimplements refid="classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">draw</reimplements>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Fonction pour afficher l&apos;objet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="23" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="8" bodyend="12"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>BgText::BgText</definition>
+        <argsstring>(const nsGraphics::Vec2D &amp;position, const std::string &amp;content, const nsGraphics::RGBAcolor &amp;textColor, const nsGraphics::RGBAcolor &amp;backgroundColor)</argsstring>
+        <name>BgText</name>
+        <qualifiedname>BgText::BgText</qualifiedname>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
+          <declname>position</declname>
+        </param>
+        <param>
+          <type>const std::string &amp;</type>
+          <declname>content</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
+          <declname>textColor</declname>
+        </param>
+        <param>
+          <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
+          <declname>backgroundColor</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="24" column="5"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bg_text_1a19f8e1aa743e37d252b5b46ca98b7cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type></type>
+        <definition>virtual BgText::~BgText</definition>
+        <argsstring>()=default</argsstring>
+        <name>~BgText</name>
+        <qualifiedname>BgText::~BgText</qualifiedname>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="27" column="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bg_text_1a55fdeb5f3e12dcc2926c87f80fddc6c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>virtual void BgText::draw</definition>
+        <argsstring>(MinGL &amp;window) const override</argsstring>
+        <name>draw</name>
+        <qualifiedname>BgText::draw</qualifiedname>
+        <reimplements refid="classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51">draw</reimplements>
+        <param>
+          <type><ref refid="class_min_g_l" kindref="compound">MinGL</ref> &amp;</type>
+          <declname>window</declname>
+        </param>
+        <briefdescription>
+<para>Fonction pour afficher l&apos;objet. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="30" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bg_text_1a01cc8269e39184b805351409aac4feb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BgText::getValues</definition>
+        <argsstring>(const int &amp;id, std::vector&lt; float &gt; &amp;values) override</argsstring>
+        <name>getValues</name>
+        <qualifiedname>BgText::getValues</qualifiedname>
+        <reimplements refid="classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9">getValues</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des valeurs a récupérer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur de valeurs a peupler </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="33" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="14" bodyend="32"/>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" compoundref="rgbacolor_8cpp" startline="56" endline="59">nsGraphics::RGBAcolor::getBlue</references>
+        <references refid="classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754" compoundref="shape_8cpp" startline="18" endline="21">nsShape::Shape::getFillColor</references>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" compoundref="rgbacolor_8cpp" startline="66" endline="69">nsGraphics::RGBAcolor::getGreen</references>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79" compoundref="rgbacolor_8cpp" startline="76" endline="79">nsGraphics::RGBAcolor::getRed</references>
+        <references refid="classns_gui_1_1_text_1a248f06b3a9a85c05225449424311abd0" compoundref="text_8cpp" startline="173" endline="176">nsGui::Text::getTextColor</references>
+        <references refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1" compoundref="09-_custom_transitionable_2bgtext_8h" startline="20">TRANSITION_BACKGROUND_COLOR</references>
+        <references refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3" compoundref="09-_custom_transitionable_2bgtext_8h" startline="19">TRANSITION_TEXT_COLOR</references>
+      </memberdef>
+      <memberdef kind="function" id="class_bg_text_1adb35c1e7e0387e04e8f8e67d9e1468c8" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
+        <type>void</type>
+        <definition>void BgText::setValues</definition>
+        <argsstring>(const int &amp;id, const std::vector&lt; float &gt; &amp;values) override</argsstring>
+        <name>setValues</name>
+        <qualifiedname>BgText::setValues</qualifiedname>
+        <reimplements refid="classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197">setValues</reimplements>
+        <param>
+          <type>const int &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des valeurs a définir </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur des nouvelles valeurs a appliquer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="36" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="34" bodyend="48"/>
+        <references refid="classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07" compoundref="shape_8cpp" startline="23" endline="26">nsShape::Shape::setFillColor</references>
+        <references refid="classns_gui_1_1_text_1a9e10bb21647ce95f034a4205562e222a" compoundref="text_8cpp" startline="178" endline="181">nsGui::Text::setTextColor</references>
+        <references refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1" compoundref="09-_custom_transitionable_2bgtext_8h" startline="20">TRANSITION_BACKGROUND_COLOR</references>
+        <references refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3" compoundref="09-_custom_transitionable_2bgtext_8h" startline="19">TRANSITION_TEXT_COLOR</references>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="1">
+        <label>BgText</label>
+        <link refid="class_bg_text"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nsGraphics::IDrawable</label>
+        <link refid="classns_graphics_1_1_i_drawable"/>
+      </node>
+      <node id="3">
+        <label>nsTransition::ITransitionable</label>
+        <link refid="classns_transition_1_1_i_transitionable"/>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="1">
+        <label>BgText</label>
+        <link refid="class_bg_text"/>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="2" relation="public-inheritance">
+        </childnode>
+        <childnode refid="3" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="2">
+        <label>nsGraphics::IDrawable</label>
+        <link refid="classns_graphics_1_1_i_drawable"/>
+      </node>
+      <node id="3">
+        <label>nsTransition::ITransitionable</label>
+        <link refid="classns_transition_1_1_i_transitionable"/>
+      </node>
+    </collaborationgraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="12" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" bodystart="13" bodyend="30"/>
+    <listofallmembers>
+      <member refid="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" prot="public" virt="non-virtual"><scope>BgText</scope><name>BgText</name></member>
+      <member refid="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" prot="public" virt="non-virtual"><scope>BgText</scope><name>BgText</name></member>
+      <member refid="class_bg_text_1a01df624a8d498766a9eb579eb18f2326" prot="public" virt="virtual"><scope>BgText</scope><name>draw</name></member>
+      <member refid="class_bg_text_1a55fdeb5f3e12dcc2926c87f80fddc6c3" prot="public" virt="virtual"><scope>BgText</scope><name>draw</name></member>
+      <member refid="class_bg_text_1a01cc8269e39184b805351409aac4feb4" prot="public" virt="virtual"><scope>BgText</scope><name>getValues</name></member>
+      <member refid="class_bg_text_1a4c5e8e4e270d6b114aa248c479b36cb5" prot="private" virt="non-virtual"><scope>BgText</scope><name>m_background</name></member>
+      <member refid="class_bg_text_1a1c6ea6b570ee47f209a8cf41d6548380" prot="private" virt="non-virtual"><scope>BgText</scope><name>m_text</name></member>
+      <member refid="class_bg_text_1adb35c1e7e0387e04e8f8e67d9e1468c8" prot="public" virt="virtual"><scope>BgText</scope><name>setValues</name></member>
+      <member refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1" prot="public" virt="non-virtual"><scope>BgText</scope><name>TRANSITION_BACKGROUND_COLOR</name></member>
+      <member refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95ac6cb4dc038246ac7206356a76bbdd1e3" prot="public" virt="non-virtual"><scope>BgText</scope><name>TRANSITION_TEXT_COLOR</name></member>
+      <member refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95" prot="public" virt="non-virtual"><scope>BgText</scope><name>TransitionIds</name></member>
+      <member refid="class_bg_text_1a19f8e1aa743e37d252b5b46ca98b7cd1" prot="public" virt="virtual"><scope>BgText</scope><name>~BgText</name></member>
+      <member refid="class_bg_text_1a19f8e1aa743e37d252b5b46ca98b7cd1" prot="public" virt="virtual"><scope>BgText</scope><name>~BgText</name></member>
+      <member refid="classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867" prot="public" virt="virtual"><scope>BgText</scope><name>~IDrawable</name></member>
+      <member refid="classns_transition_1_1_i_transitionable_1addd11ff845b6387b07672a64c1b8938e" prot="public" virt="virtual"><scope>BgText</scope><name>~ITransitionable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

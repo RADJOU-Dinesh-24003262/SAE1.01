@@ -1,0 +1,240 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_c_my_param_v2" xml:lang="en-US">
+<title>CMyParamV2 Struct Reference</title>
+<indexterm><primary>CMyParamV2</primary></indexterm>
+<para>
+
+<para>Structure contenant les paramètres de configuration du jeu. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;type.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>char <link linkend="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6">tokenP1</link></para>
+
+<para>la forme du joueur 1 </para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6">tokenP2</link></para>
+
+<para>la forme du joueur 1 </para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123">Key1Up</link></para>
+
+<para>la touche pour faire monter le token1 </para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d">Key1Down</link></para>
+
+<para>la touche pour faire descendre le token1 </para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef">Key1Left</link></para>
+
+<para>la touche pour faire aller à gauche le token1 </para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5">Key1Right</link></para>
+
+<para>la touche pour faire aller à droite le token1 </para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901">Key2Up</link></para>
+
+<para>la touche pour faire monter le token2 </para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1">Key2Down</link></para>
+
+<para>la touche pour faire descendre le token2 </para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6">Key2Left</link></para>
+
+<para>la touche pour faire aller à gauche le token2 </para>
+</listitem>
+            <listitem><para>char <link linkend="_struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc">Key2Right</link></para>
+
+<para>la touche pour faire aller à droite le token2 </para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f">NbColumn</link></para>
+
+<para>le nombre de colone qu&apos;il doit avoir dans la map </para>
+</listitem>
+            <listitem><para>std::size_t <link linkend="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749">NbRow</link></para>
+
+<para>le nombre de ligne qu&apos;il doit avoir dans la map </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11">ColorP1</link></para>
+
+<para>la couleur du player 1 </para>
+</listitem>
+            <listitem><para>std::string <link linkend="_struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7">ColorP2</link></para>
+
+<para>la couleur du player 2 </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Structure contenant les paramètres de configuration du jeu. </para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00082">82</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11"/><section>
+    <title>ColorP1</title>
+<indexterm><primary>ColorP1</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>ColorP1</secondary></indexterm>
+<para><computeroutput>std::string CMyParamV2::ColorP1</computeroutput></para><para>
+
+<para>la couleur du player 1 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00134">134</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7"/><section>
+    <title>ColorP2</title>
+<indexterm><primary>ColorP2</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>ColorP2</secondary></indexterm>
+<para><computeroutput>std::string CMyParamV2::ColorP2</computeroutput></para><para>
+
+<para>la couleur du player 2 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00138">138</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d"/><section>
+    <title>Key1Down</title>
+<indexterm><primary>Key1Down</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>Key1Down</secondary></indexterm>
+<para><computeroutput>char CMyParamV2::Key1Down</computeroutput></para><para>
+
+<para>la touche pour faire descendre le token1 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00098">98</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef"/><section>
+    <title>Key1Left</title>
+<indexterm><primary>Key1Left</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>Key1Left</secondary></indexterm>
+<para><computeroutput>char CMyParamV2::Key1Left</computeroutput></para><para>
+
+<para>la touche pour faire aller à gauche le token1 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00102">102</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5"/><section>
+    <title>Key1Right</title>
+<indexterm><primary>Key1Right</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>Key1Right</secondary></indexterm>
+<para><computeroutput>char CMyParamV2::Key1Right</computeroutput></para><para>
+
+<para>la touche pour faire aller à droite le token1 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00106">106</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123"/><section>
+    <title>Key1Up</title>
+<indexterm><primary>Key1Up</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>Key1Up</secondary></indexterm>
+<para><computeroutput>char CMyParamV2::Key1Up</computeroutput></para><para>
+
+<para>la touche pour faire monter le token1 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00094">94</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1"/><section>
+    <title>Key2Down</title>
+<indexterm><primary>Key2Down</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>Key2Down</secondary></indexterm>
+<para><computeroutput>char CMyParamV2::Key2Down</computeroutput></para><para>
+
+<para>la touche pour faire descendre le token2 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00114">114</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6"/><section>
+    <title>Key2Left</title>
+<indexterm><primary>Key2Left</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>Key2Left</secondary></indexterm>
+<para><computeroutput>char CMyParamV2::Key2Left</computeroutput></para><para>
+
+<para>la touche pour faire aller à gauche le token2 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00118">118</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc"/><section>
+    <title>Key2Right</title>
+<indexterm><primary>Key2Right</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>Key2Right</secondary></indexterm>
+<para><computeroutput>char CMyParamV2::Key2Right</computeroutput></para><para>
+
+<para>la touche pour faire aller à droite le token2 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00122">122</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901"/><section>
+    <title>Key2Up</title>
+<indexterm><primary>Key2Up</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>Key2Up</secondary></indexterm>
+<para><computeroutput>char CMyParamV2::Key2Up</computeroutput></para><para>
+
+<para>la touche pour faire monter le token2 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00110">110</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f"/><section>
+    <title>NbColumn</title>
+<indexterm><primary>NbColumn</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>NbColumn</secondary></indexterm>
+<para><computeroutput>std::size_t CMyParamV2::NbColumn</computeroutput></para><para>
+
+<para>le nombre de colone qu&apos;il doit avoir dans la map </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00126">126</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749"/><section>
+    <title>NbRow</title>
+<indexterm><primary>NbRow</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>NbRow</secondary></indexterm>
+<para><computeroutput>std::size_t CMyParamV2::NbRow</computeroutput></para><para>
+
+<para>le nombre de ligne qu&apos;il doit avoir dans la map </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00130">130</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6"/><section>
+    <title>tokenP1</title>
+<indexterm><primary>tokenP1</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>tokenP1</secondary></indexterm>
+<para><computeroutput>char CMyParamV2::tokenP1</computeroutput></para><para>
+
+<para>la forme du joueur 1 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00086">86</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<anchor xml:id="_struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6"/><section>
+    <title>tokenP2</title>
+<indexterm><primary>tokenP2</primary><secondary>CMyParamV2</secondary></indexterm>
+<indexterm><primary>CMyParamV2</primary><secondary>tokenP2</secondary></indexterm>
+<para><computeroutput>char CMyParamV2::tokenP2</computeroutput></para><para>
+
+<para>la forme du joueur 1 </para>
+</para>
+<para>
+Definition at line <link linkend="_type_8h_source_1l00090">90</link> of file <link linkend="_type_8h_source">type.h</link>.</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/<link linkend="_type_8h">type.h</link></section>
+</section>

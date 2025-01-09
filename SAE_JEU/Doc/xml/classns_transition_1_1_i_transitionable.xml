@@ -1,0 +1,195 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="classns_transition_1_1_i_transitionable" kind="class" language="C++" prot="public" abstract="yes">
+    <compoundname>nsTransition::ITransitionable</compoundname>
+    <derivedcompoundref refid="class_bg_text" prot="public" virt="non-virtual">BgText</derivedcompoundref>
+    <derivedcompoundref refid="classns_gui_1_1_sprite" prot="public" virt="non-virtual">nsGui::Sprite</derivedcompoundref>
+    <derivedcompoundref refid="classns_gui_1_1_text" prot="public" virt="non-virtual">nsGui::Text</derivedcompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_circle" prot="public" virt="non-virtual">nsShape::Circle</derivedcompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_line" prot="public" virt="non-virtual">nsShape::Line</derivedcompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_oval" prot="public" virt="non-virtual">nsShape::Oval</derivedcompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_rectangle" prot="public" virt="non-virtual">nsShape::Rectangle</derivedcompoundref>
+    <derivedcompoundref refid="classns_shape_1_1_triangle" prot="public" virt="non-virtual">nsShape::Triangle</derivedcompoundref>
+    <includes refid="itransitionable_8h" local="no">itransitionable.h</includes>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classns_transition_1_1_i_transitionable_1addd11ff845b6387b07672a64c1b8938e" prot="public" static="no" const="no" explicit="no" inline="yes" virt="virtual">
+        <type></type>
+        <definition>nsTransition::ITransitionable::~ITransitionable</definition>
+        <argsstring>()</argsstring>
+        <name>~ITransitionable</name>
+        <qualifiedname>nsTransition::ITransitionable::~ITransitionable</qualifiedname>
+        <briefdescription>
+<para>Destructeur pour la classe <ref refid="classns_transition_1_1_i_transitionable" kindref="compound">ITransitionable</ref>. </para>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="30" column="13" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" bodystart="30" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>void nsTransition::ITransitionable::getValues</definition>
+        <argsstring>(const int &amp;id, std::vector&lt; float &gt; &amp;values)=0</argsstring>
+        <name>getValues</name>
+        <qualifiedname>nsTransition::ITransitionable::getValues</qualifiedname>
+        <reimplementedby refid="class_bg_text_1a01cc8269e39184b805351409aac4feb4">getValues</reimplementedby>
+        <reimplementedby refid="classns_gui_1_1_sprite_1a7da27e2ccf7b574896662720d99c0056">getValues</reimplementedby>
+        <reimplementedby refid="classns_gui_1_1_text_1a6ddbea2ef54c442d44d6e624df486ad7">getValues</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_rectangle_1ad62897a44a3af8dfffca0a8a1fa10825">getValues</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_circle_1aae4610d0c110ad09da424c5a3ad91aac">getValues</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_oval_1a24b1974daa7894aee5dce3edb9056e03">getValues</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_line_1ac529918f8d3d6801c320a24bb225e33a">getValues</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_triangle_1a11b2ff1bbd168d0d90fe3707eeeb869c">getValues</reimplementedby>
+        <param>
+          <type>const int &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Récupère des valeurs dans un vecteur de float pour l&apos;ID spécifié </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des valeurs a récupérer </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur de valeurs a peupler </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="38" column="18"/>
+      </memberdef>
+      <memberdef kind="function" id="classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
+        <type>void</type>
+        <definition>void nsTransition::ITransitionable::setValues</definition>
+        <argsstring>(const int &amp;id, const std::vector&lt; float &gt; &amp;values)=0</argsstring>
+        <name>setValues</name>
+        <qualifiedname>nsTransition::ITransitionable::setValues</qualifiedname>
+        <reimplementedby refid="class_bg_text_1adb35c1e7e0387e04e8f8e67d9e1468c8">setValues</reimplementedby>
+        <reimplementedby refid="classns_gui_1_1_sprite_1a63ad7e76b470c578aecc697203a3eb26">setValues</reimplementedby>
+        <reimplementedby refid="classns_gui_1_1_text_1a9fbd7627d5cc5eaa7259f475c73aec73">setValues</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_rectangle_1a3b3e28b92f8c22bfe159aea5a91fb5c9">setValues</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_circle_1a9a2fc6b4a852e25922e5a1732d39644a">setValues</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_oval_1a56c7b08484c2dc730e4850ff191aa80d">setValues</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_line_1a698db32364db6ad0c29d205940b02631">setValues</reimplementedby>
+        <reimplementedby refid="classns_shape_1_1_triangle_1ac2919ceeb740f05597c5839e92204f87">setValues</reimplementedby>
+        <param>
+          <type>const int &amp;</type>
+          <declname>id</declname>
+        </param>
+        <param>
+          <type>const std::vector&lt; float &gt; &amp;</type>
+          <declname>values</declname>
+        </param>
+        <briefdescription>
+<para>Définit les nouvelles valeurs pour l&apos;ID spécifié </para>
+        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="in">id</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>ID des valeurs a définir </para>
+</parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="in">values</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Vecteur des nouvelles valeurs a appliquer </para>
+</parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="46" column="18"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Une classe abstraite pour n&apos;importe quelle élément pouvant effectuer une transition entre deux états. </para>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="2">
+        <label>BgText</label>
+        <link refid="class_bg_text"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="3">
+        <label>nsGui::Sprite</label>
+        <link refid="classns_gui_1_1_sprite"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="4">
+        <label>nsGui::Text</label>
+        <link refid="classns_gui_1_1_text"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="5">
+        <label>nsShape::Circle</label>
+        <link refid="classns_shape_1_1_circle"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="6">
+        <label>nsShape::Line</label>
+        <link refid="classns_shape_1_1_line"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="7">
+        <label>nsShape::Oval</label>
+        <link refid="classns_shape_1_1_oval"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="8">
+        <label>nsShape::Rectangle</label>
+        <link refid="classns_shape_1_1_rectangle"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="9">
+        <label>nsShape::Triangle</label>
+        <link refid="classns_shape_1_1_triangle"/>
+        <childnode refid="1" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="1">
+        <label>nsTransition::ITransitionable</label>
+        <link refid="classns_transition_1_1_i_transitionable"/>
+      </node>
+    </inheritancegraph>
+    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="23" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" bodystart="24" bodyend="47"/>
+    <listofallmembers>
+      <member refid="classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9" prot="public" virt="pure-virtual"><scope>nsTransition::ITransitionable</scope><name>getValues</name></member>
+      <member refid="classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197" prot="public" virt="pure-virtual"><scope>nsTransition::ITransitionable</scope><name>setValues</name></member>
+      <member refid="classns_transition_1_1_i_transitionable_1addd11ff845b6387b07672a64c1b8938e" prot="public" virt="virtual"><scope>nsTransition::ITransitionable</scope><name>~ITransitionable</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
