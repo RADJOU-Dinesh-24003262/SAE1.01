@@ -154,24 +154,24 @@ private:
 
 // Quelques couleurs trouvées sur:
 // https://www.rapidtables.com/web/color/RGB_Color.html
-const RGBAcolor KBlack       {  0,   0,   0};
-const RGBAcolor KWhite       {255, 255, 255};
-const RGBAcolor KRed         {255,   0,   0};
-const RGBAcolor KLime        {  0, 255,   0};
-const RGBAcolor KBlue        {  0,   0, 255};
-const RGBAcolor KYellow      {255, 255,   0};
-const RGBAcolor KCyan        {  0, 255, 255};
-const RGBAcolor KMagenta     {255,   0, 255};
-const RGBAcolor KSilver      {192, 192, 192};
-const RGBAcolor KGray        {128, 128, 128};
-const RGBAcolor KMaroon      {128,   0,   0};
-const RGBAcolor KOlive       {128, 128,   0};
-const RGBAcolor KGreen       {  0, 128,   0};
-const RGBAcolor KPurple      {128,   0, 128};
-const RGBAcolor KTeal        {  0, 128, 128};
-const RGBAcolor KNavy        {  0,   0, 128};
-const RGBAcolor KBeige       {231, 211, 171};
-const RGBAcolor KTransparent {  0,   0,   0,  0};
+const RGBAcolor KBlack           {  0,   0,   0};
+const RGBAcolor KWhite           {255, 255, 255};
+const RGBAcolor KRed             {255,   0,   0};
+const RGBAcolor KLime            {  0, 255,   0};
+const RGBAcolor KBlue            {  0,   0, 255};
+const RGBAcolor KYellow          {255, 255,   0};
+const RGBAcolor KCyan            {  0, 255, 255};
+const RGBAcolor KMagenta         {255,   0, 255};
+const RGBAcolor KSilver          {192, 192, 192};
+const RGBAcolor KGray            {128, 128, 128};
+const RGBAcolor KMaroon          {128,   0,   0};
+const RGBAcolor KOlive           {128, 128,   0};
+const RGBAcolor KGreen           {  0, 128,   0};
+const RGBAcolor KPurple          {128,   0, 128};
+const RGBAcolor KTeal            {  0, 128, 128};
+const RGBAcolor KNavy            {  0,   0, 128};
+const RGBAcolor KBeige           {231, 211, 171};
+const RGBAcolor KTransparent     {  0,   0,   0,  0};
 const RGBAcolor KBlueTransparent {  0,   0, 255,  30};
 
 } // namespace nsGraphics

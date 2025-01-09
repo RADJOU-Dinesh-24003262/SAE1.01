@@ -397,7 +397,6 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);//reinitialise la grille pour la prochaine partie
     PartyNum = 1;
     Victory=false;
-
 }
 
 
