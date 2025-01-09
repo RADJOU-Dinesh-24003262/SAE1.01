@@ -289,10 +289,14 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
         DisplayGrid(window, Mat, Screen_size);
         window.finishFrame();
 
-        Key_UP    = window.MinGL::isPressed({param.KeyUp, false});
-        Key_DOWN  = window.MinGL::isPressed({param.KeyDown, false});
         Key_RIGHT = window.MinGL::isPressed({param.KeyRight, false});
         Key_LEFT  = window.MinGL::isPressed({param.KeyLeft, false});
+        Key_UP    = window.MinGL::isPressed({param.KeyUp, false});
+        Key_DOWN  = window.MinGL::isPressed({param.KeyDown, false});
+        if (Key_UP || Key_DOWN){
+            Key_RIGHT = false;
+            Key_LEFT  = false;
+        }
 
         cout << IsMoveLegal(Mat, Key_UP, Key_DOWN, Key_RIGHT, Key_LEFT, PosPlayer1, param) << Key_UP << Key_DOWN << Key_RIGHT << Key_LEFT << endl;
 
