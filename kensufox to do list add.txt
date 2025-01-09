@@ -1,0 +1,20 @@
+kensufox to do list:
+-add squircle to MinGL2
+-find idea for the sprites:
+--statue : done
+--player 1 and 2: done
+--teleporter : done
+--monster :
+--kebab :
+--cigarette :
+--wall :
+-make sprite:
+--statue : done
+--player 1 and 2 : done
+--teleporter :
+--monster :
+--kebab :
+--cigarette :
+--wall :
+-Make the game use MinGL2 keyboard detection
+-
