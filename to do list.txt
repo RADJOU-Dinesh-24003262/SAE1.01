@@ -1,4 +1,0 @@
-sprite
-régler les bugs
-score
-victory message no when pause
