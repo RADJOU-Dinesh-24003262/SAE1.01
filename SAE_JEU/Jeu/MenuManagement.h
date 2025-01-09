@@ -85,7 +85,7 @@ void InterfaceOptions(MinGL &window, int mat_x, int mat_y){
     window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), mat_x, mat_y, nsGraphics::KGray);
     window << nsShape::Rectangle(nsGraphics::Vec2D(0,0), 120, 50, nsGraphics::KRed+8, nsGraphics::KTransparent);
     window << nsShape::Rectangle(nsGraphics::Vec2D(150,150), 340, 340, nsGraphics::KTransparent, nsGraphics::KGray);
-    window << nsGui::Text(nsGraphics::Vec2D (10, 105),creditContent,nsGraphics::KWhite, nsGui::GlutFont::BITMAP_TIMES_ROMAN_24);
+    window << nsGui::Text(nsGraphics::Vec2D (10, 105),creditContent,nsGraphics::KWhite, nsGui::GlutFont::BITMAP_HELVETICA_12);
 }
 
 /**
