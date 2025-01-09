@@ -38,13 +38,13 @@ bool IsMoveLegal(const CMat & Mat, const bool & KeyUp, const bool & KeyDown,
         (KeyDown && KeyLeft) || (KeyDown && KeyRight) ||
         ( KeyRight && KeyLeft)){
         return false;
-    }else if (KeyUp && Pos.first > 0 && Mat [Pos.first-1][Pos.second] != 'M'){
+    }else if (KeyUp && Pos.first > 0 && Mat [Pos.first-1][Pos.second] != 'M' && Mat [Pos.first-1][Pos.second] != 'A'){
         return true;
-    }else if (KeyDown && Pos.first < Param.NbRow -1 && Mat [Pos.first+1][Pos.second] != 'M'){
+    }else if (KeyDown && Pos.first < Param.NbRow -1 && Mat [Pos.first+1][Pos.second] != 'M' && Mat [Pos.first+1][Pos.second] != 'A'){
         return true;
-    }else if (KeyRight && Pos.second < Param.NbColumn-1 && Mat [Pos.first][Pos.second+1] != 'M'){
+    }else if (KeyRight && Pos.second < Param.NbColumn-1 && Mat [Pos.first][Pos.second+1] != 'M' && Mat [Pos.first][Pos.second - 1] != 'A'){
         return true;
-    }else if(KeyLeft && Pos.second > 0 && Mat [Pos.first][Pos.second-1] != 'M'){
+    }else if(KeyLeft && Pos.second > 0 && Mat [Pos.first][Pos.second-1] != 'M' && Mat [Pos.first][Pos.second - 1] != 'A'){
         return true;
     }else{
         Color(KColor.find("KRed")->second);
@@ -386,21 +386,18 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
 
     }//while(no victory)
 
-    if (!Victory){
+    if (scoreJ1 == scoreJ2){
         Color (KColor.find("KMAgenta")->second);
-        cout << "Aucun vainqueur" << endl;
-        //menuid = 0;
+        cout << "Égalité : Aucun vainqueur" << endl;
+        menuid = 0;
+    }else{
+        Color (KColor.find("KGreen")->second);
+        cout << "Félicitations Joueur " << (scoreJ1 > scoreJ2 ? '1' : '2') <<
+            " vous avez gagné avec " << (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << " points!"
+             <<"Tandis que l'horrible Joueur "<< (scoreJ1 > scoreJ2 ? '2' : '1') << " ne possède QUE "<< (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << " points" << endl;
+        Color (KColor.find("KReset")->second);
     }
 
-    Color (KColor.find("KGreen")->second);
-    cout << "Félicitations Joueur " << (scoreJ1 > scoreJ2 ? '1' : '2') <<
-        "vous avez gagné avec" << (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << "points!" << endl;
-    cout << scoreJ1 << endl;
-    Color (KColor.find("KReset")->second);
-    if(!(menuid == 3))menuid = 0;
-    InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);//reinitialise la grille pour la prochaine partie
-    PartyNum = 1;
-    Victory=false;
 }
 
 int ppal (void){
@@ -470,6 +467,8 @@ int ppal (void){
                           Victory, KMaxPartyNum, PosPlayer1, PosPlayer2, PosTP1,
                           PosTP2, Player1Turn, N_move, objetJ1, objetJ2,
                           scoreJ1, scoreJ2, PosMonster);
+            InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);
+            menuid = 0;
             break;
 
         case 5 ://restart
