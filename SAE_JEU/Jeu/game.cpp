@@ -38,13 +38,13 @@ bool IsMoveLegal(const CMat & Mat, const bool & KeyUp, const bool & KeyDown,
         (KeyDown && KeyLeft) || (KeyDown && KeyRight) ||
         ( KeyRight && KeyLeft)){
         return false;
-    }else if (KeyUp && Pos.first > 0 && Mat [Pos.first-1][Pos.second] != 'M' && Mat [Pos.first-1][Pos.second] != 'A'){
+    }else if (KeyUp && Pos.first > 0 && Mat [Pos.first-1][Pos.second] != 'M' && Mat [Pos.first-1][Pos.second] != 'A'  && Mat [Pos.first-1][Pos.second] != 'X'  && Mat [Pos.first-1][Pos.second] != 'O'){
         return true;
-    }else if (KeyDown && Pos.first < Param.NbRow -1 && Mat [Pos.first+1][Pos.second] != 'M' && Mat [Pos.first+1][Pos.second] != 'A'){
+    }else if (KeyDown && Pos.first < Param.NbRow -1 && Mat [Pos.first+1][Pos.second] != 'M' && Mat [Pos.first+1][Pos.second] != 'A' && Mat [Pos.first+1][Pos.second] != 'X' && Mat [Pos.first+1][Pos.second] != 'O'){
         return true;
-    }else if (KeyRight && Pos.second < Param.NbColumn-1 && Mat [Pos.first][Pos.second+1] != 'M' && Mat [Pos.first][Pos.second + 1] != 'A'){
+    }else if (KeyRight && Pos.second < Param.NbColumn-1 && Mat [Pos.first][Pos.second+1] != 'M' && Mat [Pos.first][Pos.second + 1] != 'A' && Mat [Pos.first][Pos.second + 1] != 'X' && Mat [Pos.first][Pos.second + 1] != 'O'){
         return true;
-    }else if(KeyLeft && Pos.second > 0 && Mat [Pos.first][Pos.second-1] != 'M' && Mat [Pos.first][Pos.second - 1] != 'A'){
+    }else if(KeyLeft && Pos.second > 0 && Mat [Pos.first][Pos.second-1] != 'M' && Mat [Pos.first][Pos.second - 1] != 'A' && Mat [Pos.first][Pos.second - 1] != 'X' && Mat [Pos.first][Pos.second - 1] != 'O'){
         return true;
     }else{
         Color(KColor.find("KRed")->second);
@@ -397,12 +397,7 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
         cout << "Félicitations Joueur " << (scoreJ1 > scoreJ2 ? '1' : '2') <<
             " vous avez gagné avec " << (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << " points!"
              <<"Tandis que l'horrible Joueur "<< (scoreJ1 > scoreJ2 ? '2' : '1') << " ne possède QUE "<< (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << " points" << endl;
-        Color (KColor.find("KReset")->second);
     }
-
-    Color (KColor.find("KGreen")->second);
-    cout << "Félicitations Joueur " << (scoreJ1 > scoreJ2 ? '1' : '2') <<
-        "vous avez gagné avec" << (scoreJ1 > scoreJ2 ? scoreJ1 : scoreJ2) << "points!" << endl;
     Color (KColor.find("KReset")->second);
     if(!(menuid == 3))menuid = 0;
     InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);//reinitialise la grille pour la prochaine partie
@@ -479,7 +474,6 @@ int ppal (void){
                           scoreJ1, scoreJ2, PosMonster);
             InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1, PosPlayer2, param, PosTP1, PosTP2, PosMonster);
             menuid = 0;
-            InitGrid(Mat, param.NbRow, param.NbColumn, PosPlayer1,PosPlayer2, param, PosTP1, PosTP2, PosMonster);
             break;
 
         case 5 ://restart
