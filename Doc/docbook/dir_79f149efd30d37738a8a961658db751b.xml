@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_79f149efd30d37738a8a961658db751b" xml:lang="en-US">
+<title>/home/Theo/Téléchargements Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements Directory Reference</primary></indexterm>
+Directory dependency graph for Téléchargements:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_79f149efd30d37738a8a961658db751b_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_9bc27c3a15165b903513c0caa2551462">sae</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

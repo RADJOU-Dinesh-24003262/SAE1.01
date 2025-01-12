@@ -35,7 +35,7 @@ Collaboration diagram for nsException::CException:<para>
 
 <para>Constructeur pour la classe <link linkend="_classns_exception_1_1_c_exception">CException</link>. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_classns_exception_1_1_c_exception_1a8b95a8f59d50a7ff3b67423c83cb8501"/>virtual <emphasis role="strong">~CException</emphasis> () override=default</para>
+            <listitem><para>virtual <link linkend="_classns_exception_1_1_c_exception_1a8b95a8f59d50a7ff3b67423c83cb8501">~CException</link> () override=default</para>
 
 <para>Destructeur virtuel pour la classe <link linkend="_classns_exception_1_1_c_exception">CException</link>. </para>
 </listitem>
@@ -124,6 +124,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_cexception_8hpp_source_1l00028">28</link> of file <link linkend="_cexception_8hpp_source">cexception.hpp</link>.</para>
+</section>
+<anchor xml:id="_classns_exception_1_1_c_exception_1a8b95a8f59d50a7ff3b67423c83cb8501"/><section>
+    <title>~CException()</title>
+<indexterm><primary>~CException</primary><secondary>nsException::CException</secondary></indexterm>
+<indexterm><primary>nsException::CException</primary><secondary>~CException</secondary></indexterm>
+<para><computeroutput>nsException::CException::~CException ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_exception_1_1_c_exception">CException</link>. </para>
+</para>
 </section>
 </section>
 <section>
@@ -225,5 +234,5 @@ Definition at line <link linkend="_cexception_8h_source_1l00084">84</link> of fi
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/<link linkend="_cexception_8h">cexception.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/<link linkend="_cexception_8cpp">cexception.cpp</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/<link linkend="_cexception_8hpp">cexception.hpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/<link linkend="_cexception_8h">cexception.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/exception/<link linkend="_cexception_8cpp">cexception.cpp</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/<link linkend="_cexception_8hpp">cexception.hpp</link></section>
 </section>

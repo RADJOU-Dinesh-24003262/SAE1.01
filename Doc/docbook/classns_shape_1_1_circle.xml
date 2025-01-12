@@ -48,11 +48,11 @@ Collaboration diagram for nsShape::Circle:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_classns_shape_1_1_circle_1a06b1c1c7ea1e4ec8228d929e7b3966ee">Circle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const unsigned &amp;radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=nsGraphics::KTransparent)</para>
+            <listitem><para><link linkend="_classns_shape_1_1_circle_1a06b1c1c7ea1e4ec8228d929e7b3966ee">Circle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const unsigned &amp;radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=<link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link>)</para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_circle">Circle</link>. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_classns_shape_1_1_circle_1a2446e688c063dcb2693adfcfacbb2804"/>virtual <emphasis role="strong">~Circle</emphasis> () override=default</para>
+            <listitem><para>virtual <link linkend="_classns_shape_1_1_circle_1a2446e688c063dcb2693adfcfacbb2804">~Circle</link> () override=default</para>
 
 <para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_circle">Circle</link>. </para>
 </listitem>
@@ -157,7 +157,7 @@ Definition at line <link linkend="_circle_8h_source_1l00032">32</link> of file <
     <title>Circle()</title>
 <indexterm><primary>Circle</primary><secondary>nsShape::Circle</secondary></indexterm>
 <indexterm><primary>nsShape::Circle</primary><secondary>Circle</secondary></indexterm>
-<para><computeroutput>nsShape::Circle::Circle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position, const unsigned &amp; radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput>nsGraphics::KTransparent</computeroutput>
+<para><computeroutput>nsShape::Circle::Circle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position, const unsigned &amp; radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput><link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link></computeroutput>
 )</computeroutput></para><para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_circle">Circle</link>. </para>
@@ -202,6 +202,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_circle_8cpp_source_1l00016">16</link> of file <link linkend="_circle_8cpp_source">circle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_circle_1a2446e688c063dcb2693adfcfacbb2804"/><section>
+    <title>~Circle()</title>
+<indexterm><primary>~Circle</primary><secondary>nsShape::Circle</secondary></indexterm>
+<indexterm><primary>nsShape::Circle</primary><secondary>~Circle</secondary></indexterm>
+<para><computeroutput>nsShape::Circle::~Circle ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_circle">Circle</link>. </para>
+</para>
 </section>
 </section>
 <section>
@@ -470,5 +479,5 @@ Definition at line <link linkend="_circle_8cpp_source_1l00105">105</link> of fil
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_circle_8h">circle.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_circle_8cpp">circle.cpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_circle_8h">circle.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/<link linkend="_circle_8cpp">circle.cpp</link></section>
 </section>

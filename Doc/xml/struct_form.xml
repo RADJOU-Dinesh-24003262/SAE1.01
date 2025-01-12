@@ -2,6 +2,7 @@
 <doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
   <compounddef id="struct_form" kind="struct" language="C++" prot="public">
     <compoundname>Form</compoundname>
+    <includes refid="type_8h" local="no">type.h</includes>
       <sectiondef kind="public-attrib">
       <memberdef kind="variable" id="struct_form_1a75a4fb47a91fe43764d6a084f31b7b01" prot="public" static="no" mutable="no">
         <type>std::string</type>
@@ -15,7 +16,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="143" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="143" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/type.h" line="143" column="17" bodyfile="/home/Theo/Téléchargements/sae/Jeu/type.h" bodystart="143" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_form_1a38baf309bd4277f942aeb9152f1f1960" prot="public" static="no" mutable="no">
         <type>std::pair&lt; size_t, size_t &gt;</type>
@@ -29,7 +30,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="144" column="15" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="144" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/type.h" line="144" column="15" bodyfile="/home/Theo/Téléchargements/sae/Jeu/type.h" bodystart="144" bodyend="-1"/>
+        <referencedby refid="gridmanagement_8cpp_1ab9580be20ea977cfc148161bbd19cc7b" compoundref="gridmanagement_8cpp" startline="75" endline="95">ajouterpiece</referencedby>
+        <referencedby refid="gridmanagement_8cpp_1afd0452ea965a63c8d1c5f84541bb5a00" compoundref="gridmanagement_8cpp" startline="97" endline="110">rotation90</referencedby>
       </memberdef>
       <memberdef kind="variable" id="struct_form_1a4c5e21f69e4faffc2ee679a124e0c776" prot="public" static="no" mutable="no">
         <type>std::vector&lt; std::vector&lt; char &gt; &gt;</type>
@@ -43,14 +46,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="145" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="145" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/type.h" line="145" column="17" bodyfile="/home/Theo/Téléchargements/sae/Jeu/type.h" bodystart="145" bodyend="-1"/>
+        <referencedby refid="gridmanagement_8cpp_1ab9580be20ea977cfc148161bbd19cc7b" compoundref="gridmanagement_8cpp" startline="75" endline="95">ajouterpiece</referencedby>
+        <referencedby refid="gridmanagement_8cpp_1afd0452ea965a63c8d1c5f84541bb5a00" compoundref="gridmanagement_8cpp" startline="97" endline="110">rotation90</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="141" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="142" bodyend="146"/>
+    <location file="/home/Theo/Téléchargements/sae/Jeu/type.h" line="141" column="1" bodyfile="/home/Theo/Téléchargements/sae/Jeu/type.h" bodystart="142" bodyend="146"/>
     <listofallmembers>
       <member refid="struct_form_1a38baf309bd4277f942aeb9152f1f1960" prot="public" virt="non-virtual"><scope>Form</scope><name>dim</name></member>
       <member refid="struct_form_1a75a4fb47a91fe43764d6a084f31b7b01" prot="public" virt="non-virtual"><scope>Form</scope><name>nom</name></member>

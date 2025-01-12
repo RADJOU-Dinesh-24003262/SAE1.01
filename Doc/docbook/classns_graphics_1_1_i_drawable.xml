@@ -22,7 +22,7 @@ Inheritance diagram for nsGraphics::IDrawable:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867"/>virtual <emphasis role="strong">~IDrawable</emphasis> ()=default</para>
+            <listitem><para>virtual <link linkend="_classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867">~IDrawable</link> ()=default</para>
 
 <para>Destructeur pour la classe <link linkend="_classns_graphics_1_1_i_drawable">IDrawable</link>. </para>
 </listitem>
@@ -47,6 +47,18 @@ Inheritance diagram for nsGraphics::IDrawable:<para>
 <para>Interface pour un objet affichable. </para>
 <para>
 Definition at line <link linkend="_idrawable_8h_source_1l00029">29</link> of file <link linkend="_idrawable_8h_source">idrawable.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_graphics_1_1_i_drawable_1ab7a2ae7682163969bd4627e402ef0867"/><section>
+    <title>~IDrawable()</title>
+<indexterm><primary>~IDrawable</primary><secondary>nsGraphics::IDrawable</secondary></indexterm>
+<indexterm><primary>nsGraphics::IDrawable</primary><secondary>~IDrawable</secondary></indexterm>
+<para><computeroutput>nsGraphics::IDrawable::~IDrawable ( )<computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur pour la classe <link linkend="_classns_graphics_1_1_i_drawable">IDrawable</link>. </para>
+</para>
+</section>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -105,5 +117,5 @@ Definition at line <link linkend="_idrawable_8h_source_1l00051">51</link> of fil
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/<link linkend="_idrawable_8h">idrawable.h</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics/<link linkend="_idrawable_8h">idrawable.h</link></section>
 </section>

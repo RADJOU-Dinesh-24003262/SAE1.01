@@ -5,14 +5,14 @@
     <includes refid="09-_custom_transitionable_2bgtext_8h" local="yes">bgtext.h</includes>
     <incdepgraph>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp</label>
         <link refid="09-_custom_transitionable_2bgtext_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="2">
         <label>bgtext.h</label>
-        <link refid="09-_custom_transitionable_2bgtext_8h_source"/>
+        <link refid="09-_custom_transitionable_2bgtext_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
         <childnode refid="5" relation="include">
@@ -123,9 +123,9 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;bgtext.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1"><highlight class="preprocessor">#include<sp/>&quot;<ref refid="08-_custom_drawable_2bgtext_8h" kindref="compound">bgtext.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
-<codeline lineno="3"><highlight class="normal">BgText::BgText(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>position,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>content,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>textColor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>backgroundColor)</highlight></codeline>
+<codeline lineno="3" refid="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" refkind="member"><highlight class="normal"><ref refid="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" kindref="member">BgText::BgText</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>position,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>content,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>textColor,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>backgroundColor)</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"><sp/><sp/><sp/><sp/>:<sp/>m_text(position,<sp/>content,<sp/>textColor)</highlight></codeline>
 <codeline lineno="5"><highlight class="normal"><sp/><sp/><sp/><sp/>,<sp/>m_background(m_text.computeVisiblePosition(),<sp/>m_text.computeVisibleEndPosition(),<sp/>backgroundColor)</highlight></codeline>
 <codeline lineno="6"><highlight class="normal">{}<sp/></highlight><highlight class="comment">//<sp/>BgText()</highlight><highlight class="normal"></highlight></codeline>
@@ -172,6 +172,6 @@
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="48"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>setValues()</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp"/>
   </compounddef>
 </doxygen>

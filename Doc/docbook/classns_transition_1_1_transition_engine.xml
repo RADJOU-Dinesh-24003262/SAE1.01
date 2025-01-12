@@ -142,6 +142,15 @@ Parameters</title>
                     </para>
                 </formalpara>
                 </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_transition_1_1_transition_engine_ae04163c3488c93e111b9d2638a27d6a9_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_classns_transition_1_1_transition_engine_1a3bc437b23ee918b9ec4af070e205028f"/><section>
     <title>update()</title>
@@ -174,8 +183,17 @@ Parameters</title>
                     </para>
                 </formalpara>
                 Cette fonction rajoute la valeur de delta aux temps écoulés des différentes transitions, et supprime les transitions terminées de la liste. </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_transition_1_1_transition_engine_a3bc437b23ee918b9ec4af070e205028f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/<link linkend="_transition__engine_8h">transition_engine.h</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/<link linkend="_transition__engine_8h">transition_engine.h</link></section>
 </section>

@@ -8,7 +8,7 @@
     <includes local="no">iostream</includes>
     <incdepgraph>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/Jeu/params.cpp</label>
         <link refid="params_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -72,7 +72,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.cpp" line="9" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.cpp" bodystart="9" bodyend="30"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/params.cpp" line="9" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/params.cpp" bodystart="9" bodyend="30"/>
+        <references refid="struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11" compoundref="type_8h" startline="134">CMyParamV2::ColorP1</references>
+        <references refid="struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7" compoundref="type_8h" startline="138">CMyParamV2::ColorP2</references>
+        <references refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" compoundref="type_8h" startline="66">KColor</references>
+        <references refid="struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d" compoundref="type_8h" startline="98">CMyParamV2::Key1Down</references>
+        <references refid="struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef" compoundref="type_8h" startline="102">CMyParamV2::Key1Left</references>
+        <references refid="struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5" compoundref="type_8h" startline="106">CMyParamV2::Key1Right</references>
+        <references refid="struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123" compoundref="type_8h" startline="94">CMyParamV2::Key1Up</references>
+        <references refid="struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1" compoundref="type_8h" startline="114">CMyParamV2::Key2Down</references>
+        <references refid="struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6" compoundref="type_8h" startline="118">CMyParamV2::Key2Left</references>
+        <references refid="struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc" compoundref="type_8h" startline="122">CMyParamV2::Key2Right</references>
+        <references refid="struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901" compoundref="type_8h" startline="110">CMyParamV2::Key2Up</references>
+        <references refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" compoundref="type_8h" startline="126">CMyParamV2::NbColumn</references>
+        <references refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" compoundref="type_8h" startline="130">CMyParamV2::NbRow</references>
+        <references refid="struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6" compoundref="type_8h" startline="86">CMyParamV2::tokenP1</references>
+        <references refid="struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6" compoundref="type_8h" startline="90">CMyParamV2::tokenP2</references>
+        <referencedby refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
       </memberdef>
       <memberdef kind="function" id="params_8cpp_1ac3adf30120fc96c74f84762bf232cd54" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -89,7 +105,22 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.cpp" line="32" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.cpp" bodystart="32" bodyend="90"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/params.cpp" line="32" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/params.cpp" bodystart="32" bodyend="90"/>
+        <references refid="struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11" compoundref="type_8h" startline="134">CMyParamV2::ColorP1</references>
+        <references refid="struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7" compoundref="type_8h" startline="138">CMyParamV2::ColorP2</references>
+        <references refid="struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d" compoundref="type_8h" startline="98">CMyParamV2::Key1Down</references>
+        <references refid="struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef" compoundref="type_8h" startline="102">CMyParamV2::Key1Left</references>
+        <references refid="struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5" compoundref="type_8h" startline="106">CMyParamV2::Key1Right</references>
+        <references refid="struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123" compoundref="type_8h" startline="94">CMyParamV2::Key1Up</references>
+        <references refid="struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1" compoundref="type_8h" startline="114">CMyParamV2::Key2Down</references>
+        <references refid="struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6" compoundref="type_8h" startline="118">CMyParamV2::Key2Left</references>
+        <references refid="struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc" compoundref="type_8h" startline="122">CMyParamV2::Key2Right</references>
+        <references refid="struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901" compoundref="type_8h" startline="110">CMyParamV2::Key2Up</references>
+        <references refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" compoundref="type_8h" startline="126">CMyParamV2::NbColumn</references>
+        <references refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" compoundref="type_8h" startline="130">CMyParamV2::NbRow</references>
+        <references refid="struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6" compoundref="type_8h" startline="86">CMyParamV2::tokenP1</references>
+        <references refid="struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6" compoundref="type_8h" startline="90">CMyParamV2::tokenP2</references>
+        <referencedby refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -105,7 +136,7 @@
 <codeline lineno="6"><highlight class="normal"></highlight></codeline>
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>initParams<sp/>(<ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param){</highlight></codeline>
+<codeline lineno="9" refid="params_8h_1ade03faad985499a8668d06f81c996971" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="params_8cpp_1a725b86f4f23b75fda4f70441f7b0fcca" kindref="member">initParams</ref><sp/>(<ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param){</highlight></codeline>
 <codeline lineno="10"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Move<sp/>Keys</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>Param.<ref refid="struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123" kindref="member">Key1Up</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;z&apos;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>Param.<ref refid="struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d" kindref="member">Key1Down</ref><sp/>=<sp/></highlight><highlight class="charliteral">&apos;s&apos;</highlight><highlight class="normal">;</highlight></codeline>
@@ -128,7 +159,7 @@
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>Param.<ref refid="struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7" kindref="member">ColorP2</ref><sp/>=<sp/><ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KBlue&quot;</highlight><highlight class="normal">)-&gt;second<sp/>;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>LoadParams<sp/>(<ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param){</highlight></codeline>
+<codeline lineno="32" refid="params_8h_1ac3adf30120fc96c74f84762bf232cd54" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="params_8cpp_1ac3adf30120fc96c74f84762bf232cd54" kindref="member">LoadParams</ref><sp/>(<ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param){</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>Path<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;../../Nos_fichiers/config.yaml&quot;</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>ifstream<sp/>ifs(Path);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(!ifs.is_open<sp/>()){</highlight></codeline>
@@ -188,6 +219,6 @@
 <codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>ifs.close<sp/>();</highlight></codeline>
 <codeline lineno="90"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.cpp"/>
+    <location file="/home/Theo/Téléchargements/sae/Jeu/params.cpp"/>
   </compounddef>
 </doxygen>

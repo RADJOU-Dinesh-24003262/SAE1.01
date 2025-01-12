@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="_min_g_l2___i_u_t___a_i_x-master_2tools_2_r_e_a_d_m_e_8md" kind="file" language="Markdown">
+    <compoundname>README.md</compoundname>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline><highlight class="normal">#<sp/>Outils<sp/>minGL<sp/>2</highlight></codeline>
+<codeline><highlight class="normal">Ce<sp/>répertoire<sp/>contient<sp/>des<sp/>outils<sp/>relatif<sp/>a<sp/>certaines<sp/>fonctionnalitées<sp/>minGL<sp/>2.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">##<sp/>Script<sp/>de<sp/>conversion<sp/>.si2</highlight></codeline>
+<codeline><highlight class="normal">MinGL<sp/>2<sp/>supporte<sp/>le<sp/>chargement<sp/>d&apos;images<sp/>sous<sp/>le<sp/>format<sp/>``.si2``,<sp/>qui<sp/>est<sp/>un<sp/>format<sp/>d&apos;image<sp/>non-compressé,<sp/>type<sp/>bitmap<sp/>avec<sp/>support<sp/>de<sp/>la<sp/>transparence.<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">Un<sp/>script<sp/>Python<sp/>3<sp/>permettant<sp/>de<sp/>transformer<sp/>n&apos;importe<sp/>quelle<sp/>image<sp/>en<sp/>``.si2``<sp/>(et<sp/>inversement)<sp/>vous<sp/>est<sp/>fourni<sp/>ici,<sp/>nommé<sp/>``img2si.py``.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Le<sp/>spécifications<sp/>de<sp/>ce<sp/>format<sp/>de<sp/>fichier<sp/>vous<sp/>sont<sp/>écrites<sp/>dans<sp/>ce<sp/>même<sp/>script<sp/>Python,<sp/>en<sp/>commentaire.</highlight></codeline>
+<codeline></codeline>
+<codeline><highlight class="normal">Ce<sp/>script<sp/>Python<sp/>est<sp/>dépendant<sp/>de<sp/>la<sp/>biliothèque<sp/>Pillow,<sp/>que<sp/>vous<sp/>pouvez<sp/>installer<sp/>via<sp/>pip:</highlight></codeline>
+<codeline><highlight class="normal">```sh</highlight></codeline>
+<codeline><highlight class="normal">python3<sp/>-m<sp/>pip<sp/>install<sp/>--upgrade<sp/>pip</highlight></codeline>
+<codeline><highlight class="normal">python3<sp/>-m<sp/>pip<sp/>install<sp/>--upgrade<sp/>Pillow</highlight></codeline>
+<codeline><highlight class="normal">```</highlight></codeline>
+    </programlisting>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/README.md"/>
+  </compounddef>
+</doxygen>

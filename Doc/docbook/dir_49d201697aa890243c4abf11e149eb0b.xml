@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_49d201697aa890243c4abf11e149eb0b" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/sprites Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/sprites Directory Reference</primary></indexterm>
+Directory dependency graph for sprites:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_49d201697aa890243c4abf11e149eb0b_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_button_8h">button.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_cigarette_8h">cigarette.h</link></para>
+
+<para>Affiche le sprite d&apos;une cigarette. </para>
+</listitem>
+            <listitem><para>file <link linkend="_kebab_8h">kebab.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_monstre_8h">monstre.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_player1_8h">player1.h</link></para>
+
+<para>Affiche le sprite du player 1. </para>
+</listitem>
+            <listitem><para>file <link linkend="_player2_8h">player2.h</link></para>
+
+<para>Affiche le sprite du player 2. </para>
+</listitem>
+            <listitem><para>file <link linkend="_statue_8h">statue.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_teleporter_8h">teleporter.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_wall_8h">wall.h</link></para>
+
+<para>Affiche le sprite d&apos;un bouton. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

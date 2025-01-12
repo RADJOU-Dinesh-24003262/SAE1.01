@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_84a4d493de05c7321a990809d798d00a" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/event Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/event Directory Reference</primary></indexterm>
+Directory dependency graph for event:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_84a4d493de05c7321a990809d798d00a_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_event_8hpp">event.hpp</link></para>
+
+<para>Différents types utile pour le gestionnaire d&apos;événements. </para>
+</listitem>
+            <listitem><para>file <link linkend="_event__manager_8h">event_manager.h</link></para>
+
+<para>Gestionnaire d&apos;événements de minGL. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

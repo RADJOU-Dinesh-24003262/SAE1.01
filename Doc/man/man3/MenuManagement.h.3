@@ -1,0 +1,101 @@
+.TH "/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" 3 "Sun Jan 12 2025" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h
+.SH SYNOPSIS
+.br
+.PP
+\fC#include 'mingl/mingl\&.h'\fP
+.br
+\fC#include 'vector'\fP
+.br
+\fC#include 'mingl/shape/rectangle\&.h'\fP
+.br
+\fC#include 'sprites/button\&.h'\fP
+.br
+\fC#include 'mingl/gui/text\&.h'\fP
+.br
+\fC#include <fstream>\fP
+.br
+\fC#include <string>\fP
+.br
+
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "void \fBInterfaceMenuP\fP (\fBMinGL\fP &window, int mat_x, int mat_y)"
+.br
+.ti -1c
+.RI "void \fBInterfacePause\fP (\fBMinGL\fP &window, int mat_x, int mat_y)"
+.br
+.ti -1c
+.RI "void \fBInterfaceOptions\fP (\fBMinGL\fP &window, int mat_x, int mat_y)"
+.br
+.ti -1c
+.RI "void \fBInterfaceCredits\fP (\fBMinGL\fP &window, int mat_x, int mat_y)"
+.br
+.ti -1c
+.RI "void \fBevents\fP (\fBMinGL\fP &window, vector< tuple< vector< int >, vector< int >, int > > &clickablepool, int &menuid)"
+.br
+.RI "Handle user input events such as mouse movement and clicks for menu navigation\&. "
+.in -1c
+.SS "Variables"
+
+.in +1c
+.ti -1c
+.RI "\fBnsGraphics::Vec2D\fP \fBrectPos\fP"
+.br
+.ti -1c
+.RI "\fBnsGraphics::RGBAcolor\fP \fBrectColor\fP = \fBnsGraphics::KCyan\fP"
+.br
+.in -1c
+.SH "Function Documentation"
+.PP 
+.SS "void events (\fBMinGL\fP & window, vector< tuple< vector< int >, vector< int >, int > > & clickablepool, int & menuid)"
+
+.PP
+Handle user input events such as mouse movement and clicks for menu navigation\&. 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP : Mingl window 
+.br
+\fIclickablepool\fP : list of clickable areas with their coordinates and associated menu ID 
+.br
+\fI[in/out]\fP menuid : current menu ID, which is updated based on user clicks 
+.RE
+.PP
+
+.PP
+Definition at line \fB117\fP of file \fBMenuManagement\&.h\fP\&.
+.SS "void InterfaceCredits (\fBMinGL\fP & window, int mat_x, int mat_y)"
+
+.PP
+Definition at line \fB97\fP of file \fBMenuManagement\&.h\fP\&.
+.SS "void InterfaceMenuP (\fBMinGL\fP & window, int mat_x, int mat_y)"
+
+.PP
+Definition at line \fB33\fP of file \fBMenuManagement\&.h\fP\&.
+.SS "void InterfaceOptions (\fBMinGL\fP & window, int mat_x, int mat_y)"
+
+.PP
+Definition at line \fB69\fP of file \fBMenuManagement\&.h\fP\&.
+.SS "void InterfacePause (\fBMinGL\fP & window, int mat_x, int mat_y)"
+
+.PP
+Definition at line \fB54\fP of file \fBMenuManagement\&.h\fP\&.
+.SH "Variable Documentation"
+.PP 
+.SS "\fBnsGraphics::RGBAcolor\fP rectColor = \fBnsGraphics::KCyan\fP"
+
+.PP
+Definition at line \fB108\fP of file \fBMenuManagement\&.h\fP\&.
+.SS "\fBnsGraphics::Vec2D\fP rectPos"
+
+.PP
+Definition at line \fB107\fP of file \fBMenuManagement\&.h\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

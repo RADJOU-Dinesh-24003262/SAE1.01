@@ -1,8 +1,8 @@
-.TH "/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.TH "/home/Theo/Téléchargements/sae/Jeu/game.h" 3 "Sun Jan 12 2025" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
-/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h \- Set of usefull functions for the game\&.  
+/home/Theo/Téléchargements/sae/Jeu/game.h \- Set of usefull functions for the game\&.  
 
 .SH SYNOPSIS
 .br
@@ -40,24 +40,31 @@
 .ti -1c
 .RI "void \fBSprite\fP (\fBMinGL\fP &window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, std::string sprite)"
 .br
+.RI "cette fonction affiche un sprite dans la fenetre "
 .ti -1c
 .RI "void \fBDisplayGrid\fP (\fBMinGL\fP &window, const \fBCMat\fP &mat, std::tuple< int, int > Screen_size)"
 .br
+.RI "cette fonction affiche la grille sur MinGl "
 .ti -1c
 .RI "void \fBMenuP\fP (\fBMinGL\fP &window, std::vector< std::tuple< std::vector< int >, std::vector< int >, int > > clickablepool, std::tuple< int, int > Screen_size, int &menuid, std::chrono::time_point< std::chrono::steady_clock > start)"
 .br
+.RI "cette affiche le menu principal sur MinGl "
 .ti -1c
 .RI "void \fBOptions\fP (\fBMinGL\fP &window, std::vector< std::tuple< std::vector< int >, std::vector< int >, int > > clickablepool, std::tuple< int, int > Screen_size, int &menuid, std::chrono::time_point< std::chrono::steady_clock > start)"
 .br
+.RI "cette fonction affiche les options du jeux "
 .ti -1c
 .RI "void \fBCredits\fP (\fBMinGL\fP &window, std::vector< std::tuple< std::vector< int >, std::vector< int >, int > > clickablepool, std::tuple< int, int > Screen_size, int &menuid, std::chrono::time_point< std::chrono::steady_clock > start)"
 .br
+.RI "cette affiche les credits "
 .ti -1c
 .RI "void \fBPause\fP (\fBMinGL\fP &window, std::vector< std::tuple< std::vector< int >, std::vector< int >, int > > clickablepool, std::tuple< int, int > Screen_size, int &menuid, std::chrono::time_point< std::chrono::steady_clock > start)"
 .br
+.RI "cette fonction affiche le menu pause "
 .ti -1c
 .RI "void \fBGameLoop\fP (\fBMinGL\fP &window, std::vector< std::tuple< std::vector< int >, std::vector< int >, int > >clickablepool, \fBCMat\fP Mat, int menuid, unsigned PartyNum, bool Key_UP, bool Key_DOWN, bool Key_RIGHT, bool Key_LEFT, std::tuple< int, int > Screen_size, \fBCMyParamV2\fP param, bool Victory, unsigned KMaxPartyNum, \fBCPosition\fP PosPlayer1, \fBCPosition\fP PosPlayer2, \fBCPosition\fP PosTP1, \fBCPosition\fP PosTP2, bool Player1Turn, std::pair< char, \fBCPosition\fP > N_move, std::vector< char > objetJ1, std::vector< char > objetJ2, int scoreJ1, int scoreJ2, std::vector< \fBCPosition\fP > PosMonster)"
 .br
+.RI "cette fonction gere la boucle principale du jeu "
 .ti -1c
 .RI "int \fBppal\fP ()"
 .br
@@ -104,6 +111,97 @@ Increments the score for each item in the list\&.
 .RE
 .PP
 
+.SS "void Credits (\fBMinGL\fP & window, std::vector< std::tuple< std::vector< int >, std::vector< int >, int > > clickablepool, std::tuple< int, int > Screen_size, int & menuid, std::chrono::time_point< std::chrono::steady_clock > start)"
+
+.PP
+cette affiche les credits 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP La fenêtre dans laquelle le menu sera affiché 
+.br
+\fIclickablepool\fP Un vecteur d'éléments cliquables 
+.br
+\fIScreen_size\fP La taille de l'écran sous forme de tuple (largeur, hauteur) 
+.br
+\fImenuid\fP L'identifiant du menu actuel 
+.br
+\fIstart\fP Le moment où l'affichage du menu a commencé 
+.RE
+.PP
+
+.SS "void DisplayGrid (\fBMinGL\fP & window, const \fBCMat\fP & mat, std::tuple< int, int > Screen_size)"
+
+.PP
+cette fonction affiche la grille sur MinGl 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP La fenêtre dans laquelle la grille sera affichée 
+.br
+\fImat\fP La matrice représentant la grille à afficher 
+.br
+\fIScreen_size\fP La taille de l'écran sous forme de tuple (largeur, hauteur) 
+.RE
+.PP
+
+.SS "void GameLoop (\fBMinGL\fP & window, std::vector< std::tuple< std::vector< int >, std::vector< int >, int > > clickablepool, \fBCMat\fP Mat, int menuid, unsigned PartyNum, bool Key_UP, bool Key_DOWN, bool Key_RIGHT, bool Key_LEFT, std::tuple< int, int > Screen_size, \fBCMyParamV2\fP param, bool Victory, unsigned KMaxPartyNum, \fBCPosition\fP PosPlayer1, \fBCPosition\fP PosPlayer2, \fBCPosition\fP PosTP1, \fBCPosition\fP PosTP2, bool Player1Turn, std::pair< char, \fBCPosition\fP > N_move, std::vector< char > objetJ1, std::vector< char > objetJ2, int scoreJ1, int scoreJ2, std::vector< \fBCPosition\fP > PosMonster)"
+
+.PP
+cette fonction gere la boucle principale du jeu 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP La fenêtre dans laquelle le jeu sera affiché 
+.br
+\fIclickablepool\fP Un vecteur d'éléments cliquables 
+.br
+\fIMat\fP La matrice représentant la carte du jeu 
+.br
+\fImenuid\fP L'identifiant du menu actuel 
+.br
+\fIPartyNum\fP Le nombre de partie 
+.br
+\fIKey_UP\fP L'état de la touche UP 
+.br
+\fIKey_DOWN\fP L'état de la touche DOWN 
+.br
+\fIKey_RIGHT\fP L'état de la touche RIGHT 
+.br
+\fIKey_LEFT\fP L'état de la touche LEFT 
+.br
+\fIScreen_size\fP La taille de l'écran sous forme de tuple (largeur, hauteur) 
+.br
+\fIparam\fP Paramètres de configuration 
+.br
+\fIVictory\fP Indicateur de victoire 
+.br
+\fIKMaxPartyNum\fP Nombre maximum de tours dans une partie 
+.br
+\fIPosPlayer1\fP La position du joueur 1 
+.br
+\fIPosPlayer2\fP La position du joueur 2 
+.br
+\fIPosTP1\fP La position du premier téléporteur 
+.br
+\fIPosTP2\fP La position du deuxième téléporteur 
+.br
+\fIPlayer1Turn\fP Indicateur permettant de savoir le tour de quel joueur 
+.br
+\fIN_move\fP Le prochain mouvement du joueur sous forme de tuple (direction, position) 
+.br
+\fIobjetJ1\fP Liste des objets ramassé par joueur 1 
+.br
+\fIobjetJ2\fP Liste des objets ramassé par joueur 2 
+.br
+\fIscoreJ1\fP Le score du joueur 1 
+.br
+\fIscoreJ2\fP Le score du joueur 2 
+.br
+\fIPosMonster\fP Liste des positions des monstres 
+.RE
+.PP
+
 .SS "bool IsCollectible (const \fBCMat\fP & Mat, const char & Move, const \fBCPosition\fP & Pos, const \fBCMyParamV2\fP & Param)"
 
 .PP
@@ -145,6 +243,25 @@ Test if the Move made by the player is legal, this mean if there is no wall and 
 \fBReturns\fP
 .RS 4
 true if the Move can be made 
+.RE
+.PP
+
+.SS "void MenuP (\fBMinGL\fP & window, std::vector< std::tuple< std::vector< int >, std::vector< int >, int > > clickablepool, std::tuple< int, int > Screen_size, int & menuid, std::chrono::time_point< std::chrono::steady_clock > start)"
+
+.PP
+cette affiche le menu principal sur MinGl 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP La fenêtre où il sera affiché 
+.br
+\fIclickablepool\fP Un vecteur d'éléments cliquables, où chaque élément est un tuple contenant des informations sur les zones cliquables 
+.br
+\fIScreen_size\fP La taille de l'écran sous forme de tuple (largeur, hauteur) 
+.br
+\fImenuid\fP L'identifiant du menu actuel 
+.br
+\fIstart\fP Le moment où l'affichage du menu a commencé 
 .RE
 .PP
 
@@ -195,6 +312,42 @@ returns the contents of the next cell and its position in the matrix (even with 
 .RE
 .PP
 
+.SS "void Options (\fBMinGL\fP & window, std::vector< std::tuple< std::vector< int >, std::vector< int >, int > > clickablepool, std::tuple< int, int > Screen_size, int & menuid, std::chrono::time_point< std::chrono::steady_clock > start)"
+
+.PP
+cette fonction affiche les options du jeux 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP La fenêtre dans laquelle le menu sera affiché 
+.br
+\fIclickablepool\fP Un vecteur d'éléments cliquables 
+.br
+\fIScreen_size\fP La taille de l'écran 
+.br
+\fImenuid\fP L'identifiant du menu actuel 
+.br
+\fIstart\fP Le moment où l'affichage du menu a commencé 
+.RE
+.PP
+
+.SS "void Pause (\fBMinGL\fP & window, std::vector< std::tuple< std::vector< int >, std::vector< int >, int > > clickablepool, std::tuple< int, int > Screen_size, int & menuid, std::chrono::time_point< std::chrono::steady_clock > start)"
+
+.PP
+cette fonction affiche le menu pause 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP La fenêtre dans laquelle le menu sera affiché 
+.br
+\fIclickablepool\fP Un vecteur d'éléments cliquables 
+.br
+\fImenuid\fP L'identifiant du menu actuel 
+.br
+\fIstart\fP Le moment où l'affichage du menu a commencé 
+.RE
+.PP
+
 .SS "int ppal (void)"
 
 .PP
@@ -208,6 +361,31 @@ new main
 
 .PP
 Definition at line \fB427\fP of file \fBgame\&.cpp\fP\&.
+.SS "void Sprite (\fBMinGL\fP & window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, std::string sprite)"
+
+.PP
+cette fonction affiche un sprite dans la fenetre 
+.PP
+\fBParameters\fP
+.RS 4
+\fIwindow\fP La fenêtre dans laquelle le sprite sera affiché 
+.br
+\fIgrid_x\fP La position X dans la grille 
+.br
+\fIgrid_y\fP La position Y dans la grille 
+.br
+\fIpos_x\fP La position X dans la fenêtre 
+.br
+\fIpos_y\fP La position Y dans la fenêtre 
+.br
+\fImat_x\fP La largeur du sprite dans la grille 
+.br
+\fImat_y\fP La hauteur du sprite dans la grille 
+.br
+\fIsprite\fP Le nom du fichier du sprite à afficher 
+.RE
+.PP
+
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.
+Generated automatically by Doxygen for My Project from the source code\&.

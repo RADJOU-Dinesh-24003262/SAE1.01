@@ -19,7 +19,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="84" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" bodystart="84" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="84" column="17" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" bodystart="84" bodyend="-1"/>
         <referencedby refid="classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027" compoundref="cexception_8cpp" startline="19" endline="23">_Edit</referencedby>
       </memberdef>
       <memberdef kind="variable" id="classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da" prot="protected" static="no" mutable="no">
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="89" column="14" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" bodystart="89" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="89" column="14" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" bodystart="89" bodyend="-1"/>
         <referencedby refid="classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027" compoundref="cexception_8cpp" startline="19" endline="23">_Edit</referencedby>
       </memberdef>
       </sectiondef>
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="52" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="28" bodyend="31"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="52" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="28" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="classns_exception_1_1_c_exception_1a8b95a8f59d50a7ff3b67423c83cb8501" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="58" column="13"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="58" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classns_exception_1_1_c_exception_1aef8e3d1a4e22ec7045d7d0b14d8b968a" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>const std::string &amp;</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="64" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="33" bodyend="36"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="64" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="33" bodyend="36"/>
       </memberdef>
       <memberdef kind="function" id="classns_exception_1_1_c_exception_1adf06d1598420c7b60c1b134bf2a946c2" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
         <type>unsigned</type>
@@ -126,7 +126,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="70" column="14" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="38" bodyend="41"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="70" column="14" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="38" bodyend="41"/>
       </memberdef>
       <memberdef kind="function" id="classns_exception_1_1_c_exception_1a5ef0ababcc3ffc93f70211de1122c9a8" prot="public" static="no" const="yes" explicit="no" inline="yes" noexcept="yes" virt="virtual">
         <type>const char *</type>
@@ -141,7 +141,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="76" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="43" bodyend="46"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="76" column="24" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp" bodystart="43" bodyend="46"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -174,7 +174,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="79" column="26" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/cexception.cpp" bodystart="19" bodyend="23"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="79" column="26" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/exception/cexception.cpp" bodystart="19" bodyend="23"/>
         <references refid="classns_exception_1_1_c_exception_1a9610371f15e2c6d99034c46b632d51da" compoundref="cexception_8h" startline="89">m_CodErr</references>
         <references refid="classns_exception_1_1_c_exception_1a96c2d653703b2879ff8050cc78bc450a" compoundref="cexception_8h" startline="84">m_Libelle</references>
       </memberdef>
@@ -218,7 +218,7 @@
         <label>std::exception</label>
       </node>
     </collaborationgraph>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="42" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" bodystart="43" bodyend="91"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" line="42" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h" bodystart="43" bodyend="91"/>
     <listofallmembers>
       <member refid="classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027" prot="protected" virt="virtual"><scope>nsException::CException</scope><name>_Edit</name></member>
       <member refid="classns_exception_1_1_c_exception_1aeacba2e2180dd8c00c643e1a67cba423" prot="public" virt="non-virtual"><scope>nsException::CException</scope><name>CException</name></member>

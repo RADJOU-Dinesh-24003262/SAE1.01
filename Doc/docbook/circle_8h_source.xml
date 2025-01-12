@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_circle_8h_source" xml:lang="en-US">
 <title>circle.h</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h</primary></indexterm>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_circle_8h_source_1l00001"/>00001 
 <anchor xml:id="_circle_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;CIRCLE_H</emphasis>
 <anchor xml:id="_circle_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;CIRCLE_H</emphasis>
@@ -26,7 +26,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_circle_8h_source_1l00038"/><link linkend="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a8a3d4b3560b97d5e11b81b58e2808393">00038</link> &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_circle_1a65ce20b6f5c10a111c1542f06154a235a8a3d4b3560b97d5e11b81b58e2808393">TRANSITION_RADIUS</link>,&#32;
 <anchor xml:id="_circle_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;};
 <anchor xml:id="_circle_8h_source_1l00040"/>00040 
-<anchor xml:id="_circle_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_circle_1a06b1c1c7ea1e4ec8228d929e7b3966ee">Circle</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&amp;&#32;radius,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;fillColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;borderColor&#32;=&#32;nsGraphics::KTransparent);
+<anchor xml:id="_circle_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_circle_1a06b1c1c7ea1e4ec8228d929e7b3966ee">Circle</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position,&#32;<emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">unsigned</emphasis>&amp;&#32;radius,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;fillColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;borderColor&#32;=&#32;<link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link>);
 <anchor xml:id="_circle_8h_source_1l00050"/>00050 
 <anchor xml:id="_circle_8h_source_1l00055"/><link linkend="_classns_shape_1_1_circle_1a2446e688c063dcb2693adfcfacbb2804">00055</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classns_shape_1_1_circle_1a2446e688c063dcb2693adfcfacbb2804">~Circle</link>()&#32;<emphasis role="keyword">override</emphasis>&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
 <anchor xml:id="_circle_8h_source_1l00056"/>00056 

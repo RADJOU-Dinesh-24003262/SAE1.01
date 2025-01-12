@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SAE 1.01: /home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py Source File</title>
+<title>My Project: /home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">SAE 1.01
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -62,14 +62,14 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_79f149efd30d37738a8a961658db751b.html">Téléchargements</a></li><li class="navelem"><a class="el" href="dir_9bc27c3a15165b903513c0caa2551462.html">sae</a></li><li class="navelem"><a class="el" href="dir_6776d252bbc60daf06bcfa47d0063ff8.html">SAE_JEU</a></li><li class="navelem"><a class="el" href="dir_c1b858e4ccae31fa1f3a3631d9de3e1a.html">MinGL2_IUT_AIX-master</a></li><li class="navelem"><a class="el" href="dir_08534f0927ef6fcc5317d7948e98c479.html">tools</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_79f149efd30d37738a8a961658db751b.html">Téléchargements</a></li><li class="navelem"><a class="el" href="dir_9bc27c3a15165b903513c0caa2551462.html">sae</a></li><li class="navelem"><a class="el" href="dir_a5edcea1b424b83dfd21c4efe8151e4f.html">MinGL2_IUT_AIX-master</a></li><li class="navelem"><a class="el" href="dir_699f6035ef350bfba7fe70db856630d1.html">tools</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">img2si.py</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="comment">#!/usr/bin/env python3</span></div>
+<a href="img2si_8py.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno"><a class="line" href="namespaceimg2si.html">    1</a></span><span class="comment">#!/usr/bin/env python3</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="keyword">from</span> array <span class="keyword">import</span> array</div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">import</span> argparse</div>
@@ -96,13 +96,13 @@ $(function() {
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="comment"># &quot;File version&quot;, &quot;Pixel count&quot; and &quot;Image width&quot; entries are little-endian, unsigned numbers.</span></div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="keyword">def </span>is_file_si2(filePath):</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno"><a class="line" href="namespaceimg2si.html#ae37b6f3bba8bbf990c6f8c84cd2a79bd">   28</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceimg2si.html#ae37b6f3bba8bbf990c6f8c84cd2a79bd">is_file_si2</a>(filePath):</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="comment"># Check the magic number</span></div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">with</span> open(filePath, <span class="stringliteral">&#39;rb&#39;</span>) <span class="keyword">as</span> file:</div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        <span class="keywordflow">return</span> file.read(2) == b<span class="stringliteral">&#39;SI&#39;</span></div>
 <div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span> </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="keyword">def </span>convert_from_si2(source, output):</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno"><a class="line" href="namespaceimg2si.html#a86753e07bbef076355a407a398a418bf">   34</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceimg2si.html#a86753e07bbef076355a407a398a418bf">convert_from_si2</a>(source, output):</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="comment"># Print summary</span></div>
 <div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    print(<span class="stringliteral">&#39;Source image: .si2&#39;</span>)</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>    _, outExtension = os.path.splitext(output)</div>
@@ -127,7 +127,7 @@ $(function() {
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    img.save(output)</div>
 <div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span> </div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span><span class="keyword">def </span>convert_to_si2(source, output):</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno"><a class="line" href="namespaceimg2si.html#a07d658824b99acc387c6444863bebd5c">   59</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceimg2si.html#a07d658824b99acc387c6444863bebd5c">convert_to_si2</a>(source, output):</div>
 <div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="comment"># Print summary</span></div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    _, outExtension = os.path.splitext(source)</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    print(<span class="stringliteral">&#39;Source image: {}&#39;</span>.format(outExtension))</div>
@@ -163,7 +163,7 @@ $(function() {
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>                file.write(bytes(imageData[x, y]))</div>
 <div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span> </div>
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span> </div>
-<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span><span class="keyword">def </span>main():</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno"><a class="line" href="namespaceimg2si.html#afce854986e241b3a756dc2eb0a333f49">   95</a></span><span class="keyword">def </span><a class="code hl_function" href="namespaceimg2si.html#afce854986e241b3a756dc2eb0a333f49">main</a>():</div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <span class="comment"># Setup argument parser</span></div>
 <div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    parser = argparse.ArgumentParser(description=<span class="stringliteral">&#39;This tool converts images compatible with PIL to the minGL 2 Simple Image format (.si2), and vice versa.&#39;</span>)</div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    parser.add_argument(<span class="stringliteral">&#39;-v&#39;</span>, <span class="stringliteral">&#39;--version&#39;</span>, action=<span class="stringliteral">&#39;version&#39;</span>, version=<span class="stringliteral">&#39;%(prog)s 1.0&#39;</span>)</div>
@@ -179,12 +179,12 @@ $(function() {
 <div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        exit(<span class="stringliteral">&#39;&quot;{}&quot;\nThe specified path does not exist.&#39;</span>.format(source))</div>
 <div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span> </div>
 <div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    <span class="comment"># Check if source file is in the .si2 format</span></div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    isSourceSi2 = is_file_si2(source)</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    isSourceSi2 = <a class="code hl_function" href="namespaceimg2si.html#ae37b6f3bba8bbf990c6f8c84cd2a79bd">is_file_si2</a>(source)</div>
 <div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span> </div>
 <div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    <span class="keywordflow">if</span> isSourceSi2:</div>
-<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        convert_from_si2(source, output)</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        <a class="code hl_function" href="namespaceimg2si.html#a86753e07bbef076355a407a398a418bf">convert_from_si2</a>(source, output)</div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="keywordflow">else</span>:</div>
-<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        convert_to_si2(source, output)</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>        <a class="code hl_function" href="namespaceimg2si.html#a07d658824b99acc387c6444863bebd5c">convert_to_si2</a>(source, output)</div>
 <div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span> </div>
 <div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>    print(<span class="stringliteral">&#39;Done!&#39;</span>)</div>
 <div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span> </div>
@@ -195,7 +195,11 @@ $(function() {
 <div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span> </div>
 <div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span> </div>
 <div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span><span class="keywordflow">if</span> __name__ == <span class="stringliteral">&quot;__main__&quot;</span>:</div>
-<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    main()</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>    <a class="code hl_function" href="namespaceimg2si.html#afce854986e241b3a756dc2eb0a333f49">main</a>()</div>
+<div class="ttc" id="anamespaceimg2si_html_a07d658824b99acc387c6444863bebd5c"><div class="ttname"><a href="namespaceimg2si.html#a07d658824b99acc387c6444863bebd5c">img2si.convert_to_si2</a></div><div class="ttdeci">def convert_to_si2(source, output)</div><div class="ttdef"><b>Definition:</b> <a href="img2si_8py_source.html#l00059">img2si.py:59</a></div></div>
+<div class="ttc" id="anamespaceimg2si_html_a86753e07bbef076355a407a398a418bf"><div class="ttname"><a href="namespaceimg2si.html#a86753e07bbef076355a407a398a418bf">img2si.convert_from_si2</a></div><div class="ttdeci">def convert_from_si2(source, output)</div><div class="ttdef"><b>Definition:</b> <a href="img2si_8py_source.html#l00034">img2si.py:34</a></div></div>
+<div class="ttc" id="anamespaceimg2si_html_ae37b6f3bba8bbf990c6f8c84cd2a79bd"><div class="ttname"><a href="namespaceimg2si.html#ae37b6f3bba8bbf990c6f8c84cd2a79bd">img2si.is_file_si2</a></div><div class="ttdeci">def is_file_si2(filePath)</div><div class="ttdef"><b>Definition:</b> <a href="img2si_8py_source.html#l00028">img2si.py:28</a></div></div>
+<div class="ttc" id="anamespaceimg2si_html_afce854986e241b3a756dc2eb0a333f49"><div class="ttname"><a href="namespaceimg2si.html#afce854986e241b3a756dc2eb0a333f49">img2si.main</a></div><div class="ttdeci">def main()</div><div class="ttdef"><b>Definition:</b> <a href="img2si_8py_source.html#l00095">img2si.py:95</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

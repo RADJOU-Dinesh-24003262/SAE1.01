@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__r_e_a_d_m_e" kind="page">
+    <compoundname>md__home_Theo_Téléchargements_sae_README</compoundname>
+    <title>Projet SAE 1.01 - Lethal</title>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+<sect1 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__r_e_a_d_m_e_1autotoc_md1">
+<title>Contexte du Projet</title>
+<para>Dans le cadre de cette <bold>SAE</bold>, notre équipe a été chargée d&apos;améliorer un jeu d&apos;aventure initialement développé lors des TPs 10. Le but était d&apos;ajouter de nouvelles fonctionnalités, et de coder tout en ayant en esprit de fournir une documentation complète du projet avec Doxygen. Nous avons également mis en place des améliorations graphique avec MinGL2.</para>
+</sect1>
+<sect1 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__r_e_a_d_m_e_1autotoc_md2">
+<title>Objectifs</title>
+<para>Les objectifs que nous souhaitons pour ce projet les suivants :</para>
+<para><orderedlist>
+<listitem><para><bold>Blinder le code existant</bold> :<itemizedlist>
+<listitem><para>Sécurisation des indices (pas de débordements de tableaux) et gestion des erreurs.</para>
+</listitem><listitem><para>Ajout de vérification qui permet d&apos;éviter au 1er joueur qu&apos;il joue à la place du deuxième joueur.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Ajout de nouvelles fonctionnalités</bold> :<itemizedlist>
+<listitem><para>Lecture de fichiers de configuration <computeroutput>config.yaml.</computeroutput></para>
+</listitem><listitem><para>Générer des murs de manière procédurale</para>
+</listitem><listitem><para>Ajout d&apos;un monstre qui a pour but de suivre un joueur proche et de le manger.</para>
+</listitem><listitem><para>Ajout de safe zones où le monstre n&apos;aura pas le droit d&apos;attaquer le joueur</para>
+</listitem><listitem><para>Ajout d&apos;un système de score dans le jeu.</para>
+</listitem><listitem><para>Ajout de téléporteur dans le jeu qui permettra au joueur de se déplacer plus rapidement.</para>
+</listitem><listitem><para>(Ajout de skin pour les personages)</para>
+</listitem><listitem><para>(Ajout de power up dans le jeu) <linebreak/>
+</para>
+</listitem><listitem><para>(Implémentation d&apos;un système de high scores.)</para>
+</listitem><listitem><para>Réalisation d&apos;un Lore</para>
+</listitem><listitem><para>Utilisation de <bold><ref refid="class_min_g_l" kindref="compound">MinGL</ref></bold> pour une meuilleure expérience de jeu</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Documentation avec Doxygen</bold> : Génération d&apos;une documentation à l&apos;aide de Doxygen grâce aau commentaires dans le code</para>
+</listitem></orderedlist>
+</para>
+<para><hruler/>
+ </para>
+</sect1>
+<sect1 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__r_e_a_d_m_e_1autotoc_md4">
+<title>Comment jouer au jeu</title>
+<para>Ce jeu se joue exclusivement sur <bold>Linux</bold>. Pour y jouer, vous devez impérativement être <bold>deux joueurs</bold>. Vous jouez tous les 2 en temps réel dans la fenêtre MinGL2 à l&apos;aide des touches du clavier. L’objectif du jeu est d&apos;avoir le maximum de points en ramassant les objets, tout en évitant de se faire attraper par le monstre. Les touches utilisées peuvent être personnalisées, tout comme la taille de la carte.</para>
+<sect2 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__r_e_a_d_m_e_1autotoc_md5">
+<title>Règles du jeu :</title>
+<para><orderedlist>
+<listitem><para><bold>Multijoueur</bold> : Le jeu se joue exclusivement à <bold>deux joueurs</bold>.</para>
+</listitem><listitem><para><bold>Objectifs</bold> :<itemizedlist>
+<listitem><para>Ramasser des objets dispersés sur la carte pour accumuler des points.</para>
+</listitem><listitem><para>Éviter d’être tué par le monstre qui rôde dans la zone.</para>
+</listitem><listitem><para>Obtenir plus de points que l&apos;autre joueur.</para>
+</listitem></itemizedlist>
+</para>
+</listitem><listitem><para><bold>Gagner</bold> : Pour gagner, vous devez ramasser un total de points supérieur à **(longueur de la carte + largeur de la carte)** * <bold>15</bold>, ou bien avoir plus de point que l&apos;adversaire si le temps imparti est dépassé.<itemizedlist>
+<listitem><para>Une fois ce total atteint, vous devez ramener ces objets à votre maison pour valider vos points.</para>
+</listitem></itemizedlist>
+</para>
+</listitem></orderedlist>
+</para>
+</sect2>
+<sect2 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__r_e_a_d_m_e_1autotoc_md6">
+<title>Mécanismes du jeu :</title>
+<para><itemizedlist>
+<listitem><para><bold>Tour de jeu</bold> : Les deux joueurs jouent tous les 2 en temps réel dans la fenêtre MinGL2.</para>
+</listitem><listitem><para><bold>Personnalisation des touches</bold> : Les touches qui permettant de se déplacer peuvent être modifié.</para>
+</listitem><listitem><para><bold>Taille de la carte</bold> : Vous pouvez modifier la taille de la carte sur le fichier config, ce qui peut augmenter ou diminuer la difficulté du jeu. Une carte plus grande augmente le nombre d’objets à ramasser, mais tout de même à faire attention, la portée du monstre augmente avec le monstre.</para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+<sect2 id="md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__r_e_a_d_m_e_1autotoc_md7">
+<title>Stratégies :</title>
+<para><itemizedlist>
+<listitem><para><bold>Ramasser les objets</bold> : Explorez la carte pour ramasser les objets tout en évitant le monstre.</para>
+</listitem><listitem><para><bold>Calculer votre score</bold> : Assurez-vous de ramasser suffisamment d’objets pour atteindre le score requis avant que l’autre joueur gagne ou le monstre ne vous élimine.</para>
+</listitem><listitem><para><bold>Coopérez</bold> : Effectuez des aliances pour éviter de vous faire manger par le monstre. </para>
+</listitem></itemizedlist>
+</para>
+</sect2>
+</sect1>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/README.md"/>
+  </compounddef>
+</doxygen>

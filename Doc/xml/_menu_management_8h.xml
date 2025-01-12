@@ -7,10 +7,12 @@
     <includes refid="rectangle_8h" local="yes">mingl/shape/rectangle.h</includes>
     <includes refid="button_8h" local="yes">sprites/button.h</includes>
     <includes refid="text_8h" local="yes">mingl/gui/text.h</includes>
-    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/Jeu/game.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</label>
+        <label>/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</label>
         <link refid="_menu_management_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -21,6 +23,10 @@
         <childnode refid="21" relation="include">
         </childnode>
         <childnode refid="23" relation="include">
+        </childnode>
+        <childnode refid="25" relation="include">
+        </childnode>
+        <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="17">
@@ -149,7 +155,7 @@
       </node>
       <node id="21">
         <label>sprites/button.h</label>
-        <link refid="button_8h_source"/>
+        <link refid="button_8h"/>
         <childnode refid="18" relation="include">
         </childnode>
         <childnode refid="22" relation="include">
@@ -157,6 +163,9 @@
       </node>
       <node id="8">
         <label>GL/freeglut.h</label>
+      </node>
+      <node id="25">
+        <label>fstream</label>
       </node>
       <node id="12">
         <label>iostream</label>
@@ -182,14 +191,14 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</label>
+        <label>/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</label>
         <link refid="_menu_management_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
     </invincdepgraph>
       <sectiondef kind="var">
@@ -204,21 +213,23 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" line="93" column="19" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" bodystart="93" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" line="107" column="19" bodyfile="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" bodystart="107" bodyend="-1"/>
+        <referencedby refid="_menu_management_8h_1a4502ca76132916f74305fe40f59ae97d" compoundref="_menu_management_8h" startline="117" endline="156">events</referencedby>
       </memberdef>
       <memberdef kind="variable" id="_menu_management_8h_1a8a2590fbfc4686aa615f6ca9824224f9" prot="public" static="no" mutable="no">
         <type><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref></type>
         <definition>nsGraphics::RGBAcolor rectColor</definition>
         <argsstring></argsstring>
         <name>rectColor</name>
-        <initializer>= nsGraphics::KCyan</initializer>
+        <initializer>= <ref refid="namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad" kindref="member">nsGraphics::KCyan</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" line="94" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" bodystart="94" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" line="108" column="23" bodyfile="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" bodystart="108" bodyend="-1"/>
+        <referencedby refid="_menu_management_8h_1a4502ca76132916f74305fe40f59ae97d" compoundref="_menu_management_8h" startline="117" endline="156">events</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -245,7 +256,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" line="31" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" bodystart="31" bodyend="43"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" line="33" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" bodystart="33" bodyend="45"/>
+        <references refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" compoundref="glut__font_8h" startline="31">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</references>
+        <references refid="button_8h_1a9139d7539d77e69aa7b38e4976a62306" compoundref="button_8h" startline="28" endline="40">Button</references>
+        <references refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" compoundref="rgbacolor_8h" startline="157">nsGraphics::KBlack</references>
+        <references refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" compoundref="rgbacolor_8h" startline="166">nsGraphics::KGray</references>
+        <references refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" compoundref="rgbacolor_8h" startline="158">nsGraphics::KWhite</references>
+        <referencedby refid="game_8cpp_1a0845b941aa45002f46dd1653274997dc" compoundref="game_8cpp" startline="201" endline="219">MenuP</referencedby>
       </memberdef>
       <memberdef kind="function" id="_menu_management_8h_1ab2a2e33bb6aff7164d540d7a50bdd38f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -270,7 +287,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" line="52" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" bodystart="52" bodyend="59"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" line="54" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" bodystart="54" bodyend="61"/>
+        <references refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" compoundref="rgbacolor_8h" startline="161">nsGraphics::KBlue</references>
+        <references refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" compoundref="rgbacolor_8h" startline="166">nsGraphics::KGray</references>
+        <referencedby refid="game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626" compoundref="game_8cpp" startline="256" endline="273">Pause</referencedby>
       </memberdef>
       <memberdef kind="function" id="_menu_management_8h_1afc733d7fa1650fe258aa4fd3c704b799" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -295,7 +315,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" line="67" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" bodystart="67" bodyend="76"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" line="69" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" bodystart="69" bodyend="89"/>
+        <references refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceab87b397237206af607190619163ec1e6" compoundref="glut__font_8h" startline="33">nsGui::GlutFont::BITMAP_HELVETICA_12</references>
+        <references refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" compoundref="rgbacolor_8h" startline="166">nsGraphics::KGray</references>
+        <references refid="namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61" compoundref="rgbacolor_8h" startline="159">nsGraphics::KRed</references>
+        <references refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" compoundref="rgbacolor_8h" startline="175">nsGraphics::KTransparent</references>
+        <references refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" compoundref="rgbacolor_8h" startline="158">nsGraphics::KWhite</references>
+        <referencedby refid="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" compoundref="game_8cpp" startline="221" endline="237">Options</referencedby>
       </memberdef>
       <memberdef kind="function" id="_menu_management_8h_1ae72c2fefee518b729a3c7a320d27265a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -320,7 +346,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" line="84" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" bodystart="84" bodyend="90"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" line="97" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" bodystart="97" bodyend="104"/>
+        <references refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" compoundref="glut__font_8h" startline="31">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</references>
+        <references refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" compoundref="rgbacolor_8h" startline="166">nsGraphics::KGray</references>
+        <references refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" compoundref="rgbacolor_8h" startline="175">nsGraphics::KTransparent</references>
+        <references refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" compoundref="rgbacolor_8h" startline="158">nsGraphics::KWhite</references>
+        <referencedby refid="game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4" compoundref="game_8cpp" startline="239" endline="254">Credits</referencedby>
       </memberdef>
       <memberdef kind="function" id="_menu_management_8h_1a4502ca76132916f74305fe40f59ae97d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -372,7 +403,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" line="103" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h" bodystart="103" bodyend="142"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" line="117" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h" bodystart="117" bodyend="156"/>
+        <references refid="unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc" compoundref="event_8hpp" startline="54">nsEvent::EventData_t::clickData</references>
+        <references refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" compoundref="event_8hpp" startline="64">nsEvent::Event_t::eventData</references>
+        <references refid="structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c" compoundref="event_8hpp" startline="63">nsEvent::Event_t::eventType</references>
+        <references refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" compoundref="mingl_8cpp" startline="73" endline="76">MinGL::getEventManager</references>
+        <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">nsGraphics::Vec2D::getX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">nsGraphics::Vec2D::getY</references>
+        <references refid="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" compoundref="event__manager_8cpp" startline="13" endline="16">nsEvent::EventManager::hasEvent</references>
+        <references refid="namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b" compoundref="rgbacolor_8h" startline="171">nsGraphics::KPurple</references>
+        <references refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7" compoundref="event_8hpp" startline="24">nsEvent::MouseClick</references>
+        <references refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6" compoundref="event_8hpp" startline="25">nsEvent::MouseMove</references>
+        <references refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" compoundref="event_8hpp" startline="55">nsEvent::EventData_t::moveData</references>
+        <references refid="classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9" compoundref="event__manager_8cpp" startline="23" endline="29">nsEvent::EventManager::pullEvent</references>
+        <references refid="_menu_management_8h_1a8a2590fbfc4686aa615f6ca9824224f9" compoundref="_menu_management_8h" startline="108">rectColor</references>
+        <references refid="_menu_management_8h_1a11e48c63494b713861dcee17f0efcd33" compoundref="_menu_management_8h" startline="107">rectPos</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d" compoundref="vec2d_8cpp" startline="183" endline="186">nsGraphics::Vec2D::setX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f" compoundref="vec2d_8cpp" startline="193" endline="196">nsGraphics::Vec2D::setY</references>
+        <references refid="structns_event_1_1_mouse_click_data__t_1a81252b916361dc4deab0f42510fdc928" compoundref="event_8hpp" startline="35">nsEvent::MouseClickData_t::state</references>
+        <references refid="structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb" compoundref="event_8hpp" startline="45">nsEvent::MouseMoveData_t::x</references>
+        <references refid="structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446" compoundref="event_8hpp" startline="46">nsEvent::MouseMoveData_t::y</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -387,101 +437,115 @@
 <codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;vector&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rectangle_8h" kindref="compound">mingl/shape/rectangle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sprites/button.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="button_8h" kindref="compound">sprites/button.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="text_8h" kindref="compound">mingl/gui/text.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="20"><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MENUMANAGEMENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InterfaceMenuP(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
-<codeline lineno="32"><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,0),<sp/>mat_x,<sp/>mat_y,<sp/>nsGraphics::KGray);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>Button(window,<sp/>100,<sp/>48,<sp/>300,<sp/>148,<sp/>10,<sp/>nsGraphics::KBlack);</highlight></codeline>
-<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(168,<sp/>105),<sp/></highlight><highlight class="stringliteral">&quot;PLAY&quot;</highlight><highlight class="normal">,nsGraphics::KWhite,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kindref="member">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</ref>);</highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>Button(window,<sp/>100,<sp/>196,<sp/>300,<sp/>296,<sp/>10,<sp/>nsGraphics::KBlack);</highlight></codeline>
-<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(145,<sp/>253),<sp/></highlight><highlight class="stringliteral">&quot;In<sp/>Progress&quot;</highlight><highlight class="normal">,nsGraphics::KWhite,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kindref="member">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</ref>);</highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>Button(window,<sp/>100,<sp/>344,<sp/>300,<sp/>444,<sp/>10,<sp/>nsGraphics::KBlack);</highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(110,<sp/>401),<sp/></highlight><highlight class="stringliteral">&quot;In<sp/>Developpement&quot;</highlight><highlight class="normal">,nsGraphics::KWhite,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kindref="member">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</ref>);</highlight></codeline>
-<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/>Button(window,<sp/>100,<sp/>492,<sp/>300,<sp/>592,<sp/>10,<sp/>nsGraphics::KBlack);</highlight></codeline>
-<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(170,<sp/>549),<sp/></highlight><highlight class="stringliteral">&quot;QUIT&quot;</highlight><highlight class="normal">,nsGraphics::KWhite,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kindref="member">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</ref>);</highlight></codeline>
-<codeline lineno="43"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight></codeline>
-<codeline lineno="52"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InterfacePause(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
-<codeline lineno="53"><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(100,<sp/>0),<sp/>mat_x,<sp/>mat_y,<sp/>nsGraphics::KGray);</highlight></codeline>
-<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(100,<sp/>48),<sp/>200,<sp/>100,<sp/>nsGraphics::KBlue);</highlight></codeline>
-<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(100,<sp/>196),<sp/>200,<sp/>100,<sp/>nsGraphics::KBlue);</highlight></codeline>
-<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(100,<sp/>344),<sp/>200,<sp/>100,<sp/>nsGraphics::KBlue);</highlight></codeline>
-<codeline lineno="59"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="60"><highlight class="normal"></highlight></codeline>
-<codeline lineno="67"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InterfaceOptions(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
-<codeline lineno="68"><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,0),<sp/>mat_x,<sp/>mat_y,<sp/>nsGraphics::KGray);</highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,0),<sp/>120,<sp/>50,<sp/>nsGraphics::KRed+8,<sp/>nsGraphics::KTransparent);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(150,150),<sp/>340,<sp/>340,<sp/>nsGraphics::KTransparent,<sp/>nsGraphics::KGray);</highlight></codeline>
-<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(10,<sp/>105),</highlight></codeline>
-<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;PLAY&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/>,nsGraphics::KWhite,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kindref="member">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</ref>);</highlight></codeline>
-<codeline lineno="76"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="77"><highlight class="normal"></highlight></codeline>
-<codeline lineno="84"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InterfaceCredits(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
-<codeline lineno="85"><highlight class="normal"></highlight></codeline>
-<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,0),<sp/>mat_x,<sp/>mat_y,<sp/>nsGraphics::KGray);</highlight></codeline>
-<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,0),<sp/>120,<sp/>50,<sp/>nsGraphics::KGray+8,<sp/>nsGraphics::KTransparent);</highlight></codeline>
-<codeline lineno="89"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(150,150),<sp/>340,<sp/>340,<sp/>nsGraphics::KTransparent,<sp/>nsGraphics::KGray);</highlight></codeline>
-<codeline lineno="90"><highlight class="normal">}</highlight></codeline>
-<codeline lineno="91"><highlight class="normal"></highlight></codeline>
-<codeline lineno="92"><highlight class="normal"></highlight></codeline>
-<codeline lineno="93"><highlight class="normal"><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>rectPos;</highlight></codeline>
-<codeline lineno="94"><highlight class="normal"><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/>rectColor<sp/>=<sp/>nsGraphics::KCyan;</highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="103"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>events(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;&amp;<sp/>clickablepool,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>menuid)</highlight></codeline>
-<codeline lineno="104"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MENUMANAGEMENT_H</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33" refid="_menu_management_8h_1afab161c3544224d228a3e8e64a3eae08" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_menu_management_8h_1afab161c3544224d228a3e8e64a3eae08" kindref="member">InterfaceMenuP</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"></highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,0),<sp/>mat_x,<sp/>mat_y,<sp/><ref refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" kindref="member">nsGraphics::KGray</ref>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1a9139d7539d77e69aa7b38e4976a62306" kindref="member">Button</ref>(window,<sp/>100,<sp/>48,<sp/>300,<sp/>148,<sp/>10,<sp/><ref refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" kindref="member">nsGraphics::KBlack</ref>);</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(168,<sp/>105),<sp/></highlight><highlight class="stringliteral">&quot;PLAY&quot;</highlight><highlight class="normal">,<ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref>,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kindref="member">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</ref>);</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1a9139d7539d77e69aa7b38e4976a62306" kindref="member">Button</ref>(window,<sp/>100,<sp/>196,<sp/>300,<sp/>296,<sp/>10,<sp/><ref refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" kindref="member">nsGraphics::KBlack</ref>);</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(155,<sp/>253),<sp/></highlight><highlight class="stringliteral">&quot;CREDIT&quot;</highlight><highlight class="normal">,<ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref>,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kindref="member">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</ref>);</highlight></codeline>
+<codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1a9139d7539d77e69aa7b38e4976a62306" kindref="member">Button</ref>(window,<sp/>100,<sp/>344,<sp/>300,<sp/>444,<sp/>10,<sp/><ref refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" kindref="member">nsGraphics::KBlack</ref>);</highlight></codeline>
+<codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(145,<sp/>401),<sp/></highlight><highlight class="stringliteral">&quot;OPTIONS&quot;</highlight><highlight class="normal">,<ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref>,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kindref="member">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</ref>);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="button_8h_1a9139d7539d77e69aa7b38e4976a62306" kindref="member">Button</ref>(window,<sp/>100,<sp/>492,<sp/>300,<sp/>592,<sp/>10,<sp/><ref refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" kindref="member">nsGraphics::KBlack</ref>);</highlight></codeline>
+<codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(170,<sp/>549),<sp/></highlight><highlight class="stringliteral">&quot;QUIT&quot;</highlight><highlight class="normal">,<ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref>,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kindref="member">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</ref>);</highlight></codeline>
+<codeline lineno="45"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="46"><highlight class="normal"></highlight></codeline>
+<codeline lineno="47"><highlight class="normal"></highlight></codeline>
+<codeline lineno="54" refid="_menu_management_8h_1ab2a2e33bb6aff7164d540d7a50bdd38f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_menu_management_8h_1ab2a2e33bb6aff7164d540d7a50bdd38f" kindref="member">InterfacePause</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
+<codeline lineno="55"><highlight class="normal"></highlight></codeline>
+<codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(100,<sp/>0),<sp/>mat_x,<sp/>mat_y,<sp/><ref refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" kindref="member">nsGraphics::KGray</ref>);</highlight></codeline>
+<codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(100,<sp/>48),<sp/>200,<sp/>100,<sp/><ref refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" kindref="member">nsGraphics::KBlue</ref>);</highlight></codeline>
+<codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(100,<sp/>196),<sp/>200,<sp/>100,<sp/><ref refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" kindref="member">nsGraphics::KBlue</ref>);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(100,<sp/>344),<sp/>200,<sp/>100,<sp/><ref refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" kindref="member">nsGraphics::KBlue</ref>);</highlight></codeline>
+<codeline lineno="61"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69" refid="_menu_management_8h_1afc733d7fa1650fe258aa4fd3c704b799" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_menu_management_8h_1afc733d7fa1650fe258aa4fd3c704b799" kindref="member">InterfaceOptions</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/>std::ifstream<sp/>creditFile(</highlight><highlight class="stringliteral">&quot;../../credit.txt&quot;</highlight><highlight class="normal">);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/>std::string<sp/>creditContent;</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"></highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(creditFile.is_open())<sp/>{</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::string<sp/>line;</highlight></codeline>
+<codeline lineno="76"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(std::getline(creditFile,<sp/>line))<sp/>{</highlight></codeline>
+<codeline lineno="77"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>creditContent<sp/>+=<sp/>line<sp/>+<sp/></highlight><highlight class="stringliteral">&quot;\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="78"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="79"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>creditFile.close();</highlight></codeline>
+<codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/>}<sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/>{</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>creditContent<sp/>=<sp/></highlight><highlight class="stringliteral">&quot;Erreur<sp/>:<sp/>impossible<sp/>d&apos;ouvrir<sp/>le<sp/>fichier<sp/>credit.txt&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="82"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="83"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="85"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,0),<sp/>mat_x,<sp/>mat_y,<sp/><ref refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" kindref="member">nsGraphics::KGray</ref>);</highlight></codeline>
+<codeline lineno="86"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,0),<sp/>120,<sp/>50,<sp/><ref refid="namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61" kindref="member">nsGraphics::KRed</ref>+8,<sp/><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref>);</highlight></codeline>
+<codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(150,150),<sp/>340,<sp/>340,<sp/><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref>,<sp/><ref refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" kindref="member">nsGraphics::KGray</ref>);</highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(10,<sp/>105),creditContent,<ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref>,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465ceab87b397237206af607190619163ec1e6" kindref="member">nsGui::GlutFont::BITMAP_HELVETICA_12</ref>);</highlight></codeline>
+<codeline lineno="89"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="90"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97" refid="_menu_management_8h_1ae72c2fefee518b729a3c7a320d27265a" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_menu_management_8h_1ae72c2fefee518b729a3c7a320d27265a" kindref="member">InterfaceCredits</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,0),<sp/>mat_x,<sp/>mat_y,<sp/><ref refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" kindref="member">nsGraphics::KGray</ref>);</highlight></codeline>
+<codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,0),<sp/>120,<sp/>50,<sp/><ref refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" kindref="member">nsGraphics::KGray</ref>+8,<sp/><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref>);</highlight></codeline>
+<codeline lineno="102"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(150,150),<sp/>340,<sp/>340,<sp/><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref>,<sp/><ref refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" kindref="member">nsGraphics::KGray</ref>);</highlight></codeline>
+<codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_gui_1_1_text" kindref="compound">nsGui::Text</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>(10,<sp/>105),</highlight><highlight class="stringliteral">&quot;In<sp/>Developpement&quot;</highlight><highlight class="normal">,<ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref>,<sp/><ref refid="classns_gui_1_1_glut_font_1aeeeb02d69e7dfc7e57957bd658c465cea466dd22d811df1310583c1a59d0103b0" kindref="member">nsGui::GlutFont::BITMAP_TIMES_ROMAN_24</ref>);</highlight></codeline>
+<codeline lineno="104"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="105"><highlight class="normal"></highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" kindref="member">hasEvent</ref>())</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structns_event_1_1_event__t" kindref="compound">nsEvent::Event_t</ref><sp/>actualEvent<sp/>=<sp/>window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9" kindref="member">pullEvent</ref>();</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"></highlight></codeline>
+<codeline lineno="107" refid="_menu_management_8h_1a11e48c63494b713861dcee17f0efcd33" refkind="member"><highlight class="normal"><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/><ref refid="_menu_management_8h_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>;</highlight></codeline>
+<codeline lineno="108" refid="_menu_management_8h_1a8a2590fbfc4686aa615f6ca9824224f9" refkind="member"><highlight class="normal"><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/><ref refid="_menu_management_8h_1a8a2590fbfc4686aa615f6ca9824224f9" kindref="member">rectColor</ref><sp/>=<sp/><ref refid="namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad" kindref="member">nsGraphics::KCyan</ref>;</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"></highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>regarde<sp/>le<sp/>type<sp/>d&apos;évènement</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(actualEvent.<ref refid="structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c" kindref="member">eventType</ref>)</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6" kindref="member">nsEvent::EventType_t::MouseMove</ref>:</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Il<sp/>s&apos;agit<sp/>d&apos;un<sp/>mouvement<sp/>de<sp/>souris</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectPos.<ref refid="classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d" kindref="member">setX</ref>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" kindref="member">moveData</ref>.<ref refid="structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb" kindref="member">x</ref>);</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectPos.<ref refid="classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f" kindref="member">setY</ref>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" kindref="member">moveData</ref>.<ref refid="structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446" kindref="member">y</ref>);</highlight></codeline>
-<codeline lineno="117"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="118"><highlight class="normal"></highlight></codeline>
-<codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7" kindref="member">nsEvent::EventType_t::MouseClick</ref>:</highlight></codeline>
-<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Il<sp/>s&apos;agit<sp/>d&apos;un<sp/>clic<sp/>de<sp/>souris</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc" kindref="member">clickData</ref>.<ref refid="structns_event_1_1_mouse_click_data__t_1a81252b916361dc4deab0f42510fdc928" kindref="member">state</ref>)<sp/></highlight><highlight class="comment">//<sp/>Clic<sp/>enfoncé</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="123"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>clickablepool.size()<sp/>;<sp/>i<sp/>=<sp/>i+1){</highlight></codeline>
-<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(rectPos.<ref refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" kindref="member">getX</ref>()<sp/>&gt;=<sp/>get&lt;0&gt;(clickablepool[i])[0]<sp/>&amp;&amp;<sp/>rectPos.<ref refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" kindref="member">getX</ref>()<sp/>&lt;=<sp/>get&lt;1&gt;(clickablepool[i])[0]<sp/>&amp;&amp;</highlight></codeline>
-<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectPos.<ref refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" kindref="member">getY</ref>()<sp/>&gt;=<sp/>get&lt;0&gt;(clickablepool[i])[1]<sp/>&amp;&amp;<sp/>rectPos.<ref refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" kindref="member">getY</ref>()<sp/>&lt;=<sp/>get&lt;1&gt;(clickablepool[i])[1]){</highlight></codeline>
-<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(menuid<sp/>==<sp/>4){menuid<sp/>=<sp/>3;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;}</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>menuid<sp/>=<sp/>get&lt;2&gt;(clickablepool[i]);</highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Relâchement<sp/>du<sp/>clic</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectColor<sp/>=<sp/>nsGraphics::KPurple;</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="136"><highlight class="normal"></highlight></codeline>
-<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>L&apos;évènement<sp/>ne<sp/>nous<sp/>intéresse<sp/>pas</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="142"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="117" refid="_menu_management_8h_1a4502ca76132916f74305fe40f59ae97d" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_menu_management_8h_1a4502ca76132916f74305fe40f59ae97d" kindref="member">events</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;&amp;<sp/>clickablepool,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&amp;<sp/>menuid)</highlight></codeline>
+<codeline lineno="118"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" kindref="member">hasEvent</ref>())</highlight></codeline>
+<codeline lineno="121"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="122"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="structns_event_1_1_event__t" kindref="compound">nsEvent::Event_t</ref><sp/>actualEvent<sp/>=<sp/>window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9" kindref="member">pullEvent</ref>();</highlight></codeline>
+<codeline lineno="123"><highlight class="normal"></highlight></codeline>
+<codeline lineno="124"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>regarde<sp/>le<sp/>type<sp/>d&apos;évènement</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal"><sp/>(actualEvent.<ref refid="structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c" kindref="member">eventType</ref>)</highlight></codeline>
+<codeline lineno="126"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6" kindref="member">nsEvent::EventType_t::MouseMove</ref>:</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Il<sp/>s&apos;agit<sp/>d&apos;un<sp/>mouvement<sp/>de<sp/>souris</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_menu_management_8h_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>.<ref refid="classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d" kindref="member">setX</ref>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" kindref="member">moveData</ref>.<ref refid="structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_menu_management_8h_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>.<ref refid="classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f" kindref="member">setY</ref>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" kindref="member">moveData</ref>.<ref refid="structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="132"><highlight class="normal"></highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7" kindref="member">nsEvent::EventType_t::MouseClick</ref>:</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Il<sp/>s&apos;agit<sp/>d&apos;un<sp/>clic<sp/>de<sp/>souris</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc" kindref="member">clickData</ref>.<ref refid="structns_event_1_1_mouse_click_data__t_1a81252b916361dc4deab0f42510fdc928" kindref="member">state</ref>)<sp/></highlight><highlight class="comment">//<sp/>Clic<sp/>enfoncé</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="136"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="137"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal">(</highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>i<sp/>=<sp/>0;<sp/>i<sp/>&lt;<sp/>clickablepool.size()<sp/>;<sp/>i<sp/>=<sp/>i+1){</highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(<ref refid="_menu_management_8h_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>.<ref refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" kindref="member">getX</ref>()<sp/>&gt;=<sp/>get&lt;0&gt;(clickablepool[i])[0]<sp/>&amp;&amp;<sp/><ref refid="_menu_management_8h_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>.<ref refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" kindref="member">getX</ref>()<sp/>&lt;=<sp/>get&lt;1&gt;(clickablepool[i])[0]<sp/>&amp;&amp;</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_menu_management_8h_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>.<ref refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" kindref="member">getY</ref>()<sp/>&gt;=<sp/>get&lt;0&gt;(clickablepool[i])[1]<sp/>&amp;&amp;<sp/><ref refid="_menu_management_8h_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>.<ref refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" kindref="member">getY</ref>()<sp/>&lt;=<sp/>get&lt;1&gt;(clickablepool[i])[1]){</highlight></codeline>
+<codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(menuid<sp/>==<sp/>4){menuid<sp/>=<sp/>3;<sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;}</highlight></codeline>
+<codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>menuid<sp/>=<sp/>get&lt;2&gt;(clickablepool[i]);</highlight></codeline>
+<codeline lineno="142"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="143"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="144"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="145"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="comment">//<sp/>Relâchement<sp/>du<sp/>clic</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="146"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
+<codeline lineno="147"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_menu_management_8h_1a8a2590fbfc4686aa615f6ca9824224f9" kindref="member">rectColor</ref><sp/>=<sp/><ref refid="namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b" kindref="member">nsGraphics::KPurple</ref>;</highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="150"><highlight class="normal"></highlight></codeline>
+<codeline lineno="151"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="152"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>L&apos;évènement<sp/>ne<sp/>nous<sp/>intéresse<sp/>pas</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="153"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="154"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="155"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="156"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h"/>
+    <location file="/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h"/>
   </compounddef>
 </doxygen>

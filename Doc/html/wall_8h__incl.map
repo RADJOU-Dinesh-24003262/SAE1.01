@@ -1,5 +1,5 @@
-<map id="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h" name="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h">
-<area shape="rect" id="node1" title="Affiche le sprite d&#39;un mur." alt="" coords="328,5,543,47"/>
+<map id="/home/Theo/Téléchargements/sae/sprites/wall.h" name="/home/Theo/Téléchargements/sae/sprites/wall.h">
+<area shape="rect" id="node1" title="Affiche le sprite d&#39;un bouton." alt="" coords="328,5,543,47"/>
 <area shape="rect" id="node2" href="$rectangle_8h.html" title="Représente un rectangle." alt="" coords="346,95,525,121"/>
 <area shape="rect" id="node3" href="$shape_8h.html" title="Représente une forme." alt="" coords="317,169,391,196"/>
 <area shape="rect" id="node13" href="$itransitionable_8h.html" title="Interface pour objet &quot;transitionable&quot;." alt="" coords="451,169,657,196"/>

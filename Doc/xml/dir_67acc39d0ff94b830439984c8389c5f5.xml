@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_67acc39d0ff94b830439984c8389c5f5" kind="dir">
+    <compoundname>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples</compoundname>
+    <innerdir refid="dir_35ee2fc51197c75f4d060e9e4dcda993">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/00-Boilerplate</innerdir>
+    <innerdir refid="dir_89e4911012ab3a9ea23770ff537b2e73">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes</innerdir>
+    <innerdir refid="dir_393df86cc954f4c5f72034c962dd0423">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/02-Texte</innerdir>
+    <innerdir refid="dir_aae55704c9f273b618810ccb40f58e24">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/03-Clavier</innerdir>
+    <innerdir refid="dir_7ff0883dfb649b8943f8a6cc7b5b13e1">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris</innerdir>
+    <innerdir refid="dir_295c02affc16e10b506a11067f96cab6">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/05-Transition</innerdir>
+    <innerdir refid="dir_fc84d17e9ab9f0a9c9c0fdba41744786">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/06-Sprite</innerdir>
+    <innerdir refid="dir_d7a6f6f3dab460010a2ab5785f099ad4">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/07-Audio</innerdir>
+    <innerdir refid="dir_7ee1d7378afa2fb5c3e4214a3d9f5872">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable</innerdir>
+    <innerdir refid="dir_379e60c0cde3f8a00e1009494b378342">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable</innerdir>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/"/>
+  </compounddef>
+</doxygen>

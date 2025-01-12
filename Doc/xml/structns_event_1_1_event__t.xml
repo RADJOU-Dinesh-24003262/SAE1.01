@@ -17,7 +17,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="63" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="63" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="63" column="17" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="63" bodyend="-1"/>
+        <referencedby refid="_menu_management_8h_1a4502ca76132916f74305fe40f59ae97d" compoundref="_menu_management_8h" startline="117" endline="156">events</referencedby>
       </memberdef>
       <memberdef kind="variable" id="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" prot="public" static="no" mutable="no">
         <type><ref refid="unionns_event_1_1_event_data__t" kindref="compound">EventData_t</ref></type>
@@ -32,7 +33,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="64" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="64" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="64" column="17" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="64" bodyend="-1"/>
+        <referencedby refid="_menu_management_8h_1a4502ca76132916f74305fe40f59ae97d" compoundref="_menu_management_8h" startline="117" endline="156">events</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -67,7 +69,7 @@
         <link refid="structns_event_1_1_mouse_move_data__t"/>
       </node>
     </collaborationgraph>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="62" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="62" bodyend="65"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" line="62" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/event/event.hpp" bodystart="62" bodyend="65"/>
     <listofallmembers>
       <member refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" prot="public" virt="non-virtual"><scope>nsEvent::Event_t</scope><name>eventData</name></member>
       <member refid="structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c" prot="public" virt="non-virtual"><scope>nsEvent::Event_t</scope><name>eventType</name></member>

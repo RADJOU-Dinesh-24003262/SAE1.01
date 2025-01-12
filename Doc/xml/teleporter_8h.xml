@@ -3,7 +3,7 @@
   <compounddef id="teleporter_8h" kind="file" language="C++">
     <compoundname>teleporter.h</compoundname>
     <includes refid="rectangle_8h" local="yes">mingl/shape/rectangle.h</includes>
-    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/Jeu/game.cpp</includedby>
     <incdepgraph>
       <node id="4">
         <label>../graphics/idrawable.h</label>
@@ -68,7 +68,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/teleporter.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/teleporter.h</label>
         <link refid="teleporter_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -91,11 +91,11 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/teleporter.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/teleporter.h</label>
         <link refid="teleporter_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -176,7 +176,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/teleporter.h" line="26" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/teleporter.h" bodystart="26" bodyend="43"/>
+        <location file="/home/Theo/Téléchargements/sae/sprites/teleporter.h" line="26" column="6" bodyfile="/home/Theo/Téléchargements/sae/sprites/teleporter.h" bodystart="26" bodyend="43"/>
+        <references refid="namespacens_graphics_1a7f6ca880f0cf5e6e76b0081c84d5f1fb" compoundref="rgbacolor_8h" startline="167">nsGraphics::KDarkGray</references>
+        <references refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" compoundref="rgbacolor_8h" startline="166">nsGraphics::KGray</references>
+        <referencedby refid="game_8cpp_1a57e55da876e34d1b049962d00fac607e" compoundref="game_8cpp" startline="117" endline="136">Sprite</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -189,7 +192,7 @@
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rectangle_8h" kindref="compound">mingl/shape/rectangle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">//défini<sp/>les<sp/>éléments<sp/>du<sp/>sprite<sp/>d&apos;un<sp/>mur</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Teleporter(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pos1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pos2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
+<codeline lineno="26" refid="teleporter_8h_1abd3383003d3b5afeac6ab5231f4a96bc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="teleporter_8h_1abd3383003d3b5afeac6ab5231f4a96bc" kindref="member">Teleporter</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pos1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pos2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wall_x<sp/>=<sp/>320/mat_x;</highlight></codeline>
@@ -202,12 +205,12 @@
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>dify<sp/>=<sp/>(y2-y1)/20;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//shape<sp/>formant<sp/>le<sp/>sprite</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x1+(2*(difx))),(y1+(2*(dify)))),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x2-(2*(difx))),(y2-(2*(dify)))),<sp/>nsGraphics::KGray);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x1+(4*(difx))),(y1+(4*(dify)))),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x2-(4*(difx))),(y2-(4*(dify)))),<sp/>nsGraphics::KDarkGray);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x1+(2*(difx))),(y1+(2*(dify)))),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x2-(2*(difx))),(y2-(2*(dify)))),<sp/><ref refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" kindref="member">nsGraphics::KGray</ref>);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x1+(4*(difx))),(y1+(4*(dify)))),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x2-(4*(difx))),(y2-(4*(dify)))),<sp/><ref refid="namespacens_graphics_1a7f6ca880f0cf5e6e76b0081c84d5f1fb" kindref="member">nsGraphics::KDarkGray</ref>);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//window<sp/>&lt;&lt;<sp/>nsShape::Rectangle(nsGraphics::Vec2D((Circle1-wall_x),(Circle2-wall_y)),<sp/>nsGraphics::Vec2D((Circle1+wall_x),(Circle2+wall_y)),<sp/>nsGraphics::KPurple);//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/teleporter.h"/>
+    <location file="/home/Theo/Téléchargements/sae/sprites/teleporter.h"/>
   </compounddef>
 </doxygen>

@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_8f6b9f8253352429a9e174e83e1c05df" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui Directory Reference</primary></indexterm>
+Directory dependency graph for gui:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_8f6b9f8253352429a9e174e83e1c05df_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_glut__font_8h">glut_font.h</link></para>
+
+<para>Classe utilitaire pour utiliser facilement les polices de Glut. </para>
+</listitem>
+            <listitem><para>file <link linkend="_sprite_8h">sprite.h</link></para>
+
+<para>Image pouvant être chargé depuis un fichier. </para>
+</listitem>
+            <listitem><para>file <link linkend="_text_8h">text.h</link></para>
+
+<para>Du texte. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

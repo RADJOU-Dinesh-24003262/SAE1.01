@@ -13,7 +13,7 @@
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_classns_util_1_1_i_fonctor_unaire_1ae41ac6b220f0afa4b0860e92c27b3cd1"/>virtual <emphasis role="strong">~IFonctorUnaire</emphasis> ()=default</para>
+            <listitem><para>virtual <link linkend="_classns_util_1_1_i_fonctor_unaire_1ae41ac6b220f0afa4b0860e92c27b3cd1">~IFonctorUnaire</link> ()=default</para>
 
 <para>Destructeur pour la classe <link linkend="_classns_util_1_1_i_fonctor_unaire">IFonctorUnaire</link>. </para>
 </listitem>
@@ -31,6 +31,18 @@ class nsUtil::IFonctorUnaire&lt; T1, TRes &gt;</title></simplesect>
 <para>Interface pour un fonctor unaire. </para>
 <para>
 Definition at line <link linkend="_ifonctorunaire_8hpp_source_1l00012">12</link> of file <link linkend="_ifonctorunaire_8hpp_source">ifonctorunaire.hpp</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_util_1_1_i_fonctor_unaire_1ae41ac6b220f0afa4b0860e92c27b3cd1"/><section>
+    <title>~IFonctorUnaire()</title>
+<indexterm><primary>~IFonctorUnaire</primary><secondary>nsUtil::IFonctorUnaire&lt; T1, TRes &gt;</secondary></indexterm>
+<indexterm><primary>nsUtil::IFonctorUnaire&lt; T1, TRes &gt;</primary><secondary>~IFonctorUnaire</secondary></indexterm>
+<computeroutput>template&lt;typename T1 , typename TRes &gt; </computeroutput><para><computeroutput><link linkend="_classns_util_1_1_i_fonctor_unaire">nsUtil::IFonctorUnaire</link>&lt; T1, TRes &gt;::~<link linkend="_classns_util_1_1_i_fonctor_unaire">IFonctorUnaire</link> ( )<computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur pour la classe <link linkend="_classns_util_1_1_i_fonctor_unaire">IFonctorUnaire</link>. </para>
+</para>
+</section>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -68,5 +80,5 @@ Parameters</title>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ifonctorunaire.hpp</section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/<link linkend="_ifonctorunaire_8hpp">ifonctorunaire.hpp</link></section>
 </section>

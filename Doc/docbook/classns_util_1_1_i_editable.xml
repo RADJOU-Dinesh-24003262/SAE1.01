@@ -22,7 +22,7 @@ Inheritance diagram for nsUtil::IEditable:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><anchor xml:id="_classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e"/>virtual <emphasis role="strong">~IEditable</emphasis> ()=default</para>
+            <listitem><para>virtual <link linkend="_classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e">~IEditable</link> ()=default</para>
 
 <para>Destructeur pour la classe <link linkend="_classns_util_1_1_i_editable">IEditable</link>. </para>
 </listitem>
@@ -52,6 +52,18 @@ Inheritance diagram for nsUtil::IEditable:<para>
 <para>Interface pour un objet injectable. </para>
 <para>
 Definition at line <link linkend="_ieditable_8h_source_1l00037">37</link> of file <link linkend="_ieditable_8h_source">ieditable.h</link>.</para>
+</section>
+<section>
+<title>Constructor &amp; Destructor Documentation</title>
+<anchor xml:id="_classns_util_1_1_i_editable_1a504b91af8e4efa46357d7236b86b8e2e"/><section>
+    <title>~IEditable()</title>
+<indexterm><primary>~IEditable</primary><secondary>nsUtil::IEditable</secondary></indexterm>
+<indexterm><primary>nsUtil::IEditable</primary><secondary>~IEditable</secondary></indexterm>
+<para><computeroutput>nsUtil::IEditable::~IEditable ( )<computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur pour la classe <link linkend="_classns_util_1_1_i_editable">IEditable</link>. </para>
+</para>
+</section>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -88,6 +100,15 @@ Parameters</title>
                 </para>
 <para>
 Implemented in <link linkend="_classns_exception_1_1_c_exception_1ae4430e1cfaa948dc6f63bb8437fa6027">nsException::CException</link>, <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a09154c1fc9ba912860f2b4fac5432298">nsGraphics::RGBAcolor</link>, and <link linkend="_classns_graphics_1_1_vec2_d_1ad416f3698e43099990b3d96d9099c65f">nsGraphics::Vec2D</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_util_1_1_i_editable_ab20bbe582b95383ed3f1453109035853_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 </section>
 <section>
@@ -131,5 +152,5 @@ Parameters</title>
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/<link linkend="_ieditable_8h">ieditable.h</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/<link linkend="_ieditable_8h">ieditable.h</link></section>
 </section>

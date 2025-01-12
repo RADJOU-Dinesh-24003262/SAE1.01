@@ -4,21 +4,21 @@
     <compoundname>rectangle.h</compoundname>
     <includes refid="shape_8h" local="yes">shape.h</includes>
     <includes refid="itransitionable_8h" local="yes">../transition/itransitionable.h</includes>
-    <includedby refid="_menu_management_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</includedby>
-    <includedby refid="08-_custom_drawable_2bgtext_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</includedby>
-    <includedby refid="09-_custom_transitionable_2bgtext_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</includedby>
-    <includedby refid="rectangle_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</includedby>
-    <includedby refid="button_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/sprites/button.h</includedby>
-    <includedby refid="cigarette_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/sprites/cigarette.h</includedby>
-    <includedby refid="kebab_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/sprites/kebab.h</includedby>
-    <includedby refid="monstre_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/sprites/monstre.h</includedby>
-    <includedby refid="statue_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/sprites/statue.h</includedby>
-    <includedby refid="teleporter_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/sprites/teleporter.h</includedby>
-    <includedby refid="wall_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h</includedby>
+    <includedby refid="_menu_management_8h" local="yes">/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</includedby>
+    <includedby refid="08-_custom_drawable_2bgtext_8h" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</includedby>
+    <includedby refid="09-_custom_transitionable_2bgtext_8h" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</includedby>
+    <includedby refid="rectangle_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</includedby>
+    <includedby refid="button_8h" local="yes">/home/Theo/Téléchargements/sae/sprites/button.h</includedby>
+    <includedby refid="cigarette_8h" local="yes">/home/Theo/Téléchargements/sae/sprites/cigarette.h</includedby>
+    <includedby refid="kebab_8h" local="yes">/home/Theo/Téléchargements/sae/sprites/kebab.h</includedby>
+    <includedby refid="monstre_8h" local="yes">/home/Theo/Téléchargements/sae/sprites/monstre.h</includedby>
+    <includedby refid="statue_8h" local="yes">/home/Theo/Téléchargements/sae/sprites/statue.h</includedby>
+    <includedby refid="teleporter_8h" local="yes">/home/Theo/Téléchargements/sae/sprites/teleporter.h</includedby>
+    <includedby refid="wall_8h" local="yes">/home/Theo/Téléchargements/sae/sprites/wall.h</includedby>
     <incdepgraph>
       <node id="3">
         <label>../graphics/idrawable.h</label>
@@ -43,7 +43,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h</label>
         <link refid="rectangle_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -100,65 +100,65 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</label>
-        <link refid="_menu_management_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</label>
+        <link refid="_menu_management_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="4">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp"/>
       </node>
       <node id="5">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp"/>
       </node>
       <node id="6">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp"/>
       </node>
       <node id="7">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp"/>
       </node>
       <node id="9">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.cpp</label>
-        <link refid="08-_custom_drawable_2bgtext_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.cpp</label>
+        <link refid="08-_custom_drawable_2bgtext_8cpp"/>
       </node>
       <node id="8">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</label>
-        <link refid="08-_custom_drawable_2bgtext_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</label>
+        <link refid="08-_custom_drawable_2bgtext_8h"/>
         <childnode refid="9" relation="include">
         </childnode>
         <childnode refid="10" relation="include">
         </childnode>
       </node>
       <node id="10">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp"/>
       </node>
       <node id="12">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp</label>
-        <link refid="09-_custom_transitionable_2bgtext_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp</label>
+        <link refid="09-_custom_transitionable_2bgtext_8cpp"/>
       </node>
       <node id="11">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</label>
-        <link refid="09-_custom_transitionable_2bgtext_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</label>
+        <link refid="09-_custom_transitionable_2bgtext_8h"/>
         <childnode refid="12" relation="include">
         </childnode>
         <childnode refid="13" relation="include">
         </childnode>
       </node>
       <node id="13">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h</label>
         <link refid="rectangle_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -192,47 +192,47 @@
         </childnode>
       </node>
       <node id="14">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</label>
         <link refid="rectangle_8cpp"/>
       </node>
       <node id="15">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/button.h</label>
-        <link refid="button_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/sprites/button.h</label>
+        <link refid="button_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="16">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/cigarette.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/cigarette.h</label>
         <link refid="cigarette_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="17">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/kebab.h</label>
-        <link refid="kebab_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/sprites/kebab.h</label>
+        <link refid="kebab_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="18">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/monstre.h</label>
-        <link refid="monstre_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/sprites/monstre.h</label>
+        <link refid="monstre_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="19">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/statue.h</label>
-        <link refid="statue_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/sprites/statue.h</label>
+        <link refid="statue_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="20">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/teleporter.h</label>
-        <link refid="teleporter_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/sprites/teleporter.h</label>
+        <link refid="teleporter_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="21">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/wall.h</label>
         <link refid="wall_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -278,12 +278,12 @@
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"></highlight></codeline>
 <codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_shape_1_1_rectangle_1a5d5e8052ba7c35001a30ccc7dad669e2" kindref="member">Rectangle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>firstPosition,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>secondPosition,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>fillColor,</highlight></codeline>
-<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>borderColor<sp/>=<sp/>nsGraphics::KTransparent);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>borderColor<sp/>=<sp/><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref>);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_shape_1_1_rectangle_1a5d5e8052ba7c35001a30ccc7dad669e2" kindref="member">Rectangle</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>position,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">&amp;<sp/>width,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal">&amp;<sp/>height,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>fillColor,</highlight></codeline>
-<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>borderColor<sp/>=<sp/>nsGraphics::KTransparent);</highlight></codeline>
+<codeline lineno="64"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>borderColor<sp/>=<sp/><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref>);</highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight></codeline>
-<codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">~Rectangle</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="70" refid="classns_shape_1_1_rectangle_1a8c5a662392d6ff84a852c4f70e8b1d1d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/><ref refid="classns_shape_1_1_rectangle_1a8c5a662392d6ff84a852c4f70e8b1d1d" kindref="member">~Rectangle</ref>()<sp/></highlight><highlight class="keyword">override</highlight><highlight class="normal"><sp/>=<sp/></highlight><highlight class="keywordflow">default</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="71"><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">virtual</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5" kindref="member">draw</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref>&amp;<sp/>window)<sp/></highlight><highlight class="keyword">const<sp/>override</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
@@ -313,6 +313,6 @@
 <codeline lineno="131"><highlight class="normal"></highlight></codeline>
 <codeline lineno="132"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>RECTANGLE_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h"/>
   </compounddef>
 </doxygen>

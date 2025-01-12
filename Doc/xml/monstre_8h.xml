@@ -3,7 +3,7 @@
   <compounddef id="monstre_8h" kind="file" language="C++">
     <compoundname>monstre.h</compoundname>
     <includes refid="rectangle_8h" local="yes">mingl/shape/rectangle.h</includes>
-    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/Jeu/game.cpp</includedby>
     <incdepgraph>
       <node id="4">
         <label>../graphics/idrawable.h</label>
@@ -68,7 +68,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/monstre.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/monstre.h</label>
         <link refid="monstre_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -91,11 +91,11 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/monstre.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/monstre.h</label>
         <link refid="monstre_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -176,7 +176,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/monstre.h" line="25" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/monstre.h" bodystart="25" bodyend="33"/>
+        <location file="/home/Theo/Téléchargements/sae/sprites/monstre.h" line="25" column="6" bodyfile="/home/Theo/Téléchargements/sae/sprites/monstre.h" bodystart="25" bodyend="33"/>
+        <references refid="namespacens_graphics_1a219354b4276a9edbfc436390ba3a4827" compoundref="rgbacolor_8h" startline="168">nsGraphics::KMaroon</references>
+        <referencedby refid="game_8cpp_1a57e55da876e34d1b049962d00fac607e" compoundref="game_8cpp" startline="117" endline="136">Sprite</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -189,16 +191,16 @@
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rectangle_8h" kindref="compound">mingl/shape/rectangle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"></highlight><highlight class="comment">//défini<sp/>les<sp/>éléments<sp/>du<sp/>sprite<sp/>d&apos;un<sp/>mur</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Monstre(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Circle1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Circle2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
+<codeline lineno="25" refid="monstre_8h_1a1bdf648b0b46f6c35eeae63523d4eac8" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="monstre_8h_1a1bdf648b0b46f6c35eeae63523d4eac8" kindref="member">Monstre</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Circle1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Circle2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wall_x<sp/>=<sp/>320/mat_x;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wall_y<sp/>=<sp/>320/mat_y;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//shape<sp/>formant<sp/>le<sp/>sprite</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((Circle1-wall_x),(Circle2-wall_y)),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((Circle1+wall_x),(Circle2+wall_y)),<sp/>nsGraphics::KMaroon);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((Circle1-wall_x),(Circle2-wall_y)),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((Circle1+wall_x),(Circle2+wall_y)),<sp/><ref refid="namespacens_graphics_1a219354b4276a9edbfc436390ba3a4827" kindref="member">nsGraphics::KMaroon</ref>);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/monstre.h"/>
+    <location file="/home/Theo/Téléchargements/sae/sprites/monstre.h"/>
   </compounddef>
 </doxygen>

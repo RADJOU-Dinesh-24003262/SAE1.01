@@ -3,7 +3,7 @@
   <compounddef id="wall_8h" kind="file" language="C++">
     <compoundname>wall.h</compoundname>
     <includes refid="rectangle_8h" local="yes">mingl/shape/rectangle.h</includes>
-    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/Jeu/game.cpp</includedby>
     <incdepgraph>
       <node id="4">
         <label>../graphics/idrawable.h</label>
@@ -68,7 +68,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/wall.h</label>
         <link refid="wall_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -91,11 +91,11 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/wall.h</label>
         <link refid="wall_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -176,23 +176,25 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h" line="24" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h" bodystart="24" bodyend="32"/>
+        <location file="/home/Theo/Téléchargements/sae/sprites/wall.h" line="24" column="6" bodyfile="/home/Theo/Téléchargements/sae/sprites/wall.h" bodystart="24" bodyend="32"/>
+        <references refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" compoundref="rgbacolor_8h" startline="157">nsGraphics::KBlack</references>
+        <referencedby refid="game_8cpp_1a57e55da876e34d1b049962d00fac607e" compoundref="game_8cpp" startline="117" endline="136">Sprite</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
-<para>Affiche le sprite d&apos;un mur. </para>
+<para>Affiche le sprite d&apos;un bouton. </para>
     </briefdescription>
     <detaileddescription>
-<para>Affiche le sprite d&apos;un bouton.</para>
+<para>Affiche le sprite d&apos;un mur.</para>
 <para><simplesect kind="author"><para>Matisse Quilliec </para>
 </simplesect>
-<simplesect kind="date"><para>December 2024 </para>
+<simplesect kind="date"><para>Janvier 2025 </para>
 </simplesect>
 <simplesect kind="version"><para>1.0</para>
 </simplesect>
 <simplesect kind="author"><para>Matisse Quilliec </para>
 </simplesect>
-<simplesect kind="date"><para>Janvier 2025 </para>
+<simplesect kind="date"><para>December 2024 </para>
 </simplesect>
 <simplesect kind="version"><para>1.0 </para>
 </simplesect>
@@ -211,9 +213,9 @@
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wall_y<sp/>=<sp/>320/mat_y;</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//shape<sp/>formant<sp/>le<sp/>sprite</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((Circle1-wall_x),(Circle2-wall_y)),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((Circle1+wall_x),(Circle2+wall_y)),<sp/>nsGraphics::KBlack);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((Circle1-wall_x),(Circle2-wall_y)),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((Circle1+wall_x),(Circle2+wall_y)),<sp/><ref refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" kindref="member">nsGraphics::KBlack</ref>);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h"/>
+    <location file="/home/Theo/Téléchargements/sae/sprites/wall.h"/>
   </compounddef>
 </doxygen>

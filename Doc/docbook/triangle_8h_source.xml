@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_triangle_8h_source" xml:lang="en-US">
 <title>triangle.h</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/triangle.h</primary></indexterm>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/triangle.h</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_triangle_8h_source_1l00001"/>00001 
 <anchor xml:id="_triangle_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;TRIANGLE_H</emphasis>
 <anchor xml:id="_triangle_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;TRIANGLE_H</emphasis>
@@ -28,7 +28,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_triangle_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;};
 <anchor xml:id="_triangle_8h_source_1l00041"/>00041 
 <anchor xml:id="_triangle_8h_source_1l00052"/>00052 &#32;&#32;&#32;&#32;<link linkend="_classns_shape_1_1_triangle_1a72e60fed26e09d01757828ec019134c7">Triangle</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;firstPosition,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;secondPosition,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;thirdPosition,
-<anchor xml:id="_triangle_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;fillColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;borderColor&#32;=&#32;nsGraphics::KTransparent);
+<anchor xml:id="_triangle_8h_source_1l00053"/>00053 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;fillColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;borderColor&#32;=&#32;<link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link>);
 <anchor xml:id="_triangle_8h_source_1l00054"/>00054 
 <anchor xml:id="_triangle_8h_source_1l00059"/><link linkend="_classns_shape_1_1_triangle_1ae59fd091a1005d0e4a7e648487c69739">00059</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_classns_shape_1_1_triangle_1ae59fd091a1005d0e4a7e648487c69739">~Triangle</link>()&#32;<emphasis role="keyword">override</emphasis>&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
 <anchor xml:id="_triangle_8h_source_1l00060"/>00060 

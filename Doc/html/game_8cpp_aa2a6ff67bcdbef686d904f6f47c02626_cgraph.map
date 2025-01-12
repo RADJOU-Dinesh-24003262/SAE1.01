@@ -1,0 +1,12 @@
+<map id="Pause" name="Pause">
+<area shape="rect" id="node1" title=" " alt="" coords="5,122,67,149"/>
+<area shape="rect" id="node2" href="$classns_event_1_1_event_manager.html#adbc5ced9a9435f61f58436ff613632b4" title="Vide la queue." alt="" coords="115,5,291,47"/>
+<area shape="rect" id="node3" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp.html#a046cb13499b350b9cfa15afc669e9707" title=" " alt="" coords="169,122,236,149"/>
+<area shape="rect" id="node4" href="$class_min_g_l.html#ab558253439905930836ab4910a7ae253" title="Récupère le gestionnaire d&#39;évènements minGL." alt="" coords="339,30,525,57"/>
+<area shape="rect" id="node9" href="$class_min_g_l.html#a489922f0bdde2e38698adddaf57f6eda" title="Préviens minGL que la frame est terminée." alt="" coords="129,173,277,199"/>
+<area shape="rect" id="node10" href="$_menu_management_8h.html#ab2a2e33bb6aff7164d540d7a50bdd38f" title=" " alt="" coords="143,223,262,250"/>
+<area shape="rect" id="node5" href="$classns_event_1_1_event_manager.html#a5a3119d969a296b8e94f223171fdf2e6" title="Vérifie si un événement doit être traité" alt="" coords="344,81,520,123"/>
+<area shape="rect" id="node6" href="$classns_event_1_1_event_manager.html#adb00a0a006f4caa976471e74bf99cdc9" title="Tire l&#39;événement le plus ancien, et l&#39;enlève de la queue." alt="" coords="344,147,520,188"/>
+<area shape="rect" id="node7" href="$classns_graphics_1_1_vec2_d.html#ae9d371fdd3817c6e9a3a1ae6ed3fd17d" title="Définit la nouvelle position X (abscisse)" alt="" coords="341,213,523,239"/>
+<area shape="rect" id="node8" href="$classns_graphics_1_1_vec2_d.html#ac0e752e399ab2f727fe2644540b1208f" title="Définit la nouvelle position Y (ordonnée)" alt="" coords="342,263,522,290"/>
+</map>

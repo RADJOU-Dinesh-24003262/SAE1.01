@@ -35,7 +35,7 @@ Collaboration diagram for nsShape::Shape:<para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_shape">Shape</link>. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4"/>virtual <emphasis role="strong">~Shape</emphasis> ()=default</para>
+            <listitem><para>virtual <link linkend="_classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4">~Shape</link> ()=default</para>
 
 <para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_shape">Shape</link>. </para>
 </listitem>
@@ -118,6 +118,15 @@ Parameters</title>
 <para>
 Definition at line <link linkend="_shape_8cpp_source_1l00013">13</link> of file <link linkend="_shape_8cpp_source">shape.cpp</link>.</para>
 </section>
+<anchor xml:id="_classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4"/><section>
+    <title>~Shape()</title>
+<indexterm><primary>~Shape</primary><secondary>nsShape::Shape</secondary></indexterm>
+<indexterm><primary>nsShape::Shape</primary><secondary>~Shape</secondary></indexterm>
+<para><computeroutput>nsShape::Shape::~Shape ( )<computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_shape">Shape</link>. </para>
+</para>
+</section>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -162,6 +171,15 @@ Here is the caller graph for this function:<para>
 </para>
 <para>
 Definition at line <link linkend="_shape_8cpp_source_1l00033">33</link> of file <link linkend="_shape_8cpp_source">shape.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_shape_1_1_shape_a48821100aa1856f188bdba257505adc3_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07"/><section>
     <title>setFillColor()</title>
@@ -210,5 +228,5 @@ Definition at line <link linkend="_shape_8h_source_1l00075">75</link> of file <l
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_shape_8h">shape.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_shape_8cpp">shape.cpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_shape_8h">shape.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/<link linkend="_shape_8cpp">shape.cpp</link></section>
 </section>

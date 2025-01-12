@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_a5edcea1b424b83dfd21c4efe8151e4f" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master Directory Reference</primary></indexterm>
+Directory dependency graph for MinGL2_IUT_AIX-master:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_a5edcea1b424b83dfd21c4efe8151e4f_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_67acc39d0ff94b830439984c8389c5f5">examples</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_09a42955bdb5104c8007800a627d551b">include</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_7ac9af026df07336226ac6eea101ff70">src</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_699f6035ef350bfba7fe70db856630d1">tools</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

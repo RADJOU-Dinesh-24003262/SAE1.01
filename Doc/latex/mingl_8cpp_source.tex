@@ -1,5 +1,5 @@
 \hypertarget{mingl_8cpp_source}{}\doxysection{mingl.\+cpp}
-\label{mingl_8cpp_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/mingl.cpp@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/src/mingl.cpp}}
+\label{mingl_8cpp_source}\index{/home/Theo/Téléchargements/sae/MinGL2\_IUT\_AIX-\/master/src/mingl.cpp@{/home/Theo/Téléchargements/sae/MinGL2\_IUT\_AIX-\/master/src/mingl.cpp}}
 \mbox{\hyperlink{mingl_8cpp}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00001}00001 }
@@ -32,7 +32,7 @@
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00037}00037 }
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00038}00038 \} \textcolor{comment}{// namespace}}
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00039}00039 }
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00040}00040 \textcolor{preprocessor}{\#define BIND\_CALLBACK(HANDLER) callBackBuilder<decltype(HANDLER), HANDLER>::callback}}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00040}\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{00040}} \textcolor{preprocessor}{\#define BIND\_CALLBACK(HANDLER) callBackBuilder<decltype(HANDLER), HANDLER>::callback}}
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00041}00041 }
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00042}\mbox{\hyperlink{class_min_g_l_aecc35a286d1adbcbdc76bf26df18169c}{00042}} \mbox{\hyperlink{class_min_g_l_aecc35a286d1adbcbdc76bf26df18169c}{MinGL::MinGL}}(\textcolor{keyword}{const} std::string\& name, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& windowSize, \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}\& windowPosition,}
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00043}00043              \textcolor{keyword}{const} \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{nsGraphics::RGBAcolor}}\& backgroundColor)}
@@ -96,16 +96,16 @@
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00101}00101     glutSetOption(GLUT\_ACTION\_ON\_WINDOW\_CLOSE, GLUT\_ACTION\_CONTINUE\_EXECUTION);}
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00102}00102 }
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00103}00103     \textcolor{comment}{// Initialisation handlers}}
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00104}00104     glutReshapeFunc(BIND\_CALLBACK(\&MinGL::callReshape));}
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00105}00105     glutDisplayFunc(BIND\_CALLBACK(\&MinGL::callDisplay));}
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00106}00106     glutMouseFunc(BIND\_CALLBACK(\&MinGL::callMouse));}
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00107}00107     glutMotionFunc(BIND\_CALLBACK(\&MinGL::callMotion));}
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00108}00108     glutPassiveMotionFunc(BIND\_CALLBACK(\&MinGL::callPassiveMotion));}
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00109}00109     glutKeyboardFunc(BIND\_CALLBACK(\&MinGL::callKeyboard));}
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00110}00110     glutKeyboardUpFunc(BIND\_CALLBACK(\&MinGL::callKeyboardUp));}
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00111}00111     glutSpecialFunc(BIND\_CALLBACK(\&MinGL::callKeyboardSpecial));}
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00112}00112     glutSpecialUpFunc(BIND\_CALLBACK(\&MinGL::callKeyboardUpSpecial));}
-\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00113}00113     glutCloseFunc(BIND\_CALLBACK(\&MinGL::callClose));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00104}00104     glutReshapeFunc(\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{BIND\_CALLBACK}}(\&MinGL::callReshape));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00105}00105     glutDisplayFunc(\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{BIND\_CALLBACK}}(\&MinGL::callDisplay));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00106}00106     glutMouseFunc(\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{BIND\_CALLBACK}}(\&MinGL::callMouse));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00107}00107     glutMotionFunc(\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{BIND\_CALLBACK}}(\&MinGL::callMotion));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00108}00108     glutPassiveMotionFunc(\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{BIND\_CALLBACK}}(\&MinGL::callPassiveMotion));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00109}00109     glutKeyboardFunc(\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{BIND\_CALLBACK}}(\&MinGL::callKeyboard));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00110}00110     glutKeyboardUpFunc(\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{BIND\_CALLBACK}}(\&MinGL::callKeyboardUp));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00111}00111     glutSpecialFunc(\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{BIND\_CALLBACK}}(\&MinGL::callKeyboardSpecial));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00112}00112     glutSpecialUpFunc(\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{BIND\_CALLBACK}}(\&MinGL::callKeyboardUpSpecial));}
+\DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00113}00113     glutCloseFunc(\mbox{\hyperlink{mingl_8cpp_ab33118d2dfe2ee96556474ed9e256e11}{BIND\_CALLBACK}}(\&MinGL::callClose));}
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00114}00114 }
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00115}00115     \textcolor{comment}{// On set la couleur d'effacement (prend des float, donc obligé de diviser par la taille d'un GLuint)}}
 \DoxyCodeLine{\Hypertarget{mingl_8cpp_source_l00116}00116     glClearColor(m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a55e40085f904b696a0bc63aed6258b79}{getRed}}() / 256.f, m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a5f2dc1550c34149fc5cbc1629b54d7e4}{getGreen}}() / 256.f, m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a9ac0893426cce20a177d6ea7af1d7129}{getBlue}}() / 256.f, m\_bgColor.\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor_a76299c507a113e326c01fe4b0bca2b1e}{getAlpha}}() / 256.f);}

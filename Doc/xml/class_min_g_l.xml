@@ -27,7 +27,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="47" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="47" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="47" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="47" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1" prot="public" static="no">
         <type>std::map&lt; <ref refid="class_min_g_l_1a6e612d21ed9723c37ad91093f7b48c96" kindref="member">KeyType_t</ref>, bool &gt;</type>
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="55" column="22" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="55" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="55" column="22" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="55" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -60,7 +60,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="194" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="194" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="194" column="17" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="194" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_min_g_l_1a9e6c21fbff1924505fad179485709997" prot="private" static="no" mutable="no">
         <type><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref></type>
@@ -75,7 +75,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="199" column="27" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="199" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="199" column="27" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="199" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_min_g_l_1af332476b2b81b98e1f26199bb53417e7" prot="private" static="no" mutable="no">
         <type><ref refid="class_min_g_l_1a084b1a739a671ad7d6af07792bd56af1" kindref="member">KeyMap_t</ref></type>
@@ -90,7 +90,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="204" column="14" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="204" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="204" column="14" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="204" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_min_g_l_1af40082bd76caa922579cd39842c4790f" prot="private" static="no" mutable="no">
         <type>short</type>
@@ -106,7 +106,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="209" column="11" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="209" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="209" column="11" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="209" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_min_g_l_1afe2bd120b2b6d4d364ea3f22a88d1442" prot="private" static="no" mutable="no">
         <type><ref refid="classns_event_1_1_event_manager" kindref="compound">nsEvent::EventManager</ref></type>
@@ -121,7 +121,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="214" column="27" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="214" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="214" column="27" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="214" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_min_g_l_1a3543e7c3257de2cbf3cfa2aafbae3236" prot="private" static="no" mutable="no">
         <type>bool</type>
@@ -136,7 +136,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="219" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="219" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="219" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="219" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -163,7 +163,7 @@
         <param>
           <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
           <declname>backgroundColor</declname>
-          <defval>nsGraphics::KWhite</defval>
+          <defval><ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref></defval>
         </param>
         <briefdescription>
 <para>Constructeur pour la classe <ref refid="class_min_g_l" kindref="compound">MinGL</ref>. </para>
@@ -206,7 +206,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="67" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="42" bodyend="51"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="67" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="42" bodyend="51"/>
         <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">nsGraphics::Vec2D::getX</references>
         <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">nsGraphics::Vec2D::getY</references>
       </memberdef>
@@ -223,7 +223,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="75" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="53" bodyend="60"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="75" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="53" bodyend="60"/>
         <references refid="class_min_g_l_1a9508f3ac9d4cb4f444f56f5d77ed9d86" compoundref="mingl_8cpp" startline="127" endline="131">stopGraphic</references>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -239,8 +239,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="91" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="89" bodyend="125"/>
-        <referencedby refid="game_8h_1a0b1d64ee76933ef8f007f1208cb869a7" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="91" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="89" bodyend="125"/>
+        <references refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" compoundref="mingl_8cpp" startline="40">BIND_CALLBACK</references>
+        <references refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" compoundref="mingl_8cpp" startline="68" endline="71">clearScreen</references>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" compoundref="rgbacolor_8cpp" startline="46" endline="49">nsGraphics::RGBAcolor::getAlpha</references>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" compoundref="rgbacolor_8cpp" startline="56" endline="59">nsGraphics::RGBAcolor::getBlue</references>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" compoundref="rgbacolor_8cpp" startline="66" endline="69">nsGraphics::RGBAcolor::getGreen</references>
+        <references refid="classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79" compoundref="rgbacolor_8cpp" startline="76" endline="79">nsGraphics::RGBAcolor::getRed</references>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp" startline="10" endline="47">main</referencedby>
+        <referencedby refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a9508f3ac9d4cb4f444f56f5d77ed9d86" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -255,7 +262,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="97" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="127" bodyend="131"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="97" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="127" bodyend="131"/>
         <referencedby refid="class_min_g_l_1a0f84e59dd311785a7e6da848abd5d188" compoundref="mingl_8cpp" startline="53" endline="60">~MinGL</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -285,7 +292,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="104" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="133" bodyend="136"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="104" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="133" bodyend="136"/>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_1a3b1be47d68f5800c6bfbb2cc3764c151" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp" startline="14" endline="25">clavier</referencedby>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp" startline="13" endline="78">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a99750fd4c8f97cfe693b1acb903424cf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -314,7 +323,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="111" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="138" bodyend="141"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="111" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="138" bodyend="141"/>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp" startline="13" endline="78">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -329,7 +339,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="117" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="62" bodyend="66"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="117" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="62" bodyend="66"/>
+        <referencedby refid="game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4" compoundref="game_8cpp" startline="239" endline="254">Credits</referencedby>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp" startline="10" endline="47">main</referencedby>
+        <referencedby refid="game_8cpp_1a0845b941aa45002f46dd1653274997dc" compoundref="game_8cpp" startline="201" endline="219">MenuP</referencedby>
+        <referencedby refid="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" compoundref="game_8cpp" startline="221" endline="237">Options</referencedby>
+        <referencedby refid="game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626" compoundref="game_8cpp" startline="256" endline="273">Pause</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a86c940758616957683ffb2e239bba774" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -344,7 +360,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="123" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="68" bodyend="71"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="123" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="68" bodyend="71"/>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
+        <referencedby refid="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" compoundref="mingl_8cpp" startline="89" endline="125">initGraphic</referencedby>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp" startline="10" endline="47">main</referencedby>
+        <referencedby refid="game_8cpp_1a0845b941aa45002f46dd1653274997dc" compoundref="game_8cpp" startline="201" endline="219">MenuP</referencedby>
+        <referencedby refid="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" compoundref="game_8cpp" startline="221" endline="237">Options</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1ab558253439905930836ab4910a7ae253" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classns_event_1_1_event_manager" kindref="compound">nsEvent::EventManager</ref> &amp;</type>
@@ -359,7 +380,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="129" column="27" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="73" bodyend="76"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="129" column="27" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="73" bodyend="76"/>
+        <referencedby refid="game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4" compoundref="game_8cpp" startline="239" endline="254">Credits</referencedby>
+        <referencedby refid="_menu_management_8h_1a4502ca76132916f74305fe40f59ae97d" compoundref="_menu_management_8h" startline="117" endline="156">events</referencedby>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp" startline="10" endline="47">main</referencedby>
+        <referencedby refid="game_8cpp_1a0845b941aa45002f46dd1653274997dc" compoundref="game_8cpp" startline="201" endline="219">MenuP</referencedby>
+        <referencedby refid="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" compoundref="game_8cpp" startline="221" endline="237">Options</referencedby>
+        <referencedby refid="game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626" compoundref="game_8cpp" startline="256" endline="273">Pause</referencedby>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a66758e8e6983cc1dd0b10b1ee743a65a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
@@ -374,7 +402,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="135" column="33" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="78" bodyend="81"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="135" column="33" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="78" bodyend="81"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a4399b7615cea89f850cd5c66e428c367" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -393,7 +421,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="141" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="83" bodyend="87"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="141" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="83" bodyend="87"/>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" compoundref="rgbacolor_8cpp" startline="46" endline="49">nsGraphics::RGBAcolor::getAlpha</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" compoundref="rgbacolor_8cpp" startline="56" endline="59">nsGraphics::RGBAcolor::getBlue</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" compoundref="rgbacolor_8cpp" startline="66" endline="69">nsGraphics::RGBAcolor::getGreen</references>
@@ -412,7 +440,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="147" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="227" bodyend="230"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="147" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="227" bodyend="230"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a532d320b7b837998533fe6577ab45bc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -441,7 +469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="154" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="232" bodyend="235"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="154" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="232" bodyend="235"/>
         <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">nsGraphics::Vec2D::getX</references>
         <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">nsGraphics::Vec2D::getY</references>
       </memberdef>
@@ -458,7 +486,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="160" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="237" bodyend="240"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="160" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="237" bodyend="240"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a9239873a52e437457af03f002f5df2b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -487,7 +515,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="167" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="242" bodyend="245"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="167" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="242" bodyend="245"/>
         <references refid="classns_graphics_1_1_vec2_d_1abcf3d729b05b3cd93e9eff21c74b89a1" compoundref="vec2d_8cpp" startline="178" endline="181">nsGraphics::Vec2D::getX</references>
         <references refid="classns_graphics_1_1_vec2_d_1ae70fbda9cca27b9dc0fe068a38ae5e5e" compoundref="vec2d_8cpp" startline="188" endline="191">nsGraphics::Vec2D::getY</references>
       </memberdef>
@@ -504,7 +532,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="173" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="247" bodyend="250"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="173" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="247" bodyend="250"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a462ab2edc0eb28990638541873869e0e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -533,7 +561,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="180" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="252" bodyend="256"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="180" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="252" bodyend="256"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -548,7 +576,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="186" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="258" bodyend="261"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="186" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="258" bodyend="261"/>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp" startline="10" endline="47">main</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-static-func">
@@ -565,8 +595,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="81" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="81" bodyend="85"/>
-        <referencedby refid="game_8h_1a0b1d64ee76933ef8f007f1208cb869a7" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="81" column="17" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="81" bodyend="85"/>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp" startline="10" endline="47">main</referencedby>
+        <referencedby refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -609,7 +640,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="229" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="143" bodyend="154"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="229" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="143" bodyend="154"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1ae71dc646c80911464c894be0baef1ee7" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -624,7 +655,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="235" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="156" bodyend="160"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="235" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="156" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1adbfb411b829a994dae7cb3386147de37" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -691,7 +722,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="245" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="162" bodyend="172"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="245" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="162" bodyend="172"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a4b4efe5e69eb3bd53187a49378387b04" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -732,7 +763,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="253" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="174" bodyend="182"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="253" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="174" bodyend="182"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a2f23fcf1dcf6fb984a1da4fd4852db12" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -773,7 +804,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="261" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="184" bodyend="192"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="261" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="184" bodyend="192"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1aac47c1b6f86ad464a4428901674e75e1" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -828,7 +859,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="270" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="194" bodyend="199"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="270" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="194" bodyend="199"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1af8593e8ca2ae0763a9557bddb55611aa" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -883,7 +914,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="279" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="201" bodyend="206"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="279" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="201" bodyend="206"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a6a165ace4759e8bed20b2d97061ab3ce" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -938,7 +969,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="288" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="208" bodyend="213"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="288" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="208" bodyend="213"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1ae1f50c8c113180fdfb70df4770c4e182" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -993,7 +1024,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="297" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="215" bodyend="220"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="297" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="215" bodyend="220"/>
       </memberdef>
       <memberdef kind="function" id="class_min_g_l_1a9f18353c69c9f66b15a79d081160ab27" prot="private" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -1008,7 +1039,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="303" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="222" bodyend="225"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="303" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="222" bodyend="225"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -1016,7 +1047,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="34" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="35" bodyend="305"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" line="34" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h" bodystart="35" bodyend="305"/>
     <listofallmembers>
       <member refid="class_min_g_l_1a9f18353c69c9f66b15a79d081160ab27" prot="private" virt="non-virtual"><scope>MinGL</scope><name>callClose</name></member>
       <member refid="class_min_g_l_1ae71dc646c80911464c894be0baef1ee7" prot="private" virt="non-virtual"><scope>MinGL</scope><name>callDisplay</name></member>

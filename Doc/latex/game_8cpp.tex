@@ -1,0 +1,393 @@
+\hypertarget{game_8cpp}{}\doxysection{/home/\+Theo/\+Téléchargements/sae/\+Jeu/game.cpp File Reference}
+\label{game_8cpp}\index{/home/Theo/Téléchargements/sae/Jeu/game.cpp@{/home/Theo/Téléchargements/sae/Jeu/game.cpp}}
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$unistd.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}game.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}params.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gridmanagement.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$thread$>$}\newline
+{\ttfamily \#include $<$cmath$>$}\newline
+{\ttfamily \#include \char`\"{}mingl/mingl.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$tuple$>$}\newline
+{\ttfamily \#include \char`\"{}sprites/player1.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprites/player2.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprites/wall.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprites/kebab.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprites/cigarette.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprites/monstre.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprites/teleporter.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprites/statue.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Menu\+Management.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$map$>$}\newline
+Include dependency graph for game.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{game_8cpp_a69c339b2966791489487938c49401cf3}{FPS\+\_\+\+LIMIT}}~15
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{game_8cpp_aa61e0829c615216027761f9feafa253c}{Is\+Move\+Legal}} (const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&Mat, const bool \&Key\+Up, const bool \&Key\+Down, const bool \&Key\+Right, const bool \&Key\+Left, const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos, const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&Param)
+\item 
+pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ \mbox{\hyperlink{game_8cpp_a0e70e085afb41e8db9d8c7c8936dfad7}{next\+Move}} (const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&Mat, const bool \&Key\+Up, const bool \&Key\+Down, const bool \&Key\+Right, const bool \&Key\+Left, const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos, const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&Param, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Tp1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Tp2)
+\item 
+bool \mbox{\hyperlink{game_8cpp_a35057878b4faca7c5b0d80ba8a9a7608}{Is\+Collectible}} (const char move)
+\item 
+void \mbox{\hyperlink{game_8cpp_ab465081d6f14034e76b3e4efd1d092db}{Calculate\+Score}} (vector$<$ char $>$ \&objets, int \&score)
+\item 
+void \mbox{\hyperlink{game_8cpp_a57e55da876e34d1b049962d00fac607e}{Sprite}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, int grid\+\_\+x, int grid\+\_\+y, int pos\+\_\+x, int pos\+\_\+y, int mat\+\_\+x, int mat\+\_\+y, string sprite)
+\item 
+void \mbox{\hyperlink{game_8cpp_a1598d2cc705c314acea3323f69b0b372}{Display\+Grid}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&mat, tuple$<$ int, int $>$ Screen\+\_\+size)
+\item 
+void \mbox{\hyperlink{game_8cpp_ac95434408d3f8bf774e3032eaa73ae4e}{Move\+Token}} (\mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&Mat, const bool \&Key\+Up, const bool \&Key\+Down, const bool \&Key\+Right, const bool \&Key\+Left, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Pos, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Tp1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&Tp2)
+\item 
+void \mbox{\hyperlink{game_8cpp_a0845b941aa45002f46dd1653274997dc}{MenuP}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$ clickablepool, tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, chrono\+::time\+\_\+point$<$ chrono\+::steady\+\_\+clock $>$ start)
+\item 
+void \mbox{\hyperlink{game_8cpp_a312034bd1e903262c8bf2bea6cdbee8f}{Options}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$ clickablepool, tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, chrono\+::time\+\_\+point$<$ chrono\+::steady\+\_\+clock $>$ start)
+\item 
+void \mbox{\hyperlink{game_8cpp_abeb01ff9eee7d59d0e2906d12379e0c4}{Credits}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$ clickablepool, tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, chrono\+::time\+\_\+point$<$ chrono\+::steady\+\_\+clock $>$ start)
+\item 
+void \mbox{\hyperlink{game_8cpp_aa2a6ff67bcdbef686d904f6f47c02626}{Pause}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$ clickablepool, tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, chrono\+::time\+\_\+point$<$ chrono\+::steady\+\_\+clock $>$ start)
+\item 
+void \mbox{\hyperlink{game_8cpp_a1e152641100487c240b9a3edfaf40890}{Game\+Loop}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$clickablepool, \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} Mat, int menuid, unsigned Party\+Num, bool Key1\+\_\+\+UP, bool Key1\+\_\+\+DOWN, bool Key1\+\_\+\+RIGHT, bool Key1\+\_\+\+LEFT, bool Key2\+\_\+\+UP, bool Key2\+\_\+\+DOWN, bool Key2\+\_\+\+RIGHT, bool Key2\+\_\+\+LEFT, tuple$<$ int, int $>$ Screen\+\_\+size, \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} param, bool Victory, unsigned KMax\+Party\+Num, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+Player1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+Player2, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+TP1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+TP2, bool Player1\+Turn, pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ N\+\_\+move1, pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ N\+\_\+move2, vector$<$ char $>$ objet\+J1, vector$<$ char $>$ objet\+J2, int score\+J1, int score\+J2, vector$<$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ Pos\+Monster)
+\item 
+int \mbox{\hyperlink{game_8cpp_acfd932870183388e95db32d747ebaad0}{ppal}} (void)
+\begin{DoxyCompactList}\small\item\em new main \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{game_8cpp_a69c339b2966791489487938c49401cf3}\label{game_8cpp_a69c339b2966791489487938c49401cf3}} 
+\index{game.cpp@{game.cpp}!FPS\_LIMIT@{FPS\_LIMIT}}
+\index{FPS\_LIMIT@{FPS\_LIMIT}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{FPS\_LIMIT}{FPS\_LIMIT}}
+{\footnotesize\ttfamily \#define FPS\+\_\+\+LIMIT~15}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00010}{10}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{game_8cpp_ab465081d6f14034e76b3e4efd1d092db}\label{game_8cpp_ab465081d6f14034e76b3e4efd1d092db}} 
+\index{game.cpp@{game.cpp}!CalculateScore@{CalculateScore}}
+\index{CalculateScore@{CalculateScore}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{CalculateScore()}{CalculateScore()}}
+{\footnotesize\ttfamily void Calculate\+Score (\begin{DoxyParamCaption}\item[{vector$<$ char $>$ \&}]{objets,  }\item[{int \&}]{score }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00104}{104}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_ab465081d6f14034e76b3e4efd1d092db_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_abeb01ff9eee7d59d0e2906d12379e0c4}\label{game_8cpp_abeb01ff9eee7d59d0e2906d12379e0c4}} 
+\index{game.cpp@{game.cpp}!Credits@{Credits}}
+\index{Credits@{Credits}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{Credits()}{Credits()}}
+{\footnotesize\ttfamily void Credits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$}]{clickablepool,  }\item[{tuple$<$ int, int $>$}]{Screen\+\_\+size,  }\item[{int \&}]{menuid,  }\item[{chrono\+::time\+\_\+point$<$ chrono\+::steady\+\_\+clock $>$}]{start }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00239}{239}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_abeb01ff9eee7d59d0e2906d12379e0c4_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=282pt]{game_8cpp_abeb01ff9eee7d59d0e2906d12379e0c4_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_a1598d2cc705c314acea3323f69b0b372}\label{game_8cpp_a1598d2cc705c314acea3323f69b0b372}} 
+\index{game.cpp@{game.cpp}!DisplayGrid@{DisplayGrid}}
+\index{DisplayGrid@{DisplayGrid}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{DisplayGrid()}{DisplayGrid()}}
+{\footnotesize\ttfamily void Display\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{mat,  }\item[{tuple$<$ int, int $>$}]{Screen\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00138}{138}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{game_8cpp_a1598d2cc705c314acea3323f69b0b372_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_a1598d2cc705c314acea3323f69b0b372_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_a1e152641100487c240b9a3edfaf40890}\label{game_8cpp_a1e152641100487c240b9a3edfaf40890}} 
+\index{game.cpp@{game.cpp}!GameLoop@{GameLoop}}
+\index{GameLoop@{GameLoop}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{GameLoop()}{GameLoop()}}
+{\footnotesize\ttfamily void Game\+Loop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$}]{clickablepool,  }\item[{\mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}}}]{Mat,  }\item[{int}]{menuid,  }\item[{unsigned}]{Party\+Num,  }\item[{bool}]{Key1\+\_\+\+UP,  }\item[{bool}]{Key1\+\_\+\+DOWN,  }\item[{bool}]{Key1\+\_\+\+RIGHT,  }\item[{bool}]{Key1\+\_\+\+LEFT,  }\item[{bool}]{Key2\+\_\+\+UP,  }\item[{bool}]{Key2\+\_\+\+DOWN,  }\item[{bool}]{Key2\+\_\+\+RIGHT,  }\item[{bool}]{Key2\+\_\+\+LEFT,  }\item[{tuple$<$ int, int $>$}]{Screen\+\_\+size,  }\item[{\mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}}}]{param,  }\item[{bool}]{Victory,  }\item[{unsigned}]{KMax\+Party\+Num,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}}}]{Pos\+Player1,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}}}]{Pos\+Player2,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}}}]{Pos\+TP1,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}}}]{Pos\+TP2,  }\item[{bool}]{Player1\+Turn,  }\item[{pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$}]{N\+\_\+move1,  }\item[{pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$}]{N\+\_\+move2,  }\item[{vector$<$ char $>$}]{objet\+J1,  }\item[{vector$<$ char $>$}]{objet\+J2,  }\item[{int}]{score\+J1,  }\item[{int}]{score\+J2,  }\item[{vector$<$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$}]{Pos\+Monster }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00275}{275}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_a1e152641100487c240b9a3edfaf40890_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=300pt]{game_8cpp_a1e152641100487c240b9a3edfaf40890_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_a35057878b4faca7c5b0d80ba8a9a7608}\label{game_8cpp_a35057878b4faca7c5b0d80ba8a9a7608}} 
+\index{game.cpp@{game.cpp}!IsCollectible@{IsCollectible}}
+\index{IsCollectible@{IsCollectible}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{IsCollectible()}{IsCollectible()}}
+{\footnotesize\ttfamily bool Is\+Collectible (\begin{DoxyParamCaption}\item[{const char}]{move }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00096}{96}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_a35057878b4faca7c5b0d80ba8a9a7608_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_aa61e0829c615216027761f9feafa253c}\label{game_8cpp_aa61e0829c615216027761f9feafa253c}} 
+\index{game.cpp@{game.cpp}!IsMoveLegal@{IsMoveLegal}}
+\index{IsMoveLegal@{IsMoveLegal}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{IsMoveLegal()}{IsMoveLegal()}}
+{\footnotesize\ttfamily bool Is\+Move\+Legal (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{Mat,  }\item[{const bool \&}]{Key\+Up,  }\item[{const bool \&}]{Key\+Down,  }\item[{const bool \&}]{Key\+Right,  }\item[{const bool \&}]{Key\+Left,  }\item[{const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Pos,  }\item[{const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&}]{Param }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=236pt]{game_8cpp_aa61e0829c615216027761f9feafa253c_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_aa61e0829c615216027761f9feafa253c_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_a0845b941aa45002f46dd1653274997dc}\label{game_8cpp_a0845b941aa45002f46dd1653274997dc}} 
+\index{game.cpp@{game.cpp}!MenuP@{MenuP}}
+\index{MenuP@{MenuP}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{MenuP()}{MenuP()}}
+{\footnotesize\ttfamily void MenuP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$}]{clickablepool,  }\item[{tuple$<$ int, int $>$}]{Screen\+\_\+size,  }\item[{int \&}]{menuid,  }\item[{chrono\+::time\+\_\+point$<$ chrono\+::steady\+\_\+clock $>$}]{start }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00201}{201}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_a0845b941aa45002f46dd1653274997dc_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=281pt]{game_8cpp_a0845b941aa45002f46dd1653274997dc_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_ac95434408d3f8bf774e3032eaa73ae4e}\label{game_8cpp_ac95434408d3f8bf774e3032eaa73ae4e}} 
+\index{game.cpp@{game.cpp}!MoveToken@{MoveToken}}
+\index{MoveToken@{MoveToken}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{MoveToken()}{MoveToken()}}
+{\footnotesize\ttfamily void Move\+Token (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{Mat,  }\item[{const bool \&}]{Key\+Up,  }\item[{const bool \&}]{Key\+Down,  }\item[{const bool \&}]{Key\+Right,  }\item[{const bool \&}]{Key\+Left,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Pos,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Tp1,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Tp2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00163}{163}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_ac95434408d3f8bf774e3032eaa73ae4e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_a0e70e085afb41e8db9d8c7c8936dfad7}\label{game_8cpp_a0e70e085afb41e8db9d8c7c8936dfad7}} 
+\index{game.cpp@{game.cpp}!nextMove@{nextMove}}
+\index{nextMove@{nextMove}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{nextMove()}{nextMove()}}
+{\footnotesize\ttfamily pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ next\+Move (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{Mat,  }\item[{const bool \&}]{Key\+Up,  }\item[{const bool \&}]{Key\+Down,  }\item[{const bool \&}]{Key\+Right,  }\item[{const bool \&}]{Key\+Left,  }\item[{const \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Pos,  }\item[{const \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} \&}]{Param,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Tp1,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} \&}]{Tp2 }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00057}{57}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_a0e70e085afb41e8db9d8c7c8936dfad7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_a312034bd1e903262c8bf2bea6cdbee8f}\label{game_8cpp_a312034bd1e903262c8bf2bea6cdbee8f}} 
+\index{game.cpp@{game.cpp}!Options@{Options}}
+\index{Options@{Options}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{Options()}{Options()}}
+{\footnotesize\ttfamily void Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$}]{clickablepool,  }\item[{tuple$<$ int, int $>$}]{Screen\+\_\+size,  }\item[{int \&}]{menuid,  }\item[{chrono\+::time\+\_\+point$<$ chrono\+::steady\+\_\+clock $>$}]{start }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00221}{221}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_a312034bd1e903262c8bf2bea6cdbee8f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=285pt]{game_8cpp_a312034bd1e903262c8bf2bea6cdbee8f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_aa2a6ff67bcdbef686d904f6f47c02626}\label{game_8cpp_aa2a6ff67bcdbef686d904f6f47c02626}} 
+\index{game.cpp@{game.cpp}!Pause@{Pause}}
+\index{Pause@{Pause}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void Pause (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$}]{clickablepool,  }\item[{tuple$<$ int, int $>$}]{Screen\+\_\+size,  }\item[{int \&}]{menuid,  }\item[{chrono\+::time\+\_\+point$<$ chrono\+::steady\+\_\+clock $>$}]{start }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00256}{256}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_aa2a6ff67bcdbef686d904f6f47c02626_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=277pt]{game_8cpp_aa2a6ff67bcdbef686d904f6f47c02626_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_acfd932870183388e95db32d747ebaad0}\label{game_8cpp_acfd932870183388e95db32d747ebaad0}} 
+\index{game.cpp@{game.cpp}!ppal@{ppal}}
+\index{ppal@{ppal}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{ppal()}{ppal()}}
+{\footnotesize\ttfamily int ppal (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+new main 
+
+\begin{DoxyReturn}{Returns}
+0 if everything is OK 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00427}{427}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{game_8cpp_acfd932870183388e95db32d747ebaad0_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{game_8cpp_acfd932870183388e95db32d747ebaad0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8cpp_a57e55da876e34d1b049962d00fac607e}\label{game_8cpp_a57e55da876e34d1b049962d00fac607e}} 
+\index{game.cpp@{game.cpp}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!game.cpp@{game.cpp}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}}
+{\footnotesize\ttfamily void Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{int}]{grid\+\_\+x,  }\item[{int}]{grid\+\_\+y,  }\item[{int}]{pos\+\_\+x,  }\item[{int}]{pos\+\_\+y,  }\item[{int}]{mat\+\_\+x,  }\item[{int}]{mat\+\_\+y,  }\item[{string}]{sprite }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{game_8cpp_source_l00117}{117}} of file \mbox{\hyperlink{game_8cpp_source}{game.\+cpp}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=226pt]{game_8cpp_a57e55da876e34d1b049962d00fac607e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{game_8cpp_a57e55da876e34d1b049962d00fac607e_icgraph}
+\end{center}
+\end{figure}

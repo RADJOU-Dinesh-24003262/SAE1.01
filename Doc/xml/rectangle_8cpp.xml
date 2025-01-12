@@ -72,7 +72,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</label>
         <link refid="rectangle_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -135,7 +135,7 @@
 <codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Affiche<sp/>un<sp/>rectangle<sp/>via<sp/>la<sp/>routine<sp/>OpenGL</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>glRecti(m_firstPosition.getX(),<sp/>m_firstPosition.getY(),<sp/>m_secondPosition.getX(),<sp/>m_secondPosition.getY());</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(getBorderColor()<sp/>!=<sp/>nsGraphics::KTransparent)<sp/>{</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(getBorderColor()<sp/>!=<sp/><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>a<sp/>une<sp/>bordure,<sp/>on<sp/>l&apos;affiche</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/>borderColor<sp/>=<sp/>getBorderColor();</highlight></codeline>
 <codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glColor4ub(borderColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79" kindref="member">getRed</ref>(),<sp/>borderColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" kindref="member">getGreen</ref>(),<sp/>borderColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" kindref="member">getBlue</ref>(),<sp/>borderColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" kindref="member">getAlpha</ref>());</highlight></codeline>
@@ -262,6 +262,6 @@
 <codeline lineno="161"><highlight class="normal"><sp/><sp/><sp/><sp/>m_secondPosition<sp/>=<sp/>secondPosition;</highlight></codeline>
 <codeline lineno="162"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>setSecondPosition()</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp"/>
   </compounddef>
 </doxygen>

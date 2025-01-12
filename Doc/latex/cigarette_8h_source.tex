@@ -1,5 +1,5 @@
 \hypertarget{cigarette_8h_source}{}\doxysection{cigarette.\+h}
-\label{cigarette_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/sprites/cigarette.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/sprites/cigarette.h}}
+\label{cigarette_8h_source}\index{/home/Theo/Téléchargements/sae/sprites/cigarette.h@{/home/Theo/Téléchargements/sae/sprites/cigarette.h}}
 \mbox{\hyperlink{cigarette_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00001}00001 }
@@ -19,28 +19,28 @@
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00033}00033     \textcolor{comment}{// Rectangle principal pour le corps de la cigarette (blanc)}}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00034}00034     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(startX, startY),}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00035}00035                                  \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(startX + cig\_length, startY + cig\_width),}
-\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00036}00036                                  nsGraphics::KGray);}
+\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00036}00036                                  \mbox{\hyperlink{namespacens_graphics_a96ad8f5e0a09dba209c3359c277dcc6f}{nsGraphics::KGray}});}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00037}00037 }
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00038}00038     \textcolor{comment}{// Rectangle pour le filtre (jaune-\/orange)}}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00039}00039     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(startX + cig\_length -\/ filter\_length, startY),}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00040}00040                                  \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(startX + cig\_length, startY + cig\_width),}
-\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00041}00041                                  nsGraphics::KRed);}
+\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00041}00041                                  \mbox{\hyperlink{namespacens_graphics_a2eb081113194e8ff44aebd697c2cfe61}{nsGraphics::KRed}});}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00042}00042 }
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00043}00043     \textcolor{comment}{// Ovale rouge pour simuler l'extrémité allumée de la cigarette}}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00044}00044     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(startX, startY + cig\_width / 2),}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00045}00045                             \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(flame\_size, cig\_width / 2),}
-\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00046}00046                             nsGraphics::KRed);}
+\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00046}00046                             \mbox{\hyperlink{namespacens_graphics_a2eb081113194e8ff44aebd697c2cfe61}{nsGraphics::KRed}});}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00047}00047 }
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00048}00048     \textcolor{comment}{// Fumée (plusieurs ovales gris clair représentant des volutes de fumée)}}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00049}00049     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(startX -\/ smoke\_radius * 1.5, startY -\/ cig\_width),}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00050}00050                             \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(smoke\_radius * 1.5, smoke\_radius),}
-\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00051}00051                             nsGraphics::KGray); \textcolor{comment}{// Première volute}}
+\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00051}00051                             \mbox{\hyperlink{namespacens_graphics_a96ad8f5e0a09dba209c3359c277dcc6f}{nsGraphics::KGray}}); \textcolor{comment}{// Première volute}}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00052}00052     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(startX -\/ smoke\_radius * 3, startY -\/ cig\_width * 2),}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00053}00053                             \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(smoke\_radius * 1.3, smoke\_radius * 0.9),}
-\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00054}00054                             nsGraphics::KGray); \textcolor{comment}{// Deuxième volute}}
+\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00054}00054                             \mbox{\hyperlink{namespacens_graphics_a96ad8f5e0a09dba209c3359c277dcc6f}{nsGraphics::KGray}}); \textcolor{comment}{// Deuxième volute}}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00055}00055     window << \mbox{\hyperlink{classns_shape_1_1_oval}{nsShape::Oval}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(startX -\/ smoke\_radius * 4.5, startY -\/ cig\_width * 3),}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00056}00056                             \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}(smoke\_radius, smoke\_radius * 0.8),}
-\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00057}00057                             nsGraphics::KGray); \textcolor{comment}{// Troisième volute}}
+\DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00057}00057                             \mbox{\hyperlink{namespacens_graphics_a96ad8f5e0a09dba209c3359c277dcc6f}{nsGraphics::KGray}}); \textcolor{comment}{// Troisième volute}}
 \DoxyCodeLine{\Hypertarget{cigarette_8h_source_l00058}00058 \}}
 
 \end{DoxyCode}

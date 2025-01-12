@@ -8,7 +8,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="comment">#!/usr/bin/env<sp/>python3</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1" refid="namespaceimg2si" refkind="compound"><highlight class="comment">#!/usr/bin/env<sp/>python3</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>array<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>array</highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="keyword">from</highlight><highlight class="normal"><sp/>PIL<sp/></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>Image</highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">import</highlight><highlight class="normal"><sp/>argparse</highlight></codeline>
@@ -35,13 +35,13 @@
 <codeline lineno="25"><highlight class="normal"></highlight><highlight class="comment">#<sp/>&quot;File<sp/>version&quot;,<sp/>&quot;Pixel<sp/>count&quot;<sp/>and<sp/>&quot;Image<sp/>width&quot;<sp/>entries<sp/>are<sp/>little-endian,<sp/>unsigned<sp/>numbers.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">is_file_si2(filePath):</highlight></codeline>
+<codeline lineno="28" refid="namespaceimg2si_1ae37b6f3bba8bbf990c6f8c84cd2a79bd" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceimg2si_1ae37b6f3bba8bbf990c6f8c84cd2a79bd" kindref="member">is_file_si2</ref>(filePath):</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Check<sp/>the<sp/>magic<sp/>number</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">with</highlight><highlight class="normal"><sp/>open(filePath,<sp/></highlight><highlight class="stringliteral">&apos;rb&apos;</highlight><highlight class="normal">)<sp/></highlight><highlight class="keyword">as</highlight><highlight class="normal"><sp/>file:</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>file.read(2)<sp/>==<sp/>b</highlight><highlight class="stringliteral">&apos;SI&apos;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"></highlight></codeline>
 <codeline lineno="33"><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">convert_from_si2(source,<sp/>output):</highlight></codeline>
+<codeline lineno="34" refid="namespaceimg2si_1a86753e07bbef076355a407a398a418bf" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceimg2si_1a86753e07bbef076355a407a398a418bf" kindref="member">convert_from_si2</ref>(source,<sp/>output):</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Print<sp/>summary</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Source<sp/>image:<sp/>.si2&apos;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>_,<sp/>outExtension<sp/>=<sp/>os.path.splitext(output)</highlight></codeline>
@@ -66,7 +66,7 @@
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>img.save(output)</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
-<codeline lineno="59"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">convert_to_si2(source,<sp/>output):</highlight></codeline>
+<codeline lineno="59" refid="namespaceimg2si_1a07d658824b99acc387c6444863bebd5c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceimg2si_1a07d658824b99acc387c6444863bebd5c" kindref="member">convert_to_si2</ref>(source,<sp/>output):</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Print<sp/>summary</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/>_,<sp/>outExtension<sp/>=<sp/>os.path.splitext(source)</highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Source<sp/>image:<sp/>{}&apos;</highlight><highlight class="normal">.format(outExtension))</highlight></codeline>
@@ -102,7 +102,7 @@
 <codeline lineno="92"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>file.write(bytes(imageData[x,<sp/>y]))</highlight></codeline>
 <codeline lineno="93"><highlight class="normal"></highlight></codeline>
 <codeline lineno="94"><highlight class="normal"></highlight></codeline>
-<codeline lineno="95"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal">main():</highlight></codeline>
+<codeline lineno="95" refid="namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">def<sp/></highlight><highlight class="normal"><ref refid="namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49" kindref="member">main</ref>():</highlight></codeline>
 <codeline lineno="96"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Setup<sp/>argument<sp/>parser</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="97"><highlight class="normal"><sp/><sp/><sp/><sp/>parser<sp/>=<sp/>argparse.ArgumentParser(description=</highlight><highlight class="stringliteral">&apos;This<sp/>tool<sp/>converts<sp/>images<sp/>compatible<sp/>with<sp/>PIL<sp/>to<sp/>the<sp/>minGL<sp/>2<sp/>Simple<sp/>Image<sp/>format<sp/>(.si2),<sp/>and<sp/>vice<sp/>versa.&apos;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/>parser.add_argument(</highlight><highlight class="stringliteral">&apos;-v&apos;</highlight><highlight class="normal">,<sp/></highlight><highlight class="stringliteral">&apos;--version&apos;</highlight><highlight class="normal">,<sp/>action=</highlight><highlight class="stringliteral">&apos;version&apos;</highlight><highlight class="normal">,<sp/>version=</highlight><highlight class="stringliteral">&apos;%(prog)s<sp/>1.0&apos;</highlight><highlight class="normal">)</highlight></codeline>
@@ -118,12 +118,12 @@
 <codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>exit(</highlight><highlight class="stringliteral">&apos;&quot;{}&quot;\nThe<sp/>specified<sp/>path<sp/>does<sp/>not<sp/>exist.&apos;</highlight><highlight class="normal">.format(source))</highlight></codeline>
 <codeline lineno="109"><highlight class="normal"></highlight></codeline>
 <codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">#<sp/>Check<sp/>if<sp/>source<sp/>file<sp/>is<sp/>in<sp/>the<sp/>.si2<sp/>format</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>isSourceSi2<sp/>=<sp/>is_file_si2(source)</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>isSourceSi2<sp/>=<sp/><ref refid="namespaceimg2si_1ae37b6f3bba8bbf990c6f8c84cd2a79bd" kindref="member">is_file_si2</ref>(source)</highlight></codeline>
 <codeline lineno="112"><highlight class="normal"></highlight></codeline>
 <codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>isSourceSi2:</highlight></codeline>
-<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>convert_from_si2(source,<sp/>output)</highlight></codeline>
+<codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceimg2si_1a86753e07bbef076355a407a398a418bf" kindref="member">convert_from_si2</ref>(source,<sp/>output)</highlight></codeline>
 <codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">else</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>convert_to_si2(source,<sp/>output)</highlight></codeline>
+<codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="namespaceimg2si_1a07d658824b99acc387c6444863bebd5c" kindref="member">convert_to_si2</ref>(source,<sp/>output)</highlight></codeline>
 <codeline lineno="117"><highlight class="normal"></highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/>print(</highlight><highlight class="stringliteral">&apos;Done!&apos;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="119"><highlight class="normal"></highlight></codeline>
@@ -134,8 +134,8 @@
 <codeline lineno="124"><highlight class="normal"></highlight></codeline>
 <codeline lineno="125"><highlight class="normal"></highlight></codeline>
 <codeline lineno="126"><highlight class="normal"></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>__name__<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;__main__&quot;</highlight><highlight class="normal">:</highlight></codeline>
-<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/>main()</highlight></codeline>
+<codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49" kindref="member">main</ref>()</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py"/>
   </compounddef>
 </doxygen>

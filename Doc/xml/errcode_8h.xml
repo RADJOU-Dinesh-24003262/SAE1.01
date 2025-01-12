@@ -4,10 +4,10 @@
     <compoundname>errcode.h</compoundname>
     <includes local="no">map</includes>
     <includes local="no">string</includes>
-    <includedby refid="cexception_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h</includedby>
+    <includedby refid="cexception_8h" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h</label>
         <link refid="errcode_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -23,7 +23,7 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.h</label>
         <link refid="cexception_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -35,27 +35,27 @@
         </childnode>
       </node>
       <node id="3">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/cexception.hpp</label>
         <link refid="cexception_8hpp"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h</label>
         <link refid="errcode_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
       </node>
       <node id="4">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/audio/audioengine.cpp</label>
         <link refid="audioengine_8cpp"/>
       </node>
       <node id="5">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/cexception.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/exception/cexception.cpp</label>
         <link refid="cexception_8cpp"/>
       </node>
       <node id="6">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp</label>
         <link refid="sprite_8cpp"/>
       </node>
     </invincdepgraph>
@@ -105,7 +105,7 @@ Ajout de la documentation, renommage du fichier </para>
 <codeline lineno="48" refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aaebf556f9516d8fa517d75821ff43073" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aaebf556f9516d8fa517d75821ff43073" kindref="member">kTypeNotFound</ref><sp/><sp/><sp/>=<sp/>307,<sp/></highlight></codeline>
 <codeline lineno="49"><highlight class="normal">};</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map<sp/>&lt;unsigned,<sp/>std::string&gt;<sp/>kError</highlight></codeline>
+<codeline lineno="51" refid="namespacens_exception_1af1e302dd5a468c59cfa32ee30bc6503a" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::map<sp/>&lt;unsigned,<sp/>std::string&gt;<sp/><ref refid="namespacens_exception_1af1e302dd5a468c59cfa32ee30bc6503a" kindref="member">kError</ref></highlight></codeline>
 <codeline lineno="52"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/>{<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a123e9c1829e779b75c070e9c8fdb188f" kindref="member">kErrTooHight</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Trop<sp/>haut&quot;</highlight><highlight class="normal">},</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>{<ref refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376aff4f15361ad4d1b254751071ad21e3e6" kindref="member">kErrTooRight</ref>,<sp/></highlight><highlight class="stringliteral">&quot;Trop<sp/>à<sp/>droite&quot;</highlight><highlight class="normal">},</highlight></codeline>
@@ -121,6 +121,6 @@ Ajout de la documentation, renommage du fichier </para>
 <codeline lineno="64"><highlight class="normal"></highlight></codeline>
 <codeline lineno="65"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>CSTCODERR_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception/errcode.h"/>
   </compounddef>
 </doxygen>

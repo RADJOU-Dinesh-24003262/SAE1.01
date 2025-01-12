@@ -5,6 +5,7 @@
     <basecompoundref refid="classns_graphics_1_1_i_drawable" prot="public" virt="non-virtual">nsGraphics::IDrawable</basecompoundref>
     <basecompoundref refid="classns_graphics_1_1_i_drawable" prot="public" virt="non-virtual">nsGraphics::IDrawable</basecompoundref>
     <basecompoundref refid="classns_transition_1_1_i_transitionable" prot="public" virt="non-virtual">nsTransition::ITransitionable</basecompoundref>
+    <includes refid="08-_custom_drawable_2bgtext_8h" local="no">bgtext.h</includes>
       <sectiondef kind="public-type">
       <memberdef kind="enum" id="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95" prot="public" static="no" strong="no">
         <type></type>
@@ -32,7 +33,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="18" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" bodystart="18" bodyend="21"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="18" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" bodystart="18" bodyend="21"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -48,7 +49,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="27" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="27" column="17" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="class_bg_text_1a4c5e8e4e270d6b114aa248c479b36cb5" prot="private" static="no" mutable="no">
         <type><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref></type>
@@ -62,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="28" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" bodystart="28" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="28" column="24" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" bodystart="28" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -94,7 +95,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="17" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="3" bodyend="6"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="17" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="3" bodyend="6"/>
       </memberdef>
       <memberdef kind="function" id="class_bg_text_1a19f8e1aa743e37d252b5b46ca98b7cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -108,7 +109,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="20" column="13"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="20" column="13"/>
       </memberdef>
       <memberdef kind="function" id="class_bg_text_1a01df624a8d498766a9eb579eb18f2326" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -128,7 +129,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="23" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="8" bodyend="12"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="23" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="8" bodyend="12"/>
       </memberdef>
       <memberdef kind="function" id="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -158,7 +159,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="24" column="5"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="24" column="5"/>
       </memberdef>
       <memberdef kind="function" id="class_bg_text_1a19f8e1aa743e37d252b5b46ca98b7cd1" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -172,7 +173,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="27" column="13"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="27" column="13"/>
       </memberdef>
       <memberdef kind="function" id="class_bg_text_1a55fdeb5f3e12dcc2926c87f80fddc6c3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -192,7 +193,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="30" column="18"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="30" column="18"/>
       </memberdef>
       <memberdef kind="function" id="class_bg_text_1a01cc8269e39184b805351409aac4feb4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -234,7 +235,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="33" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="14" bodyend="32"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="33" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="14" bodyend="32"/>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" compoundref="rgbacolor_8cpp" startline="56" endline="59">nsGraphics::RGBAcolor::getBlue</references>
         <references refid="classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754" compoundref="shape_8cpp" startline="18" endline="21">nsShape::Shape::getFillColor</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" compoundref="rgbacolor_8cpp" startline="66" endline="69">nsGraphics::RGBAcolor::getGreen</references>
@@ -283,7 +284,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="36" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="34" bodyend="48"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h" line="36" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp" bodystart="34" bodyend="48"/>
         <references refid="classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07" compoundref="shape_8cpp" startline="23" endline="26">nsShape::Shape::setFillColor</references>
         <references refid="classns_gui_1_1_text_1a9e10bb21647ce95f034a4205562e222a" compoundref="text_8cpp" startline="178" endline="181">nsGui::Text::setTextColor</references>
         <references refid="class_bg_text_1a5599f62d188a03c0bf5b51bb71f0ee95a312ae9c6f63f2076bd975b165167c8e1" compoundref="09-_custom_transitionable_2bgtext_8h" startline="20">TRANSITION_BACKGROUND_COLOR</references>
@@ -334,7 +335,7 @@
         <link refid="classns_transition_1_1_i_transitionable"/>
       </node>
     </collaborationgraph>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="12" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" bodystart="13" bodyend="30"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" line="12" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h" bodystart="13" bodyend="30"/>
     <listofallmembers>
       <member refid="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" prot="public" virt="non-virtual"><scope>BgText</scope><name>BgText</name></member>
       <member refid="class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa" prot="public" virt="non-virtual"><scope>BgText</scope><name>BgText</name></member>

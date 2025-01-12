@@ -1362,6 +1362,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_vec2d_8cpp_source_1l00183">183</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_ae9d371fdd3817c6e9a3a1ae6ed3fd17d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f"/><section>
     <title>setY()</title>
@@ -1396,8 +1405,17 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_vec2d_8cpp_source_1l00193">193</link> of file <link linkend="_vec2d_8cpp_source">vec2d.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_graphics_1_1_vec2_d_ac0e752e399ab2f727fe2644540b1208f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/<link linkend="_vec2d_8h">vec2d.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/<link linkend="_vec2d_8cpp">vec2d.cpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics/<link linkend="_vec2d_8h">vec2d.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/graphics/<link linkend="_vec2d_8cpp">vec2d.cpp</link></section>
 </section>

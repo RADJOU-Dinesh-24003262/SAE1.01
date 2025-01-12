@@ -4,11 +4,11 @@
     <compoundname>gridmanagement.h</compoundname>
     <includes local="no">string</includes>
     <includes refid="type_8h" local="yes">type.h</includes>
-    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
-    <includedby refid="gridmanagement_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp</includedby>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/Jeu/game.cpp</includedby>
+    <includedby refid="gridmanagement_8cpp" local="yes">/home/Theo/Téléchargements/sae/Jeu/gridmanagement.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h</label>
+        <label>/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h</label>
         <link refid="gridmanagement_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -42,15 +42,15 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="3">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp</label>
-        <link refid="gridmanagement_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/gridmanagement.cpp</label>
+        <link refid="gridmanagement_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h</label>
+        <label>/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h</label>
         <link refid="gridmanagement_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -71,7 +71,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" line="21" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp" bodystart="113" bodyend="115" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" declline="21" declcolumn="6"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h" line="21" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.cpp" bodystart="113" bodyend="115" declfile="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h" declline="21" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -99,7 +99,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" line="28" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" declline="28" declcolumn="6"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h" line="28" column="6" declfile="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h" declline="28" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="gridmanagement_8h_1a9719c69096bb9d1a111ecff4023ee183" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -120,7 +120,13 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" line="37" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.cpp" bodystart="122" bodyend="162" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" declline="37" declcolumn="6"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h" line="37" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.cpp" bodystart="122" bodyend="162" declfile="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h" declline="37" declcolumn="6"/>
+        <references refid="gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6" compoundref="gridmanagement_8cpp" startline="117" endline="119">Color</references>
+        <references refid="struct_c_my_param_v2_1a4e6ba0cdf0cc18ee5b5b48642cb73c11" compoundref="type_8h" startline="134">CMyParamV2::ColorP1</references>
+        <references refid="struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7" compoundref="type_8h" startline="138">CMyParamV2::ColorP2</references>
+        <references refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" compoundref="type_8h" startline="66">KColor</references>
+        <references refid="struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6" compoundref="type_8h" startline="86">CMyParamV2::tokenP1</references>
+        <references refid="struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6" compoundref="type_8h" startline="90">CMyParamV2::tokenP2</references>
       </memberdef>
       <memberdef kind="function" id="gridmanagement_8h_1ae2e8e943b22b9297c505a335c58135b6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -169,7 +175,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" line="51" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" declline="51" declcolumn="6"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h" line="51" column="6" declfile="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h" declline="51" declcolumn="6"/>
       </memberdef>
       <memberdef kind="function" id="gridmanagement_8h_1ab909b1026fe66b4055c0be20cd67582f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -245,7 +251,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" line="67" column="6" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h" declline="67" declcolumn="6"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h" line="67" column="6" declfile="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h" declline="67" declcolumn="6"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -275,10 +281,10 @@
 <codeline lineno="28" refid="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" kindref="member">Color</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string<sp/>&amp;<sp/>Col);</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DisplayGrid<sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param<sp/>);</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gridmanagement_8h_1a9719c69096bb9d1a111ecff4023ee183" kindref="member">DisplayGrid</ref><sp/>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param<sp/>);</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>InitGrid<sp/>(<ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>NbLine,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>NbColumn,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>PosPlayer1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>PosPlayer2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Tp1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Tp2,<sp/>std::vector<sp/>&lt;CPosition&gt;<sp/>&amp;<sp/>PosMonster);</highlight></codeline>
+<codeline lineno="51" refid="gridmanagement_8h_1ae2e8e943b22b9297c505a335c58135b6" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="gridmanagement_8h_1ae2e8e943b22b9297c505a335c58135b6" kindref="member">InitGrid</ref><sp/>(<ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>NbLine,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>NbColumn,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>PosPlayer1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>PosPlayer2,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;<sp/>Param,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Tp1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Tp2,<sp/>std::vector<sp/>&lt;CPosition&gt;<sp/>&amp;<sp/>PosMonster);</highlight></codeline>
 <codeline lineno="52"><highlight class="normal"></highlight></codeline>
 <codeline lineno="53"><highlight class="normal"></highlight></codeline>
 <codeline lineno="54"><highlight class="normal"></highlight></codeline>
@@ -288,6 +294,6 @@
 <codeline lineno="68"><highlight class="normal"></highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>GRIDMANAGEMENT_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/gridmanagement.h"/>
+    <location file="/home/Theo/Téléchargements/sae/Jeu/gridmanagement.h"/>
   </compounddef>
 </doxygen>

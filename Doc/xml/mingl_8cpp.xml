@@ -80,7 +80,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp</label>
         <link refid="mingl_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" line="40" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="40" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" line="40" column="9" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp" bodystart="40" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -169,7 +169,7 @@
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BIND_CALLBACK(HANDLER)<sp/>callBackBuilder&lt;decltype(HANDLER),<sp/>HANDLER&gt;::callback</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="40" refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>BIND_CALLBACK(HANDLER)<sp/>callBackBuilder&lt;decltype(HANDLER),<sp/>HANDLER&gt;::callback</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="41"><highlight class="normal"></highlight></codeline>
 <codeline lineno="42" refid="class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c" refkind="member"><highlight class="normal"><ref refid="class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c" kindref="member">MinGL::MinGL</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>windowSize,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>windowPosition,</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>backgroundColor)</highlight></codeline>
@@ -233,16 +233,16 @@
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/>glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE,<sp/>GLUT_ACTION_CONTINUE_EXECUTION);</highlight></codeline>
 <codeline lineno="102"><highlight class="normal"></highlight></codeline>
 <codeline lineno="103"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialisation<sp/>handlers</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>glutReshapeFunc(BIND_CALLBACK(&amp;MinGL::callReshape));</highlight></codeline>
-<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>glutDisplayFunc(BIND_CALLBACK(&amp;MinGL::callDisplay));</highlight></codeline>
-<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>glutMouseFunc(BIND_CALLBACK(&amp;MinGL::callMouse));</highlight></codeline>
-<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>glutMotionFunc(BIND_CALLBACK(&amp;MinGL::callMotion));</highlight></codeline>
-<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>glutPassiveMotionFunc(BIND_CALLBACK(&amp;MinGL::callPassiveMotion));</highlight></codeline>
-<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>glutKeyboardFunc(BIND_CALLBACK(&amp;MinGL::callKeyboard));</highlight></codeline>
-<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>glutKeyboardUpFunc(BIND_CALLBACK(&amp;MinGL::callKeyboardUp));</highlight></codeline>
-<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>glutSpecialFunc(BIND_CALLBACK(&amp;MinGL::callKeyboardSpecial));</highlight></codeline>
-<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>glutSpecialUpFunc(BIND_CALLBACK(&amp;MinGL::callKeyboardUpSpecial));</highlight></codeline>
-<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>glutCloseFunc(BIND_CALLBACK(&amp;MinGL::callClose));</highlight></codeline>
+<codeline lineno="104"><highlight class="normal"><sp/><sp/><sp/><sp/>glutReshapeFunc(<ref refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kindref="member">BIND_CALLBACK</ref>(&amp;MinGL::callReshape));</highlight></codeline>
+<codeline lineno="105"><highlight class="normal"><sp/><sp/><sp/><sp/>glutDisplayFunc(<ref refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kindref="member">BIND_CALLBACK</ref>(&amp;MinGL::callDisplay));</highlight></codeline>
+<codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/>glutMouseFunc(<ref refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kindref="member">BIND_CALLBACK</ref>(&amp;MinGL::callMouse));</highlight></codeline>
+<codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/>glutMotionFunc(<ref refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kindref="member">BIND_CALLBACK</ref>(&amp;MinGL::callMotion));</highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/>glutPassiveMotionFunc(<ref refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kindref="member">BIND_CALLBACK</ref>(&amp;MinGL::callPassiveMotion));</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"><sp/><sp/><sp/><sp/>glutKeyboardFunc(<ref refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kindref="member">BIND_CALLBACK</ref>(&amp;MinGL::callKeyboard));</highlight></codeline>
+<codeline lineno="110"><highlight class="normal"><sp/><sp/><sp/><sp/>glutKeyboardUpFunc(<ref refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kindref="member">BIND_CALLBACK</ref>(&amp;MinGL::callKeyboardUp));</highlight></codeline>
+<codeline lineno="111"><highlight class="normal"><sp/><sp/><sp/><sp/>glutSpecialFunc(<ref refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kindref="member">BIND_CALLBACK</ref>(&amp;MinGL::callKeyboardSpecial));</highlight></codeline>
+<codeline lineno="112"><highlight class="normal"><sp/><sp/><sp/><sp/>glutSpecialUpFunc(<ref refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kindref="member">BIND_CALLBACK</ref>(&amp;MinGL::callKeyboardUpSpecial));</highlight></codeline>
+<codeline lineno="113"><highlight class="normal"><sp/><sp/><sp/><sp/>glutCloseFunc(<ref refid="mingl_8cpp_1ab33118d2dfe2ee96556474ed9e256e11" kindref="member">BIND_CALLBACK</ref>(&amp;MinGL::callClose));</highlight></codeline>
 <codeline lineno="114"><highlight class="normal"></highlight></codeline>
 <codeline lineno="115"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>set<sp/>la<sp/>couleur<sp/>d&apos;effacement<sp/>(prend<sp/>des<sp/>float,<sp/>donc<sp/>obligé<sp/>de<sp/>diviser<sp/>par<sp/>la<sp/>taille<sp/>d&apos;un<sp/>GLuint)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="116"><highlight class="normal"><sp/><sp/><sp/><sp/>glClearColor(m_bgColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79" kindref="member">getRed</ref>()<sp/>/<sp/>256.f,<sp/>m_bgColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" kindref="member">getGreen</ref>()<sp/>/<sp/>256.f,<sp/>m_bgColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" kindref="member">getBlue</ref>()<sp/>/<sp/>256.f,<sp/>m_bgColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" kindref="member">getAlpha</ref>()<sp/>/<sp/>256.f);</highlight></codeline>
@@ -392,6 +392,6 @@
 <codeline lineno="260"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>m_windowIsOpen;</highlight></codeline>
 <codeline lineno="261"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>isOpen()</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp"/>
   </compounddef>
 </doxygen>

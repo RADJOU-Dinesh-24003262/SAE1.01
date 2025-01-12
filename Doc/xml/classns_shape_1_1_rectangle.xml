@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="32" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" bodystart="32" bodyend="39"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="32" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" bodystart="32" bodyend="39"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="121" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" bodystart="121" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="121" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" bodystart="121" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classns_shape_1_1_rectangle_1a5110455daae5d8c91bb6ddfee7ad5fb4" prot="private" static="no" mutable="no">
         <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref></type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="126" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" bodystart="126" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="126" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" bodystart="126" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -122,7 +122,7 @@
         <param>
           <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
           <declname>borderColor</declname>
-          <defval>nsGraphics::KTransparent</defval>
+          <defval><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref></defval>
         </param>
         <briefdescription>
 <para>Constructeur pour la classe <ref refid="classns_shape_1_1_rectangle" kindref="compound">Rectangle</ref>. </para>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="50" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="14" bodyend="18"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="50" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="14" bodyend="18"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1a0c1c16410fb0ee7345449d7bfc9b377b" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type></type>
@@ -192,7 +192,7 @@
         <param>
           <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
           <declname>borderColor</declname>
-          <defval>nsGraphics::KTransparent</defval>
+          <defval><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref></defval>
         </param>
         <briefdescription>
 <para>Constructeur pour la classe <ref refid="classns_shape_1_1_rectangle" kindref="compound">Rectangle</ref>. </para>
@@ -243,7 +243,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="63" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="20" bodyend="24"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="63" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="20" bodyend="24"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1a8c5a662392d6ff84a852c4f70e8b1d1d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -257,7 +257,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="70" column="13"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="70" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -277,11 +277,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="72" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="26" bodyend="50"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="72" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="26" bodyend="50"/>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" compoundref="rgbacolor_8cpp" startline="46" endline="49">nsGraphics::RGBAcolor::getAlpha</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" compoundref="rgbacolor_8cpp" startline="56" endline="59">nsGraphics::RGBAcolor::getBlue</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" compoundref="rgbacolor_8cpp" startline="66" endline="69">nsGraphics::RGBAcolor::getGreen</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79" compoundref="rgbacolor_8cpp" startline="76" endline="79">nsGraphics::RGBAcolor::getRed</references>
+        <references refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" compoundref="rgbacolor_8h" startline="175">nsGraphics::KTransparent</references>
         <references refid="macros_8h_1a86d500a34c624c2cae56bc25a31b12f3" compoundref="macros_8h" startline="17">UNUSED</references>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1ad62897a44a3af8dfffca0a8a1fa10825" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -324,7 +325,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="74" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="52" bodyend="91"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="74" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="52" bodyend="91"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1a3b3e28b92f8c22bfe159aea5a91fb5c9" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -366,7 +367,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="75" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="93" bodyend="132"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="75" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="93" bodyend="132"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1ac86de3402279c3ad0bf6b3869f8e2613" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classns_shape_1_1_rectangle" kindref="compound">Rectangle</ref></type>
@@ -395,7 +396,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="82" column="15" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="134" bodyend="137"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="82" column="15" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="134" bodyend="137"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1af7cbf6d75b4bc8fc718d17177abdd344" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classns_shape_1_1_rectangle" kindref="compound">Rectangle</ref></type>
@@ -424,7 +425,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="89" column="15" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="139" bodyend="142"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="89" column="15" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="139" bodyend="142"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1a42c38f27b247f6a411a9d1a8de5ceaa4" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
@@ -439,7 +440,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="95" column="29" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="144" bodyend="147"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="95" column="29" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="144" bodyend="147"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1ae6c787fad1bc33f5a4adf8a697a9a581" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -468,7 +469,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="102" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="149" bodyend="152"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="102" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="149" bodyend="152"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1a276bce487fbd9514fcf8e558382d0276" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
@@ -483,7 +484,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="108" column="29" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="154" bodyend="157"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="108" column="29" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="154" bodyend="157"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_rectangle_1ada11c6f627048c51dce9544bff758db4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -512,7 +513,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="115" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="159" bodyend="162"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="115" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp" bodystart="159" bodyend="162"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -582,7 +583,7 @@
         <link refid="classns_util_1_1_i_editable"/>
       </node>
     </collaborationgraph>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="25" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" bodystart="26" bodyend="128"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" line="25" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h" bodystart="26" bodyend="128"/>
     <listofallmembers>
       <member refid="classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5" prot="public" virt="virtual"><scope>nsShape::Rectangle</scope><name>draw</name></member>
       <member refid="classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d" prot="public" virt="non-virtual"><scope>nsShape::Rectangle</scope><name>getBorderColor</name></member>

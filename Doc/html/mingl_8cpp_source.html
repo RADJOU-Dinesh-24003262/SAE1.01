@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SAE 1.01: /home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp Source File</title>
+<title>My Project: /home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">SAE 1.01
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_79f149efd30d37738a8a961658db751b.html">Téléchargements</a></li><li class="navelem"><a class="el" href="dir_9bc27c3a15165b903513c0caa2551462.html">sae</a></li><li class="navelem"><a class="el" href="dir_6776d252bbc60daf06bcfa47d0063ff8.html">SAE_JEU</a></li><li class="navelem"><a class="el" href="dir_c1b858e4ccae31fa1f3a3631d9de3e1a.html">MinGL2_IUT_AIX-master</a></li><li class="navelem"><a class="el" href="dir_030fc6c80df3f93d3ce96ad611f8db21.html">src</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_79f149efd30d37738a8a961658db751b.html">Téléchargements</a></li><li class="navelem"><a class="el" href="dir_9bc27c3a15165b903513c0caa2551462.html">sae</a></li><li class="navelem"><a class="el" href="dir_a5edcea1b424b83dfd21c4efe8151e4f.html">MinGL2_IUT_AIX-master</a></li><li class="navelem"><a class="el" href="dir_7ac9af026df07336226ac6eea101ff70.html">src</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -99,7 +99,7 @@ $(function() {
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>} <span class="comment">// namespace</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">#define BIND_CALLBACK(HANDLER) callBackBuilder&lt;decltype(HANDLER), HANDLER&gt;::callback</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">   40</a></span><span class="preprocessor">#define BIND_CALLBACK(HANDLER) callBackBuilder&lt;decltype(HANDLER), HANDLER&gt;::callback</span></div>
 <div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno"><a class="line" href="class_min_g_l.html#aecc35a286d1adbcbdc76bf26df18169c">   42</a></span><a class="code hl_function" href="class_min_g_l.html#aecc35a286d1adbcbdc76bf26df18169c">MinGL::MinGL</a>(<span class="keyword">const</span> std::string&amp; name, <span class="keyword">const</span> <a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>&amp; windowSize, <span class="keyword">const</span> <a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>&amp; windowPosition,</div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>             <span class="keyword">const</span> <a class="code hl_class" href="classns_graphics_1_1_r_g_b_acolor.html">nsGraphics::RGBAcolor</a>&amp; backgroundColor)</div>
@@ -163,16 +163,16 @@ $(function() {
 <div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    glutSetOption(GLUT_ACTION_ON_WINDOW_CLOSE, GLUT_ACTION_CONTINUE_EXECUTION);</div>
 <div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
 <div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>    <span class="comment">// Initialisation handlers</span></div>
-<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    glutReshapeFunc(BIND_CALLBACK(&amp;MinGL::callReshape));</div>
-<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    glutDisplayFunc(BIND_CALLBACK(&amp;MinGL::callDisplay));</div>
-<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    glutMouseFunc(BIND_CALLBACK(&amp;MinGL::callMouse));</div>
-<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    glutMotionFunc(BIND_CALLBACK(&amp;MinGL::callMotion));</div>
-<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    glutPassiveMotionFunc(BIND_CALLBACK(&amp;MinGL::callPassiveMotion));</div>
-<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    glutKeyboardFunc(BIND_CALLBACK(&amp;MinGL::callKeyboard));</div>
-<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    glutKeyboardUpFunc(BIND_CALLBACK(&amp;MinGL::callKeyboardUp));</div>
-<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    glutSpecialFunc(BIND_CALLBACK(&amp;MinGL::callKeyboardSpecial));</div>
-<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    glutSpecialUpFunc(BIND_CALLBACK(&amp;MinGL::callKeyboardUpSpecial));</div>
-<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    glutCloseFunc(BIND_CALLBACK(&amp;MinGL::callClose));</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>    glutReshapeFunc(<a class="code hl_define" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a>(&amp;MinGL::callReshape));</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>    glutDisplayFunc(<a class="code hl_define" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a>(&amp;MinGL::callDisplay));</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>    glutMouseFunc(<a class="code hl_define" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a>(&amp;MinGL::callMouse));</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    glutMotionFunc(<a class="code hl_define" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a>(&amp;MinGL::callMotion));</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    glutPassiveMotionFunc(<a class="code hl_define" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a>(&amp;MinGL::callPassiveMotion));</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    glutKeyboardFunc(<a class="code hl_define" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a>(&amp;MinGL::callKeyboard));</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    glutKeyboardUpFunc(<a class="code hl_define" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a>(&amp;MinGL::callKeyboardUp));</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>    glutSpecialFunc(<a class="code hl_define" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a>(&amp;MinGL::callKeyboardSpecial));</div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>    glutSpecialUpFunc(<a class="code hl_define" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a>(&amp;MinGL::callKeyboardUpSpecial));</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>    glutCloseFunc(<a class="code hl_define" href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a>(&amp;MinGL::callClose));</div>
 <div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span> </div>
 <div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>    <span class="comment">// On set la couleur d&#39;effacement (prend des float, donc obligé de diviser par la taille d&#39;un GLuint)</span></div>
 <div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>    glClearColor(m_bgColor.<a class="code hl_function" href="classns_graphics_1_1_r_g_b_acolor.html#a55e40085f904b696a0bc63aed6258b79">getRed</a>() / 256.f, m_bgColor.<a class="code hl_function" href="classns_graphics_1_1_r_g_b_acolor.html#a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</a>() / 256.f, m_bgColor.<a class="code hl_function" href="classns_graphics_1_1_r_g_b_acolor.html#a9ac0893426cce20a177d6ea7af1d7129">getBlue</a>() / 256.f, m_bgColor.<a class="code hl_function" href="classns_graphics_1_1_r_g_b_acolor.html#a76299c507a113e326c01fe4b0bca2b1e">getAlpha</a>() / 256.f);</div>
@@ -350,6 +350,7 @@ $(function() {
 <div class="ttc" id="aclassns_graphics_1_1_vec2_d_html"><div class="ttname"><a href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a></div><div class="ttdoc">Classe représentant un vecteur deux-dimensionnel.</div><div class="ttdef"><b>Definition:</b> <a href="vec2d_8h_source.html#l00025">vec2d.h:26</a></div></div>
 <div class="ttc" id="aclassns_graphics_1_1_vec2_d_html_abcf3d729b05b3cd93e9eff21c74b89a1"><div class="ttname"><a href="classns_graphics_1_1_vec2_d.html#abcf3d729b05b3cd93e9eff21c74b89a1">nsGraphics::Vec2D::getX</a></div><div class="ttdeci">int getX() const</div><div class="ttdoc">Récupère la position X (abscisse)</div><div class="ttdef"><b>Definition:</b> <a href="vec2d_8cpp_source.html#l00178">vec2d.cpp:178</a></div></div>
 <div class="ttc" id="aclassns_graphics_1_1_vec2_d_html_ae70fbda9cca27b9dc0fe068a38ae5e5e"><div class="ttname"><a href="classns_graphics_1_1_vec2_d.html#ae70fbda9cca27b9dc0fe068a38ae5e5e">nsGraphics::Vec2D::getY</a></div><div class="ttdeci">int getY() const</div><div class="ttdoc">Récupère la position Y (ordonnée)</div><div class="ttdef"><b>Definition:</b> <a href="vec2d_8cpp_source.html#l00188">vec2d.cpp:188</a></div></div>
+<div class="ttc" id="amingl_8cpp_html_ab33118d2dfe2ee96556474ed9e256e11"><div class="ttname"><a href="mingl_8cpp.html#ab33118d2dfe2ee96556474ed9e256e11">BIND_CALLBACK</a></div><div class="ttdeci">#define BIND_CALLBACK(HANDLER)</div><div class="ttdef"><b>Definition:</b> <a href="mingl_8cpp_source.html#l00040">mingl.cpp:40</a></div></div>
 <div class="ttc" id="amingl_8h_html"><div class="ttname"><a href="mingl_8h.html">mingl.h</a></div><div class="ttdoc">La bête.</div></div>
 <div class="ttc" id="anamespacens_event_html_a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317"><div class="ttname"><a href="namespacens_event.html#a6e501b1114a041d127a56f51c66ada72a31c8442274463772ed6cc9c47bce8317">nsEvent::MouseDrag</a></div><div class="ttdeci">@ MouseDrag</div><div class="ttdef"><b>Definition:</b> <a href="event_8hpp_source.html#l00026">event.hpp:26</a></div></div>
 <div class="ttc" id="anamespacens_event_html_a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7"><div class="ttname"><a href="namespacens_event.html#a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7">nsEvent::MouseClick</a></div><div class="ttdeci">@ MouseClick</div><div class="ttdef"><b>Definition:</b> <a href="event_8hpp_source.html#l00024">event.hpp:24</a></div></div>

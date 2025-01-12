@@ -53,7 +53,7 @@ Collaboration diagram for nsShape::Line:<para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_line">Line</link>. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_classns_shape_1_1_line_1a5e867a9bf0795b3a89cffb0c84e21b13"/>virtual <emphasis role="strong">~Line</emphasis> () override=default</para>
+            <listitem><para>virtual <link linkend="_classns_shape_1_1_line_1a5e867a9bf0795b3a89cffb0c84e21b13">~Line</link> () override=default</para>
 
 <para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_line">Line</link>. </para>
 </listitem>
@@ -215,6 +215,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_line_8cpp_source_1l00016">16</link> of file <link linkend="_line_8cpp_source">line.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_line_1a5e867a9bf0795b3a89cffb0c84e21b13"/><section>
+    <title>~Line()</title>
+<indexterm><primary>~Line</primary><secondary>nsShape::Line</secondary></indexterm>
+<indexterm><primary>nsShape::Line</primary><secondary>~Line</secondary></indexterm>
+<para><computeroutput>nsShape::Line::~Line ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_line">Line</link>. </para>
+</para>
 </section>
 </section>
 <section>
@@ -528,5 +537,5 @@ Definition at line <link linkend="_line_8cpp_source_1l00087">87</link> of file <
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_line_8h">line.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_line_8cpp">line.cpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_line_8h">line.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/<link linkend="_line_8cpp">line.cpp</link></section>
 </section>

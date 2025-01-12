@@ -1,47 +1,47 @@
-<map id="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX&#45;master/include/mingl/transition/itransitionable.h" name="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX&#45;master/include/mingl/transition/itransitionable.h">
-<area shape="rect" id="node1" title="Interface pour objet &quot;transitionable&quot;." alt="" coords="3351,5,3582,76"/>
-<area shape="rect" id="node2" href="$09-_custom_transitionable_2bgtext_8h_source.html" title=" " alt="" coords="4287,243,4595,313"/>
-<area shape="rect" id="node5" href="$sprite_8h.html" title="Image pouvant être chargé depuis un fichier." alt="" coords="5649,131,5892,187"/>
-<area shape="rect" id="node8" href="$text_8h.html" title="Du texte." alt="" coords="4134,131,4365,187"/>
-<area shape="rect" id="node17" href="$circle_8h.html" title="Représente un cercle." alt="" coords="1325,124,1544,195"/>
-<area shape="rect" id="node25" href="$line_8h.html" title="Représente une ligne." alt="" coords="3343,131,3591,187"/>
-<area shape="rect" id="node27" href="$oval_8h.html" title="Représente un oval." alt="" coords="882,131,1134,187"/>
-<area shape="rect" id="node30" href="$rectangle_8h.html" title="Représente un rectangle." alt="" coords="1947,124,2165,195"/>
-<area shape="rect" id="node38" href="$triangle_8h.html" title="Représente un triangle." alt="" coords="3029,124,3248,195"/>
-<area shape="rect" id="node40" href="$transition__contract_8h.html" title="Création de la transition." alt="" coords="5154,124,5385,195"/>
-<area shape="rect" id="node3" href="$09-_custom_transitionable_2bgtext_8cpp_source.html" title=" " alt="" coords="4191,361,4499,432"/>
-<area shape="rect" id="node4" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source.html" title=" " alt="" coords="4383,480,4691,551"/>
-<area shape="rect" id="node6" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source.html" title=" " alt="" coords="5661,243,5880,313"/>
-<area shape="rect" id="node7" href="$sprite_8cpp.html" title="Image pouvant être chargé depuis un fichier." alt="" coords="5904,250,6123,306"/>
-<area shape="rect" id="node9" href="$_menu_management_8h_source.html" title=" " alt="" coords="1845,376,2115,417"/>
-<area shape="rect" id="node11" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_source.html" title=" " alt="" coords="3949,250,4211,306"/>
-<area shape="rect" id="node12" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source.html" title=" " alt="" coords="4620,250,4887,306"/>
-<area shape="rect" id="node13" href="$08-_custom_drawable_2bgtext_8h_source.html" title=" " alt="" coords="3594,243,3873,313"/>
-<area shape="rect" id="node16" href="$text_8cpp_source.html" title=" " alt="" coords="4911,250,5129,306"/>
-<area shape="rect" id="node10" href="$game_8cpp_source.html" title=" " alt="" coords="798,495,1013,536"/>
-<area shape="rect" id="node14" href="$08-_custom_drawable_2bgtext_8cpp_source.html" title=" " alt="" coords="3291,361,3570,432"/>
-<area shape="rect" id="node15" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_source.html" title=" " alt="" coords="3594,361,3873,432"/>
-<area shape="rect" id="node18" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source.html" title=" " alt="" coords="2812,243,3031,313"/>
-<area shape="rect" id="node19" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source.html" title=" " alt="" coords="2953,480,3183,551"/>
-<area shape="rect" id="node20" href="$circle_8cpp.html" title="Représente un cercle." alt="" coords="739,250,957,306"/>
-<area shape="rect" id="node21" href="$button_8h_source.html" title=" " alt="" coords="1730,257,1945,299"/>
-<area shape="rect" id="node22" href="$player1_8h.html" title="Affiche le sprite du player 1." alt="" coords="248,257,469,299"/>
-<area shape="rect" id="node23" href="$player2_8h.html" title="Affiche le sprite du player 2." alt="" coords="493,257,715,299"/>
-<area shape="rect" id="node24" href="$statue_8h_source.html" title=" " alt="" coords="1237,257,1451,299"/>
-<area shape="rect" id="node26" href="$line_8cpp.html" title="Représente une ligne." alt="" coords="3351,250,3569,306"/>
-<area shape="rect" id="node28" href="$oval_8cpp.html" title="Représente un oval." alt="" coords="5,250,224,306"/>
-<area shape="rect" id="node29" href="$cigarette_8h.html" title="Affiche le sprite d&#39;une cigarette." alt="" coords="982,257,1213,299"/>
-<area shape="rect" id="node31" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source.html" title=" " alt="" coords="2020,243,2239,313"/>
-<area shape="rect" id="node32" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_source.html" title=" " alt="" coords="2263,243,2481,313"/>
-<area shape="rect" id="node33" href="$rectangle_8cpp.html" title="Représente un rectangle." alt="" coords="2506,250,2737,306"/>
-<area shape="rect" id="node34" href="$kebab_8h_source.html" title=" " alt="" coords="1037,376,1251,417"/>
-<area shape="rect" id="node35" href="$monstre_8h_source.html" title=" " alt="" coords="1276,376,1503,417"/>
-<area shape="rect" id="node36" href="$teleporter_8h_source.html" title=" " alt="" coords="1527,376,1763,417"/>
-<area shape="rect" id="node37" href="$wall_8h.html" title="Affiche le sprite d&#39;un mur." alt="" coords="798,376,1013,417"/>
-<area shape="rect" id="node39" href="$triangle_8cpp.html" title="Représente un triangle." alt="" coords="3106,250,3326,306"/>
-<area shape="rect" id="node41" href="$transition_8h.html" title="Definition d&#39;une transition." alt="" coords="5154,243,5385,313"/>
-<area shape="rect" id="node45" href="$transition__contract_8cpp.html" title="Création de la transition." alt="" coords="5409,243,5637,313"/>
-<area shape="rect" id="node42" href="$transition__engine_8h.html" title="Gestionnaire de transition de minGL." alt="" coords="4645,361,4875,432"/>
-<area shape="rect" id="node44" href="$transition_8cpp_source.html" title=" " alt="" coords="5142,369,5397,425"/>
-<area shape="rect" id="node43" href="$transition__engine_8cpp_source.html" title=" " alt="" coords="4715,480,4943,551"/>
+<map id="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX&#45;master/include/mingl/transition/itransitionable.h" name="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX&#45;master/include/mingl/transition/itransitionable.h">
+<area shape="rect" id="node1" title="Interface pour objet &quot;transitionable&quot;." alt="" coords="3269,5,3559,61"/>
+<area shape="rect" id="node2" href="$09-_custom_transitionable_2bgtext_8h.html" title=" " alt="" coords="4137,228,4395,299"/>
+<area shape="rect" id="node5" href="$sprite_8h.html" title="Image pouvant être chargé depuis un fichier." alt="" coords="5423,117,5637,173"/>
+<area shape="rect" id="node8" href="$text_8h.html" title="Du texte." alt="" coords="3992,117,4207,173"/>
+<area shape="rect" id="node17" href="$circle_8h.html" title="Représente un cercle." alt="" coords="1285,117,1500,173"/>
+<area shape="rect" id="node25" href="$line_8h.html" title="Représente une ligne." alt="" coords="3307,117,3521,173"/>
+<area shape="rect" id="node27" href="$oval_8h.html" title="Représente un oval." alt="" coords="873,117,1088,173"/>
+<area shape="rect" id="node30" href="$rectangle_8h.html" title="Représente un rectangle." alt="" coords="1902,117,2137,173"/>
+<area shape="rect" id="node38" href="$triangle_8h.html" title="Représente un triangle." alt="" coords="2989,117,3212,173"/>
+<area shape="rect" id="node40" href="$transition__contract_8h.html" title="Création de la transition." alt="" coords="4905,109,5152,180"/>
+<area shape="rect" id="node3" href="$09-_custom_transitionable_2bgtext_8cpp.html" title=" " alt="" coords="4055,347,4312,417"/>
+<area shape="rect" id="node4" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp.html" title=" " alt="" coords="4221,465,4479,536"/>
+<area shape="rect" id="node6" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp.html" title=" " alt="" coords="5421,235,5639,291"/>
+<area shape="rect" id="node7" href="$sprite_8cpp.html" title="Image pouvant être chargé depuis un fichier." alt="" coords="5663,235,5877,291"/>
+<area shape="rect" id="node9" href="$_menu_management_8h.html" title=" " alt="" coords="1825,361,2040,403"/>
+<area shape="rect" id="node11" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp.html" title=" " alt="" coords="3847,235,4061,291"/>
+<area shape="rect" id="node12" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp.html" title=" " alt="" coords="4419,235,4635,291"/>
+<area shape="rect" id="node13" href="$08-_custom_drawable_2bgtext_8h.html" title=" " alt="" coords="3545,228,3771,299"/>
+<area shape="rect" id="node16" href="$text_8cpp.html" title=" " alt="" coords="4660,235,4875,291"/>
+<area shape="rect" id="node10" href="$game_8cpp.html" title=" " alt="" coords="793,480,1008,521"/>
+<area shape="rect" id="node14" href="$08-_custom_drawable_2bgtext_8cpp.html" title=" " alt="" coords="3294,347,3521,417"/>
+<area shape="rect" id="node15" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp.html" title=" " alt="" coords="3545,347,3771,417"/>
+<area shape="rect" id="node18" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp.html" title=" " alt="" coords="2765,235,2991,291"/>
+<area shape="rect" id="node19" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp.html" title=" " alt="" coords="2907,473,3150,529"/>
+<area shape="rect" id="node20" href="$circle_8cpp.html" title="Représente un cercle." alt="" coords="721,235,936,291"/>
+<area shape="rect" id="node21" href="$button_8h.html" title=" " alt="" coords="1692,243,1907,284"/>
+<area shape="rect" id="node22" href="$player1_8h.html" title="Affiche le sprite du player 1." alt="" coords="244,243,459,284"/>
+<area shape="rect" id="node23" href="$player2_8h.html" title="Affiche le sprite du player 2." alt="" coords="483,243,697,284"/>
+<area shape="rect" id="node24" href="$statue_8h.html" title=" " alt="" coords="1199,243,1413,284"/>
+<area shape="rect" id="node26" href="$line_8cpp.html" title="Représente une ligne." alt="" coords="3305,235,3520,291"/>
+<area shape="rect" id="node28" href="$oval_8cpp.html" title="Représente un oval." alt="" coords="5,235,220,291"/>
+<area shape="rect" id="node29" href="$cigarette_8h.html" title="Affiche le sprite d&#39;une cigarette." alt="" coords="960,243,1175,284"/>
+<area shape="rect" id="node31" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp.html" title=" " alt="" coords="1981,235,2207,291"/>
+<area shape="rect" id="node32" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp.html" title=" " alt="" coords="2231,235,2450,291"/>
+<area shape="rect" id="node33" href="$rectangle_8cpp.html" title="Représente un rectangle." alt="" coords="2475,235,2689,291"/>
+<area shape="rect" id="node34" href="$kebab_8h.html" title=" " alt="" coords="1032,361,1247,403"/>
+<area shape="rect" id="node35" href="$monstre_8h.html" title=" " alt="" coords="1271,361,1485,403"/>
+<area shape="rect" id="node36" href="$teleporter_8h.html" title=" " alt="" coords="1509,361,1724,403"/>
+<area shape="rect" id="node37" href="$wall_8h.html" title="Affiche le sprite d&#39;un bouton." alt="" coords="793,361,1008,403"/>
+<area shape="rect" id="node39" href="$triangle_8cpp.html" title="Représente un triangle." alt="" coords="3067,235,3281,291"/>
+<area shape="rect" id="node41" href="$transition_8h.html" title="Definition d&#39;une transition." alt="" coords="4899,235,5158,291"/>
+<area shape="rect" id="node45" href="$transition__contract_8cpp.html" title="Création de la transition." alt="" coords="5183,228,5397,299"/>
+<area shape="rect" id="node42" href="$transition__engine_8h.html" title="Gestionnaire de transition de minGL." alt="" coords="4437,347,4684,417"/>
+<area shape="rect" id="node44" href="$transition_8cpp.html" title=" " alt="" coords="4921,354,5136,410"/>
+<area shape="rect" id="node43" href="$transition__engine_8cpp.html" title=" " alt="" coords="4503,465,4717,536"/>
 </map>

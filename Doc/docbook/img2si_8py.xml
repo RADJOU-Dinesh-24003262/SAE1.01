@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_img2si_8py" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py</primary></indexterm>
+<simplesect>
+    <title>Namespaces    </title>
+        <itemizedlist>
+            <listitem><para>namespace <link linkend="_namespaceimg2si">img2si</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespaceimg2si_1ae37b6f3bba8bbf990c6f8c84cd2a79bd">img2si.is_file_si2</link> (filePath)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceimg2si_1a86753e07bbef076355a407a398a418bf">img2si.convert_from_si2</link> (source, output)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceimg2si_1a07d658824b99acc387c6444863bebd5c">img2si.convert_to_si2</link> (source, output)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49">img2si.main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

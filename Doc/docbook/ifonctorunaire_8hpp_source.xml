@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ifonctorunaire_8hpp_source" xml:lang="en-US">
 <title>ifonctorunaire.hpp</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ifonctorunaire.hpp</primary></indexterm>
-<programlisting linenumbering="unnumbered"><anchor xml:id="_ifonctorunaire_8hpp_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;IFONCTORBINAIRE_HPP</emphasis>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ifonctorunaire.hpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_ifonctorunaire_8hpp_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;IFONCTORBINAIRE_HPP</emphasis>
 <anchor xml:id="_ifonctorunaire_8hpp_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;IFONCTORBINAIRE_HPP</emphasis>
 <anchor xml:id="_ifonctorunaire_8hpp_source_1l00003"/>00003 
 <anchor xml:id="_ifonctorunaire_8hpp_source_1l00004"/>00004 <emphasis role="keyword">namespace&#32;</emphasis><link linkend="_namespacens_util">nsUtil</link>

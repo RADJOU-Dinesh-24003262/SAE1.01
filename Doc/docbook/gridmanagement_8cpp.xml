@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_gridmanagement_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/Jeu/gridmanagement.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/Jeu/gridmanagement.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;
+#include &quot;gridmanagement.h&quot;
+#include &quot;type.h&quot;
+#include &lt;bits/stdc++.h&gt;
+#include &lt;cmath&gt;
+</programlisting>Include dependency graph for gridmanagement.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gridmanagement_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_gridmanagement_8cpp_1ab9580be20ea977cfc148161bbd19cc7b">ajouterpiece</link> (<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp;Mat, const <link linkend="_struct_form">Form</link> &amp;forme, int x, int y)</para>
+</listitem>
+            <listitem><para>void <link linkend="_gridmanagement_8cpp_1afd0452ea965a63c8d1c5f84541bb5a00">rotation90</link> (<link linkend="_struct_form">Form</link> &amp;forme)</para>
+</listitem>
+            <listitem><para>void <link linkend="_gridmanagement_8cpp_1a6a3ca153f0817e8ba91a023b886bb662">ClearScreen</link> ()</para>
+
+<para>Clear the current terminal. </para>
+</listitem>
+            <listitem><para>void <link linkend="_gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6">Color</link> (const string &amp;Col)</para>
+</listitem>
+            <listitem><para>void <link linkend="_gridmanagement_8cpp_1a9719c69096bb9d1a111ecff4023ee183">DisplayGrid</link> (const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp;Mat, const <link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;Param)</para>
+</listitem>
+            <listitem><para>void <link linkend="_gridmanagement_8cpp_1aeec8c3cd8d226f13c4b651e70988240f">InitGrid</link> (<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp;Mat, unsigned NbLine, unsigned NbColumn, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;PosPlayer1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;PosPlayer2, const <link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;Param, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;Tp1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;Tp2, vector&lt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; &amp;PosMonster)</para>
+</listitem>
+            <listitem><para>void <link linkend="_gridmanagement_8cpp_1ae8509127a309e7bfd2673d39ca1b5375">MoveMonster</link> (vector&lt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; &amp;VPosMonster, <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp;Mat, const <link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;param, const <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;PosPlayer1, const <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;PosPlayer2)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_gridmanagement_8cpp_1ab9580be20ea977cfc148161bbd19cc7b"/><section>
+    <title>ajouterpiece()</title>
+<indexterm><primary>ajouterpiece</primary><secondary>gridmanagement.cpp</secondary></indexterm>
+<indexterm><primary>gridmanagement.cpp</primary><secondary>ajouterpiece</secondary></indexterm>
+<para><computeroutput>void ajouterpiece (<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp; Mat, const <link linkend="_struct_form">Form</link> &amp; forme, int x, int y)</computeroutput></para><para>
+Definition at line <link linkend="_gridmanagement_8cpp_source_1l00075">75</link> of file <link linkend="_gridmanagement_8cpp_source">gridmanagement.cpp</link>.</para>
+</section>
+<anchor xml:id="_gridmanagement_8cpp_1a6a3ca153f0817e8ba91a023b886bb662"/><section>
+    <title>ClearScreen()</title>
+<indexterm><primary>ClearScreen</primary><secondary>gridmanagement.cpp</secondary></indexterm>
+<indexterm><primary>gridmanagement.cpp</primary><secondary>ClearScreen</secondary></indexterm>
+<para><computeroutput>void ClearScreen ( )</computeroutput></para><para>
+
+<para>Clear the current terminal. </para>
+</para>
+<para>
+Definition at line <link linkend="_gridmanagement_8cpp_source_1l00113">113</link> of file <link linkend="_gridmanagement_8cpp_source">gridmanagement.cpp</link>.</para>
+</section>
+<anchor xml:id="_gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6"/><section>
+    <title>Color()</title>
+<indexterm><primary>Color</primary><secondary>gridmanagement.cpp</secondary></indexterm>
+<indexterm><primary>gridmanagement.cpp</primary><secondary>Color</secondary></indexterm>
+<para><computeroutput>void Color (const string &amp; Col)</computeroutput></para><para>
+Definition at line <link linkend="_gridmanagement_8cpp_source_1l00117">117</link> of file <link linkend="_gridmanagement_8cpp_source">gridmanagement.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gridmanagement_8cpp_ac9357ee33d7442ff035f7a0c2b61cce6_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_gridmanagement_8cpp_1a9719c69096bb9d1a111ecff4023ee183"/><section>
+    <title>DisplayGrid()</title>
+<indexterm><primary>DisplayGrid</primary><secondary>gridmanagement.cpp</secondary></indexterm>
+<indexterm><primary>gridmanagement.cpp</primary><secondary>DisplayGrid</secondary></indexterm>
+<para><computeroutput>void DisplayGrid (const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp; Mat, const <link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp; Param)</computeroutput></para><para>
+Definition at line <link linkend="_gridmanagement_8cpp_source_1l00122">122</link> of file <link linkend="_gridmanagement_8cpp_source">gridmanagement.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gridmanagement_8cpp_a9719c69096bb9d1a111ecff4023ee183_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_gridmanagement_8cpp_1aeec8c3cd8d226f13c4b651e70988240f"/><section>
+    <title>InitGrid()</title>
+<indexterm><primary>InitGrid</primary><secondary>gridmanagement.cpp</secondary></indexterm>
+<indexterm><primary>gridmanagement.cpp</primary><secondary>InitGrid</secondary></indexterm>
+<para><computeroutput>void InitGrid (<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp; Mat, unsigned NbLine, unsigned NbColumn, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; PosPlayer1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; PosPlayer2, const <link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp; Param, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; Tp1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; Tp2, vector&lt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; &amp; PosMonster)</computeroutput></para><para>
+Definition at line <link linkend="_gridmanagement_8cpp_source_1l00165">165</link> of file <link linkend="_gridmanagement_8cpp_source">gridmanagement.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gridmanagement_8cpp_aeec8c3cd8d226f13c4b651e70988240f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_gridmanagement_8cpp_1ae8509127a309e7bfd2673d39ca1b5375"/><section>
+    <title>MoveMonster()</title>
+<indexterm><primary>MoveMonster</primary><secondary>gridmanagement.cpp</secondary></indexterm>
+<indexterm><primary>gridmanagement.cpp</primary><secondary>MoveMonster</secondary></indexterm>
+<para><computeroutput>void MoveMonster (vector&lt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; &amp; VPosMonster, <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp; Mat, const <link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp; param, const <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; PosPlayer1, const <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; PosPlayer2)</computeroutput></para><para>
+Definition at line <link linkend="_gridmanagement_8cpp_source_1l00341">341</link> of file <link linkend="_gridmanagement_8cpp_source">gridmanagement.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="gridmanagement_8cpp_ae8509127a309e7bfd2673d39ca1b5375_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_gridmanagement_8cpp_1afd0452ea965a63c8d1c5f84541bb5a00"/><section>
+    <title>rotation90()</title>
+<indexterm><primary>rotation90</primary><secondary>gridmanagement.cpp</secondary></indexterm>
+<indexterm><primary>gridmanagement.cpp</primary><secondary>rotation90</secondary></indexterm>
+<para><computeroutput>void rotation90 (<link linkend="_struct_form">Form</link> &amp; forme)</computeroutput></para><para>
+Definition at line <link linkend="_gridmanagement_8cpp_source_1l00097">97</link> of file <link linkend="_gridmanagement_8cpp_source">gridmanagement.cpp</link>.</para>
+</section>
+</section>
+</section>

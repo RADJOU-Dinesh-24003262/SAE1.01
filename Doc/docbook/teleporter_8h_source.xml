@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_teleporter_8h_source" xml:lang="en-US">
 <title>teleporter.h</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/teleporter.h</primary></indexterm>
-<programlisting linenumbering="unnumbered"><anchor xml:id="_teleporter_8h_source_1l00001"/>00001 
+<indexterm><primary>/home/Theo/Téléchargements/sae/sprites/teleporter.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_teleporter_8h_source_1l00001"/>00001 
 <anchor xml:id="_teleporter_8h_source_1l00011"/>00011 <emphasis role="comment">//include&#32;les&#32;différentes&#32;formes&#32;pour&#32;dessiner&#32;les&#32;sprites</emphasis>
 <anchor xml:id="_teleporter_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_rectangle_8h">mingl/shape/rectangle.h</link>&quot;</emphasis>
 <anchor xml:id="_teleporter_8h_source_1l00013"/>00013 
 <anchor xml:id="_teleporter_8h_source_1l00025"/>00025 <emphasis role="comment">//défini&#32;les&#32;éléments&#32;du&#32;sprite&#32;d&apos;un&#32;mur</emphasis>
-<anchor xml:id="_teleporter_8h_source_1l00026"/>00026 <emphasis role="keywordtype">void</emphasis>&#32;Teleporter(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;Pos1,&#32;<emphasis role="keywordtype">int</emphasis>&#32;Pos2,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_y){
+<anchor xml:id="_teleporter_8h_source_1l00026"/><link linkend="_teleporter_8h_1abd3383003d3b5afeac6ab5231f4a96bc">00026</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_teleporter_8h_1abd3383003d3b5afeac6ab5231f4a96bc">Teleporter</link>(<link linkend="_class_min_g_l">MinGL</link>&#32;&amp;window,&#32;<emphasis role="keywordtype">int</emphasis>&#32;Pos1,&#32;<emphasis role="keywordtype">int</emphasis>&#32;Pos2,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_x,&#32;<emphasis role="keywordtype">int</emphasis>&#32;mat_y){
 <anchor xml:id="_teleporter_8h_source_1l00027"/>00027 
 <anchor xml:id="_teleporter_8h_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="comment">//calcul&#32;variable&#32;de&#32;position&#32;et&#32;taille&#32;des&#32;formes</emphasis>
 <anchor xml:id="_teleporter_8h_source_1l00029"/>00029 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;wall_x&#32;=&#32;320/mat_x;
@@ -20,8 +20,8 @@
 <anchor xml:id="_teleporter_8h_source_1l00036"/>00036 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;dify&#32;=&#32;(y2-y1)/20;
 <anchor xml:id="_teleporter_8h_source_1l00037"/>00037 
 <anchor xml:id="_teleporter_8h_source_1l00038"/>00038 &#32;&#32;&#32;&#32;<emphasis role="comment">//shape&#32;formant&#32;le&#32;sprite</emphasis>
-<anchor xml:id="_teleporter_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((x1+(2*(difx))),(y1+(2*(dify)))),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((x2-(2*(difx))),(y2-(2*(dify)))),&#32;nsGraphics::KGray);<emphasis role="comment">//&#32;square</emphasis>
-<anchor xml:id="_teleporter_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((x1+(4*(difx))),(y1+(4*(dify)))),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((x2-(4*(difx))),(y2-(4*(dify)))),&#32;nsGraphics::KDarkGray);<emphasis role="comment">//&#32;square</emphasis>
+<anchor xml:id="_teleporter_8h_source_1l00039"/>00039 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((x1+(2*(difx))),(y1+(2*(dify)))),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((x2-(2*(difx))),(y2-(2*(dify)))),&#32;<link linkend="_namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f">nsGraphics::KGray</link>);<emphasis role="comment">//&#32;square</emphasis>
+<anchor xml:id="_teleporter_8h_source_1l00040"/>00040 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((x1+(4*(difx))),(y1+(4*(dify)))),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((x2-(4*(difx))),(y2-(4*(dify)))),&#32;<link linkend="_namespacens_graphics_1a7f6ca880f0cf5e6e76b0081c84d5f1fb">nsGraphics::KDarkGray</link>);<emphasis role="comment">//&#32;square</emphasis>
 <anchor xml:id="_teleporter_8h_source_1l00041"/>00041 
 <anchor xml:id="_teleporter_8h_source_1l00042"/>00042 &#32;&#32;&#32;&#32;<emphasis role="comment">//window&#32;&lt;&lt;&#32;nsShape::Rectangle(nsGraphics::Vec2D((Circle1-wall_x),(Circle2-wall_y)),&#32;nsGraphics::Vec2D((Circle1+wall_x),(Circle2+wall_y)),&#32;nsGraphics::KPurple);//&#32;square</emphasis>
 <anchor xml:id="_teleporter_8h_source_1l00043"/>00043 }

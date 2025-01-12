@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_transition__engine_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/transition/transition_engine.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/transition/transition_engine.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mingl/transition/transition_engine.h&quot;
+</programlisting>Include dependency graph for transition_engine.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="transition__engine_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_transition__engine_8cpp_1a8f5466d77f69760bca9bb92217754d56">TRANSITIONENGINE</link>   <link linkend="_classns_transition_1_1_transition_engine">nsTransition::TransitionEngine</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_transition__engine_8cpp_1a8f5466d77f69760bca9bb92217754d56"/><section>
+    <title>TRANSITIONENGINE</title>
+<indexterm><primary>TRANSITIONENGINE</primary><secondary>transition_engine.cpp</secondary></indexterm>
+<indexterm><primary>transition_engine.cpp</primary><secondary>TRANSITIONENGINE</secondary></indexterm>
+<para><computeroutput>#define TRANSITIONENGINE   <link linkend="_classns_transition_1_1_transition_engine">nsTransition::TransitionEngine</link></computeroutput></para><para>
+Definition at line <link linkend="_transition__engine_8cpp_source_1l00013">13</link> of file <link linkend="_transition__engine_8cpp_source">transition_engine.cpp</link>.</para>
+</section>
+</section>
+</section>

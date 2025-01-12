@@ -48,11 +48,11 @@ Collaboration diagram for nsShape::Oval:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_classns_shape_1_1_oval_1af839fdfa08b1b77edc54a83e1abcadfb">Oval</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=nsGraphics::KTransparent)</para>
+            <listitem><para><link linkend="_classns_shape_1_1_oval_1af839fdfa08b1b77edc54a83e1abcadfb">Oval</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=<link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link>)</para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_oval">Oval</link>. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_classns_shape_1_1_oval_1a323e0bcaf712c2ddad124adc42ca433b"/>virtual <emphasis role="strong">~Oval</emphasis> () override=default</para>
+            <listitem><para>virtual <link linkend="_classns_shape_1_1_oval_1a323e0bcaf712c2ddad124adc42ca433b">~Oval</link> () override=default</para>
 
 <para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_oval">Oval</link>. </para>
 </listitem>
@@ -157,7 +157,7 @@ Definition at line <link linkend="_oval_8h_source_1l00032">32</link> of file <li
     <title>Oval()</title>
 <indexterm><primary>Oval</primary><secondary>nsShape::Oval</secondary></indexterm>
 <indexterm><primary>nsShape::Oval</primary><secondary>Oval</secondary></indexterm>
-<para><computeroutput>nsShape::Oval::Oval (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput>nsGraphics::KTransparent</computeroutput>
+<para><computeroutput>nsShape::Oval::Oval (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; radius, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput><link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link></computeroutput>
 )</computeroutput></para><para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_oval">Oval</link>. </para>
@@ -202,6 +202,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_oval_8cpp_source_1l00016">16</link> of file <link linkend="_oval_8cpp_source">oval.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_oval_1a323e0bcaf712c2ddad124adc42ca433b"/><section>
+    <title>~Oval()</title>
+<indexterm><primary>~Oval</primary><secondary>nsShape::Oval</secondary></indexterm>
+<indexterm><primary>nsShape::Oval</primary><secondary>~Oval</secondary></indexterm>
+<para><computeroutput>nsShape::Oval::~Oval ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_oval">Oval</link>. </para>
+</para>
 </section>
 </section>
 <section>
@@ -470,5 +479,5 @@ Definition at line <link linkend="_oval_8cpp_source_1l00106">106</link> of file 
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_oval_8h">oval.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_oval_8cpp">oval.cpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_oval_8h">oval.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/<link linkend="_oval_8cpp">oval.cpp</link></section>
 </section>

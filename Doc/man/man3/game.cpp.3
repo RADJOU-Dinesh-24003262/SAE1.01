@@ -1,0 +1,172 @@
+.TH "/home/Theo/Téléchargements/sae/Jeu/game.cpp" 3 "Sun Jan 12 2025" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+/home/Theo/Téléchargements/sae/Jeu/game.cpp
+.SH SYNOPSIS
+.br
+.PP
+\fC#include <iostream>\fP
+.br
+\fC#include <vector>\fP
+.br
+\fC#include <unistd\&.h>\fP
+.br
+\fC#include 'game\&.h'\fP
+.br
+\fC#include 'params\&.h'\fP
+.br
+\fC#include 'gridmanagement\&.h'\fP
+.br
+\fC#include <thread>\fP
+.br
+\fC#include <cmath>\fP
+.br
+\fC#include 'mingl/mingl\&.h'\fP
+.br
+\fC#include <tuple>\fP
+.br
+\fC#include 'sprites/player1\&.h'\fP
+.br
+\fC#include 'sprites/player2\&.h'\fP
+.br
+\fC#include 'sprites/wall\&.h'\fP
+.br
+\fC#include 'sprites/kebab\&.h'\fP
+.br
+\fC#include 'sprites/cigarette\&.h'\fP
+.br
+\fC#include 'sprites/monstre\&.h'\fP
+.br
+\fC#include 'sprites/teleporter\&.h'\fP
+.br
+\fC#include 'sprites/statue\&.h'\fP
+.br
+\fC#include 'MenuManagement\&.h'\fP
+.br
+\fC#include <map>\fP
+.br
+
+.SS "Macros"
+
+.in +1c
+.ti -1c
+.RI "#define \fBFPS_LIMIT\fP   15"
+.br
+.in -1c
+.SS "Functions"
+
+.in +1c
+.ti -1c
+.RI "bool \fBIsMoveLegal\fP (const \fBCMat\fP &Mat, const bool &KeyUp, const bool &KeyDown, const bool &KeyRight, const bool &KeyLeft, const \fBCPosition\fP &Pos, const \fBCMyParamV2\fP &Param)"
+.br
+.ti -1c
+.RI "pair< char, \fBCPosition\fP > \fBnextMove\fP (const \fBCMat\fP &Mat, const bool &KeyUp, const bool &KeyDown, const bool &KeyRight, const bool &KeyLeft, const \fBCPosition\fP &Pos, const \fBCMyParamV2\fP &Param, \fBCPosition\fP &Tp1, \fBCPosition\fP &Tp2)"
+.br
+.ti -1c
+.RI "bool \fBIsCollectible\fP (const char move)"
+.br
+.ti -1c
+.RI "void \fBCalculateScore\fP (vector< char > &objets, int &score)"
+.br
+.ti -1c
+.RI "void \fBSprite\fP (\fBMinGL\fP &window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, string sprite)"
+.br
+.ti -1c
+.RI "void \fBDisplayGrid\fP (\fBMinGL\fP &window, const \fBCMat\fP &mat, tuple< int, int > Screen_size)"
+.br
+.ti -1c
+.RI "void \fBMoveToken\fP (\fBCMat\fP &Mat, const bool &KeyUp, const bool &KeyDown, const bool &KeyRight, const bool &KeyLeft, \fBCPosition\fP &Pos, \fBCPosition\fP &Tp1, \fBCPosition\fP &Tp2)"
+.br
+.ti -1c
+.RI "void \fBMenuP\fP (\fBMinGL\fP &window, vector< tuple< vector< int >, vector< int >, int > > clickablepool, tuple< int, int > Screen_size, int &menuid, chrono::time_point< chrono::steady_clock > start)"
+.br
+.ti -1c
+.RI "void \fBOptions\fP (\fBMinGL\fP &window, vector< tuple< vector< int >, vector< int >, int > > clickablepool, tuple< int, int > Screen_size, int &menuid, chrono::time_point< chrono::steady_clock > start)"
+.br
+.ti -1c
+.RI "void \fBCredits\fP (\fBMinGL\fP &window, vector< tuple< vector< int >, vector< int >, int > > clickablepool, tuple< int, int > Screen_size, int &menuid, chrono::time_point< chrono::steady_clock > start)"
+.br
+.ti -1c
+.RI "void \fBPause\fP (\fBMinGL\fP &window, vector< tuple< vector< int >, vector< int >, int > > clickablepool, tuple< int, int > Screen_size, int &menuid, chrono::time_point< chrono::steady_clock > start)"
+.br
+.ti -1c
+.RI "void \fBGameLoop\fP (\fBMinGL\fP &window, vector< tuple< vector< int >, vector< int >, int > >clickablepool, \fBCMat\fP Mat, int menuid, unsigned PartyNum, bool Key1_UP, bool Key1_DOWN, bool Key1_RIGHT, bool Key1_LEFT, bool Key2_UP, bool Key2_DOWN, bool Key2_RIGHT, bool Key2_LEFT, tuple< int, int > Screen_size, \fBCMyParamV2\fP param, bool Victory, unsigned KMaxPartyNum, \fBCPosition\fP PosPlayer1, \fBCPosition\fP PosPlayer2, \fBCPosition\fP PosTP1, \fBCPosition\fP PosTP2, bool Player1Turn, pair< char, \fBCPosition\fP > N_move1, pair< char, \fBCPosition\fP > N_move2, vector< char > objetJ1, vector< char > objetJ2, int scoreJ1, int scoreJ2, vector< \fBCPosition\fP > PosMonster)"
+.br
+.ti -1c
+.RI "int \fBppal\fP (void)"
+.br
+.RI "new main "
+.in -1c
+.SH "Macro Definition Documentation"
+.PP 
+.SS "#define FPS_LIMIT   15"
+
+.PP
+Definition at line \fB10\fP of file \fBgame\&.cpp\fP\&.
+.SH "Function Documentation"
+.PP 
+.SS "void CalculateScore (vector< char > & objets, int & score)"
+
+.PP
+Definition at line \fB104\fP of file \fBgame\&.cpp\fP\&.
+.SS "void Credits (\fBMinGL\fP & window, vector< tuple< vector< int >, vector< int >, int > > clickablepool, tuple< int, int > Screen_size, int & menuid, chrono::time_point< chrono::steady_clock > start)"
+
+.PP
+Definition at line \fB239\fP of file \fBgame\&.cpp\fP\&.
+.SS "void DisplayGrid (\fBMinGL\fP & window, const \fBCMat\fP & mat, tuple< int, int > Screen_size)"
+
+.PP
+Definition at line \fB138\fP of file \fBgame\&.cpp\fP\&.
+.SS "void GameLoop (\fBMinGL\fP & window, vector< tuple< vector< int >, vector< int >, int > > clickablepool, \fBCMat\fP Mat, int menuid, unsigned PartyNum, bool Key1_UP, bool Key1_DOWN, bool Key1_RIGHT, bool Key1_LEFT, bool Key2_UP, bool Key2_DOWN, bool Key2_RIGHT, bool Key2_LEFT, tuple< int, int > Screen_size, \fBCMyParamV2\fP param, bool Victory, unsigned KMaxPartyNum, \fBCPosition\fP PosPlayer1, \fBCPosition\fP PosPlayer2, \fBCPosition\fP PosTP1, \fBCPosition\fP PosTP2, bool Player1Turn, pair< char, \fBCPosition\fP > N_move1, pair< char, \fBCPosition\fP > N_move2, vector< char > objetJ1, vector< char > objetJ2, int scoreJ1, int scoreJ2, vector< \fBCPosition\fP > PosMonster)"
+
+.PP
+Definition at line \fB275\fP of file \fBgame\&.cpp\fP\&.
+.SS "bool IsCollectible (const char move)"
+
+.PP
+Definition at line \fB96\fP of file \fBgame\&.cpp\fP\&.
+.SS "bool IsMoveLegal (const \fBCMat\fP & Mat, const bool & KeyUp, const bool & KeyDown, const bool & KeyRight, const bool & KeyLeft, const \fBCPosition\fP & Pos, const \fBCMyParamV2\fP & Param)"
+
+.PP
+Definition at line \fB31\fP of file \fBgame\&.cpp\fP\&.
+.SS "void MenuP (\fBMinGL\fP & window, vector< tuple< vector< int >, vector< int >, int > > clickablepool, tuple< int, int > Screen_size, int & menuid, chrono::time_point< chrono::steady_clock > start)"
+
+.PP
+Definition at line \fB201\fP of file \fBgame\&.cpp\fP\&.
+.SS "void MoveToken (\fBCMat\fP & Mat, const bool & KeyUp, const bool & KeyDown, const bool & KeyRight, const bool & KeyLeft, \fBCPosition\fP & Pos, \fBCPosition\fP & Tp1, \fBCPosition\fP & Tp2)"
+
+.PP
+Definition at line \fB163\fP of file \fBgame\&.cpp\fP\&.
+.SS "pair< char, \fBCPosition\fP > nextMove (const \fBCMat\fP & Mat, const bool & KeyUp, const bool & KeyDown, const bool & KeyRight, const bool & KeyLeft, const \fBCPosition\fP & Pos, const \fBCMyParamV2\fP & Param, \fBCPosition\fP & Tp1, \fBCPosition\fP & Tp2)"
+
+.PP
+Definition at line \fB57\fP of file \fBgame\&.cpp\fP\&.
+.SS "void Options (\fBMinGL\fP & window, vector< tuple< vector< int >, vector< int >, int > > clickablepool, tuple< int, int > Screen_size, int & menuid, chrono::time_point< chrono::steady_clock > start)"
+
+.PP
+Definition at line \fB221\fP of file \fBgame\&.cpp\fP\&.
+.SS "void Pause (\fBMinGL\fP & window, vector< tuple< vector< int >, vector< int >, int > > clickablepool, tuple< int, int > Screen_size, int & menuid, chrono::time_point< chrono::steady_clock > start)"
+
+.PP
+Definition at line \fB256\fP of file \fBgame\&.cpp\fP\&.
+.SS "int ppal (void)"
+
+.PP
+new main 
+.PP
+\fBReturns\fP
+.RS 4
+0 if everything is OK 
+.RE
+.PP
+
+.PP
+Definition at line \fB427\fP of file \fBgame\&.cpp\fP\&.
+.SS "void Sprite (\fBMinGL\fP & window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, string sprite)"
+
+.PP
+Definition at line \fB117\fP of file \fBgame\&.cpp\fP\&.
+.SH "Author"
+.PP 
+Generated automatically by Doxygen for My Project from the source code\&.

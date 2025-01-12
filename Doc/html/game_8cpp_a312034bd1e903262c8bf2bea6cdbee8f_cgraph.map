@@ -1,0 +1,13 @@
+<map id="Options" name="Options">
+<area shape="rect" id="node1" title=" " alt="" coords="5,147,77,174"/>
+<area shape="rect" id="node2" href="$classns_event_1_1_event_manager.html#adbc5ced9a9435f61f58436ff613632b4" title="Vide la queue." alt="" coords="125,5,301,47"/>
+<area shape="rect" id="node3" href="$class_min_g_l.html#a86c940758616957683ffb2e239bba774" title="Efface l&#39;écran avec la couleur de fond spécifiée." alt="" coords="140,71,287,98"/>
+<area shape="rect" id="node4" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp.html#a046cb13499b350b9cfa15afc669e9707" title=" " alt="" coords="180,173,247,199"/>
+<area shape="rect" id="node5" href="$class_min_g_l.html#ab558253439905930836ab4910a7ae253" title="Récupère le gestionnaire d&#39;évènements minGL." alt="" coords="349,81,536,107"/>
+<area shape="rect" id="node10" href="$class_min_g_l.html#a489922f0bdde2e38698adddaf57f6eda" title="Préviens minGL que la frame est terminée." alt="" coords="139,223,287,250"/>
+<area shape="rect" id="node11" href="$_menu_management_8h.html#afc733d7fa1650fe258aa4fd3c704b799" title=" " alt="" coords="148,274,279,301"/>
+<area shape="rect" id="node6" href="$classns_event_1_1_event_manager.html#a5a3119d969a296b8e94f223171fdf2e6" title="Vérifie si un événement doit être traité" alt="" coords="355,132,531,173"/>
+<area shape="rect" id="node7" href="$classns_event_1_1_event_manager.html#adb00a0a006f4caa976471e74bf99cdc9" title="Tire l&#39;événement le plus ancien, et l&#39;enlève de la queue." alt="" coords="355,197,531,239"/>
+<area shape="rect" id="node8" href="$classns_graphics_1_1_vec2_d.html#ae9d371fdd3817c6e9a3a1ae6ed3fd17d" title="Définit la nouvelle position X (abscisse)" alt="" coords="352,263,533,290"/>
+<area shape="rect" id="node9" href="$classns_graphics_1_1_vec2_d.html#ac0e752e399ab2f727fe2644540b1208f" title="Définit la nouvelle position Y (ordonnée)" alt="" coords="353,314,533,341"/>
+</map>

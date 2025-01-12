@@ -26,7 +26,7 @@
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c">MinGL</link> (const std::string &amp;name, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;windowSize=<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(640, 480), const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;windowPosition=<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128, 128), const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;backgroundColor=nsGraphics::KWhite)</para>
+            <listitem><para><link linkend="_class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c">MinGL</link> (const std::string &amp;name, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;windowSize=<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(640, 480), const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;windowPosition=<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128, 128), const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;backgroundColor=<link linkend="_namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2">nsGraphics::KWhite</link>)</para>
 
 <para>Constructeur pour la classe <link linkend="_class_min_g_l">MinGL</link>. </para>
 </listitem>
@@ -166,7 +166,7 @@ Definition at line <link linkend="_mingl_8h_source_1l00047">47</link> of file <l
 <indexterm><primary>MinGL</primary><secondary>MinGL</secondary></indexterm>
 <para><computeroutput>MinGL::MinGL (const std::string &amp; name, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; windowSize = <computeroutput><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(640, 480)</computeroutput>
 , const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; windowPosition = <computeroutput><link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128, 128)</computeroutput>
-, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; backgroundColor = <computeroutput>nsGraphics::KWhite</computeroutput>
+, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; backgroundColor = <computeroutput><link linkend="_namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2">nsGraphics::KWhite</link></computeroutput>
 )</computeroutput></para><para>
 
 <para>Constructeur pour la classe <link linkend="_class_min_g_l">MinGL</link>. </para>
@@ -254,6 +254,15 @@ Here is the call graph for this function:<para>
 </para>
 <para>
 Definition at line <link linkend="_mingl_8cpp_source_1l00068">68</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a86c940758616957683ffb2e239bba774_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda"/><section>
     <title>finishFrame()</title>
@@ -265,6 +274,15 @@ Definition at line <link linkend="_mingl_8cpp_source_1l00068">68</link> of file 
 </para>
 <para>
 Definition at line <link linkend="_mingl_8cpp_source_1l00062">62</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a489922f0bdde2e38698adddaf57f6eda_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_min_g_l_1a66758e8e6983cc1dd0b10b1ee743a65a"/><section>
     <title>getBackgroundColor()</title>
@@ -287,6 +305,15 @@ Definition at line <link linkend="_mingl_8cpp_source_1l00078">78</link> of file 
 </para>
 <para>
 Definition at line <link linkend="_mingl_8cpp_source_1l00073">73</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_ab558253439905930836ab4910a7ae253_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_min_g_l_1a46cea08ec9ef4a0678f425000ca77e5b"/><section>
     <title>getWindowName()</title>
@@ -351,6 +378,15 @@ Here is the caller graph for this function:<para>
 </para>
 <para>
 Definition at line <link linkend="_mingl_8cpp_source_1l00089">89</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a5962a0a0ced7879bc0cc65e267e8d7fc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 Here is the caller graph for this function:<para>
     <informalfigure>
         <mediaobject>
@@ -371,6 +407,15 @@ Here is the caller graph for this function:<para>
 </para>
 <para>
 Definition at line <link linkend="_mingl_8cpp_source_1l00258">258</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a05a0da9d0729e9c7dbd1121b0956866d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_min_g_l_1a8f0833403a4fb3df8010c132e81b207f"/><section>
     <title>isPressed()</title>
@@ -405,6 +450,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_mingl_8cpp_source_1l00133">133</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a8f0833403a4fb3df8010c132e81b207f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_min_g_l_1a99750fd4c8f97cfe693b1acb903424cf"/><section>
     <title>resetKey()</title>
@@ -439,6 +493,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_mingl_8cpp_source_1l00138">138</link> of file <link linkend="_mingl_8cpp_source">mingl.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="class_min_g_l_a99750fd4c8f97cfe693b1acb903424cf_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_class_min_g_l_1a4399b7615cea89f850cd5c66e428c367"/><section>
     <title>setBackgroundColor()</title>
@@ -602,5 +665,5 @@ Here is the caller graph for this function:<para>
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/<link linkend="_mingl_8h">mingl.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/<link linkend="_mingl_8cpp">mingl.cpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/<link linkend="_mingl_8h">mingl.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/<link linkend="_mingl_8cpp">mingl.cpp</link></section>
 </section>

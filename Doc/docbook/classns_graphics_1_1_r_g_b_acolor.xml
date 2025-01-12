@@ -35,7 +35,7 @@ Collaboration diagram for nsGraphics::RGBAcolor:<para>
 
 <para>Constructeur pour la classe <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a229faf986de81a508c37103ca013ad70"/>virtual <emphasis role="strong">~RGBAcolor</emphasis> () override=default</para>
+            <listitem><para>virtual <link linkend="_classns_graphics_1_1_r_g_b_acolor_1a229faf986de81a508c37103ca013ad70">~RGBAcolor</link> () override=default</para>
 
 <para>Destructeur virtuel pour la classe <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>. </para>
 </listitem>
@@ -159,6 +159,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_rgbacolor_8cpp_source_1l00013">13</link> of file <link linkend="_rgbacolor_8cpp_source">rgbacolor.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_graphics_1_1_r_g_b_acolor_1a229faf986de81a508c37103ca013ad70"/><section>
+    <title>~RGBAcolor()</title>
+<indexterm><primary>~RGBAcolor</primary><secondary>nsGraphics::RGBAcolor</secondary></indexterm>
+<indexterm><primary>nsGraphics::RGBAcolor</primary><secondary>~RGBAcolor</secondary></indexterm>
+<para><computeroutput>nsGraphics::RGBAcolor::~RGBAcolor ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_graphics_1_1_r_g_b_acolor">RGBAcolor</link>. </para>
+</para>
 </section>
 </section>
 <section>
@@ -578,5 +587,5 @@ Definition at line <link linkend="_rgbacolor_8cpp_source_1l00081">81</link> of f
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/<link linkend="_rgbacolor_8h">rgbacolor.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/<link linkend="_rgbacolor_8cpp">rgbacolor.cpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics/<link linkend="_rgbacolor_8h">rgbacolor.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/graphics/<link linkend="_rgbacolor_8cpp">rgbacolor.cpp</link></section>
 </section>

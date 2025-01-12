@@ -7,12 +7,12 @@
     <includes refid="rgbacolor_8h" local="yes">../graphics/rgbacolor.h</includes>
     <includes refid="vec2d_8h" local="yes">../graphics/vec2d.h</includes>
     <includes refid="itransitionable_8h" local="yes">../transition/itransitionable.h</includes>
-    <includedby refid="_menu_management_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</includedby>
-    <includedby refid="08-_custom_drawable_2bgtext_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</includedby>
-    <includedby refid="09-_custom_transitionable_2bgtext_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</includedby>
-    <includedby refid="text_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/text.cpp</includedby>
+    <includedby refid="_menu_management_8h" local="yes">/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</includedby>
+    <includedby refid="08-_custom_drawable_2bgtext_8h" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</includedby>
+    <includedby refid="09-_custom_transitionable_2bgtext_8h" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</includedby>
+    <includedby refid="text_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/text.cpp</includedby>
     <incdepgraph>
       <node id="3">
         <label>../graphics/idrawable.h</label>
@@ -41,7 +41,7 @@
         <link refid="glut__font_8h"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/text.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/text.h</label>
         <link refid="text_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -94,57 +94,57 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</label>
-        <link refid="_menu_management_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</label>
+        <link refid="_menu_management_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="4">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp"/>
       </node>
       <node id="5">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp"/>
       </node>
       <node id="7">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.cpp</label>
-        <link refid="08-_custom_drawable_2bgtext_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.cpp</label>
+        <link refid="08-_custom_drawable_2bgtext_8cpp"/>
       </node>
       <node id="6">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</label>
-        <link refid="08-_custom_drawable_2bgtext_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</label>
+        <link refid="08-_custom_drawable_2bgtext_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
         <childnode refid="8" relation="include">
         </childnode>
       </node>
       <node id="8">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp"/>
       </node>
       <node id="10">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp</label>
-        <link refid="09-_custom_transitionable_2bgtext_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp</label>
+        <link refid="09-_custom_transitionable_2bgtext_8cpp"/>
       </node>
       <node id="9">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</label>
-        <link refid="09-_custom_transitionable_2bgtext_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</label>
+        <link refid="09-_custom_transitionable_2bgtext_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="11" relation="include">
         </childnode>
       </node>
       <node id="11">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/text.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/text.h</label>
         <link refid="text_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -160,8 +160,8 @@
         </childnode>
       </node>
       <node id="12">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/text.cpp</label>
-        <link refid="text_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/text.cpp</label>
+        <link refid="text_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="classns_gui_1_1_text" prot="public">nsGui::Text</innerclass>
@@ -272,6 +272,6 @@
 <codeline lineno="223"><highlight class="normal"></highlight></codeline>
 <codeline lineno="224"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>TEXT_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/text.h"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/text.h"/>
   </compounddef>
 </doxygen>

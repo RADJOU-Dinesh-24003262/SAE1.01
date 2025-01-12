@@ -1,11 +1,11 @@
-<map id="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX&#45;master/include/mingl/transition/transition_types.h" name="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX&#45;master/include/mingl/transition/transition_types.h">
-<area shape="rect" id="node1" title="Définit quelques types pour les transitions." alt="" coords="558,5,789,76"/>
-<area shape="rect" id="node2" href="$transition__contract_8h.html" title="Création de la transition." alt="" coords="558,124,789,195"/>
-<area shape="rect" id="node3" href="$transition_8h.html" title="Definition d&#39;une transition." alt="" coords="431,243,662,313"/>
-<area shape="rect" id="node9" href="$transition__contract_8cpp.html" title="Création de la transition." alt="" coords="686,243,914,313"/>
-<area shape="rect" id="node4" href="$transition__engine_8h.html" title="Gestionnaire de transition de minGL." alt="" coords="298,361,529,432"/>
-<area shape="rect" id="node8" href="$transition_8cpp_source.html" title=" " alt="" coords="553,369,807,425"/>
-<area shape="rect" id="node5" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source.html" title=" " alt="" coords="5,480,235,551"/>
-<area shape="rect" id="node6" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source.html" title=" " alt="" coords="259,480,567,551"/>
-<area shape="rect" id="node7" href="$transition__engine_8cpp_source.html" title=" " alt="" coords="591,480,819,551"/>
+<map id="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX&#45;master/include/mingl/transition/transition_types.h" name="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX&#45;master/include/mingl/transition/transition_types.h">
+<area shape="rect" id="node1" title="Définit quelques types pour les transitions." alt="" coords="508,5,809,61"/>
+<area shape="rect" id="node2" href="$transition__contract_8h.html" title="Création de la transition." alt="" coords="535,109,782,180"/>
+<area shape="rect" id="node3" href="$transition_8h.html" title="Definition d&#39;une transition." alt="" coords="399,235,657,291"/>
+<area shape="rect" id="node9" href="$transition__contract_8cpp.html" title="Création de la transition." alt="" coords="682,228,897,299"/>
+<area shape="rect" id="node4" href="$transition__engine_8h.html" title="Gestionnaire de transition de minGL." alt="" coords="278,347,525,417"/>
+<area shape="rect" id="node8" href="$transition_8cpp.html" title=" " alt="" coords="549,354,763,410"/>
+<area shape="rect" id="node5" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp.html" title=" " alt="" coords="5,473,248,529"/>
+<area shape="rect" id="node6" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp.html" title=" " alt="" coords="273,465,530,536"/>
+<area shape="rect" id="node7" href="$transition__engine_8cpp.html" title=" " alt="" coords="554,465,769,536"/>
 </map>

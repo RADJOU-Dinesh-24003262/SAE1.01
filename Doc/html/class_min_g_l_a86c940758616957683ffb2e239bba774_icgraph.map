@@ -1,0 +1,10 @@
+<map id="MinGL::clearScreen" name="MinGL::clearScreen">
+<area shape="rect" id="node1" title="Efface l&#39;écran avec la couleur de fond spécifiée." alt="" coords="401,107,548,133"/>
+<area shape="rect" id="node2" href="$game_8cpp.html#a1e152641100487c240b9a3edfaf40890" title=" " alt="" coords="236,5,328,32"/>
+<area shape="rect" id="node5" href="$class_min_g_l.html#a5962a0a0ced7879bc0cc65e267e8d7fc" title="Initialise minGL et ouvre la fenêtre." alt="" coords="211,157,353,184"/>
+<area shape="rect" id="node6" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="108,183,163,209"/>
+<area shape="rect" id="node7" href="$game_8cpp.html#a0845b941aa45002f46dd1653274997dc" title=" " alt="" coords="249,56,315,83"/>
+<area shape="rect" id="node8" href="$game_8cpp.html#a312034bd1e903262c8bf2bea6cdbee8f" title=" " alt="" coords="246,107,318,133"/>
+<area shape="rect" id="node3" href="$game_8cpp.html#acfd932870183388e95db32d747ebaad0" title="new main" alt="" coords="110,81,161,108"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="5,81,60,108"/>
+</map>

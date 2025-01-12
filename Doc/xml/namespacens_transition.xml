@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" line="22" column="31" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" bodystart="22" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" line="22" column="31" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" bodystart="22" bodyend="-1"/>
       </memberdef>
       <memberdef kind="typedef" id="namespacens_transition_1a83c5a8a16c957b737d76d281c7345aa6" prot="public" static="no">
         <type>std::chrono::time_point&lt; std::chrono::steady_clock, <ref refid="namespacens_transition_1a260258f249f46ff9a62da721537f87af" kindref="member">SystemDuration_t</ref> &gt;</type>
@@ -35,7 +35,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" line="27" column="33" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" bodystart="27" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" line="27" column="33" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/transition_types.h" bodystart="27" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -43,6 +43,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="16" column="1"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="16" column="1"/>
   </compounddef>
 </doxygen>

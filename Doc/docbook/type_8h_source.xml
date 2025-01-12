@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_type_8h_source" xml:lang="en-US">
 <title>type.h</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h</primary></indexterm>
+<indexterm><primary>/home/Theo/Téléchargements/sae/Jeu/type.h</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_type_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;TYPE_H</emphasis>
 <anchor xml:id="_type_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;TYPE_H</emphasis>
 <anchor xml:id="_type_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
@@ -25,9 +25,9 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_type_8h_source_1l00046"/>00046 };
 <anchor xml:id="_type_8h_source_1l00047"/>00047 
 <anchor xml:id="_type_8h_source_1l00048"/><link linkend="_struct_c_my_param">00048</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_c_my_param">CMyParam</link>&#32;{
-<anchor xml:id="_type_8h_source_1l00049"/>00049 &#32;&#32;&#32;&#32;std::map&#32;&lt;std::string,&#32;char&gt;&#32;MapParamChar;
-<anchor xml:id="_type_8h_source_1l00050"/>00050 &#32;&#32;&#32;&#32;std::map&#32;&lt;std::string,&#32;unsigned&gt;&#32;MapParamUnsigned;
-<anchor xml:id="_type_8h_source_1l00051"/>00051 &#32;&#32;&#32;&#32;std::map&#32;&lt;std::string,&#32;std::string&gt;&#32;MapParamString;
+<anchor xml:id="_type_8h_source_1l00049"/><link linkend="_struct_c_my_param_1ac38ede5a509bd268e749bc9c960466d3">00049</link> &#32;&#32;&#32;&#32;std::map&#32;&lt;std::string,&#32;char&gt;&#32;<link linkend="_struct_c_my_param_1ac38ede5a509bd268e749bc9c960466d3">MapParamChar</link>;
+<anchor xml:id="_type_8h_source_1l00050"/><link linkend="_struct_c_my_param_1aece7d4bdf4103e359f769d08e97a459d">00050</link> &#32;&#32;&#32;&#32;std::map&#32;&lt;std::string,&#32;unsigned&gt;&#32;<link linkend="_struct_c_my_param_1aece7d4bdf4103e359f769d08e97a459d">MapParamUnsigned</link>;
+<anchor xml:id="_type_8h_source_1l00051"/><link linkend="_struct_c_my_param_1a6f22660b5eff76608f47c52930e6ecf1">00051</link> &#32;&#32;&#32;&#32;std::map&#32;&lt;std::string,&#32;std::string&gt;&#32;<link linkend="_struct_c_my_param_1a6f22660b5eff76608f47c52930e6ecf1">MapParamString</link>;
 <anchor xml:id="_type_8h_source_1l00052"/>00052 };
 <anchor xml:id="_type_8h_source_1l00053"/>00053 
 <anchor xml:id="_type_8h_source_1l00054"/>00054 
@@ -66,18 +66,18 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_type_8h_source_1l00140"/>00140 
 <anchor xml:id="_type_8h_source_1l00141"/><link linkend="_struct_form">00141</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_form">Form</link>
 <anchor xml:id="_type_8h_source_1l00142"/>00142 {
-<anchor xml:id="_type_8h_source_1l00143"/>00143 &#32;&#32;&#32;&#32;std::string&#32;nom;
-<anchor xml:id="_type_8h_source_1l00144"/>00144 &#32;&#32;&#32;&#32;std::pair&lt;size_t,size_t&gt;&#32;dim;
-<anchor xml:id="_type_8h_source_1l00145"/>00145 &#32;&#32;&#32;&#32;std::vector&lt;&#32;std::vector&lt;char&gt;&gt;&#32;piece;
+<anchor xml:id="_type_8h_source_1l00143"/><link linkend="_struct_form_1a75a4fb47a91fe43764d6a084f31b7b01">00143</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_struct_form_1a75a4fb47a91fe43764d6a084f31b7b01">nom</link>;
+<anchor xml:id="_type_8h_source_1l00144"/><link linkend="_struct_form_1a38baf309bd4277f942aeb9152f1f1960">00144</link> &#32;&#32;&#32;&#32;std::pair&lt;size_t,size_t&gt;&#32;<link linkend="_struct_form_1a38baf309bd4277f942aeb9152f1f1960">dim</link>;
+<anchor xml:id="_type_8h_source_1l00145"/><link linkend="_struct_form_1a4c5e21f69e4faffc2ee679a124e0c776">00145</link> &#32;&#32;&#32;&#32;std::vector&lt;&#32;std::vector&lt;char&gt;&gt;&#32;<link linkend="_struct_form_1a4c5e21f69e4faffc2ee679a124e0c776">piece</link>;
 <anchor xml:id="_type_8h_source_1l00146"/>00146 };
 <anchor xml:id="_type_8h_source_1l00147"/>00147 
 <anchor xml:id="_type_8h_source_1l00148"/><link linkend="_struct_collectible">00148</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_collectible">Collectible</link>
 <anchor xml:id="_type_8h_source_1l00149"/>00149 {
-<anchor xml:id="_type_8h_source_1l00150"/>00150 &#32;&#32;&#32;&#32;std::string&#32;nom;
-<anchor xml:id="_type_8h_source_1l00151"/>00151 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;id;
-<anchor xml:id="_type_8h_source_1l00152"/>00152 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;point;
-<anchor xml:id="_type_8h_source_1l00153"/>00153 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;token;
-<anchor xml:id="_type_8h_source_1l00154"/>00154 &#32;&#32;&#32;&#32;std::pair&lt;size_t,size_t&gt;&#32;pos;
+<anchor xml:id="_type_8h_source_1l00150"/><link linkend="_struct_collectible_1a0a00b0a796870738fe04dc543b71cce0">00150</link> &#32;&#32;&#32;&#32;std::string&#32;<link linkend="_struct_collectible_1a0a00b0a796870738fe04dc543b71cce0">nom</link>;
+<anchor xml:id="_type_8h_source_1l00151"/><link linkend="_struct_collectible_1abf1987ff63d140278258450bb62ba01a">00151</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_collectible_1abf1987ff63d140278258450bb62ba01a">id</link>;
+<anchor xml:id="_type_8h_source_1l00152"/><link linkend="_struct_collectible_1acfc630ec9af3da2f12fcb09150cc047b">00152</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;<link linkend="_struct_collectible_1acfc630ec9af3da2f12fcb09150cc047b">point</link>;
+<anchor xml:id="_type_8h_source_1l00153"/><link linkend="_struct_collectible_1a9ff30a5f026c7a7d57504312b32af548">00153</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_struct_collectible_1a9ff30a5f026c7a7d57504312b32af548">token</link>;
+<anchor xml:id="_type_8h_source_1l00154"/><link linkend="_struct_collectible_1a34fd332c39e0936e48eb5605df7cd6ea">00154</link> &#32;&#32;&#32;&#32;std::pair&lt;size_t,size_t&gt;&#32;<link linkend="_struct_collectible_1a34fd332c39e0936e48eb5605df7cd6ea">pos</link>;
 <anchor xml:id="_type_8h_source_1l00155"/>00155 };
 <anchor xml:id="_type_8h_source_1l00156"/>00156 
 <anchor xml:id="_type_8h_source_1l00160"/><link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">00160</link> <emphasis role="keyword">const</emphasis>&#32;<emphasis role="keywordtype">char</emphasis>&#32;<link linkend="_type_8h_1a1e3f1938007c41f107a8118778f8d08e">KEmpty</link>&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;=&#32;<emphasis role="charliteral">&apos;&#32;&apos;</emphasis>;
@@ -86,9 +86,9 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_type_8h_source_1l00163"/>00163 
 <anchor xml:id="_type_8h_source_1l00164"/>00164 
 <anchor xml:id="_type_8h_source_1l00170"/><link linkend="_struct_node">00170</link> <emphasis role="keyword">struct&#32;</emphasis><link linkend="_struct_node">Node</link>{
-<anchor xml:id="_type_8h_source_1l00171"/>00171 &#32;&#32;&#32;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;Pos;
-<anchor xml:id="_type_8h_source_1l00172"/>00172 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;f_cost;
-<anchor xml:id="_type_8h_source_1l00173"/>00173 &#32;&#32;&#32;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;Parent;
+<anchor xml:id="_type_8h_source_1l00171"/><link linkend="_struct_node_1a9cad2079ec0b0727d201af00d854511f">00171</link> &#32;&#32;&#32;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;<link linkend="_struct_node_1a9cad2079ec0b0727d201af00d854511f">Pos</link>;
+<anchor xml:id="_type_8h_source_1l00172"/><link linkend="_struct_node_1af8ae2d34f6bd51c23bb0976f44639e2f">00172</link> &#32;&#32;&#32;&#32;<emphasis role="keywordtype">size_t</emphasis>&#32;<link linkend="_struct_node_1af8ae2d34f6bd51c23bb0976f44639e2f">f_cost</link>;
+<anchor xml:id="_type_8h_source_1l00173"/><link linkend="_struct_node_1a0e58fa24ad68622e5592a391b6e2dd20">00173</link> &#32;&#32;&#32;&#32;<link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link>&#32;<link linkend="_struct_node_1a0e58fa24ad68622e5592a391b6e2dd20">Parent</link>;
 <anchor xml:id="_type_8h_source_1l00174"/>00174 };
 <anchor xml:id="_type_8h_source_1l00175"/>00175 
 <anchor xml:id="_type_8h_source_1l00176"/>00176 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">//&#32;TYPE_H</emphasis>

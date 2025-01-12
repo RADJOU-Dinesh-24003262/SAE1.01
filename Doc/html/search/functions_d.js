@@ -1,8 +1,4 @@
 var searchData=
 [
-  ['playsoundfrombuffer_0',['playSoundFromBuffer',['../classns_audio_1_1_audio_engine.html#a47d769cc331578a398f422ff497505c8',1,'nsAudio::AudioEngine']]],
-  ['playsoundfromfile_1',['playSoundFromFile',['../classns_audio_1_1_audio_engine.html#aa541e8088c35ab41e4747ecd648e75e9',1,'nsAudio::AudioEngine']]],
-  ['ppal_2',['ppal',['../game_8h.html#a0b1d64ee76933ef8f007f1208cb869a7',1,'game.cpp']]],
-  ['pullevent_3',['pullEvent',['../classns_event_1_1_event_manager.html#adb00a0a006f4caa976471e74bf99cdc9',1,'nsEvent::EventManager']]],
-  ['pushevent_4',['pushEvent',['../classns_event_1_1_event_manager.html#a1eff8398ddb0a25da82e52a1067b85b5',1,'nsEvent::EventManager']]]
+  ['nextmove_0',['nextMove',['../game_8cpp.html#a0e70e085afb41e8db9d8c7c8936dfad7',1,'nextMove(const CMat &amp;Mat, const bool &amp;KeyUp, const bool &amp;KeyDown, const bool &amp;KeyRight, const bool &amp;KeyLeft, const CPosition &amp;Pos, const CMyParamV2 &amp;Param, CPosition &amp;Tp1, CPosition &amp;Tp2):&#160;game.cpp'],['../game_8h.html#ad05a86bb0b8cfd683ef1c60bd003e3ce',1,'nextMove(const CMat &amp;Mat, const char &amp;Move, const CPosition &amp;Pos, const CMyParamV2 &amp;Param, CPosition &amp;Tp1, CPosition &amp;Tp2):&#160;game.h']]]
 ];

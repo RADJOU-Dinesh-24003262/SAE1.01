@@ -1,0 +1,11 @@
+<map id="Sprite" name="Sprite">
+<area shape="rect" id="node1" title=" " alt="" coords="5,183,65,209"/>
+<area shape="rect" id="node2" href="$cigarette_8h.html#af7fde47c9ef13a0f15f176f8c7a9f52c" title="cette fonction dessine une cigarette" alt="" coords="115,5,198,32"/>
+<area shape="rect" id="node3" href="$kebab_8h.html#a43f800ad6cdaede6ba76a8c7d22bc463" title=" " alt="" coords="125,56,188,83"/>
+<area shape="rect" id="node4" href="$monstre_8h.html#a1bdf648b0b46f6c35eeae63523d4eac8" title="cette fonction dessine un monstre sous forme de rectangle" alt="" coords="119,107,194,133"/>
+<area shape="rect" id="node5" href="$player1_8h.html#ae9c272b2658c6c4acfd2caed5eb9a74b" title=" " alt="" coords="121,157,192,184"/>
+<area shape="rect" id="node6" href="$player2_8h.html#aeb54b2bbe53214deec7a41951a3ac1e7" title=" " alt="" coords="121,208,192,235"/>
+<area shape="rect" id="node7" href="$statue_8h.html#a775457201f1ab220eb0f565c9811b1e7" title="cette fonction dessine une statue soit Wario" alt="" coords="125,259,189,285"/>
+<area shape="rect" id="node8" href="$teleporter_8h.html#abd3383003d3b5afeac6ab5231f4a96bc" title="cette fonction dessine un teleporter soit l&#39;ascenceur" alt="" coords="113,309,200,336"/>
+<area shape="rect" id="node9" href="$wall_8h.html#a9c385c3b12f177f9de1377aa883ba224" title="cette fonction dessine un mur" alt="" coords="131,360,182,387"/>
+</map>

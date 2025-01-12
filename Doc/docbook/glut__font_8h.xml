@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_glut__font_8h" xml:lang="en-US">
-<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/glut_font.h File Reference</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/glut_font.h</primary></indexterm>
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/glut_font.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/glut_font.h</primary></indexterm>
 <para>
 
 <para>Classe utilitaire pour utiliser facilement les polices de Glut. </para>

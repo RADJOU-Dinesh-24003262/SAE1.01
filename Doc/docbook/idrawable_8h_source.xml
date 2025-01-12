@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_idrawable_8h_source" xml:lang="en-US">
 <title>idrawable.h</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/idrawable.h</primary></indexterm>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics/idrawable.h</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_idrawable_8h_source_1l00001"/>00001 
 <anchor xml:id="_idrawable_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;DRAWABLE_H</emphasis>
 <anchor xml:id="_idrawable_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;DRAWABLE_H</emphasis>

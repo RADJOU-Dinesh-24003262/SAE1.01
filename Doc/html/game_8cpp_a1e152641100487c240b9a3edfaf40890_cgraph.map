@@ -1,0 +1,31 @@
+<map id="GameLoop" name="GameLoop">
+<area shape="rect" id="node1" title=" " alt="" coords="5,393,97,420"/>
+<area shape="rect" id="node2" href="$game_8cpp.html#ab465081d6f14034e76b3e4efd1d092db" title=" " alt="" coords="174,23,293,49"/>
+<area shape="rect" id="node3" href="$classns_event_1_1_event_manager.html#adbc5ced9a9435f61f58436ff613632b4" title="Vide la queue." alt="" coords="145,74,321,115"/>
+<area shape="rect" id="node4" href="$class_min_g_l.html#a86c940758616957683ffb2e239bba774" title="Efface l&#39;écran avec la couleur de fond spécifiée." alt="" coords="160,140,307,167"/>
+<area shape="rect" id="node5" href="$gridmanagement_8cpp.html#ac9357ee33d7442ff035f7a0c2b61cce6" title=" " alt="" coords="435,532,491,559"/>
+<area shape="rect" id="node6" href="$game_8cpp.html#a1598d2cc705c314acea3323f69b0b372" title=" " alt="" coords="184,191,283,217"/>
+<area shape="rect" id="node16" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp.html#a046cb13499b350b9cfa15afc669e9707" title=" " alt="" coords="200,292,267,319"/>
+<area shape="rect" id="node17" href="$class_min_g_l.html#ab558253439905930836ab4910a7ae253" title="Récupère le gestionnaire d&#39;évènements minGL." alt="" coords="369,233,556,260"/>
+<area shape="rect" id="node22" href="$class_min_g_l.html#a489922f0bdde2e38698adddaf57f6eda" title="Préviens minGL que la frame est terminée." alt="" coords="159,393,307,420"/>
+<area shape="rect" id="node23" href="$gridmanagement_8cpp.html#aeec8c3cd8d226f13c4b651e70988240f" title=" " alt="" coords="198,444,269,471"/>
+<area shape="rect" id="node24" href="$game_8cpp.html#a35057878b4faca7c5b0d80ba8a9a7608" title=" " alt="" coords="182,495,285,521"/>
+<area shape="rect" id="node25" href="$game_8cpp.html#aa61e0829c615216027761f9feafa253c" title=" " alt="" coords="181,545,285,572"/>
+<area shape="rect" id="node26" href="$class_min_g_l.html#a05a0da9d0729e9c7dbd1121b0956866d" title="Retourne si la fenêtre est ouverte." alt="" coords="175,596,291,623"/>
+<area shape="rect" id="node27" href="$gridmanagement_8cpp.html#ae8509127a309e7bfd2673d39ca1b5375" title=" " alt="" coords="178,647,289,673"/>
+<area shape="rect" id="node28" href="$game_8cpp.html#ac95434408d3f8bf774e3032eaa73ae4e" title=" " alt="" coords="186,697,281,724"/>
+<area shape="rect" id="node29" href="$game_8cpp.html#a0e70e085afb41e8db9d8c7c8936dfad7" title=" " alt="" coords="190,748,277,775"/>
+<area shape="rect" id="node7" href="$game_8cpp.html#a57e55da876e34d1b049962d00fac607e" title=" " alt="" coords="433,183,493,209"/>
+<area shape="rect" id="node8" href="$cigarette_8h.html#af7fde47c9ef13a0f15f176f8c7a9f52c" title="cette fonction dessine une cigarette" alt="" coords="606,5,689,32"/>
+<area shape="rect" id="node9" href="$kebab_8h.html#a43f800ad6cdaede6ba76a8c7d22bc463" title=" " alt="" coords="616,56,679,83"/>
+<area shape="rect" id="node10" href="$monstre_8h.html#a1bdf648b0b46f6c35eeae63523d4eac8" title="cette fonction dessine un monstre sous forme de rectangle" alt="" coords="610,107,685,133"/>
+<area shape="rect" id="node11" href="$player1_8h.html#ae9c272b2658c6c4acfd2caed5eb9a74b" title=" " alt="" coords="612,157,683,184"/>
+<area shape="rect" id="node12" href="$player2_8h.html#aeb54b2bbe53214deec7a41951a3ac1e7" title=" " alt="" coords="612,208,683,235"/>
+<area shape="rect" id="node13" href="$statue_8h.html#a775457201f1ab220eb0f565c9811b1e7" title="cette fonction dessine une statue soit Wario" alt="" coords="615,259,679,285"/>
+<area shape="rect" id="node14" href="$teleporter_8h.html#abd3383003d3b5afeac6ab5231f4a96bc" title="cette fonction dessine un teleporter soit l&#39;ascenceur" alt="" coords="604,309,691,336"/>
+<area shape="rect" id="node15" href="$wall_8h.html#a9c385c3b12f177f9de1377aa883ba224" title="cette fonction dessine un mur" alt="" coords="622,360,673,387"/>
+<area shape="rect" id="node18" href="$classns_event_1_1_event_manager.html#a5a3119d969a296b8e94f223171fdf2e6" title="Vérifie si un événement doit être traité" alt="" coords="375,453,551,494"/>
+<area shape="rect" id="node19" href="$classns_event_1_1_event_manager.html#adb00a0a006f4caa976471e74bf99cdc9" title="Tire l&#39;événement le plus ancien, et l&#39;enlève de la queue." alt="" coords="375,285,551,326"/>
+<area shape="rect" id="node20" href="$classns_graphics_1_1_vec2_d.html#ae9d371fdd3817c6e9a3a1ae6ed3fd17d" title="Définit la nouvelle position X (abscisse)" alt="" coords="372,351,553,377"/>
+<area shape="rect" id="node21" href="$classns_graphics_1_1_vec2_d.html#ac0e752e399ab2f727fe2644540b1208f" title="Définit la nouvelle position Y (ordonnée)" alt="" coords="373,401,553,428"/>
+</map>

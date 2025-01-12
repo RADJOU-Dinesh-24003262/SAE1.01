@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;
+#include &lt;thread&gt;
+#include &quot;mingl/mingl.h&quot;
+#include &quot;mingl/shape/circle.h&quot;
+#include &quot;mingl/shape/line.h&quot;
+#include &quot;mingl/shape/rectangle.h&quot;
+#include &quot;mingl/shape/triangle.h&quot;
+#include &quot;mingl/transition/transition_engine.h&quot;
+</programlisting>Include dependency graph for main.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="__min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_1a69c339b2966791489487938c49401cf3">FPS_LIMIT</link>   60</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>int <link linkend="__min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_1a69c339b2966791489487938c49401cf3"/><section>
+    <title>FPS_LIMIT</title>
+<indexterm><primary>FPS_LIMIT</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>FPS_LIMIT</secondary></indexterm>
+<para><computeroutput>#define FPS_LIMIT   60</computeroutput></para><para>
+Definition at line <link linkend="__min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_1l00001">1</link> of file <link linkend="__min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source">main.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>main.cpp</secondary></indexterm>
+<indexterm><primary>main.cpp</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>int main ( )</computeroutput></para><para>
+Definition at line <link linkend="__min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source_1l00016">16</link> of file <link linkend="__min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source">main.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

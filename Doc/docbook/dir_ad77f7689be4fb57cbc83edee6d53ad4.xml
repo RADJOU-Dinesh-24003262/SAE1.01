@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_ad77f7689be4fb57cbc83edee6d53ad4" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/transition Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/transition Directory Reference</primary></indexterm>
+Directory dependency graph for transition:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_ad77f7689be4fb57cbc83edee6d53ad4_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_transition_8cpp">transition.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_transition__contract_8cpp">transition_contract.cpp</link></para>
+
+<para>Création de la transition. </para>
+</listitem>
+            <listitem><para>file <link linkend="_transition__engine_8cpp">transition_engine.cpp</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

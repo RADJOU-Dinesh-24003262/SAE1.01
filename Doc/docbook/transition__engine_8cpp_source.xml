@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_transition__engine_8cpp_source" xml:lang="en-US">
 <title>transition_engine.cpp</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition/transition_engine.cpp</primary></indexterm>
-<programlisting linenumbering="unnumbered"><anchor xml:id="_transition__engine_8cpp_source_1l00001"/>00001 
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/transition/transition_engine.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_transition__engine_8cpp_source_1l00001"/>00001 
 <anchor xml:id="_transition__engine_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_transition__engine_8h">mingl/transition/transition_engine.h</link>&quot;</emphasis>
 <anchor xml:id="_transition__engine_8cpp_source_1l00012"/>00012 
-<anchor xml:id="_transition__engine_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">#define&#32;TRANSITIONENGINE&#32;nsTransition::TransitionEngine</emphasis>
+<anchor xml:id="_transition__engine_8cpp_source_1l00013"/><link linkend="_transition__engine_8cpp_1a8f5466d77f69760bca9bb92217754d56">00013</link> <emphasis role="preprocessor">#define&#32;TRANSITIONENGINE&#32;nsTransition::TransitionEngine</emphasis>
 <anchor xml:id="_transition__engine_8cpp_source_1l00014"/>00014 
 <anchor xml:id="_transition__engine_8cpp_source_1l00015"/>00015 <emphasis role="keywordtype">void</emphasis>&#32;TRANSITIONENGINE::update(<emphasis role="keyword">const</emphasis>&#32;std::chrono::microseconds&#32;&amp;delta)
 <anchor xml:id="_transition__engine_8cpp_source_1l00016"/>00016 {

@@ -1,5 +1,5 @@
-<map id="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX&#45;master/include/mingl/gui/text.h" name="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX&#45;master/include/mingl/gui/text.h">
-<area shape="rect" id="node1" title="Du texte." alt="" coords="283,5,513,61"/>
+<map id="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX&#45;master/include/mingl/gui/text.h" name="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX&#45;master/include/mingl/gui/text.h">
+<area shape="rect" id="node1" title="Du texte." alt="" coords="291,5,505,61"/>
 <area shape="rect" id="node2" href="$glut__font_8h.html" title="Classe utilitaire pour utiliser facilement les polices de Glut." alt="" coords="5,109,97,136"/>
 <area shape="rect" id="node3" href="$idrawable_8h.html" title="Interface pour un objet affichable." alt="" coords="121,109,291,136"/>
 <area shape="rect" id="node5" href="$rgbacolor_8h.html" title="Représente une couleur RGBA." alt="" coords="315,109,481,136"/>

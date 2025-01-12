@@ -48,13 +48,15 @@ Collaboration diagram for nsShape::Rectangle:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_classns_shape_1_1_rectangle_1a5d5e8052ba7c35001a30ccc7dad669e2">Rectangle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;secondPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=nsGraphics::KTransparent)</para>
+            <listitem><para><link linkend="_classns_shape_1_1_rectangle_1a5d5e8052ba7c35001a30ccc7dad669e2">Rectangle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;secondPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=<link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link>)</para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_rectangle">Rectangle</link>. </para>
 </listitem>
-            <listitem><para><link linkend="_classns_shape_1_1_rectangle_1a0c1c16410fb0ee7345449d7bfc9b377b">Rectangle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const unsigned &amp;width, const unsigned &amp;height, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=nsGraphics::KTransparent)</para>
+            <listitem><para><link linkend="_classns_shape_1_1_rectangle_1a0c1c16410fb0ee7345449d7bfc9b377b">Rectangle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;position, const unsigned &amp;width, const unsigned &amp;height, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=<link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link>)</para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_rectangle">Rectangle</link>. </para>
+</listitem>
+            <listitem><para>virtual <link linkend="_classns_shape_1_1_rectangle_1a8c5a662392d6ff84a852c4f70e8b1d1d">~Rectangle</link> () override=default</para>
 </listitem>
             <listitem><para>virtual void <link linkend="_classns_shape_1_1_rectangle_1a87e5544cddc2ed7b3bfd189b796ab2a5">draw</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window) const override</para>
 
@@ -157,7 +159,7 @@ Definition at line <link linkend="_rectangle_8h_source_1l00032">32</link> of fil
     <title>Rectangle()<computeroutput>[1/2]</computeroutput></title>
 <indexterm><primary>Rectangle</primary><secondary>nsShape::Rectangle</secondary></indexterm>
 <indexterm><primary>nsShape::Rectangle</primary><secondary>Rectangle</secondary></indexterm>
-<para><computeroutput>nsShape::Rectangle::Rectangle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; secondPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput>nsGraphics::KTransparent</computeroutput>
+<para><computeroutput>nsShape::Rectangle::Rectangle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; secondPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput><link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link></computeroutput>
 )</computeroutput></para><para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_rectangle">Rectangle</link>. </para>
@@ -207,7 +209,7 @@ Definition at line <link linkend="_rectangle_8cpp_source_1l00014">14</link> of f
     <title>Rectangle()<computeroutput>[2/2]</computeroutput></title>
 <indexterm><primary>Rectangle</primary><secondary>nsShape::Rectangle</secondary></indexterm>
 <indexterm><primary>nsShape::Rectangle</primary><secondary>Rectangle</secondary></indexterm>
-<para><computeroutput>nsShape::Rectangle::Rectangle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position, const unsigned &amp; width, const unsigned &amp; height, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput>nsGraphics::KTransparent</computeroutput>
+<para><computeroutput>nsShape::Rectangle::Rectangle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; position, const unsigned &amp; width, const unsigned &amp; height, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput><link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link></computeroutput>
 )</computeroutput></para><para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_rectangle">Rectangle</link>. </para>
@@ -258,6 +260,11 @@ Parameters</title>
 <para>
 Definition at line <link linkend="_rectangle_8cpp_source_1l00020">20</link> of file <link linkend="_rectangle_8cpp_source">rectangle.cpp</link>.</para>
 </section>
+<anchor xml:id="_classns_shape_1_1_rectangle_1a8c5a662392d6ff84a852c4f70e8b1d1d"/><section>
+    <title>~Rectangle()</title>
+<indexterm><primary>~Rectangle</primary><secondary>nsShape::Rectangle</secondary></indexterm>
+<indexterm><primary>nsShape::Rectangle</primary><secondary>~Rectangle</secondary></indexterm>
+<para><computeroutput>virtual nsShape::Rectangle::~Rectangle ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para></section>
 </section>
 <section>
 <title>Member Function Documentation</title>
@@ -525,5 +532,5 @@ Definition at line <link linkend="_rectangle_8cpp_source_1l00093">93</link> of f
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_rectangle_8h">rectangle.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_rectangle_8cpp">rectangle.cpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_rectangle_8h">rectangle.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/<link linkend="_rectangle_8cpp">rectangle.cpp</link></section>
 </section>

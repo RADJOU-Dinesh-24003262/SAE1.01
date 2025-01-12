@@ -1,4 +1,4 @@
-.TH "nsShape::Triangle" 3 "Fri Jan 10 2025" "SAE 1.01" \" -*- nroff -*-
+.TH "nsShape::Triangle" 3 "Sun Jan 12 2025" "My Project" \" -*- nroff -*-
 .ad l
 .nh
 .SH NAME
@@ -23,7 +23,7 @@ Inherits \fBnsShape::Shape\fP, and \fBnsTransition::ITransitionable\fP\&.
 
 .in +1c
 .ti -1c
-.RI "\fBTriangle\fP (const \fBnsGraphics::Vec2D\fP &firstPosition, const \fBnsGraphics::Vec2D\fP &secondPosition, const \fBnsGraphics::Vec2D\fP &thirdPosition, const \fBnsGraphics::RGBAcolor\fP &fillColor, const \fBnsGraphics::RGBAcolor\fP &borderColor=nsGraphics::KTransparent)"
+.RI "\fBTriangle\fP (const \fBnsGraphics::Vec2D\fP &firstPosition, const \fBnsGraphics::Vec2D\fP &secondPosition, const \fBnsGraphics::Vec2D\fP &thirdPosition, const \fBnsGraphics::RGBAcolor\fP &fillColor, const \fBnsGraphics::RGBAcolor\fP &borderColor=\fBnsGraphics::KTransparent\fP)"
 .br
 .RI "Constructeur pour la classe \fBTriangle\fP\&. "
 .ti -1c
@@ -115,7 +115,7 @@ Transition pour la position du troisième sommet
 Definition at line \fB32\fP of file \fBtriangle\&.h\fP\&.
 .SH "Constructor & Destructor Documentation"
 .PP 
-.SS "nsShape::Triangle::Triangle (const \fBnsGraphics::Vec2D\fP & firstPosition, const \fBnsGraphics::Vec2D\fP & secondPosition, const \fBnsGraphics::Vec2D\fP & thirdPosition, const \fBnsGraphics::RGBAcolor\fP & fillColor, const \fBnsGraphics::RGBAcolor\fP & borderColor = \fCnsGraphics::KTransparent\fP)"
+.SS "nsShape::Triangle::Triangle (const \fBnsGraphics::Vec2D\fP & firstPosition, const \fBnsGraphics::Vec2D\fP & secondPosition, const \fBnsGraphics::Vec2D\fP & thirdPosition, const \fBnsGraphics::RGBAcolor\fP & fillColor, const \fBnsGraphics::RGBAcolor\fP & borderColor = \fC\fBnsGraphics::KTransparent\fP\fP)"
 
 .PP
 Constructeur pour la classe \fBTriangle\fP\&. 
@@ -136,6 +136,10 @@ Constructeur pour la classe \fBTriangle\fP\&.
 
 .PP
 Definition at line \fB17\fP of file \fBtriangle\&.cpp\fP\&.
+.SS "nsShape::Triangle::~Triangle ()\fC [override]\fP, \fC [virtual]\fP, \fC [default]\fP"
+
+.PP
+Destructeur virtuel pour la classe \fBTriangle\fP\&. 
 .SH "Member Function Documentation"
 .PP 
 .SS "void nsShape::Triangle::draw (\fBMinGL\fP & window) const\fC [override]\fP, \fC [virtual]\fP"
@@ -266,4 +270,4 @@ Definition at line \fB101\fP of file \fBtriangle\&.cpp\fP\&.
 
 .SH "Author"
 .PP 
-Generated automatically by Doxygen for SAE 1\&.01 from the source code\&.
+Generated automatically by Doxygen for My Project from the source code\&.

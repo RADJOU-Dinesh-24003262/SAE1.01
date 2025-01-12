@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_ieditable_8h_source" xml:lang="en-US">
 <title>ieditable.h</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h</primary></indexterm>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_ieditable_8h_source_1l00001"/>00001 
 <anchor xml:id="_ieditable_8h_source_1l00021"/>00021 <emphasis role="preprocessor">#ifndef&#32;IEDITABLE_H</emphasis>
 <anchor xml:id="_ieditable_8h_source_1l00022"/>00022 <emphasis role="preprocessor">#define&#32;IEDITABLE_H</emphasis>
@@ -24,7 +24,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_ieditable_8h_source_1l00062"/>00062 
 <anchor xml:id="_ieditable_8h_source_1l00063"/>00063 };&#32;<emphasis role="comment">//&#32;class&#32;IEditable</emphasis>
 <anchor xml:id="_ieditable_8h_source_1l00064"/>00064 
-<anchor xml:id="_ieditable_8h_source_1l00065"/>00065 std::ostream&amp;&#32;operator&lt;&lt;(std::ostream&#32;&amp;&#32;os,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_util_1_1_i_editable">IEditable</link>&#32;&amp;&#32;Obj);
+<anchor xml:id="_ieditable_8h_source_1l00065"/>00065 std::ostream&amp;&#32;<link linkend="_namespacens_util_1a95ba3ba3ebef98e447b47ee40f55dd1a">operator&lt;&lt;</link>(std::ostream&#32;&amp;&#32;os,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_util_1_1_i_editable">IEditable</link>&#32;&amp;&#32;Obj);
 <anchor xml:id="_ieditable_8h_source_1l00066"/>00066 
 <anchor xml:id="_ieditable_8h_source_1l00067"/>00067 }&#32;<emphasis role="comment">//&#32;namespace&#32;nsUtil</emphasis>
 <anchor xml:id="_ieditable_8h_source_1l00068"/>00068 

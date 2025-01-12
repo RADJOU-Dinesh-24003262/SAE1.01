@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_cexception_8cpp" xml:lang="en-US">
-<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/cexception.cpp File Reference</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/exception/cexception.cpp</primary></indexterm>
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/exception/cexception.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/exception/cexception.cpp</primary></indexterm>
 <para>
 
 <para>classe CException </para>

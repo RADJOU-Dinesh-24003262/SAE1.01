@@ -25,7 +25,7 @@
     <incdepgraph>
       <node id="41">
         <label>MenuManagement.h</label>
-        <link refid="_menu_management_8h_source"/>
+        <link refid="_menu_management_8h"/>
         <childnode refid="10" relation="include">
         </childnode>
         <childnode refid="3" relation="include">
@@ -36,9 +36,13 @@
         </childnode>
         <childnode refid="43" relation="include">
         </childnode>
+        <childnode refid="45" relation="include">
+        </childnode>
+        <childnode refid="7" relation="include">
+        </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
         <link refid="game_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -251,7 +255,7 @@
       </node>
       <node id="42">
         <label>sprites/button.h</label>
-        <link refid="button_8h_source"/>
+        <link refid="button_8h"/>
         <childnode refid="35" relation="include">
         </childnode>
         <childnode refid="29" relation="include">
@@ -267,13 +271,13 @@
       </node>
       <node id="36">
         <label>sprites/kebab.h</label>
-        <link refid="kebab_8h_source"/>
+        <link refid="kebab_8h"/>
         <childnode refid="35" relation="include">
         </childnode>
       </node>
       <node id="38">
         <label>sprites/monstre.h</label>
-        <link refid="monstre_8h_source"/>
+        <link refid="monstre_8h"/>
         <childnode refid="35" relation="include">
         </childnode>
       </node>
@@ -295,7 +299,7 @@
       </node>
       <node id="40">
         <label>sprites/statue.h</label>
-        <link refid="statue_8h_source"/>
+        <link refid="statue_8h"/>
         <childnode refid="29" relation="include">
         </childnode>
         <childnode refid="32" relation="include">
@@ -305,7 +309,7 @@
       </node>
       <node id="39">
         <label>sprites/teleporter.h</label>
-        <link refid="teleporter_8h_source"/>
+        <link refid="teleporter_8h"/>
         <childnode refid="35" relation="include">
         </childnode>
       </node>
@@ -323,6 +327,9 @@
       </node>
       <node id="26">
         <label>cmath</label>
+      </node>
+      <node id="45">
+        <label>fstream</label>
       </node>
       <node id="2">
         <label>iostream</label>
@@ -368,7 +375,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="10" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="10" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="10" column="9" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="10" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -411,7 +418,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="31" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="31" bodyend="55"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="31" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="31" bodyend="55"/>
+        <references refid="gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6" compoundref="gridmanagement_8cpp" startline="117" endline="119">Color</references>
+        <references refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" compoundref="type_8h" startline="66">KColor</references>
+        <references refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" compoundref="type_8h" startline="126">CMyParamV2::NbColumn</references>
+        <references refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" compoundref="type_8h" startline="130">CMyParamV2::NbRow</references>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1a0e70e085afb41e8db9d8c7c8936dfad7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>pair&lt; char, <ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref> &gt;</type>
@@ -460,7 +472,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="57" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="57" bodyend="94"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="57" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="57" bodyend="94"/>
+        <references refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" compoundref="type_8h" startline="126">CMyParamV2::NbColumn</references>
+        <references refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" compoundref="type_8h" startline="130">CMyParamV2::NbRow</references>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1a35057878b4faca7c5b0d80ba8a9a7608" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>bool</type>
@@ -477,7 +492,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="96" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="96" bodyend="102"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="96" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="96" bodyend="102"/>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1ab465081d6f14034e76b3e4efd1d092db" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -498,7 +514,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="104" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="104" bodyend="115"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="104" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="104" bodyend="115"/>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1a57e55da876e34d1b049962d00fac607e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -543,7 +560,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="117" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="117" bodyend="136"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="117" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="117" bodyend="136"/>
+        <references refid="cigarette_8h_1af7fde47c9ef13a0f15f176f8c7a9f52c" compoundref="cigarette_8h" startline="25" endline="58">Cigarette</references>
+        <references refid="kebab_8h_1a43f800ad6cdaede6ba76a8c7d22bc463" compoundref="kebab_8h" startline="15" endline="30">Kebab</references>
+        <references refid="monstre_8h_1a1bdf648b0b46f6c35eeae63523d4eac8" compoundref="monstre_8h" startline="25" endline="33">Monstre</references>
+        <references refid="player1_8h_1ae9c272b2658c6c4acfd2caed5eb9a74b" compoundref="player1_8h" startline="16" endline="38">Player1</references>
+        <references refid="player2_8h_1aeb54b2bbe53214deec7a41951a3ac1e7" compoundref="player2_8h" startline="16" endline="38">Player2</references>
+        <references refid="statue_8h_1a775457201f1ab220eb0f565c9811b1e7" compoundref="statue_8h" startline="29" endline="100">Statue</references>
+        <references refid="teleporter_8h_1abd3383003d3b5afeac6ab5231f4a96bc" compoundref="teleporter_8h" startline="26" endline="43">Teleporter</references>
+        <references refid="wall_8h_1a9c385c3b12f177f9de1377aa883ba224" compoundref="wall_8h" startline="24" endline="32">Wall</references>
+        <referencedby refid="game_8cpp_1a1598d2cc705c314acea3323f69b0b372" compoundref="game_8cpp" startline="138" endline="161">DisplayGrid</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1a1598d2cc705c314acea3323f69b0b372" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -568,7 +594,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="138" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="138" bodyend="161"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="138" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="138" bodyend="161"/>
+        <references refid="namespacens_graphics_1a9caa4cd9527a2effed87836d78faacef" compoundref="rgbacolor_8h" startline="176">nsGraphics::KBlueTransparent</references>
+        <references refid="game_8cpp_1a57e55da876e34d1b049962d00fac607e" compoundref="game_8cpp" startline="117" endline="136">Sprite</references>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1ac95434408d3f8bf774e3032eaa73ae4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -613,7 +642,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="163" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="163" bodyend="199"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="163" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="163" bodyend="199"/>
+        <references refid="type_8h_1a1e3f1938007c41f107a8118778f8d08e" compoundref="type_8h" startline="160">KEmpty</references>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1a0845b941aa45002f46dd1653274997dc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -646,7 +677,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="201" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="201" bodyend="219"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="201" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="201" bodyend="219"/>
+        <references refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" compoundref="event__manager_8cpp" startline="31" endline="35">nsEvent::EventManager::clearEvents</references>
+        <references refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" compoundref="mingl_8cpp" startline="68" endline="71">MinGL::clearScreen</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="15" endline="43">events</references>
+        <references refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" compoundref="mingl_8cpp" startline="62" endline="66">MinGL::finishFrame</references>
+        <references refid="game_8cpp_1a69c339b2966791489487938c49401cf3" compoundref="game_8cpp" startline="10">FPS_LIMIT</references>
+        <references refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" compoundref="mingl_8cpp" startline="73" endline="76">MinGL::getEventManager</references>
+        <references refid="_menu_management_8h_1afab161c3544224d228a3e8e64a3eae08" compoundref="_menu_management_8h" startline="33" endline="45">InterfaceMenuP</references>
+        <referencedby refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -679,7 +718,15 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="221" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="221" bodyend="237"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="221" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="221" bodyend="237"/>
+        <references refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" compoundref="event__manager_8cpp" startline="31" endline="35">nsEvent::EventManager::clearEvents</references>
+        <references refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" compoundref="mingl_8cpp" startline="68" endline="71">MinGL::clearScreen</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="15" endline="43">events</references>
+        <references refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" compoundref="mingl_8cpp" startline="62" endline="66">MinGL::finishFrame</references>
+        <references refid="game_8cpp_1a69c339b2966791489487938c49401cf3" compoundref="game_8cpp" startline="10">FPS_LIMIT</references>
+        <references refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" compoundref="mingl_8cpp" startline="73" endline="76">MinGL::getEventManager</references>
+        <references refid="_menu_management_8h_1afc733d7fa1650fe258aa4fd3c704b799" compoundref="_menu_management_8h" startline="69" endline="89">InterfaceOptions</references>
+        <referencedby refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -712,7 +759,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="239" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="239" bodyend="254"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="239" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="239" bodyend="254"/>
+        <references refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" compoundref="event__manager_8cpp" startline="31" endline="35">nsEvent::EventManager::clearEvents</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="15" endline="43">events</references>
+        <references refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" compoundref="mingl_8cpp" startline="62" endline="66">MinGL::finishFrame</references>
+        <references refid="game_8cpp_1a69c339b2966791489487938c49401cf3" compoundref="game_8cpp" startline="10">FPS_LIMIT</references>
+        <references refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" compoundref="mingl_8cpp" startline="73" endline="76">MinGL::getEventManager</references>
+        <references refid="_menu_management_8h_1ae72c2fefee518b729a3c7a320d27265a" compoundref="_menu_management_8h" startline="97" endline="104">InterfaceCredits</references>
+        <referencedby refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -745,7 +799,14 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="256" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="256" bodyend="273"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="256" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="256" bodyend="273"/>
+        <references refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" compoundref="event__manager_8cpp" startline="31" endline="35">nsEvent::EventManager::clearEvents</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="15" endline="43">events</references>
+        <references refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" compoundref="mingl_8cpp" startline="62" endline="66">MinGL::finishFrame</references>
+        <references refid="game_8cpp_1a69c339b2966791489487938c49401cf3" compoundref="game_8cpp" startline="10">FPS_LIMIT</references>
+        <references refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" compoundref="mingl_8cpp" startline="73" endline="76">MinGL::getEventManager</references>
+        <references refid="_menu_management_8h_1ab2a2e33bb6aff7164d540d7a50bdd38f" compoundref="_menu_management_8h" startline="54" endline="61">InterfacePause</references>
+        <referencedby refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1a1e152641100487c240b9a3edfaf40890" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -874,7 +935,39 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="275" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="275" bodyend="425"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="275" column="6" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="275" bodyend="425"/>
+        <references refid="game_8cpp_1ab465081d6f14034e76b3e4efd1d092db" compoundref="game_8cpp" startline="104" endline="115">CalculateScore</references>
+        <references refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" compoundref="event__manager_8cpp" startline="31" endline="35">nsEvent::EventManager::clearEvents</references>
+        <references refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" compoundref="mingl_8cpp" startline="68" endline="71">MinGL::clearScreen</references>
+        <references refid="gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6" compoundref="gridmanagement_8cpp" startline="117" endline="119">Color</references>
+        <references refid="game_8cpp_1a1598d2cc705c314acea3323f69b0b372" compoundref="game_8cpp" startline="138" endline="161">DisplayGrid</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="15" endline="43">events</references>
+        <references refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" compoundref="mingl_8cpp" startline="62" endline="66">MinGL::finishFrame</references>
+        <references refid="game_8cpp_1a69c339b2966791489487938c49401cf3" compoundref="game_8cpp" startline="10">FPS_LIMIT</references>
+        <references refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" compoundref="mingl_8cpp" startline="73" endline="76">MinGL::getEventManager</references>
+        <references refid="gridmanagement_8cpp_1aeec8c3cd8d226f13c4b651e70988240f" compoundref="gridmanagement_8cpp" startline="165" endline="337">InitGrid</references>
+        <references refid="game_8cpp_1a35057878b4faca7c5b0d80ba8a9a7608" compoundref="game_8cpp" startline="96" endline="102">IsCollectible</references>
+        <references refid="game_8cpp_1aa61e0829c615216027761f9feafa253c" compoundref="game_8cpp" startline="31" endline="55">IsMoveLegal</references>
+        <references refid="class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d" compoundref="mingl_8cpp" startline="258" endline="261">MinGL::isOpen</references>
+        <references refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" compoundref="rgbacolor_8h" startline="161">nsGraphics::KBlue</references>
+        <references refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" compoundref="type_8h" startline="66">KColor</references>
+        <references refid="type_8h_1a1e3f1938007c41f107a8118778f8d08e" compoundref="type_8h" startline="160">KEmpty</references>
+        <references refid="struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d" compoundref="type_8h" startline="98">CMyParamV2::Key1Down</references>
+        <references refid="struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef" compoundref="type_8h" startline="102">CMyParamV2::Key1Left</references>
+        <references refid="struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5" compoundref="type_8h" startline="106">CMyParamV2::Key1Right</references>
+        <references refid="struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123" compoundref="type_8h" startline="94">CMyParamV2::Key1Up</references>
+        <references refid="struct_c_my_param_v2_1a29b3a67acea1fa5d46b6ed945eea57e1" compoundref="type_8h" startline="114">CMyParamV2::Key2Down</references>
+        <references refid="struct_c_my_param_v2_1ae4b4efa184af1e1f424e5d638f0bccd6" compoundref="type_8h" startline="118">CMyParamV2::Key2Left</references>
+        <references refid="struct_c_my_param_v2_1a46141754872e10b2eefcb5b5f4806ebc" compoundref="type_8h" startline="122">CMyParamV2::Key2Right</references>
+        <references refid="struct_c_my_param_v2_1a0c46a12758eb400bb5896340f3259901" compoundref="type_8h" startline="110">CMyParamV2::Key2Up</references>
+        <references refid="gridmanagement_8cpp_1ae8509127a309e7bfd2673d39ca1b5375" compoundref="gridmanagement_8cpp" startline="341" endline="464">MoveMonster</references>
+        <references refid="game_8cpp_1ac95434408d3f8bf774e3032eaa73ae4e" compoundref="game_8cpp" startline="163" endline="199">MoveToken</references>
+        <references refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" compoundref="type_8h" startline="126">CMyParamV2::NbColumn</references>
+        <references refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" compoundref="type_8h" startline="130">CMyParamV2::NbRow</references>
+        <references refid="game_8cpp_1a0e70e085afb41e8db9d8c7c8936dfad7" compoundref="game_8cpp" startline="57" endline="94">nextMove</references>
+        <references refid="struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6" compoundref="type_8h" startline="86">CMyParamV2::tokenP1</references>
+        <references refid="struct_c_my_param_v2_1aa3afdc245cdcc9554c6202547b8d77a6" compoundref="type_8h" startline="90">CMyParamV2::tokenP2</references>
+        <referencedby refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" compoundref="game_8cpp" startline="427" endline="519">ppal</referencedby>
       </memberdef>
       <memberdef kind="function" id="game_8cpp_1acfd932870183388e95db32d747ebaad0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -894,9 +987,21 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" line="427" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp" bodystart="427" bodyend="519"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp" line="427" column="5" bodyfile="/home/Theo/Téléchargements/sae/Jeu/game.cpp" bodystart="427" bodyend="519"/>
+        <references refid="game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4" compoundref="game_8cpp" startline="239" endline="254">Credits</references>
+        <references refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</references>
         <references refid="class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d" compoundref="mingl_8h" startline="81" endline="85">MinGL::initGlut</references>
         <references refid="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" compoundref="mingl_8cpp" startline="89" endline="125">MinGL::initGraphic</references>
+        <references refid="gridmanagement_8cpp_1aeec8c3cd8d226f13c4b651e70988240f" compoundref="gridmanagement_8cpp" startline="165" endline="337">InitGrid</references>
+        <references refid="params_8h_1ade03faad985499a8668d06f81c996971" compoundref="params_8cpp" startline="9" endline="30">initParams</references>
+        <references refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" compoundref="rgbacolor_8h" startline="158">nsGraphics::KWhite</references>
+        <references refid="params_8h_1ac3adf30120fc96c74f84762bf232cd54" compoundref="params_8cpp" startline="32" endline="90">LoadParams</references>
+        <references refid="game_8cpp_1a0845b941aa45002f46dd1653274997dc" compoundref="game_8cpp" startline="201" endline="219">MenuP</references>
+        <references refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" compoundref="type_8h" startline="126">CMyParamV2::NbColumn</references>
+        <references refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" compoundref="type_8h" startline="130">CMyParamV2::NbRow</references>
+        <references refid="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" compoundref="game_8cpp" startline="221" endline="237">Options</references>
+        <references refid="game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626" compoundref="game_8cpp" startline="256" endline="273">Pause</references>
+        <referencedby refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="main_8cpp" startline="9" endline="20">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -913,7 +1018,7 @@
 <codeline lineno="7"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="params_8h" kindref="compound">params.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="gridmanagement_8h" kindref="compound">gridmanagement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
-<codeline lineno="10"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FPS_LIMIT<sp/>15</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10" refid="game_8cpp_1a69c339b2966791489487938c49401cf3" refkind="member"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>FPS_LIMIT<sp/>15</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;cmath&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -924,17 +1029,17 @@
 <codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="player1_8h" kindref="compound">sprites/player1.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="player2_8h" kindref="compound">sprites/player2.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="wall_8h" kindref="compound">sprites/wall.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sprites/kebab.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="kebab_8h" kindref="compound">sprites/kebab.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="cigarette_8h" kindref="compound">sprites/cigarette.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sprites/monstre.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sprites/teleporter.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;sprites/statue.h&quot;</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;MenuManagement.h&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="monstre_8h" kindref="compound">sprites/monstre.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="teleporter_8h" kindref="compound">sprites/teleporter.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="statue_8h" kindref="compound">sprites/statue.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_menu_management_8h" kindref="compound">MenuManagement.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;map&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="30"><highlight class="normal"></highlight></codeline>
-<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="game_8h_1aeb06160be5949a49243364c546d6abb6" kindref="member">IsMoveLegal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyUp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyDown,</highlight></codeline>
+<codeline lineno="31" refid="game_8cpp_1aa61e0829c615216027761f9feafa253c" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1aa61e0829c615216027761f9feafa253c" kindref="member">IsMoveLegal</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyUp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyDown,</highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyRight,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyLeft,</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;<sp/>Pos,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;Param){</highlight></codeline>
 <codeline lineno="34"><highlight class="normal"></highlight></codeline>
@@ -953,14 +1058,14 @@
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(KeyLeft<sp/>&amp;&amp;<sp/>Pos.second<sp/>&gt;<sp/>0<sp/>&amp;&amp;<sp/>Mat<sp/>[Pos.first][Pos.second-1]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;M&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>Mat<sp/>[Pos.first][Pos.second<sp/>-<sp/>1]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;A&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>Mat<sp/>[Pos.first][Pos.second<sp/>-<sp/>1]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;X&apos;</highlight><highlight class="normal"><sp/>&amp;&amp;<sp/>Mat<sp/>[Pos.first][Pos.second<sp/>-<sp/>1]<sp/>!=<sp/></highlight><highlight class="charliteral">&apos;O&apos;</highlight><highlight class="normal">){</highlight></codeline>
 <codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="49"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" kindref="member">Color</ref>(<ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KRed&quot;</highlight><highlight class="normal">)-&gt;second);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6" kindref="member">Color</ref>(<ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KRed&quot;</highlight><highlight class="normal">)-&gt;second);</highlight></codeline>
 <codeline lineno="51"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Illegal<sp/>Move,<sp/>Play<sp/>again<sp/>!<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
-<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" kindref="member">Color</ref><sp/>(<ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KReset&quot;</highlight><highlight class="normal">)-&gt;second);</highlight></codeline>
+<codeline lineno="52"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6" kindref="member">Color</ref><sp/>(<ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KReset&quot;</highlight><highlight class="normal">)-&gt;second);</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="55"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
-<codeline lineno="57"><highlight class="normal">pair&lt;char,<sp/>CPosition&gt;<sp/><ref refid="game_8h_1ad05a86bb0b8cfd683ef1c60bd003e3ce" kindref="member">nextMove</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyUp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyDown,</highlight></codeline>
+<codeline lineno="57" refid="game_8cpp_1a0e70e085afb41e8db9d8c7c8936dfad7" refkind="member"><highlight class="normal">pair&lt;char,<sp/>CPosition&gt;<sp/><ref refid="game_8cpp_1a0e70e085afb41e8db9d8c7c8936dfad7" kindref="member">nextMove</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyUp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyDown,</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyRight,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyLeft,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;Pos,</highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>&amp;Param,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;Tp1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;Tp2)<sp/>{</highlight></codeline>
 <codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Retourne<sp/>le<sp/>contenu<sp/>de<sp/>la<sp/>case<sp/>suivante<sp/>et<sp/>sa<sp/>position</highlight><highlight class="normal"></highlight></codeline>
@@ -999,7 +1104,7 @@
 <codeline lineno="93"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="94"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="95"><highlight class="normal"></highlight></codeline>
-<codeline lineno="96"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="game_8h_1ae80d4e86d02b962374473e98b15c6a1c" kindref="member">IsCollectible</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>move)<sp/></highlight><highlight class="comment">//<sp/>On<sp/>check<sp/>si<sp/>la<sp/>case<sp/>n&apos;est<sp/>ni<sp/>un<sp/>mur,<sp/>ni<sp/>un<sp/>tp,<sp/>ni<sp/>une<sp/>case<sp/>vide</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="96" refid="game_8cpp_1a35057878b4faca7c5b0d80ba8a9a7608" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1a35057878b4faca7c5b0d80ba8a9a7608" kindref="member">IsCollectible</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>move)<sp/></highlight><highlight class="comment">//<sp/>On<sp/>check<sp/>si<sp/>la<sp/>case<sp/>n&apos;est<sp/>ni<sp/>un<sp/>mur,<sp/>ni<sp/>un<sp/>tp,<sp/>ni<sp/>une<sp/>case<sp/>vide</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="97"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(move<sp/>==<sp/></highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal"><sp/>||<sp/>move<sp/>==<sp/></highlight><highlight class="charliteral">&apos;T&apos;</highlight><highlight class="normal"><sp/>||<sp/>move<sp/>==<sp/></highlight><highlight class="charliteral">&apos;M&apos;</highlight><highlight class="normal">)</highlight></codeline>
 <codeline lineno="99"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
@@ -1007,7 +1112,7 @@
 <codeline lineno="101"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="102"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="103"><highlight class="normal"></highlight></codeline>
-<codeline lineno="104"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a1edb4cf36ce7b698766f4456c2977a4b" kindref="member">CalculateScore</ref>(vector&lt;char&gt;<sp/>&amp;objets,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;score)</highlight></codeline>
+<codeline lineno="104" refid="game_8cpp_1ab465081d6f14034e76b3e4efd1d092db" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1ab465081d6f14034e76b3e4efd1d092db" kindref="member">CalculateScore</ref>(vector&lt;char&gt;<sp/>&amp;objets,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;score)</highlight></codeline>
 <codeline lineno="105"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="106"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(!objets.empty())<sp/>{</highlight></codeline>
 <codeline lineno="107"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>item<sp/>=<sp/>objets.back();</highlight></codeline>
@@ -1020,7 +1125,7 @@
 <codeline lineno="114"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="115"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="116"><highlight class="normal"></highlight></codeline>
-<codeline lineno="117"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Sprite(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grid_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grid_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>sprite){</highlight></codeline>
+<codeline lineno="117" refid="game_8cpp_1a57e55da876e34d1b049962d00fac607e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1a57e55da876e34d1b049962d00fac607e" kindref="member">Sprite</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grid_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>grid_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>sprite){</highlight></codeline>
 <codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcule<sp/>la<sp/>position<sp/>de<sp/>la<sp/>tuile</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="119"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>x0<sp/>=<sp/>(grid_x*pos_x);<sp/></highlight><highlight class="comment">//<sp/>coordonées<sp/>x<sp/>points<sp/>en<sp/>haut<sp/>a<sp/>gauche</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="120"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>y0<sp/>=<sp/>(grid_x*pos_y);<sp/></highlight><highlight class="comment">//<sp/>coordonées<sp/>y<sp/>points<sp/>en<sp/>haut<sp/>a<sp/>gauche</highlight><highlight class="normal"></highlight></codeline>
@@ -1031,18 +1136,18 @@
 <codeline lineno="125"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Center2<sp/>=<sp/>y0+((y1-y0)/2);</highlight></codeline>
 <codeline lineno="126"><highlight class="normal"></highlight></codeline>
 <codeline lineno="127"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//affiche<sp/>le<sp/>sprite<sp/>correspondant<sp/>a<sp/>l&apos;élément<sp/>de<sp/>la<sp/>case</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;player1&quot;</highlight><highlight class="normal">)Player1(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
-<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;player2&quot;</highlight><highlight class="normal">)Player2(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;player1&quot;</highlight><highlight class="normal">)<ref refid="player1_8h_1ae9c272b2658c6c4acfd2caed5eb9a74b" kindref="member">Player1</ref>(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;player2&quot;</highlight><highlight class="normal">)<ref refid="player2_8h_1aeb54b2bbe53214deec7a41951a3ac1e7" kindref="member">Player2</ref>(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
 <codeline lineno="130"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;wall&quot;</highlight><highlight class="normal">)<ref refid="wall_8h_1a9c385c3b12f177f9de1377aa883ba224" kindref="member">Wall</ref>(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
-<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;statue&quot;</highlight><highlight class="normal">)Statue(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
+<codeline lineno="131"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;statue&quot;</highlight><highlight class="normal">)<ref refid="statue_8h_1a775457201f1ab220eb0f565c9811b1e7" kindref="member">Statue</ref>(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
 <codeline lineno="132"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;cigarette&quot;</highlight><highlight class="normal">)<ref refid="cigarette_8h_1af7fde47c9ef13a0f15f176f8c7a9f52c" kindref="member">Cigarette</ref>(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
-<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;kebab&quot;</highlight><highlight class="normal">)Kebab(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
-<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;teleporter&quot;</highlight><highlight class="normal">)Teleporter(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
-<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;monstre&quot;</highlight><highlight class="normal">)Monstre(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
+<codeline lineno="133"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;kebab&quot;</highlight><highlight class="normal">)<ref refid="kebab_8h_1a43f800ad6cdaede6ba76a8c7d22bc463" kindref="member">Kebab</ref>(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
+<codeline lineno="134"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;teleporter&quot;</highlight><highlight class="normal">)<ref refid="teleporter_8h_1abd3383003d3b5afeac6ab5231f4a96bc" kindref="member">Teleporter</ref>(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
+<codeline lineno="135"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(sprite<sp/>==<sp/></highlight><highlight class="stringliteral">&quot;monstre&quot;</highlight><highlight class="normal">)<ref refid="monstre_8h_1a1bdf648b0b46f6c35eeae63523d4eac8" kindref="member">Monstre</ref>(window,<sp/>Center1,<sp/>Center2,<sp/>mat_x,<sp/>mat_y);</highlight></codeline>
 <codeline lineno="136"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="137"><highlight class="normal"></highlight></codeline>
-<codeline lineno="138"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>DisplayGrid<sp/>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>mat,<sp/>tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size){</highlight></codeline>
-<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,<sp/>0),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(120,<sp/>50),<sp/>nsGraphics::KBlueTransparent);</highlight></codeline>
+<codeline lineno="138" refid="game_8cpp_1a1598d2cc705c314acea3323f69b0b372" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1a1598d2cc705c314acea3323f69b0b372" kindref="member">DisplayGrid</ref><sp/>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;<sp/>mat,<sp/>tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size){</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,<sp/>0),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(120,<sp/>50),<sp/><ref refid="namespacens_graphics_1a9caa4cd9527a2effed87836d78faacef" kindref="member">nsGraphics::KBlueTransparent</ref>);</highlight></codeline>
 <codeline lineno="140"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x<sp/>=<sp/>size(mat);</highlight></codeline>
 <codeline lineno="141"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y<sp/>=<sp/>size(mat[0]);</highlight></codeline>
 <codeline lineno="142"><highlight class="normal"></highlight></codeline>
@@ -1061,12 +1166,12 @@
 <codeline lineno="155"><highlight class="normal"></highlight></codeline>
 <codeline lineno="156"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>i=0;<sp/>i<sp/>&lt;<sp/>mat_x;<sp/>++i){</highlight></codeline>
 <codeline lineno="157"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">for</highlight><highlight class="normal"><sp/>(</highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>j=0;<sp/>j<sp/>&lt;<sp/>mat_y;<sp/>++j){</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Sprite(window,<sp/>grid_x,<sp/>grid_y,<sp/>i,<sp/>j,<sp/>mat_x,<sp/>mat_y,<sp/>sprits[mat[j][i]]);</highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1a57e55da876e34d1b049962d00fac607e" kindref="member">Sprite</ref>(window,<sp/>grid_x,<sp/>grid_y,<sp/>i,<sp/>j,<sp/>mat_x,<sp/>mat_y,<sp/>sprits[mat[j][i]]);</highlight></codeline>
 <codeline lineno="159"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="160"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="161"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="162"><highlight class="normal"></highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a8307899b579b12370e9fd3e399e42d04" kindref="member">MoveToken</ref><sp/>(<ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyUp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyDown,</highlight></codeline>
+<codeline lineno="163" refid="game_8cpp_1ac95434408d3f8bf774e3032eaa73ae4e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1ac95434408d3f8bf774e3032eaa73ae4e" kindref="member">MoveToken</ref><sp/>(<ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>&amp;Mat,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyUp,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyDown,</highlight></codeline>
 <codeline lineno="164"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyRight,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>&amp;<sp/>KeyLeft,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;Pos,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;Tp1,<sp/><ref refid="type_8h_1a7035b1162647d49def2c24ac2c2e30c1" kindref="member">CPosition</ref><sp/>&amp;Tp2){</highlight></codeline>
 <codeline lineno="165"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">char</highlight><highlight class="normal"><sp/>car<sp/>=<sp/>Mat<sp/>[Pos.first][Pos.second];</highlight></codeline>
 <codeline lineno="166"><highlight class="normal"><sp/><sp/><sp/><sp/>Mat<sp/>[Pos.first][Pos.second]<sp/>=<sp/><ref refid="type_8h_1a1e3f1938007c41f107a8118778f8d08e" kindref="member">KEmpty</ref>;</highlight></codeline>
@@ -1104,7 +1209,7 @@
 <codeline lineno="198"><highlight class="normal"></highlight></codeline>
 <codeline lineno="199"><highlight class="normal">}<sp/></highlight><highlight class="comment">//MoveToken<sp/>()</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="200"><highlight class="normal"></highlight></codeline>
-<codeline lineno="201"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>MenuP(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,</highlight></codeline>
+<codeline lineno="201" refid="game_8cpp_1a0845b941aa45002f46dd1653274997dc" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1a0845b941aa45002f46dd1653274997dc" kindref="member">MenuP</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,</highlight></codeline>
 <codeline lineno="202"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>menuid,<sp/>chrono::time_point&lt;chrono::steady_clock&gt;<sp/>start){</highlight></codeline>
 <codeline lineno="203"><highlight class="normal"><sp/><sp/><sp/><sp/>clickablepool.clear();</highlight></codeline>
 <codeline lineno="204"><highlight class="normal"><sp/><sp/><sp/><sp/>clickablepool<sp/>=<sp/>{</highlight></codeline>
@@ -1116,15 +1221,15 @@
 <codeline lineno="210"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(menuid<sp/>==<sp/>0){</highlight></codeline>
 <codeline lineno="211"><highlight class="normal"></highlight></codeline>
 <codeline lineno="212"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" kindref="member">clearScreen</ref>();</highlight></codeline>
-<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InterfaceMenuP(window,<sp/>get&lt;0&gt;(Screen_size),<sp/>get&lt;1&gt;(Screen_size));</highlight></codeline>
+<codeline lineno="213"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_menu_management_8h_1afab161c3544224d228a3e8e64a3eae08" kindref="member">InterfaceMenuP</ref>(window,<sp/>get&lt;0&gt;(Screen_size),<sp/>get&lt;1&gt;(Screen_size));</highlight></codeline>
 <codeline lineno="214"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kindref="member">finishFrame</ref>();</highlight></codeline>
-<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events(window,<sp/>clickablepool,<sp/>menuid);</highlight></codeline>
+<codeline lineno="215"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" kindref="member">events</ref>(window,<sp/>clickablepool,<sp/>menuid);</highlight></codeline>
 <codeline lineno="216"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" kindref="member">clearEvents</ref>();</highlight></codeline>
-<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/>FPS_LIMIT)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
+<codeline lineno="217"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/><ref refid="game_8cpp_1a69c339b2966791489487938c49401cf3" kindref="member">FPS_LIMIT</ref>)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
 <codeline lineno="218"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="219"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="220"><highlight class="normal"></highlight></codeline>
-<codeline lineno="221"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Options(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,<sp/>tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>menuid,<sp/>chrono::time_point&lt;chrono::steady_clock&gt;<sp/>start){</highlight></codeline>
+<codeline lineno="221" refid="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" kindref="member">Options</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,<sp/>tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>menuid,<sp/>chrono::time_point&lt;chrono::steady_clock&gt;<sp/>start){</highlight></codeline>
 <codeline lineno="222"><highlight class="normal"><sp/><sp/><sp/><sp/>clickablepool.clear();</highlight></codeline>
 <codeline lineno="223"><highlight class="normal"><sp/><sp/><sp/><sp/>clickablepool<sp/>=<sp/>{</highlight></codeline>
 <codeline lineno="224"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_tuple(std::vector&lt;int&gt;{0,<sp/>0},<sp/>std::vector&lt;int&gt;{120,<sp/>50},<sp/>0)</highlight></codeline>
@@ -1133,16 +1238,16 @@
 <codeline lineno="227"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(menuid<sp/>==<sp/>1){</highlight></codeline>
 <codeline lineno="228"><highlight class="normal"></highlight></codeline>
 <codeline lineno="229"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" kindref="member">clearScreen</ref>();</highlight></codeline>
-<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InterfaceOptions(window,<sp/>get&lt;0&gt;(Screen_size),<sp/>get&lt;1&gt;(Screen_size));</highlight></codeline>
+<codeline lineno="230"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_menu_management_8h_1afc733d7fa1650fe258aa4fd3c704b799" kindref="member">InterfaceOptions</ref>(window,<sp/>get&lt;0&gt;(Screen_size),<sp/>get&lt;1&gt;(Screen_size));</highlight></codeline>
 <codeline lineno="231"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kindref="member">finishFrame</ref>();</highlight></codeline>
-<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events(window,<sp/>clickablepool,<sp/>menuid);</highlight></codeline>
+<codeline lineno="232"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" kindref="member">events</ref>(window,<sp/>clickablepool,<sp/>menuid);</highlight></codeline>
 <codeline lineno="233"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" kindref="member">clearEvents</ref>();</highlight></codeline>
-<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/>FPS_LIMIT)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
+<codeline lineno="234"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/><ref refid="game_8cpp_1a69c339b2966791489487938c49401cf3" kindref="member">FPS_LIMIT</ref>)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
 <codeline lineno="235"><highlight class="normal"></highlight></codeline>
 <codeline lineno="236"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="237"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="238"><highlight class="normal"></highlight></codeline>
-<codeline lineno="239"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Credits(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,</highlight></codeline>
+<codeline lineno="239" refid="game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4" kindref="member">Credits</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,</highlight></codeline>
 <codeline lineno="240"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>menuid,<sp/>chrono::time_point&lt;chrono::steady_clock&gt;<sp/>start){</highlight></codeline>
 <codeline lineno="241"><highlight class="normal"><sp/><sp/><sp/><sp/>clickablepool.clear();</highlight></codeline>
 <codeline lineno="242"><highlight class="normal"><sp/><sp/><sp/><sp/>clickablepool<sp/>=<sp/>{</highlight></codeline>
@@ -1151,15 +1256,15 @@
 <codeline lineno="245"><highlight class="normal"></highlight></codeline>
 <codeline lineno="246"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(menuid<sp/>==<sp/>2){</highlight></codeline>
 <codeline lineno="247"><highlight class="normal"></highlight></codeline>
-<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InterfaceCredits(window,<sp/>get&lt;0&gt;(Screen_size),<sp/>get&lt;1&gt;(Screen_size));</highlight></codeline>
+<codeline lineno="248"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_menu_management_8h_1ae72c2fefee518b729a3c7a320d27265a" kindref="member">InterfaceCredits</ref>(window,<sp/>get&lt;0&gt;(Screen_size),<sp/>get&lt;1&gt;(Screen_size));</highlight></codeline>
 <codeline lineno="249"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kindref="member">finishFrame</ref>();</highlight></codeline>
-<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events(window,<sp/>clickablepool,<sp/>menuid);</highlight></codeline>
+<codeline lineno="250"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" kindref="member">events</ref>(window,<sp/>clickablepool,<sp/>menuid);</highlight></codeline>
 <codeline lineno="251"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" kindref="member">clearEvents</ref>();</highlight></codeline>
-<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/>FPS_LIMIT)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
+<codeline lineno="252"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/><ref refid="game_8cpp_1a69c339b2966791489487938c49401cf3" kindref="member">FPS_LIMIT</ref>)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
 <codeline lineno="253"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="254"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="255"><highlight class="normal"></highlight></codeline>
-<codeline lineno="256"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Pause(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,</highlight></codeline>
+<codeline lineno="256" refid="game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626" kindref="member">Pause</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool,</highlight></codeline>
 <codeline lineno="257"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>&amp;<sp/>menuid,<sp/>chrono::time_point&lt;chrono::steady_clock&gt;<sp/>start){</highlight></codeline>
 <codeline lineno="258"><highlight class="normal"><sp/><sp/><sp/><sp/>clickablepool.clear();</highlight></codeline>
 <codeline lineno="259"><highlight class="normal"><sp/><sp/><sp/><sp/>clickablepool<sp/>=<sp/>{</highlight></codeline>
@@ -1169,16 +1274,16 @@
 <codeline lineno="263"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
 <codeline lineno="264"><highlight class="normal"></highlight></codeline>
 <codeline lineno="265"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal">(menuid<sp/>==<sp/>3){</highlight></codeline>
-<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InterfacePause(window,<sp/>get&lt;0&gt;(Screen_size),<sp/>get&lt;1&gt;(Screen_size));</highlight></codeline>
+<codeline lineno="266"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_menu_management_8h_1ab2a2e33bb6aff7164d540d7a50bdd38f" kindref="member">InterfacePause</ref>(window,<sp/>get&lt;0&gt;(Screen_size),<sp/>get&lt;1&gt;(Screen_size));</highlight></codeline>
 <codeline lineno="267"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kindref="member">finishFrame</ref>();</highlight></codeline>
-<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events(window,<sp/>clickablepool,<sp/>menuid);</highlight></codeline>
+<codeline lineno="268"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" kindref="member">events</ref>(window,<sp/>clickablepool,<sp/>menuid);</highlight></codeline>
 <codeline lineno="269"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" kindref="member">clearEvents</ref>();</highlight></codeline>
-<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/>FPS_LIMIT)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
+<codeline lineno="270"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/><ref refid="game_8cpp_1a69c339b2966791489487938c49401cf3" kindref="member">FPS_LIMIT</ref>)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
 <codeline lineno="271"><highlight class="normal"></highlight></codeline>
 <codeline lineno="272"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="273"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="274"><highlight class="normal"></highlight></codeline>
-<codeline lineno="275"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>GameLoop(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;clickablepool,<ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>Mat,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>menuid,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>PartyNum,</highlight></codeline>
+<codeline lineno="275" refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" kindref="member">GameLoop</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;clickablepool,<ref refid="type_8h_1a64a592133575ccebb1b36453acbec02b" kindref="member">CMat</ref><sp/>Mat,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>menuid,<sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>PartyNum,</highlight></codeline>
 <codeline lineno="276"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key1_UP,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key1_DOWN,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key1_RIGHT,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key1_LEFT,</highlight></codeline>
 <codeline lineno="277"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key2_UP,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key2_DOWN,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key2_RIGHT,<sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/>Key2_LEFT,</highlight></codeline>
 <codeline lineno="278"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size,<sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>param,</highlight></codeline>
@@ -1190,9 +1295,9 @@
 <codeline lineno="284"><highlight class="normal"><sp/><sp/><sp/><sp/>clickablepool<sp/>=<sp/>{</highlight></codeline>
 <codeline lineno="285"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>std::make_tuple(std::vector&lt;int&gt;{0,<sp/>0},<sp/>std::vector&lt;int&gt;{120,<sp/>50},<sp/>1),</highlight></codeline>
 <codeline lineno="286"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>};</highlight></codeline>
-<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,<sp/>0),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(120,<sp/>50),<sp/>nsGraphics::KBlue);</highlight></codeline>
+<codeline lineno="287"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(0,<sp/>0),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(120,<sp/>50),<sp/><ref refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" kindref="member">nsGraphics::KBlue</ref>);</highlight></codeline>
 <codeline lineno="288"><highlight class="normal"></highlight></codeline>
-<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/>DisplayGrid(window,<sp/>Mat,<sp/>Screen_size);</highlight></codeline>
+<codeline lineno="289"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1a1598d2cc705c314acea3323f69b0b372" kindref="member">DisplayGrid</ref>(window,<sp/>Mat,<sp/>Screen_size);</highlight></codeline>
 <codeline lineno="290"><highlight class="normal"><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kindref="member">finishFrame</ref>();</highlight></codeline>
 <codeline lineno="291"><highlight class="normal"></highlight></codeline>
 <codeline lineno="292"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">size_t</highlight><highlight class="normal"><sp/>i;</highlight></codeline>
@@ -1201,7 +1306,7 @@
 <codeline lineno="295"><highlight class="normal"></highlight></codeline>
 <codeline lineno="296"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>chrono::time_point&lt;chrono::steady_clock&gt;<sp/>start<sp/>=<sp/>chrono::steady_clock::now();</highlight></codeline>
 <codeline lineno="297"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" kindref="member">clearScreen</ref>();</highlight></codeline>
-<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DisplayGrid(window,<sp/>Mat,<sp/>Screen_size);</highlight></codeline>
+<codeline lineno="298"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1a1598d2cc705c314acea3323f69b0b372" kindref="member">DisplayGrid</ref>(window,<sp/>Mat,<sp/>Screen_size);</highlight></codeline>
 <codeline lineno="299"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kindref="member">finishFrame</ref>();</highlight></codeline>
 <codeline lineno="300"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Key1_RIGHT<sp/>=<sp/>window.MinGL::isPressed({param.<ref refid="struct_c_my_param_v2_1a0939bc7a227af48d018b4b4ae9557af5" kindref="member">Key1Right</ref>,</highlight><highlight class="keyword">false</highlight><highlight class="normal">})<sp/>||<sp/>window.MinGL::isPressed({toupper(param.Key1Right),false});</highlight></codeline>
 <codeline lineno="301"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Key1_LEFT<sp/><sp/>=<sp/>window.MinGL::isPressed({param.<ref refid="struct_c_my_param_v2_1a5eeb26db1327dee525eed285313227ef" kindref="member">Key1Left</ref>,<sp/></highlight><highlight class="keyword">false</highlight><highlight class="normal">})<sp/>||<sp/>window.MinGL::isPressed({toupper(param.Key1Left),<sp/>false});</highlight></codeline>
@@ -1222,42 +1327,42 @@
 <codeline lineno="316"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="317"><highlight class="normal"></highlight></codeline>
 <codeline lineno="318"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((Key1_UP<sp/>||<sp/>Key1_DOWN<sp/>||<sp/>Key1_RIGHT<sp/>||<sp/>Key1_LEFT)<sp/>&amp;&amp;</highlight></codeline>
-<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8h_1aeb06160be5949a49243364c546d6abb6" kindref="member">IsMoveLegal</ref>(Mat,<sp/>Key1_UP,<sp/>Key1_DOWN,<sp/>Key1_RIGHT,<sp/>Key1_LEFT,<sp/>PosPlayer1,<sp/>param)){</highlight></codeline>
-<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>N_move1<sp/>=<sp/><ref refid="game_8h_1ad05a86bb0b8cfd683ef1c60bd003e3ce" kindref="member">nextMove</ref>(Mat,<sp/>Key1_UP,<sp/>Key1_DOWN,<sp/>Key1_RIGHT,<sp/>Key1_LEFT,<sp/>PosPlayer1,<sp/>param,<sp/>PosTP1,<sp/>PosTP2);</highlight></codeline>
+<codeline lineno="319"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1aa61e0829c615216027761f9feafa253c" kindref="member">IsMoveLegal</ref>(Mat,<sp/>Key1_UP,<sp/>Key1_DOWN,<sp/>Key1_RIGHT,<sp/>Key1_LEFT,<sp/>PosPlayer1,<sp/>param)){</highlight></codeline>
+<codeline lineno="320"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>N_move1<sp/>=<sp/><ref refid="game_8cpp_1a0e70e085afb41e8db9d8c7c8936dfad7" kindref="member">nextMove</ref>(Mat,<sp/>Key1_UP,<sp/>Key1_DOWN,<sp/>Key1_RIGHT,<sp/>Key1_LEFT,<sp/>PosPlayer1,<sp/>param,<sp/>PosTP1,<sp/>PosTP2);</highlight></codeline>
 <codeline lineno="321"><highlight class="normal"></highlight></codeline>
 <codeline lineno="322"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>si<sp/>il<sp/>ya<sp/>un<sp/>objet<sp/>=&gt;<sp/>ajouter<sp/>a<sp/>une<sp/>liste</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="game_8h_1ae80d4e86d02b962374473e98b15c6a1c" kindref="member">IsCollectible</ref>(N_move1.first))</highlight></codeline>
+<codeline lineno="323"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="game_8cpp_1a35057878b4faca7c5b0d80ba8a9a7608" kindref="member">IsCollectible</ref>(N_move1.first))</highlight></codeline>
 <codeline lineno="324"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="325"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>objetJ1.push_back(N_move1.first);</highlight></codeline>
 <codeline lineno="326"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="327"><highlight class="normal"></highlight></codeline>
 <codeline lineno="328"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>si<sp/>joueur<sp/>arrive<sp/>a<sp/>la<sp/>maison<sp/>=&gt;<sp/>vide<sp/>ses<sp/>poches<sp/>(comptage<sp/>du<sp/>score)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="329"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(N_move1.second.first<sp/>==<sp/>0<sp/>&amp;&amp;<sp/>N_move1.second.second<sp/>==<sp/>param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref><sp/>-<sp/>1)</highlight></codeline>
-<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8h_1a1edb4cf36ce7b698766f4456c2977a4b" kindref="member">CalculateScore</ref>(objetJ1,<sp/>scoreJ1);</highlight></codeline>
+<codeline lineno="330"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1ab465081d6f14034e76b3e4efd1d092db" kindref="member">CalculateScore</ref>(objetJ1,<sp/>scoreJ1);</highlight></codeline>
 <codeline lineno="331"><highlight class="normal"></highlight></codeline>
-<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8h_1a8307899b579b12370e9fd3e399e42d04" kindref="member">MoveToken</ref>(Mat,<sp/>Key1_UP,<sp/>Key1_DOWN,<sp/>Key1_RIGHT,<sp/>Key1_LEFT,<sp/>PosPlayer1,<sp/>PosTP1,<sp/>PosTP2);</highlight></codeline>
+<codeline lineno="332"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1ac95434408d3f8bf774e3032eaa73ae4e" kindref="member">MoveToken</ref>(Mat,<sp/>Key1_UP,<sp/>Key1_DOWN,<sp/>Key1_RIGHT,<sp/>Key1_LEFT,<sp/>PosPlayer1,<sp/>PosTP1,<sp/>PosTP2);</highlight></codeline>
 <codeline lineno="333"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="334"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>((Key2_UP<sp/>||<sp/>Key2_DOWN<sp/>||<sp/>Key2_RIGHT<sp/>||<sp/>Key2_LEFT)<sp/>&amp;&amp;</highlight></codeline>
-<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8h_1aeb06160be5949a49243364c546d6abb6" kindref="member">IsMoveLegal</ref>(Mat,<sp/>Key2_UP,<sp/>Key2_DOWN,<sp/>Key2_RIGHT,<sp/>Key2_LEFT,<sp/>PosPlayer2,<sp/>param)){</highlight></codeline>
-<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>N_move2<sp/>=<sp/><ref refid="game_8h_1ad05a86bb0b8cfd683ef1c60bd003e3ce" kindref="member">nextMove</ref>(Mat,<sp/>Key2_UP,<sp/>Key2_DOWN,<sp/>Key2_RIGHT,<sp/>Key2_LEFT,<sp/>PosPlayer2,<sp/>param,<sp/>PosTP1,<sp/>PosTP2);</highlight></codeline>
+<codeline lineno="335"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1aa61e0829c615216027761f9feafa253c" kindref="member">IsMoveLegal</ref>(Mat,<sp/>Key2_UP,<sp/>Key2_DOWN,<sp/>Key2_RIGHT,<sp/>Key2_LEFT,<sp/>PosPlayer2,<sp/>param)){</highlight></codeline>
+<codeline lineno="336"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>N_move2<sp/>=<sp/><ref refid="game_8cpp_1a0e70e085afb41e8db9d8c7c8936dfad7" kindref="member">nextMove</ref>(Mat,<sp/>Key2_UP,<sp/>Key2_DOWN,<sp/>Key2_RIGHT,<sp/>Key2_LEFT,<sp/>PosPlayer2,<sp/>param,<sp/>PosTP1,<sp/>PosTP2);</highlight></codeline>
 <codeline lineno="337"><highlight class="normal"></highlight></codeline>
 <codeline lineno="338"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>si<sp/>il<sp/>ya<sp/>un<sp/>objet<sp/>=&gt;<sp/>ajouter<sp/>a<sp/>une<sp/>liste</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="game_8h_1ae80d4e86d02b962374473e98b15c6a1c" kindref="member">IsCollectible</ref>(N_move2.first))</highlight></codeline>
+<codeline lineno="339"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(<ref refid="game_8cpp_1a35057878b4faca7c5b0d80ba8a9a7608" kindref="member">IsCollectible</ref>(N_move2.first))</highlight></codeline>
 <codeline lineno="340"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="341"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>objetJ2.push_back(N_move2.first);</highlight></codeline>
 <codeline lineno="342"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="343"><highlight class="normal"></highlight></codeline>
 <codeline lineno="344"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>check<sp/>si<sp/>joueur<sp/>arrive<sp/>a<sp/>la<sp/>maison<sp/>=&gt;<sp/>vide<sp/>ses<sp/>poches<sp/>(comptage<sp/>du<sp/>score)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="345"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(N_move2.second.first<sp/>==<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref><sp/>-<sp/>1<sp/>&amp;&amp;<sp/>N_move2.second.second<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8h_1a1edb4cf36ce7b698766f4456c2977a4b" kindref="member">CalculateScore</ref>(objetJ2,scoreJ2);</highlight></codeline>
+<codeline lineno="346"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1ab465081d6f14034e76b3e4efd1d092db" kindref="member">CalculateScore</ref>(objetJ2,scoreJ2);</highlight></codeline>
 <codeline lineno="347"><highlight class="normal"></highlight></codeline>
 <codeline lineno="348"><highlight class="normal"></highlight></codeline>
-<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8h_1a8307899b579b12370e9fd3e399e42d04" kindref="member">MoveToken</ref>(Mat,<sp/>Key2_UP,<sp/>Key2_DOWN,<sp/>Key2_RIGHT,<sp/>Key2_LEFT,<sp/>PosPlayer2,<sp/>PosTP1,<sp/>PosTP2);</highlight></codeline>
+<codeline lineno="349"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1ac95434408d3f8bf774e3032eaa73ae4e" kindref="member">MoveToken</ref>(Mat,<sp/>Key2_UP,<sp/>Key2_DOWN,<sp/>Key2_RIGHT,<sp/>Key2_LEFT,<sp/>PosPlayer2,<sp/>PosTP1,<sp/>PosTP2);</highlight></codeline>
 <codeline lineno="350"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="351"><highlight class="normal"></highlight></codeline>
 <codeline lineno="352"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//on<sp/>fait<sp/>jouer<sp/>le<sp/>bot<sp/>1fois/2<sp/>sinon<sp/>il<sp/>aurait<sp/>trop<sp/>d&apos;avantage</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="353"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(i%5<sp/>==<sp/>0)</highlight></codeline>
-<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8h_1ab909b1026fe66b4055c0be20cd67582f" kindref="member">MoveMonster</ref>(PosMonster,<sp/>Mat,<sp/>param,<sp/>PosPlayer1,<sp/>PosPlayer2);</highlight></codeline>
+<codeline lineno="354"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8cpp_1ae8509127a309e7bfd2673d39ca1b5375" kindref="member">MoveMonster</ref>(PosMonster,<sp/>Mat,<sp/>param,<sp/>PosPlayer1,<sp/>PosPlayer2);</highlight></codeline>
 <codeline lineno="355"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>++i;</highlight></codeline>
 <codeline lineno="356"><highlight class="normal"></highlight></codeline>
 <codeline lineno="357"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Mat[PosPlayer1.first][PosPlayer1.second]<sp/>=<sp/>param.<ref refid="struct_c_my_param_v2_1a7c0b2f03da728e2fc895e2a183f40fd6" kindref="member">tokenP1</ref>;</highlight></codeline>
@@ -1288,17 +1393,17 @@
 <codeline lineno="382"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="383"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="384"><highlight class="normal"></highlight></codeline>
-<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>DisplayGrid(Mat,<sp/>param);</highlight></codeline>
+<codeline lineno="385"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1a1598d2cc705c314acea3323f69b0b372" kindref="member">DisplayGrid</ref>(Mat,<sp/>param);</highlight></codeline>
 <codeline lineno="386"><highlight class="normal"></highlight></codeline>
 <codeline lineno="387"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kindref="member">finishFrame</ref>();</highlight></codeline>
 <codeline lineno="388"><highlight class="normal"></highlight></codeline>
-<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events(window,<sp/>clickablepool,<sp/>menuid);</highlight></codeline>
+<codeline lineno="389"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" kindref="member">events</ref>(window,<sp/>clickablepool,<sp/>menuid);</highlight></codeline>
 <codeline lineno="390"><highlight class="normal"></highlight></codeline>
 <codeline lineno="391"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>vide<sp/>la<sp/>queue<sp/>d&apos;évènements</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="392"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" kindref="member">clearEvents</ref>();</highlight></codeline>
 <codeline lineno="393"><highlight class="normal"></highlight></codeline>
 <codeline lineno="394"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>attend<sp/>un<sp/>peu<sp/>pour<sp/>limiter<sp/>le<sp/>framerate<sp/>et<sp/>soulager<sp/>le<sp/>CPU</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/>FPS_LIMIT)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
+<codeline lineno="395"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/><ref refid="game_8cpp_1a69c339b2966791489487938c49401cf3" kindref="member">FPS_LIMIT</ref>)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
 <codeline lineno="396"><highlight class="normal"></highlight></codeline>
 <codeline lineno="397"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Victory<sp/>test</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="398"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(PosPlayer1<sp/>==<sp/>PosPlayer2)<sp/>Victory<sp/>=<sp/></highlight><highlight class="keyword">true</highlight><highlight class="normal">;</highlight></codeline>
@@ -1315,33 +1420,33 @@
 <codeline lineno="409"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="comment">//while(no<sp/>victory)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="410"><highlight class="normal"></highlight></codeline>
 <codeline lineno="411"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(scoreJ1<sp/>==<sp/>scoreJ2<sp/>||<sp/>!Victory){</highlight></codeline>
-<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" kindref="member">Color</ref><sp/>(<ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KMAgenta&quot;</highlight><highlight class="normal">)-&gt;second);</highlight></codeline>
+<codeline lineno="412"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6" kindref="member">Color</ref><sp/>(<ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KMAgenta&quot;</highlight><highlight class="normal">)-&gt;second);</highlight></codeline>
 <codeline lineno="413"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Égalité<sp/>:<sp/>Aucun<sp/>vainqueur&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
 <codeline lineno="414"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>menuid<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="415"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight><highlight class="keywordflow">else</highlight><highlight class="normal">{</highlight></codeline>
-<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" kindref="member">Color</ref><sp/>(<ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KGreen&quot;</highlight><highlight class="normal">)-&gt;second);</highlight></codeline>
+<codeline lineno="416"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6" kindref="member">Color</ref><sp/>(<ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KGreen&quot;</highlight><highlight class="normal">)-&gt;second);</highlight></codeline>
 <codeline lineno="417"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Félicitations<sp/>Joueur<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>(scoreJ1<sp/>&gt;<sp/>scoreJ2<sp/>?<sp/></highlight><highlight class="charliteral">&apos;1&apos;</highlight><highlight class="normal"><sp/>:<sp/></highlight><highlight class="charliteral">&apos;2&apos;</highlight><highlight class="normal">)<sp/>&lt;&lt;</highlight></codeline>
 <codeline lineno="418"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="stringliteral">&quot;<sp/>vous<sp/>avez<sp/>gagné<sp/>avec<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>(scoreJ1<sp/>&gt;<sp/>scoreJ2<sp/>?<sp/>scoreJ1<sp/>:<sp/>scoreJ2)<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>points!&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
 <codeline lineno="419"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
-<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8h_1a7f0df05a97c053bfa8a3e5863b0a0e80" kindref="member">Color</ref><sp/>(<ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KReset&quot;</highlight><highlight class="normal">)-&gt;second);</highlight></codeline>
+<codeline lineno="420"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8cpp_1ac9357ee33d7442ff035f7a0c2b61cce6" kindref="member">Color</ref><sp/>(<ref refid="type_8h_1ac2178f299fb60a3a19c00006603770ec" kindref="member">KColor</ref>.find(</highlight><highlight class="stringliteral">&quot;KReset&quot;</highlight><highlight class="normal">)-&gt;second);</highlight></codeline>
 <codeline lineno="421"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal">(!(menuid<sp/>==<sp/>3))menuid<sp/>=<sp/>0;</highlight></codeline>
-<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/>InitGrid(Mat,<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref>,<sp/>param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref>,<sp/>PosPlayer1,<sp/>PosPlayer2,<sp/>param,<sp/>PosTP1,<sp/>PosTP2,<sp/>PosMonster);</highlight><highlight class="comment">//reinitialise<sp/>la<sp/>grille<sp/>pour<sp/>la<sp/>prochaine<sp/>partie</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="422"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8cpp_1aeec8c3cd8d226f13c4b651e70988240f" kindref="member">InitGrid</ref>(Mat,<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref>,<sp/>param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref>,<sp/>PosPlayer1,<sp/>PosPlayer2,<sp/>param,<sp/>PosTP1,<sp/>PosTP2,<sp/>PosMonster);</highlight><highlight class="comment">//reinitialise<sp/>la<sp/>grille<sp/>pour<sp/>la<sp/>prochaine<sp/>partie</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="423"><highlight class="normal"><sp/><sp/><sp/><sp/>PartyNum<sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="424"><highlight class="normal"><sp/><sp/><sp/><sp/>Victory=</highlight><highlight class="keyword">false</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="425"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="426"><highlight class="normal"></highlight></codeline>
-<codeline lineno="427" refid="game_8h_1a0b1d64ee76933ef8f007f1208cb869a7" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a0b1d64ee76933ef8f007f1208cb869a7" kindref="member">ppal</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
+<codeline lineno="427" refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" kindref="member">ppal</ref><sp/>(</highlight><highlight class="keywordtype">void</highlight><highlight class="normal">){</highlight></codeline>
 <codeline lineno="428"><highlight class="normal"></highlight></codeline>
 <codeline lineno="429"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>le<sp/>système</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="430"><highlight class="normal"><sp/><sp/><sp/><sp/>tuple<sp/>&lt;int,<sp/>int&gt;<sp/>Screen_size(640,640);</highlight></codeline>
-<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>window(</highlight><highlight class="stringliteral">&quot;Lethal<sp/>Company<sp/><sp/>|<sp/><sp/>V0.0.1&quot;</highlight><highlight class="normal">,<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(get&lt;0&gt;(Screen_size),<sp/>get&lt;1&gt;(Screen_size)),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(128,<sp/>128),<sp/>nsGraphics::KWhite);</highlight></codeline>
+<codeline lineno="431"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>window(</highlight><highlight class="stringliteral">&quot;Lethal<sp/>Casali<sp/><sp/>|<sp/><sp/>V1.2.4&quot;</highlight><highlight class="normal">,<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(get&lt;0&gt;(Screen_size),<sp/>get&lt;1&gt;(Screen_size)),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(128,<sp/>128),<sp/><ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref>);</highlight></codeline>
 <codeline lineno="432"><highlight class="normal"><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d" kindref="member">initGlut</ref>();</highlight></codeline>
 <codeline lineno="433"><highlight class="normal"><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" kindref="member">initGraphic</ref>();</highlight></codeline>
 <codeline lineno="434"><highlight class="normal"></highlight></codeline>
 <codeline lineno="435"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>menuid<sp/>(0);</highlight></codeline>
 <codeline lineno="436"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="struct_c_my_param_v2" kindref="compound">CMyParamV2</ref><sp/>param;</highlight></codeline>
-<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/>initParams(param);</highlight></codeline>
-<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/>LoadParams(param);</highlight></codeline>
+<codeline lineno="437"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="params_8h_1ade03faad985499a8668d06f81c996971" kindref="member">initParams</ref>(param);</highlight></codeline>
+<codeline lineno="438"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="params_8h_1ac3adf30120fc96c74f84762bf232cd54" kindref="member">LoadParams</ref>(param);</highlight></codeline>
 <codeline lineno="439"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;tuple&lt;vector&lt;int&gt;,<sp/>vector&lt;int&gt;,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal">&gt;&gt;<sp/>clickablepool;</highlight></codeline>
 <codeline lineno="440"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>PartyNum<sp/>(1);</highlight></codeline>
 <codeline lineno="441"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">unsigned</highlight><highlight class="normal"><sp/>KMaxPartyNum<sp/>(param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref><sp/>*<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref><sp/>*<sp/>3);</highlight></codeline>
@@ -1367,7 +1472,7 @@
 <codeline lineno="461"><highlight class="normal"><sp/><sp/><sp/><sp/>vector<sp/>&lt;CPosition&gt;<sp/>PosMonster;</highlight></codeline>
 <codeline lineno="462"><highlight class="normal"><sp/><sp/><sp/><sp/>cout<sp/>&lt;&lt;<sp/>param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
 <codeline lineno="463"><highlight class="normal"></highlight></codeline>
-<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/>InitGrid(Mat,<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref>,<sp/>param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref>,<sp/>PosPlayer1,<sp/>PosPlayer2,<sp/>param,<sp/>PosTP1,<sp/>PosTP2,<sp/>PosMonster);</highlight></codeline>
+<codeline lineno="464"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8cpp_1aeec8c3cd8d226f13c4b651e70988240f" kindref="member">InitGrid</ref>(Mat,<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref>,<sp/>param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref>,<sp/>PosPlayer1,<sp/>PosPlayer2,<sp/>param,<sp/>PosTP1,<sp/>PosTP2,<sp/>PosMonster);</highlight></codeline>
 <codeline lineno="465"><highlight class="normal"></highlight></codeline>
 <codeline lineno="466"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;char&gt;<sp/>objetJ1;</highlight></codeline>
 <codeline lineno="467"><highlight class="normal"><sp/><sp/><sp/><sp/>vector&lt;char&gt;<sp/>objetJ2;</highlight></codeline>
@@ -1381,23 +1486,23 @@
 <codeline lineno="475"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">switch</highlight><highlight class="normal">(menuid)<sp/>{</highlight></codeline>
 <codeline lineno="476"><highlight class="normal"></highlight></codeline>
 <codeline lineno="477"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>0:<sp/></highlight><highlight class="comment">//menu<sp/>principal</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>MenuP(window,<sp/>clickablepool,<sp/>Screen_size,<sp/>menuid,<sp/>start);</highlight></codeline>
+<codeline lineno="478"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1a0845b941aa45002f46dd1653274997dc" kindref="member">MenuP</ref>(window,<sp/>clickablepool,<sp/>Screen_size,<sp/>menuid,<sp/>start);</highlight></codeline>
 <codeline lineno="479"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="480"><highlight class="normal"></highlight></codeline>
 <codeline lineno="481"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>1:<sp/></highlight><highlight class="comment">//Options</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Options(window,<sp/>clickablepool,<sp/>Screen_size,<sp/>menuid,<sp/>start);</highlight></codeline>
+<codeline lineno="482"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" kindref="member">Options</ref>(window,<sp/>clickablepool,<sp/>Screen_size,<sp/>menuid,<sp/>start);</highlight></codeline>
 <codeline lineno="483"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="484"><highlight class="normal"></highlight></codeline>
 <codeline lineno="485"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>2:<sp/></highlight><highlight class="comment">//Credits</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Credits(window,<sp/>clickablepool,<sp/>Screen_size,<sp/>menuid,<sp/>start);</highlight></codeline>
+<codeline lineno="486"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4" kindref="member">Credits</ref>(window,<sp/>clickablepool,<sp/>Screen_size,<sp/>menuid,<sp/>start);</highlight></codeline>
 <codeline lineno="487"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="488"><highlight class="normal"></highlight></codeline>
 <codeline lineno="489"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>3:<sp/></highlight><highlight class="comment">//Pause</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Pause(window,<sp/>clickablepool,<sp/>Screen_size,<sp/>menuid,<sp/>start);</highlight></codeline>
+<codeline lineno="490"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626" kindref="member">Pause</ref>(window,<sp/>clickablepool,<sp/>Screen_size,<sp/>menuid,<sp/>start);</highlight></codeline>
 <codeline lineno="491"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="492"><highlight class="normal"></highlight></codeline>
 <codeline lineno="493"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>4:<sp/></highlight><highlight class="comment">//Jeu</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>GameLoop(window,<sp/>clickablepool,<sp/>Mat,<sp/>menuid,<sp/>PartyNum,</highlight></codeline>
+<codeline lineno="494"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" kindref="member">GameLoop</ref>(window,<sp/>clickablepool,<sp/>Mat,<sp/>menuid,<sp/>PartyNum,</highlight></codeline>
 <codeline lineno="495"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Key1_UP,<sp/>Key1_DOWN,<sp/>Key1_RIGHT,<sp/>Key1_LEFT,</highlight></codeline>
 <codeline lineno="496"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Key2_UP,<sp/>Key2_DOWN,<sp/>Key2_RIGHT,<sp/>Key2_LEFT,</highlight></codeline>
 <codeline lineno="497"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>Screen_size,<sp/>param,</highlight></codeline>
@@ -1406,13 +1511,13 @@
 <codeline lineno="500"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>objetJ1,<sp/>objetJ2,</highlight></codeline>
 <codeline lineno="501"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>scoreJ1,<sp/>scoreJ2,<sp/>PosMonster);</highlight></codeline>
 <codeline lineno="502"><highlight class="normal"></highlight></codeline>
-<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitGrid(Mat,<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref>,<sp/>param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref>,<sp/>PosPlayer1,<sp/>PosPlayer2,<sp/>param,<sp/>PosTP1,<sp/>PosTP2,<sp/>PosMonster);</highlight></codeline>
+<codeline lineno="503"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8cpp_1aeec8c3cd8d226f13c4b651e70988240f" kindref="member">InitGrid</ref>(Mat,<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref>,<sp/>param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref>,<sp/>PosPlayer1,<sp/>PosPlayer2,<sp/>param,<sp/>PosTP1,<sp/>PosTP2,<sp/>PosMonster);</highlight></codeline>
 <codeline lineno="504"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>menuid<sp/>=<sp/>0;</highlight></codeline>
 <codeline lineno="505"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="506"><highlight class="normal"></highlight></codeline>
 <codeline lineno="507"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/>5<sp/>:</highlight><highlight class="comment">//restart</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="508"><highlight class="normal"></highlight></codeline>
-<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>InitGrid(Mat,<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref>,<sp/>param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref>,<sp/>PosPlayer1,<sp/>PosPlayer2,<sp/>param,<sp/>PosTP1,<sp/>PosTP2,<sp/>PosMonster);</highlight></codeline>
+<codeline lineno="509"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="gridmanagement_8cpp_1aeec8c3cd8d226f13c4b651e70988240f" kindref="member">InitGrid</ref>(Mat,<sp/>param.<ref refid="struct_c_my_param_v2_1a0e3766a4e9235043730622571ae2b749" kindref="member">NbRow</ref>,<sp/>param.<ref refid="struct_c_my_param_v2_1aaa29dc608dfd1e775058d16968a9ef6f" kindref="member">NbColumn</ref>,<sp/>PosPlayer1,<sp/>PosPlayer2,<sp/>param,<sp/>PosTP1,<sp/>PosTP2,<sp/>PosMonster);</highlight></codeline>
 <codeline lineno="510"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>PartyNum<sp/>=<sp/>1;</highlight></codeline>
 <codeline lineno="511"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>menuid<sp/>=<sp/>4;</highlight></codeline>
 <codeline lineno="512"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
@@ -1424,6 +1529,6 @@
 <codeline lineno="518"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="519"><highlight class="normal">}</highlight><highlight class="comment">//ppal<sp/>()</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp"/>
+    <location file="/home/Theo/Téléchargements/sae/Jeu/game.cpp"/>
   </compounddef>
 </doxygen>

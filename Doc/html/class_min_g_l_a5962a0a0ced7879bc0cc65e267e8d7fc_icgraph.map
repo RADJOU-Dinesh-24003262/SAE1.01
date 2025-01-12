@@ -1,4 +1,6 @@
 <map id="MinGL::initGraphic" name="MinGL::initGraphic">
-<area shape="rect" id="node1" title="Initialise minGL et ouvre la fenêtre." alt="" coords="104,5,247,32"/>
-<area shape="rect" id="node2" href="$game_8cpp.html#acfd932870183388e95db32d747ebaad0" title="new main" alt="" coords="5,5,56,32"/>
+<area shape="rect" id="node1" title="Initialise minGL et ouvre la fenêtre." alt="" coords="211,31,353,57"/>
+<area shape="rect" id="node2" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="108,5,163,32"/>
+<area shape="rect" id="node3" href="$game_8cpp.html#acfd932870183388e95db32d747ebaad0" title="new main" alt="" coords="110,56,161,83"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="5,56,60,83"/>
 </map>

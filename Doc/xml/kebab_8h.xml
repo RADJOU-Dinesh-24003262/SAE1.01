@@ -3,7 +3,7 @@
   <compounddef id="kebab_8h" kind="file" language="C++">
     <compoundname>kebab.h</compoundname>
     <includes refid="rectangle_8h" local="yes">mingl/shape/rectangle.h</includes>
-    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/Jeu/game.cpp</includedby>
     <incdepgraph>
       <node id="4">
         <label>../graphics/idrawable.h</label>
@@ -68,7 +68,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/kebab.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/kebab.h</label>
         <link refid="kebab_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -91,11 +91,11 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/kebab.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/kebab.h</label>
         <link refid="kebab_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -133,7 +133,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/kebab.h" line="15" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/kebab.h" bodystart="15" bodyend="30"/>
+        <location file="/home/Theo/Téléchargements/sae/sprites/kebab.h" line="15" column="6" bodyfile="/home/Theo/Téléchargements/sae/sprites/kebab.h" bodystart="15" bodyend="30"/>
+        <references refid="namespacens_graphics_1a4c07ea95810d52059324d037d9d9c5d4" compoundref="rgbacolor_8h" startline="174">nsGraphics::KBeige</references>
+        <referencedby refid="game_8cpp_1a57e55da876e34d1b049962d00fac607e" compoundref="game_8cpp" startline="117" endline="136">Sprite</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -146,7 +148,7 @@
 <codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="rectangle_8h" kindref="compound">mingl/shape/rectangle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight><highlight class="comment">//défini<sp/>les<sp/>éléments<sp/>du<sp/>sprite<sp/>d&apos;un<sp/>mur</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Kebab(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pos1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pos2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
+<codeline lineno="15" refid="kebab_8h_1a43f800ad6cdaede6ba76a8c7d22bc463" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="kebab_8h_1a43f800ad6cdaede6ba76a8c7d22bc463" kindref="member">Kebab</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pos1,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>Pos2,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>mat_y){</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"></highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>wall_x<sp/>=<sp/>320/mat_x;</highlight></codeline>
@@ -160,9 +162,9 @@
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//shape<sp/>formant<sp/>le<sp/>sprite<sp/><sp/></highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//Button(window,<sp/>(x1+(8*(difx))),<sp/>(y1+(4*(dify))),<sp/>(x2-(4*(difx))),<sp/>(y2-(8*(dify))),<sp/>5,<sp/>nsGraphics::KBeige);</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x1+(10*difx)),(y1+(4*dify))),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x2-(10*difx)),(y2-(4*dify))),<sp/>nsGraphics::KBeige);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x1+(10*difx)),(y1+(4*dify))),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((x2-(10*difx)),(y2-(4*dify))),<sp/><ref refid="namespacens_graphics_1a4c07ea95810d52059324d037d9d9c5d4" kindref="member">nsGraphics::KBeige</ref>);</highlight><highlight class="comment">//<sp/>square</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/kebab.h"/>
+    <location file="/home/Theo/Téléchargements/sae/sprites/kebab.h"/>
   </compounddef>
 </doxygen>

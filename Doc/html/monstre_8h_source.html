@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SAE 1.01: /home/Theo/Téléchargements/sae/SAE_JEU/sprites/monstre.h Source File</title>
+<title>My Project: /home/Theo/Téléchargements/sae/sprites/monstre.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">SAE 1.01
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -62,30 +62,32 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_79f149efd30d37738a8a961658db751b.html">Téléchargements</a></li><li class="navelem"><a class="el" href="dir_9bc27c3a15165b903513c0caa2551462.html">sae</a></li><li class="navelem"><a class="el" href="dir_6776d252bbc60daf06bcfa47d0063ff8.html">SAE_JEU</a></li><li class="navelem"><a class="el" href="dir_6c6de58e5962bd976e0f6a50c95223d0.html">sprites</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_79f149efd30d37738a8a961658db751b.html">Téléchargements</a></li><li class="navelem"><a class="el" href="dir_9bc27c3a15165b903513c0caa2551462.html">sae</a></li><li class="navelem"><a class="el" href="dir_49d201697aa890243c4abf11e149eb0b.html">sprites</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="headertitle"><div class="title">monstre.h</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
+<a href="monstre_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span> </div>
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="comment">//include les différentes formes pour dessiner les sprites</span></div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="rectangle_8h.html">mingl/shape/rectangle.h</a>&quot;</span></div>
 <div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="comment">//défini les éléments du sprite d&#39;un mur</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> Monstre(<a class="code hl_class" href="class_min_g_l.html">MinGL</a> &amp;window, <span class="keywordtype">int</span> Circle1, <span class="keywordtype">int</span> Circle2, <span class="keywordtype">int</span> mat_x, <span class="keywordtype">int</span> mat_y){</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="monstre_8h.html#a1bdf648b0b46f6c35eeae63523d4eac8">   25</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="monstre_8h.html#a1bdf648b0b46f6c35eeae63523d4eac8">Monstre</a>(<a class="code hl_class" href="class_min_g_l.html">MinGL</a> &amp;window, <span class="keywordtype">int</span> Circle1, <span class="keywordtype">int</span> Circle2, <span class="keywordtype">int</span> mat_x, <span class="keywordtype">int</span> mat_y){</div>
 <div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
 <div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="comment">//calcul variable de position et taille des formes</span></div>
 <div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keywordtype">int</span> wall_x = 320/mat_x;</div>
 <div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordtype">int</span> wall_y = 320/mat_y;</div>
 <div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span> </div>
 <div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="comment">//shape formant le sprite</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    window &lt;&lt; <a class="code hl_class" href="classns_shape_1_1_rectangle.html">nsShape::Rectangle</a>(<a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>((Circle1-wall_x),(Circle2-wall_y)), <a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>((Circle1+wall_x),(Circle2+wall_y)), nsGraphics::KMaroon);<span class="comment">// square</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    window &lt;&lt; <a class="code hl_class" href="classns_shape_1_1_rectangle.html">nsShape::Rectangle</a>(<a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>((Circle1-wall_x),(Circle2-wall_y)), <a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>((Circle1+wall_x),(Circle2+wall_y)), <a class="code hl_variable" href="namespacens_graphics.html#a219354b4276a9edbfc436390ba3a4827">nsGraphics::KMaroon</a>);<span class="comment">// square</span></div>
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>}</div>
 <div class="ttc" id="aclass_min_g_l_html"><div class="ttname"><a href="class_min_g_l.html">MinGL</a></div><div class="ttdoc">Classe de base de minGL 2.</div><div class="ttdef"><b>Definition:</b> <a href="mingl_8h_source.html#l00034">mingl.h:35</a></div></div>
 <div class="ttc" id="aclassns_graphics_1_1_vec2_d_html"><div class="ttname"><a href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a></div><div class="ttdoc">Classe représentant un vecteur deux-dimensionnel.</div><div class="ttdef"><b>Definition:</b> <a href="vec2d_8h_source.html#l00025">vec2d.h:26</a></div></div>
 <div class="ttc" id="aclassns_shape_1_1_rectangle_html"><div class="ttname"><a href="classns_shape_1_1_rectangle.html">nsShape::Rectangle</a></div><div class="ttdoc">Classe représentant un rectangle.</div><div class="ttdef"><b>Definition:</b> <a href="rectangle_8h_source.html#l00025">rectangle.h:26</a></div></div>
+<div class="ttc" id="amonstre_8h_html_a1bdf648b0b46f6c35eeae63523d4eac8"><div class="ttname"><a href="monstre_8h.html#a1bdf648b0b46f6c35eeae63523d4eac8">Monstre</a></div><div class="ttdeci">void Monstre(MinGL &amp;window, int Circle1, int Circle2, int mat_x, int mat_y)</div><div class="ttdoc">cette fonction dessine un monstre sous forme de rectangle</div><div class="ttdef"><b>Definition:</b> <a href="monstre_8h_source.html#l00025">monstre.h:25</a></div></div>
+<div class="ttc" id="anamespacens_graphics_html_a219354b4276a9edbfc436390ba3a4827"><div class="ttname"><a href="namespacens_graphics.html#a219354b4276a9edbfc436390ba3a4827">nsGraphics::KMaroon</a></div><div class="ttdeci">const RGBAcolor KMaroon</div><div class="ttdef"><b>Definition:</b> <a href="rgbacolor_8h_source.html#l00168">rgbacolor.h:168</a></div></div>
 <div class="ttc" id="arectangle_8h_html"><div class="ttname"><a href="rectangle_8h.html">rectangle.h</a></div><div class="ttdoc">Représente un rectangle.</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

@@ -1,0 +1,95 @@
+.TH "md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__r_e_a_d_m_e" 3 "Sun Jan 12 2025" "My Project" \" -*- nroff -*-
+.ad l
+.nh
+.SH NAME
+md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__r_e_a_d_m_e \- Projet SAE 1\&.01 - Lethal 
+
+.SH "Contexte du Projet"
+.PP
+Dans le cadre de cette \fBSAE\fP, notre équipe a été chargée d'améliorer un jeu d'aventure initialement développé lors des TPs 10\&. Le but était d'ajouter de nouvelles fonctionnalités, et de coder tout en ayant en esprit de fournir une documentation complète du projet avec Doxygen\&. Nous avons également mis en place des améliorations graphique avec MinGL2\&.
+.SH "Objectifs"
+.PP
+Les objectifs que nous souhaitons pour ce projet les suivants :
+.PP
+.IP "1." 4
+\fBBlinder le code existant\fP :
+.IP "  \(bu" 4
+Sécurisation des indices (pas de débordements de tableaux) et gestion des erreurs\&.
+.IP "  \(bu" 4
+Ajout de vérification qui permet d'éviter au 1er joueur qu'il joue à la place du deuxième joueur\&.
+.PP
+
+.IP "2." 4
+\fBAjout de nouvelles fonctionnalités\fP :
+.IP "  \(bu" 4
+Lecture de fichiers de configuration \fCconfig\&.yaml\&.\fP
+.IP "  \(bu" 4
+Générer des murs de manière procédurale
+.IP "  \(bu" 4
+Ajout d'un monstre qui a pour but de suivre un joueur proche et de le manger\&.
+.IP "  \(bu" 4
+Ajout de safe zones où le monstre n'aura pas le droit d'attaquer le joueur
+.IP "  \(bu" 4
+Ajout d'un système de score dans le jeu\&.
+.IP "  \(bu" 4
+Ajout de téléporteur dans le jeu qui permettra au joueur de se déplacer plus rapidement\&.
+.IP "  \(bu" 4
+(Ajout de skin pour les personages)
+.IP "  \(bu" 4
+(Ajout de power up dans le jeu) 
+.br
+
+.IP "  \(bu" 4
+(Implémentation d'un système de high scores\&.)
+.IP "  \(bu" 4
+Réalisation d'un Lore
+.IP "  \(bu" 4
+Utilisation de \fB\fBMinGL\fP\fP pour une meuilleure expérience de jeu
+.PP
+
+.IP "3." 4
+\fBDocumentation avec Doxygen\fP : Génération d'une documentation à l'aide de Doxygen grâce aau commentaires dans le code
+.PP
+.PP
+.PP
+ 
+.SH "Comment jouer au jeu"
+.PP
+Ce jeu se joue exclusivement sur \fBLinux\fP\&. Pour y jouer, vous devez impérativement être \fBdeux joueurs\fP\&. Vous jouez tous les 2 en temps réel dans la fenêtre MinGL2 à l'aide des touches du clavier\&. L’objectif du jeu est d'avoir le maximum de points en ramassant les objets, tout en évitant de se faire attraper par le monstre\&. Les touches utilisées peuvent être personnalisées, tout comme la taille de la carte\&.
+.SS "Règles du jeu :"
+.IP "1." 4
+\fBMultijoueur\fP : Le jeu se joue exclusivement à \fBdeux joueurs\fP\&.
+.IP "2." 4
+\fBObjectifs\fP :
+.IP "  \(bu" 4
+Ramasser des objets dispersés sur la carte pour accumuler des points\&.
+.IP "  \(bu" 4
+Éviter d’être tué par le monstre qui rôde dans la zone\&.
+.IP "  \(bu" 4
+Obtenir plus de points que l'autre joueur\&.
+.PP
+
+.IP "3." 4
+\fBGagner\fP : Pour gagner, vous devez ramasser un total de points supérieur à **(longueur de la carte + largeur de la carte)** * \fB15\fP, ou bien avoir plus de point que l'adversaire si le temps imparti est dépassé\&.
+.IP "  \(bu" 4
+Une fois ce total atteint, vous devez ramener ces objets à votre maison pour valider vos points\&.
+.PP
+
+.PP
+.SS "Mécanismes du jeu :"
+.IP "\(bu" 2
+\fBTour de jeu\fP : Les deux joueurs jouent tous les 2 en temps réel dans la fenêtre MinGL2\&.
+.IP "\(bu" 2
+\fBPersonnalisation des touches\fP : Les touches qui permettant de se déplacer peuvent être modifié\&.
+.IP "\(bu" 2
+\fBTaille de la carte\fP : Vous pouvez modifier la taille de la carte sur le fichier config, ce qui peut augmenter ou diminuer la difficulté du jeu\&. Une carte plus grande augmente le nombre d’objets à ramasser, mais tout de même à faire attention, la portée du monstre augmente avec le monstre\&.
+.PP
+.SS "Stratégies :"
+.IP "\(bu" 2
+\fBRamasser les objets\fP : Explorez la carte pour ramasser les objets tout en évitant le monstre\&.
+.IP "\(bu" 2
+\fBCalculer votre score\fP : Assurez-vous de ramasser suffisamment d’objets pour atteindre le score requis avant que l’autre joueur gagne ou le monstre ne vous élimine\&.
+.IP "\(bu" 2
+\fBCoopérez\fP : Effectuez des aliances pour éviter de vous faire manger par le monstre\&. 
+.PP
+

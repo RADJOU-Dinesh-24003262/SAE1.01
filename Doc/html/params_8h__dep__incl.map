@@ -1,5 +1,5 @@
-<map id="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.h" name="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.h">
+<map id="/home/Theo/Téléchargements/sae/Jeu/params.h" name="/home/Theo/Téléchargements/sae/Jeu/params.h">
 <area shape="rect" id="node1" title="Paramters&#39; definition and associated functions." alt="" coords="124,5,339,47"/>
-<area shape="rect" id="node2" href="$game_8cpp_source.html" title=" " alt="" coords="5,95,220,136"/>
-<area shape="rect" id="node3" href="$params_8cpp_source.html" title=" " alt="" coords="244,95,459,136"/>
+<area shape="rect" id="node2" href="$game_8cpp.html" title=" " alt="" coords="5,95,220,136"/>
+<area shape="rect" id="node3" href="$params_8cpp.html" title=" " alt="" coords="244,95,459,136"/>
 </map>

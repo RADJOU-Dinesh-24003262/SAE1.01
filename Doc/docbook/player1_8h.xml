@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_player1_8h" xml:lang="en-US">
-<title>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/player1.h File Reference</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/player1.h</primary></indexterm>
+<title>/home/Theo/Téléchargements/sae/sprites/player1.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/sprites/player1.h</primary></indexterm>
 <para>
 
 <para>Affiche le sprite du player 1. </para>
@@ -63,6 +63,15 @@ Definition in file <link linkend="_player1_8h_source">player1.h</link>.</para>
 <indexterm><primary>player1.h</primary><secondary>Player1</secondary></indexterm>
 <para><computeroutput>void Player1 (<link linkend="_class_min_g_l">MinGL</link> &amp; window, int Circle1, int Circle2, int mat_x, int mat_y)</computeroutput></para><para>
 Definition at line <link linkend="_player1_8h_source_1l00016">16</link> of file <link linkend="_player1_8h_source">player1.h</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="player1_8h_ae9c272b2658c6c4acfd2caed5eb9a74b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 </section>
 </section>

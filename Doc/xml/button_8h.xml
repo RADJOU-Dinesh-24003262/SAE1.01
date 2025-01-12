@@ -4,7 +4,7 @@
     <compoundname>button.h</compoundname>
     <includes refid="rectangle_8h" local="yes">mingl/shape/rectangle.h</includes>
     <includes refid="circle_8h" local="yes">mingl/shape/circle.h</includes>
-    <includedby refid="_menu_management_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</includedby>
+    <includedby refid="_menu_management_8h" local="yes">/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</includedby>
     <incdepgraph>
       <node id="4">
         <label>../graphics/idrawable.h</label>
@@ -77,7 +77,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/button.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/button.h</label>
         <link refid="button_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -102,17 +102,17 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</label>
-        <link refid="_menu_management_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</label>
+        <link refid="_menu_management_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/button.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/button.h</label>
         <link refid="button_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -217,7 +217,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/button.h" line="28" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/button.h" bodystart="28" bodyend="40"/>
+        <location file="/home/Theo/Téléchargements/sae/sprites/button.h" line="28" column="6" bodyfile="/home/Theo/Téléchargements/sae/sprites/button.h" bodystart="28" bodyend="40"/>
+        <referencedby refid="_menu_management_8h_1afab161c3544224d228a3e8e64a3eae08" compoundref="_menu_management_8h" startline="33" endline="45">InterfaceMenuP</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -231,7 +232,7 @@
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="circle_8h" kindref="compound">mingl/shape/circle.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"></highlight><highlight class="comment">//défini<sp/>les<sp/>éléments<sp/>du<sp/>sprite<sp/>d&apos;un<sp/>mur</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>Button(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos1_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos1_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos2_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos2_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>round,<sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/>color){</highlight></codeline>
+<codeline lineno="28" refid="button_8h_1a9139d7539d77e69aa7b38e4976a62306" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="button_8h_1a9139d7539d77e69aa7b38e4976a62306" kindref="member">Button</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos1_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos1_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos2_x,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>pos2_y,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>round,<sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/>color){</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//calcul<sp/>variable<sp/>de<sp/>position<sp/>et<sp/>taille<sp/>des<sp/>formes</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(round<sp/>&gt;<sp/>((pos2_x-pos1_x)/2)){round<sp/>=<sp/>(pos2_x-pos1_x)/2;}</highlight></codeline>
@@ -245,6 +246,6 @@
 <codeline lineno="39"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_circle" kindref="compound">nsShape::Circle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>((pos2_x-round),(pos2_y-round)),<sp/>round,<sp/>color);</highlight></codeline>
 <codeline lineno="40"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/button.h"/>
+    <location file="/home/Theo/Téléchargements/sae/sprites/button.h"/>
   </compounddef>
 </doxygen>

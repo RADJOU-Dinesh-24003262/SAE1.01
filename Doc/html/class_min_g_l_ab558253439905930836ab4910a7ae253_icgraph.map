@@ -1,0 +1,12 @@
+<map id="MinGL::getEventManager" name="MinGL::getEventManager">
+<area shape="rect" id="node1" title="Récupère le gestionnaire d&#39;évènements minGL." alt="" coords="347,157,533,184"/>
+<area shape="rect" id="node2" href="$game_8cpp.html#abeb01ff9eee7d59d0e2906d12379e0c4" title=" " alt="" coords="219,5,287,32"/>
+<area shape="rect" id="node5" href="$_menu_management_8h.html#a4502ca76132916f74305fe40f59ae97d" title="Handle user input events such as mouse movement and clicks for menu navigation." alt="" coords="219,56,286,83"/>
+<area shape="rect" id="node6" href="$game_8cpp.html#a1e152641100487c240b9a3edfaf40890" title=" " alt="" coords="207,107,299,133"/>
+<area shape="rect" id="node7" href="$_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title=" " alt="" coords="225,157,280,184"/>
+<area shape="rect" id="node8" href="$game_8cpp.html#a0845b941aa45002f46dd1653274997dc" title=" " alt="" coords="219,208,286,235"/>
+<area shape="rect" id="node9" href="$game_8cpp.html#a312034bd1e903262c8bf2bea6cdbee8f" title=" " alt="" coords="217,259,289,285"/>
+<area shape="rect" id="node10" href="$game_8cpp.html#aa2a6ff67bcdbef686d904f6f47c02626" title=" " alt="" coords="222,309,283,336"/>
+<area shape="rect" id="node3" href="$game_8cpp.html#acfd932870183388e95db32d747ebaad0" title="new main" alt="" coords="108,208,159,235"/>
+<area shape="rect" id="node4" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="main" alt="" coords="5,208,60,235"/>
+</map>

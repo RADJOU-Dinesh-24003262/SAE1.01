@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e" xml:lang="en-US">
+
+<para>Ce répertoire contient divers exemples dont le but est de vous aider a utiliser minGL 2. 
+<literallayout>&#160;&#xa;</literallayout>
+ Il est conseillé de <emphasis role="bold">bien</emphasis> lire les commentaires qui sont éparpillés dans le code de ces exemples, et de lire la documentation des différentes classes qui vous sont introduites en même temps.</para>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md9">
+<title>&lt;tt&gt;00-Boilerplate/&lt;/tt&gt;</title>
+
+<para>L&apos;exemple n°00 Boilerplate contient le strict minimum pour démarrer un projet sous minGL 2.</para>
+
+<para>Si vous voulez démarrer un projet avec l&apos;aide de cet exemple, il vous est vivement conseillé de le placer dans un répertoire séparé de minGL 2, de placer le répertoire de minGL 2 dans votre nouveau répertoire de travail et de mettre a jour le fichier de projet <computeroutput>00-Boilerplate.pro</computeroutput> en accord avec vos changements.</para>
+</section>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md10">
+<title>&lt;tt&gt;01-Shapes/&lt;/tt&gt;</title>
+
+<para>L&apos;exemple n°01 Shapes vous montre comment dessiner des formes géométriques sur la fenêtre avec minGL 2.</para>
+
+<para>Vous y verrez certaines classes utilisées très souvent lors de l&apos;utilisation de la bibliothèque, ainsi que les mécanismes d&apos;affichage.</para>
+</section>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md11">
+<title>&lt;tt&gt;02-Texte/&lt;/tt&gt;</title>
+
+<para>L&apos;exemple n°02 Texte vous montre comment afficher du texte a l&apos;utilisateur directement sur la fenêtre.</para>
+
+<para>Les différents paramètres pour afficher le texte vous y seront montrés.</para>
+</section>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md12">
+<title>&lt;tt&gt;03-Clavier/&lt;/tt&gt;</title>
+
+<para>L&apos;exemple n°03 Clavier vous montre comment récupérer l&apos;état d&apos;une touche du clavier.</para>
+
+<para>La carré bleu peut être déplacé a l&apos;aide des touches ZQSD du clavier.</para>
+</section>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md13">
+<title>&lt;tt&gt;04-Souris/&lt;/tt&gt;</title>
+
+<para>L&apos;exemple n°4 Souris vous montre comment se servir du gestionnaire d&apos;évènements pour récupérer des évènements souris.</para>
+
+<para>Le carré bleu peut être déplacé a l&apos;aide du curseur de la souris. Sa couleur est changé au clic de souris. 
+<literallayout>&#160;&#xa;</literallayout>
+ <emphasis role="bold">Attention:</emphasis> Comme nous nous servons du gestionnaire d&apos;évènements, la ligne suivante, provenant du Boilerplate, et permettant de vider le gestionnaire d&apos;évènement périodiquement, a été commentée: <literallayout><computeroutput>&#32;{C++}
+window.getEventManager().clearEvents();
+</computeroutput></literallayout></para>
+</section>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md14">
+<title>&lt;tt&gt;05-Transition/&lt;/tt&gt;</title>
+
+<para>L&apos;exemple n°5 Transition vous montre comment se servir du gestionnaire de transition.</para>
+
+<para>Plusieurs formes géométriques ont des transitions qui sont appliquées sur leur différentes propriétés, avec des paramètres qui diffèrent afin que vous puissiez voir ses possibilités.</para>
+</section>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md15">
+<title>&lt;tt&gt;06-Sprite/&lt;/tt&gt;</title>
+
+<para>L&apos;exemple n°6 Sprite vous montre comment charger une image externe au format .si2 dans votre programme.</para>
+
+<para>Cet exemple stocke les ressources dans le répertoire <computeroutput>res/</computeroutput>, qui comprend actuellement une unique image. 
+<literallayout>&#160;&#xa;</literallayout>
+ Afin que le programme puisse retrouver ses ressources, ce répertoire doit <emphasis role="bold">impérativement</emphasis> être copié dans le même répertoire où se trouve l&apos;exécutable.</para>
+</section>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md16">
+<title>&lt;tt&gt;07-Audio/&lt;/tt&gt;</title>
+
+<para>L&apos;exemple n°7 Audio vous montre comment utiliser le sous-système audio afin de jouer de la musique et des effets sonores.</para>
+
+<para>Même remarque que l&apos;exemple précédent, le répertoire <computeroutput>res/</computeroutput> doit être copié dans le même répertoire que celui où se trouve l&apos;exécutable.</para>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md17">
+<title>Remerciements</title>
+
+<para><itemizedlist>
+<listitem>
+<para><emphasis role="bold">music.wav</emphasis> 
+<literallayout>&#160;&#xa;</literallayout>
+ The Entertainer by Kevin MacLeod 
+<literallayout>&#160;&#xa;</literallayout>
+ Link: <link xlink:href="https://incompetech.filmmusic.io/song/5765-the-entertainer">https://incompetech.filmmusic.io/song/5765-the-entertainer</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ License: <link xlink:href="http://creativecommons.org/licenses/by/4.0/">http://creativecommons.org/licenses/by/4.0/</link> 
+<literallayout>&#160;&#xa;</literallayout>
+</para>
+</listitem><listitem>
+<para><emphasis role="bold">sound1.wav</emphasis> 
+<literallayout>&#160;&#xa;</literallayout>
+ snr_bod.wav by DWSD 
+<literallayout>&#160;&#xa;</literallayout>
+ Link: <link xlink:href="https://freesound.org/people/DWSD/sounds/183111">https://freesound.org/people/DWSD/sounds/183111</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ License: <link xlink:href="https://creativecommons.org/licenses/by/3.0/">https://creativecommons.org/licenses/by/3.0/</link></para>
+</listitem><listitem>
+<para><emphasis role="bold">sound2.wav</emphasis> 
+<literallayout>&#160;&#xa;</literallayout>
+ metalbang0.wav by SamsterBirdies 
+<literallayout>&#160;&#xa;</literallayout>
+ Link: <link xlink:href="https://freesound.org/people/SamsterBirdies/sounds/435699">https://freesound.org/people/SamsterBirdies/sounds/435699</link> 
+<literallayout>&#160;&#xa;</literallayout>
+ License: <link xlink:href="https://creativecommons.org/publicdomain/zero/1.0/">https://creativecommons.org/publicdomain/zero/1.0/</link> 
+<literallayout>&#160;&#xa;</literallayout>
+</para>
+</listitem></itemizedlist>
+</para>
+</section>
+</section>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md18">
+<title>&lt;tt&gt;08-CustomDrawable/&lt;/tt&gt;</title>
+
+<para>L&apos;exemple n°8 Custom Drawable vous montre comment créer vos propres objets affichables.</para>
+
+<para>Une classe d&apos;exemple <computeroutput><link linkend="_class_bg_text">BgText</link></computeroutput>, affichant un texte avec une couleur de fond, est créé comme exemple.</para>
+</section>
+<section xml:id="_md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_examples__r_e_a_d_m_e_1autotoc_md19">
+<title>&lt;tt&gt;09-CustomTransitionable/&lt;/tt&gt;</title>
+
+<para>L&apos;exemple n°9 Custom Transitionable vous montre comment créer vos propres objets compatible avec le gestionnaire de transition.</para>
+
+<para>Cet exemple reprend la classe <computeroutput><link linkend="_class_bg_text">BgText</link></computeroutput> créé lors de l&apos;exemple précédent, afin de lui ajouter le support de la transition pour sa couleur de texte et de fond. </para>
+</section>
+</section>

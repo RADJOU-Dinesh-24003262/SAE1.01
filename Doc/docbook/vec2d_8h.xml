@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_vec2d_8h" xml:lang="en-US">
-<title>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h File Reference</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h</primary></indexterm>
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics/vec2d.h</primary></indexterm>
 <para>
 
 <para>Représente un vecteur sur deux dimensions. </para>

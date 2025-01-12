@@ -1,13 +1,13 @@
 \hypertarget{teleporter_8h_source}{}\doxysection{teleporter.\+h}
-\label{teleporter_8h_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/sprites/teleporter.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/sprites/teleporter.h}}
-
+\label{teleporter_8h_source}\index{/home/Theo/Téléchargements/sae/sprites/teleporter.h@{/home/Theo/Téléchargements/sae/sprites/teleporter.h}}
+\mbox{\hyperlink{teleporter_8h}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00001}00001 }
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00011}00011 \textcolor{comment}{//include les différentes formes pour dessiner les sprites}}
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00012}00012 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{rectangle_8h}{mingl/shape/rectangle.h}}"{}}}
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00013}00013 }
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00025}00025 \textcolor{comment}{//défini les éléments du sprite d'un mur}}
-\DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00026}00026 \textcolor{keywordtype}{void} Teleporter(\mbox{\hyperlink{class_min_g_l}{MinGL}} \&window, \textcolor{keywordtype}{int} Pos1, \textcolor{keywordtype}{int} Pos2, \textcolor{keywordtype}{int} mat\_x, \textcolor{keywordtype}{int} mat\_y)\{}
+\DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00026}\mbox{\hyperlink{teleporter_8h_abd3383003d3b5afeac6ab5231f4a96bc}{00026}} \textcolor{keywordtype}{void} \mbox{\hyperlink{teleporter_8h_abd3383003d3b5afeac6ab5231f4a96bc}{Teleporter}}(\mbox{\hyperlink{class_min_g_l}{MinGL}} \&window, \textcolor{keywordtype}{int} Pos1, \textcolor{keywordtype}{int} Pos2, \textcolor{keywordtype}{int} mat\_x, \textcolor{keywordtype}{int} mat\_y)\{}
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00027}00027 }
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00028}00028     \textcolor{comment}{//calcul variable de position et taille des formes}}
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00029}00029     \textcolor{keywordtype}{int} wall\_x = 320/mat\_x;}
@@ -20,8 +20,8 @@
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00036}00036     \textcolor{keywordtype}{int} dify = (y2-\/y1)/20;}
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00037}00037 }
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00038}00038     \textcolor{comment}{//shape formant le sprite}}
-\DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00039}00039     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((x1+(2*(difx))),(y1+(2*(dify)))), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((x2-\/(2*(difx))),(y2-\/(2*(dify)))), nsGraphics::KGray);\textcolor{comment}{// square}}
-\DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00040}00040     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((x1+(4*(difx))),(y1+(4*(dify)))), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((x2-\/(4*(difx))),(y2-\/(4*(dify)))), nsGraphics::KDarkGray);\textcolor{comment}{// square}}
+\DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00039}00039     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((x1+(2*(difx))),(y1+(2*(dify)))), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((x2-\/(2*(difx))),(y2-\/(2*(dify)))), \mbox{\hyperlink{namespacens_graphics_a96ad8f5e0a09dba209c3359c277dcc6f}{nsGraphics::KGray}});\textcolor{comment}{// square}}
+\DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00040}00040     window << \mbox{\hyperlink{classns_shape_1_1_rectangle}{nsShape::Rectangle}}(\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((x1+(4*(difx))),(y1+(4*(dify)))), \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{nsGraphics::Vec2D}}((x2-\/(4*(difx))),(y2-\/(4*(dify)))), \mbox{\hyperlink{namespacens_graphics_a7f6ca880f0cf5e6e76b0081c84d5f1fb}{nsGraphics::KDarkGray}});\textcolor{comment}{// square}}
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00041}00041 }
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00042}00042     \textcolor{comment}{//window << nsShape::Rectangle(nsGraphics::Vec2D((Circle1-\/wall\_x),(Circle2-\/wall\_y)), nsGraphics::Vec2D((Circle1+wall\_x),(Circle2+wall\_y)), nsGraphics::KPurple);// square}}
 \DoxyCodeLine{\Hypertarget{teleporter_8h_source_l00043}00043 \}}

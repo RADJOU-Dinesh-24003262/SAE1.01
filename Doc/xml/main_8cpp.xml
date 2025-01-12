@@ -102,7 +102,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/main.cpp</label>
         <link refid="main_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -156,7 +156,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp" line="9" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp" bodystart="9" bodyend="20"/>
+        <location file="/home/Theo/Téléchargements/sae/main.cpp" line="9" column="5" bodyfile="/home/Theo/Téléchargements/sae/main.cpp" bodystart="9" bodyend="20"/>
+        <references refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" compoundref="game_8cpp" startline="427" endline="519">ppal</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -168,11 +169,11 @@
 <codeline lineno="2"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="game_8h" kindref="compound">Jeu/game.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
-<codeline lineno="9"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()</highlight></codeline>
+<codeline lineno="9" refid="main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
 <codeline lineno="10"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">try</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="game_8h_1a0b1d64ee76933ef8f007f1208cb869a7" kindref="member">ppal</ref><sp/>();</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/><ref refid="game_8cpp_1acfd932870183388e95db32d747ebaad0" kindref="member">ppal</ref><sp/>();</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="15"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">catch</highlight><highlight class="normal"><sp/>(...)</highlight></codeline>
 <codeline lineno="16"><highlight class="normal"><sp/><sp/><sp/><sp/>{</highlight></codeline>
@@ -183,6 +184,6 @@
 <codeline lineno="21"><highlight class="normal"></highlight></codeline>
 <codeline lineno="22"><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp"/>
+    <location file="/home/Theo/Téléchargements/sae/main.cpp"/>
   </compounddef>
 </doxygen>

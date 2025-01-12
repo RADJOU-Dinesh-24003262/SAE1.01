@@ -1,12 +1,12 @@
-<map id="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX&#45;master/include/mingl/transition/transition_engine.h" name="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX&#45;master/include/mingl/transition/transition_engine.h">
-<area shape="rect" id="node1" title="Gestionnaire de transition de minGL." alt="" coords="8,5,238,76"/>
-<area shape="rect" id="node2" title=" " alt="" coords="82,348,148,375"/>
-<area shape="rect" id="node3" title=" " alt="" coords="43,124,120,151"/>
-<area shape="rect" id="node4" title=" " alt="" coords="144,124,187,151"/>
-<area shape="rect" id="node5" href="$transition_8h.html" title="Definition d&#39;une transition." alt="" coords="211,124,307,151"/>
-<area shape="rect" id="node6" href="$transition__contract_8h.html" title="Création de la transition." alt="" coords="181,199,337,225"/>
-<area shape="rect" id="node7" title=" " alt="" coords="44,273,130,300"/>
-<area shape="rect" id="node8" title=" " alt="" coords="350,348,413,375"/>
-<area shape="rect" id="node9" href="$itransitionable_8h.html" title="Interface pour objet &quot;transitionable&quot;." alt="" coords="368,273,496,300"/>
-<area shape="rect" id="node10" href="$transition__types_8h.html" title="Définit quelques types pour les transitions." alt="" coords="155,273,294,300"/>
+<map id="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX&#45;master/include/mingl/transition/transition_engine.h" name="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX&#45;master/include/mingl/transition/transition_engine.h">
+<area shape="rect" id="node1" title="Gestionnaire de transition de minGL." alt="" coords="5,5,252,76"/>
+<area shape="rect" id="node2" title=" " alt="" coords="87,348,154,375"/>
+<area shape="rect" id="node3" title=" " alt="" coords="49,124,126,151"/>
+<area shape="rect" id="node4" title=" " alt="" coords="150,124,193,151"/>
+<area shape="rect" id="node5" href="$transition_8h.html" title="Definition d&#39;une transition." alt="" coords="217,124,313,151"/>
+<area shape="rect" id="node6" href="$transition__contract_8h.html" title="Création de la transition." alt="" coords="187,199,343,225"/>
+<area shape="rect" id="node7" title=" " alt="" coords="49,273,136,300"/>
+<area shape="rect" id="node8" title=" " alt="" coords="356,348,419,375"/>
+<area shape="rect" id="node9" href="$itransitionable_8h.html" title="Interface pour objet &quot;transitionable&quot;." alt="" coords="374,273,502,300"/>
+<area shape="rect" id="node10" href="$transition__types_8h.html" title="Définit quelques types pour les transitions." alt="" coords="161,273,299,300"/>
 </map>

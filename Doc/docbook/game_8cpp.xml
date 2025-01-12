@@ -1,0 +1,386 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_game_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/Jeu/game.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/Jeu/game.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;iostream&gt;
+#include &lt;vector&gt;
+#include &lt;unistd.h&gt;
+#include &quot;game.h&quot;
+#include &quot;params.h&quot;
+#include &quot;gridmanagement.h&quot;
+#include &lt;thread&gt;
+#include &lt;cmath&gt;
+#include &quot;mingl/mingl.h&quot;
+#include &lt;tuple&gt;
+#include &quot;sprites/player1.h&quot;
+#include &quot;sprites/player2.h&quot;
+#include &quot;sprites/wall.h&quot;
+#include &quot;sprites/kebab.h&quot;
+#include &quot;sprites/cigarette.h&quot;
+#include &quot;sprites/monstre.h&quot;
+#include &quot;sprites/teleporter.h&quot;
+#include &quot;sprites/statue.h&quot;
+#include &quot;MenuManagement.h&quot;
+#include &lt;map&gt;
+</programlisting>Include dependency graph for game.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_game_8cpp_1a69c339b2966791489487938c49401cf3">FPS_LIMIT</link>   15</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>bool <link linkend="_game_8cpp_1aa61e0829c615216027761f9feafa253c">IsMoveLegal</link> (const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp;Mat, const bool &amp;KeyUp, const bool &amp;KeyDown, const bool &amp;KeyRight, const bool &amp;KeyLeft, const <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;Pos, const <link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;Param)</para>
+</listitem>
+            <listitem><para>pair&lt; char, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; <link linkend="_game_8cpp_1a0e70e085afb41e8db9d8c7c8936dfad7">nextMove</link> (const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp;Mat, const bool &amp;KeyUp, const bool &amp;KeyDown, const bool &amp;KeyRight, const bool &amp;KeyLeft, const <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;Pos, const <link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;Param, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;Tp1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;Tp2)</para>
+</listitem>
+            <listitem><para>bool <link linkend="_game_8cpp_1a35057878b4faca7c5b0d80ba8a9a7608">IsCollectible</link> (const char move)</para>
+</listitem>
+            <listitem><para>void <link linkend="_game_8cpp_1ab465081d6f14034e76b3e4efd1d092db">CalculateScore</link> (vector&lt; char &gt; &amp;objets, int &amp;score)</para>
+</listitem>
+            <listitem><para>void <link linkend="_game_8cpp_1a57e55da876e34d1b049962d00fac607e">Sprite</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, string sprite)</para>
+</listitem>
+            <listitem><para>void <link linkend="_game_8cpp_1a1598d2cc705c314acea3323f69b0b372">DisplayGrid</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp;mat, tuple&lt; int, int &gt; Screen_size)</para>
+</listitem>
+            <listitem><para>void <link linkend="_game_8cpp_1ac95434408d3f8bf774e3032eaa73ae4e">MoveToken</link> (<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp;Mat, const bool &amp;KeyUp, const bool &amp;KeyDown, const bool &amp;KeyRight, const bool &amp;KeyLeft, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;Pos, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;Tp1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp;Tp2)</para>
+</listitem>
+            <listitem><para>void <link linkend="_game_8cpp_1a0845b941aa45002f46dd1653274997dc">MenuP</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt; clickablepool, tuple&lt; int, int &gt; Screen_size, int &amp;menuid, chrono::time_point&lt; chrono::steady_clock &gt; start)</para>
+</listitem>
+            <listitem><para>void <link linkend="_game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f">Options</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt; clickablepool, tuple&lt; int, int &gt; Screen_size, int &amp;menuid, chrono::time_point&lt; chrono::steady_clock &gt; start)</para>
+</listitem>
+            <listitem><para>void <link linkend="_game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4">Credits</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt; clickablepool, tuple&lt; int, int &gt; Screen_size, int &amp;menuid, chrono::time_point&lt; chrono::steady_clock &gt; start)</para>
+</listitem>
+            <listitem><para>void <link linkend="_game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626">Pause</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt; clickablepool, tuple&lt; int, int &gt; Screen_size, int &amp;menuid, chrono::time_point&lt; chrono::steady_clock &gt; start)</para>
+</listitem>
+            <listitem><para>void <link linkend="_game_8cpp_1a1e152641100487c240b9a3edfaf40890">GameLoop</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt;clickablepool, <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> Mat, int menuid, unsigned PartyNum, bool Key1_UP, bool Key1_DOWN, bool Key1_RIGHT, bool Key1_LEFT, bool Key2_UP, bool Key2_DOWN, bool Key2_RIGHT, bool Key2_LEFT, tuple&lt; int, int &gt; Screen_size, <link linkend="_struct_c_my_param_v2">CMyParamV2</link> param, bool Victory, unsigned KMaxPartyNum, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosPlayer1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosPlayer2, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosTP1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosTP2, bool Player1Turn, pair&lt; char, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; N_move1, pair&lt; char, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; N_move2, vector&lt; char &gt; objetJ1, vector&lt; char &gt; objetJ2, int scoreJ1, int scoreJ2, vector&lt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; PosMonster)</para>
+</listitem>
+            <listitem><para>int <link linkend="_game_8cpp_1acfd932870183388e95db32d747ebaad0">ppal</link> (void)</para>
+
+<para>new main </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_game_8cpp_1a69c339b2966791489487938c49401cf3"/><section>
+    <title>FPS_LIMIT</title>
+<indexterm><primary>FPS_LIMIT</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>FPS_LIMIT</secondary></indexterm>
+<para><computeroutput>#define FPS_LIMIT   15</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00010">10</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+</section>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_game_8cpp_1ab465081d6f14034e76b3e4efd1d092db"/><section>
+    <title>CalculateScore()</title>
+<indexterm><primary>CalculateScore</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>CalculateScore</secondary></indexterm>
+<para><computeroutput>void CalculateScore (vector&lt; char &gt; &amp; objets, int &amp; score)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00104">104</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_ab465081d6f14034e76b3e4efd1d092db_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4"/><section>
+    <title>Credits()</title>
+<indexterm><primary>Credits</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>Credits</secondary></indexterm>
+<para><computeroutput>void Credits (<link linkend="_class_min_g_l">MinGL</link> &amp; window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt; clickablepool, tuple&lt; int, int &gt; Screen_size, int &amp; menuid, chrono::time_point&lt; chrono::steady_clock &gt; start)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00239">239</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_abeb01ff9eee7d59d0e2906d12379e0c4_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_abeb01ff9eee7d59d0e2906d12379e0c4_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1a1598d2cc705c314acea3323f69b0b372"/><section>
+    <title>DisplayGrid()</title>
+<indexterm><primary>DisplayGrid</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>DisplayGrid</secondary></indexterm>
+<para><computeroutput>void DisplayGrid (<link linkend="_class_min_g_l">MinGL</link> &amp; window, const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp; mat, tuple&lt; int, int &gt; Screen_size)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00138">138</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a1598d2cc705c314acea3323f69b0b372_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a1598d2cc705c314acea3323f69b0b372_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1a1e152641100487c240b9a3edfaf40890"/><section>
+    <title>GameLoop()</title>
+<indexterm><primary>GameLoop</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>GameLoop</secondary></indexterm>
+<para><computeroutput>void GameLoop (<link linkend="_class_min_g_l">MinGL</link> &amp; window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt; clickablepool, <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> Mat, int menuid, unsigned PartyNum, bool Key1_UP, bool Key1_DOWN, bool Key1_RIGHT, bool Key1_LEFT, bool Key2_UP, bool Key2_DOWN, bool Key2_RIGHT, bool Key2_LEFT, tuple&lt; int, int &gt; Screen_size, <link linkend="_struct_c_my_param_v2">CMyParamV2</link> param, bool Victory, unsigned KMaxPartyNum, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosPlayer1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosPlayer2, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosTP1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosTP2, bool Player1Turn, pair&lt; char, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; N_move1, pair&lt; char, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; N_move2, vector&lt; char &gt; objetJ1, vector&lt; char &gt; objetJ2, int scoreJ1, int scoreJ2, vector&lt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; PosMonster)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00275">275</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a1e152641100487c240b9a3edfaf40890_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a1e152641100487c240b9a3edfaf40890_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1a35057878b4faca7c5b0d80ba8a9a7608"/><section>
+    <title>IsCollectible()</title>
+<indexterm><primary>IsCollectible</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>IsCollectible</secondary></indexterm>
+<para><computeroutput>bool IsCollectible (const char move)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00096">96</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a35057878b4faca7c5b0d80ba8a9a7608_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1aa61e0829c615216027761f9feafa253c"/><section>
+    <title>IsMoveLegal()</title>
+<indexterm><primary>IsMoveLegal</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>IsMoveLegal</secondary></indexterm>
+<para><computeroutput>bool IsMoveLegal (const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp; Mat, const bool &amp; KeyUp, const bool &amp; KeyDown, const bool &amp; KeyRight, const bool &amp; KeyLeft, const <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; Pos, const <link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp; Param)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00031">31</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_aa61e0829c615216027761f9feafa253c_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_aa61e0829c615216027761f9feafa253c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1a0845b941aa45002f46dd1653274997dc"/><section>
+    <title>MenuP()</title>
+<indexterm><primary>MenuP</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>MenuP</secondary></indexterm>
+<para><computeroutput>void MenuP (<link linkend="_class_min_g_l">MinGL</link> &amp; window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt; clickablepool, tuple&lt; int, int &gt; Screen_size, int &amp; menuid, chrono::time_point&lt; chrono::steady_clock &gt; start)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00201">201</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a0845b941aa45002f46dd1653274997dc_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a0845b941aa45002f46dd1653274997dc_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1ac95434408d3f8bf774e3032eaa73ae4e"/><section>
+    <title>MoveToken()</title>
+<indexterm><primary>MoveToken</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>MoveToken</secondary></indexterm>
+<para><computeroutput>void MoveToken (<link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp; Mat, const bool &amp; KeyUp, const bool &amp; KeyDown, const bool &amp; KeyRight, const bool &amp; KeyLeft, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; Pos, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; Tp1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; Tp2)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00163">163</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_ac95434408d3f8bf774e3032eaa73ae4e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1a0e70e085afb41e8db9d8c7c8936dfad7"/><section>
+    <title>nextMove()</title>
+<indexterm><primary>nextMove</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>nextMove</secondary></indexterm>
+<para><computeroutput>pair&lt; char, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; nextMove (const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp; Mat, const bool &amp; KeyUp, const bool &amp; KeyDown, const bool &amp; KeyRight, const bool &amp; KeyLeft, const <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; Pos, const <link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp; Param, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; Tp1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &amp; Tp2)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00057">57</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a0e70e085afb41e8db9d8c7c8936dfad7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f"/><section>
+    <title>Options()</title>
+<indexterm><primary>Options</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>Options</secondary></indexterm>
+<para><computeroutput>void Options (<link linkend="_class_min_g_l">MinGL</link> &amp; window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt; clickablepool, tuple&lt; int, int &gt; Screen_size, int &amp; menuid, chrono::time_point&lt; chrono::steady_clock &gt; start)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00221">221</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a312034bd1e903262c8bf2bea6cdbee8f_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a312034bd1e903262c8bf2bea6cdbee8f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626"/><section>
+    <title>Pause()</title>
+<indexterm><primary>Pause</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>Pause</secondary></indexterm>
+<para><computeroutput>void Pause (<link linkend="_class_min_g_l">MinGL</link> &amp; window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt; clickablepool, tuple&lt; int, int &gt; Screen_size, int &amp; menuid, chrono::time_point&lt; chrono::steady_clock &gt; start)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00256">256</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_aa2a6ff67bcdbef686d904f6f47c02626_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_aa2a6ff67bcdbef686d904f6f47c02626_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1acfd932870183388e95db32d747ebaad0"/><section>
+    <title>ppal()</title>
+<indexterm><primary>ppal</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>ppal</secondary></indexterm>
+<para><computeroutput>int ppal (void )</computeroutput></para><para>
+
+<para>new main </para>
+</para>
+
+<para><formalpara><title>Returns</title>
+
+<para>0 if everything is OK </para>
+</formalpara>
+</para>
+<para>
+Definition at line <link linkend="_game_8cpp_source_1l00427">427</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_acfd932870183388e95db32d747ebaad0_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_acfd932870183388e95db32d747ebaad0_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8cpp_1a57e55da876e34d1b049962d00fac607e"/><section>
+    <title>Sprite()</title>
+<indexterm><primary>Sprite</primary><secondary>game.cpp</secondary></indexterm>
+<indexterm><primary>game.cpp</primary><secondary>Sprite</secondary></indexterm>
+<para><computeroutput>void Sprite (<link linkend="_class_min_g_l">MinGL</link> &amp; window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, string sprite)</computeroutput></para><para>
+Definition at line <link linkend="_game_8cpp_source_1l00117">117</link> of file <link linkend="_game_8cpp_source">game.cpp</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a57e55da876e34d1b049962d00fac607e_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8cpp_a57e55da876e34d1b049962d00fac607e_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

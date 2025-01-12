@@ -8,7 +8,7 @@
     <includes refid="rectangle_8h" local="yes">mingl/shape/rectangle.h</includes>
     <incdepgraph>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
         <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -156,7 +156,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="1" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="1" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="1" column="9" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="1" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="var">
@@ -171,21 +171,26 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="12" column="19" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="12" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="12" column="19" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="12" bodyend="-1"/>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_1a3b1be47d68f5800c6bfbb2cc3764c151" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp" startline="14" endline="25">clavier</referencedby>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="45" endline="49">dessiner</referencedby>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="15" endline="43">events</referencedby>
       </memberdef>
       <memberdef kind="variable" id="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a8a2590fbfc4686aa615f6ca9824224f9" prot="public" static="no" mutable="no">
         <type><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref></type>
         <definition>nsGraphics::RGBAcolor rectColor</definition>
         <argsstring></argsstring>
         <name>rectColor</name>
-        <initializer>= nsGraphics::KCyan</initializer>
+        <initializer>= <ref refid="namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad" kindref="member">nsGraphics::KCyan</ref></initializer>
         <briefdescription>
         </briefdescription>
         <detaileddescription>
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="13" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="13" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="13" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="13" bodyend="-1"/>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="45" endline="49">dessiner</referencedby>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="15" endline="43">events</referencedby>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -204,7 +209,31 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="15" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="15" bodyend="43"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="15" column="6" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="15" bodyend="43"/>
+        <references refid="unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc" compoundref="event_8hpp" startline="54">nsEvent::EventData_t::clickData</references>
+        <references refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" compoundref="event_8hpp" startline="64">nsEvent::Event_t::eventData</references>
+        <references refid="structns_event_1_1_event__t_1a4658fcb9ee305cae39da30840d64192c" compoundref="event_8hpp" startline="63">nsEvent::Event_t::eventType</references>
+        <references refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" compoundref="mingl_8cpp" startline="73" endline="76">MinGL::getEventManager</references>
+        <references refid="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" compoundref="event__manager_8cpp" startline="13" endline="16">nsEvent::EventManager::hasEvent</references>
+        <references refid="namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad" compoundref="rgbacolor_8h" startline="163">nsGraphics::KCyan</references>
+        <references refid="namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b" compoundref="rgbacolor_8h" startline="171">nsGraphics::KPurple</references>
+        <references refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7" compoundref="event_8hpp" startline="24">nsEvent::MouseClick</references>
+        <references refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6" compoundref="event_8hpp" startline="25">nsEvent::MouseMove</references>
+        <references refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" compoundref="event_8hpp" startline="55">nsEvent::EventData_t::moveData</references>
+        <references refid="classns_event_1_1_event_manager_1adb00a0a006f4caa976471e74bf99cdc9" compoundref="event__manager_8cpp" startline="23" endline="29">nsEvent::EventManager::pullEvent</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a8a2590fbfc4686aa615f6ca9824224f9" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="13">rectColor</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a11e48c63494b713861dcee17f0efcd33" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="12">rectPos</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d" compoundref="vec2d_8cpp" startline="183" endline="186">nsGraphics::Vec2D::setX</references>
+        <references refid="classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f" compoundref="vec2d_8cpp" startline="193" endline="196">nsGraphics::Vec2D::setY</references>
+        <references refid="structns_event_1_1_mouse_click_data__t_1a81252b916361dc4deab0f42510fdc928" compoundref="event_8hpp" startline="35">nsEvent::MouseClickData_t::state</references>
+        <references refid="structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb" compoundref="event_8hpp" startline="45">nsEvent::MouseMoveData_t::x</references>
+        <references refid="structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446" compoundref="event_8hpp" startline="46">nsEvent::MouseMoveData_t::y</references>
+        <referencedby refid="game_8cpp_1abeb01ff9eee7d59d0e2906d12379e0c4" compoundref="game_8cpp" startline="239" endline="254">Credits</referencedby>
+        <referencedby refid="game_8cpp_1a1e152641100487c240b9a3edfaf40890" compoundref="game_8cpp" startline="275" endline="425">GameLoop</referencedby>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="51" endline="88">main</referencedby>
+        <referencedby refid="game_8cpp_1a0845b941aa45002f46dd1653274997dc" compoundref="game_8cpp" startline="201" endline="219">MenuP</referencedby>
+        <referencedby refid="game_8cpp_1a312034bd1e903262c8bf2bea6cdbee8f" compoundref="game_8cpp" startline="221" endline="237">Options</referencedby>
+        <referencedby refid="game_8cpp_1aa2a6ff67bcdbef686d904f6f47c02626" compoundref="game_8cpp" startline="256" endline="273">Pause</referencedby>
       </memberdef>
       <memberdef kind="function" id="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -221,7 +250,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="45" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="45" bodyend="49"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="45" column="6" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="45" bodyend="49"/>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a8a2590fbfc4686aa615f6ca9824224f9" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="13">rectColor</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a11e48c63494b713861dcee17f0efcd33" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="12">rectPos</references>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp" startline="40" endline="76">main</referencedby>
       </memberdef>
       <memberdef kind="function" id="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -234,7 +266,16 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="51" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="51" bodyend="88"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" line="51" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp" bodystart="51" bodyend="88"/>
+        <references refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" compoundref="mingl_8cpp" startline="68" endline="71">MinGL::clearScreen</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="45" endline="49">dessiner</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="15" endline="43">events</references>
+        <references refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" compoundref="mingl_8cpp" startline="62" endline="66">MinGL::finishFrame</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a69c339b2966791489487938c49401cf3" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="1">FPS_LIMIT</references>
+        <references refid="class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d" compoundref="mingl_8h" startline="81" endline="85">MinGL::initGlut</references>
+        <references refid="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" compoundref="mingl_8cpp" startline="89" endline="125">MinGL::initGraphic</references>
+        <references refid="class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d" compoundref="mingl_8cpp" startline="258" endline="261">MinGL::isOpen</references>
+        <references refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" compoundref="rgbacolor_8h" startline="157">nsGraphics::KBlack</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -242,7 +283,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#define<sp/>FPS_LIMIT<sp/>60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1" refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a69c339b2966791489487938c49401cf3" refkind="member"><highlight class="preprocessor">#define<sp/>FPS_LIMIT<sp/>60</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -253,10 +294,10 @@
 <codeline lineno="9"><highlight class="normal"></highlight></codeline>
 <codeline lineno="10"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="11"><highlight class="normal"></highlight></codeline>
-<codeline lineno="12"><highlight class="normal"><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/>rectPos;</highlight></codeline>
-<codeline lineno="13"><highlight class="normal"><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/>rectColor<sp/>=<sp/>nsGraphics::KCyan;</highlight></codeline>
+<codeline lineno="12" refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a11e48c63494b713861dcee17f0efcd33" refkind="member"><highlight class="normal"><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>;</highlight></codeline>
+<codeline lineno="13" refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a8a2590fbfc4686aa615f6ca9824224f9" refkind="member"><highlight class="normal"><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a8a2590fbfc4686aa615f6ca9824224f9" kindref="member">rectColor</ref><sp/>=<sp/><ref refid="namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad" kindref="member">nsGraphics::KCyan</ref>;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>events(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window)</highlight></codeline>
+<codeline lineno="15" refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" kindref="member">events</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window)</highlight></codeline>
 <codeline lineno="16"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>vérifie<sp/>chaque<sp/>évènement<sp/>de<sp/>la<sp/>queue<sp/>d&apos;évènements</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">while</highlight><highlight class="normal"><sp/>(window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1a5a3119d969a296b8e94f223171fdf2e6" kindref="member">hasEvent</ref>())</highlight></codeline>
@@ -268,14 +309,14 @@
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{</highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72addbed44248cc7bf27e68c8e83a4af4c6" kindref="member">nsEvent::EventType_t::MouseMove</ref>:</highlight></codeline>
 <codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Il<sp/>s&apos;agit<sp/>d&apos;un<sp/>mouvement<sp/>de<sp/>souris</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectPos.<ref refid="classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d" kindref="member">setX</ref>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" kindref="member">moveData</ref>.<ref refid="structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb" kindref="member">x</ref>);</highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectPos.<ref refid="classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f" kindref="member">setY</ref>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" kindref="member">moveData</ref>.<ref refid="structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446" kindref="member">y</ref>);</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>.<ref refid="classns_graphics_1_1_vec2_d_1ae9d371fdd3817c6e9a3a1ae6ed3fd17d" kindref="member">setX</ref>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" kindref="member">moveData</ref>.<ref refid="structns_event_1_1_mouse_move_data__t_1a5093f057977a7d290ead30266c6599fb" kindref="member">x</ref>);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>.<ref refid="classns_graphics_1_1_vec2_d_1ac0e752e399ab2f727fe2644540b1208f" kindref="member">setY</ref>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1aac7ba31725a75d84fd32ea6a4d865a91" kindref="member">moveData</ref>.<ref refid="structns_event_1_1_mouse_move_data__t_1a9e72b2e9f3c2f68cc33391d076f2c446" kindref="member">y</ref>);</highlight></codeline>
 <codeline lineno="29"><highlight class="normal"></highlight></codeline>
 <codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">case</highlight><highlight class="normal"><sp/><ref refid="namespacens_event_1a6e501b1114a041d127a56f51c66ada72ac40555e94dcfb35e033e2314259db5f7" kindref="member">nsEvent::EventType_t::MouseClick</ref>:</highlight></codeline>
 <codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Il<sp/>s&apos;agit<sp/>d&apos;un<sp/>click<sp/>de<sp/>souris</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>rectColor<sp/>=<sp/>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc" kindref="member">clickData</ref>.<ref refid="structns_event_1_1_mouse_click_data__t_1a81252b916361dc4deab0f42510fdc928" kindref="member">state</ref><sp/>?<sp/>nsGraphics::KCyan<sp/>:<sp/>nsGraphics::KPurple);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a8a2590fbfc4686aa615f6ca9824224f9" kindref="member">rectColor</ref><sp/>=<sp/>(actualEvent.<ref refid="structns_event_1_1_event__t_1a148669454c11351db2ac902aad495ac8" kindref="member">eventData</ref>.<ref refid="unionns_event_1_1_event_data__t_1ac1478ee3007ce42a653e53c1200625bc" kindref="member">clickData</ref>.<ref refid="structns_event_1_1_mouse_click_data__t_1a81252b916361dc4deab0f42510fdc928" kindref="member">state</ref><sp/>?<sp/><ref refid="namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad" kindref="member">nsGraphics::KCyan</ref><sp/>:<sp/><ref refid="namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b" kindref="member">nsGraphics::KPurple</ref>);</highlight></codeline>
 <codeline lineno="35"><highlight class="normal"></highlight></codeline>
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">break</highlight><highlight class="normal">;</highlight></codeline>
 <codeline lineno="37"><highlight class="normal"></highlight></codeline>
@@ -286,16 +327,16 @@
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="43"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"></highlight></codeline>
-<codeline lineno="45"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dessiner(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window)</highlight></codeline>
+<codeline lineno="45" refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" kindref="member">dessiner</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window)</highlight></codeline>
 <codeline lineno="46"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="47"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>dessine<sp/>le<sp/>rectangle</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(rectPos,<sp/>rectPos<sp/>+<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(20,<sp/>20),<sp/>rectColor);</highlight></codeline>
+<codeline lineno="48"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref>,<sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a11e48c63494b713861dcee17f0efcd33" kindref="member">rectPos</ref><sp/>+<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(20,<sp/>20),<sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a8a2590fbfc4686aa615f6ca9824224f9" kindref="member">rectColor</ref>);</highlight></codeline>
 <codeline lineno="49"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="50"><highlight class="normal"></highlight></codeline>
-<codeline lineno="51"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()</highlight></codeline>
+<codeline lineno="51" refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
 <codeline lineno="52"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>le<sp/>système</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>window(</highlight><highlight class="stringliteral">&quot;04<sp/>-<sp/>Souris&quot;</highlight><highlight class="normal">,<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(640,<sp/>640),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(128,<sp/>128),<sp/>nsGraphics::KBlack);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>window(</highlight><highlight class="stringliteral">&quot;04<sp/>-<sp/>Souris&quot;</highlight><highlight class="normal">,<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(640,<sp/>640),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(128,<sp/>128),<sp/><ref refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" kindref="member">nsGraphics::KBlack</ref>);</highlight></codeline>
 <codeline lineno="55"><highlight class="normal"><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d" kindref="member">initGlut</ref>();</highlight></codeline>
 <codeline lineno="56"><highlight class="normal"><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" kindref="member">initGraphic</ref>();</highlight></codeline>
 <codeline lineno="57"><highlight class="normal"></highlight></codeline>
@@ -312,8 +353,8 @@
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" kindref="member">clearScreen</ref>();</highlight></codeline>
 <codeline lineno="69"><highlight class="normal"></highlight></codeline>
 <codeline lineno="70"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>fait<sp/>tourner<sp/>les<sp/>procédures</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>events(window);</highlight></codeline>
-<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dessiner(window);</highlight></codeline>
+<codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a046cb13499b350b9cfa15afc669e9707" kindref="member">events</ref>(window);</highlight></codeline>
+<codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" kindref="member">dessiner</ref>(window);</highlight></codeline>
 <codeline lineno="73"><highlight class="normal"></highlight></codeline>
 <codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>finit<sp/>la<sp/>frame<sp/>en<sp/>cours</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kindref="member">finishFrame</ref>();</highlight></codeline>
@@ -322,7 +363,7 @@
 <codeline lineno="78"><highlight class="comment"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>//<sp/>window.getEventManager().clearEvents();</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="79"><highlight class="normal"></highlight></codeline>
 <codeline lineno="80"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>attend<sp/>un<sp/>peu<sp/>pour<sp/>limiter<sp/>le<sp/>framerate<sp/>et<sp/>soulager<sp/>le<sp/>CPU</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/>FPS_LIMIT)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
+<codeline lineno="81"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1a69c339b2966791489487938c49401cf3" kindref="member">FPS_LIMIT</ref>)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
 <codeline lineno="82"><highlight class="normal"></highlight></codeline>
 <codeline lineno="83"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>récupère<sp/>le<sp/>temps<sp/>de<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frameTime<sp/>=<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start);</highlight></codeline>
@@ -331,6 +372,6 @@
 <codeline lineno="87"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="88"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp"/>
   </compounddef>
 </doxygen>

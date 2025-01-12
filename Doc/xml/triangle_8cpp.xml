@@ -74,7 +74,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/triangle.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/triangle.cpp</label>
         <link refid="triangle_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -147,7 +147,7 @@
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/>glVertex2i(m_thirdPosition.getX(),<sp/>m_thirdPosition.getY());</highlight></codeline>
 <codeline lineno="38"><highlight class="normal"><sp/><sp/><sp/><sp/>glEnd();</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(getBorderColor()<sp/>!=<sp/>nsGraphics::KTransparent)<sp/>{</highlight></codeline>
+<codeline lineno="40"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">if</highlight><highlight class="normal"><sp/>(getBorderColor()<sp/>!=<sp/><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref>)<sp/>{</highlight></codeline>
 <codeline lineno="41"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>a<sp/>une<sp/>bordure,<sp/>on<sp/>l&apos;affiche</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref><sp/>borderColor<sp/>=<sp/>getBorderColor();</highlight></codeline>
 <codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>glColor4ub(borderColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79" kindref="member">getRed</ref>(),<sp/>borderColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" kindref="member">getGreen</ref>(),<sp/>borderColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" kindref="member">getBlue</ref>(),<sp/>borderColor.<ref refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" kindref="member">getAlpha</ref>());</highlight></codeline>
@@ -295,6 +295,6 @@
 <codeline lineno="185"><highlight class="normal"><sp/><sp/><sp/><sp/>m_thirdPosition<sp/>=<sp/>thirdPosition;</highlight></codeline>
 <codeline lineno="186"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>setThirdPosition()</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/triangle.cpp"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/triangle.cpp"/>
   </compounddef>
 </doxygen>

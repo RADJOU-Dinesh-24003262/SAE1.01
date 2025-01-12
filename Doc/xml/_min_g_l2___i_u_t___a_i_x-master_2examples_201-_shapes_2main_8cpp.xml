@@ -11,7 +11,7 @@
     <includes refid="triangle_8h" local="yes">mingl/shape/triangle.h</includes>
     <incdepgraph>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
         <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -188,7 +188,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" line="1" column="9" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" bodystart="1" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" line="1" column="9" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" bodystart="1" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
@@ -207,7 +207,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" line="15" column="6" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" bodystart="15" bodyend="38"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" line="15" column="6" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" bodystart="15" bodyend="38"/>
+        <references refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" compoundref="rgbacolor_8h" startline="161">nsGraphics::KBlue</references>
+        <references refid="namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b" compoundref="rgbacolor_8h" startline="171">nsGraphics::KPurple</references>
+        <references refid="namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61" compoundref="rgbacolor_8h" startline="159">nsGraphics::KRed</references>
+        <references refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" compoundref="rgbacolor_8h" startline="158">nsGraphics::KWhite</references>
+        <references refid="namespacens_graphics_1a445ddb81e2a910db8e01a70403988966" compoundref="rgbacolor_8h" startline="162">nsGraphics::KYellow</references>
       </memberdef>
       <memberdef kind="function" id="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>int</type>
@@ -220,7 +225,17 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" line="40" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" bodystart="40" bodyend="76"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" line="40" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp" bodystart="40" bodyend="76"/>
+        <references refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" compoundref="event__manager_8cpp" startline="31" endline="35">nsEvent::EventManager::clearEvents</references>
+        <references refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" compoundref="mingl_8cpp" startline="68" endline="71">MinGL::clearScreen</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" startline="45" endline="49">dessiner</references>
+        <references refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" compoundref="mingl_8cpp" startline="62" endline="66">MinGL::finishFrame</references>
+        <references refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_1a69c339b2966791489487938c49401cf3" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp" startline="1">FPS_LIMIT</references>
+        <references refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" compoundref="mingl_8cpp" startline="73" endline="76">MinGL::getEventManager</references>
+        <references refid="class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d" compoundref="mingl_8h" startline="81" endline="85">MinGL::initGlut</references>
+        <references refid="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" compoundref="mingl_8cpp" startline="89" endline="125">MinGL::initGraphic</references>
+        <references refid="class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d" compoundref="mingl_8cpp" startline="258" endline="261">MinGL::isOpen</references>
+        <references refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" compoundref="rgbacolor_8h" startline="157">nsGraphics::KBlack</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -228,7 +243,7 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline lineno="1"><highlight class="preprocessor">#define<sp/>FPS_LIMIT<sp/>60</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="1" refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_1a69c339b2966791489487938c49401cf3" refkind="member"><highlight class="preprocessor">#define<sp/>FPS_LIMIT<sp/>60</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="2"><highlight class="normal"></highlight></codeline>
 <codeline lineno="3"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="4"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;thread&gt;</highlight><highlight class="normal"></highlight></codeline>
@@ -242,35 +257,35 @@
 <codeline lineno="12"><highlight class="normal"></highlight></codeline>
 <codeline lineno="13"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal">std;</highlight></codeline>
 <codeline lineno="14"><highlight class="normal"></highlight></codeline>
-<codeline lineno="15"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/>dessiner(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window)</highlight></codeline>
+<codeline lineno="15" refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" kindref="member">dessiner</ref>(<ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>&amp;window)</highlight></codeline>
 <codeline lineno="16"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Pour<sp/>dessiner<sp/>quelque<sp/>chose<sp/>avec<sp/>minGL<sp/>2,<sp/>vous<sp/>pouvez<sp/>soit<sp/>instancier<sp/>l&apos;objet<sp/>dans<sp/>une<sp/>variable<sp/>et<sp/>l&apos;injecter<sp/>dans<sp/>la<sp/>fenêtre...</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref><sp/>rect1(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(20,<sp/>20),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(120,<sp/>120),<sp/>nsGraphics::KBlue);</highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref><sp/>rect1(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(20,<sp/>20),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(120,<sp/>120),<sp/><ref refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" kindref="member">nsGraphics::KBlue</ref>);</highlight></codeline>
 <codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/>rect1;</highlight></codeline>
 <codeline lineno="20"><highlight class="normal"></highlight></codeline>
 <codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>...ou<sp/>l&apos;injecter<sp/>directement<sp/>dans<sp/>la<sp/>fenêtre!</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(30,<sp/>30),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(160,<sp/>160),<sp/>nsGraphics::KPurple);</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_rectangle" kindref="compound">nsShape::Rectangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(30,<sp/>30),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(160,<sp/>160),<sp/><ref refid="namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b" kindref="member">nsGraphics::KPurple</ref>);</highlight></codeline>
 <codeline lineno="23"><highlight class="normal"></highlight></codeline>
 <codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>(Vous<sp/>voyez<sp/>par<sp/>ailleurs<sp/>que<sp/>l&apos;ordre<sp/>d&apos;affichage<sp/>est<sp/>important,<sp/>le<sp/>rectangle<sp/>violet<sp/>masque<sp/>maintenant<sp/>une<sp/>partie<sp/>du<sp/>rectangle<sp/>bleu.)</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="25"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Vous<sp/>pouvez<sp/>combiner<sp/>les<sp/>différentes<sp/>formes<sp/>disponibles<sp/>pour<sp/>faire<sp/>des<sp/>choses<sp/>plus<sp/>complexes.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="26"><highlight class="normal"></highlight></codeline>
 <codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Voilà<sp/>un<sp/>bouton<sp/>de<sp/>fermeture.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_circle" kindref="compound">nsShape::Circle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(100,<sp/>320),<sp/>50,<sp/>nsGraphics::KRed);</highlight></codeline>
-<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_line" kindref="compound">nsShape::Line</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(70,<sp/>290),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(130,<sp/>350),<sp/>nsGraphics::KWhite,<sp/>3.f);</highlight></codeline>
-<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_line" kindref="compound">nsShape::Line</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(130,<sp/>290),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(70,<sp/>350),<sp/>nsGraphics::KWhite,<sp/>3.f);</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_circle" kindref="compound">nsShape::Circle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(100,<sp/>320),<sp/>50,<sp/><ref refid="namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61" kindref="member">nsGraphics::KRed</ref>);</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_line" kindref="compound">nsShape::Line</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(70,<sp/>290),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(130,<sp/>350),<sp/><ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref>,<sp/>3.f);</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_line" kindref="compound">nsShape::Line</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(130,<sp/>290),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(70,<sp/>350),<sp/><ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref>,<sp/>3.f);</highlight></codeline>
 <codeline lineno="31"><highlight class="normal"></highlight></codeline>
 <codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Et<sp/>voilà<sp/>la<sp/>triforce.</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_triangle" kindref="compound">nsShape::Triangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(200,<sp/>620),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(400,<sp/>620),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(300,<sp/>420),<sp/>nsGraphics::KYellow);</highlight></codeline>
-<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_triangle" kindref="compound">nsShape::Triangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(400,<sp/>620),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(600,<sp/>620),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(500,<sp/>420),<sp/>nsGraphics::KYellow);</highlight></codeline>
-<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_triangle" kindref="compound">nsShape::Triangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(300,<sp/>420),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(500,<sp/>420),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(400,<sp/>220),<sp/>nsGraphics::KYellow);</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_triangle" kindref="compound">nsShape::Triangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(200,<sp/>620),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(400,<sp/>620),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(300,<sp/>420),<sp/><ref refid="namespacens_graphics_1a445ddb81e2a910db8e01a70403988966" kindref="member">nsGraphics::KYellow</ref>);</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_triangle" kindref="compound">nsShape::Triangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(400,<sp/>620),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(600,<sp/>620),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(500,<sp/>420),<sp/><ref refid="namespacens_graphics_1a445ddb81e2a910db8e01a70403988966" kindref="member">nsGraphics::KYellow</ref>);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"><sp/><sp/><sp/><sp/>window<sp/>&lt;&lt;<sp/><ref refid="classns_shape_1_1_triangle" kindref="compound">nsShape::Triangle</ref>(<ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(300,<sp/>420),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(500,<sp/>420),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(400,<sp/>220),<sp/><ref refid="namespacens_graphics_1a445ddb81e2a910db8e01a70403988966" kindref="member">nsGraphics::KYellow</ref>);</highlight></codeline>
 <codeline lineno="36"><highlight class="normal"></highlight></codeline>
 <codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>N&apos;hésitez<sp/>pas<sp/>a<sp/>lire<sp/>la<sp/>doc<sp/>pour<sp/>plus<sp/>de<sp/>détails.</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="38"><highlight class="normal">}</highlight></codeline>
 <codeline lineno="39"><highlight class="normal"></highlight></codeline>
-<codeline lineno="40"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>main()</highlight></codeline>
+<codeline lineno="40" refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" refkind="member"><highlight class="normal"></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" kindref="member">main</ref>()</highlight></codeline>
 <codeline lineno="41"><highlight class="normal">{</highlight></codeline>
 <codeline lineno="42"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>Initialise<sp/>le<sp/>système</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>window(</highlight><highlight class="stringliteral">&quot;01<sp/>-<sp/>Shapes&quot;</highlight><highlight class="normal">,<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(640,<sp/>640),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(128,<sp/>128),<sp/>nsGraphics::KBlack);</highlight></codeline>
+<codeline lineno="43"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l" kindref="compound">MinGL</ref><sp/>window(</highlight><highlight class="stringliteral">&quot;01<sp/>-<sp/>Shapes&quot;</highlight><highlight class="normal">,<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(640,<sp/>640),<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(128,<sp/>128),<sp/><ref refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" kindref="member">nsGraphics::KBlack</ref>);</highlight></codeline>
 <codeline lineno="44"><highlight class="normal"><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d" kindref="member">initGlut</ref>();</highlight></codeline>
 <codeline lineno="45"><highlight class="normal"><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc" kindref="member">initGraphic</ref>();</highlight></codeline>
 <codeline lineno="46"><highlight class="normal"></highlight></codeline>
@@ -287,7 +302,7 @@
 <codeline lineno="57"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a86c940758616957683ffb2e239bba774" kindref="member">clearScreen</ref>();</highlight></codeline>
 <codeline lineno="58"><highlight class="normal"></highlight></codeline>
 <codeline lineno="59"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>dessine<sp/>les<sp/>formes<sp/>géométriques</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>dessiner(window);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1af23d22d2bd7086a118ad48a5ce404d7e" kindref="member">dessiner</ref>(window);</highlight></codeline>
 <codeline lineno="61"><highlight class="normal"></highlight></codeline>
 <codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>finit<sp/>la<sp/>frame<sp/>en<sp/>cours</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda" kindref="member">finishFrame</ref>();</highlight></codeline>
@@ -296,7 +311,7 @@
 <codeline lineno="66"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>window.<ref refid="class_min_g_l_1ab558253439905930836ab4910a7ae253" kindref="member">getEventManager</ref>().<ref refid="classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4" kindref="member">clearEvents</ref>();</highlight></codeline>
 <codeline lineno="67"><highlight class="normal"></highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>attend<sp/>un<sp/>peu<sp/>pour<sp/>limiter<sp/>le<sp/>framerate<sp/>et<sp/>soulager<sp/>le<sp/>CPU</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/>FPS_LIMIT)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this_thread::sleep_for(chrono::milliseconds(1000<sp/>/<sp/><ref refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_1a69c339b2966791489487938c49401cf3" kindref="member">FPS_LIMIT</ref>)<sp/>-<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start));</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
 <codeline lineno="71"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="comment">//<sp/>On<sp/>récupère<sp/>le<sp/>temps<sp/>de<sp/>frame</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="72"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>frameTime<sp/>=<sp/>chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()<sp/>-<sp/>start);</highlight></codeline>
@@ -305,6 +320,6 @@
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>0;</highlight></codeline>
 <codeline lineno="76"><highlight class="normal">}</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp"/>
   </compounddef>
 </doxygen>

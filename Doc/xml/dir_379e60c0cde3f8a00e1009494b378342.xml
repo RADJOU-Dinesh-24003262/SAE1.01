@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_379e60c0cde3f8a00e1009494b378342" kind="dir">
+    <compoundname>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable</compoundname>
+    <innerfile refid="09-_custom_transitionable_2bgtext_8cpp">bgtext.cpp</innerfile>
+    <innerfile refid="09-_custom_transitionable_2bgtext_8h">bgtext.h</innerfile>
+    <innerfile refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp">main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/"/>
+  </compounddef>
+</doxygen>

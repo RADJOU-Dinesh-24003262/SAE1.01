@@ -346,6 +346,15 @@ Parameters</title>
                     </para>
                 </formalpara>
                 </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_transition_1_1_transition_contract_a8f1ebafd9966553678fd7845f35bac33_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 </section>
 <section>
@@ -446,5 +455,5 @@ Definition at line <link linkend="_transition__contract_8h_source_1l00128">128</
 </section>
 <para>
 The documentation for this class was generated from the following file:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/<link linkend="_transition__contract_8h">transition_contract.h</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/<link linkend="_transition__contract_8h">transition_contract.h</link></section>
 </section>

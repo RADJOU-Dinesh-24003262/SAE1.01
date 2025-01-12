@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_47b6ac560126e29edfa54c6124d083bc" kind="dir">
+    <compoundname>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics</compoundname>
+    <innerfile refid="idrawable_8h">idrawable.h</innerfile>
+    <innerfile refid="rgbacolor_8h">rgbacolor.h</innerfile>
+    <innerfile refid="vec2d_8h">vec2d.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics/"/>
+  </compounddef>
+</doxygen>

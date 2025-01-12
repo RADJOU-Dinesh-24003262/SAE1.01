@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_transition_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/transition/transition.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/transition/transition.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mingl/transition/transition.h&quot;
+#include &lt;algorithm&gt;
+</programlisting>Include dependency graph for transition.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="transition_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_transition_8cpp_1adf1b33de7a9f44e3126ab220c751d392">TRANSITION</link>   <link linkend="_classns_transition_1_1_transition">nsTransition::Transition</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_transition_8cpp_1adf1b33de7a9f44e3126ab220c751d392"/><section>
+    <title>TRANSITION</title>
+<indexterm><primary>TRANSITION</primary><secondary>transition.cpp</secondary></indexterm>
+<indexterm><primary>transition.cpp</primary><secondary>TRANSITION</secondary></indexterm>
+<para><computeroutput>#define TRANSITION   <link linkend="_classns_transition_1_1_transition">nsTransition::Transition</link></computeroutput></para><para>
+Definition at line <link linkend="_transition_8cpp_source_1l00015">15</link> of file <link linkend="_transition_8cpp_source">transition.cpp</link>.</para>
+</section>
+</section>
+</section>

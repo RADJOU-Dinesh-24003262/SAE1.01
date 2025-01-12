@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_d7a6f6f3dab460010a2ab5785f099ad4" kind="dir">
+    <compoundname>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/07-Audio</compoundname>
+    <innerfile refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp">main.cpp</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/07-Audio/"/>
+  </compounddef>
+</doxygen>

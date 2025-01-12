@@ -13,14 +13,15 @@ var searchData=
   ['operator_2f_10',['operator/',['../classns_graphics_1_1_vec2_d.html#aaabc44f047e46433d0115fbc49b3ae2f',1,'nsGraphics::Vec2D::operator/(const Vec2D &amp;pos) const'],['../classns_graphics_1_1_vec2_d.html#ae3adeb741fa6137acf0edbcf02ca58af',1,'nsGraphics::Vec2D::operator/(const float &amp;n) const']]],
   ['operator_2f_3d_11',['operator/=',['../classns_graphics_1_1_vec2_d.html#a1146ac9d05c667bb4a46140858953711',1,'nsGraphics::Vec2D']]],
   ['operator_3c_12',['operator&lt;',['../classns_graphics_1_1_vec2_d.html#accfe96cfa5b8495a0b14c7087068064e',1,'nsGraphics::Vec2D']]],
-  ['operator_3c_3c_13',['operator&lt;&lt;',['../classns_graphics_1_1_i_drawable.html#a9bb3952d4e675a663f2dbbda11e79395',1,'nsGraphics::IDrawable::operator&lt;&lt;()'],['../classns_util_1_1_i_editable.html#a53db4e7832b7c4579b331800bb0cae70',1,'nsUtil::IEditable::operator&lt;&lt;()']]],
+  ['operator_3c_3c_13',['operator&lt;&lt;',['../classns_graphics_1_1_i_drawable.html#a9bb3952d4e675a663f2dbbda11e79395',1,'nsGraphics::IDrawable::operator&lt;&lt;()'],['../classns_util_1_1_i_editable.html#a53db4e7832b7c4579b331800bb0cae70',1,'nsUtil::IEditable::operator&lt;&lt;()'],['../namespacens_util.html#a95ba3ba3ebef98e447b47ee40f55dd1a',1,'nsUtil::operator&lt;&lt;()']]],
   ['operator_3c_3d_14',['operator&lt;=',['../classns_graphics_1_1_vec2_d.html#afd5e0e3ba77ef971f8d022d69a4a2647',1,'nsGraphics::Vec2D']]],
   ['operator_3d_15',['operator=',['../classns_graphics_1_1_vec2_d.html#a041926192c1d2c579b12dcf1eb1725d5',1,'nsGraphics::Vec2D']]],
   ['operator_3d_3d_16',['operator==',['../classns_graphics_1_1_r_g_b_acolor.html#a685b4a48d19594bd29f136e1f74fee85',1,'nsGraphics::RGBAcolor::operator==()'],['../classns_graphics_1_1_vec2_d.html#a94b4b8420a450dd284311c49cb0b2e6b',1,'nsGraphics::Vec2D::operator==(const Vec2D &amp;pos) const']]],
   ['operator_3e_17',['operator&gt;',['../classns_graphics_1_1_vec2_d.html#a30da0e7984d8c3e7a66bbdcdcc24c9cb',1,'nsGraphics::Vec2D']]],
   ['operator_3e_3d_18',['operator&gt;=',['../classns_graphics_1_1_vec2_d.html#a478dad2852611070874c6c9e5663b570',1,'nsGraphics::Vec2D']]],
-  ['outils_20mingl_202_19',['Outils minGL 2',['../md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__s_a_e__j_e_u__min_g_l2__i_u_t__a_i_x_master_tools__r_e_a_d_m_e.html',1,'']]],
-  ['oval_20',['Oval',['../classns_shape_1_1_oval.html',1,'nsShape::Oval'],['../classns_shape_1_1_oval.html#af839fdfa08b1b77edc54a83e1abcadfb',1,'nsShape::Oval::Oval()']]],
-  ['oval_2ecpp_21',['oval.cpp',['../oval_8cpp.html',1,'']]],
-  ['oval_2eh_22',['oval.h',['../oval_8h.html',1,'']]]
+  ['options_19',['Options',['../game_8cpp.html#a312034bd1e903262c8bf2bea6cdbee8f',1,'Options(MinGL &amp;window, vector&lt; tuple&lt; vector&lt; int &gt;, vector&lt; int &gt;, int &gt; &gt; clickablepool, tuple&lt; int, int &gt; Screen_size, int &amp;menuid, chrono::time_point&lt; chrono::steady_clock &gt; start):&#160;game.cpp'],['../game_8h.html#ac9f54c7b2df4106d5bf5f209f2c1741d',1,'Options(MinGL &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start):&#160;game.h']]],
+  ['outils_20mingl_202_20',['Outils minGL 2',['../md__home__theo__t_xC3_xA9l_xC3_xA9chargements_sae__min_g_l2__i_u_t__a_i_x_master_tools__r_e_a_d_m_e.html',1,'']]],
+  ['oval_21',['Oval',['../classns_shape_1_1_oval.html',1,'nsShape::Oval'],['../classns_shape_1_1_oval.html#af839fdfa08b1b77edc54a83e1abcadfb',1,'nsShape::Oval::Oval()']]],
+  ['oval_2ecpp_22',['oval.cpp',['../oval_8cpp.html',1,'']]],
+  ['oval_2eh_23',['oval.h',['../oval_8h.html',1,'']]]
 ];

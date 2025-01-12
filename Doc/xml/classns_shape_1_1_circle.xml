@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="32" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" bodystart="32" bodyend="39"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="32" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" bodystart="32" bodyend="39"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="106" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" bodystart="106" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="106" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classns_shape_1_1_circle_1aa1b42f82217c300a282d9e42079b530f" prot="private" static="no" mutable="no">
         <type>unsigned</type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="111" column="14" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" bodystart="111" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="111" column="14" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -122,7 +122,7 @@
         <param>
           <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
           <declname>borderColor</declname>
-          <defval>nsGraphics::KTransparent</defval>
+          <defval><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref></defval>
         </param>
         <briefdescription>
 <para>Constructeur pour la classe <ref refid="classns_shape_1_1_circle" kindref="compound">Circle</ref>. </para>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="49" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="16" bodyend="20"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="49" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="16" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_circle_1a2446e688c063dcb2693adfcfacbb2804" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="55" column="13"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="55" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_circle_1a03be5cdd7d6a0feaa7d6b0a819389a7a" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -200,11 +200,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="57" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="22" bodyend="63"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="57" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="22" bodyend="63"/>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" compoundref="rgbacolor_8cpp" startline="46" endline="49">nsGraphics::RGBAcolor::getAlpha</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" compoundref="rgbacolor_8cpp" startline="56" endline="59">nsGraphics::RGBAcolor::getBlue</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" compoundref="rgbacolor_8cpp" startline="66" endline="69">nsGraphics::RGBAcolor::getGreen</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79" compoundref="rgbacolor_8cpp" startline="76" endline="79">nsGraphics::RGBAcolor::getRed</references>
+        <references refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" compoundref="rgbacolor_8h" startline="175">nsGraphics::KTransparent</references>
         <references refid="macros_8h_1a86d500a34c624c2cae56bc25a31b12f3" compoundref="macros_8h" startline="17">UNUSED</references>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_circle_1aae4610d0c110ad09da424c5a3ad91aac" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -247,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="59" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="65" bodyend="103"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="59" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="65" bodyend="103"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_circle_1a9a2fc6b4a852e25922e5a1732d39644a" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -289,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="60" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="105" bodyend="143"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="60" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="105" bodyend="143"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_circle_1a8b1f88a61fb38c283b11600e4eec6fe3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classns_shape_1_1_circle" kindref="compound">Circle</ref></type>
@@ -319,7 +320,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="67" column="12" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="145" bodyend="148"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="67" column="12" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="145" bodyend="148"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_circle_1ad34827f3120b9331389a00cbf02468cb" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classns_shape_1_1_circle" kindref="compound">Circle</ref></type>
@@ -348,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="74" column="12" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="150" bodyend="153"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="74" column="12" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="150" bodyend="153"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_circle_1a85b4102c4a23101fba4f90c1f8e84168" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
@@ -363,7 +364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="80" column="29" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="165" bodyend="168"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="80" column="29" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="165" bodyend="168"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_circle_1ac4e73227c9ec7e22670bd012b6f37bef" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -392,7 +393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="87" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="170" bodyend="173"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="87" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="170" bodyend="173"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_circle_1afcb275822a67ec49167fe122ab74872c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>unsigned</type>
@@ -407,7 +408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="93" column="14" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="155" bodyend="158"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="93" column="14" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="155" bodyend="158"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_circle_1a5f20408e41621d21487b6162eabc3a7d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -436,7 +437,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="100" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="160" bodyend="163"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="100" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp" bodystart="160" bodyend="163"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -506,7 +507,7 @@
         <link refid="classns_util_1_1_i_editable"/>
       </node>
     </collaborationgraph>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="25" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" bodystart="26" bodyend="113"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" line="25" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h" bodystart="26" bodyend="113"/>
     <listofallmembers>
       <member refid="classns_shape_1_1_circle_1a06b1c1c7ea1e4ec8228d929e7b3966ee" prot="public" virt="non-virtual"><scope>nsShape::Circle</scope><name>Circle</name></member>
       <member refid="classns_shape_1_1_circle_1a03be5cdd7d6a0feaa7d6b0a819389a7a" prot="public" virt="virtual"><scope>nsShape::Circle</scope><name>draw</name></member>

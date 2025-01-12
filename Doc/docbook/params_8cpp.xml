@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_params_8cpp" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/Jeu/params.cpp File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/Jeu/params.cpp</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &lt;string&gt;
+#include &quot;params.h&quot;
+#include &lt;fstream&gt;
+#include &lt;iostream&gt;
+</programlisting>Include dependency graph for params.cpp:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="params_8cpp__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_params_8cpp_1a725b86f4f23b75fda4f70441f7b0fcca">initParams</link> (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;Param)</para>
+</listitem>
+            <listitem><para>void <link linkend="_params_8cpp_1ac3adf30120fc96c74f84762bf232cd54">LoadParams</link> (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;Param)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_params_8cpp_1a725b86f4f23b75fda4f70441f7b0fcca"/><section>
+    <title>initParams()</title>
+<indexterm><primary>initParams</primary><secondary>params.cpp</secondary></indexterm>
+<indexterm><primary>params.cpp</primary><secondary>initParams</secondary></indexterm>
+<para><computeroutput>void initParams (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp; Param)</computeroutput></para><para>
+Definition at line <link linkend="_params_8cpp_source_1l00009">9</link> of file <link linkend="_params_8cpp_source">params.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="params_8cpp_a725b86f4f23b75fda4f70441f7b0fcca_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_params_8cpp_1ac3adf30120fc96c74f84762bf232cd54"/><section>
+    <title>LoadParams()</title>
+<indexterm><primary>LoadParams</primary><secondary>params.cpp</secondary></indexterm>
+<indexterm><primary>params.cpp</primary><secondary>LoadParams</secondary></indexterm>
+<para><computeroutput>void LoadParams (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp; Param)</computeroutput></para><para>
+Definition at line <link linkend="_params_8cpp_source_1l00032">32</link> of file <link linkend="_params_8cpp_source">params.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="params_8cpp_ac3adf30120fc96c74f84762bf232cd54_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

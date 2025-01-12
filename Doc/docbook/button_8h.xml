@@ -1,0 +1,109 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_button_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/sprites/button.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/sprites/button.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mingl/shape/rectangle.h&quot;
+#include &quot;mingl/shape/circle.h&quot;
+</programlisting>Include dependency graph for button.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="button_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="button_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_button_8h_1a9139d7539d77e69aa7b38e4976a62306">Button</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, int pos1_x, int pos1_y, int pos2_x, int pos2_y, int round, <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> color)</para>
+
+<para>cette fonction dessine un bouton avec des coins arrondis </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_button_8h_1a9139d7539d77e69aa7b38e4976a62306"/><section>
+    <title>Button()</title>
+<indexterm><primary>Button</primary><secondary>button.h</secondary></indexterm>
+<indexterm><primary>button.h</primary><secondary>Button</secondary></indexterm>
+<para><computeroutput>void Button (<link linkend="_class_min_g_l">MinGL</link> &amp; window, int pos1_x, int pos1_y, int pos2_x, int pos2_y, int round, <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> color)</computeroutput></para><para>
+
+<para>cette fonction dessine un bouton avec des coins arrondis </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>Référence à l&apos;objet <link linkend="_class_min_g_l">MinGL</link> pour dessiner les formes. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pos1_x</entry><entry>
+<para>Position x du coin supérieur gauche du bouton. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pos1_y</entry><entry>
+<para>Position y du coin supérieur gauche du bouton. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pos2_x</entry><entry>
+<para>Position x du coin inférieur droit du bouton. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pos2_y</entry><entry>
+<para>Position y du coin inférieur droit du bouton. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>round</entry><entry>
+<para>Rayon des coins arrondis du bouton. Si ce rayon est plus grand que la moitié de la largeur du bouton, il sera ajusté. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>color</entry><entry>
+<para>Couleur du bouton </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_button_8h_source_1l00028">28</link> of file <link linkend="_button_8h_source">button.h</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="button_8h_a9139d7539d77e69aa7b38e4976a62306_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

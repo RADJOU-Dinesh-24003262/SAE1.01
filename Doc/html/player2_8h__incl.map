@@ -1,5 +1,5 @@
-<map id="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/player2.h" name="/home/Theo/Téléchargements/sae/SAE_JEU/sprites/player2.h">
-<area shape="rect" id="node1" title="Affiche le sprite du player 2." alt="" coords="338,5,559,47"/>
+<map id="/home/Theo/Téléchargements/sae/sprites/player2.h" name="/home/Theo/Téléchargements/sae/sprites/player2.h">
+<area shape="rect" id="node1" title="Affiche le sprite du player 2." alt="" coords="341,5,556,47"/>
 <area shape="rect" id="node2" href="$circle_8h.html" title="Représente un cercle." alt="" coords="460,95,613,121"/>
 <area shape="rect" id="node15" href="$oval_8h.html" title="Représente un oval." alt="" coords="289,95,435,121"/>
 <area shape="rect" id="node3" href="$shape_8h.html" title="Représente une forme." alt="" coords="325,169,399,196"/>

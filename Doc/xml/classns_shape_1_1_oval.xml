@@ -65,7 +65,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="32" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" bodystart="32" bodyend="39"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="32" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" bodystart="32" bodyend="39"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -82,7 +82,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="106" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" bodystart="106" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="106" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" bodystart="106" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classns_shape_1_1_oval_1aa95470b20a5d3d940e033e50f04d348d" prot="private" static="no" mutable="no">
         <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref></type>
@@ -97,7 +97,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="111" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" bodystart="111" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="111" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" bodystart="111" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -122,7 +122,7 @@
         <param>
           <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
           <declname>borderColor</declname>
-          <defval>nsGraphics::KTransparent</defval>
+          <defval><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">nsGraphics::KTransparent</ref></defval>
         </param>
         <briefdescription>
 <para>Constructeur pour la classe <ref refid="classns_shape_1_1_oval" kindref="compound">Oval</ref>. </para>
@@ -165,7 +165,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="49" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="16" bodyend="20"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="49" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="16" bodyend="20"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_oval_1a323e0bcaf712c2ddad124adc42ca433b" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -180,7 +180,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="55" column="13"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="55" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_oval_1a93036caafaf315f62676e95dccb5ec65" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -200,11 +200,12 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="57" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="22" bodyend="63"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="57" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="22" bodyend="63"/>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" compoundref="rgbacolor_8cpp" startline="46" endline="49">nsGraphics::RGBAcolor::getAlpha</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" compoundref="rgbacolor_8cpp" startline="56" endline="59">nsGraphics::RGBAcolor::getBlue</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" compoundref="rgbacolor_8cpp" startline="66" endline="69">nsGraphics::RGBAcolor::getGreen</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79" compoundref="rgbacolor_8cpp" startline="76" endline="79">nsGraphics::RGBAcolor::getRed</references>
+        <references refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" compoundref="rgbacolor_8h" startline="175">nsGraphics::KTransparent</references>
         <references refid="macros_8h_1a86d500a34c624c2cae56bc25a31b12f3" compoundref="macros_8h" startline="17">UNUSED</references>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_oval_1a24b1974daa7894aee5dce3edb9056e03" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
@@ -247,7 +248,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="59" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="65" bodyend="104"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="59" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="65" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_oval_1a56c7b08484c2dc730e4850ff191aa80d" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -289,7 +290,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="60" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="106" bodyend="145"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="60" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="106" bodyend="145"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_oval_1af87d45ca6ab470b17189fc1d50a14343" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classns_shape_1_1_oval" kindref="compound">Oval</ref></type>
@@ -319,7 +320,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="67" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="147" bodyend="150"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="67" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="147" bodyend="150"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_oval_1a265f23778e17f28a9cf247bf3fe25c9d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classns_shape_1_1_oval" kindref="compound">Oval</ref></type>
@@ -348,7 +349,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="74" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="152" bodyend="155"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="74" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="152" bodyend="155"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_oval_1a446b4eee9569adca380f5f9ba1ddc832" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
@@ -363,7 +364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="80" column="29" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="167" bodyend="170"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="80" column="29" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="167" bodyend="170"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_oval_1addd2809c1ba6ec90453a75b94d9707ff" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -392,7 +393,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="87" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="172" bodyend="175"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="87" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="172" bodyend="175"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_oval_1abb39756c5ed715fed211eba826db7506" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
@@ -407,7 +408,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="93" column="29" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="157" bodyend="160"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="93" column="29" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="157" bodyend="160"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_oval_1af8569e0b2f6549b4bec902f87618a1f5" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -436,7 +437,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="100" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="162" bodyend="165"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="100" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp" bodystart="162" bodyend="165"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -506,7 +507,7 @@
         <link refid="classns_util_1_1_i_editable"/>
       </node>
     </collaborationgraph>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="25" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" bodystart="26" bodyend="113"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" line="25" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h" bodystart="26" bodyend="113"/>
     <listofallmembers>
       <member refid="classns_shape_1_1_oval_1a93036caafaf315f62676e95dccb5ec65" prot="public" virt="virtual"><scope>nsShape::Oval</scope><name>draw</name></member>
       <member refid="classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d" prot="public" virt="non-virtual"><scope>nsShape::Oval</scope><name>getBorderColor</name></member>

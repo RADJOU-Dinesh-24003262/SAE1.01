@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_6f455e909894971c3f4cc97b9663c71b" kind="dir">
+    <compoundname>/home/Theo/Téléchargements/sae/Jeu</compoundname>
+    <innerfile refid="game_8cpp">game.cpp</innerfile>
+    <innerfile refid="game_8h">game.h</innerfile>
+    <innerfile refid="gridmanagement_8cpp">gridmanagement.cpp</innerfile>
+    <innerfile refid="gridmanagement_8h">gridmanagement.h</innerfile>
+    <innerfile refid="_menu_management_8h">MenuManagement.h</innerfile>
+    <innerfile refid="params_8cpp">params.cpp</innerfile>
+    <innerfile refid="params_8h">params.h</innerfile>
+    <innerfile refid="type_8h">type.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/Jeu/"/>
+  </compounddef>
+</doxygen>

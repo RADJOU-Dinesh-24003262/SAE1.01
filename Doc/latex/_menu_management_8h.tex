@@ -1,0 +1,182 @@
+\hypertarget{_menu_management_8h}{}\doxysection{/home/\+Theo/\+Téléchargements/sae/\+Jeu/\+Menu\+Management.h File Reference}
+\label{_menu_management_8h}\index{/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h@{/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h}}
+{\ttfamily \#include \char`\"{}mingl/mingl.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}vector\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mingl/shape/rectangle.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}sprites/button.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mingl/gui/text.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$fstream$>$}\newline
+{\ttfamily \#include $<$string$>$}\newline
+Include dependency graph for Menu\+Management.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_menu_management_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=241pt]{_menu_management_8h__dep__incl}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{_menu_management_8h_afab161c3544224d228a3e8e64a3eae08}{Interface\+MenuP}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, int mat\+\_\+x, int mat\+\_\+y)
+\item 
+void \mbox{\hyperlink{_menu_management_8h_ab2a2e33bb6aff7164d540d7a50bdd38f}{Interface\+Pause}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, int mat\+\_\+x, int mat\+\_\+y)
+\item 
+void \mbox{\hyperlink{_menu_management_8h_afc733d7fa1650fe258aa4fd3c704b799}{Interface\+Options}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, int mat\+\_\+x, int mat\+\_\+y)
+\item 
+void \mbox{\hyperlink{_menu_management_8h_ae72c2fefee518b729a3c7a320d27265a}{Interface\+Credits}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, int mat\+\_\+x, int mat\+\_\+y)
+\item 
+void \mbox{\hyperlink{_menu_management_8h_a4502ca76132916f74305fe40f59ae97d}{events}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$ \&clickablepool, int \&menuid)
+\begin{DoxyCompactList}\small\item\em Handle user input events such as mouse movement and clicks for menu navigation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \mbox{\hyperlink{_menu_management_8h_a11e48c63494b713861dcee17f0efcd33}{rect\+Pos}}
+\item 
+\mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \mbox{\hyperlink{_menu_management_8h_a8a2590fbfc4686aa615f6ca9824224f9}{rect\+Color}} = \mbox{\hyperlink{namespacens_graphics_ac3f029049cd7ede1dfa2c788749029ad}{ns\+Graphics\+::\+KCyan}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{_menu_management_8h_a4502ca76132916f74305fe40f59ae97d}\label{_menu_management_8h_a4502ca76132916f74305fe40f59ae97d}} 
+\index{MenuManagement.h@{MenuManagement.h}!events@{events}}
+\index{events@{events}!MenuManagement.h@{MenuManagement.h}}
+\doxysubsubsection{\texorpdfstring{events()}{events()}}
+{\footnotesize\ttfamily void events (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{vector$<$ tuple$<$ vector$<$ int $>$, vector$<$ int $>$, int $>$ $>$ \&}]{clickablepool,  }\item[{int \&}]{menuid }\end{DoxyParamCaption})}
+
+
+
+Handle user input events such as mouse movement and clicks for menu navigation. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em window} & \+: Mingl window \\
+\hline
+\mbox{\texttt{ in}}  & {\em clickablepool} & \+: list of clickable areas with their coordinates and associated menu ID \\
+\hline
+ & {\em \mbox{[}in/out\mbox{]}} & menuid \+: current menu ID, which is updated based on user clicks \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_menu_management_8h_source_l00117}{117}} of file \mbox{\hyperlink{_menu_management_8h_source}{Menu\+Management.\+h}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=306pt]{_menu_management_8h_a4502ca76132916f74305fe40f59ae97d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_menu_management_8h_ae72c2fefee518b729a3c7a320d27265a}\label{_menu_management_8h_ae72c2fefee518b729a3c7a320d27265a}} 
+\index{MenuManagement.h@{MenuManagement.h}!InterfaceCredits@{InterfaceCredits}}
+\index{InterfaceCredits@{InterfaceCredits}!MenuManagement.h@{MenuManagement.h}}
+\doxysubsubsection{\texorpdfstring{InterfaceCredits()}{InterfaceCredits()}}
+{\footnotesize\ttfamily void Interface\+Credits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{int}]{mat\+\_\+x,  }\item[{int}]{mat\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_management_8h_source_l00097}{97}} of file \mbox{\hyperlink{_menu_management_8h_source}{Menu\+Management.\+h}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_menu_management_8h_ae72c2fefee518b729a3c7a320d27265a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_menu_management_8h_afab161c3544224d228a3e8e64a3eae08}\label{_menu_management_8h_afab161c3544224d228a3e8e64a3eae08}} 
+\index{MenuManagement.h@{MenuManagement.h}!InterfaceMenuP@{InterfaceMenuP}}
+\index{InterfaceMenuP@{InterfaceMenuP}!MenuManagement.h@{MenuManagement.h}}
+\doxysubsubsection{\texorpdfstring{InterfaceMenuP()}{InterfaceMenuP()}}
+{\footnotesize\ttfamily void Interface\+MenuP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{int}]{mat\+\_\+x,  }\item[{int}]{mat\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_management_8h_source_l00033}{33}} of file \mbox{\hyperlink{_menu_management_8h_source}{Menu\+Management.\+h}}.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=258pt]{_menu_management_8h_afab161c3544224d228a3e8e64a3eae08_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_menu_management_8h_afab161c3544224d228a3e8e64a3eae08_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_menu_management_8h_afc733d7fa1650fe258aa4fd3c704b799}\label{_menu_management_8h_afc733d7fa1650fe258aa4fd3c704b799}} 
+\index{MenuManagement.h@{MenuManagement.h}!InterfaceOptions@{InterfaceOptions}}
+\index{InterfaceOptions@{InterfaceOptions}!MenuManagement.h@{MenuManagement.h}}
+\doxysubsubsection{\texorpdfstring{InterfaceOptions()}{InterfaceOptions()}}
+{\footnotesize\ttfamily void Interface\+Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{int}]{mat\+\_\+x,  }\item[{int}]{mat\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_management_8h_source_l00069}{69}} of file \mbox{\hyperlink{_menu_management_8h_source}{Menu\+Management.\+h}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_menu_management_8h_afc733d7fa1650fe258aa4fd3c704b799_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{_menu_management_8h_ab2a2e33bb6aff7164d540d7a50bdd38f}\label{_menu_management_8h_ab2a2e33bb6aff7164d540d7a50bdd38f}} 
+\index{MenuManagement.h@{MenuManagement.h}!InterfacePause@{InterfacePause}}
+\index{InterfacePause@{InterfacePause}!MenuManagement.h@{MenuManagement.h}}
+\doxysubsubsection{\texorpdfstring{InterfacePause()}{InterfacePause()}}
+{\footnotesize\ttfamily void Interface\+Pause (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{int}]{mat\+\_\+x,  }\item[{int}]{mat\+\_\+y }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_management_8h_source_l00054}{54}} of file \mbox{\hyperlink{_menu_management_8h_source}{Menu\+Management.\+h}}.
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{_menu_management_8h_ab2a2e33bb6aff7164d540d7a50bdd38f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{_menu_management_8h_a8a2590fbfc4686aa615f6ca9824224f9}\label{_menu_management_8h_a8a2590fbfc4686aa615f6ca9824224f9}} 
+\index{MenuManagement.h@{MenuManagement.h}!rectColor@{rectColor}}
+\index{rectColor@{rectColor}!MenuManagement.h@{MenuManagement.h}}
+\doxysubsubsection{\texorpdfstring{rectColor}{rectColor}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} rect\+Color = \mbox{\hyperlink{namespacens_graphics_ac3f029049cd7ede1dfa2c788749029ad}{ns\+Graphics\+::\+KCyan}}}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_management_8h_source_l00108}{108}} of file \mbox{\hyperlink{_menu_management_8h_source}{Menu\+Management.\+h}}.
+
+\mbox{\Hypertarget{_menu_management_8h_a11e48c63494b713861dcee17f0efcd33}\label{_menu_management_8h_a11e48c63494b713861dcee17f0efcd33}} 
+\index{MenuManagement.h@{MenuManagement.h}!rectPos@{rectPos}}
+\index{rectPos@{rectPos}!MenuManagement.h@{MenuManagement.h}}
+\doxysubsubsection{\texorpdfstring{rectPos}{rectPos}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} rect\+Pos}
+
+
+
+Definition at line \mbox{\hyperlink{_menu_management_8h_source_l00107}{107}} of file \mbox{\hyperlink{_menu_management_8h_source}{Menu\+Management.\+h}}.
+

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.4"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>SAE 1.01: /home/Theo/Téléchargements/sae/SAE_JEU/sprites/cigarette.h Source File</title>
+<title>My Project: /home/Theo/Téléchargements/sae/sprites/cigarette.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">SAE 1.01
+   <div id="projectname">My Project
    </div>
   </td>
  </tr>
@@ -62,7 +62,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_79f149efd30d37738a8a961658db751b.html">Téléchargements</a></li><li class="navelem"><a class="el" href="dir_9bc27c3a15165b903513c0caa2551462.html">sae</a></li><li class="navelem"><a class="el" href="dir_6776d252bbc60daf06bcfa47d0063ff8.html">SAE_JEU</a></li><li class="navelem"><a class="el" href="dir_6c6de58e5962bd976e0f6a50c95223d0.html">sprites</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_79f149efd30d37738a8a961658db751b.html">Téléchargements</a></li><li class="navelem"><a class="el" href="dir_9bc27c3a15165b903513c0caa2551462.html">sae</a></li><li class="navelem"><a class="el" href="dir_49d201697aa890243c4abf11e149eb0b.html">sprites</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -86,34 +86,36 @@ $(function() {
 <div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="comment">// Rectangle principal pour le corps de la cigarette (blanc)</span></div>
 <div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    window &lt;&lt; <a class="code hl_class" href="classns_shape_1_1_rectangle.html">nsShape::Rectangle</a>(<a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(startX, startY),</div>
 <div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>                                 <a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(startX + cig_length, startY + cig_width),</div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                                 nsGraphics::KGray);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>                                 <a class="code hl_variable" href="namespacens_graphics.html#a96ad8f5e0a09dba209c3359c277dcc6f">nsGraphics::KGray</a>);</div>
 <div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="comment">// Rectangle pour le filtre (jaune-orange)</span></div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    window &lt;&lt; <a class="code hl_class" href="classns_shape_1_1_rectangle.html">nsShape::Rectangle</a>(<a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(startX + cig_length - filter_length, startY),</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>                                 <a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(startX + cig_length, startY + cig_width),</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                 nsGraphics::KRed);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>                                 <a class="code hl_variable" href="namespacens_graphics.html#a2eb081113194e8ff44aebd697c2cfe61">nsGraphics::KRed</a>);</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="comment">// Ovale rouge pour simuler l&#39;extrémité allumée de la cigarette</span></div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    window &lt;&lt; <a class="code hl_class" href="classns_shape_1_1_oval.html">nsShape::Oval</a>(<a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(startX, startY + cig_width / 2),</div>
 <div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>                            <a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(flame_size, cig_width / 2),</div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                            nsGraphics::KRed);</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>                            <a class="code hl_variable" href="namespacens_graphics.html#a2eb081113194e8ff44aebd697c2cfe61">nsGraphics::KRed</a>);</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">// Fumée (plusieurs ovales gris clair représentant des volutes de fumée)</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    window &lt;&lt; <a class="code hl_class" href="classns_shape_1_1_oval.html">nsShape::Oval</a>(<a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(startX - smoke_radius * 1.5, startY - cig_width),</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                            <a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(smoke_radius * 1.5, smoke_radius),</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                            nsGraphics::KGray); <span class="comment">// Première volute</span></div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>                            <a class="code hl_variable" href="namespacens_graphics.html#a96ad8f5e0a09dba209c3359c277dcc6f">nsGraphics::KGray</a>); <span class="comment">// Première volute</span></div>
 <div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    window &lt;&lt; <a class="code hl_class" href="classns_shape_1_1_oval.html">nsShape::Oval</a>(<a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(startX - smoke_radius * 3, startY - cig_width * 2),</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>                            <a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(smoke_radius * 1.3, smoke_radius * 0.9),</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                            nsGraphics::KGray); <span class="comment">// Deuxième volute</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>                            <a class="code hl_variable" href="namespacens_graphics.html#a96ad8f5e0a09dba209c3359c277dcc6f">nsGraphics::KGray</a>); <span class="comment">// Deuxième volute</span></div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    window &lt;&lt; <a class="code hl_class" href="classns_shape_1_1_oval.html">nsShape::Oval</a>(<a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(startX - smoke_radius * 4.5, startY - cig_width * 3),</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>                            <a class="code hl_class" href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a>(smoke_radius, smoke_radius * 0.8),</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                            nsGraphics::KGray); <span class="comment">// Troisième volute</span></div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                            <a class="code hl_variable" href="namespacens_graphics.html#a96ad8f5e0a09dba209c3359c277dcc6f">nsGraphics::KGray</a>); <span class="comment">// Troisième volute</span></div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 <div class="ttc" id="acigarette_8h_html_af7fde47c9ef13a0f15f176f8c7a9f52c"><div class="ttname"><a href="cigarette_8h.html#af7fde47c9ef13a0f15f176f8c7a9f52c">Cigarette</a></div><div class="ttdeci">void Cigarette(MinGL &amp;window, int startX, int startY, int scaleX, int scaleY)</div><div class="ttdoc">cette fonction dessine une cigarette</div><div class="ttdef"><b>Definition:</b> <a href="cigarette_8h_source.html#l00025">cigarette.h:25</a></div></div>
 <div class="ttc" id="aclass_min_g_l_html"><div class="ttname"><a href="class_min_g_l.html">MinGL</a></div><div class="ttdoc">Classe de base de minGL 2.</div><div class="ttdef"><b>Definition:</b> <a href="mingl_8h_source.html#l00034">mingl.h:35</a></div></div>
 <div class="ttc" id="aclassns_graphics_1_1_vec2_d_html"><div class="ttname"><a href="classns_graphics_1_1_vec2_d.html">nsGraphics::Vec2D</a></div><div class="ttdoc">Classe représentant un vecteur deux-dimensionnel.</div><div class="ttdef"><b>Definition:</b> <a href="vec2d_8h_source.html#l00025">vec2d.h:26</a></div></div>
 <div class="ttc" id="aclassns_shape_1_1_oval_html"><div class="ttname"><a href="classns_shape_1_1_oval.html">nsShape::Oval</a></div><div class="ttdoc">Classe représentant un Oval.</div><div class="ttdef"><b>Definition:</b> <a href="oval_8h_source.html#l00025">oval.h:26</a></div></div>
 <div class="ttc" id="aclassns_shape_1_1_rectangle_html"><div class="ttname"><a href="classns_shape_1_1_rectangle.html">nsShape::Rectangle</a></div><div class="ttdoc">Classe représentant un rectangle.</div><div class="ttdef"><b>Definition:</b> <a href="rectangle_8h_source.html#l00025">rectangle.h:26</a></div></div>
+<div class="ttc" id="anamespacens_graphics_html_a2eb081113194e8ff44aebd697c2cfe61"><div class="ttname"><a href="namespacens_graphics.html#a2eb081113194e8ff44aebd697c2cfe61">nsGraphics::KRed</a></div><div class="ttdeci">const RGBAcolor KRed</div><div class="ttdef"><b>Definition:</b> <a href="rgbacolor_8h_source.html#l00159">rgbacolor.h:159</a></div></div>
+<div class="ttc" id="anamespacens_graphics_html_a96ad8f5e0a09dba209c3359c277dcc6f"><div class="ttname"><a href="namespacens_graphics.html#a96ad8f5e0a09dba209c3359c277dcc6f">nsGraphics::KGray</a></div><div class="ttdeci">const RGBAcolor KGray</div><div class="ttdef"><b>Definition:</b> <a href="rgbacolor_8h_source.html#l00166">rgbacolor.h:166</a></div></div>
 <div class="ttc" id="aoval_8h_html"><div class="ttname"><a href="oval_8h.html">oval.h</a></div><div class="ttdoc">Représente un oval.</div></div>
 <div class="ttc" id="arectangle_8h_html"><div class="ttname"><a href="rectangle_8h.html">rectangle.h</a></div><div class="ttdoc">Représente un rectangle.</div></div>
 </div><!-- fragment --></div><!-- contents -->

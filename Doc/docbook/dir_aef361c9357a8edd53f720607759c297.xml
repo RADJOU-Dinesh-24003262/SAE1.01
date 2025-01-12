@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_aef361c9357a8edd53f720607759c297" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition Directory Reference</primary></indexterm>
+Directory dependency graph for transition:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_aef361c9357a8edd53f720607759c297_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_itransitionable_8h">itransitionable.h</link></para>
+
+<para>Interface pour objet &quot;transitionable&quot;. </para>
+</listitem>
+            <listitem><para>file <link linkend="_transition_8h">transition.h</link></para>
+
+<para>Definition d&apos;une transition. </para>
+</listitem>
+            <listitem><para>file <link linkend="_transition__contract_8h">transition_contract.h</link></para>
+
+<para>Création de la transition. </para>
+</listitem>
+            <listitem><para>file <link linkend="_transition__engine_8h">transition_engine.h</link></para>
+
+<para>Gestionnaire de transition de minGL. </para>
+</listitem>
+            <listitem><para>file <link linkend="_transition__types_8h">transition_types.h</link></para>
+
+<para>Définit quelques types pour les transitions. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

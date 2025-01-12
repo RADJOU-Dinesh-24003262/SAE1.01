@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_params_8cpp_source" xml:lang="en-US">
 <title>params.cpp</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.cpp</primary></indexterm>
-<programlisting linenumbering="unnumbered"><anchor xml:id="_params_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
+<indexterm><primary>/home/Theo/Téléchargements/sae/Jeu/params.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_params_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#include&#32;&lt;string&gt;</emphasis>
 <anchor xml:id="_params_8cpp_source_1l00002"/>00002 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_params_8h">params.h</link>&quot;</emphasis>
 <anchor xml:id="_params_8cpp_source_1l00003"/>00003 <emphasis role="comment">//#include&#32;&quot;game.h&quot;&#32;not&#32;use&#32;for&#32;the&#32;moment</emphasis>
 <anchor xml:id="_params_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;fstream&gt;</emphasis>
@@ -10,7 +10,7 @@
 <anchor xml:id="_params_8cpp_source_1l00006"/>00006 
 <anchor xml:id="_params_8cpp_source_1l00007"/>00007 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
 <anchor xml:id="_params_8cpp_source_1l00008"/>00008 
-<anchor xml:id="_params_8cpp_source_1l00009"/>00009 <emphasis role="keywordtype">void</emphasis>&#32;initParams&#32;(<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;Param){
+<anchor xml:id="_params_8cpp_source_1l00009"/><link linkend="_params_8h_1ade03faad985499a8668d06f81c996971">00009</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_params_8cpp_1a725b86f4f23b75fda4f70441f7b0fcca">initParams</link>&#32;(<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;Param){
 <anchor xml:id="_params_8cpp_source_1l00010"/>00010 &#32;&#32;&#32;&#32;<emphasis role="comment">//Move&#32;Keys</emphasis>
 <anchor xml:id="_params_8cpp_source_1l00011"/>00011 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1aad1a6b3bf7fa6902378ed9300b1b2123">Key1Up</link>&#32;=&#32;<emphasis role="charliteral">&apos;z&apos;</emphasis>;
 <anchor xml:id="_params_8cpp_source_1l00012"/>00012 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a9f896d98a76257edbd9078d7ec14174d">Key1Down</link>&#32;=&#32;<emphasis role="charliteral">&apos;s&apos;</emphasis>;
@@ -33,7 +33,7 @@
 <anchor xml:id="_params_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;Param.<link linkend="_struct_c_my_param_v2_1a8351bf9f01ab6294444b4371e0d770a7">ColorP2</link>&#32;=&#32;<link linkend="_type_8h_1ac2178f299fb60a3a19c00006603770ec">KColor</link>.find(<emphasis role="stringliteral">&quot;KBlue&quot;</emphasis>)-&gt;second&#32;;
 <anchor xml:id="_params_8cpp_source_1l00030"/>00030 }
 <anchor xml:id="_params_8cpp_source_1l00031"/>00031 
-<anchor xml:id="_params_8cpp_source_1l00032"/>00032 <emphasis role="keywordtype">void</emphasis>&#32;LoadParams&#32;(<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;Param){
+<anchor xml:id="_params_8cpp_source_1l00032"/><link linkend="_params_8h_1ac3adf30120fc96c74f84762bf232cd54">00032</link> <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_params_8cpp_1ac3adf30120fc96c74f84762bf232cd54">LoadParams</link>&#32;(<link linkend="_struct_c_my_param_v2">CMyParamV2</link>&#32;&amp;&#32;Param){
 <anchor xml:id="_params_8cpp_source_1l00033"/>00033 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">string</emphasis>&#32;Path&#32;=&#32;<emphasis role="stringliteral">&quot;../../Nos_fichiers/config.yaml&quot;</emphasis>;
 <anchor xml:id="_params_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;ifstream&#32;ifs(Path);
 <anchor xml:id="_params_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(!ifs.is_open&#32;()){

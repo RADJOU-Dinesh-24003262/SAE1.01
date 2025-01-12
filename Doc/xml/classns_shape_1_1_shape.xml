@@ -23,7 +23,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="75" column="27" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" bodystart="75" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="75" column="27" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" bodystart="75" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classns_shape_1_1_shape_1a0444014e3ee0fa1e6ba5295e530a4f82" prot="protected" static="no" mutable="no">
         <type><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref></type>
@@ -38,7 +38,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="80" column="27" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" bodystart="80" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="80" column="27" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" bodystart="80" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -81,7 +81,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="39" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="13" bodyend="16"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="39" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="13" bodyend="16"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_shape_1aaa22752af0d45c4e219e3870baf899d4" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type></type>
@@ -96,7 +96,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="45" column="13"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="45" column="13"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_shape_1a8efbd1ac47497b188edeb019557ef754" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &amp;</type>
@@ -111,7 +111,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="51" column="33" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="18" bodyend="21"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="51" column="33" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="18" bodyend="21"/>
         <referencedby refid="class_bg_text_1a01cc8269e39184b805351409aac4feb4" compoundref="09-_custom_transitionable_2bgtext_8cpp" startline="14" endline="32">BgText::getValues</referencedby>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_shape_1aa0e9b22c076b83c4d5014b0213e5ce07" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -131,7 +131,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="57" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="23" bodyend="26"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="57" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="23" bodyend="26"/>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp" startline="16" endline="90">main</referencedby>
         <referencedby refid="class_bg_text_1adb35c1e7e0387e04e8f8e67d9e1468c8" compoundref="09-_custom_transitionable_2bgtext_8cpp" startline="34" endline="48">BgText::setValues</referencedby>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
@@ -147,7 +148,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="63" column="33" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="28" bodyend="31"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="63" column="33" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="28" bodyend="31"/>
       </memberdef>
       <memberdef kind="function" id="classns_shape_1_1_shape_1a48821100aa1856f188bdba257505adc3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -166,7 +167,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="69" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="33" bodyend="36"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="69" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/shape.cpp" bodystart="33" bodyend="36"/>
+        <referencedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4" compoundref="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp" startline="16" endline="90">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -242,7 +244,7 @@
         <link refid="classns_util_1_1_i_editable"/>
       </node>
     </collaborationgraph>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="29" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" bodystart="30" bodyend="82"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" line="29" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h" bodystart="30" bodyend="82"/>
     <listofallmembers>
       <member refid="classns_graphics_1_1_i_drawable_1abed8a61e1d507d31e76f0891f3bf9c51" prot="public" virt="pure-virtual"><scope>nsShape::Shape</scope><name>draw</name></member>
       <member refid="classns_shape_1_1_shape_1aca75f4b06e8e5b04d0271d191210299d" prot="public" virt="non-virtual"><scope>nsShape::Shape</scope><name>getBorderColor</name></member>

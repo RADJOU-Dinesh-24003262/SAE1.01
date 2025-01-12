@@ -25,7 +25,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="65" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.hpp" bodystart="20" bodyend="23" declfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" declline="65" declcolumn="1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="65" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.hpp" bodystart="20" bodyend="23" declfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" declline="65" declcolumn="1"/>
+        <references refid="classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853">nsUtil::IEditable::_Edit</references>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -33,6 +34,6 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="27" column="1"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="27" column="1"/>
   </compounddef>
 </doxygen>

@@ -1,5 +1,5 @@
-\hypertarget{game_8h}{}\doxysection{/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Jeu/game.h File Reference}
-\label{game_8h}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/Jeu/game.h@{/home/Theo/Téléchargements/sae/SAE\_JEU/Jeu/game.h}}
+\hypertarget{game_8h}{}\doxysection{/home/\+Theo/\+Téléchargements/sae/\+Jeu/game.h File Reference}
+\label{game_8h}\index{/home/Theo/Téléchargements/sae/Jeu/game.h@{/home/Theo/Téléchargements/sae/Jeu/game.h}}
 
 
 Set of usefull functions for the game.  
@@ -8,8 +8,7 @@ Set of usefull functions for the game.
 {\ttfamily \#include \char`\"{}type.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}mingl/mingl.\+h\char`\"{}}\newline
 {\ttfamily \#include $<$chrono$>$}\newline
-Include dependency graph for game.\+h\+:
-\nopagebreak
+Include dependency graph for game.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -37,27 +36,20 @@ bool \mbox{\hyperlink{game_8h_ae80d4e86d02b962374473e98b15c6a1c}{Is\+Collectible
 \begin{DoxyCompactList}\small\item\em Test whether the content of the next move\textquotesingle{}s cell is an element. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{game_8h_a1edb4cf36ce7b698766f4456c2977a4b}{Calculate\+Score}} (std\+::vector$<$ char $>$ \&objets, int \&score)
 \begin{DoxyCompactList}\small\item\em Increments the score for each item in the list. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{game_8h_a23ed1f47ce57765cb2fea53223a968fa}\label{game_8h_a23ed1f47ce57765cb2fea53223a968fa}} 
-void {\bfseries Sprite} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, int grid\+\_\+x, int grid\+\_\+y, int pos\+\_\+x, int pos\+\_\+y, int mat\+\_\+x, int mat\+\_\+y, std\+::string sprite)
-\item 
-\mbox{\Hypertarget{game_8h_ad2fa9861d35e6880ba732c4d42d677fb}\label{game_8h_ad2fa9861d35e6880ba732c4d42d677fb}} 
-void {\bfseries Display\+Grid} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&mat, std\+::tuple$<$ int, int $>$ Screen\+\_\+size)
-\item 
-\mbox{\Hypertarget{game_8h_a530e82365352a76131d36a602a978087}\label{game_8h_a530e82365352a76131d36a602a978087}} 
-void {\bfseries MenuP} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
-\item 
-\mbox{\Hypertarget{game_8h_ac9f54c7b2df4106d5bf5f209f2c1741d}\label{game_8h_ac9f54c7b2df4106d5bf5f209f2c1741d}} 
-void {\bfseries Options} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
-\item 
-\mbox{\Hypertarget{game_8h_ac7f92aebec3b6b2e6d0b4801d092c04d}\label{game_8h_ac7f92aebec3b6b2e6d0b4801d092c04d}} 
-void {\bfseries Credits} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
-\item 
-\mbox{\Hypertarget{game_8h_a4cf82823849638598365d899b482f17a}\label{game_8h_a4cf82823849638598365d899b482f17a}} 
-void {\bfseries Pause} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
-\item 
-\mbox{\Hypertarget{game_8h_a3555e46045d63ef37f994f3c358945fb}\label{game_8h_a3555e46045d63ef37f994f3c358945fb}} 
-void {\bfseries Game\+Loop} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$clickablepool, \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} Mat, int menuid, unsigned Party\+Num, bool Key\+\_\+\+UP, bool Key\+\_\+\+DOWN, bool Key\+\_\+\+RIGHT, bool Key\+\_\+\+LEFT, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} param, bool Victory, unsigned KMax\+Party\+Num, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+Player1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+Player2, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+TP1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+TP2, bool Player1\+Turn, std\+::pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ N\+\_\+move, std\+::vector$<$ char $>$ objet\+J1, std\+::vector$<$ char $>$ objet\+J2, int score\+J1, int score\+J2, std\+::vector$<$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ Pos\+Monster)
-\item 
+void \mbox{\hyperlink{game_8h_a23ed1f47ce57765cb2fea53223a968fa}{Sprite}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, int grid\+\_\+x, int grid\+\_\+y, int pos\+\_\+x, int pos\+\_\+y, int mat\+\_\+x, int mat\+\_\+y, std\+::string sprite)
+\begin{DoxyCompactList}\small\item\em cette fonction affiche un sprite dans la fenetre \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_ad2fa9861d35e6880ba732c4d42d677fb}{Display\+Grid}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&mat, std\+::tuple$<$ int, int $>$ Screen\+\_\+size)
+\begin{DoxyCompactList}\small\item\em cette fonction affiche la grille sur Min\+Gl \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a530e82365352a76131d36a602a978087}{MenuP}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
+\begin{DoxyCompactList}\small\item\em cette affiche le menu principal sur Min\+Gl \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_ac9f54c7b2df4106d5bf5f209f2c1741d}{Options}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
+\begin{DoxyCompactList}\small\item\em cette fonction affiche les options du jeux \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_ac7f92aebec3b6b2e6d0b4801d092c04d}{Credits}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
+\begin{DoxyCompactList}\small\item\em cette affiche les credits \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a4cf82823849638598365d899b482f17a}{Pause}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$ clickablepool, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, int \&menuid, std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$ start)
+\begin{DoxyCompactList}\small\item\em cette fonction affiche le menu pause \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{game_8h_a3555e46045d63ef37f994f3c358945fb}{Game\+Loop}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window, std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$clickablepool, \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} Mat, int menuid, unsigned Party\+Num, bool Key\+\_\+\+UP, bool Key\+\_\+\+DOWN, bool Key\+\_\+\+RIGHT, bool Key\+\_\+\+LEFT, std\+::tuple$<$ int, int $>$ Screen\+\_\+size, \mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}} param, bool Victory, unsigned KMax\+Party\+Num, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+Player1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+Player2, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+TP1, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} Pos\+TP2, bool Player1\+Turn, std\+::pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ N\+\_\+move, std\+::vector$<$ char $>$ objet\+J1, std\+::vector$<$ char $>$ objet\+J2, int score\+J1, int score\+J2, std\+::vector$<$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$ Pos\+Monster)
+\begin{DoxyCompactList}\small\item\em cette fonction gere la boucle principale du jeu \end{DoxyCompactList}\item 
 int \mbox{\hyperlink{game_8h_a0b1d64ee76933ef8f007f1208cb869a7}{ppal}} ()
 \begin{DoxyCompactList}\small\item\em new main \end{DoxyCompactList}\end{DoxyCompactItemize}
 
@@ -98,6 +90,109 @@ Increments the score for each item in the list.
 \mbox{\texttt{ in}}  & {\em The} & list of items the player has collected \\
 \hline
 \mbox{\texttt{ in}}  & {\em The} & score increases with each element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_ac7f92aebec3b6b2e6d0b4801d092c04d}\label{game_8h_ac7f92aebec3b6b2e6d0b4801d092c04d}} 
+\index{game.h@{game.h}!Credits@{Credits}}
+\index{Credits@{Credits}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{Credits()}{Credits()}}
+{\footnotesize\ttfamily void Credits (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$}]{clickablepool,  }\item[{std\+::tuple$<$ int, int $>$}]{Screen\+\_\+size,  }\item[{int \&}]{menuid,  }\item[{std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$}]{start }\end{DoxyParamCaption})}
+
+
+
+cette affiche les credits 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & La fenêtre dans laquelle le menu sera affiché \\
+\hline
+{\em clickablepool} & Un vecteur d\textquotesingle{}éléments cliquables \\
+\hline
+{\em Screen\+\_\+size} & La taille de l\textquotesingle{}écran sous forme de tuple (largeur, hauteur) \\
+\hline
+{\em menuid} & L\textquotesingle{}identifiant du menu actuel \\
+\hline
+{\em start} & Le moment où l\textquotesingle{}affichage du menu a commencé \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_ad2fa9861d35e6880ba732c4d42d677fb}\label{game_8h_ad2fa9861d35e6880ba732c4d42d677fb}} 
+\index{game.h@{game.h}!DisplayGrid@{DisplayGrid}}
+\index{DisplayGrid@{DisplayGrid}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{DisplayGrid()}{DisplayGrid()}}
+{\footnotesize\ttfamily void Display\+Grid (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{const \mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}} \&}]{mat,  }\item[{std\+::tuple$<$ int, int $>$}]{Screen\+\_\+size }\end{DoxyParamCaption})}
+
+
+
+cette fonction affiche la grille sur Min\+Gl 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & La fenêtre dans laquelle la grille sera affichée \\
+\hline
+{\em mat} & La matrice représentant la grille à afficher \\
+\hline
+{\em Screen\+\_\+size} & La taille de l\textquotesingle{}écran sous forme de tuple (largeur, hauteur) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_a3555e46045d63ef37f994f3c358945fb}\label{game_8h_a3555e46045d63ef37f994f3c358945fb}} 
+\index{game.h@{game.h}!GameLoop@{GameLoop}}
+\index{GameLoop@{GameLoop}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{GameLoop()}{GameLoop()}}
+{\footnotesize\ttfamily void Game\+Loop (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$}]{clickablepool,  }\item[{\mbox{\hyperlink{type_8h_a64a592133575ccebb1b36453acbec02b}{CMat}}}]{Mat,  }\item[{int}]{menuid,  }\item[{unsigned}]{Party\+Num,  }\item[{bool}]{Key\+\_\+\+UP,  }\item[{bool}]{Key\+\_\+\+DOWN,  }\item[{bool}]{Key\+\_\+\+RIGHT,  }\item[{bool}]{Key\+\_\+\+LEFT,  }\item[{std\+::tuple$<$ int, int $>$}]{Screen\+\_\+size,  }\item[{\mbox{\hyperlink{struct_c_my_param_v2}{CMy\+Param\+V2}}}]{param,  }\item[{bool}]{Victory,  }\item[{unsigned}]{KMax\+Party\+Num,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}}}]{Pos\+Player1,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}}}]{Pos\+Player2,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}}}]{Pos\+TP1,  }\item[{\mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}}}]{Pos\+TP2,  }\item[{bool}]{Player1\+Turn,  }\item[{std\+::pair$<$ char, \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$}]{N\+\_\+move,  }\item[{std\+::vector$<$ char $>$}]{objet\+J1,  }\item[{std\+::vector$<$ char $>$}]{objet\+J2,  }\item[{int}]{score\+J1,  }\item[{int}]{score\+J2,  }\item[{std\+::vector$<$ \mbox{\hyperlink{type_8h_a7035b1162647d49def2c24ac2c2e30c1}{CPosition}} $>$}]{Pos\+Monster }\end{DoxyParamCaption})}
+
+
+
+cette fonction gere la boucle principale du jeu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & La fenêtre dans laquelle le jeu sera affiché \\
+\hline
+{\em clickablepool} & Un vecteur d\textquotesingle{}éléments cliquables \\
+\hline
+{\em Mat} & La matrice représentant la carte du jeu \\
+\hline
+{\em menuid} & L\textquotesingle{}identifiant du menu actuel \\
+\hline
+{\em Party\+Num} & Le nombre de partie \\
+\hline
+{\em Key\+\_\+\+UP} & L\textquotesingle{}état de la touche UP \\
+\hline
+{\em Key\+\_\+\+DOWN} & L\textquotesingle{}état de la touche DOWN \\
+\hline
+{\em Key\+\_\+\+RIGHT} & L\textquotesingle{}état de la touche RIGHT \\
+\hline
+{\em Key\+\_\+\+LEFT} & L\textquotesingle{}état de la touche LEFT \\
+\hline
+{\em Screen\+\_\+size} & La taille de l\textquotesingle{}écran sous forme de tuple (largeur, hauteur) \\
+\hline
+{\em param} & Paramètres de configuration \\
+\hline
+{\em Victory} & Indicateur de victoire \\
+\hline
+{\em KMax\+Party\+Num} & Nombre maximum de tours dans une partie \\
+\hline
+{\em Pos\+Player1} & La position du joueur 1 \\
+\hline
+{\em Pos\+Player2} & La position du joueur 2 \\
+\hline
+{\em Pos\+TP1} & La position du premier téléporteur \\
+\hline
+{\em Pos\+TP2} & La position du deuxième téléporteur \\
+\hline
+{\em Player1\+Turn} & Indicateur permettant de savoir le tour de quel joueur \\
+\hline
+{\em N\+\_\+move} & Le prochain mouvement du joueur sous forme de tuple (direction, position) \\
+\hline
+{\em objet\+J1} & Liste des objets ramassé par joueur 1 \\
+\hline
+{\em objet\+J2} & Liste des objets ramassé par joueur 2 \\
+\hline
+{\em score\+J1} & Le score du joueur 1 \\
+\hline
+{\em score\+J2} & Le score du joueur 2 \\
+\hline
+{\em Pos\+Monster} & Liste des positions des monstres \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{game_8h_ae80d4e86d02b962374473e98b15c6a1c}\label{game_8h_ae80d4e86d02b962374473e98b15c6a1c}} 
@@ -148,6 +243,29 @@ Test if the Move made by the player is legal, this mean if there is no wall and 
 \begin{DoxyReturn}{Returns}
 true if the Move can be made 
 \end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_a530e82365352a76131d36a602a978087}\label{game_8h_a530e82365352a76131d36a602a978087}} 
+\index{game.h@{game.h}!MenuP@{MenuP}}
+\index{MenuP@{MenuP}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{MenuP()}{MenuP()}}
+{\footnotesize\ttfamily void MenuP (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$}]{clickablepool,  }\item[{std\+::tuple$<$ int, int $>$}]{Screen\+\_\+size,  }\item[{int \&}]{menuid,  }\item[{std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$}]{start }\end{DoxyParamCaption})}
+
+
+
+cette affiche le menu principal sur Min\+Gl 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & La fenêtre où il sera affiché \\
+\hline
+{\em clickablepool} & Un vecteur d\textquotesingle{}éléments cliquables, où chaque élément est un tuple contenant des informations sur les zones cliquables \\
+\hline
+{\em Screen\+\_\+size} & La taille de l\textquotesingle{}écran sous forme de tuple (largeur, hauteur) \\
+\hline
+{\em menuid} & L\textquotesingle{}identifiant du menu actuel \\
+\hline
+{\em start} & Le moment où l\textquotesingle{}affichage du menu a commencé \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{game_8h_a8307899b579b12370e9fd3e399e42d04}\label{game_8h_a8307899b579b12370e9fd3e399e42d04}} 
 \index{game.h@{game.h}!MoveToken@{MoveToken}}
 \index{MoveToken@{MoveToken}!game.h@{game.h}}
@@ -201,6 +319,50 @@ returns the contents of the next cell and its position in the matrix (even with 
 \begin{DoxyReturn}{Returns}
 \texorpdfstring{$<$}{<}content of the cell \texorpdfstring{$<$}{<}pos x, pos y\texorpdfstring{$>$}{>}\texorpdfstring{$>$}{>} 
 \end{DoxyReturn}
+\mbox{\Hypertarget{game_8h_ac9f54c7b2df4106d5bf5f209f2c1741d}\label{game_8h_ac9f54c7b2df4106d5bf5f209f2c1741d}} 
+\index{game.h@{game.h}!Options@{Options}}
+\index{Options@{Options}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{Options()}{Options()}}
+{\footnotesize\ttfamily void Options (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$}]{clickablepool,  }\item[{std\+::tuple$<$ int, int $>$}]{Screen\+\_\+size,  }\item[{int \&}]{menuid,  }\item[{std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$}]{start }\end{DoxyParamCaption})}
+
+
+
+cette fonction affiche les options du jeux 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & La fenêtre dans laquelle le menu sera affiché \\
+\hline
+{\em clickablepool} & Un vecteur d\textquotesingle{}éléments cliquables \\
+\hline
+{\em Screen\+\_\+size} & La taille de l\textquotesingle{}écran \\
+\hline
+{\em menuid} & L\textquotesingle{}identifiant du menu actuel \\
+\hline
+{\em start} & Le moment où l\textquotesingle{}affichage du menu a commencé \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{game_8h_a4cf82823849638598365d899b482f17a}\label{game_8h_a4cf82823849638598365d899b482f17a}} 
+\index{game.h@{game.h}!Pause@{Pause}}
+\index{Pause@{Pause}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{Pause()}{Pause()}}
+{\footnotesize\ttfamily void Pause (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{std\+::vector$<$ std\+::tuple$<$ std\+::vector$<$ int $>$, std\+::vector$<$ int $>$, int $>$ $>$}]{clickablepool,  }\item[{std\+::tuple$<$ int, int $>$}]{Screen\+\_\+size,  }\item[{int \&}]{menuid,  }\item[{std\+::chrono\+::time\+\_\+point$<$ std\+::chrono\+::steady\+\_\+clock $>$}]{start }\end{DoxyParamCaption})}
+
+
+
+cette fonction affiche le menu pause 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & La fenêtre dans laquelle le menu sera affiché \\
+\hline
+{\em clickablepool} & Un vecteur d\textquotesingle{}éléments cliquables \\
+\hline
+{\em menuid} & L\textquotesingle{}identifiant du menu actuel \\
+\hline
+{\em start} & Le moment où l\textquotesingle{}affichage du menu a commencé \\
+\hline
+\end{DoxyParams}
 \mbox{\Hypertarget{game_8h_a0b1d64ee76933ef8f007f1208cb869a7}\label{game_8h_a0b1d64ee76933ef8f007f1208cb869a7}} 
 \index{game.h@{game.h}!ppal@{ppal}}
 \index{ppal@{ppal}!game.h@{game.h}}
@@ -223,6 +385,43 @@ Here is the call graph for this function\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=261pt]{game_8h_a0b1d64ee76933ef8f007f1208cb869a7_cgraph}
+\includegraphics[height=550pt]{game_8h_a0b1d64ee76933ef8f007f1208cb869a7_cgraph}
 \end{center}
 \end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=195pt]{game_8h_a0b1d64ee76933ef8f007f1208cb869a7_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{game_8h_a23ed1f47ce57765cb2fea53223a968fa}\label{game_8h_a23ed1f47ce57765cb2fea53223a968fa}} 
+\index{game.h@{game.h}!Sprite@{Sprite}}
+\index{Sprite@{Sprite}!game.h@{game.h}}
+\doxysubsubsection{\texorpdfstring{Sprite()}{Sprite()}}
+{\footnotesize\ttfamily void Sprite (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&}]{window,  }\item[{int}]{grid\+\_\+x,  }\item[{int}]{grid\+\_\+y,  }\item[{int}]{pos\+\_\+x,  }\item[{int}]{pos\+\_\+y,  }\item[{int}]{mat\+\_\+x,  }\item[{int}]{mat\+\_\+y,  }\item[{std\+::string}]{sprite }\end{DoxyParamCaption})}
+
+
+
+cette fonction affiche un sprite dans la fenetre 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window} & La fenêtre dans laquelle le sprite sera affiché \\
+\hline
+{\em grid\+\_\+x} & La position X dans la grille \\
+\hline
+{\em grid\+\_\+y} & La position Y dans la grille \\
+\hline
+{\em pos\+\_\+x} & La position X dans la fenêtre \\
+\hline
+{\em pos\+\_\+y} & La position Y dans la fenêtre \\
+\hline
+{\em mat\+\_\+x} & La largeur du sprite dans la grille \\
+\hline
+{\em mat\+\_\+y} & La hauteur du sprite dans la grille \\
+\hline
+{\em sprite} & Le nom du fichier du sprite à afficher \\
+\hline
+\end{DoxyParams}

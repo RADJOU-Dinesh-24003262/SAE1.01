@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceimg2si" xml:lang="en-US">
+<title>img2si Namespace Reference</title>
+<indexterm><primary>img2si</primary></indexterm>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>def <link linkend="_namespaceimg2si_1ae37b6f3bba8bbf990c6f8c84cd2a79bd">is_file_si2</link> (filePath)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceimg2si_1a86753e07bbef076355a407a398a418bf">convert_from_si2</link> (source, output)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceimg2si_1a07d658824b99acc387c6444863bebd5c">convert_to_si2</link> (source, output)</para>
+</listitem>
+            <listitem><para>def <link linkend="_namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49">main</link> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_namespaceimg2si_1a86753e07bbef076355a407a398a418bf"/><section>
+    <title>convert_from_si2()</title>
+<indexterm><primary>convert_from_si2</primary><secondary>img2si</secondary></indexterm>
+<indexterm><primary>img2si</primary><secondary>convert_from_si2</secondary></indexterm>
+<para><computeroutput>def img2si.convert_from_si2 ( source,  output)</computeroutput></para><para>
+Definition at line <link linkend="_img2si_8py_source_1l00034">34</link> of file <link linkend="_img2si_8py_source">img2si.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespaceimg2si_a86753e07bbef076355a407a398a418bf_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespaceimg2si_1a07d658824b99acc387c6444863bebd5c"/><section>
+    <title>convert_to_si2()</title>
+<indexterm><primary>convert_to_si2</primary><secondary>img2si</secondary></indexterm>
+<indexterm><primary>img2si</primary><secondary>convert_to_si2</secondary></indexterm>
+<para><computeroutput>def img2si.convert_to_si2 ( source,  output)</computeroutput></para><para>
+Definition at line <link linkend="_img2si_8py_source_1l00059">59</link> of file <link linkend="_img2si_8py_source">img2si.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespaceimg2si_a07d658824b99acc387c6444863bebd5c_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespaceimg2si_1ae37b6f3bba8bbf990c6f8c84cd2a79bd"/><section>
+    <title>is_file_si2()</title>
+<indexterm><primary>is_file_si2</primary><secondary>img2si</secondary></indexterm>
+<indexterm><primary>img2si</primary><secondary>is_file_si2</secondary></indexterm>
+<para><computeroutput>def img2si.is_file_si2 ( filePath)</computeroutput></para><para>
+Definition at line <link linkend="_img2si_8py_source_1l00028">28</link> of file <link linkend="_img2si_8py_source">img2si.py</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespaceimg2si_ae37b6f3bba8bbf990c6f8c84cd2a79bd_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49"/><section>
+    <title>main()</title>
+<indexterm><primary>main</primary><secondary>img2si</secondary></indexterm>
+<indexterm><primary>img2si</primary><secondary>main</secondary></indexterm>
+<para><computeroutput>def img2si.main ( )</computeroutput></para><para>
+Definition at line <link linkend="_img2si_8py_source_1l00095">95</link> of file <link linkend="_img2si_8py_source">img2si.py</link>.</para>
+Here is the call graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespaceimg2si_afce854986e241b3a756dc2eb0a333f49_cgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="namespaceimg2si_afce854986e241b3a756dc2eb0a333f49_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

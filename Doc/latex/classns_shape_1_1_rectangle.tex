@@ -11,8 +11,7 @@ Classe représentant un rectangle.
 
 
 
-Inheritance diagram for ns\+Shape\+::Rectangle\+:
-\nopagebreak
+Inheritance diagram for ns\+Shape\+::Rectangle\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -21,8 +20,7 @@ Inheritance diagram for ns\+Shape\+::Rectangle\+:
 \end{figure}
 
 
-Collaboration diagram for ns\+Shape\+::Rectangle\+:
-\nopagebreak
+Collaboration diagram for ns\+Shape\+::Rectangle\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -45,10 +43,12 @@ enum \mbox{\hyperlink{classns_shape_1_1_rectangle_a7c29d64ac1e4ed57a3d70b5616813
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{classns_shape_1_1_rectangle_a5d5e8052ba7c35001a30ccc7dad669e2}{Rectangle}} (const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&first\+Position, const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&second\+Position, const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&fill\+Color, const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&border\+Color=ns\+Graphics\+::\+KTransparent)
+\mbox{\hyperlink{classns_shape_1_1_rectangle_a5d5e8052ba7c35001a30ccc7dad669e2}{Rectangle}} (const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&first\+Position, const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&second\+Position, const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&fill\+Color, const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&border\+Color=\mbox{\hyperlink{namespacens_graphics_ab2001ad03cceb2565849e04465618c1e}{ns\+Graphics\+::\+KTransparent}})
 \begin{DoxyCompactList}\small\item\em Constructeur pour la classe \mbox{\hyperlink{classns_shape_1_1_rectangle}{Rectangle}}. \end{DoxyCompactList}\item 
-\mbox{\hyperlink{classns_shape_1_1_rectangle_a0c1c16410fb0ee7345449d7bfc9b377b}{Rectangle}} (const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&position, const unsigned \&width, const unsigned \&height, const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&fill\+Color, const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&border\+Color=ns\+Graphics\+::\+KTransparent)
+\mbox{\hyperlink{classns_shape_1_1_rectangle_a0c1c16410fb0ee7345449d7bfc9b377b}{Rectangle}} (const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&position, const unsigned \&width, const unsigned \&height, const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&fill\+Color, const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&border\+Color=\mbox{\hyperlink{namespacens_graphics_ab2001ad03cceb2565849e04465618c1e}{ns\+Graphics\+::\+KTransparent}})
 \begin{DoxyCompactList}\small\item\em Constructeur pour la classe \mbox{\hyperlink{classns_shape_1_1_rectangle}{Rectangle}}. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classns_shape_1_1_rectangle_a8c5a662392d6ff84a852c4f70e8b1d1d}{$\sim$\+Rectangle}} () override=default
+\item 
 virtual void \mbox{\hyperlink{classns_shape_1_1_rectangle_a87e5544cddc2ed7b3bfd189b796ab2a5}{draw}} (\mbox{\hyperlink{class_min_g_l}{Min\+GL}} \&window) const override
 \begin{DoxyCompactList}\small\item\em Fonction pour afficher l\textquotesingle{}objet. \end{DoxyCompactList}\item 
 virtual void \mbox{\hyperlink{classns_shape_1_1_rectangle_ad62897a44a3af8dfffca0a8a1fa10825}{get\+Values}} (const int \&id, std\+::vector$<$ float $>$ \&values) override
@@ -125,7 +125,7 @@ Definition at line \mbox{\hyperlink{rectangle_8h_source_l00032}{32}} of file \mb
 \index{nsShape::Rectangle@{nsShape::Rectangle}!Rectangle@{Rectangle}}
 \index{Rectangle@{Rectangle}!nsShape::Rectangle@{nsShape::Rectangle}}
 \doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
-{\footnotesize\ttfamily ns\+Shape\+::\+Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{first\+Position,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{second\+Position,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&}]{fill\+Color,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&}]{border\+Color = {\ttfamily nsGraphics\+:\+:KTransparent} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ns\+Shape\+::\+Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{first\+Position,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{second\+Position,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&}]{fill\+Color,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&}]{border\+Color = {\ttfamily \mbox{\hyperlink{namespacens_graphics_ab2001ad03cceb2565849e04465618c1e}{ns\+Graphics\+::\+KTransparent}}} }\end{DoxyParamCaption})}
 
 
 
@@ -150,7 +150,7 @@ Definition at line \mbox{\hyperlink{rectangle_8cpp_source_l00014}{14}} of file \
 \index{nsShape::Rectangle@{nsShape::Rectangle}!Rectangle@{Rectangle}}
 \index{Rectangle@{Rectangle}!nsShape::Rectangle@{nsShape::Rectangle}}
 \doxysubsubsection{\texorpdfstring{Rectangle()}{Rectangle()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
-{\footnotesize\ttfamily ns\+Shape\+::\+Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{position,  }\item[{const unsigned \&}]{width,  }\item[{const unsigned \&}]{height,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&}]{fill\+Color,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&}]{border\+Color = {\ttfamily nsGraphics\+:\+:KTransparent} }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily ns\+Shape\+::\+Rectangle\+::\+Rectangle (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classns_graphics_1_1_vec2_d}{ns\+Graphics\+::\+Vec2D}} \&}]{position,  }\item[{const unsigned \&}]{width,  }\item[{const unsigned \&}]{height,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&}]{fill\+Color,  }\item[{const \mbox{\hyperlink{classns_graphics_1_1_r_g_b_acolor}{ns\+Graphics\+::\+RGBAcolor}} \&}]{border\+Color = {\ttfamily \mbox{\hyperlink{namespacens_graphics_ab2001ad03cceb2565849e04465618c1e}{ns\+Graphics\+::\+KTransparent}}} }\end{DoxyParamCaption})}
 
 
 
@@ -173,6 +173,12 @@ Constructeur pour la classe \mbox{\hyperlink{classns_shape_1_1_rectangle}{Rectan
 
 Definition at line \mbox{\hyperlink{rectangle_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{rectangle_8cpp_source}{rectangle.\+cpp}}.
 
+\mbox{\Hypertarget{classns_shape_1_1_rectangle_a8c5a662392d6ff84a852c4f70e8b1d1d}\label{classns_shape_1_1_rectangle_a8c5a662392d6ff84a852c4f70e8b1d1d}} 
+\index{nsShape::Rectangle@{nsShape::Rectangle}!````~Rectangle@{$\sim$Rectangle}}
+\index{````~Rectangle@{$\sim$Rectangle}!nsShape::Rectangle@{nsShape::Rectangle}}
+\doxysubsubsection{\texorpdfstring{$\sim$Rectangle()}{~Rectangle()}}
+{\footnotesize\ttfamily virtual ns\+Shape\+::\+Rectangle\+::$\sim$\+Rectangle (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}, {\ttfamily [default]}}
+
 
 
 \doxysubsection{Member Function Documentation}
@@ -194,8 +200,7 @@ Implements \mbox{\hyperlink{classns_graphics_1_1_i_drawable_abed8a61e1d507d31e76
 
 Definition at line \mbox{\hyperlink{rectangle_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{rectangle_8cpp_source}{rectangle.\+cpp}}.
 
-Here is the call graph for this function\+:
-\nopagebreak
+Here is the call graph for this function\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -360,5 +365,5 @@ Definition at line \mbox{\hyperlink{rectangle_8cpp_source_l00093}{93}} of file \
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/shape/\mbox{\hyperlink{rectangle_8h}{rectangle.\+h}}\item 
-/home/\+Theo/\+Téléchargements/sae/\+SAE\+\_\+\+JEU/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/src/shape/\mbox{\hyperlink{rectangle_8cpp}{rectangle.\+cpp}}\end{DoxyCompactItemize}
+/home/\+Theo/\+Téléchargements/sae/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/include/mingl/shape/\mbox{\hyperlink{rectangle_8h}{rectangle.\+h}}\item 
+/home/\+Theo/\+Téléchargements/sae/\+Min\+GL2\+\_\+\+IUT\+\_\+\+AIX-\/master/src/shape/\mbox{\hyperlink{rectangle_8cpp}{rectangle.\+cpp}}\end{DoxyCompactItemize}

@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_08-_custom_drawable_2bgtext_8h_source" xml:lang="en-US">
 <title>bgtext.h</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</primary></indexterm>
-<programlisting linenumbering="unnumbered"><anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;BGTEXT_H</emphasis>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00001"/>00001 <emphasis role="preprocessor">#ifndef&#32;BGTEXT_H</emphasis>
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00002"/>00002 <emphasis role="preprocessor">#define&#32;BGTEXT_H</emphasis>
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00003"/>00003 
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00004"/>00004 <emphasis role="comment">//&#32;On&#32;inclut&#32;l&apos;en-tête&#32;de&#32;IDrawable</emphasis>
@@ -18,10 +18,10 @@
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00014"/>00014 
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00015"/>00015 <emphasis role="keyword">public</emphasis>:
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00016"/>00016 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Le&#32;constructeur&#32;de&#32;la&#32;classe,&#32;prenant&#32;les&#32;paramètres&#32;lors&#32;de&#32;l&apos;instanciation</emphasis>
-<anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<link linkend="_class_bg_text">BgText</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;content,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;textColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;backgroundColor);
+<anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00017"/>00017 &#32;&#32;&#32;&#32;<link linkend="_class_bg_text_1af1a6d5aba1d7276d6527cc1833d57dfa">BgText</link>(<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;position,&#32;<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;content,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;textColor,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;backgroundColor);
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00018"/>00018 
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Ne&#32;pas&#32;oublier&#32;le&#32;destructeur&#32;virtuel</emphasis>
-<anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_bg_text">~BgText</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
+<anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00020"/><link linkend="_class_bg_text_1a19f8e1aa743e37d252b5b46ca98b7cd1">00020</link> &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<link linkend="_class_bg_text_1a19f8e1aa743e37d252b5b46ca98b7cd1">~BgText</link>()&#32;=&#32;<emphasis role="keywordflow">default</emphasis>;
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00021"/>00021 
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00022"/>00022 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;surcharge&#32;la&#32;fonction&#32;draw()&#32;qui&#32;est&#32;appelée&#32;lors&#32;de&#32;l&apos;affichage&#32;de&#32;notre&#32;objet</emphasis>
 <anchor xml:id="_08-_custom_drawable_2bgtext_8h_source_1l00023"/>00023 &#32;&#32;&#32;&#32;<emphasis role="keyword">virtual</emphasis>&#32;<emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_class_bg_text_1a01df624a8d498766a9eb579eb18f2326">draw</link>(<link linkend="_class_min_g_l">MinGL</link>&amp;&#32;window)&#32;<emphasis role="keyword">const&#32;override</emphasis>;

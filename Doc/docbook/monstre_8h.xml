@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_monstre_8h" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/sprites/monstre.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/sprites/monstre.h</primary></indexterm>
+<programlisting linenumbering="unnumbered">#include &quot;mingl/shape/rectangle.h&quot;
+</programlisting>Include dependency graph for monstre.h:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="monstre_8h__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+This graph shows which files directly or indirectly include this file:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="monstre_8h__dep__incl.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_monstre_8h_1a1bdf648b0b46f6c35eeae63523d4eac8">Monstre</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, int Circle1, int Circle2, int mat_x, int mat_y)</para>
+
+<para>cette fonction dessine un monstre sous forme de rectangle </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_monstre_8h_1a1bdf648b0b46f6c35eeae63523d4eac8"/><section>
+    <title>Monstre()</title>
+<indexterm><primary>Monstre</primary><secondary>monstre.h</secondary></indexterm>
+<indexterm><primary>monstre.h</primary><secondary>Monstre</secondary></indexterm>
+<para><computeroutput>void Monstre (<link linkend="_class_min_g_l">MinGL</link> &amp; window, int Circle1, int Circle2, int mat_x, int mat_y)</computeroutput></para><para>
+
+<para>cette fonction dessine un monstre sous forme de rectangle </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>Référence à l&apos;objet <link linkend="_class_min_g_l">MinGL</link> pour dessiner les formes. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Circle1</entry><entry>
+<para>Position x du centre du monstre. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Circle2</entry><entry>
+<para>Position y du centre du monstre. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mat_x</entry><entry>
+<para>Facteur d&apos;échelle pour la dimension horizontale du rectangle. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mat_y</entry><entry>
+<para>Facteur d&apos;échelle pour la dimension verticale du rectangle. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+<para>
+Definition at line <link linkend="_monstre_8h_source_1l00025">25</link> of file <link linkend="_monstre_8h_source">monstre.h</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="monstre_8h_a1bdf648b0b46f6c35eeae63523d4eac8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+</section>
+</section>

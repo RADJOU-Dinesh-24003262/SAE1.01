@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source" xml:lang="en-US">
 <title>main.cpp</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</primary></indexterm>
-<programlisting linenumbering="unnumbered"><anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00001"/>00001 <emphasis role="preprocessor">#define&#32;FPS_LIMIT&#32;60</emphasis>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00001"/><link linkend="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_1a69c339b2966791489487938c49401cf3">00001</link> <emphasis role="preprocessor">#define&#32;FPS_LIMIT&#32;60</emphasis>
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00002"/>00002 
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00003"/>00003 <emphasis role="preprocessor">#include&#32;&lt;iostream&gt;</emphasis>
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00004"/>00004 <emphasis role="preprocessor">#include&#32;&lt;thread&gt;</emphasis>
@@ -13,12 +13,12 @@
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00009"/>00009 
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00010"/>00010 <emphasis role="keyword">using&#32;namespace&#32;</emphasis>std;
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00011"/>00011 
-<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00012"/>00012 <emphasis role="keywordtype">int</emphasis>&#32;main()
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00012"/><link linkend="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">00012</link> <emphasis role="keywordtype">int</emphasis>&#32;<link linkend="__min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_1ae66f6b31b5ad750f1fe042a706a4e3d4">main</link>()
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00013"/>00013 {
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00014"/>00014 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Initialise&#32;le&#32;système</emphasis>
-<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l">MinGL</link>&#32;window(<emphasis role="stringliteral">&quot;06&#32;-&#32;Sprite&quot;</emphasis>,&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(640,&#32;640),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128,&#32;128),&#32;nsGraphics::KBlack);
-<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;window.initGlut();
-<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;window.initGraphic();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00015"/>00015 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l">MinGL</link>&#32;window(<emphasis role="stringliteral">&quot;06&#32;-&#32;Sprite&quot;</emphasis>,&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(640,&#32;640),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128,&#32;128),&#32;<link linkend="_namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8">nsGraphics::KBlack</link>);
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00016"/>00016 &#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a17c7718b9e966c8147cd56483dcf4e8d">initGlut</link>();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00017"/>00017 &#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a5962a0a0ced7879bc0cc65e267e8d7fc">initGraphic</link>();
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00018"/>00018 
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00019"/>00019 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Instancie&#32;le&#32;sprite</emphasis>
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00020"/>00020 &#32;&#32;&#32;&#32;<link linkend="_classns_gui_1_1_sprite">nsGui::Sprite</link>&#32;doggo(<emphasis role="stringliteral">&quot;res/doggo.si2&quot;</emphasis>,&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(195,&#32;195));
@@ -27,25 +27,25 @@
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00023"/>00023 &#32;&#32;&#32;&#32;chrono::microseconds&#32;frameTime&#32;=&#32;chrono::microseconds::zero();
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00024"/>00024 
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00025"/>00025 &#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;fait&#32;tourner&#32;la&#32;boucle&#32;tant&#32;que&#32;la&#32;fenêtre&#32;est&#32;ouverte</emphasis>
-<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(window.isOpen())
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00026"/>00026 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">while</emphasis>&#32;(window.<link linkend="_class_min_g_l_1a05a0da9d0729e9c7dbd1121b0956866d">isOpen</link>())
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00027"/>00027 &#32;&#32;&#32;&#32;{
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00028"/>00028 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;Récupère&#32;l&apos;heure&#32;actuelle</emphasis>
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00029"/>00029 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;chrono::time_point&lt;chrono::steady_clock&gt;&#32;start&#32;=&#32;chrono::steady_clock::now();
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00030"/>00030 
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00031"/>00031 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;efface&#32;la&#32;fenêtre</emphasis>
-<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.clearScreen();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00032"/>00032 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a86c940758616957683ffb2e239bba774">clearScreen</link>();
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00033"/>00033 
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00034"/>00034 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;affiche&#32;l&apos;image</emphasis>
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00035"/>00035 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;doggo;
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00036"/>00036 
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;finit&#32;la&#32;frame&#32;en&#32;cours</emphasis>
-<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.finishFrame();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1a489922f0bdde2e38698adddaf57f6eda">finishFrame</link>();
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00039"/>00039 
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;vide&#32;la&#32;queue&#32;d&apos;évènements</emphasis>
-<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.getEventManager().clearEvents();
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;window.<link linkend="_class_min_g_l_1ab558253439905930836ab4910a7ae253">getEventManager</link>().<link linkend="_classns_event_1_1_event_manager_1adbc5ced9a9435f61f58436ff613632b4">clearEvents</link>();
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00042"/>00042 
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;attend&#32;un&#32;peu&#32;pour&#32;limiter&#32;le&#32;framerate&#32;et&#32;soulager&#32;le&#32;CPU</emphasis>
-<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this_thread::sleep_for(chrono::milliseconds(1000&#32;/&#32;FPS_LIMIT)&#32;-&#32;chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()&#32;-&#32;start));
+<anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00044"/>00044 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;this_thread::sleep_for(chrono::milliseconds(1000&#32;/&#32;<link linkend="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_1a69c339b2966791489487938c49401cf3">FPS_LIMIT</link>)&#32;-&#32;chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()&#32;-&#32;start));
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00045"/>00045 
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00046"/>00046 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;récupère&#32;le&#32;temps&#32;de&#32;frame</emphasis>
 <anchor xml:id="__min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source_1l00047"/>00047 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;frameTime&#32;=&#32;chrono::duration_cast&lt;chrono::microseconds&gt;(chrono::steady_clock::now()&#32;-&#32;start);

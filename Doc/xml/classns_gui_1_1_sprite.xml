@@ -26,7 +26,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="34" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="34" bodyend="36"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="34" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="34" bodyend="36"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-attrib">
@@ -43,7 +43,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="112" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="112" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="112" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="112" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classns_gui_1_1_sprite_1a994cf4ac14111db5a81630412a2fc39f" prot="private" static="no" mutable="no">
         <type>uint32_t</type>
@@ -58,7 +58,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="117" column="14" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="117" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="117" column="14" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="117" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="classns_gui_1_1_sprite_1a2f7716974d7b2a4ac71914bc8dce6d29" prot="private" static="no" mutable="no">
         <type>std::vector&lt; <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &gt;</type>
@@ -73,7 +73,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="122" column="17" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="122" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="122" column="17" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="122" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="public-func">
@@ -117,7 +117,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="44" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="20" bodyend="47"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="44" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="20" bodyend="47"/>
         <references refid="namespacens_exception_1ae4cd0d6bbd5590a1b121347632d41376a476dd78ae414e68d7899fc90ff757999" compoundref="errcode_8h" startline="36">nsException::KFileError</references>
       </memberdef>
       <memberdef kind="function" id="classns_gui_1_1_sprite_1abee8e5a2740555d46f19af3d4b489453" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
@@ -172,7 +172,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="53" column="5" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="49" bodyend="53"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="53" column="5" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="49" bodyend="53"/>
       </memberdef>
       <memberdef kind="function" id="classns_gui_1_1_sprite_1ac4b29170aef06d46990b68da76480f28" prot="public" static="no" const="yes" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -192,7 +192,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="55" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="55" bodyend="72"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="55" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="55" bodyend="72"/>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e" compoundref="rgbacolor_8cpp" startline="46" endline="49">nsGraphics::RGBAcolor::getAlpha</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129" compoundref="rgbacolor_8cpp" startline="56" endline="59">nsGraphics::RGBAcolor::getBlue</references>
         <references refid="classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4" compoundref="rgbacolor_8cpp" startline="66" endline="69">nsGraphics::RGBAcolor::getGreen</references>
@@ -239,7 +239,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="57" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="74" bodyend="83"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="57" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="74" bodyend="83"/>
       </memberdef>
       <memberdef kind="function" id="classns_gui_1_1_sprite_1a63ad7e76b470c578aecc697203a3eb26" prot="public" static="no" const="no" explicit="no" inline="no" virt="virtual">
         <type>void</type>
@@ -281,7 +281,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="58" column="18" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="85" bodyend="94"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="58" column="18" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="85" bodyend="94"/>
       </memberdef>
       <memberdef kind="function" id="classns_gui_1_1_sprite_1adbe04bd427b6658e0181ce167db83d05" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const uint32_t &amp;</type>
@@ -299,7 +299,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="65" column="20" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="96" bodyend="99"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="65" column="20" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="96" bodyend="99"/>
       </memberdef>
       <memberdef kind="function" id="classns_gui_1_1_sprite_1ad8644780a7a7dcbcd5f2e4e7a461b685" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const std::vector&lt; <ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref> &gt; &amp;</type>
@@ -317,7 +317,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="72" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="101" bodyend="104"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="72" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="101" bodyend="104"/>
       </memberdef>
       <memberdef kind="function" id="classns_gui_1_1_sprite_1a1d6ad6681627aae6c4680fc936da8eb2" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type>const <ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref> &amp;</type>
@@ -335,7 +335,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="79" column="29" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="106" bodyend="109"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="79" column="29" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="106" bodyend="109"/>
       </memberdef>
       <memberdef kind="function" id="classns_gui_1_1_sprite_1a4c695910c46504d1e8d47b838394a48e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>void</type>
@@ -364,7 +364,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="86" column="10" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="111" bodyend="114"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="86" column="10" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="111" bodyend="114"/>
       </memberdef>
       <memberdef kind="function" id="classns_gui_1_1_sprite_1a26b502e88906860373c278495794998c" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
         <type><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref></type>
@@ -382,7 +382,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="93" column="23" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="116" bodyend="119"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="93" column="23" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp" bodystart="116" bodyend="119"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="private-func">
@@ -401,7 +401,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="93" column="23"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="93" column="23"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -445,7 +445,7 @@
         <link refid="classns_transition_1_1_i_transitionable"/>
       </node>
     </collaborationgraph>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="28" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="29" bodyend="123"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" line="28" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h" bodystart="29" bodyend="123"/>
     <listofallmembers>
       <member refid="classns_gui_1_1_sprite_1acae60739742f5b9dd1963a209204c116" prot="private" virt="non-virtual"><scope>nsGui::Sprite</scope><name>__attribute__</name></member>
       <member refid="classns_gui_1_1_sprite_1a26b502e88906860373c278495794998c" prot="public" virt="non-virtual"><scope>nsGui::Sprite</scope><name>computeSize</name></member>

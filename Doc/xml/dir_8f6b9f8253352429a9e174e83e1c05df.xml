@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.9.4" xml:lang="en-US">
+  <compounddef id="dir_8f6b9f8253352429a9e174e83e1c05df" kind="dir">
+    <compoundname>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui</compoundname>
+    <innerfile refid="glut__font_8h">glut_font.h</innerfile>
+    <innerfile refid="sprite_8h">sprite.h</innerfile>
+    <innerfile refid="text_8h">text.h</innerfile>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/"/>
+  </compounddef>
+</doxygen>

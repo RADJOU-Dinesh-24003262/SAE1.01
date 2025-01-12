@@ -49,11 +49,11 @@ Collaboration diagram for nsShape::Triangle:<para>
 <simplesect>
     <title>Public Member Functions    </title>
         <itemizedlist>
-            <listitem><para><link linkend="_classns_shape_1_1_triangle_1a72e60fed26e09d01757828ec019134c7">Triangle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;secondPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;thirdPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=nsGraphics::KTransparent)</para>
+            <listitem><para><link linkend="_classns_shape_1_1_triangle_1a72e60fed26e09d01757828ec019134c7">Triangle</link> (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;secondPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp;thirdPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp;borderColor=<link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link>)</para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_triangle">Triangle</link>. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_classns_shape_1_1_triangle_1ae59fd091a1005d0e4a7e648487c69739"/>virtual <emphasis role="strong">~Triangle</emphasis> () override=default</para>
+            <listitem><para>virtual <link linkend="_classns_shape_1_1_triangle_1ae59fd091a1005d0e4a7e648487c69739">~Triangle</link> () override=default</para>
 
 <para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_triangle">Triangle</link>. </para>
 </listitem>
@@ -170,7 +170,7 @@ Definition at line <link linkend="_triangle_8h_source_1l00032">32</link> of file
     <title>Triangle()</title>
 <indexterm><primary>Triangle</primary><secondary>nsShape::Triangle</secondary></indexterm>
 <indexterm><primary>nsShape::Triangle</primary><secondary>Triangle</secondary></indexterm>
-<para><computeroutput>nsShape::Triangle::Triangle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; secondPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; thirdPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput>nsGraphics::KTransparent</computeroutput>
+<para><computeroutput>nsShape::Triangle::Triangle (const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; firstPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; secondPosition, const <link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link> &amp; thirdPosition, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; fillColor, const <link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link> &amp; borderColor = <computeroutput><link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link></computeroutput>
 )</computeroutput></para><para>
 
 <para>Constructeur pour la classe <link linkend="_classns_shape_1_1_triangle">Triangle</link>. </para>
@@ -220,6 +220,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_triangle_8cpp_source_1l00017">17</link> of file <link linkend="_triangle_8cpp_source">triangle.cpp</link>.</para>
+</section>
+<anchor xml:id="_classns_shape_1_1_triangle_1ae59fd091a1005d0e4a7e648487c69739"/><section>
+    <title>~Triangle()</title>
+<indexterm><primary>~Triangle</primary><secondary>nsShape::Triangle</secondary></indexterm>
+<indexterm><primary>nsShape::Triangle</primary><secondary>~Triangle</secondary></indexterm>
+<para><computeroutput>nsShape::Triangle::~Triangle ( )<computeroutput>[override]</computeroutput>, <computeroutput>[virtual]</computeroutput>, <computeroutput>[default]</computeroutput></computeroutput></para><para>
+
+<para>Destructeur virtuel pour la classe <link linkend="_classns_shape_1_1_triangle">Triangle</link>. </para>
+</para>
 </section>
 </section>
 <section>
@@ -533,5 +542,5 @@ Definition at line <link linkend="_triangle_8cpp_source_1l00101">101</link> of f
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_triangle_8h">triangle.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/<link linkend="_triangle_8cpp">triangle.cpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/<link linkend="_triangle_8h">triangle.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/<link linkend="_triangle_8cpp">triangle.cpp</link></section>
 </section>

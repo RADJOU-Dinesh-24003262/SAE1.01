@@ -1,8 +1,8 @@
 \hypertarget{img2si_8py_source}{}\doxysection{img2si.\+py}
-\label{img2si_8py_source}\index{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/tools/img2si.py@{/home/Theo/Téléchargements/sae/SAE\_JEU/MinGL2\_IUT\_AIX-\/master/tools/img2si.py}}
-
+\label{img2si_8py_source}\index{/home/Theo/Téléchargements/sae/MinGL2\_IUT\_AIX-\/master/tools/img2si.py@{/home/Theo/Téléchargements/sae/MinGL2\_IUT\_AIX-\/master/tools/img2si.py}}
+\mbox{\hyperlink{img2si_8py}{Go to the documentation of this file.}}
 \begin{DoxyCode}{0}
-\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00001}00001 \textcolor{comment}{\#!/usr/bin/env python3}}
+\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00001}\mbox{\hyperlink{namespaceimg2si}{00001}} \textcolor{comment}{\#!/usr/bin/env python3}}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00002}00002 \textcolor{keyword}{from} array \textcolor{keyword}{import} array}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00003}00003 \textcolor{keyword}{from} PIL \textcolor{keyword}{import} Image}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00004}00004 \textcolor{keyword}{import} argparse}
@@ -29,13 +29,13 @@
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00025}00025 \textcolor{comment}{\# "{}File version"{}, "{}Pixel count"{} and "{}Image width"{} entries are little-\/endian, unsigned numbers.}}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00026}00026 }
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00027}00027 }
-\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00028}00028 \textcolor{keyword}{def }is\_file\_si2(filePath):}
+\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00028}\mbox{\hyperlink{namespaceimg2si_ae37b6f3bba8bbf990c6f8c84cd2a79bd}{00028}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceimg2si_ae37b6f3bba8bbf990c6f8c84cd2a79bd}{is\_file\_si2}}(filePath):}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00029}00029     \textcolor{comment}{\# Check the magic number}}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00030}00030     \textcolor{keyword}{with} open(filePath, \textcolor{stringliteral}{'rb'}) \textcolor{keyword}{as} file:}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00031}00031         \textcolor{keywordflow}{return} file.read(2) == b\textcolor{stringliteral}{'SI'}}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00032}00032 }
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00033}00033 }
-\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00034}00034 \textcolor{keyword}{def }convert\_from\_si2(source, output):}
+\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00034}\mbox{\hyperlink{namespaceimg2si_a86753e07bbef076355a407a398a418bf}{00034}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceimg2si_a86753e07bbef076355a407a398a418bf}{convert\_from\_si2}}(source, output):}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00035}00035     \textcolor{comment}{\# Print summary}}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00036}00036     print(\textcolor{stringliteral}{'Source image: .si2'})}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00037}00037     \_, outExtension = os.path.splitext(output)}
@@ -60,7 +60,7 @@
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00056}00056     img.save(output)}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00057}00057 }
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00058}00058 }
-\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00059}00059 \textcolor{keyword}{def }convert\_to\_si2(source, output):}
+\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00059}\mbox{\hyperlink{namespaceimg2si_a07d658824b99acc387c6444863bebd5c}{00059}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceimg2si_a07d658824b99acc387c6444863bebd5c}{convert\_to\_si2}}(source, output):}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00060}00060     \textcolor{comment}{\# Print summary}}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00061}00061     \_, outExtension = os.path.splitext(source)}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00062}00062     print(\textcolor{stringliteral}{'Source image: \{\}'}.format(outExtension))}
@@ -96,7 +96,7 @@
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00092}00092                 file.write(bytes(imageData[x, y]))}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00093}00093 }
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00094}00094 }
-\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00095}00095 \textcolor{keyword}{def }main():}
+\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00095}\mbox{\hyperlink{namespaceimg2si_afce854986e241b3a756dc2eb0a333f49}{00095}} \textcolor{keyword}{def }\mbox{\hyperlink{namespaceimg2si_afce854986e241b3a756dc2eb0a333f49}{main}}():}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00096}00096     \textcolor{comment}{\# Setup argument parser}}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00097}00097     parser = argparse.ArgumentParser(description=\textcolor{stringliteral}{'This tool converts images compatible with PIL to the minGL 2 Simple Image format (.si2), and vice versa.'})}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00098}00098     parser.add\_argument(\textcolor{stringliteral}{'-\/v'}, \textcolor{stringliteral}{'-\/-\/version'}, action=\textcolor{stringliteral}{'version'}, version=\textcolor{stringliteral}{'\%(prog)s 1.0'})}
@@ -112,12 +112,12 @@
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00108}00108         exit(\textcolor{stringliteral}{'"{}\{\}"{}\(\backslash\)nThe specified path does not exist.'}.format(source))}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00109}00109 }
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00110}00110     \textcolor{comment}{\# Check if source file is in the .si2 format}}
-\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00111}00111     isSourceSi2 = is\_file\_si2(source)}
+\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00111}00111     isSourceSi2 = \mbox{\hyperlink{namespaceimg2si_ae37b6f3bba8bbf990c6f8c84cd2a79bd}{is\_file\_si2}}(source)}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00112}00112 }
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00113}00113     \textcolor{keywordflow}{if} isSourceSi2:}
-\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00114}00114         convert\_from\_si2(source, output)}
+\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00114}00114         \mbox{\hyperlink{namespaceimg2si_a86753e07bbef076355a407a398a418bf}{convert\_from\_si2}}(source, output)}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00115}00115     \textcolor{keywordflow}{else}:}
-\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00116}00116         convert\_to\_si2(source, output)}
+\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00116}00116         \mbox{\hyperlink{namespaceimg2si_a07d658824b99acc387c6444863bebd5c}{convert\_to\_si2}}(source, output)}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00117}00117 }
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00118}00118     print(\textcolor{stringliteral}{'Done!'})}
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00119}00119 }
@@ -128,6 +128,6 @@
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00124}00124 }
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00125}00125 }
 \DoxyCodeLine{\Hypertarget{img2si_8py_source_l00126}00126 \textcolor{keywordflow}{if} \_\_name\_\_ == \textcolor{stringliteral}{"{}\_\_main\_\_"{}}:}
-\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00127}00127     main()}
+\DoxyCodeLine{\Hypertarget{img2si_8py_source_l00127}00127     \mbox{\hyperlink{namespaceimg2si_afce854986e241b3a756dc2eb0a333f49}{main}}()}
 
 \end{DoxyCode}

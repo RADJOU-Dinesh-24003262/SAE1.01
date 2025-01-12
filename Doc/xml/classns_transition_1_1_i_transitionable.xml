@@ -25,7 +25,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="30" column="13" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" bodystart="30" bodyend="30"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="30" column="13" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" bodystart="30" bodyend="30"/>
       </memberdef>
       <memberdef kind="function" id="classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -74,7 +74,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="38" column="18"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="38" column="18"/>
       </memberdef>
       <memberdef kind="function" id="classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197" prot="public" static="no" const="no" explicit="no" inline="no" virt="pure-virtual">
         <type>void</type>
@@ -123,7 +123,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="46" column="18"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="46" column="18"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -185,7 +185,7 @@
         <link refid="classns_transition_1_1_i_transitionable"/>
       </node>
     </inheritancegraph>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="23" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" bodystart="24" bodyend="47"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" line="23" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/transition/itransitionable.h" bodystart="24" bodyend="47"/>
     <listofallmembers>
       <member refid="classns_transition_1_1_i_transitionable_1a5871a16fd47c1e5c8bacdd5da8597ed9" prot="public" virt="pure-virtual"><scope>nsTransition::ITransitionable</scope><name>getValues</name></member>
       <member refid="classns_transition_1_1_i_transitionable_1ade37d29f7f2ca4890ed0e2e64d033197" prot="public" virt="pure-virtual"><scope>nsTransition::ITransitionable</scope><name>setValues</name></member>

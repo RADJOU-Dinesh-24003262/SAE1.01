@@ -10,7 +10,7 @@
         <link refid="glut__font_8h"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/glut_font.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/glut_font.cpp</label>
         <link refid="glut__font_8cpp"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -65,6 +65,6 @@
 <codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
 <codeline lineno="37"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>convertForGlut()</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/glut_font.cpp"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/glut_font.cpp"/>
   </compounddef>
 </doxygen>

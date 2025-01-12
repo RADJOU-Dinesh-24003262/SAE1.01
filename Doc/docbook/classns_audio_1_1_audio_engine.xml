@@ -85,6 +85,15 @@ Definition at line <link linkend="_audioengine_8cpp_source_1l00066">66</link> of
 </para>
 <para>
 Definition at line <link linkend="_audioengine_8cpp_source_1l00037">37</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_audio_1_1_audio_engine_a57e13380a3039e546a5f1b9242f8709b_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_classns_audio_1_1_audio_engine_1a4c88595136327b3805c0322a9a8d2a0f"/><section>
     <title>loadSound()</title>
@@ -96,6 +105,15 @@ Definition at line <link linkend="_audioengine_8cpp_source_1l00037">37</link> of
 </para>
 <para>
 Definition at line <link linkend="_audioengine_8cpp_source_1l00042">42</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_audio_1_1_audio_engine_a4c88595136327b3805c0322a9a8d2a0f_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_classns_audio_1_1_audio_engine_1a47d769cc331578a398f422ff497505c8"/><section>
     <title>playSoundFromBuffer()</title>
@@ -130,6 +148,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_audioengine_8cpp_source_1l00077">77</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_audio_1_1_audio_engine_a47d769cc331578a398f422ff497505c8_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_classns_audio_1_1_audio_engine_1aa541e8088c35ab41e4747ecd648e75e9"/><section>
     <title>playSoundFromFile()</title>
@@ -215,6 +242,15 @@ Parameters</title>
                 </para>
 <para>
 Definition at line <link linkend="_audioengine_8cpp_source_1l00016">16</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_audio_1_1_audio_engine_a6ef72eb80bef2c1b0764c40f629d2536_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_classns_audio_1_1_audio_engine_1ac21b2c1be9590a0f702c48220c59f8c9"/><section>
     <title>setMusicPlaying()</title>
@@ -260,6 +296,15 @@ Definition at line <link linkend="_audioengine_8cpp_source_1l00029">29</link> of
 </para>
 <para>
 Definition at line <link linkend="_audioengine_8cpp_source_1l00071">71</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_audio_1_1_audio_engine_ac1343ed3afe38eb80a222969f3d74d6d_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <anchor xml:id="_classns_audio_1_1_audio_engine_1aba89263fc9f810bee40dcae229313883"/><section>
     <title>toggleMusicPlaying()</title>
@@ -271,8 +316,17 @@ Definition at line <link linkend="_audioengine_8cpp_source_1l00071">71</link> of
 </para>
 <para>
 Definition at line <link linkend="_audioengine_8cpp_source_1l00024">24</link> of file <link linkend="_audioengine_8cpp_source">audioengine.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classns_audio_1_1_audio_engine_aba89263fc9f810bee40dcae229313883_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 <para>
 The documentation for this class was generated from the following files:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/audio/<link linkend="_audioengine_8h">audioengine.h</link>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/audio/<link linkend="_audioengine_8cpp">audioengine.cpp</link></section>
+/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/audio/<link linkend="_audioengine_8h">audioengine.h</link>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/audio/<link linkend="_audioengine_8cpp">audioengine.cpp</link></section>
 </section>

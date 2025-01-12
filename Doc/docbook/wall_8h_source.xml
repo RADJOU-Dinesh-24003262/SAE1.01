@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_wall_8h_source" xml:lang="en-US">
 <title>wall.h</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h</primary></indexterm>
+<indexterm><primary>/home/Theo/Téléchargements/sae/sprites/wall.h</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_wall_8h_source_1l00001"/>00001 
 <anchor xml:id="_wall_8h_source_1l00011"/>00011 <emphasis role="comment">//include&#32;les&#32;différentes&#32;formes&#32;pour&#32;dessiner&#32;les&#32;sprites</emphasis>
 <anchor xml:id="_wall_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_rectangle_8h">mingl/shape/rectangle.h</link>&quot;</emphasis>
@@ -14,6 +14,6 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_wall_8h_source_1l00028"/>00028 &#32;&#32;&#32;&#32;<emphasis role="keywordtype">int</emphasis>&#32;wall_y&#32;=&#32;320/mat_y;
 <anchor xml:id="_wall_8h_source_1l00029"/>00029 
 <anchor xml:id="_wall_8h_source_1l00030"/>00030 &#32;&#32;&#32;&#32;<emphasis role="comment">//shape&#32;formant&#32;le&#32;sprite</emphasis>
-<anchor xml:id="_wall_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((Circle1-wall_x),(Circle2-wall_y)),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((Circle1+wall_x),(Circle2+wall_y)),&#32;nsGraphics::KBlack);<emphasis role="comment">//&#32;square</emphasis>
+<anchor xml:id="_wall_8h_source_1l00031"/>00031 &#32;&#32;&#32;&#32;window&#32;&lt;&lt;&#32;<link linkend="_classns_shape_1_1_rectangle">nsShape::Rectangle</link>(<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((Circle1-wall_x),(Circle2-wall_y)),&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>((Circle1+wall_x),(Circle2+wall_y)),&#32;<link linkend="_namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8">nsGraphics::KBlack</link>);<emphasis role="comment">//&#32;square</emphasis>
 <anchor xml:id="_wall_8h_source_1l00032"/>00032 }
 </programlisting></section>

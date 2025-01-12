@@ -20,7 +20,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="45" column="13"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="45" column="13"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="friend">
@@ -63,7 +63,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="53" column="12"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="53" column="12"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="protected-func">
@@ -97,7 +97,8 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="61" column="26"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="61" column="26"/>
+        <referencedby refid="namespacens_util_1a95ba3ba3ebef98e447b47ee40f55dd1a" compoundref="ieditable_8hpp" startline="20" endline="23">nsUtil::operator&lt;&lt;</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -129,7 +130,7 @@
         <link refid="classns_util_1_1_i_editable"/>
       </node>
     </inheritancegraph>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="37" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" bodystart="38" bodyend="63"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" line="37" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/tools/ieditable.h" bodystart="38" bodyend="63"/>
     <listofallmembers>
       <member refid="classns_util_1_1_i_editable_1ab20bbe582b95383ed3f1453109035853" prot="protected" virt="pure-virtual"><scope>nsUtil::IEditable</scope><name>_Edit</name></member>
       <member refid="classns_util_1_1_i_editable_1a53db4e7832b7c4579b331800bb0cae70" prot="public" virt="non-virtual"><scope>nsUtil::IEditable</scope><name>operator&lt;&lt;</name></member>

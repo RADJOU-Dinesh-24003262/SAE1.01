@@ -12,20 +12,20 @@
     <includes refid="rgbacolor_8h" local="yes">graphics/rgbacolor.h</includes>
     <includes refid="vec2d_8h" local="yes">graphics/vec2d.h</includes>
     <includes refid="event__manager_8h" local="yes">event/event_manager.h</includes>
-    <includedby refid="_menu_management_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</includedby>
-    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</includedby>
-    <includedby refid="game_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/00-Boilerplate/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</includedby>
-    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</includedby>
-    <includedby refid="mingl_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp</includedby>
+    <includedby refid="_menu_management_8h" local="yes">/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</includedby>
+    <includedby refid="game_8cpp" local="yes">/home/Theo/Téléchargements/sae/Jeu/game.cpp</includedby>
+    <includedby refid="game_8h" local="yes">/home/Theo/Téléchargements/sae/Jeu/game.h</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/00-Boilerplate/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</includedby>
+    <includedby refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</includedby>
+    <includedby refid="mingl_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp</includedby>
     <incdepgraph>
       <node id="16">
         <label>event.hpp</label>
@@ -62,7 +62,7 @@
         </childnode>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h</label>
         <link refid="mingl_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -128,17 +128,17 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</label>
-        <link refid="_menu_management_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</label>
+        <link refid="_menu_management_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
       </node>
       <node id="3">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="4">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</label>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.h</label>
         <link refid="game_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -146,47 +146,47 @@
         </childnode>
       </node>
       <node id="6">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/00-Boilerplate/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/00-Boilerplate/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp"/>
       </node>
       <node id="7">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp"/>
       </node>
       <node id="8">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp"/>
       </node>
       <node id="9">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp"/>
       </node>
       <node id="10">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp"/>
       </node>
       <node id="11">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp"/>
       </node>
       <node id="12">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp"/>
       </node>
       <node id="13">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp"/>
       </node>
       <node id="14">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp"/>
       </node>
       <node id="15">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h</label>
         <link refid="mingl_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -218,12 +218,12 @@
         </childnode>
       </node>
       <node id="16">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp</label>
         <link refid="mingl_8cpp"/>
       </node>
       <node id="5">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp</label>
-        <link refid="main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/main.cpp</label>
+        <link refid="main_8cpp"/>
       </node>
     </invincdepgraph>
     <innerclass refid="class_min_g_l" prot="public">MinGL</innerclass>
@@ -270,7 +270,7 @@
 <codeline lineno="56"><highlight class="normal"></highlight></codeline>
 <codeline lineno="67"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c" kindref="member">MinGL</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>std::string&amp;<sp/>name,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>windowSize<sp/>=<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(640,<sp/>480),</highlight></codeline>
 <codeline lineno="68"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>&amp;<sp/>windowPosition<sp/>=<sp/><ref refid="classns_graphics_1_1_vec2_d" kindref="compound">nsGraphics::Vec2D</ref>(128,<sp/>128),</highlight></codeline>
-<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>backgroundColor<sp/>=<sp/>nsGraphics::KWhite);</highlight></codeline>
+<codeline lineno="69"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">nsGraphics::RGBAcolor</ref>&amp;<sp/>backgroundColor<sp/>=<sp/><ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">nsGraphics::KWhite</ref>);</highlight></codeline>
 <codeline lineno="70"><highlight class="normal"></highlight></codeline>
 <codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_min_g_l_1a0f84e59dd311785a7e6da848abd5d188" kindref="member">~MinGL</ref>();</highlight></codeline>
 <codeline lineno="76"><highlight class="normal"></highlight></codeline>
@@ -353,6 +353,6 @@
 <codeline lineno="306"><highlight class="normal"></highlight></codeline>
 <codeline lineno="307"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>MINGL_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h"/>
   </compounddef>
 </doxygen>

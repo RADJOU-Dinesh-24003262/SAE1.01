@@ -7,63 +7,58 @@
     <detaileddescription>
     </detaileddescription>
     <programlisting>
-<codeline><highlight class="normal">#<sp/>minGL<sp/>2</highlight></codeline>
-<codeline><highlight class="normal">MinGL<sp/>2<sp/>est<sp/>un<sp/>bibliothèque<sp/>écrite<sp/>en<sp/>C++,<sp/>évolution<sp/>de<sp/>MinGL<sp/>par<sp/>Alain<sp/>Casali,<sp/>enseignant<sp/>chercheur<sp/>au<sp/>département<sp/>informatique<sp/>de<sp/>l&apos;IUT<sp/>d&apos;Aix-en-Provence.<sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal">Elle<sp/>facilite<sp/>l&apos;affichage<sp/>de<sp/>forme<sp/>primitives<sp/>et<sp/>composées,<sp/>de<sp/>texte<sp/>et<sp/>la<sp/>réalisation<sp/>d&apos;animations.<sp/>Elle<sp/>permet<sp/>également<sp/>de<sp/>jouer<sp/>des<sp/>fichiers<sp/>audios<sp/>et<sp/>de<sp/>gérer<sp/>les<sp/>saisies<sp/>clavier<sp/>et<sp/>souris.</highlight></codeline>
+<codeline><highlight class="normal">#<sp/>Projet<sp/>SAE<sp/>1.01<sp/>-<sp/>Lethal</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Développé<sp/>dans<sp/>un<sp/>but<sp/>pédagogique.</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Contexte<sp/>du<sp/>Projet</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Installation</highlight></codeline>
-<codeline><highlight class="normal">Les<sp/>dépendances<sp/>suivantes<sp/>sont<sp/>requises<sp/>pour<sp/>utiliser<sp/>minGL<sp/>2:<sp/></highlight></codeline>
-<codeline><highlight class="normal">*<sp/>freeglut</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>sfml<sp/>(audio)</highlight></codeline>
+<codeline><highlight class="normal">Dans<sp/>le<sp/>cadre<sp/>de<sp/>cette<sp/>**SAE**,<sp/>notre<sp/>équipe<sp/>a<sp/>été<sp/>chargée<sp/>d&apos;améliorer<sp/>un<sp/>jeu<sp/>d&apos;aventure<sp/>initialement<sp/>développé<sp/>lors<sp/>des<sp/>TPs<sp/>10.<sp/>Le<sp/>but<sp/>était<sp/>d&apos;ajouter<sp/>de<sp/>nouvelles<sp/>fonctionnalités,<sp/>et<sp/>de<sp/>coder<sp/>tout<sp/>en<sp/>ayant<sp/>en<sp/>esprit<sp/>de<sp/>fournir<sp/>une<sp/>documentation<sp/>complète<sp/>du<sp/>projet<sp/>avec<sp/>Doxygen.<sp/>Nous<sp/>avons<sp/>également<sp/>mis<sp/>en<sp/>place<sp/>des<sp/>améliorations<sp/>graphique<sp/>avec<sp/>MinGL2.</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Installation<sp/>sous<sp/>**Debian<sp/>et<sp/>dérivés**:</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline><highlight class="normal">sudo<sp/>apt-get<sp/>install<sp/>freeglut3-dev<sp/>libsfml-dev</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Objectifs</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Installation<sp/>sous<sp/>**Arch<sp/>Linux<sp/>et<sp/>Manjaro**: </highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline><highlight class="normal">sudo<sp/>pacman<sp/>-S<sp/>freeglut<sp/>sfml</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
+<codeline><highlight class="normal">Les<sp/>objectifs<sp/>que<sp/>nous<sp/>souhaitons<sp/>pour<sp/>ce<sp/>projet<sp/>les<sp/>suivants<sp/>:</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Installation<sp/>sous<sp/>**macOS**<sp/>(avec<sp/>[Homebrew](https://brew.sh)<sp/>préalablement<sp/>installé):</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline><highlight class="normal">brew<sp/>cask<sp/>install<sp/>xquartz</highlight></codeline>
-<codeline><highlight class="normal">brew<sp/>install<sp/>freeglut<sp/>sfml</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline><highlight class="normal">**Important**:<sp/>Afin<sp/>de<sp/>terminer<sp/>l&apos;installation<sp/>de<sp/>XQuartz,<sp/>macOS<sp/>doit<sp/>être<sp/>redémarré.</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>**Blinder<sp/>le<sp/>code<sp/>existant**<sp/>:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Sécurisation<sp/>des<sp/>indices<sp/>(pas<sp/>de<sp/>débordements<sp/>de<sp/>tableaux)<sp/>et<sp/>gestion<sp/>des<sp/>erreurs.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ajout<sp/>de<sp/>vérification<sp/>qui<sp/>permet<sp/>d&apos;éviter<sp/>au<sp/>1er<sp/>joueur<sp/>qu&apos;il<sp/>joue<sp/>à<sp/>la<sp/>place<sp/>du<sp/>deuxième<sp/>joueur.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>**Ajout<sp/>de<sp/>nouvelles<sp/>fonctionnalités**<sp/>:</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Lecture<sp/>de<sp/>fichiers<sp/>de<sp/>configuration<sp/>```config.yaml.```</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Générer<sp/>des<sp/>murs<sp/>de<sp/>manière<sp/>procédurale</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ajout<sp/>d&apos;un<sp/>monstre<sp/>qui<sp/>a<sp/>pour<sp/>but<sp/>de<sp/>suivre<sp/>un<sp/>joueur<sp/>proche<sp/>et<sp/>de<sp/>le<sp/>manger.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ajout<sp/>de<sp/>safe<sp/>zones<sp/>où<sp/>le<sp/>monstre<sp/>n&apos;aura<sp/>pas<sp/>le<sp/>droit<sp/>d&apos;attaquer<sp/>le<sp/>joueur</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ajout<sp/>d&apos;un<sp/>système<sp/>de<sp/>score<sp/>dans<sp/>le<sp/>jeu.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ajout<sp/>de<sp/>téléporteur<sp/>dans<sp/>le<sp/>jeu<sp/>qui<sp/>permettra<sp/>au<sp/>joueur<sp/>de<sp/>se<sp/>déplacer<sp/>plus<sp/>rapidement.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>(Ajout<sp/>de<sp/>skin<sp/>pour<sp/>les<sp/>personages)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>(Ajout<sp/>de<sp/>power<sp/>up<sp/>dans<sp/>le<sp/>jeu)<sp/><sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>(Implémentation<sp/>d&apos;un<sp/>système<sp/>de<sp/>high<sp/>scores.)</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Réalisation<sp/>d&apos;un<sp/>Lore</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Utilisation<sp/>de<sp/>**MinGL**<sp/>pour<sp/>une<sp/>meuilleure<sp/>expérience<sp/>de<sp/>jeu</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Testé<sp/>sous<sp/>Debian<sp/>10,<sp/>Ubuntu<sp/>20.04,<sp/>macOS<sp/>10.15,<sp/>Manjaro<sp/>GNU/Linux<sp/>(audio<sp/>non<sp/>testé)</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>**Documentation<sp/>avec<sp/>Doxygen**<sp/>:<sp/>Génération<sp/>d&apos;une<sp/>documentation<sp/>à<sp/>l&apos;aide<sp/>de<sp/>Doxygen<sp/>grâce<sp/>aau<sp/>commentaires<sp/>dans<sp/>le<sp/>code</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Utilisation</highlight></codeline>
+<codeline><highlight class="normal">---</highlight></codeline>
+<codeline><highlight class="normal">##<sp/>Comment<sp/>jouer<sp/>au<sp/>jeu</highlight></codeline>
+<codeline><highlight class="normal">Ce<sp/>jeu<sp/>se<sp/>joue<sp/>exclusivement<sp/>sur<sp/>**Linux**.<sp/>Pour<sp/>y<sp/>jouer,<sp/>vous<sp/>devez<sp/>impérativement<sp/>être<sp/>**deux<sp/>joueurs**.<sp/>Vous<sp/>jouez<sp/>tous<sp/>les<sp/>2<sp/>en<sp/>temps<sp/>réel<sp/>dans<sp/>la<sp/>fenêtre<sp/>MinGL2<sp/>à<sp/>l&apos;aide<sp/>des<sp/>touches<sp/>du<sp/>clavier.<sp/>L’objectif<sp/>du<sp/>jeu<sp/>est<sp/>d&apos;avoir<sp/>le<sp/>maximum<sp/>de<sp/>points<sp/>en<sp/>ramassant<sp/>les<sp/>objets,<sp/>tout<sp/>en<sp/>évitant<sp/>de<sp/>se<sp/>faire<sp/>attraper<sp/>par<sp/>le<sp/>monstre.<sp/>Les<sp/>touches<sp/>utilisées<sp/>peuvent<sp/>être<sp/>personnalisées,<sp/>tout<sp/>comme<sp/>la<sp/>taille<sp/>de<sp/>la<sp/>carte.</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>Avec<sp/>un<sp/>autre<sp/>projet<sp/>qmake</highlight></codeline>
-<codeline><highlight class="normal">Pour<sp/>utiliser<sp/>minGL<sp/>2<sp/>dans<sp/>votre<sp/>projet<sp/>qmake,<sp/>il<sp/>vous<sp/>suffit<sp/>de<sp/>décompresser<sp/>(ou<sp/>encore<sp/>mieux,<sp/>mettre<sp/>en<sp/>sous-module<sp/>git)<sp/>cette<sp/>bibliothèque<sp/>dans<sp/>un<sp/>sous-répertoire<sp/>du<sp/>répertoire<sp/>contenant<sp/>votre<sp/>fichier<sp/>``.pro``.<sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal">Il<sp/>vous<sp/>suffit<sp/>ensuite<sp/>de<sp/>rajouter<sp/>dans<sp/>votre<sp/>``.pro``<sp/>la<sp/>directive<sp/>``include(.../mingl.pri)``,<sp/>en<sp/>remplaçant<sp/>``...``<sp/>par<sp/>le<sp/>chemin<sp/>du<sp/>répertoire<sp/>de<sp/>minGL<sp/>2.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Règles<sp/>du<sp/>jeu<sp/>:</highlight></codeline>
+<codeline><highlight class="normal">1.<sp/>**Multijoueur**<sp/>:<sp/>Le<sp/>jeu<sp/>se<sp/>joue<sp/>exclusivement<sp/>à<sp/>**deux<sp/>joueurs**.</highlight></codeline>
+<codeline><highlight class="normal">2.<sp/>**Objectifs**<sp/>:<sp/></highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Ramasser<sp/>des<sp/>objets<sp/>dispersés<sp/>sur<sp/>la<sp/>carte<sp/>pour<sp/>accumuler<sp/>des<sp/>points.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Éviter<sp/>d’être<sp/>tué<sp/>par<sp/>le<sp/>monstre<sp/>qui<sp/>rôde<sp/>dans<sp/>la<sp/>zone.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Obtenir<sp/>plus<sp/>de<sp/>points<sp/>que<sp/>l&apos;autre<sp/>joueur.</highlight></codeline>
+<codeline><highlight class="normal">3.<sp/>**Gagner**<sp/>:<sp/>Pour<sp/>gagner,<sp/>vous<sp/>devez<sp/>ramasser<sp/>un<sp/>total<sp/>de<sp/>points<sp/>supérieur<sp/>à<sp/>**(longueur<sp/>de<sp/>la<sp/>carte<sp/>+<sp/>largeur<sp/>de<sp/>la<sp/>carte)**<sp/>*<sp/>**15**,<sp/>ou<sp/>bien<sp/>avoir<sp/>plus<sp/>de<sp/>point<sp/>que<sp/>l&apos;adversaire<sp/>si<sp/>le<sp/>temps<sp/>imparti<sp/>est<sp/>dépassé.</highlight></codeline>
+<codeline><highlight class="normal"><sp/><sp/><sp/>-<sp/>Une<sp/>fois<sp/>ce<sp/>total<sp/>atteint,<sp/>vous<sp/>devez<sp/>ramener<sp/>ces<sp/>objets<sp/>à<sp/>votre<sp/>maison<sp/>pour<sp/>valider<sp/>vos<sp/>points.</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">Par<sp/>exemple,<sp/>si<sp/>vous<sp/>avez<sp/>décompressé<sp/>minGL<sp/>2<sp/>dans<sp/>le<sp/>sous-répertoire<sp/>``minGL2/``<sp/>présent<sp/>dans<sp/>le<sp/>même<sp/>répertoire<sp/>que<sp/>votre<sp/>``.pro``,<sp/>alors<sp/>vous<sp/>devez<sp/>écrire<sp/>dans<sp/>ce<sp/>dernier:<sp/>``include(minGL2/mingl.pri)``.</highlight></codeline>
+<codeline><highlight class="normal">###<sp/>Mécanismes<sp/>du<sp/>jeu<sp/>:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Tour<sp/>de<sp/>jeu**<sp/>:<sp/>Les<sp/>deux<sp/>joueurs<sp/>jouent<sp/>tous<sp/>les<sp/>2<sp/>en<sp/>temps<sp/>réel<sp/>dans<sp/>la<sp/>fenêtre<sp/>MinGL2.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Personnalisation<sp/>des<sp/>touches**<sp/>:<sp/>Les<sp/>touches<sp/>qui<sp/>permettant<sp/>de<sp/>se<sp/>déplacer<sp/>peuvent<sp/>être<sp/>modifié.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Taille<sp/>de<sp/>la<sp/>carte**<sp/>:<sp/>Vous<sp/>pouvez<sp/>modifier<sp/>la<sp/>taille<sp/>de<sp/>la<sp/>carte<sp/>sur<sp/>le<sp/>fichier<sp/>config,<sp/>ce<sp/>qui<sp/>peut<sp/>augmenter<sp/>ou<sp/>diminuer<sp/>la<sp/>difficulté<sp/>du<sp/>jeu.<sp/>Une<sp/>carte<sp/>plus<sp/>grande<sp/>augmente<sp/>le<sp/>nombre<sp/>d’objets<sp/>à<sp/>ramasser,<sp/>mais<sp/>tout<sp/>de<sp/>même<sp/>à<sp/>faire<sp/>attention,<sp/>la<sp/>portée<sp/>du<sp/>monstre<sp/>augmente<sp/>avec<sp/>le<sp/>monstre.</highlight></codeline>
 <codeline></codeline>
-<codeline><highlight class="normal">###<sp/>En<sp/>tant<sp/>que<sp/>bibliothèque</highlight></codeline>
-<codeline><highlight class="normal">Vous<sp/>pouvez<sp/>facilement<sp/>compiler<sp/>minGL<sp/>2<sp/>en<sp/>tant<sp/>que<sp/>bibliothèque<sp/>afin<sp/>de<sp/>générer<sp/>le<sp/>fichier<sp/>``libmingl.a``.<sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal">Il<sp/>vous<sp/>suffit<sp/>simplement<sp/>d&apos;ouvrir<sp/>le<sp/>fichier<sp/>de<sp/>projet<sp/>``mingl.pro``<sp/>et<sp/>de<sp/>lancer<sp/>la<sp/>compilation,<sp/>vous<sp/>trouverez<sp/>le<sp/>fichier<sp/>``.a``<sp/>dans<sp/>le<sp/>répertoire<sp/>de<sp/>compilation.<sp/><sp/></highlight></codeline>
-<codeline><highlight class="normal">Le<sp/>répertoire<sp/>``include/``<sp/>contient<sp/>tout<sp/>les<sp/>fichiers<sp/>d&apos;en-tête<sp/>de<sp/>minGL<sp/>2.</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">###<sp/>Extras</highlight></codeline>
-<codeline><highlight class="normal">Si<sp/>vous<sp/>avez<sp/>``doxygen``<sp/>installé<sp/>sur<sp/>votre<sp/>machine,<sp/>vous<sp/>pouvez<sp/>générer,<sp/>dans<sp/>le<sp/>répertoire<sp/>``doc/``,<sp/>une<sp/>documentation<sp/>HTML<sp/>de<sp/>minGL<sp/>2<sp/>avec<sp/>la<sp/>commande<sp/>suivante:</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline><highlight class="normal">doxygen<sp/>Doxyfile</highlight></codeline>
-<codeline><highlight class="normal">```</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">Dans<sp/>le<sp/>répertoire<sp/>``tools/``,<sp/>vous<sp/>trouverez<sp/>des<sp/>outils<sp/>relatif<sp/>a<sp/>l&apos;utilisation<sp/>de<sp/>minGL<sp/>2.</highlight></codeline>
-<codeline></codeline>
-<codeline><highlight class="normal">##<sp/>Remerciements</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>**Alexandre<sp/>Sollier<sp/>et<sp/>Clément<sp/>Mathieu--Drif**:<sp/>Développeurs<sp/>principaux<sp/>de<sp/>minGL<sp/>2</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>**Alain<sp/>Casali**:<sp/>Auteur<sp/>de<sp/>la<sp/>version<sp/>originale<sp/>de<sp/>MinGL</highlight></codeline>
-<codeline><highlight class="normal">*<sp/>La<sp/>promo<sp/>2020-2021<sp/>de<sp/>la<sp/>2ème<sp/>année<sp/>du<sp/>Département<sp/>Informatique<sp/>de<sp/>l&apos;IUT<sp/>d&apos;Aix-en-Provence</highlight></codeline>
-<codeline></codeline>
+<codeline><highlight class="normal">###<sp/>Stratégies<sp/>:</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Ramasser<sp/>les<sp/>objets**<sp/>:<sp/>Explorez<sp/>la<sp/>carte<sp/>pour<sp/>ramasser<sp/>les<sp/>objets<sp/>tout<sp/>en<sp/>évitant<sp/>le<sp/>monstre.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Calculer<sp/>votre<sp/>score**<sp/>:<sp/>Assurez-vous<sp/>de<sp/>ramasser<sp/>suffisamment<sp/>d’objets<sp/>pour<sp/>atteindre<sp/>le<sp/>score<sp/>requis<sp/>avant<sp/>que<sp/>l’autre<sp/>joueur<sp/>gagne<sp/>ou<sp/>le<sp/>monstre<sp/>ne<sp/>vous<sp/>élimine.</highlight></codeline>
+<codeline><highlight class="normal">-<sp/>**Coopérez**<sp/>:<sp/>Effectuez<sp/>des<sp/>aliances<sp/>pour<sp/>éviter<sp/>de<sp/>vous<sp/>faire<sp/>manger<sp/>par<sp/>le<sp/>monstre.</highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/README.md"/>
+    <location file="/home/Theo/Téléchargements/sae/README.md"/>
   </compounddef>
 </doxygen>

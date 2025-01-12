@@ -1,13 +1,13 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_transition_8cpp_source" xml:lang="en-US">
 <title>transition.cpp</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/transition/transition.cpp</primary></indexterm>
-<programlisting linenumbering="unnumbered"><anchor xml:id="_transition_8cpp_source_1l00001"/>00001 
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/transition/transition.cpp</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_transition_8cpp_source_1l00001"/>00001 
 <anchor xml:id="_transition_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&quot;<link linkend="_transition_8h">mingl/transition/transition.h</link>&quot;</emphasis>
 <anchor xml:id="_transition_8cpp_source_1l00012"/>00012 
 <anchor xml:id="_transition_8cpp_source_1l00013"/>00013 <emphasis role="preprocessor">#include&#32;&lt;algorithm&gt;</emphasis>
 <anchor xml:id="_transition_8cpp_source_1l00014"/>00014 
-<anchor xml:id="_transition_8cpp_source_1l00015"/>00015 <emphasis role="preprocessor">#define&#32;TRANSITION&#32;nsTransition::Transition</emphasis>
+<anchor xml:id="_transition_8cpp_source_1l00015"/><link linkend="_transition_8cpp_1adf1b33de7a9f44e3126ab220c751d392">00015</link> <emphasis role="preprocessor">#define&#32;TRANSITION&#32;nsTransition::Transition</emphasis>
 <anchor xml:id="_transition_8cpp_source_1l00016"/>00016 
 <anchor xml:id="_transition_8cpp_source_1l00017"/>00017 TRANSITION::Transition(<emphasis role="keyword">const</emphasis>&#32;TransitionContract&#32;&amp;contract)
 <anchor xml:id="_transition_8cpp_source_1l00018"/>00018 &#32;&#32;&#32;&#32;:&#32;TransitionContract(contract)

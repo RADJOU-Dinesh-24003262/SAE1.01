@@ -1,10 +1,11 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <book xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_index" xml:lang="en-US">
     <info>
-    <title>SAE 1.01</title>
+    <title>My Project</title>
     </info>
 <chapter>
     <title>Namespace Documentation</title>
+<xi:include href="namespaceimg2si.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 <xi:include href="namespacens_audio.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 <xi:include href="namespacens_event.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 <xi:include href="namespacens_exception.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -88,6 +89,7 @@
     <xi:include href="mingl_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="wall_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="wall_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="button_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="button_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="player2_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="player2_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -95,17 +97,23 @@
     <xi:include href="player1_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="cigarette_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="cigarette_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="teleporter_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="teleporter_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="kebab_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="kebab_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="statue_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="statue_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="monstre_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="monstre_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="event_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="event_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="img2si_8py.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="img2si_8py_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="ieditable_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="ieditable_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="ieditable_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="ieditable_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="ifonctorunaire_8hpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="ifonctorunaire_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="macros_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="macros_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -119,6 +127,7 @@
     <xi:include href="sprite_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="glut__font_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="glut__font_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="text_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="text_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="rgbacolor_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="rgbacolor_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -132,15 +141,19 @@
     <xi:include href="cexception_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="transition__contract_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="transition__contract_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="gridmanagement_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="gridmanagement_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="game_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="game_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="type_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="type_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="gridmanagement_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="gridmanagement_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_menu_management_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_menu_management_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="params_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="params_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="params_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="params_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="shape_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="shape_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -152,20 +165,39 @@
     <xi:include href="cexception_8hpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="errcode_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="errcode_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_2_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2tools_2_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_r_e_a_d_m_e_8md.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="09-_custom_transitionable_2bgtext_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="09-_custom_transitionable_2bgtext_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="08-_custom_drawable_2bgtext_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="08-_custom_drawable_2bgtext_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="09-_custom_transitionable_2bgtext_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="09-_custom_transitionable_2bgtext_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="08-_custom_drawable_2bgtext_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="08-_custom_drawable_2bgtext_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="main_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="main_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="game_8h.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="game_8h_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
@@ -179,7 +211,9 @@
     <xi:include href="rectangle_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="line_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="line_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="transition_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="transition_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="transition__engine_8cpp.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
     <xi:include href="transition__engine_8cpp_source.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>
 <index/>

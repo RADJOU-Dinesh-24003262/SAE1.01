@@ -2,6 +2,9 @@
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_struct_form" xml:lang="en-US">
 <title>Form Struct Reference</title>
 <indexterm><primary>Form</primary></indexterm>
+<para>
+<computeroutput>#include &lt;type.h&gt;</computeroutput>
+</para>
 <simplesect>
     <title>Public Attributes    </title>
         <itemizedlist>
@@ -43,5 +46,5 @@ Definition at line <link linkend="_type_8h_source_1l00145">145</link> of file <l
 </section>
 <para>
 The documentation for this struct was generated from the following file:</para>
-/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/<link linkend="_type_8h">type.h</link></section>
+/home/Theo/Téléchargements/sae/Jeu/<link linkend="_type_8h">type.h</link></section>
 </section>

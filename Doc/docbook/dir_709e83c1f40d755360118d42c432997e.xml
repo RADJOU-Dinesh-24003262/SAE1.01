@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_709e83c1f40d755360118d42c432997e" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/exception Directory Reference</primary></indexterm>
+Directory dependency graph for exception:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_709e83c1f40d755360118d42c432997e_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_cexception_8h">cexception.h</link></para>
+
+<para>Declaration de la classe CException. </para>
+</listitem>
+            <listitem><para>file <link linkend="_cexception_8hpp">cexception.hpp</link></para>
+
+<para>classe CException </para>
+</listitem>
+            <listitem><para>file <link linkend="_errcode_8h">errcode.h</link></para>
+
+<para>Codes d&apos;erreurs. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

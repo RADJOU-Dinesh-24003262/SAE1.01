@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mingl_8h_source" xml:lang="en-US">
 <title>mingl.h</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</primary></indexterm>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_mingl_8h_source_1l00001"/>00001 
 <anchor xml:id="_mingl_8h_source_1l00011"/>00011 <emphasis role="preprocessor">#ifndef&#32;MINGL_H</emphasis>
 <anchor xml:id="_mingl_8h_source_1l00012"/>00012 <emphasis role="preprocessor">#define&#32;MINGL_H</emphasis>
@@ -32,7 +32,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_mingl_8h_source_1l00056"/>00056 
 <anchor xml:id="_mingl_8h_source_1l00067"/>00067 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1aecc35a286d1adbcbdc76bf26df18169c">MinGL</link>(<emphasis role="keyword">const</emphasis>&#32;std::string&amp;&#32;name,&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;windowSize&#32;=&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(640,&#32;480),
 <anchor xml:id="_mingl_8h_source_1l00068"/>00068 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>&amp;&#32;windowPosition&#32;=&#32;<link linkend="_classns_graphics_1_1_vec2_d">nsGraphics::Vec2D</link>(128,&#32;128),
-<anchor xml:id="_mingl_8h_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;backgroundColor&#32;=&#32;nsGraphics::KWhite);
+<anchor xml:id="_mingl_8h_source_1l00069"/>00069 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&amp;&#32;backgroundColor&#32;=&#32;<link linkend="_namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2">nsGraphics::KWhite</link>);
 <anchor xml:id="_mingl_8h_source_1l00070"/>00070 
 <anchor xml:id="_mingl_8h_source_1l00075"/>00075 &#32;&#32;&#32;&#32;<link linkend="_class_min_g_l_1a0f84e59dd311785a7e6da848abd5d188">~MinGL</link>();
 <anchor xml:id="_mingl_8h_source_1l00076"/>00076 

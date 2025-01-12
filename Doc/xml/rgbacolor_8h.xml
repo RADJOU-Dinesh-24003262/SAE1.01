@@ -4,14 +4,14 @@
     <compoundname>rgbacolor.h</compoundname>
     <includes local="no">GL/freeglut.h</includes>
     <includes refid="ieditable_8h" local="yes">../tools/ieditable.h</includes>
-    <includedby refid="sprite_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h</includedby>
-    <includedby refid="text_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/text.h</includedby>
-    <includedby refid="mingl_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</includedby>
-    <includedby refid="shape_8h" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h</includedby>
-    <includedby refid="rgbacolor_8cpp" local="yes">/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/rgbacolor.cpp</includedby>
+    <includedby refid="sprite_8h" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h</includedby>
+    <includedby refid="text_8h" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/text.h</includedby>
+    <includedby refid="mingl_8h" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h</includedby>
+    <includedby refid="shape_8h" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h</includedby>
+    <includedby refid="rgbacolor_8cpp" local="yes">/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/graphics/rgbacolor.cpp</includedby>
     <incdepgraph>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h</label>
         <link refid="rgbacolor_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -43,17 +43,17 @@
     </incdepgraph>
     <invincdepgraph>
       <node id="6">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/MenuManagement.h</label>
-        <link refid="_menu_management_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/MenuManagement.h</label>
+        <link refid="_menu_management_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="7">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.cpp</label>
-        <link refid="game_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.cpp</label>
+        <link refid="game_8cpp"/>
       </node>
       <node id="18">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</label>
+        <label>/home/Theo/Téléchargements/sae/Jeu/game.h</label>
         <link refid="game_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
@@ -61,71 +61,71 @@
         </childnode>
       </node>
       <node id="20">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/00-Boilerplate/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/00-Boilerplate/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_200-_boilerplate_2main_8cpp"/>
       </node>
       <node id="21">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/01-Shapes/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_201-_shapes_2main_8cpp"/>
       </node>
       <node id="8">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/02-Texte/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_202-_texte_2main_8cpp"/>
       </node>
       <node id="22">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/03-Clavier/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_203-_clavier_2main_8cpp"/>
       </node>
       <node id="23">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/04-Souris/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_204-_souris_2main_8cpp"/>
       </node>
       <node id="24">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/05-Transition/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_205-_transition_2main_8cpp"/>
       </node>
       <node id="3">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/06-Sprite/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_206-_sprite_2main_8cpp"/>
       </node>
       <node id="9">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/07-Audio/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_207-_audio_2main_8cpp"/>
       </node>
       <node id="11">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.cpp</label>
-        <link refid="08-_custom_drawable_2bgtext_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.cpp</label>
+        <link refid="08-_custom_drawable_2bgtext_8cpp"/>
       </node>
       <node id="10">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</label>
-        <link refid="08-_custom_drawable_2bgtext_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/bgtext.h</label>
+        <link refid="08-_custom_drawable_2bgtext_8h"/>
         <childnode refid="11" relation="include">
         </childnode>
         <childnode refid="12" relation="include">
         </childnode>
       </node>
       <node id="12">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/08-CustomDrawable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_208-_custom_drawable_2main_8cpp"/>
       </node>
       <node id="14">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp</label>
-        <link refid="09-_custom_transitionable_2bgtext_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.cpp</label>
+        <link refid="09-_custom_transitionable_2bgtext_8cpp"/>
       </node>
       <node id="13">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</label>
-        <link refid="09-_custom_transitionable_2bgtext_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/bgtext.h</label>
+        <link refid="09-_custom_transitionable_2bgtext_8h"/>
         <childnode refid="14" relation="include">
         </childnode>
         <childnode refid="15" relation="include">
         </childnode>
       </node>
       <node id="15">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
-        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/examples/09-CustomTransitionable/main.cpp</label>
+        <link refid="_min_g_l2___i_u_t___a_i_x-master_2examples_209-_custom_transitionable_2main_8cpp"/>
       </node>
       <node id="1">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h</label>
         <link refid="rgbacolor_8h"/>
         <childnode refid="2" relation="include">
         </childnode>
@@ -139,7 +139,7 @@
         </childnode>
       </node>
       <node id="2">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/sprite.h</label>
         <link refid="sprite_8h"/>
         <childnode refid="3" relation="include">
         </childnode>
@@ -147,7 +147,7 @@
         </childnode>
       </node>
       <node id="5">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/gui/text.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/gui/text.h</label>
         <link refid="text_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
@@ -163,7 +163,7 @@
         </childnode>
       </node>
       <node id="17">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/mingl.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/mingl.h</label>
         <link refid="mingl_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
@@ -195,7 +195,7 @@
         </childnode>
       </node>
       <node id="27">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/circle.h</label>
         <link refid="circle_8h"/>
         <childnode refid="21" relation="include">
         </childnode>
@@ -213,7 +213,7 @@
         </childnode>
       </node>
       <node id="33">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/line.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/line.h</label>
         <link refid="line_8h"/>
         <childnode refid="21" relation="include">
         </childnode>
@@ -225,7 +225,7 @@
         </childnode>
       </node>
       <node id="35">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/oval.h</label>
         <link refid="oval_8h"/>
         <childnode refid="36" relation="include">
         </childnode>
@@ -239,7 +239,7 @@
         </childnode>
       </node>
       <node id="38">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/rectangle.h</label>
         <link refid="rectangle_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
@@ -273,7 +273,7 @@
         </childnode>
       </node>
       <node id="26">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/shape.h</label>
         <link refid="shape_8h"/>
         <childnode refid="27" relation="include">
         </childnode>
@@ -289,7 +289,7 @@
         </childnode>
       </node>
       <node id="44">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/shape/triangle.h</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/shape/triangle.h</label>
         <link refid="triangle_8h"/>
         <childnode refid="21" relation="include">
         </childnode>
@@ -299,99 +299,99 @@
         </childnode>
       </node>
       <node id="47">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/graphics/rgbacolor.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/graphics/rgbacolor.cpp</label>
         <link refid="rgbacolor_8cpp"/>
       </node>
       <node id="4">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/sprite.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/sprite.cpp</label>
         <link refid="sprite_8cpp"/>
       </node>
       <node id="16">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/gui/text.cpp</label>
-        <link refid="text_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/gui/text.cpp</label>
+        <link refid="text_8cpp"/>
       </node>
       <node id="25">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/mingl.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/mingl.cpp</label>
         <link refid="mingl_8cpp"/>
       </node>
       <node id="28">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/circle.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/circle.cpp</label>
         <link refid="circle_8cpp"/>
       </node>
       <node id="34">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/line.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/line.cpp</label>
         <link refid="line_8cpp"/>
       </node>
       <node id="36">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/oval.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/oval.cpp</label>
         <link refid="oval_8cpp"/>
       </node>
       <node id="39">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/rectangle.cpp</label>
         <link refid="rectangle_8cpp"/>
       </node>
       <node id="46">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/shape.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/shape.cpp</label>
         <link refid="shape_8cpp"/>
       </node>
       <node id="45">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/triangle.cpp</label>
+        <label>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/triangle.cpp</label>
         <link refid="triangle_8cpp"/>
       </node>
       <node id="19">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/main.cpp</label>
-        <link refid="main_8cpp_source"/>
+        <label>/home/Theo/Téléchargements/sae/main.cpp</label>
+        <link refid="main_8cpp"/>
       </node>
       <node id="29">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/button.h</label>
-        <link refid="button_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/sprites/button.h</label>
+        <link refid="button_8h"/>
         <childnode refid="6" relation="include">
         </childnode>
       </node>
       <node id="37">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/cigarette.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/cigarette.h</label>
         <link refid="cigarette_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="40">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/kebab.h</label>
-        <link refid="kebab_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/sprites/kebab.h</label>
+        <link refid="kebab_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="41">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/monstre.h</label>
-        <link refid="monstre_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/sprites/monstre.h</label>
+        <link refid="monstre_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="30">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/player1.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/player1.h</label>
         <link refid="player1_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="31">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/player2.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/player2.h</label>
         <link refid="player2_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="32">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/statue.h</label>
-        <link refid="statue_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/sprites/statue.h</label>
+        <link refid="statue_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="42">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/teleporter.h</label>
-        <link refid="teleporter_8h_source"/>
+        <label>/home/Theo/Téléchargements/sae/sprites/teleporter.h</label>
+        <link refid="teleporter_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
       </node>
       <node id="43">
-        <label>/home/Theo/Téléchargements/sae/SAE_JEU/sprites/wall.h</label>
+        <label>/home/Theo/Téléchargements/sae/sprites/wall.h</label>
         <link refid="wall_8h"/>
         <childnode refid="7" relation="include">
         </childnode>
@@ -471,31 +471,31 @@
 <codeline lineno="154"><highlight class="normal"></highlight></codeline>
 <codeline lineno="155"><highlight class="normal"></highlight><highlight class="comment">//<sp/>Quelques<sp/>couleurs<sp/>trouvées<sp/>sur:</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="156"><highlight class="normal"></highlight><highlight class="comment">//<sp/>https://www.rapidtables.com/web/color/RGB_Color.html</highlight><highlight class="normal"></highlight></codeline>
-<codeline lineno="157"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/>KBlack<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/><sp/>0,<sp/><sp/><sp/>0};</highlight></codeline>
-<codeline lineno="158"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KWhite<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{255,<sp/>255,<sp/>255};</highlight></codeline>
-<codeline lineno="159"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KRed<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{255,<sp/><sp/><sp/>0,<sp/><sp/><sp/>0};</highlight></codeline>
-<codeline lineno="160"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KLime<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/>255,<sp/><sp/><sp/>0};</highlight></codeline>
-<codeline lineno="161"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KBlue<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/><sp/>0,<sp/>255};</highlight></codeline>
-<codeline lineno="162"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KYellow<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{255,<sp/>255,<sp/><sp/><sp/>0};</highlight></codeline>
-<codeline lineno="163"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KCyan<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/>255,<sp/>255};</highlight></codeline>
-<codeline lineno="164"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KMagenta<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{255,<sp/><sp/><sp/>0,<sp/>255};</highlight></codeline>
-<codeline lineno="165"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KSilver<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{192,<sp/>192,<sp/>192};</highlight></codeline>
-<codeline lineno="166"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KGray<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{128,<sp/>128,<sp/>128};</highlight></codeline>
-<codeline lineno="167"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KDarkGray<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{200,<sp/>200,<sp/>200};</highlight></codeline>
-<codeline lineno="168"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KMaroon<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{128,<sp/><sp/><sp/>0,<sp/><sp/><sp/>0};</highlight></codeline>
-<codeline lineno="169"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KOlive<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{128,<sp/>128,<sp/><sp/><sp/>0};</highlight></codeline>
-<codeline lineno="170"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KGreen<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/>128,<sp/><sp/><sp/>0};</highlight></codeline>
-<codeline lineno="171"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KPurple<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{128,<sp/><sp/><sp/>0,<sp/>128};</highlight></codeline>
-<codeline lineno="172"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KTeal<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/>128,<sp/>128};</highlight></codeline>
-<codeline lineno="173"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KNavy<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/><sp/>0,<sp/>128};</highlight></codeline>
-<codeline lineno="174"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KBeige<sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{231,<sp/>211,<sp/>171};</highlight></codeline>
-<codeline lineno="175"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KTransparent<sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/><sp/>0,<sp/><sp/><sp/>0,<sp/><sp/>0};</highlight></codeline>
-<codeline lineno="176"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/>RGBAcolor<sp/>KBlueTransparent<sp/>{<sp/><sp/>0,<sp/><sp/><sp/>0,<sp/>255,<sp/><sp/>30};</highlight></codeline>
+<codeline lineno="157" refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1abf1d83a5438e750a393a0333bd9d5bd8" kindref="member">KBlack</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/><sp/>0,<sp/><sp/><sp/>0};</highlight></codeline>
+<codeline lineno="158" refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a8c5fcb477a548c6ed321748ec8383bb2" kindref="member">KWhite</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{255,<sp/>255,<sp/>255};</highlight></codeline>
+<codeline lineno="159" refid="namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a2eb081113194e8ff44aebd697c2cfe61" kindref="member">KRed</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{255,<sp/><sp/><sp/>0,<sp/><sp/><sp/>0};</highlight></codeline>
+<codeline lineno="160" refid="namespacens_graphics_1abfa46e909a7f8d4d908e70e4b55f734c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1abfa46e909a7f8d4d908e70e4b55f734c" kindref="member">KLime</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/>255,<sp/><sp/><sp/>0};</highlight></codeline>
+<codeline lineno="161" refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a64e9d947b926cdb9a7359e1d6f45a81e" kindref="member">KBlue</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/><sp/>0,<sp/>255};</highlight></codeline>
+<codeline lineno="162" refid="namespacens_graphics_1a445ddb81e2a910db8e01a70403988966" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a445ddb81e2a910db8e01a70403988966" kindref="member">KYellow</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{255,<sp/>255,<sp/><sp/><sp/>0};</highlight></codeline>
+<codeline lineno="163" refid="namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1ac3f029049cd7ede1dfa2c788749029ad" kindref="member">KCyan</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/>255,<sp/>255};</highlight></codeline>
+<codeline lineno="164" refid="namespacens_graphics_1ad0a8ee009f367326525d2cbd47cd5dea" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1ad0a8ee009f367326525d2cbd47cd5dea" kindref="member">KMagenta</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{255,<sp/><sp/><sp/>0,<sp/>255};</highlight></codeline>
+<codeline lineno="165" refid="namespacens_graphics_1a44884fe5a7841edbad80039e8ad4017c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a44884fe5a7841edbad80039e8ad4017c" kindref="member">KSilver</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{192,<sp/>192,<sp/>192};</highlight></codeline>
+<codeline lineno="166" refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a96ad8f5e0a09dba209c3359c277dcc6f" kindref="member">KGray</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{128,<sp/>128,<sp/>128};</highlight></codeline>
+<codeline lineno="167" refid="namespacens_graphics_1a7f6ca880f0cf5e6e76b0081c84d5f1fb" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a7f6ca880f0cf5e6e76b0081c84d5f1fb" kindref="member">KDarkGray</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{200,<sp/>200,<sp/>200};</highlight></codeline>
+<codeline lineno="168" refid="namespacens_graphics_1a219354b4276a9edbfc436390ba3a4827" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a219354b4276a9edbfc436390ba3a4827" kindref="member">KMaroon</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{128,<sp/><sp/><sp/>0,<sp/><sp/><sp/>0};</highlight></codeline>
+<codeline lineno="169" refid="namespacens_graphics_1a11591ce1586e827d54a3d10b2fe3fc0c" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a11591ce1586e827d54a3d10b2fe3fc0c" kindref="member">KOlive</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{128,<sp/>128,<sp/><sp/><sp/>0};</highlight></codeline>
+<codeline lineno="170" refid="namespacens_graphics_1ad2a6c119991dbf9f510d68a420524704" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1ad2a6c119991dbf9f510d68a420524704" kindref="member">KGreen</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/>128,<sp/><sp/><sp/>0};</highlight></codeline>
+<codeline lineno="171" refid="namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a43b5e5d4f7a1bc5f2928a5a8e312773b" kindref="member">KPurple</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{128,<sp/><sp/><sp/>0,<sp/>128};</highlight></codeline>
+<codeline lineno="172" refid="namespacens_graphics_1a63e989cb02df1c3e6cbd40d0d3e3161d" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a63e989cb02df1c3e6cbd40d0d3e3161d" kindref="member">KTeal</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/>128,<sp/>128};</highlight></codeline>
+<codeline lineno="173" refid="namespacens_graphics_1a4ea1ef3950c89b063d76e0a13faf5ce8" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a4ea1ef3950c89b063d76e0a13faf5ce8" kindref="member">KNavy</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/><sp/>0,<sp/>128};</highlight></codeline>
+<codeline lineno="174" refid="namespacens_graphics_1a4c07ea95810d52059324d037d9d9c5d4" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a4c07ea95810d52059324d037d9d9c5d4" kindref="member">KBeige</ref><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>{231,<sp/>211,<sp/>171};</highlight></codeline>
+<codeline lineno="175" refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e" kindref="member">KTransparent</ref><sp/><sp/><sp/><sp/><sp/>{<sp/><sp/>0,<sp/><sp/><sp/>0,<sp/><sp/><sp/>0,<sp/><sp/>0};</highlight></codeline>
+<codeline lineno="176" refid="namespacens_graphics_1a9caa4cd9527a2effed87836d78faacef" refkind="member"><highlight class="normal"></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="classns_graphics_1_1_r_g_b_acolor" kindref="compound">RGBAcolor</ref><sp/><ref refid="namespacens_graphics_1a9caa4cd9527a2effed87836d78faacef" kindref="member">KBlueTransparent</ref><sp/>{<sp/><sp/>0,<sp/><sp/><sp/>0,<sp/>255,<sp/><sp/>30};</highlight></codeline>
 <codeline lineno="177"><highlight class="normal"></highlight></codeline>
 <codeline lineno="178"><highlight class="normal">}<sp/></highlight><highlight class="comment">//<sp/>namespace<sp/>nsGraphics</highlight><highlight class="normal"></highlight></codeline>
 <codeline lineno="179"><highlight class="normal"></highlight></codeline>
 <codeline lineno="180"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">//<sp/>RGBACOLOR_H</highlight><highlight class="normal"></highlight></codeline>
     </programlisting>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl/graphics/rgbacolor.h"/>
   </compounddef>
 </doxygen>

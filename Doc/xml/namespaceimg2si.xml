@@ -3,7 +3,7 @@
   <compounddef id="namespaceimg2si" kind="namespace" language="Python">
     <compoundname>img2si</compoundname>
       <sectiondef kind="var">
-      <memberdef kind="variable" id="img2si_8py_1abcc3e8d7a68483db9b400f68496bd7f9" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceimg2si_1abcc3e8d7a68483db9b400f68496bd7f9" prot="private" static="no" mutable="no">
         <type>string</type>
         <definition>string img2si.__author__</definition>
         <argsstring></argsstring>
@@ -16,9 +16,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" line="9" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="9" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" line="9" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="9" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="img2si_8py_1a416c93cc9556ba6f82fc8312a7d0558f" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceimg2si_1a416c93cc9556ba6f82fc8312a7d0558f" prot="private" static="no" mutable="no">
         <type>string</type>
         <definition>string img2si.__version__</definition>
         <argsstring></argsstring>
@@ -31,9 +31,9 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" line="10" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="10" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" line="10" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="10" bodyend="-1"/>
       </memberdef>
-      <memberdef kind="variable" id="img2si_8py_1a5971fdb9af437359d12be6c17db92119" prot="private" static="no" mutable="no">
+      <memberdef kind="variable" id="namespaceimg2si_1a5971fdb9af437359d12be6c17db92119" prot="private" static="no" mutable="no">
         <type>string</type>
         <definition>string img2si.__license__</definition>
         <argsstring></argsstring>
@@ -46,11 +46,11 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" line="11" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="11" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" line="11" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="11" bodyend="-1"/>
       </memberdef>
       </sectiondef>
       <sectiondef kind="func">
-      <memberdef kind="function" id="img2si_8py_1ae37b6f3bba8bbf990c6f8c84cd2a79bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceimg2si_1ae37b6f3bba8bbf990c6f8c84cd2a79bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def img2si.is_file_si2</definition>
         <argsstring>(filePath)</argsstring>
@@ -66,9 +66,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" line="28" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="28" bodyend="33"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" line="28" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="28" bodyend="33"/>
+        <referencedby refid="namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49" compoundref="img2si_8py" startline="95" endline="125">main</referencedby>
       </memberdef>
-      <memberdef kind="function" id="img2si_8py_1a86753e07bbef076355a407a398a418bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceimg2si_1a86753e07bbef076355a407a398a418bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def img2si.convert_from_si2</definition>
         <argsstring>(source, output)</argsstring>
@@ -88,9 +89,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" line="34" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="34" bodyend="58"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" line="34" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="34" bodyend="58"/>
+        <referencedby refid="namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49" compoundref="img2si_8py" startline="95" endline="125">main</referencedby>
       </memberdef>
-      <memberdef kind="function" id="img2si_8py_1a07d658824b99acc387c6444863bebd5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceimg2si_1a07d658824b99acc387c6444863bebd5c" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def img2si.convert_to_si2</definition>
         <argsstring>(source, output)</argsstring>
@@ -110,9 +112,10 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" line="59" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="59" bodyend="94"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" line="59" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="59" bodyend="94"/>
+        <referencedby refid="namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49" compoundref="img2si_8py" startline="95" endline="125">main</referencedby>
       </memberdef>
-      <memberdef kind="function" id="img2si_8py_1afce854986e241b3a756dc2eb0a333f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+      <memberdef kind="function" id="namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
         <type>def</type>
         <definition>def img2si.main</definition>
         <argsstring>()</argsstring>
@@ -124,13 +127,18 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" line="95" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="95" bodyend="125"/>
+        <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" line="95" column="1" bodyfile="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" bodystart="95" bodyend="125"/>
+        <references refid="namespaceimg2si_1a86753e07bbef076355a407a398a418bf" compoundref="img2si_8py" startline="34" endline="58">convert_from_si2</references>
+        <references refid="namespaceimg2si_1a07d658824b99acc387c6444863bebd5c" compoundref="img2si_8py" startline="59" endline="94">convert_to_si2</references>
+        <references refid="namespaceimg2si_1ae37b6f3bba8bbf990c6f8c84cd2a79bd" compoundref="img2si_8py" startline="28" endline="33">is_file_si2</references>
+        <references refid="namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49" compoundref="img2si_8py" startline="95" endline="125">main</references>
+        <referencedby refid="namespaceimg2si_1afce854986e241b3a756dc2eb0a333f49" compoundref="img2si_8py" startline="95" endline="125">main</referencedby>
       </memberdef>
       </sectiondef>
     <briefdescription>
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/tools/img2si.py" line="1" column="1"/>
+    <location file="/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/tools/img2si.py" line="1" column="1"/>
   </compounddef>
 </doxygen>

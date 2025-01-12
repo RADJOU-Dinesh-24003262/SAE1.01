@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_params_8h" xml:lang="en-US">
-<title>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.h File Reference</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/params.h</primary></indexterm>
+<title>/home/Theo/Téléchargements/sae/Jeu/params.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/Jeu/params.h</primary></indexterm>
 <para>
 
 <para>Paramters&apos; definition and associated functions. </para>
@@ -31,7 +31,7 @@ This graph shows which files directly or indirectly include this file:<para>
         <itemizedlist>
             <listitem><para>void <link linkend="_params_8h_1ade03faad985499a8668d06f81c996971">initParams</link> (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;param)</para>
 </listitem>
-            <listitem><para><anchor xml:id="_params_8h_1a58a5b91bf92420913240e20c743401cf"/>void <emphasis role="strong">initParamsV2</emphasis> (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;param)</para>
+            <listitem><para>void <link linkend="_params_8h_1a58a5b91bf92420913240e20c743401cf">initParamsV2</link> (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;param)</para>
 </listitem>
             <listitem><para>void <link linkend="_params_8h_1ac3adf30120fc96c74f84762bf232cd54">LoadParams</link> (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp;Param)</para>
 </listitem>
@@ -68,13 +68,36 @@ Definition in file <link linkend="_params_8h_source">params.h</link>.</para>
 <indexterm><primary>params.h</primary><secondary>initParams</secondary></indexterm>
 <para><computeroutput>void initParams (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp; param)</computeroutput></para><para>
 Definition at line <link linkend="_params_8cpp_source_1l00009">9</link> of file <link linkend="_params_8cpp_source">params.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="params_8h_ade03faad985499a8668d06f81c996971_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
+<anchor xml:id="_params_8h_1a58a5b91bf92420913240e20c743401cf"/><section>
+    <title>initParamsV2()</title>
+<indexterm><primary>initParamsV2</primary><secondary>params.h</secondary></indexterm>
+<indexterm><primary>params.h</primary><secondary>initParamsV2</secondary></indexterm>
+<para><computeroutput>void initParamsV2 (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp; param)</computeroutput></para></section>
 <anchor xml:id="_params_8h_1ac3adf30120fc96c74f84762bf232cd54"/><section>
     <title>LoadParams()</title>
 <indexterm><primary>LoadParams</primary><secondary>params.h</secondary></indexterm>
 <indexterm><primary>params.h</primary><secondary>LoadParams</secondary></indexterm>
 <para><computeroutput>void LoadParams (<link linkend="_struct_c_my_param_v2">CMyParamV2</link> &amp; Param)</computeroutput></para><para>
 Definition at line <link linkend="_params_8cpp_source_1l00032">32</link> of file <link linkend="_params_8cpp_source">params.cpp</link>.</para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="params_8h_ac3adf30120fc96c74f84762bf232cd54_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
 </section>
 </section>
 </section>

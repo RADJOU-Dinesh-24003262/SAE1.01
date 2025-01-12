@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_game_8h" xml:lang="en-US">
-<title>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h File Reference</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/game.h</primary></indexterm>
+<title>/home/Theo/Téléchargements/sae/Jeu/game.h File Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/Jeu/game.h</primary></indexterm>
 <para>
 
 <para>Set of usefull functions for the game. </para>
@@ -51,19 +51,33 @@ This graph shows which files directly or indirectly include this file:<para>
 
 <para>Increments the score for each item in the list. </para>
 </listitem>
-            <listitem><para><anchor xml:id="_game_8h_1a23ed1f47ce57765cb2fea53223a968fa"/>void <emphasis role="strong">Sprite</emphasis> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, std::string sprite)</para>
+            <listitem><para>void <link linkend="_game_8h_1a23ed1f47ce57765cb2fea53223a968fa">Sprite</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, std::string sprite)</para>
+
+<para>cette fonction affiche un sprite dans la fenetre </para>
 </listitem>
-            <listitem><para><anchor xml:id="_game_8h_1ad2fa9861d35e6880ba732c4d42d677fb"/>void <emphasis role="strong">DisplayGrid</emphasis> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp;mat, std::tuple&lt; int, int &gt; Screen_size)</para>
+            <listitem><para>void <link linkend="_game_8h_1ad2fa9861d35e6880ba732c4d42d677fb">DisplayGrid</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp;mat, std::tuple&lt; int, int &gt; Screen_size)</para>
+
+<para>cette fonction affiche la grille sur MinGl </para>
 </listitem>
-            <listitem><para><anchor xml:id="_game_8h_1a530e82365352a76131d36a602a978087"/>void <emphasis role="strong">MenuP</emphasis> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</para>
+            <listitem><para>void <link linkend="_game_8h_1a530e82365352a76131d36a602a978087">MenuP</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</para>
+
+<para>cette affiche le menu principal sur MinGl </para>
 </listitem>
-            <listitem><para><anchor xml:id="_game_8h_1ac9f54c7b2df4106d5bf5f209f2c1741d"/>void <emphasis role="strong">Options</emphasis> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</para>
+            <listitem><para>void <link linkend="_game_8h_1ac9f54c7b2df4106d5bf5f209f2c1741d">Options</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</para>
+
+<para>cette fonction affiche les options du jeux </para>
 </listitem>
-            <listitem><para><anchor xml:id="_game_8h_1ac7f92aebec3b6b2e6d0b4801d092c04d"/>void <emphasis role="strong">Credits</emphasis> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</para>
+            <listitem><para>void <link linkend="_game_8h_1ac7f92aebec3b6b2e6d0b4801d092c04d">Credits</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</para>
+
+<para>cette affiche les credits </para>
 </listitem>
-            <listitem><para><anchor xml:id="_game_8h_1a4cf82823849638598365d899b482f17a"/>void <emphasis role="strong">Pause</emphasis> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</para>
+            <listitem><para>void <link linkend="_game_8h_1a4cf82823849638598365d899b482f17a">Pause</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp;menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</para>
+
+<para>cette fonction affiche le menu pause </para>
 </listitem>
-            <listitem><para><anchor xml:id="_game_8h_1a3555e46045d63ef37f994f3c358945fb"/>void <emphasis role="strong">GameLoop</emphasis> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt;clickablepool, <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> Mat, int menuid, unsigned PartyNum, bool Key_UP, bool Key_DOWN, bool Key_RIGHT, bool Key_LEFT, std::tuple&lt; int, int &gt; Screen_size, <link linkend="_struct_c_my_param_v2">CMyParamV2</link> param, bool Victory, unsigned KMaxPartyNum, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosPlayer1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosPlayer2, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosTP1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosTP2, bool Player1Turn, std::pair&lt; char, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; N_move, std::vector&lt; char &gt; objetJ1, std::vector&lt; char &gt; objetJ2, int scoreJ1, int scoreJ2, std::vector&lt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; PosMonster)</para>
+            <listitem><para>void <link linkend="_game_8h_1a3555e46045d63ef37f994f3c358945fb">GameLoop</link> (<link linkend="_class_min_g_l">MinGL</link> &amp;window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt;clickablepool, <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> Mat, int menuid, unsigned PartyNum, bool Key_UP, bool Key_DOWN, bool Key_RIGHT, bool Key_LEFT, std::tuple&lt; int, int &gt; Screen_size, <link linkend="_struct_c_my_param_v2">CMyParamV2</link> param, bool Victory, unsigned KMaxPartyNum, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosPlayer1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosPlayer2, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosTP1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosTP2, bool Player1Turn, std::pair&lt; char, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; N_move, std::vector&lt; char &gt; objetJ1, std::vector&lt; char &gt; objetJ2, int scoreJ1, int scoreJ2, std::vector&lt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; PosMonster)</para>
+
+<para>cette fonction gere la boucle principale du jeu </para>
 </listitem>
             <listitem><para>int <link linkend="_game_8h_1a0b1d64ee76933ef8f007f1208cb869a7">ppal</link> ()</para>
 
@@ -124,6 +138,244 @@ Parameters</title>
                             <row>
 <entry>in</entry><entry>The</entry><entry>
 <para>score increases with each element </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_game_8h_1ac7f92aebec3b6b2e6d0b4801d092c04d"/><section>
+    <title>Credits()</title>
+<indexterm><primary>Credits</primary><secondary>game.h</secondary></indexterm>
+<indexterm><primary>game.h</primary><secondary>Credits</secondary></indexterm>
+<para><computeroutput>void Credits (<link linkend="_class_min_g_l">MinGL</link> &amp; window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp; menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</computeroutput></para><para>
+
+<para>cette affiche les credits </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>La fenêtre dans laquelle le menu sera affiché </para>
+</entry>
+                            </row>
+                            <row>
+<entry>clickablepool</entry><entry>
+<para>Un vecteur d&apos;éléments cliquables </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Screen_size</entry><entry>
+<para>La taille de l&apos;écran sous forme de tuple (largeur, hauteur) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>menuid</entry><entry>
+<para>L&apos;identifiant du menu actuel </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start</entry><entry>
+<para>Le moment où l&apos;affichage du menu a commencé </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_game_8h_1ad2fa9861d35e6880ba732c4d42d677fb"/><section>
+    <title>DisplayGrid()</title>
+<indexterm><primary>DisplayGrid</primary><secondary>game.h</secondary></indexterm>
+<indexterm><primary>game.h</primary><secondary>DisplayGrid</secondary></indexterm>
+<para><computeroutput>void DisplayGrid (<link linkend="_class_min_g_l">MinGL</link> &amp; window, const <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> &amp; mat, std::tuple&lt; int, int &gt; Screen_size)</computeroutput></para><para>
+
+<para>cette fonction affiche la grille sur MinGl </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>La fenêtre dans laquelle la grille sera affichée </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mat</entry><entry>
+<para>La matrice représentant la grille à afficher </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Screen_size</entry><entry>
+<para>La taille de l&apos;écran sous forme de tuple (largeur, hauteur) </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_game_8h_1a3555e46045d63ef37f994f3c358945fb"/><section>
+    <title>GameLoop()</title>
+<indexterm><primary>GameLoop</primary><secondary>game.h</secondary></indexterm>
+<indexterm><primary>game.h</primary><secondary>GameLoop</secondary></indexterm>
+<para><computeroutput>void GameLoop (<link linkend="_class_min_g_l">MinGL</link> &amp; window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, <link linkend="_type_8h_1a64a592133575ccebb1b36453acbec02b">CMat</link> Mat, int menuid, unsigned PartyNum, bool Key_UP, bool Key_DOWN, bool Key_RIGHT, bool Key_LEFT, std::tuple&lt; int, int &gt; Screen_size, <link linkend="_struct_c_my_param_v2">CMyParamV2</link> param, bool Victory, unsigned KMaxPartyNum, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosPlayer1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosPlayer2, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosTP1, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> PosTP2, bool Player1Turn, std::pair&lt; char, <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; N_move, std::vector&lt; char &gt; objetJ1, std::vector&lt; char &gt; objetJ2, int scoreJ1, int scoreJ2, std::vector&lt; <link linkend="_type_8h_1a7035b1162647d49def2c24ac2c2e30c1">CPosition</link> &gt; PosMonster)</computeroutput></para><para>
+
+<para>cette fonction gere la boucle principale du jeu </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>La fenêtre dans laquelle le jeu sera affiché </para>
+</entry>
+                            </row>
+                            <row>
+<entry>clickablepool</entry><entry>
+<para>Un vecteur d&apos;éléments cliquables </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Mat</entry><entry>
+<para>La matrice représentant la carte du jeu </para>
+</entry>
+                            </row>
+                            <row>
+<entry>menuid</entry><entry>
+<para>L&apos;identifiant du menu actuel </para>
+</entry>
+                            </row>
+                            <row>
+<entry>PartyNum</entry><entry>
+<para>Le nombre de partie </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Key_UP</entry><entry>
+<para>L&apos;état de la touche UP </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Key_DOWN</entry><entry>
+<para>L&apos;état de la touche DOWN </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Key_RIGHT</entry><entry>
+<para>L&apos;état de la touche RIGHT </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Key_LEFT</entry><entry>
+<para>L&apos;état de la touche LEFT </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Screen_size</entry><entry>
+<para>La taille de l&apos;écran sous forme de tuple (largeur, hauteur) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>param</entry><entry>
+<para>Paramètres de configuration </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Victory</entry><entry>
+<para>Indicateur de victoire </para>
+</entry>
+                            </row>
+                            <row>
+<entry>KMaxPartyNum</entry><entry>
+<para>Nombre maximum de tours dans une partie </para>
+</entry>
+                            </row>
+                            <row>
+<entry>PosPlayer1</entry><entry>
+<para>La position du joueur 1 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>PosPlayer2</entry><entry>
+<para>La position du joueur 2 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>PosTP1</entry><entry>
+<para>La position du premier téléporteur </para>
+</entry>
+                            </row>
+                            <row>
+<entry>PosTP2</entry><entry>
+<para>La position du deuxième téléporteur </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Player1Turn</entry><entry>
+<para>Indicateur permettant de savoir le tour de quel joueur </para>
+</entry>
+                            </row>
+                            <row>
+<entry>N_move</entry><entry>
+<para>Le prochain mouvement du joueur sous forme de tuple (direction, position) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>objetJ1</entry><entry>
+<para>Liste des objets ramassé par joueur 1 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>objetJ2</entry><entry>
+<para>Liste des objets ramassé par joueur 2 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>scoreJ1</entry><entry>
+<para>Le score du joueur 1 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>scoreJ2</entry><entry>
+<para>Le score du joueur 2 </para>
+</entry>
+                            </row>
+                            <row>
+<entry>PosMonster</entry><entry>
+<para>Liste des positions des monstres </para>
 </entry>
                             </row>
                         </tbody>
@@ -234,6 +486,57 @@ Parameters</title>
 <para>true if the Move can be made </para>
 </formalpara>
 </para>
+</section>
+<anchor xml:id="_game_8h_1a530e82365352a76131d36a602a978087"/><section>
+    <title>MenuP()</title>
+<indexterm><primary>MenuP</primary><secondary>game.h</secondary></indexterm>
+<indexterm><primary>game.h</primary><secondary>MenuP</secondary></indexterm>
+<para><computeroutput>void MenuP (<link linkend="_class_min_g_l">MinGL</link> &amp; window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp; menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</computeroutput></para><para>
+
+<para>cette affiche le menu principal sur MinGl </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>La fenêtre où il sera affiché </para>
+</entry>
+                            </row>
+                            <row>
+<entry>clickablepool</entry><entry>
+<para>Un vecteur d&apos;éléments cliquables, où chaque élément est un tuple contenant des informations sur les zones cliquables </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Screen_size</entry><entry>
+<para>La taille de l&apos;écran sous forme de tuple (largeur, hauteur) </para>
+</entry>
+                            </row>
+                            <row>
+<entry>menuid</entry><entry>
+<para>L&apos;identifiant du menu actuel </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start</entry><entry>
+<para>Le moment où l&apos;affichage du menu a commencé </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
 </section>
 <anchor xml:id="_game_8h_1a8307899b579b12370e9fd3e399e42d04"/><section>
     <title>MoveToken()</title>
@@ -353,6 +656,103 @@ Parameters</title>
 </formalpara>
 </para>
 </section>
+<anchor xml:id="_game_8h_1ac9f54c7b2df4106d5bf5f209f2c1741d"/><section>
+    <title>Options()</title>
+<indexterm><primary>Options</primary><secondary>game.h</secondary></indexterm>
+<indexterm><primary>game.h</primary><secondary>Options</secondary></indexterm>
+<para><computeroutput>void Options (<link linkend="_class_min_g_l">MinGL</link> &amp; window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp; menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</computeroutput></para><para>
+
+<para>cette fonction affiche les options du jeux </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>La fenêtre dans laquelle le menu sera affiché </para>
+</entry>
+                            </row>
+                            <row>
+<entry>clickablepool</entry><entry>
+<para>Un vecteur d&apos;éléments cliquables </para>
+</entry>
+                            </row>
+                            <row>
+<entry>Screen_size</entry><entry>
+<para>La taille de l&apos;écran </para>
+</entry>
+                            </row>
+                            <row>
+<entry>menuid</entry><entry>
+<para>L&apos;identifiant du menu actuel </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start</entry><entry>
+<para>Le moment où l&apos;affichage du menu a commencé </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_game_8h_1a4cf82823849638598365d899b482f17a"/><section>
+    <title>Pause()</title>
+<indexterm><primary>Pause</primary><secondary>game.h</secondary></indexterm>
+<indexterm><primary>game.h</primary><secondary>Pause</secondary></indexterm>
+<para><computeroutput>void Pause (<link linkend="_class_min_g_l">MinGL</link> &amp; window, std::vector&lt; std::tuple&lt; std::vector&lt; int &gt;, std::vector&lt; int &gt;, int &gt; &gt; clickablepool, std::tuple&lt; int, int &gt; Screen_size, int &amp; menuid, std::chrono::time_point&lt; std::chrono::steady_clock &gt; start)</computeroutput></para><para>
+
+<para>cette fonction affiche le menu pause </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>La fenêtre dans laquelle le menu sera affiché </para>
+</entry>
+                            </row>
+                            <row>
+<entry>clickablepool</entry><entry>
+<para>Un vecteur d&apos;éléments cliquables </para>
+</entry>
+                            </row>
+                            <row>
+<entry>menuid</entry><entry>
+<para>L&apos;identifiant du menu actuel </para>
+</entry>
+                            </row>
+                            <row>
+<entry>start</entry><entry>
+<para>Le moment où l&apos;affichage du menu a commencé </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
 <anchor xml:id="_game_8h_1a0b1d64ee76933ef8f007f1208cb869a7"/><section>
     <title>ppal()</title>
 <indexterm><primary>ppal</primary><secondary>game.h</secondary></indexterm>
@@ -378,6 +778,81 @@ Here is the call graph for this function:<para>
         </mediaobject>
     </informalfigure>
 </para>
+Here is the caller graph for this function:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="game_8h_a0b1d64ee76933ef8f007f1208cb869a7_icgraph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+</section>
+<anchor xml:id="_game_8h_1a23ed1f47ce57765cb2fea53223a968fa"/><section>
+    <title>Sprite()</title>
+<indexterm><primary>Sprite</primary><secondary>game.h</secondary></indexterm>
+<indexterm><primary>game.h</primary><secondary>Sprite</secondary></indexterm>
+<para><computeroutput>void Sprite (<link linkend="_class_min_g_l">MinGL</link> &amp; window, int grid_x, int grid_y, int pos_x, int pos_y, int mat_x, int mat_y, std::string sprite)</computeroutput></para><para>
+
+<para>cette fonction affiche un sprite dans la fenetre </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>window</entry><entry>
+<para>La fenêtre dans laquelle le sprite sera affiché </para>
+</entry>
+                            </row>
+                            <row>
+<entry>grid_x</entry><entry>
+<para>La position X dans la grille </para>
+</entry>
+                            </row>
+                            <row>
+<entry>grid_y</entry><entry>
+<para>La position Y dans la grille </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pos_x</entry><entry>
+<para>La position X dans la fenêtre </para>
+</entry>
+                            </row>
+                            <row>
+<entry>pos_y</entry><entry>
+<para>La position Y dans la fenêtre </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mat_x</entry><entry>
+<para>La largeur du sprite dans la grille </para>
+</entry>
+                            </row>
+                            <row>
+<entry>mat_y</entry><entry>
+<para>La hauteur du sprite dans la grille </para>
+</entry>
+                            </row>
+                            <row>
+<entry>sprite</entry><entry>
+<para>Le nom du fichier du sprite à afficher </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
 </section>
 </section>
 </section>

@@ -18,7 +18,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="41" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="41" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/type.h" line="41" column="24" bodyfile="/home/Theo/Téléchargements/sae/Jeu/type.h" bodystart="41" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73" prot="public" static="no" mutable="no">
         <type>const std::vector&lt; std::string &gt;</type>
@@ -34,7 +34,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="43" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="43" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/type.h" line="43" column="24" bodyfile="/home/Theo/Téléchargements/sae/Jeu/type.h" bodystart="43" bodyend="-1"/>
       </memberdef>
       <memberdef kind="variable" id="struct_authorized_key_1a871173f4b0c89c91289a10f0ddc1cadd" prot="public" static="no" mutable="no">
         <type>const std::vector&lt; std::string &gt;</type>
@@ -50,7 +50,7 @@
         </detaileddescription>
         <inbodydescription>
         </inbodydescription>
-        <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="45" column="24" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="45" bodyend="-1"/>
+        <location file="/home/Theo/Téléchargements/sae/Jeu/type.h" line="45" column="24" bodyfile="/home/Theo/Téléchargements/sae/Jeu/type.h" bodystart="45" bodyend="-1"/>
       </memberdef>
       </sectiondef>
     <briefdescription>
@@ -58,7 +58,7 @@
     </briefdescription>
     <detaileddescription>
     </detaileddescription>
-    <location file="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" line="39" column="1" bodyfile="/home/Theo/Téléchargements/sae/SAE_JEU/Jeu/type.h" bodystart="39" bodyend="46"/>
+    <location file="/home/Theo/Téléchargements/sae/Jeu/type.h" line="39" column="1" bodyfile="/home/Theo/Téléchargements/sae/Jeu/type.h" bodystart="39" bodyend="46"/>
     <listofallmembers>
       <member refid="struct_authorized_key_1a1b1aa7863427cc1b43f229423bdd83ba" prot="public" virt="non-virtual"><scope>AuthorizedKey</scope><name>VParamChar</name></member>
       <member refid="struct_authorized_key_1a14d2cbd0e3dcc77a793a55f988d78b73" prot="public" virt="non-virtual"><scope>AuthorizedKey</scope><name>VParamString</name></member>

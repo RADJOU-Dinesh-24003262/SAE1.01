@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_c2a0ba7430e37978f2ac7bbfe97a049d" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/graphics Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/graphics Directory Reference</primary></indexterm>
+Directory dependency graph for graphics:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_c2a0ba7430e37978f2ac7bbfe97a049d_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_rgbacolor_8cpp">rgbacolor.cpp</link></para>
+
+<para>Représente une couleur RGBA. </para>
+</listitem>
+            <listitem><para>file <link linkend="_vec2d_8cpp">vec2d.cpp</link></para>
+
+<para>Représente un vecteur sur deux dimensions. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

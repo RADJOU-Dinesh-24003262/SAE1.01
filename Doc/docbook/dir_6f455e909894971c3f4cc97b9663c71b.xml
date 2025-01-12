@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_6f455e909894971c3f4cc97b9663c71b" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/Jeu Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/Jeu Directory Reference</primary></indexterm>
+Directory dependency graph for Jeu:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_6f455e909894971c3f4cc97b9663c71b_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_game_8cpp">game.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_game_8h">game.h</link></para>
+
+<para>Set of usefull functions for the game. </para>
+</listitem>
+            <listitem><para>file <link linkend="_gridmanagement_8cpp">gridmanagement.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_gridmanagement_8h">gridmanagement.h</link></para>
+
+<para>Set of usefull functions for the grid management. </para>
+</listitem>
+            <listitem><para>file <link linkend="__menu_management_8h">MenuManagement.h</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_params_8cpp">params.cpp</link></para>
+</listitem>
+            <listitem><para>file <link linkend="_params_8h">params.h</link></para>
+
+<para>Paramters&apos; definition and associated functions. </para>
+</listitem>
+            <listitem><para>file <link linkend="_type_8h">type.h</link></para>
+
+<para>Definition of usefull types or aliases for the project. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

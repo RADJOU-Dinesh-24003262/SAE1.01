@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='UTF-8' standalone='no'?>
 <section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_triangle_8cpp_source" xml:lang="en-US">
 <title>triangle.cpp</title>
-<indexterm><primary>/home/Theo/Téléchargements/sae/SAE_JEU/MinGL2_IUT_AIX-master/src/shape/triangle.cpp</primary></indexterm>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/src/shape/triangle.cpp</primary></indexterm>
 Go to the documentation of this file.<programlisting linenumbering="unnumbered"><anchor xml:id="_triangle_8cpp_source_1l00001"/>00001 
 <anchor xml:id="_triangle_8cpp_source_1l00011"/>00011 <emphasis role="preprocessor">#include&#32;&lt;algorithm&gt;</emphasis>
 <anchor xml:id="_triangle_8cpp_source_1l00012"/>00012 <emphasis role="preprocessor">#include&#32;&lt;vector&gt;</emphasis>
@@ -32,7 +32,7 @@ Go to the documentation of this file.<programlisting linenumbering="unnumbered">
 <anchor xml:id="_triangle_8cpp_source_1l00037"/>00037 &#32;&#32;&#32;&#32;glVertex2i(m_thirdPosition.getX(),&#32;m_thirdPosition.getY());
 <anchor xml:id="_triangle_8cpp_source_1l00038"/>00038 &#32;&#32;&#32;&#32;glEnd();
 <anchor xml:id="_triangle_8cpp_source_1l00039"/>00039 
-<anchor xml:id="_triangle_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(getBorderColor()&#32;!=&#32;nsGraphics::KTransparent)&#32;{
+<anchor xml:id="_triangle_8cpp_source_1l00040"/>00040 &#32;&#32;&#32;&#32;<emphasis role="keywordflow">if</emphasis>&#32;(getBorderColor()&#32;!=&#32;<link linkend="_namespacens_graphics_1ab2001ad03cceb2565849e04465618c1e">nsGraphics::KTransparent</link>)&#32;{
 <anchor xml:id="_triangle_8cpp_source_1l00041"/>00041 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="comment">//&#32;On&#32;a&#32;une&#32;bordure,&#32;on&#32;l&apos;affiche</emphasis>
 <anchor xml:id="_triangle_8cpp_source_1l00042"/>00042 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;<emphasis role="keyword">const</emphasis>&#32;<link linkend="_classns_graphics_1_1_r_g_b_acolor">nsGraphics::RGBAcolor</link>&#32;borderColor&#32;=&#32;getBorderColor();
 <anchor xml:id="_triangle_8cpp_source_1l00043"/>00043 &#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;glColor4ub(borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a55e40085f904b696a0bc63aed6258b79">getRed</link>(),&#32;borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a5f2dc1550c34149fc5cbc1629b54d7e4">getGreen</link>(),&#32;borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a9ac0893426cce20a177d6ea7af1d7129">getBlue</link>(),&#32;borderColor.<link linkend="_classns_graphics_1_1_r_g_b_acolor_1a76299c507a113e326c01fe4b0bca2b1e">getAlpha</link>());

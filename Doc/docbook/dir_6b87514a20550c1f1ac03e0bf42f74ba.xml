@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_6b87514a20550c1f1ac03e0bf42f74ba" xml:lang="en-US">
+<title>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl Directory Reference</title>
+<indexterm><primary>/home/Theo/Téléchargements/sae/MinGL2_IUT_AIX-master/include/mingl Directory Reference</primary></indexterm>
+Directory dependency graph for mingl:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="dir_6b87514a20550c1f1ac03e0bf42f74ba_dep.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Directories    </title>
+        <itemizedlist>
+            <listitem><para>directory <link linkend="_dir_9e5e3f4d4fe9819aff59df77f76cd357">audio</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_84a4d493de05c7321a990809d798d00a">event</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_709e83c1f40d755360118d42c432997e">exception</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_47b6ac560126e29edfa54c6124d083bc">graphics</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_8f6b9f8253352429a9e174e83e1c05df">gui</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_4545a483c9567f028fbd6e723675564a">shape</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_3c1f9c64dad40e097f9d4c64bfcb6f7d">tools</link></para>
+</listitem>
+            <listitem><para>directory <link linkend="_dir_aef361c9357a8edd53f720607759c297">transition</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_macros_8h">macros.h</link></para>
+
+<para>Macros utiles. </para>
+</listitem>
+            <listitem><para>file <link linkend="_mingl_8h">mingl.h</link></para>
+
+<para>La bête. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>
