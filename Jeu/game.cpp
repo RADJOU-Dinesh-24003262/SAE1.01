@@ -350,7 +350,7 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
         }
 
         //on fait jouer le bot 1fois/2 sinon il aurait trop d'avantage
-        if(i%5 == 0)
+        if(i%3 == 0)
             MoveMonster(PosMonster, Mat, param, PosPlayer1, PosPlayer2);
         ++i;
 
@@ -397,8 +397,8 @@ void GameLoop(MinGL &window, vector<tuple<vector<int>, vector<int>, int>>clickab
         //Victory test
         if (PosPlayer1 == PosPlayer2) Victory = true;
 
-        if ((scoreJ2 > 0 && size_t(scoreJ2) > (param.NbColumn+param.NbRow)*15)) Victory = true;
-        if ((scoreJ1 > 0  && size_t(scoreJ1) > (param.NbColumn+param.NbRow)*15 )) Victory = true;
+        if ((scoreJ2 > 0 && size_t(scoreJ2) > (param.NbColumn+param.NbRow)*30)) Victory = true;
+        if ((scoreJ1 > 0  && size_t(scoreJ1) > (param.NbColumn+param.NbRow)*30)) Victory = true;
 
         //Increase party's number
         ++PartyNum;
