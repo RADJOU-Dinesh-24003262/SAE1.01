@@ -25,5 +25,5 @@ Game Engine Developper / Gameplay Developper : WAYKI William
 
                         Clause de Copyright
 
-    Ce projet utilise la Bibliothèque Graphique de l'IUT (MinGL2).
+    Ce projet utilise la Bibliotheque Graphique de l'IUT (MinGL2).
          © 2025 equipe "Lethal Casali". Tous droits reserves.
