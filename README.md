@@ -49,3 +49,10 @@ Ce jeu se joue exclusivement sur **Linux**. Pour y jouer, vous devez impérative
 - **Ramasser les objets** : Explorez la carte pour ramasser les objets tout en évitant le monstre.
 - **Calculer votre score** : Assurez-vous de ramasser suffisamment d’objets pour atteindre le score requis avant que l’autre joueur gagne ou le monstre ne vous élimine.
 - **Coopérez** : Effectuez des aliances pour éviter de vous faire manger par le monstre.
+---
+## Auteurs : 
+- ARFI Maxime
+- BENHAFESSA Alexandre
+- EDELSTEIN William
+- QUILLIEC Matisse
+- [*RADJOU Dinesh*](https://dineshradj.eu)
