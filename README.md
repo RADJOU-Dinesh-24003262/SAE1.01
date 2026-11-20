@@ -54,5 +54,5 @@ Ce jeu se joue exclusivement sur **Linux**. Pour y jouer, vous devez impérative
 - ARFI Maxime
 - BENHAFESSA Alexandre
 - EDELSTEIN William
-- QUILLIEC Matisse
+- 
 - [*RADJOU Dinesh*](https://dineshradj.eu)
